@@ -2,8 +2,6 @@
 
 [← Página anterior](M10-01-seguridad-multiempresa.md) · [Siguiente página →](M10-03-auditoria-operacion.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Una página de Confluence enlazada a una issue, y una revisión consciente del Marketplace **sin** dejar apps de pago instaladas.

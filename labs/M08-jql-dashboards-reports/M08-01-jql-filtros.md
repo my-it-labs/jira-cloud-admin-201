@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M08-02-dashboards-gadgets.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Tres filtros nombrados `NORTECH *`, uno de ellos compartido con el proyecto.

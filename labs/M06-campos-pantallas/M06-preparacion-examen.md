@@ -1,6 +1,11 @@
-# M06 — Autoescuela ACP-620 (campos)
+# M06 — Preparación para el examen ACP-620 (campos)
 
 [← Página anterior](M06-02-campos-avanzados.md) · [Siguiente página →](../M07-tableros-agiles/README.md)
+
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+
+Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
+
 
 ---
 

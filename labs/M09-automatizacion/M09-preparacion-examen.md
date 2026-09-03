@@ -1,6 +1,11 @@
-# M09 — Autoescuela ACP-620 (automation)
+# M09 — Preparación para el examen ACP-620 (automation)
 
 [← Página anterior](M09-03-tareas-derivadas.md) · [Siguiente página →](../M10-gobierno-acp620/README.md)
+
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+
+Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
+
 
 ---
 

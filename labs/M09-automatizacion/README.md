@@ -1,10 +1,6 @@
 # M09 — Automatización
 
-[← Página anterior](../M08-jql-dashboards-reports/M08-autoescuela.md) · [Siguiente página →](M09-01-asignacion-automatica.md)
-
-> [!NOTE]
-> **Cómo funciona este módulo.** Primero la **teoría**, luego la **demostración guiada** del
-> formador, y después **practicas tú** en el/los laboratorio(s).
+[← Página anterior](../M08-jql-dashboards-reports/M08-preparacion-examen.md) · [Siguiente página →](M09-01-asignacion-automatica.md)
 
 ## Qué aprenderás
 
@@ -13,7 +9,7 @@
 - Leer el **registro de auditoría** de la regla y evitar bucles.
 - Cubrir los tres labs de la propuesta: asignación, escalados, tareas derivadas.
 
-## Teoría
+## Explicación
 
 | Vía | Cuándo |
 |-----|--------|
@@ -25,25 +21,27 @@
 Anatomía: **When** (trigger) → **If** (conditions) → **Then** (actions). **For each** = branch (subtasks, linked issues). Smart values: `{{issue.key}}`, `{{issue.assignee.displayName}}`.
 
 > [!WARNING]
-> La regla se ejecuta como un **actor** (Automation for Jira o un usuario). Si el actor no tiene Assign Issues, la acción falla. El audit log lo dice.
+> La regla se ejecuta como un **actor** (Automation for Jira o un usuario). Si el actor no tiene Assign Issues, la acción falla. El registro de auditoría lo dice.
 
-Scope: proyecto vs múltiple vs global. En trial, respeta los **límites de ejecuciones** del plan.
+Alcance: espacio vs múltiple vs global. En trial, respeta los **límites de ejecuciones** del plan.
 
-## Demostración guiada
+## Demostración
 
-1. **Configuración del espacio** → **Automatización** → crear regla. Disparador: trabajo creado.
+1. SUP → **Configuración del espacio** → **Automatización** → crear regla. Disparador: trabajo creado.
 
-2. Tras una issue de prueba, el audit log muestra SUCCESS o el error de permiso.
+2. Crea un Bug de prueba y abre el **registro de auditoría** de la regla: SUCCESS o el error de permiso.
 
 ![Audit](../img/M09-01-02-rule-assign.png)
 
-## Ahora practica tú
+## Laboratorio
 
-| Lab | Título | Qué harás |
-|-----|--------|-----------|
-| M09-01 | [Asignación automática](M09-01-asignacion-automatica.md) | Clasificar y asignar |
-| M09-02 | [Aprobaciones y escalados](M09-02-aprobaciones-escalados.md) | Comentar y subir prioridad |
-| M09-03 | [Tareas derivadas](M09-03-tareas-derivadas.md) | Subtareas al transitar |
-| — | [Autoescuela M09](M09-autoescuela.md) | Troubleshoot de reglas |
+Turno de los alumnos.
 
-→ Empieza por **[M09-01](M09-01-asignacion-automatica.md)**.
+| Lab | Título |
+|-----|--------|
+| M09-01 | [Asignación automática](M09-01-asignacion-automatica.md) |
+| M09-02 | [Aprobaciones y escalados](M09-02-aprobaciones-escalados.md) |
+| M09-03 | [Tareas derivadas](M09-03-tareas-derivadas.md) |
+| — | [Preparación para el examen ACP-620](M09-preparacion-examen.md) |
+
+→ **[M09-01](M09-01-asignacion-automatica.md)**

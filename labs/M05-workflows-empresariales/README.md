@@ -1,10 +1,6 @@
 # M05 — Workflows empresariales
 
-[← Página anterior](../M04-esquemas-reutilizables/M04-autoescuela.md) · [Siguiente página →](M05-01-workflow-incidencias.md)
-
-> [!NOTE]
-> **Cómo funciona este módulo.** Primero la **teoría**, luego la **demostración guiada** del
-> formador, y después **practicas tú** en el/los laboratorio(s).
+[← Página anterior](../M04-esquemas-reutilizables/M04-preparacion-examen.md) · [Siguiente página →](M05-01-workflow-incidencias.md)
 
 ## Qué aprenderás
 
@@ -13,12 +9,12 @@
 - Publicar un workflow y asociarlo por issue type.
 - Montar un flujo de **aprobación**.
 
-## Teoría
+## Explicación
 
 | Pieza | Función |
 |-------|---------|
 | **Estado** | Dónde está la issue (`statusCategory`: To Do / In Progress / Done) |
-| **Transición** | Puerta entre estados (puede ser *global*) |
+| **Transición** | Puente entre estados (puede ser *global*) |
 | **Condición** | ¿Puede este usuario ver/usar la transición? |
 | **Validador** | ¿Van los datos bien? Si no, no transita |
 | **Post function** | Efectos al transitar (assignee, resolución, evento) |
@@ -29,22 +25,24 @@
 
 El workflow **no es** el board. Puedes tener un flujo rico y un Kanban de tres columnas.
 
-## Demostración guiada
+## Demostración
 
-1. En el diagrama del workflow se ven estados y flechas. Al pulsar una transición aparecen Conditions, Validators, Post functions.
+1. **Configuración de Jira** → **Flujos de trabajo**. Abre un diagrama. Al pulsar una transición aparecen Conditions, Validators y Post functions.
 
 ![Editor](../img/M05-01-01-workflow-editor.png)
 
-2. En el flujo de aprobación aparecen estados `En revisión`, `Aprobado` y `Rechazado`.
+2. En el flujo de aprobación se ven estados de revisión y dos salidas: aprobado y rechazado.
 
 ![Aprobación](../img/M05-02-01-approval-diagram.png)
 
-## Ahora practica tú
+## Laboratorio
 
-| Lab | Título | Qué harás |
-|-----|--------|-----------|
-| M05-01 | [Workflow de incidencias](M05-01-workflow-incidencias.md) | Flujo Bug/Story con condición de rol |
-| M05-02 | [Workflow de aprobación](M05-02-workflow-aprobacion.md) | Solicitud → revisión → cierre |
-| — | [Autoescuela M05](M05-autoescuela.md) | Condiciones vs validadores |
+Turno de los alumnos.
 
-→ Empieza por **[M05-01](M05-01-workflow-incidencias.md)**.
+| Lab | Título |
+|-----|--------|
+| M05-01 | [Workflow de incidencias](M05-01-workflow-incidencias.md) |
+| M05-02 | [Workflow de aprobación](M05-02-workflow-aprobacion.md) |
+| — | [Preparación para el examen ACP-620](M05-preparacion-examen.md) |
+
+→ **[M05-01](M05-01-workflow-incidencias.md)**

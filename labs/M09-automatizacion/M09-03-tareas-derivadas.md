@@ -1,8 +1,6 @@
 # M09-03 — Creación automática de tareas
 
-[← Página anterior](M09-02-aprobaciones-escalados.md) · [Siguiente página →](M09-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M09-02-aprobaciones-escalados.md) · [Siguiente página →](M09-preparacion-examen.md)
 
 ### Objetivo
 

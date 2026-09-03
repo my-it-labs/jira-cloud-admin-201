@@ -1,6 +1,11 @@
-# M08 — Autoescuela ACP-620 (reporting)
+# M08 — Preparación para el examen ACP-620 (reporting)
 
 [← Página anterior](M08-03-reports.md) · [Siguiente página →](../M09-automatizacion/README.md)
+
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+
+Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
+
 
 ---
 

@@ -1,8 +1,6 @@
 # M05-02 — Workflow de aprobación
 
-[← Página anterior](M05-01-workflow-incidencias.md) · [Siguiente página →](M05-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M05-01-workflow-incidencias.md) · [Siguiente página →](M05-preparacion-examen.md)
 
 ### Objetivo
 

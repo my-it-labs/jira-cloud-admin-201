@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M05-02-workflow-aprobacion.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Publicar un workflow `NORTECH Incidencias` con estados To Do → In Progress → In Review → Done y una condición de rol al cerrar.

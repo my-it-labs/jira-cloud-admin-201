@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M09-02-aprobaciones-escalados.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Una regla en SUP que, al crear un Bug, asigna al component lead o a un usuario fijo y pone una etiqueta.

@@ -2,8 +2,6 @@
 
 [← Página anterior](M08-01-jql-filtros.md) · [Siguiente página →](M08-03-reports.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Un dashboard `NORTECH PMO` compartido con gadgets alimentados por filtros NORTECH.

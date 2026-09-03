@@ -1,8 +1,6 @@
 # M06-02 — Gestión avanzada de campos
 
-[← Página anterior](M06-01-formularios-departamento.md) · [Siguiente página →](M06-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M06-01-formularios-departamento.md) · [Siguiente página →](M06-preparacion-examen.md)
 
 ### Objetivo
 

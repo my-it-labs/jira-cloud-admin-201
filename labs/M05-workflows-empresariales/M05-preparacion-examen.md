@@ -1,6 +1,11 @@
-# M05 — Autoescuela ACP-620 (workflows)
+# M05 — Preparación para el examen ACP-620 (workflows)
 
 [← Página anterior](M05-02-workflow-aprobacion.md) · [Siguiente página →](../M06-campos-pantallas/README.md)
+
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+
+Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
+
 
 ---
 

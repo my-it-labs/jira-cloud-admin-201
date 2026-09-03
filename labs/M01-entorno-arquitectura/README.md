@@ -2,10 +2,6 @@
 
 [← Página anterior](../../README.md) · [Siguiente página →](M01-01-crear-trial.md)
 
-> [!NOTE]
-> **Cómo funciona este módulo.** Primero la **teoría**, luego la **demostración guiada** del
-> formador, y después **practicas tú** en el/los laboratorio(s).
-
 ## Qué aprenderás
 
 - Distinguir organización, site, producto y **espacio** (el *project* del examen ACP-620).
@@ -13,7 +9,7 @@
 - Crear tu instancia trial y llegar a Atlassian Administration.
 - Reconocer los tres roles administrativos que vas a usar el resto del curso.
 
-## Teoría
+## Explicación
 
 Jira Cloud no es un único interruptor. Hay **cuatro capas** y cada botón vive en una:
 
@@ -65,32 +61,32 @@ El laboratorio usa **Premium trial (30 días, sin tarjeta)** para no chocar con 
 > [!WARNING]
 > En **team-managed** el project admin hace casi todo *dentro de su proyecto* y no comparte schemes. En **company-managed** los schemes son globales: ahí vive este curso.
 
-## Demostración guiada
+## Demostración
 
-> Recorrido que hace el formador en vivo. Tono descriptivo, sin imperativos.
-
-1. Al abrir el alta de Jira Cloud Premium aparece un formulario de correo de trabajo y la mención explícita al trial de 30 días sin tarjeta.
+1. Abre el [alta de Jira Cloud Premium](https://www.atlassian.com/try/cloud/signup?bundle=jira-software&edition=premium). El formulario pide correo de trabajo y menciona el trial de 30 días **sin tarjeta**.
 
 ![Alta Premium](../img/M01-01-01-signup-premium.png)
 
-2. Tras verificar el correo, el asistente pide un **nombre de site**. Ese nombre será la URL `https://nombre.atlassian.net` de todo el laboratorio.
+2. Tras verificar el correo, el asistente pide un **nombre de site**. Ese nombre será la URL `https://nombre.atlassian.net` de todo el laboratorio. Usa un nombre neutro (`curso-jira-` + fecha). Si Atlassian propone reactivar un site antiguo, **no**: elige empezar un sitio nuevo.
 
 ![Nombre de site](../img/M01-01-03-signup-sitename.png)
 
-3. Al aterrizar en Jira se ve **Para ti**. La barra tiene **Buscar**, **Crear** y **Configuración**. Desde el engranaje se sale hacia **Atlassian Administration**, no hacia la configuración de un espacio.
+3. Al aterrizar, estás en **Para ti**. La barra tiene **Buscar**, **Crear** y **Configuración**. El engranaje sale hacia **Atlassian Administration**, no hacia la configuración de un espacio.
 
 ![Home de Jira](../img/M01-02-01-jira-home.png)
 
-4. En `admin.atlassian.com` aparecen **Resumen**, **Aplicaciones de Atlassian** (con el plan **Premium**) y **Directorio** → **Usuarios** con el primer administrador.
+4. En `admin.atlassian.com` abre **Resumen**, **Aplicaciones de Atlassian** (Jira debe figurar como **Premium**) y **Directorio** → **Usuarios**. Ahí está el primer administrador.
 
 ![Admin overview](../img/M01-02-02-admin-overview.png)
 
-## Ahora practica tú
+## Laboratorio
 
-| Lab | Título | Qué harás |
-|-----|--------|-----------|
-| M01-01 | [Crear el trial](M01-01-crear-trial.md) | Alta de tu site Premium y anotar la URL |
-| M01-02 | [Explorar la consola administrativa](M01-02-explorar-admin.md) | Recorrer org, aplicaciones, Directorio y Sistema |
-| — | [Autoescuela M01](M01-autoescuela.md) | Preguntas tipo ACP-620 sobre arquitectura |
+Turno de los alumnos.
 
-→ Empieza por **[M01-01 — Crear el trial](M01-01-crear-trial.md)**.
+| Lab | Título |
+|-----|--------|
+| M01-01 | [Crear el trial](M01-01-crear-trial.md) |
+| M01-02 | [Explorar la consola administrativa](M01-02-explorar-admin.md) |
+| — | [Preparación para el examen ACP-620](M01-preparacion-examen.md) |
+
+→ **[M01-01 — Crear el trial](M01-01-crear-trial.md)**

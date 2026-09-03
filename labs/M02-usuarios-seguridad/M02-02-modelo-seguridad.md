@@ -1,8 +1,6 @@
 # M02-02 — Modelo de seguridad corporativo
 
-[← Página anterior](M02-01-grupos-departamentos.md) · [Siguiente página →](M02-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M02-01-grupos-departamentos.md) · [Siguiente página →](M02-preparacion-examen.md)
 
 ### Objetivo
 

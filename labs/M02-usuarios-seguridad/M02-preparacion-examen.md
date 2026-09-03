@@ -1,6 +1,11 @@
-# M02 — Autoescuela ACP-620 (permisos y roles)
+# M02 — Preparación para el examen ACP-620 (permisos y roles)
 
 [← Página anterior](M02-02-modelo-seguridad.md) · [Siguiente página →](../M03-proyectos-corporativos/README.md)
+
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+
+Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
+
 
 ---
 

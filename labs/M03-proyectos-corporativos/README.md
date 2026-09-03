@@ -1,10 +1,6 @@
 # M03 — Proyectos corporativos
 
-[← Página anterior](../M02-usuarios-seguridad/M02-autoescuela.md) · [Siguiente página →](M03-01-crear-proyectos.md)
-
-> [!NOTE]
-> **Cómo funciona este módulo.** Primero la **teoría**, luego la **demostración guiada** del
-> formador, y después **practicas tú** en el/los laboratorio(s).
+[← Página anterior](../M02-usuarios-seguridad/M02-preparacion-examen.md) · [Siguiente página →](M03-01-crear-proyectos.md)
 
 ## Qué aprenderás
 
@@ -12,7 +8,7 @@
 - Crear los cuatro espacios Nortech (DEV, SUP, OPS, PMO).
 - Organizar el trabajo con **componentes**, **versiones** y categorías.
 
-## Teoría
+## Explicación
 
 | | Gestionado por la empresa (CMP) | Gestionado por el equipo (TMP) |
 |---|--------------------------------|--------------------------------|
@@ -32,28 +28,30 @@
 | **Custom fields** | Dato de negocio que debe informarse (M06) |
 | **Versiones** | Releases: qué entra en 1.2.0 |
 
-### Templates
+### Plantillas
 
 - **Scrum** → DEV (sprints, backlog).
 - **Kanban** (bug tracking / IT) → SUP.
 - **Business / Project management** → OPS y PMO.
 
-## Demostración guiada
+## Demostración
 
-1. En **Crear espacio** el formador elige plantilla Scrum y, en el siguiente paso, **Gestionado por la empresa**.
+1. En Jira, **Crear espacio**. Elige plantilla **Scrum**. En el tipo, marca **Gestionado por la empresa**. Nombre `Nortech Development`, clave `DEV`.
 
 ![Company-managed](../img/M03-01-02-company-managed.png)
 
-2. El espacio DEV queda con clave `DEV` y se ve en **Más espacios** junto a SUP, OPS y PMO.
+2. Repite la idea para SUP, OPS y PMO (en el laboratorio lo harán los alumnos). Abre **Más espacios**: deben verse las claves junto a Sample Scrum.
 
 ![Lista](../img/M03-01-04-projects-list.png)
 
-## Ahora practica tú
+## Laboratorio
 
-| Lab | Título | Qué harás |
-|-----|--------|-----------|
-| M03-01 | [Crear proyectos corporativos](M03-01-crear-proyectos.md) | DEV, SUP, OPS, PMO gestionados por la empresa |
-| M03-02 | [Componentes y versiones](M03-02-componentes-versiones.md) | Component leads y una release |
-| — | [Autoescuela M03](M03-autoescuela.md) | Project creation ACP-620 |
+Turno de los alumnos.
 
-→ Empieza por **[M03-01 — Crear proyectos](M03-01-crear-proyectos.md)**.
+| Lab | Título |
+|-----|--------|
+| M03-01 | [Crear proyectos corporativos](M03-01-crear-proyectos.md) |
+| M03-02 | [Componentes y versiones](M03-02-componentes-versiones.md) |
+| — | [Preparación para el examen ACP-620](M03-preparacion-examen.md) |
+
+→ **[M03-01 — Crear proyectos](M03-01-crear-proyectos.md)**

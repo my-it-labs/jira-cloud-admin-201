@@ -1,8 +1,6 @@
 # M03-02 — Componentes y versiones
 
-[← Página anterior](M03-01-crear-proyectos.md) · [Siguiente página →](M03-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M03-01-crear-proyectos.md) · [Siguiente página →](M03-preparacion-examen.md)
 
 ### Objetivo
 

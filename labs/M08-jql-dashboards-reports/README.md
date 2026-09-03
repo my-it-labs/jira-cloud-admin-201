@@ -1,10 +1,6 @@
 # M08 — JQL, dashboards y reports
 
-[← Página anterior](../M07-tableros-agiles/M07-autoescuela.md) · [Siguiente página →](M08-01-jql-filtros.md)
-
-> [!NOTE]
-> **Cómo funciona este módulo.** Primero la **teoría**, luego la **demostración guiada** del
-> formador, y después **practicas tú** en el/los laboratorio(s).
+[← Página anterior](../M07-tableros-agiles/M07-preparacion-examen.md) · [Siguiente página →](M08-01-jql-filtros.md)
 
 ## Qué aprenderás
 
@@ -15,7 +11,7 @@
 
 Este bloque cubre el dominio **Reporting** de ACP-620 (15–20 %) y lo que Atos pidió explícito en el temario.
 
-## Teoría
+## Explicación
 
 | Artefacto | Qué es |
 |-----------|--------|
@@ -23,30 +19,36 @@ Este bloque cubre el dominio **Reporting** de ACP-620 (15–20 %) y lo que Atos 
 | **Filtro** | JQL guardado; se comparte con roles/grupos |
 | **Gadget** | Widget de dashboard (Filter Results, Pie Chart, Assigned to Me) |
 | **Agile report** | Burndown, Velocity, CFD, Control chart — viven en el **board** |
-| **Issue analysis** | Created vs Resolved, Average age, Pie chart report — viven en **Reports** del proyecto |
+| **Issue analysis** | Created vs Resolved, Average age, Pie chart report — viven en **Informes** del espacio |
 
 > [!WARNING]
-> Un dashboard **compartido** con un filtro **privado** muestra error a los demás. Comparte el filtro primero (Viewers = group / project).
+> Un panel **compartido** con un filtro **privado** muestra error a los demás. Comparte el filtro primero.
 
 JQL que sale en examen: `currentUser()`, `endOfDay()`, `WAS`, `CHANGED`, `sprint in openSprints()`, `fixVersion`, `component`, `statusCategory`.
 
-## Demostración guiada
+## Demostración
 
-1. Issue search en modo JQL: `project = DEV AND statusCategory != Done ORDER BY priority DESC`.
+1. **Filtros** → búsqueda avanzada → modo **JQL**:
 
-2. Save as `NORTECH DEV Abiertas`, viewers: proyecto DEV.
+```jql
+project = DEV AND statusCategory != Done ORDER BY priority DESC
+```
 
-3. Dashboard `NORTECH PMO` con Filter Results sobre ese filtro.
+2. Guarda como `NORTECH DEV Abiertas` y comparte con el espacio DEV (o el grupo PMO).
+
+3. **Paneles** → crea `NORTECH PMO` y añade Filter Results sobre ese filtro.
 
 ![Gadgets](../img/M08-02-02-gadgets.png)
 
-## Ahora practica tú
+## Laboratorio
 
-| Lab | Título | Qué harás |
-|-----|--------|-----------|
-| M08-01 | [JQL y filtros](M08-01-jql-filtros.md) | Consultas y filtros compartidos |
-| M08-02 | [Dashboards](M08-02-dashboards-gadgets.md) | Panel PMO con gadgets |
-| M08-03 | [Reports](M08-03-reports.md) | Sprint report, CFD, created vs resolved |
-| — | [Autoescuela M08](M08-autoescuela.md) | JQL y «qué informe es este» |
+Turno de los alumnos.
 
-→ Empieza por **[M08-01](M08-01-jql-filtros.md)**.
+| Lab | Título |
+|-----|--------|
+| M08-01 | [JQL y filtros](M08-01-jql-filtros.md) |
+| M08-02 | [Dashboards](M08-02-dashboards-gadgets.md) |
+| M08-03 | [Reports](M08-03-reports.md) |
+| — | [Preparación para el examen ACP-620](M08-preparacion-examen.md) |
+
+→ **[M08-01](M08-01-jql-filtros.md)**

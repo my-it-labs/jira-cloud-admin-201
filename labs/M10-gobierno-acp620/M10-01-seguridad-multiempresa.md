@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M10-02-confluence-marketplace.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Un issue security scheme `NORTECH Security` con niveles Interno y Cliente, asociado a SUP, validado con el usuario invitado.

@@ -1,8 +1,6 @@
 # M01-02 — Explorar la consola administrativa
 
-[← Página anterior](M01-01-crear-trial.md) · [Siguiente página →](M01-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M01-01-crear-trial.md) · [Siguiente página →](M01-preparacion-examen.md)
 
 ### Objetivo
 

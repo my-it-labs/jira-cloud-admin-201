@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M01-02-explorar-admin.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Dejar operativo un site Jira Cloud **Premium trial** tuyo, con la URL anotada, listo para el resto del curso.

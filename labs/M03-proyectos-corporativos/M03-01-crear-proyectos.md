@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M03-02-componentes-versiones.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Tener cuatro espacios **gestionados por la empresa** (*company-managed*) con claves `DEV`, `SUP`, `OPS` y `PMO`.

@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M07-02-columnas-filtros.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Un tablero Scrum en DEV (con un sprint de prueba) y un Kanban en SUP.

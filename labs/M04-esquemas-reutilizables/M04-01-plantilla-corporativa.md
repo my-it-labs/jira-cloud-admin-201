@@ -1,8 +1,6 @@
 # M04-01 — Construcción de una plantilla corporativa
 
-[← Página anterior](README.md) · [Siguiente página →](M04-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](README.md) · [Siguiente página →](M04-preparacion-examen.md)
 
 ### Objetivo
 

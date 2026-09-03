@@ -2,13 +2,9 @@
 
 [Siguiente página →](labs/M01-entorno-arquitectura/README.md)
 
-Formación **100 % práctica** de administración de **Jira Cloud** en entornos empresariales. Trabajas sobre **tu propia instancia trial** y sales con configuraciones equivalentes a las de una organización real.
+Administración de **Jira Cloud** en entornos empresariales. Cada alumno trabaja sobre **su propia instancia trial**.
 
-Cada módulo tiene dos niveles: el **README del módulo** con la **teoría** y la **demostración** del formador, y uno o varios **laboratorios** donde practicas tú. Al final de cada módulo hay un **kit de autoevaluación** alineado con el examen **ACP-620: Managing Jira Projects for Cloud**.
-
-## Cómo funciona el curso
-
-Sigue este README como índice y avanza **página a página** con **← Página anterior · Siguiente página →**.
+El curso prepara el examen **ACP-620: Managing Jira Projects for Cloud**. También cubre administración de organización y de site (usuarios, facturación, gobierno), que van más allá de ese examen: hace falta para el perfil de administrador de plataforma que pidió Atos.
 
 ## Antes de empezar
 
@@ -33,7 +29,5 @@ Sigue este README como índice y avanza **página a página** con **← Página 
 | M08 | JQL, dashboards y reports | [labs/M08-jql-dashboards-reports/](labs/M08-jql-dashboards-reports/README.md) |
 | M09 | Automatización | [labs/M09-automatizacion/](labs/M09-automatizacion/README.md) |
 | M10 | Gobierno, integraciones y ACP-620 | [labs/M10-gobierno-acp620/](labs/M10-gobierno-acp620/README.md) |
-
-## Empieza aquí
 
 → **[M01 — Entorno y arquitectura Jira Cloud](labs/M01-entorno-arquitectura/README.md)**

@@ -2,8 +2,6 @@
 
 [← Página anterior](M09-01-asignacion-automatica.md) · [Siguiente página →](M09-03-tareas-derivadas.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Regla que escala (comentario + prioridad) y otra que notifica al pasar a In Review en PMO.

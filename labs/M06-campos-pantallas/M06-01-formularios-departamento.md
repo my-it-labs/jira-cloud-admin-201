@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M06-02-campos-avanzados.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Cuatro campos de negocio visibles en las pantallas correctas (RRHH, Operaciones, Desarrollo, Calidad).

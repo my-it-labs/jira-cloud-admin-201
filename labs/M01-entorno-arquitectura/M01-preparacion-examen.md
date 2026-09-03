@@ -1,8 +1,8 @@
-# M01 — Autoescuela ACP-620 (arquitectura y acceso)
+# M01 — Preparación para el examen ACP-620 (arquitectura y acceso)
 
 [← Página anterior](M01-02-explorar-admin.md) · [Siguiente página →](../M02-usuarios-seguridad/README.md)
 
-> Kit de autoevaluación. Preguntas de escenario, en la línea del examen **ACP-620**. No es el examen oficial.
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
 
 Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
 
@@ -110,6 +110,6 @@ ACP-620 evalúa principalmente a:
 <details>
 <summary>Ver respuesta</summary>
 
-**B.** Dominios: creación de proyectos, tableros, gestión de proyectos, automation, reporting. SSO y org policies son más de administrador de Cloud (otro examen). Este curso cubre ambos, pero la autoescuela prioriza ACP-620.
+**B.** Dominios: creación de proyectos, tableros, gestión de proyectos, automation, reporting. SSO y org policies son más de administrador de Cloud (otro examen). Este curso cubre ambos; estos tests priorizan ACP-620.
 
 </details>

@@ -1,8 +1,6 @@
 # M07-02 — Columnas, filtros y swimlanes
 
-[← Página anterior](M07-01-scrum-kanban.md) · [Siguiente página →](M07-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M07-01-scrum-kanban.md) · [Siguiente página →](M07-preparacion-examen.md)
 
 ### Objetivo
 

@@ -1,20 +1,16 @@
 # M07 — Tableros ágiles
 
-[← Página anterior](../M06-campos-pantallas/M06-autoescuela.md) · [Siguiente página →](M07-01-scrum-kanban.md)
-
-> [!NOTE]
-> **Cómo funciona este módulo.** Primero la **teoría**, luego la **demostración guiada** del
-> formador, y después **practicas tú** en el/los laboratorio(s).
+[← Página anterior](../M06-campos-pantallas/M06-preparacion-examen.md) · [Siguiente página →](M07-01-scrum-kanban.md)
 
 ## Qué aprenderás
 
 - Elegir Scrum, Kanban o Kanban con backlog.
 - Entender que el board es un **filtro JQL** + columnas.
-- Mapear columnas a estados, quick filters, swimlanes, estimación.
+- Mapear columnas a estados, filtros rápidos, calles, estimación.
 
 Este es el dominio más pesado de **ACP-620** (25–35 %).
 
-## Teoría
+## Explicación
 
 | Tipo | Cuándo |
 |------|--------|
@@ -31,24 +27,26 @@ Este es el dominio más pesado de **ACP-620** (25–35 %).
 | **Swimlanes** | Filas (assignee, stories, queries) |
 
 > [!WARNING]
-> Un sub-filter `status != Done` mal pensado vacía el tablero. Troubleshoot: Board settings → Filter + Columns + permisos Browse.
+> Un sub-filter `status != Done` mal pensado vacía el tablero. Diagnóstico: configuración del tablero → Filtro + Columnas + permiso Browse.
 
-Boards **multi-proyecto**: el filtro `project in (DEV, SUP)` y permisos en ambos. Rendimiento y fugas de datos si el filtro es `OR` demasiado amplio.
+Los tableros **multi-proyecto** usan un filtro `project in (DEV, SUP)` y permisos en ambos. Cuidado con fugas de datos si el filtro es demasiado amplio.
 
-## Demostración guiada
+## Demostración
 
-1. En DEV se abre el backlog Scrum. En SUP, el Kanban.
+1. Entra en DEV y abre el **Backlog** Scrum. En SUP, abre el Kanban.
 
-2. Board settings → Columns muestra el mapeo con `In Review` (M05) en su propia columna.
+2. Configuración del tablero DEV → **Columnas**. El estado `In Review` (M05) debe tener columna propia; nada en «sin asignar».
 
 ![Columnas](../img/M07-02-01-columns.png)
 
-## Ahora practica tú
+## Laboratorio
 
-| Lab | Título | Qué harás |
-|-----|--------|-----------|
-| M07-01 | [Scrum y Kanban](M07-01-scrum-kanban.md) | Tableros DEV y SUP |
-| M07-02 | [Columnas y filtros](M07-02-columnas-filtros.md) | Mapping, quick filters, swimlanes |
-| — | [Autoescuela M07](M07-autoescuela.md) | El bloque más denso del examen |
+Turno de los alumnos.
 
-→ Empieza por **[M07-01](M07-01-scrum-kanban.md)**.
+| Lab | Título |
+|-----|--------|
+| M07-01 | [Scrum y Kanban](M07-01-scrum-kanban.md) |
+| M07-02 | [Columnas y filtros](M07-02-columnas-filtros.md) |
+| — | [Preparación para el examen ACP-620](M07-preparacion-examen.md) |
+
+→ **[M07-01](M07-01-scrum-kanban.md)**

@@ -1,6 +1,11 @@
-# M04 — Autoescuela ACP-620 (schemes y layout)
+# M04 — Preparación para el examen ACP-620 (schemes y layout)
 
 [← Página anterior](M04-01-plantilla-corporativa.md) · [Siguiente página →](../M05-workflows-empresariales/README.md)
+
+> Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+
+Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
+
 
 ---
 

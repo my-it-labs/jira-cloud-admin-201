@@ -2,8 +2,6 @@
 
 [← Página anterior](M10-02-confluence-marketplace.md) · [Siguiente página →](M10-04-examen-simulado.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Aplicar un checklist de diagnóstico a cuatro incidentes típicos y localizar el audit log.

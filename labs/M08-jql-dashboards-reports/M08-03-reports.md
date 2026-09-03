@@ -1,8 +1,6 @@
 # M08-03 — Reports nativos
 
-[← Página anterior](M08-02-dashboards-gadgets.md) · [Siguiente página →](M08-autoescuela.md)
-
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
+[← Página anterior](M08-02-dashboards-gadgets.md) · [Siguiente página →](M08-preparacion-examen.md)
 
 ### Objetivo
 

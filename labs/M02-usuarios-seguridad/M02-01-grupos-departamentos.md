@@ -2,8 +2,6 @@
 
 [← Página anterior](README.md) · [Siguiente página →](M02-02-modelo-seguridad.md)
 
-> Práctica del módulo. La teoría y la demo están en el [README del módulo](README.md).
-
 ### Objetivo
 
 Dejar creados los grupos departamentales de Nortech y al menos un usuario además de ti (aunque sea una segunda cuenta tuya).
