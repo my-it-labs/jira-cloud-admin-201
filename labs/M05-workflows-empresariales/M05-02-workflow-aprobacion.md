@@ -30,6 +30,8 @@ Nuevo workflow `NORTECH Aprobación` + issue type `Solicitud` (o Task) mapeado s
 
 **Resultado esperado:** Diagrama con bifurcación.
 
+![Flujo de PMO](../img/M05-02-01-approval-diagram.png)
+
 ### 3 — Quién aprueba
 
 **Acción:** Transición `Approve` → condición: el usuario está en el rol **Administrators**. `Reject` igual. Publica.
@@ -45,6 +47,8 @@ Nuevo workflow `NORTECH Aprobación` + issue type `Solicitud` (o Task) mapeado s
 **Por qué:** Un validador demuestra la diferencia con la condición: el botón se ve, pero falla si falta el dato.
 
 **Resultado esperado:** Approve exige Assignee (o comentario).
+
+![Detalle del flujo](../img/M05-02-02-validator.png)
 
 ### 5 — Scheme y prueba
 

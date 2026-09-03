@@ -29,7 +29,11 @@ Alcance: espacio vs múltiple vs global. En trial, respeta los **límites de eje
 
 1. SUP → **Configuración del espacio** → **Automatización** → crear regla. Disparador: trabajo creado.
 
+![Automatización de SUP](../img/M09-01-01-rule-new.png)
+
 2. Crea un Bug de prueba y abre el **registro de auditoría** de la regla: SUCCESS o el error de permiso.
+
+![Registro de auditoría de la regla](../img/M09-02-02-audit-escalado.png)
 
 ## Laboratorio
 

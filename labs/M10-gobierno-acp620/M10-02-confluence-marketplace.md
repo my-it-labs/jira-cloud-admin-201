@@ -30,6 +30,8 @@ Alta breve de Confluence → espacio → página → enlace desde Jira. Luego Ex
 
 **Resultado esperado:** La issue muestra el enlace; la página, el issue.
 
+![Elemento SUP-1](../img/M10-02-01-confluence-link.png)
+
 ### 3 — Marketplace (gobernado)
 
 **Acción:** **Aplicaciones** → explorar más. Busca `Timesheet` o automatización extra. Abre **una** ficha: permisos que pide, Free vs de pago. **No instales** nada de pago. Si instalas una app Free de prueba, **desinstálala** al terminar.
@@ -37,6 +39,8 @@ Alta breve de Confluence → espacio → página → enlace desde Jira. Luego Ex
 **Por qué:** Cada app es identidad, datos y factura.
 
 **Resultado esperado:** Has leído permisos de una ficha.
+
+![Marketplace](../img/M10-02-02-marketplace.png)
 
 ## Comprueba tu entendimiento
 

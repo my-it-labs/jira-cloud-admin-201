@@ -22,6 +22,8 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 
 **Resultado esperado:** Diagrama editable.
 
+![Flujos de trabajo](../img/M05-01-01-workflow-editor.png)
+
 ### 2 — Estados y transiciones
 
 **Acción:** Asegura estados `To Do`, `In Progress`, `In Review`, `Done` (nombres equivalentes en español si la UI está en ES). Añade transiciones:
@@ -36,6 +38,8 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 
 **Resultado esperado:** El diagrama muestra el ciclo completo.
 
+![Lista de flujos](../img/M05-01-02-transition-conditions.png)
+
 ### 3 — Condición al cerrar
 
 **Acción:** Transición `Done` → **Condiciones** → añadir → **El usuario está en el rol del espacio** → Administrators (o Developers, según tu política). Publica el borrador.
@@ -43,6 +47,8 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 **Por qué:** Condición = quién puede pulsar. El reporter no cierra si no está en el rol.
 
 **Resultado esperado:** La condición lista en la transición.
+
+![Transiciones del flujo](../img/M05-01-02-transition-conditions.png)
 
 > [!TIP]
 > Post function por defecto ya pone Resolution en transiciones a Done. Comprueba que Done tiene `statusCategory` Done.
@@ -54,6 +60,8 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 **Por qué:** El scheme es el interruptor por tipo.
 
 **Resultado esperado:** Scheme muestra el mapeo.
+
+![Esquemas de flujo de trabajo](../img/M05-01-03-workflow-scheme.png)
 
 ### 5 — Probar
 

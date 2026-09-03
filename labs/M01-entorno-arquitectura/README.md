@@ -79,6 +79,8 @@ El laboratorio usa **Premium trial (30 días, sin tarjeta)** para no chocar con 
 
 ![Admin overview](../img/M01-02-02-admin-overview.png)
 
+![Aplicaciones](../img/M01-02-03-admin-products.png)
+
 ## Laboratorio
 
 Turno de los alumnos.

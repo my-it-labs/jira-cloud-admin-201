@@ -22,6 +22,8 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 **Resultado esperado:** Backlog + sprint activo.
 
+![Backlog Scrum](../img/M07-01-01-scrum-board.png)
+
 ### 2 — Estimación
 
 **Acción:** Configuración del tablero → **Estimación**. Story points (o estimación original de tiempo). Pon puntos a 2 elementos del sprint.
@@ -29,6 +31,8 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 **Por qué:** ACP-620 pregunta el efecto de estimation vs time tracking en el burndown.
 
 **Resultado esperado:** Estimation method visible; issues con puntos.
+
+![Configuración del tablero](../img/M07-01-03-board-location.png)
 
 ### 3 — Kanban SUP
 
@@ -38,6 +42,8 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 **Resultado esperado:** Kanban con las issues de SUP.
 
+![Tablero Kanban SUP](../img/M07-01-02-kanban-board.png)
+
 ### 4 — Location y nombre
 
 **Acción:** Configuración del tablero → General. Nombre: `NORTECH DEV Scrum`, ubicación DEV. SUP: `NORTECH SUP Kanban`.
@@ -46,10 +52,12 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 **Resultado esperado:** Nombres NORTECH.
 
+![Detalles del tablero](../img/M07-01-03-board-location.png)
+
 ## Comprueba tu entendimiento
 
 **Filtro**
-Board settings → Filter. Ábrelo en Issue search.
+Configuración del tablero → **Filtro**. Ábrelo en la búsqueda avanzada de actividades.
 → Las mismas issues que el tablero (salvo swimlanes/sub-filter).
 
 ## Reto

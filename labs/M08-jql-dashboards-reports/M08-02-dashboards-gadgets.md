@@ -22,6 +22,8 @@ Un dashboard `NORTECH PMO` compartido con gadgets alimentados por filtros NORTEC
 
 **Resultado esperado:** Dashboard vacío compartido.
 
+![Panel vacío](../img/M08-02-01-dashboard-empty.png)
+
 ### 2 — Gadgets
 
 **Acción:** Añadir gadget:
@@ -36,6 +38,8 @@ Un dashboard `NORTECH PMO` compartido con gadgets alimentados por filtros NORTEC
 **Por qué:** ACP-620 pide elegir gadget según la pregunta de negocio («lista» vs «distribución» vs «mis cosas»).
 
 **Resultado esperado:** Tres gadgets con datos.
+
+![Editar panel](../img/M08-02-02-gadgets.png)
 
 ### 3 — Permiso del filtro
 

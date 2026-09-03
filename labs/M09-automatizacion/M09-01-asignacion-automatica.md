@@ -22,6 +22,8 @@ Create rule en el proyecto (no global, para no comer cuota).
 
 **Resultado esperado:** When + If en el editor.
 
+![Automatización de SUP](../img/M09-01-01-rule-new.png)
+
 ### 2 — Acciones
 
 **Acción:** Then:
@@ -36,6 +38,8 @@ Nombre de la regla: `NORTECH SUP Auto-assign bugs`. **Actívala**.
 
 **Resultado esperado:** Regla enabled.
 
+![Crear flujo](../img/M09-01-02-rule-assign.png)
+
 ### 3 — Probar y audit log
 
 **Acción:** **Crear** un Bug en SUP. Abre la regla → **Registro de auditoría**.
@@ -43,6 +47,8 @@ Nombre de la regla: `NORTECH SUP Auto-assign bugs`. **Actívala**.
 **Por qué:** Si FAIL, el mensaje (permiso, campo, actor) es el diagnóstico. No reescribas a ciegas.
 
 **Resultado esperado:** SUCCESS y el Bug asignado / con label.
+
+![Registro de auditoría](../img/M09-02-02-audit-escalado.png)
 
 ## Comprueba tu entendimiento
 

@@ -35,7 +35,13 @@ Los tableros **multi-proyecto** usan un filtro `project in (DEV, SUP)` y permiso
 
 1. Entra en DEV y abre el **Backlog** Scrum. En SUP, abre el Kanban.
 
+![Backlog Scrum de DEV](../img/M07-01-01-scrum-board.png)
+
+![Kanban de SUP](../img/M07-01-02-kanban-board.png)
+
 2. Configuración del tablero DEV → **Columnas**. El estado `In Review` (M05) debe tener columna propia; nada en «sin asignar».
+
+![Columnas del tablero](../img/M07-02-01-columns.png)
 
 ## Laboratorio
 

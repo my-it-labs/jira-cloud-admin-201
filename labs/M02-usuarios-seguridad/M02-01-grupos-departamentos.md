@@ -32,6 +32,8 @@ Directorio: listar usuarios → invitar → crear grupos → meter miembros.
 
 **Resultado esperado:** Invitación enviada (o usuario ya en el Directorio si aceptó al vuelo).
 
+![Invitar personas](../img/M02-01-02-invite-user.png)
+
 > [!TIP]
 > Si estás solo, crea un usuario con otro correo (alias). Sin segundo usuario, varios labs de seguridad no se pueden comprobar.
 
@@ -43,6 +45,8 @@ Directorio: listar usuarios → invitar → crear grupos → meter miembros.
 
 **Resultado esperado:** Los seis grupos existen (vacíos o con miembros).
 
+![Lista de grupos](../img/M02-01-03-groups-list.png)
+
 ### 4 — Membresía
 
 **Acción:** Abre `nortech-dev` y añade tu usuario. Añade al invitado a `nortech-soporte`.
@@ -50,6 +54,8 @@ Directorio: listar usuarios → invitar → crear grupos → meter miembros.
 **Por qué:** En M03 el permission scheme usará estos grupos vía project roles.
 
 **Resultado esperado:** Tú en `nortech-dev`; el segundo usuario en `nortech-soporte`.
+
+![Miembros de nortech-dev](../img/M02-01-04-group-members.png)
 
 ## Comprueba tu entendimiento
 

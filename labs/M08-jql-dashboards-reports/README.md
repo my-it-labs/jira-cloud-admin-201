@@ -34,9 +34,15 @@ JQL que sale en examen: `currentUser()`, `endOfDay()`, `WAS`, `CHANGED`, `sprint
 project = DEV AND statusCategory != Done ORDER BY priority DESC
 ```
 
+![Búsqueda JQL](../img/M08-01-01-search-jql.png)
+
 2. Guarda como `NORTECH DEV Abiertas` y comparte con el espacio DEV (o el grupo PMO).
 
+![Filtros guardados](../img/M08-01-02-saved-filter.png)
+
 3. **Paneles** → crea `NORTECH PMO` y añade Filter Results sobre ese filtro.
+
+![Panel NORTECH PMO](../img/M08-02-01-dashboard-empty.png)
 
 ## Laboratorio
 

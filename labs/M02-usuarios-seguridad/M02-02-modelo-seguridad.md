@@ -22,6 +22,8 @@ Revisar el acceso a la aplicación, los roles de organización y (si el plan lo 
 
 **Resultado esperado:** Jira se concede por grupos Nortech, no por «all users» indiscriminado.
 
+![Aplicaciones de Atlassian](../img/M02-02-01-product-access.png)
+
 ### 2 — Quién es admin
 
 **Acción:** **Directorio** → tu usuario y el invitado. Tú: **Administrador de organización** o admin del site. El invitado: usuario, no admin.
@@ -29,6 +31,8 @@ Revisar el acceso a la aplicación, los roles de organización y (si el plan lo 
 **Por qué:** Si todos son admin, M04–M10 no demuestran restricción ninguna.
 
 **Resultado esperado:** El invitado no ve **Facturación** ni puede crear grupos.
+
+![Ficha de usuario y roles](../img/M02-02-02-org-roles.png)
 
 ### 3 — Validar con el invitado
 
@@ -45,6 +49,8 @@ Revisar el acceso a la aplicación, los roles de organización y (si el plan lo 
 **Por qué:** En Premium hay más eventos. En Free puede no haber nada útil: anótalo y sigue.
 
 **Resultado esperado:** Ves (o no, según plan) el alta de grupos o la invitación.
+
+![Registro de auditoría de Jira](../img/M10-03-01-audit-jira.png)
 
 ## Comprueba tu entendimiento
 

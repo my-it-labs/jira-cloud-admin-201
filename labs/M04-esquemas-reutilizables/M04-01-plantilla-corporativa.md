@@ -22,6 +22,8 @@ Copiar schemes por defecto → renombrar NORTECH → asociar a proyectos → com
 
 **Resultado esperado:** El scheme lista DEV y SUP.
 
+![Esquemas de tipos](../img/M04-01-01-issue-type-scheme.png)
+
 ### 2 — Permission scheme
 
 **Acción:** **Esquemas de permisos** → copiar el predeterminado. Nombre: `NORTECH Permissions`. Edita:
@@ -37,6 +39,8 @@ Asocia DEV y SUP (**Configuración del espacio** → **Permisos** → usar un es
 
 **Resultado esperado:** DEV y SUP usan `NORTECH Permissions`.
 
+![Esquemas de permisos](../img/M04-01-02-permission-scheme.png)
+
 ### 3 — Notification scheme
 
 **Acción:** Copia el predeterminado → `NORTECH Notifications`. Deja Asignatario y Reportero en eventos clave. Asocia DEV y SUP.
@@ -45,6 +49,8 @@ Asocia DEV y SUP (**Configuración del espacio** → **Permisos** → usar un es
 
 **Resultado esperado:** Scheme NORTECH asociado.
 
+![Esquemas de notificación](../img/M04-01-03-notification-scheme.png)
+
 ### 4 — Vista consolidada
 
 **Acción:** DEV → **Configuración del espacio** → **Esquemas** (o **Detalles**). Comprueba los nombres NORTECH. Repite en SUP.
@@ -52,6 +58,8 @@ Asocia DEV y SUP (**Configuración del espacio** → **Permisos** → usar un es
 **Por qué:** Es el mapa que vas a mirar cuando «en SUP pasó X y en DEV no».
 
 **Resultado esperado:** Ambos proyectos comparten al menos permisos y tipos.
+
+![Resumen de DEV](../img/M04-01-04-project-schemes.png)
 
 > [!TIP]
 > Workflow, screens y field config se retocan de verdad en M05 y M06. Hoy basta con **copiar** el workflow scheme a `NORTECH Workflows` y asociarlo, aunque aún sea el flujo por defecto.
@@ -63,6 +71,8 @@ Asocia DEV y SUP (**Configuración del espacio** → **Permisos** → usar un es
 **Por qué:** M05 edita *este* scheme, no el Default.
 
 **Resultado esperado:** Nombre NORTECH visible en la configuración de DEV.
+
+![Esquemas de flujo de trabajo](../img/M05-01-03-workflow-scheme.png)
 
 ## Comprueba tu entendimiento
 

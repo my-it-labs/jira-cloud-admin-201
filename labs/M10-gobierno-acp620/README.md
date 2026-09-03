@@ -24,7 +24,11 @@ Operación: registro de auditoría, límites de automation, no editar esquemas D
 
 1. **Elementos de trabajo** → esquemas de seguridad. Un scheme con dos niveles. Una issue en `Cliente` que el usuario de soporte interno no ve.
 
+![Esquemas de seguridad](../img/M10-01-01-security-scheme.png)
+
 2. **Aplicaciones** → explorar más. Abre **una** ficha. **No** instales nada de pago.
+
+![Marketplace](../img/M10-02-02-marketplace.png)
 
 ## Laboratorio
 

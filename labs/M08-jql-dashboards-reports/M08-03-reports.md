@@ -22,6 +22,8 @@ Reports en la barra del proyecto/board — no en el dashboard.
 
 **Resultado esperado:** Informe del sprint con lista de issues.
 
+![Reporte de sprint](../img/M08-03-01-sprint-report.png)
+
 ### 2 — Cumulative flow
 
 **Acción:** SUP → **Informes** → **Diagrama de flujo acumulativo**. Rango de 2 semanas.
@@ -30,6 +32,8 @@ Reports en la barra del proyecto/board — no en el dashboard.
 
 **Resultado esperado:** Áreas apiladas por estado/columna.
 
+![Informes del tablero](../img/M08-03-02-cfd.png)
+
 ### 3 — Created vs Resolved
 
 **Acción:** DEV o SUP → **Informes** → **Creados frente a resueltos** (análisis).
@@ -37,6 +41,8 @@ Reports en la barra del proyecto/board — no en el dashboard.
 **Por qué:** No es un gadget de dashboard por defecto; es report de proyecto. Saber **dónde** se abre es pregunta de examen.
 
 **Resultado esperado:** Dos series en el tiempo.
+
+![Informes del espacio](../img/M08-03-03-created-vs-resolved.png)
 
 ### 4 — Otros que debes localizar (sin rellenar)
 

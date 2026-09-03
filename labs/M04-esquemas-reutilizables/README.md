@@ -29,7 +29,11 @@ Un scheme es un **paquete nombrado** que un proyecto CMP **apunta**. Cambias el 
 
 1. **Configuración** → **Elementos de trabajo**. Recorre las familias de esquemas. Abre **Esquemas de permisos**: verás el predeterminado y, más adelante, la copia `NORTECH`.
 
-2. Entra en DEV → **Configuración del espacio** → **Esquemas**. Aquí se ve qué paquetes usa el espacio. Tras el laboratorio, varios nombres empiezan por `NORTECH`.
+![Esquemas de permisos](../img/M04-01-02-permission-scheme.png)
+
+2. Entra en DEV → **Configuración del espacio** → **Resumen**. Aquí se ve qué paquetes usa el espacio. Tras el laboratorio, varios nombres empiezan por `NORTECH`.
+
+![Resumen de esquemas de DEV](../img/M04-01-04-project-schemes.png)
 
 ## Laboratorio
 

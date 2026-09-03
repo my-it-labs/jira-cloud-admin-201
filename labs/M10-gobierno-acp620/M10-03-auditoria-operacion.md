@@ -46,6 +46,10 @@ Cuatro mini-escenarios + revisión de logs y de límites de automation.
 
 **Resultado esperado:** Ves eventos recientes y/o el uso de automation.
 
+![Registro de auditoría](../img/M10-03-01-audit-jira.png)
+
+![Automatización global](../img/M10-03-02-automation-usage.png)
+
 ## Comprueba tu entendimiento
 
 **Orden de diagnóstico**

@@ -29,6 +29,8 @@ Default: `Interno`.
 
 **Resultado esperado:** Scheme con dos niveles.
 
+![NORTECH Security](../img/M10-01-01-security-scheme.png)
+
 ### 2 — Asociar y permiso Set Issue Security
 
 **Acción:** Asocia el scheme a SUP. En `NORTECH Permissions`, concede **Set Issue Security** a Administrators (no a Users).
@@ -44,6 +46,8 @@ Default: `Interno`.
 **Por qué:** Simula separación de clientes / datos sensibles.
 
 **Resultado esperado:** El invitado **no** ve esa issue; sí ve otras en Interno.
+
+![Elemento de SUP](../img/M10-01-02-issue-restricted.png)
 
 ## Comprueba tu entendimiento
 

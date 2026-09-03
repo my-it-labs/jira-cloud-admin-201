@@ -22,6 +22,8 @@ Configuración del tablero de DEV y SUP.
 
 **Resultado esperado:** Columna Review visible.
 
+![Columnas](../img/M07-02-01-columns.png)
+
 ### 2 — Quick filters
 
 **Acción:** **Filtros rápidos** → añade:
@@ -33,6 +35,8 @@ Configuración del tablero de DEV y SUP.
 
 **Resultado esperado:** Botones en el tablero.
 
+![Filtros rápidos](../img/M07-02-02-quick-filters.png)
+
 ### 3 — Swimlanes y card layout
 
 **Acción:** Calles (*swimlanes*) → **Asignatario** (o Stories). Diseño de tarjeta: muestra Story points y Asignatario.
@@ -40,6 +44,8 @@ Configuración del tablero de DEV y SUP.
 **Por qué:** ACP-620 cubre swimlanes, card colors, card layout, working days, issue detail view.
 
 **Resultado esperado:** El tablero se parte en filas por persona.
+
+![Carriles](../img/M07-02-03-swimlanes.png)
 
 ### 4 — Kanban sub-filter
 
@@ -73,4 +79,4 @@ Board settings → Card colors → Queries. No es un permission scheme: solo vis
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | Tablero vacío | Filter, sub-filter, permisos, columnas | En ese orden |
-| Quick filter no hace nada | JQL inválido | Testea en Issue search |
+| Quick filter no hace nada | JQL inválido | Testea en la búsqueda avanzada |

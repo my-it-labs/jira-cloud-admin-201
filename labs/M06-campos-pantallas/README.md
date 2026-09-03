@@ -28,7 +28,11 @@ Nortech: RRHH y Calidad necesitan datos que Desarrollo no debe ver en el Create 
 
 1. **Elementos de trabajo** → **Campos personalizados**. Crea (o muestra) `Departamento` como lista. El contexto se limita a PMO y SUP: DEV no lo hereda.
 
+![Campos personalizados](../img/M06-01-01-custom-fields.png)
+
 2. **Crear** un trabajo en SUP: el campo aparece. En DEV, no.
+
+![Crear en SUP](../img/M06-01-03-create-issue-hr.png)
 
 ## Laboratorio
 
