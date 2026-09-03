@@ -38,8 +38,6 @@ project = DEV AND statusCategory != Done ORDER BY priority DESC
 
 3. **Paneles** → crea `NORTECH PMO` y añade Filter Results sobre ese filtro.
 
-![Gadgets](../img/M08-02-02-gadgets.png)
-
 ## Laboratorio
 
 Turno de los alumnos.

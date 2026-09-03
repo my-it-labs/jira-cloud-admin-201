@@ -29,8 +29,6 @@ Crear campos → pantallas NORTECH → issue type screen scheme.
 
 **Resultado esperado:** Los campos existen en la lista.
 
-![Campos](../img/M06-01-01-custom-fields.png)
-
 ### 2 — Pantallas
 
 **Acción:** **Elementos de trabajo** → **Pantallas**. Copia la pantalla que usa DEV. Nombres:
@@ -46,8 +44,6 @@ Añade a cada una los campos de su fila. No pongas `Severidad QA` en DEV Create.
 
 **Resultado esperado:** Screens listadas.
 
-![Screens](../img/M06-01-02-screens.png)
-
 ### 3 — Screen schemes
 
 **Acción:** **Esquemas de pantallas** + **esquemas de pantallas por tipo**. Crea `NORTECH SUP Screens` que use la pantalla SUP para Crear y Editar. Asocia al espacio SUP. Análogo DEV (sin campos de RRHH).
@@ -55,8 +51,6 @@ Añade a cada una los campos de su fila. No pongas `Severidad QA` en DEV Create.
 **Por qué:** El proyecto no apunta a una pantalla suelta: apunta a un scheme.
 
 **Resultado esperado:** Create issue en SUP muestra `Severidad QA` y/o `Departamento`.
-
-![Create SUP](../img/M06-01-03-create-issue-hr.png)
 
 ## Comprueba tu entendimiento
 

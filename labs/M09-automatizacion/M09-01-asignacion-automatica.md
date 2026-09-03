@@ -22,8 +22,6 @@ Create rule en el proyecto (no global, para no comer cuota).
 
 **Resultado esperado:** When + If en el editor.
 
-![Nueva regla](../img/M09-01-01-rule-new.png)
-
 ### 2 — Acciones
 
 **Acción:** Then:
@@ -45,8 +43,6 @@ Nombre de la regla: `NORTECH SUP Auto-assign bugs`. **Actívala**.
 **Por qué:** Si FAIL, el mensaje (permiso, campo, actor) es el diagnóstico. No reescribas a ciegas.
 
 **Resultado esperado:** SUCCESS y el Bug asignado / con label.
-
-![Audit](../img/M09-01-02-rule-assign.png)
 
 ## Comprueba tu entendimiento
 

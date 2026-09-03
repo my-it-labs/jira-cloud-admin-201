@@ -28,8 +28,6 @@ Components con lead + Default assignee. Releases con una versión `1.0.0`.
 
 **Resultado esperado:** Tres componentes listados.
 
-![Componentes](../img/M03-02-01-components.png)
-
 > [!NOTE]
 > En TMP los componentes no existen igual (usas fields). Por eso DEV es CMP.
 
@@ -49,8 +47,6 @@ Components con lead + Default assignee. Releases con una versión `1.0.0`.
 
 **Resultado esperado:** Dos versiones; `1.0.0` se puede marcar Unreleased / In progress.
 
-![Versiones](../img/M03-02-02-versions.png)
-
 ### 4 — Release hub
 
 **Acción:** Abre el hub de `1.0.0`. Añade el Bug del paso 2 a **Versión de corrección** `1.0.0`.
@@ -58,8 +54,6 @@ Components con lead + Default assignee. Releases con una versión `1.0.0`.
 **Por qué:** Ver el impacto de scope: meter o sacar issues de la versión.
 
 **Resultado esperado:** El hub muestra al menos una issue en `1.0.0`.
-
-![Release hub](../img/M03-02-03-release-hub.png)
 
 ## Comprueba tu entendimiento
 

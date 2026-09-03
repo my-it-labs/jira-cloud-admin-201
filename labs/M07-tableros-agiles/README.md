@@ -37,8 +37,6 @@ Los tableros **multi-proyecto** usan un filtro `project in (DEV, SUP)` y permiso
 
 2. Configuración del tablero DEV → **Columnas**. El estado `In Review` (M05) debe tener columna propia; nada en «sin asignar».
 
-![Columnas](../img/M07-02-01-columns.png)
-
 ## Laboratorio
 
 Turno de los alumnos.

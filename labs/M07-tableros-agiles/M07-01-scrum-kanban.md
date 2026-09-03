@@ -22,8 +22,6 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 **Resultado esperado:** Backlog + sprint activo.
 
-![Scrum](../img/M07-01-01-scrum-board.png)
-
 ### 2 — Estimación
 
 **Acción:** Configuración del tablero → **Estimación**. Story points (o estimación original de tiempo). Pon puntos a 2 elementos del sprint.
@@ -40,8 +38,6 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 **Resultado esperado:** Kanban con las issues de SUP.
 
-![Kanban](../img/M07-01-02-kanban-board.png)
-
 ### 4 — Location y nombre
 
 **Acción:** Configuración del tablero → General. Nombre: `NORTECH DEV Scrum`, ubicación DEV. SUP: `NORTECH SUP Kanban`.
@@ -49,8 +45,6 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 **Por qué:** Location decide en qué proyecto aparece el board en la barra.
 
 **Resultado esperado:** Nombres NORTECH.
-
-![Location](../img/M07-01-03-board-location.png)
 
 ## Comprueba tu entendimiento
 

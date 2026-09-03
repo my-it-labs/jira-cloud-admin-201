@@ -26,8 +26,6 @@ project = DEV AND statusCategory != Done ORDER BY priority DESC, updated DESC
 
 **Resultado esperado:** Lista de abiertas de DEV.
 
-![JQL](../img/M08-01-01-search-jql.png)
-
 ### 2 — Más consultas
 
 **Acción:** Prueba, una a una:
@@ -55,8 +53,6 @@ project = DEV AND sprint in openSprints()
 **Por qué:** El dashboard de M08-02 usará la compartida.
 
 **Resultado esperado:** Filtro visible en ver todos los filtros.
-
-![Filtro](../img/M08-01-02-saved-filter.png)
 
 ## Comprueba tu entendimiento
 

@@ -37,15 +37,9 @@ Premium/Standard muestran más eventos que Free. En M10 se usa el registro de au
 
 1. En `admin.atlassian.com` abre **Directorio** → **Usuarios**. Pulsa **Invitar a usuarios**: el diálogo pide correo y aplicaciones (Jira). No hace falta enviar ahora si vas a repetirlo en el laboratorio.
 
-![Invitar](../img/M02-01-02-invite-user.png)
-
 2. Abre **Directorio** → **Grupos**. Crea `nortech-dev` y añade tu usuario.
 
-![Grupos](../img/M02-01-03-groups-list.png)
-
 3. Abre **Aplicaciones** → **Configuración de acceso a la aplicación**. Comprueba que Jira se concede por grupos previstos, no «a todo el mundo».
-
-![Product access](../img/M02-02-01-product-access.png)
 
 ## Laboratorio
 

@@ -30,8 +30,6 @@ Nortech: RRHH y Calidad necesitan datos que Desarrollo no debe ver en el Create 
 
 2. **Crear** un trabajo en SUP: el campo aparece. En DEV, no.
 
-![Create](../img/M06-01-03-create-issue-hr.png)
-
 ## Laboratorio
 
 Turno de los alumnos.

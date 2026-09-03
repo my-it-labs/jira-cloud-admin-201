@@ -31,8 +31,6 @@ Alcance: espacio vs múltiple vs global. En trial, respeta los **límites de eje
 
 2. Crea un Bug de prueba y abre el **registro de auditoría** de la regla: SUCCESS o el error de permiso.
 
-![Audit](../img/M09-01-02-rule-assign.png)
-
 ## Laboratorio
 
 Turno de los alumnos.

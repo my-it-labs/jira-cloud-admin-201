@@ -29,8 +29,6 @@ Trigger Issue transitioned → Create sub-tasks (o Create issue + parent).
 
 **Resultado esperado:** Regla on.
 
-![Regla](../img/M09-03-01-rule-subtasks.png)
-
 ### 2 — Probar
 
 **Acción:** Story en To Do → Start. Abre la Story.
@@ -38,8 +36,6 @@ Trigger Issue transitioned → Create sub-tasks (o Create issue + parent).
 **Por qué:** Ver parent/child. Si se crean 20 subtareas, hay loop (la subtarea transita y vuelve a disparar: por eso If type = Story).
 
 **Resultado esperado:** Dos subtareas.
-
-![Issue](../img/M09-03-02-issue-with-subtasks.png)
 
 ### 3 — Branch (opcional)
 

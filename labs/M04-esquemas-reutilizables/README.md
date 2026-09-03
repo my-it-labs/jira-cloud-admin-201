@@ -31,8 +31,6 @@ Un scheme es un **paquete nombrado** que un proyecto CMP **apunta**. Cambias el 
 
 2. Entra en DEV → **Configuración del espacio** → **Esquemas**. Aquí se ve qué paquetes usa el espacio. Tras el laboratorio, varios nombres empiezan por `NORTECH`.
 
-![Schemes del proyecto](../img/M04-01-04-project-schemes.png)
-
 ## Laboratorio
 
 Turno de los alumnos.

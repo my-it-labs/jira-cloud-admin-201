@@ -33,8 +33,6 @@ Si el scheduler está limitado en el trial, usa Trigger **Manual** para la prueb
 
 **Resultado esperado:** Regla on. Ejecución manual SUCCESS.
 
-![Regla](../img/M09-02-01-rule-sla-comment.png)
-
 ### 2 — Aprobación (PMO)
 
 **Acción:** PMO → **Automatización**. Disparador: **Transición** → destino `In Review`. Condición: tipo = Solicitud (o Task). Acción: **Comentar** `Pendiente de aprobación por PMO.` Acción opcional: asignar al responsable del espacio.
@@ -50,8 +48,6 @@ Si el scheduler está limitado en el trial, usa Trigger **Manual** para la prueb
 **Por qué:** Troubleshoot: «no disparó» vs «disparó y falló».
 
 **Resultado esperado:** Entradas recientes.
-
-![Audit](../img/M09-02-02-audit-escalado.png)
 
 ## Comprueba tu entendimiento
 

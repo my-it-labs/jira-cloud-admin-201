@@ -22,8 +22,6 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 
 **Resultado esperado:** Diagrama editable.
 
-![Editor](../img/M05-01-01-workflow-editor.png)
-
 ### 2 — Estados y transiciones
 
 **Acción:** Asegura estados `To Do`, `In Progress`, `In Review`, `Done` (nombres equivalentes en español si la UI está en ES). Añade transiciones:
@@ -46,8 +44,6 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 
 **Resultado esperado:** La condición lista en la transición.
 
-![Conditions](../img/M05-01-02-transition-conditions.png)
-
 > [!TIP]
 > Post function por defecto ya pone Resolution en transiciones a Done. Comprueba que Done tiene `statusCategory` Done.
 
@@ -58,8 +54,6 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 **Por qué:** El scheme es el interruptor por tipo.
 
 **Resultado esperado:** Scheme muestra el mapeo.
-
-![Scheme](../img/M05-01-03-workflow-scheme.png)
 
 ### 5 — Probar
 

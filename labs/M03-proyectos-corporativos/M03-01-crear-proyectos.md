@@ -22,8 +22,6 @@ Tener cuatro espacios **gestionados por la empresa** (*company-managed*) con cla
 
 **Resultado esperado:** Galería de plantillas.
 
-![Templates](../img/M03-01-01-create-project-templates.png)
-
 > [!NOTE]
 > **Espacio**, no el enlace **Proyectos** del pie de la barra: ese abre otro producto de Atlassian.
 
@@ -34,8 +32,6 @@ Tener cuatro espacios **gestionados por la empresa** (*company-managed*) con cla
 **Por qué:** CMP comparte workflows y permisos. Es el estándar corporativo del curso.
 
 **Resultado esperado:** Espacio DEV abierto. En **Configuración del espacio** → **Detalles** no dice gestionado por el equipo.
-
-![CMP](../img/M03-01-02-company-managed.png)
 
 > [!WARNING]
 > Si ves «Añadir un estado» estilo TMP o **Funciones** de gestionado por el equipo, **borra el espacio** y créalo otra vez como gestionado por la empresa. No «lo dejas para luego».
@@ -54,8 +50,6 @@ Tener cuatro espacios **gestionados por la empresa** (*company-managed*) con cla
 
 **Resultado esperado:** **Configuración del espacio** → **Detalles** de cada uno con la clave correcta.
 
-![DEV details](../img/M03-01-03-project-dev.png)
-
 ### 4 — Lista y categoría
 
 **Acción:** **Más espacios**. Opcional: **Configuración de Jira** → espacios → **Categorías**. Crea `Nortech` y asigna los cuatro.
@@ -63,8 +57,6 @@ Tener cuatro espacios **gestionados por la empresa** (*company-managed*) con cla
 **Por qué:** Las categorías agrupan en la lista y en gadgets. No sustituyen a los grupos de usuarios.
 
 **Resultado esperado:** Cuatro espacios visibles (más Sample Scrum, que no usas como DEV).
-
-![Lista](../img/M03-01-04-projects-list.png)
 
 ### 5 — Personas (roles)
 

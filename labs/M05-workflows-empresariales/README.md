@@ -29,11 +29,7 @@ El workflow **no es** el board. Puedes tener un flujo rico y un Kanban de tres c
 
 1. **Configuración de Jira** → **Flujos de trabajo**. Abre un diagrama. Al pulsar una transición aparecen Conditions, Validators y Post functions.
 
-![Editor](../img/M05-01-01-workflow-editor.png)
-
 2. En el flujo de aprobación se ven estados de revisión y dos salidas: aprobado y rechazado.
-
-![Aprobación](../img/M05-02-01-approval-diagram.png)
 
 ## Laboratorio
 

@@ -22,8 +22,6 @@ Contexts + field configuration scheme NORTECH.
 
 **Resultado esperado:** El contexto no incluye DEV.
 
-![Contexto](../img/M06-02-01-field-context.png)
-
 ### 2 — Field configuration
 
 **Acción:** **Elementos de trabajo** → **Configuraciones de campo**. Copia la predeterminada → `NORTECH Fields`. Marca `Severidad QA` como **Obligatorio**. Marca un campo ruidoso (p. ej. Entorno) como **Oculto**. Esquema `NORTECH Field Config` → asocia SUP.
@@ -31,8 +29,6 @@ Contexts + field configuration scheme NORTECH.
 **Por qué:** Required en field config ≠ required en el custom field. Hidden quita el campo aunque esté en la pantalla.
 
 **Resultado esperado:** Create en SUP no deja crear Bug sin severidad (si el tipo usa esa config).
-
-![Field config](../img/M06-02-02-field-config.png)
 
 ### 3 — Optimizar DEV
 

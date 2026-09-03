@@ -38,11 +38,7 @@
 
 1. En Jira, **Crear espacio**. Elige plantilla **Scrum**. En el tipo, marca **Gestionado por la empresa**. Nombre `Nortech Development`, clave `DEV`.
 
-![Company-managed](../img/M03-01-02-company-managed.png)
-
 2. Repite la idea para SUP, OPS y PMO (en el laboratorio lo harán los alumnos). Abre **Más espacios**: deben verse las claves junto a Sample Scrum.
-
-![Lista](../img/M03-01-04-projects-list.png)
 
 ## Laboratorio
 
