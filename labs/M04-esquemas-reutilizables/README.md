@@ -37,7 +37,7 @@ Un scheme es un **paquete nombrado** que un proyecto CMP **apunta**. Cambias el 
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

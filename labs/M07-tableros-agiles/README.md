@@ -45,7 +45,7 @@ Los tableros **multi-proyecto** usan un filtro `project in (DEV, SUP)` y permiso
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

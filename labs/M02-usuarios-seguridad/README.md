@@ -49,7 +49,7 @@ Premium/Standard muestran más eventos que Free. En M10 se usa el registro de au
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

@@ -36,7 +36,7 @@ Nortech: RRHH y Calidad necesitan datos que Desarrollo no debe ver en el Create 
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

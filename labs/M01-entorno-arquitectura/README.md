@@ -83,7 +83,7 @@ El laboratorio usa **Premium trial (30 días, sin tarjeta)** para no chocar con 
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

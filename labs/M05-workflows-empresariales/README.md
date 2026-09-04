@@ -37,7 +37,7 @@ El workflow **no es** el board. Puedes tener un flujo rico y un Kanban de tres c
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

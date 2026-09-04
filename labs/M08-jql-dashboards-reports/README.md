@@ -46,7 +46,7 @@ project = DEV AND statusCategory != Done ORDER BY priority DESC
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

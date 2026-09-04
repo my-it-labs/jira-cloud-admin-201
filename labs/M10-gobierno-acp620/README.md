@@ -32,7 +32,7 @@ Operación: registro de auditoría, límites de automation, no editar esquemas D
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|

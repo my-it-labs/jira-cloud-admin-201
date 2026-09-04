@@ -37,7 +37,7 @@ Alcance: espacio vs múltiple vs global. En trial, respeta los **límites de eje
 
 ## Laboratorio
 
-Turno de los alumnos.
+Te toca a ti.
 
 | Lab | Título |
 |-----|--------|
