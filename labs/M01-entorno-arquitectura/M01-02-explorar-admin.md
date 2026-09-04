@@ -29,7 +29,13 @@ Recorrido de las tres consolas: Jira (producto), Atlassian Administration (org) 
 
 ### 2 — Atlassian Administration
 
-**Acción:** **Configuración** (engranaje) → **Atlassian Administration** (o abre `https://admin.atlassian.com`). Si hay varias organizaciones, entra en la que contiene **tu** site del curso. No elijas una org antigua.
+**Acción:** Desde **Para ti** (no hace falta entrar a un espacio):
+
+1. Arriba a la **derecha**, el **engranaje** (no el de un espacio). En el menú, **Atlassian Administration**.
+2. Alternativa: el **waffle** (cuadrícula, arriba a la **izquierda**, junto al logo de Jira) → **Administration**.
+3. Si no aparece: abre `https://admin.atlassian.com` en la misma cuenta del trial.
+
+La barra pasa a decir **Administration** (fondo de org, no el logo de Jira). Si hay varias organizaciones, entra en la que contiene **tu** site del curso. No elijas una org antigua.
 
 **Por qué:** Usuarios, grupos, facturación y acceso a aplicaciones **no** se gestionan dentro de un espacio.
 
@@ -37,9 +43,12 @@ Recorrido de las tres consolas: Jira (producto), Atlassian Administration (org) 
 
 ![Overview](../img/M01-02-02-admin-overview.png)
 
+> [!WARNING]
+> El **Aplicaciones** de la barra *izquierda de Jira* (junto a Planes / Espacio) **no** es esta consola. Ahí ves apps del producto. La lista de Jira / Premium / URL del site está en `admin.atlassian.com`.
+
 ### 3 — Aplicaciones y plan
 
-**Acción:** En Administration, **Aplicaciones** → **Aplicaciones de Atlassian**. Localiza **Jira**, el plan (**Premium**) y la URL `*.atlassian.net`. Opcional: **Facturación** (verás una *vista previa*; **no** pulses «Añadir datos de pago» ni «Reactivar»).
+**Acción:** Ya en Administration, barra **izquierda**: **Aplicaciones** (se despliega) → **Aplicaciones de Atlassian**. Localiza **Jira**, el plan (**Premium**) y **Administrar aplicación**. Opcional: **Facturación** (verás una *vista previa*; **no** pulses «Añadir datos de pago» ni «Reactivar»).
 
 **Por qué:** M09 (automatización) y M10 (auditoría, algunas apps) dependen de ese plan. Si estás en Free, ya sabes dónde se va a notar.
 
@@ -95,6 +104,7 @@ Sin abrir un espacio, llega a **Campos personalizados** (**Configuración** → 
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | El engranaje solo muestra la configuración del espacio | Estás dentro de un espacio | Sal a **Para ti** / **Más espacios** |
+| Ves un catálogo de apps o «Gestionar aplicaciones» dentro de Jira | Pulsaste **Aplicaciones** en la barra izquierda de Jira | Engranaje → **Atlassian Administration** → **Aplicaciones de Atlassian** |
 | `admin.atlassian.com` pide otra cuenta | SSO / varios perfiles de Chrome | Misma cuenta que el alta |
 | No ves **Sistema** | No eres administrador de Jira | Directorio: tu usuario debe ser admin de la org/site del trial |
 | Facturación vacía o pide tarjeta | Has abierto «Gestionar» / reactivar | Quédate en **Aplicaciones de Atlassian** o en la vista previa; no añadas pago |

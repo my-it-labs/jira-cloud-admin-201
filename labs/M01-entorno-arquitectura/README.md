@@ -75,7 +75,7 @@ El laboratorio usa **Premium trial (30 días, sin tarjeta)** para no chocar con 
 
 ![Home de Jira](../img/M01-02-01-jira-home.png)
 
-4. En `admin.atlassian.com` abre **Resumen**, **Aplicaciones de Atlassian** (Jira debe figurar como **Premium**) y **Directorio** → **Usuarios**. Ahí está el primer administrador.
+4. El engranaje (arriba **derecha**) → **Atlassian Administration**. No uses **Aplicaciones** de la barra izquierda de Jira. En Administration, izquierda: **Aplicaciones** → **Aplicaciones de Atlassian**. Jira debe figurar como **Premium**. Luego **Directorio** → **Usuarios**.
 
 ![Admin overview](../img/M01-02-02-admin-overview.png)
 
