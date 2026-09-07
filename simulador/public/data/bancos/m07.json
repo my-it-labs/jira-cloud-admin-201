@@ -6,306 +6,306 @@
       "id": "m07-q1",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El board no muestra issues que sí salen en Search con el mismo JQL. Lo siguiente a mirar:",
+      "stem": "Un administrador de proyecto abre el tablero Kanban de Soporte y no ve issues que sí aparecen en la búsqueda avanzada con el mismo JQL del filtro del tablero. ¿Qué debería revisar a continuación?",
       "opciones": [
-        { "id": "A", "texto": "Sub-filter Kanban y columnas unmapped" },
-        { "id": "B", "texto": "El plan Free" },
-        { "id": "C", "texto": "Confluence" },
-        { "id": "D", "texto": "El nombre del site" }
+        { "id": "A", "texto": "El subfiltro Kanban y si algún estado está en Sin asignar" },
+        { "id": "B", "texto": "El plan del site (Free frente a Standard)" },
+        { "id": "C", "texto": "Si el espacio de Confluence está vinculado al proyecto" },
+        { "id": "D", "texto": "El nombre del sitio atlassian.net" }
       ],
       "correctas": ["A"],
-      "explicacion": "Filter OK implica sub-filter o mapping. También swimlanes «hide done»."
+      "explicacion": "Si el filtro del tablero ya devuelve resultados en Search, el siguiente recorte es el subfiltro Kanban o el mapeo de columnas. Las swimlanes que ocultan Done también pueden esconder tarjetas."
     },
     {
       "id": "m07-q2",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Un board para tres equipos en tres proyectos. El filtro debe:",
+      "stem": "Tres equipos trabajan en tres proyectos distintos y la PMO pide un único tablero con el trabajo de los tres. ¿Qué debe cumplir el filtro del tablero?",
       "opciones": [
-        { "id": "A", "texto": "project = DEV y ya" },
-        { "id": "B", "texto": "Incluir los tres proyectos y cada usuario necesita Browse en esos proyectos" },
-        { "id": "C", "texto": "Ser assignee is EMPTY" },
-        { "id": "D", "texto": "Usar solo labels" }
+        { "id": "A", "texto": "Limitarse a un solo proyecto; el tablero no puede mezclar claves" },
+        { "id": "B", "texto": "Incluir los tres proyectos, y cada usuario necesita Browse Projects en esos proyectos" },
+        { "id": "C", "texto": "Usar solo assignee is EMPTY para no filtrar por proyecto" },
+        { "id": "D", "texto": "Basarse únicamente en etiquetas, sin mencionar proyectos" }
       ],
       "correctas": ["B"],
-      "explicacion": "Permisos ∩ filtro. Si no hay Browse, la issue no existe para ese usuario."
+      "explicacion": "El tablero muestra la intersección del filtro y los permisos. Sin Browse Projects, esa issue no existe para el usuario aunque el JQL la incluya."
     },
     {
       "id": "m07-q3",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Burndown de story points no baja al cerrar issues sin puntos:",
+      "stem": "El burndown de un tablero Scrum está configurado en story points. El equipo cierra varios bugs sin estimación y la línea no baja. ¿Cuál es la explicación?",
       "opciones": [
-        { "id": "A", "texto": "Bug de Jira" },
-        { "id": "B", "texto": "La estimación está en story points y esas issues valen 0" },
-        { "id": "C", "texto": "Falta Marketplace" },
-        { "id": "D", "texto": "El sprint no existe" }
+        { "id": "A", "texto": "Es un fallo conocido de Jira Cloud al completar bugs" },
+        { "id": "B", "texto": "Esas issues valen 0 puntos, así que no restan del statistic de story points" },
+        { "id": "C", "texto": "Falta una app del Marketplace para burndown de bugs" },
+        { "id": "D", "texto": "El sprint no existe hasta que alguien lo renombra" }
       ],
       "correctas": ["B"],
-      "explicacion": "Estimation method. Time tracking produce otro informe."
+      "explicacion": "El burndown usa el método de estimación del tablero. Completar issues sin puntos no mueve un burndown de story points; el time tracking produciría otro informe."
     },
     {
       "id": "m07-q4",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Kanban with backlog sirve para:",
+      "stem": "Soporte quiere un tablero Kanban que separe el trabajo aún no comprometido del flujo que ya está en curso. ¿Qué configuración encaja?",
       "opciones": [
-        { "id": "A", "texto": "Sustituir sprints de Scrum sin más" },
-        { "id": "B", "texto": "Separar el trabajo aún no comprometido (backlog) del flujo WIP" },
-        { "id": "C", "texto": "Solo TMP" },
-        { "id": "D", "texto": "Solo JSM" }
+        { "id": "A", "texto": "Sustituir el Kanban por Scrum y usar sprints de un día" },
+        { "id": "B", "texto": "Activar Kanban con backlog para apartar la bandeja no comprometida del WIP" },
+        { "id": "C", "texto": "Usar solo un proyecto team-managed; el backlog Kanban no existe en company-managed" },
+        { "id": "D", "texto": "Crear el tablero en Jira Service Management; Software no admite esa separación" }
       ],
       "correctas": ["B"],
-      "explicacion": "Recomendación de tipo de board: escenario típico ACP-620."
+      "explicacion": "Kanban con backlog aparta las columnas de la izquierda (aún no comprometidas) del flujo WIP. No sustituye los sprints de Scrum."
     },
     {
       "id": "m07-q5",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En NORTECH DEV Scrum, el filtro del tablero es project = DEV. Luis pulsa el filtro rápido «Mis issues». ¿Qué ocurre?",
+      "stem": "El filtro del tablero Scrum de Desarrollo es project = DEV. Luis pulsa el filtro rápido «Mis issues» (assignee = currentUser()). ¿Qué ocurre en el tablero?",
       "opciones": [
-        { "id": "A", "texto": "Sustituye el filtro del tablero por assignee = currentUser()" },
-        { "id": "B", "texto": "Aplica AND temporal: DEV ∩ asignados a Luis; al desactivarlo vuelve el tablero completo" },
-        { "id": "C", "texto": "Cambia el subfiltro Kanban de forma permanente" },
-        { "id": "D", "texto": "Crea un sprint nuevo solo para Luis" }
+        { "id": "A", "texto": "Sustituye el filtro del tablero por assignee = currentUser() y pierde el resto de DEV" },
+        { "id": "B", "texto": "Aplica un AND temporal: ve solo las de DEV asignadas a él; al desactivarlo vuelve el tablero completo" },
+        { "id": "C", "texto": "Cambia de forma permanente el subfiltro Kanban del tablero" },
+        { "id": "D", "texto": "Crea un sprint nuevo que contiene solo el trabajo de Luis" }
       ],
       "correctas": ["B"],
-      "explicacion": "El filtro rápido no redefine el tablero: es una vista temporal encima del board filter."
+      "explicacion": "El filtro rápido no redefine el tablero: es una vista temporal encima del board filter. Al desactivarlo, el conjunto original vuelve."
     },
     {
       "id": "m07-q6",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El Kanban de SUP está vacío. El filtro project = SUP ORDER BY Rank ASC en búsqueda avanzada sí lista elementos. Causa más probable:",
+      "stem": "El tablero Kanban de Soporte está vacío. La búsqueda avanzada con project = SUP ORDER BY Rank ASC lista decenas de issues. ¿Cuál es la causa más probable?",
       "opciones": [
-        { "id": "A", "texto": "Falta el campo Story points" },
-        { "id": "B", "texto": "Subfiltro tipo status != Done o estados en Sin asignar" },
-        { "id": "C", "texto": "El espacio se llama SUP y no SOPORTE" },
-        { "id": "D", "texto": "No hay sprint activo" }
+        { "id": "A", "texto": "Falta el campo Story points en el proyecto" },
+        { "id": "B", "texto": "Un subfiltro (por ejemplo status != Done) o estados dejados en Sin asignar" },
+        { "id": "C", "texto": "El espacio se llama Soporte y la clave es SUP" },
+        { "id": "D", "texto": "No hay un sprint activo en un tablero Kanban" }
       ],
       "correctas": ["B"],
-      "explicacion": "En Kanban el subfiltro se aplica después del board filter. Unmapped también oculta tarjetas."
+      "explicacion": "En Kanban el subfiltro se aplica después del board filter. Un subfiltro demasiado restrictivo o columnas sin mapear ocultan las tarjetas aunque Search las muestre."
     },
     {
       "id": "m07-q7",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Ana mueve In Review a «Sin asignar» en las columnas de DEV Scrum. Los elementos en In Review:",
+      "stem": "Ana mueve el estado In Review a Sin asignar en las columnas del tablero Scrum de Desarrollo. ¿Qué ocurre con las issues que están en In Review?",
       "opciones": [
-        { "id": "A", "texto": "Siguen en el tablero en una columna fantasma" },
+        { "id": "A", "texto": "Siguen visibles en una columna fantasma que Jira crea solo" },
         { "id": "B", "texto": "Desaparecen del tablero aunque existan y cumplan el filtro" },
-        { "id": "C", "texto": "Pasan a Done automáticamente" },
-        { "id": "D", "texto": "Solo se ocultan si hay WIP" }
+        { "id": "C", "texto": "Pasan automáticamente a Done" },
+        { "id": "D", "texto": "Solo se ocultan si la columna tenía un límite WIP" }
       ],
       "correctas": ["B"],
-      "explicacion": "Unmapped = no hay columna: el elemento no se pinta. El lab pide devolverlo."
+      "explicacion": "Unmapped significa que no hay columna: el elemento no se pinta. Hay que devolver el estado a una columna para volver a verlo."
     },
     {
       "id": "m07-q8",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Soporte Nortech entra tickets todo el día y los cierra cuando puede; no hay timebox. Tipo de tablero:",
+      "stem": "El equipo de Soporte recibe tickets todo el día y los cierra cuando puede; no hay timebox ni compromiso por sprint. ¿Qué tipo de tablero debería recomendar un administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Scrum con velocity obligatoria" },
-        { "id": "B", "texto": "Kanban (flujo continuo y WIP)" },
-        { "id": "C", "texto": "Solo un filtro rápido llamado Flujo" },
-        { "id": "D", "texto": "Team-managed por obligación" }
+        { "id": "A", "texto": "Scrum, porque la velocity es obligatoria en Soporte" },
+        { "id": "B", "texto": "Kanban, para gestionar un flujo continuo y límites WIP" },
+        { "id": "C", "texto": "Cualquier tablero Scrum con un filtro rápido llamado Flujo" },
+        { "id": "D", "texto": "Solo un proyecto team-managed; company-managed no admite Kanban" }
       ],
       "correctas": ["B"],
-      "explicacion": "Kanban = flujo continuo. Scrum exige sprints, backlog comprometido y velocity."
+      "explicacion": "Kanban encaja con flujo continuo. Scrum exige sprints, backlog comprometido y, si se usa, velocity."
     },
     {
       "id": "m07-q9",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "DEV planifica cada dos semanas, estima en puntos y quiere velocity. Eliges:",
+      "stem": "Desarrollo planifica cada dos semanas, estima en story points y la PMO quiere un informe de velocity. ¿Qué tipo de tablero debe usar el administrador de proyecto?",
       "opciones": [
         { "id": "A", "texto": "Kanban clásico sin backlog" },
         { "id": "B", "texto": "Scrum" },
-        { "id": "C", "texto": "Solo versiones, sin tablero" },
-        { "id": "D", "texto": "Un filtro rápido llamado Sprint" }
+        { "id": "C", "texto": "Solo versiones del proyecto, sin tablero" },
+        { "id": "D", "texto": "Un tablero Kanban con un filtro rápido llamado Sprint" }
       ],
       "correctas": ["B"],
-      "explicacion": "Sprints + estimación + velocity viven en Scrum. Kanban no genera velocity."
+      "explicacion": "Sprints, estimación y velocity viven en Scrum. Un tablero Kanban no genera velocity."
     },
     {
       "id": "m07-q10",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En el backlog de DEV, arrastrar tarjetas no cambia el orden al recargar. El filtro del tablero es project = DEV ORDER BY created DESC. Qué falta:",
+      "stem": "En el backlog de Desarrollo, arrastrar tarjetas no conserva el orden al recargar. El filtro del tablero es project = DEV ORDER BY created DESC. ¿Qué falta?",
       "opciones": [
-        { "id": "A", "texto": "ORDER BY Rank ASC" },
-        { "id": "B", "texto": "Un segundo tablero Kanban" },
-        { "id": "C", "texto": "Pasar el espacio a team-managed" },
-        { "id": "D", "texto": "Quitar las swimlanes" }
+        { "id": "A", "texto": "Cambiar el ORDER BY a Rank ASC" },
+        { "id": "B", "texto": "Crear un segundo tablero Kanban en el mismo proyecto" },
+        { "id": "C", "texto": "Pasar el proyecto a team-managed" },
+        { "id": "D", "texto": "Quitar las swimlanes del tablero" }
       ],
       "correctas": ["A"],
-      "explicacion": "El ranking del tablero exige Rank en el ORDER BY. Sin eso el arrastre no es el orden del board."
+      "explicacion": "El ranking del tablero exige Rank en el ORDER BY. Sin eso, el arrastre no es el orden persistente del board."
     },
     {
       "id": "m07-q11",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En SUP Kanban la columna In Progress se pone naranja al tener 6 tarjetas. Eso es:",
+      "stem": "En el Kanban de Soporte, la columna In Progress se pone naranja cuando hay 6 tarjetas. ¿Qué está ocurriendo?",
       "opciones": [
-        { "id": "A", "texto": "Un cambio del board filter" },
-        { "id": "B", "texto": "Restricción WIP (min/max) de la columna; aviso visual, no un permiso" },
-        { "id": "C", "texto": "Un filtro rápido mal escrito" },
-        { "id": "D", "texto": "El subfiltro mal escrito" }
+        { "id": "A", "texto": "Alguien ha cambiado el filtro del tablero" },
+        { "id": "B", "texto": "Se ha superado la restricción WIP (mínimo o máximo) de la columna; es un aviso visual, no un permiso" },
+        { "id": "C", "texto": "Un filtro rápido está mal escrito y colorea la columna" },
+        { "id": "D", "texto": "El subfiltro Kanban está mal escrito" }
       ],
       "correctas": ["B"],
-      "explicacion": "Column constraints = límite WIP. En Cloud avisan; no sustituyen al mapeo de columnas."
+      "explicacion": "Las restricciones de columna son el límite WIP. En Cloud avisan visualmente; no sustituyen al mapeo de columnas ni bloquean por sí solas el movimiento."
     },
     {
       "id": "m07-q12",
       "dominio": "board-configuration",
       "tipo": "multi",
-      "stem": "Un elemento de SUP cumple project = SUP. Marca las causas que pueden ocultarlo en el Kanban:",
+      "stem": "Una issue de Soporte cumple project = SUP y aparece en la búsqueda avanzada, pero no en el Kanban. ¿Qué causas pueden ocultarla? (Elige tres.)",
       "opciones": [
-        { "id": "A", "texto": "Subfiltro que lo excluye (p. ej. Done antiguo)" },
+        { "id": "A", "texto": "Un subfiltro que la excluye, por ejemplo Done antiguo" },
         { "id": "B", "texto": "Su estado está en Sin asignar" },
         { "id": "C", "texto": "El nombre del site termina en .net" },
-        { "id": "D", "texto": "El usuario no tiene Browse en SUP" }
+        { "id": "D", "texto": "El usuario no tiene Browse Projects en Soporte" }
       ],
       "correctas": ["A", "B", "D"],
-      "explicacion": "Diagnóstico Kanban: filtro ∩ subfiltro ∩ columnas ∩ Browse. El dominio del site no pinta tarjetas."
+      "explicacion": "En Kanban la tarjeta debe superar filtro, subfiltro, mapeo de columnas y Browse Projects. El dominio del site no pinta ni oculta tarjetas."
     },
     {
       "id": "m07-q13",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "La PMO quiere ver el tablero DEV partido en filas por persona. Configuras:",
+      "stem": "La PMO quiere ver el tablero de Desarrollo partido en filas, una por persona asignada. ¿Qué debería configurar el administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Calles (swimlanes) por asignatario" },
-        { "id": "B", "texto": "Un filtro rápido por cada usuario hardcodeado" },
-        { "id": "C", "texto": "Un tablero distinto por persona" },
-        { "id": "D", "texto": "Otra columna Unmapped por persona" }
+        { "id": "A", "texto": "Swimlanes por asignatario" },
+        { "id": "B", "texto": "Un filtro rápido distinto por cada usuario, con el nombre escrito a mano" },
+        { "id": "C", "texto": "Un tablero distinto por cada miembro del equipo" },
+        { "id": "D", "texto": "Una columna Sin asignar adicional por cada persona" }
       ],
       "correctas": ["A"],
-      "explicacion": "Swimlanes = filas. Assignee es la opción del lab M07-02."
+      "explicacion": "Las swimlanes son las filas del tablero. Por asignatario es la opción nativa para partir el trabajo por persona."
     },
     {
       "id": "m07-q14",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Calles = Stories en DEV Scrum. Cada fila muestra:",
+      "stem": "El administrador de proyecto configura las swimlanes del Scrum de Desarrollo como Stories. ¿Qué muestra cada fila?",
       "opciones": [
         { "id": "A", "texto": "Un asignatario y todas sus tarjetas sueltas" },
-        { "id": "B", "texto": "La historia (o padre) y debajo sus subtareas" },
-        { "id": "C", "texto": "Solo elementos sin epic" },
-        { "id": "D", "texto": "Un sprint por fila" }
+        { "id": "B", "texto": "La historia (o el padre) y, debajo, sus subtareas" },
+        { "id": "C", "texto": "Solo los elementos que no tienen epic" },
+        { "id": "D", "texto": "Un sprint distinto por fila" }
       ],
       "correctas": ["B"],
-      "explicacion": "Stories agrupa subtareas bajo el padre. No es lo mismo que calles por assignee o por consulta."
+      "explicacion": "Stories agrupa las subtareas bajo el padre. No es lo mismo que calles por asignatario, por epic o por consulta JQL."
     },
     {
       "id": "m07-q15",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Nortech quiere una calle «Bloqueados P0» y otra «Resto». Tipo de swimlane:",
+      "stem": "Nortech quiere una calle «Bloqueados P0» y otra «Resto» en el mismo tablero. ¿Qué tipo de swimlane debe usar el administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Asignatario" },
-        { "id": "B", "texto": "Consultas (queries) con JQL, p. ej. priority = Highest AND labels = bloqueado" },
-        { "id": "C", "texto": "Solo Epics, sin JQL" },
-        { "id": "D", "texto": "Columnas, no calles" }
+        { "id": "A", "texto": "Por asignatario" },
+        { "id": "B", "texto": "Por consultas (queries) con JQL, por ejemplo priority = Highest AND labels = bloqueado" },
+        { "id": "C", "texto": "Solo por epics, sin JQL" },
+        { "id": "D", "texto": "Columnas adicionales; las calles no sirven para este caso" }
       ],
       "correctas": ["B"],
-      "explicacion": "Query swimlanes = JQL por fila. El resto cae en la calle por defecto."
+      "explicacion": "Las swimlanes por consulta permiten una fila por JQL. Lo que no encaja cae en la calle por defecto."
     },
     {
       "id": "m07-q16",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Configuración del tablero DEV → Estimación = Story points. El burndown de ese tablero:",
+      "stem": "En la configuración del tablero Scrum de Desarrollo, Estimación está en Story points. ¿Cómo se comporta el burndown de ese tablero?",
       "opciones": [
-        { "id": "A", "texto": "Usa horas de worklog aunque no haya puntos" },
-        { "id": "B", "texto": "Usa puntos: completar sin puntos no mueve la línea" },
-        { "id": "C", "texto": "Obliga a desactivar Rank" },
+        { "id": "A", "texto": "Usa las horas de worklog aunque no haya puntos" },
+        { "id": "B", "texto": "Usa puntos: completar una issue sin puntos no mueve la línea" },
+        { "id": "C", "texto": "Obliga a quitar Rank del filtro del tablero" },
         { "id": "D", "texto": "Convierte el tablero en Kanban" }
       ],
       "correctas": ["B"],
-      "explicacion": "El método de estimación del tablero es el statistic del burndown. Tiempo e issue count son otros modos."
+      "explicacion": "El método de estimación del tablero es el statistic del burndown. Tiempo original e issue count son otros modos."
     },
     {
       "id": "m07-q17",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Creas un Kanban con filtro project in (OPS, PMO) y ubicación PMO. Eso decide:",
+      "stem": "Creas un tablero Kanban con filtro project in (OPS, PMO) y ubicación PMO. ¿Qué decide la ubicación?",
       "opciones": [
-        { "id": "A", "texto": "Qué elementos entran (eso es el filtro)" },
-        { "id": "B", "texto": "En qué espacio aparece el tablero en la barra / lista" },
-        { "id": "C", "texto": "El WIP de OPS" },
-        { "id": "D", "texto": "Quién tiene Browse en OPS" }
+        { "id": "A", "texto": "Qué issues entran en el tablero" },
+        { "id": "B", "texto": "En qué proyecto aparece el tablero en la barra y en la lista de tableros" },
+        { "id": "C", "texto": "El límite WIP de Operaciones" },
+        { "id": "D", "texto": "Quién tiene Browse Projects en Operaciones" }
       ],
       "correctas": ["B"],
-      "explicacion": "Location ≠ filter. El filtro alimenta tarjetas; la ubicación solo ancla el tablero a un espacio."
+      "explicacion": "La ubicación no es el filtro. El filtro alimenta las tarjetas; la ubicación solo ancla el tablero a un proyecto."
     },
     {
       "id": "m07-q18",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En DEV, Bugs en rojo con consulta issuetype = Bug. Las card colors:",
+      "stem": "Un administrador de proyecto quiere que las tarjetas de tipo Bug muestren un borde rojo en el tablero de Desarrollo, con la consulta issuetype = Bug. ¿Qué efecto tienen los colores de tarjeta?",
       "opciones": [
         { "id": "A", "texto": "Cambian quién puede ver el tablero" },
-        { "id": "B", "texto": "Son solo visuales; no ocultan ni protegen elementos" },
+        { "id": "B", "texto": "Son solo visuales: no ocultan issues ni sustituyen permisos" },
         { "id": "C", "texto": "Sustituyen a las swimlanes" },
-        { "id": "D", "texto": "Sustituyen al board filter" }
+        { "id": "D", "texto": "Sustituyen al filtro del tablero" }
       ],
       "correctas": ["B"],
-      "explicacion": "Card colors = Queries / prioridades / tipos. El lab: no es un permiso, solo visual."
+      "explicacion": "Los colores de tarjeta (consultas, prioridades o tipos) solo decoran. No filtran, no ocultan y no protegen el trabajo."
     },
     {
       "id": "m07-q19",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En las tarjetas de DEV no se ven los story points. Dónde los activas:",
+      "stem": "En las tarjetas del tablero de Desarrollo no se ven los story points. ¿Dónde los activa el administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Diseño de tarjeta (card layout) del tablero" },
-        { "id": "B", "texto": "El subfiltro Kanban" },
-        { "id": "C", "texto": "El nombre NORTECH DEV Scrum" },
-        { "id": "D", "texto": "El nombre del sprint" }
+        { "id": "A", "texto": "En el diseño de tarjeta (card layout) del tablero" },
+        { "id": "B", "texto": "En el subfiltro Kanban" },
+        { "id": "C", "texto": "Renombrando el tablero" },
+        { "id": "D", "texto": "Renombrando el sprint activo" }
       ],
       "correctas": ["A"],
-      "explicacion": "Card layout elige campos extra en la cara de la tarjeta (puntos, asignatario, etc.)."
+      "explicacion": "Card layout elige qué campos extra se muestran en la cara de la tarjeta (puntos, asignatario, etc.)."
     },
     {
       "id": "m07-q20",
       "dominio": "board-configuration",
       "tipo": "multi",
-      "stem": "Marca lo que define de verdad un tablero Jira Software (no una vista temporal):",
+      "stem": "Un administrador de proyecto documenta qué define de verdad un tablero de Jira Software, no una vista temporal. ¿Qué elementos forman esa definición? (Elige tres.)",
       "opciones": [
-        { "id": "A", "texto": "El board filter (JQL)" },
-        { "id": "B", "texto": "El mapeo columnas ↔ estados" },
-        { "id": "C", "texto": "Los filtros rápidos que Luis deja pulsados" },
-        { "id": "D", "texto": "El subfiltro Kanban, si existe" }
+        { "id": "A", "texto": "El filtro del tablero (JQL)" },
+        { "id": "B", "texto": "El mapeo de columnas a estados" },
+        { "id": "C", "texto": "Los filtros rápidos que un usuario deja pulsados en su sesión" },
+        { "id": "D", "texto": "El subfiltro Kanban, si el tablero es Kanban" }
       ],
       "correctas": ["A", "B", "D"],
-      "explicacion": "Filter + columnas (+ subfiltro en Kanban) son la definición. El quick filter es un interruptor de sesión."
+      "explicacion": "Filtro + columnas (+ subfiltro en Kanban) son la definición. El filtro rápido es un interruptor de sesión y no forma parte de esa definición."
     },
     {
       "id": "m07-q21",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Filtro rápido «Mis issues» = assignee = currentUser(). Ana y Luis pulsan el mismo botón:",
+      "stem": "El filtro rápido «Mis issues» del tablero es assignee = currentUser(). Ana y Luis pulsan el mismo botón. ¿Qué ve cada uno?",
       "opciones": [
-        { "id": "A", "texto": "Ambos ven las de Ana, que creó el filtro rápido" },
-        { "id": "B", "texto": "Cada uno ve las suyas; currentUser() es el viewer" },
-        { "id": "C", "texto": "JQL ilegal en tableros" },
+        { "id": "A", "texto": "Ambos ven las issues de Ana, que creó el filtro rápido" },
+        { "id": "B", "texto": "Cada uno ve las suyas: currentUser() es quien está mirando el tablero" },
+        { "id": "C", "texto": "JQL ilegal: currentUser() no se admite en tableros" },
         { "id": "D", "texto": "Solo funciona si el tablero es Kanban" }
       ],
       "correctas": ["B"],
-      "explicacion": "El quick filter se evalúa para quien lo pulsa. No reescribe el board filter."
+      "explicacion": "El filtro rápido se evalúa para quien lo pulsa. No reescribe el board filter ni congela al autor del JQL."
     },
     {
       "id": "m07-q22",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "In Progress e In Review viven en la misma columna de DEV. Al arrastrar a esa columna:",
+      "stem": "In Progress e In Review están mapeados a la misma columna del tablero de Desarrollo. Al arrastrar una tarjeta a esa columna, ¿qué hace Jira?",
       "opciones": [
-        { "id": "A", "texto": "Jira elige uno de los estados mapeados (o pide cuál)" },
-        { "id": "B", "texto": "El elemento se borra" },
-        { "id": "C", "texto": "Se crea un sprint" },
-        { "id": "D", "texto": "El mapeo se ignora siempre" }
+        { "id": "A", "texto": "Elige uno de los estados mapeados o pide cuál usar" },
+        { "id": "B", "texto": "Borra la issue" },
+        { "id": "C", "texto": "Crea un sprint nuevo" },
+        { "id": "D", "texto": "Ignora siempre el mapeo y deja el estado anterior" }
       ],
       "correctas": ["A"],
       "explicacion": "Varios estados por columna es válido. Si hay ambigüedad al soltar, Jira pregunta el destino."
@@ -314,376 +314,376 @@
       "id": "m07-q23",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "SUP no quiere ver Done de hace meses en el Kanban, pero sí el de esta semana. Mejor enfoque:",
+      "stem": "Soporte no quiere ver en el Kanban el Done de hace meses, pero sí el cerrado esta semana. ¿Qué enfoque es el más adecuado?",
       "opciones": [
-        { "id": "A", "texto": "status != Done en el board filter (nunca verás Done)" },
-        { "id": "B", "texto": "Subfiltro o «ocultar completados» con ventana de fechas (p. ej. Done reciente)" },
-        { "id": "C", "texto": "Borrar los elementos Done" },
-        { "id": "D", "texto": "Pasar SUP a Scrum solo por eso" }
+        { "id": "A", "texto": "Añadir status != Done al filtro del tablero" },
+        { "id": "B", "texto": "Usar el subfiltro o «ocultar completados» con una ventana de fechas para el Done reciente" },
+        { "id": "C", "texto": "Borrar las issues Done del proyecto" },
+        { "id": "D", "texto": "Pasar Soporte a Scrum solo para ocultar Done antiguo" }
       ],
       "correctas": ["B"],
-      "explicacion": "El lab propone statusCategory != Done OR updatedDate >= -14d. status != Done en el filtro vacía la columna Done."
+      "explicacion": "Un subfiltro del tipo statusCategory != Done OR updatedDate >= -14d mantiene Done reciente. status != Done en el board filter vacía la columna Done."
     },
     {
       "id": "m07-q24",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El backlog Scrum de DEV está vacío. En búsqueda hay elementos DEV en In Progress. Causa típica:",
+      "stem": "El backlog Scrum de Desarrollo está vacío. En la búsqueda hay issues de DEV en In Progress que cumplen el filtro del tablero. ¿Cuál es la causa típica?",
       "opciones": [
-        { "id": "A", "texto": "El backlog solo lista To Do / no comprometidos que cumplen el filtro" },
-        { "id": "B", "texto": "Falta un filtro rápido Bugs" },
-        { "id": "C", "texto": "El tablero se llama NORTECH" },
-        { "id": "D", "texto": "WIP en cero" }
+        { "id": "A", "texto": "El backlog solo lista trabajo To Do o no comprometido que cumple el filtro" },
+        { "id": "B", "texto": "Falta un filtro rápido de bugs" },
+        { "id": "C", "texto": "El tablero tiene un nombre demasiado largo" },
+        { "id": "D", "texto": "Hay un límite WIP de cero en In Progress" }
       ],
       "correctas": ["A"],
-      "explicacion": "Backlog ≠ tablero activo. Estados ya en progreso viven en el sprint/board, no como ítems de planificación."
+      "explicacion": "El backlog no es el tablero del sprint activo. Las issues ya en progreso viven en el sprint o en el board, no como ítems de planificación."
     },
     {
       "id": "m07-q25",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Creas el tablero NORTECH OPS+PMO a partir de un filtro guardado. Ese filtro:",
+      "stem": "Creas un tablero a partir de un filtro guardado que incluye Operaciones y PMO. ¿Qué relación tiene ese filtro con el tablero?",
       "opciones": [
-        { "id": "A", "texto": "Deja de existir; el tablero copia el JQL y se olvida" },
-        { "id": "B", "texto": "Es el board filter: si alguien lo edita, cambia qué entra en el tablero" },
-        { "id": "C", "texto": "Solo cambia el nombre NORTECH" },
-        { "id": "D", "texto": "Obliga a sprints" }
+        { "id": "A", "texto": "Deja de existir: el tablero copia el JQL y se olvida del filtro" },
+        { "id": "B", "texto": "Es el filtro del tablero: si alguien lo edita, cambia qué issues entran" },
+        { "id": "C", "texto": "Solo cambia el nombre del tablero" },
+        { "id": "D", "texto": "Obliga al tablero a usar sprints" }
       ],
       "correctas": ["B"],
-      "explicacion": "El tablero apunta al filtro. El filtro *es* el tablero."
+      "explicacion": "El tablero apunta al filtro guardado. Editar ese filtro es editar el contenido del tablero."
     },
     {
       "id": "m07-q26",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Un editor cambia el filtro del tablero DEV de project = DEV a project in (DEV, OPS). Efecto inmediato:",
+      "stem": "Un editor cambia el filtro del tablero de Desarrollo de project = DEV a project in (DEV, OPS). ¿Cuál es el efecto inmediato?",
       "opciones": [
         { "id": "A", "texto": "Ninguno hasta el próximo sprint" },
-        { "id": "B", "texto": "El tablero puede mostrar elementos de OPS (si hay Browse); riesgo de fuga de alcance" },
-        { "id": "C", "texto": "Se borran los sprints de DEV" },
-        { "id": "D", "texto": "Kanban se convierte en Scrum" }
+        { "id": "B", "texto": "El tablero puede mostrar issues de Operaciones si el usuario tiene Browse Projects; hay riesgo de ampliar el alcance" },
+        { "id": "C", "texto": "Se borran los sprints de Desarrollo" },
+        { "id": "D", "texto": "El tablero Scrum se convierte en Kanban" }
       ],
       "correctas": ["B"],
-      "explicacion": "Ampliar el JQL sin gobernar Browse es un clásico: el filtro *es* el tablero."
+      "explicacion": "Ampliar el JQL sin gobernar Browse Projects es un clásico de fuga de alcance: el filtro es el tablero."
     },
     {
       "id": "m07-q27",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "DEV no trabaja fines de semana. El burndown «baja» en sábado-domingo aunque nadie cierre nada. Ajustas:",
+      "stem": "Desarrollo no trabaja fines de semana. El burndown «baja» el sábado y el domingo aunque nadie cierre nada. ¿Qué debe ajustar el administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Días laborables (working days) del tablero" },
-        { "id": "B", "texto": "El board filter a status != Done" },
+        { "id": "A", "texto": "Los días laborables (working days) del tablero" },
+        { "id": "B", "texto": "El filtro del tablero a status != Done" },
         { "id": "C", "texto": "Las swimlanes a Asignatario" },
-        { "id": "D", "texto": "El nombre NORTECH DEV Scrum" }
+        { "id": "D", "texto": "El nombre del tablero" }
       ],
       "correctas": ["A"],
-      "explicacion": "Working days recortan el eje del burndown. No es un filtro ni un permiso."
+      "explicacion": "Los días laborables recortan el eje del burndown. No es un filtro ni un permiso."
     },
     {
       "id": "m07-q28",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En M05 añadiste el estado In Review al workflow de DEV. En el tablero Scrum sigue en «Sin asignar». Qué hace falta:",
+      "stem": "Añades el estado In Review al workflow de Desarrollo. En el tablero Scrum ese estado aparece en Sin asignar. ¿Qué hace falta?",
       "opciones": [
-        { "id": "A", "texto": "Nada: Unmapped pinta In Review en To Do" },
-        { "id": "B", "texto": "Crear (o mapear) una columna propia para In Review; nada en Unmapped" },
-        { "id": "C", "texto": "Pasar DEV a Kanban" },
-        { "id": "D", "texto": "Un filtro rápido issuetype = Bug" }
+        { "id": "A", "texto": "Nada: Sin asignar pinta In Review en To Do" },
+        { "id": "B", "texto": "Mapear In Review a una columna; nada debe quedar en Sin asignar" },
+        { "id": "C", "texto": "Pasar el tablero a Kanban" },
+        { "id": "D", "texto": "Crear un filtro rápido issuetype = Bug" }
       ],
       "correctas": ["B"],
-      "explicacion": "El estado nuevo no hereda columna. Mapping columnas ↔ estados es configuración del tablero (demo M07)."
+      "explicacion": "Un estado nuevo no hereda columna. El mapeo columnas ↔ estados es configuración del tablero y hay que hacerlo a mano."
     },
     {
       "id": "m07-q29",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Activas Kanban con backlog en SUP. Las columnas más a la izquierda mapeadas al backlog:",
+      "stem": "Activas Kanban con backlog en Soporte. ¿Qué ocurre con las columnas más a la izquierda que quedan mapeadas al backlog?",
       "opciones": [
         { "id": "A", "texto": "Siguen contando como WIP del tablero" },
         { "id": "B", "texto": "Salen del flujo Kanban: son la bandeja aún no comprometida" },
         { "id": "C", "texto": "Crean sprints automáticamente" },
-        { "id": "D", "texto": "Obligan a story points" }
+        { "id": "D", "texto": "Obligan a estimar en story points" }
       ],
       "correctas": ["B"],
-      "explicacion": "Kanban + backlog = separar compromiso (backlog) de WIP (resto de columnas)."
+      "explicacion": "Kanban con backlog separa el compromiso (backlog) del WIP (el resto de columnas)."
     },
     {
       "id": "m07-q30",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En SUP Kanban, Columnas → ocultar completados de más de 14 días. Eso:",
+      "stem": "En el Kanban de Soporte, el administrador de proyecto activa ocultar completados de más de 14 días. ¿Qué efecto tiene?",
       "opciones": [
-        { "id": "A", "texto": "Reescribe el board filter a status != Done" },
-        { "id": "B", "texto": "Oculta Done antiguo en el tablero sin quitarlos del filtro" },
-        { "id": "C", "texto": "Cierra los tickets automáticamente" },
+        { "id": "A", "texto": "Reescribe el filtro del tablero a status != Done" },
+        { "id": "B", "texto": "Oculta el Done antiguo en el tablero sin quitar esas issues del filtro" },
+        { "id": "C", "texto": "Cierra los tickets automáticamente a los 14 días" },
         { "id": "D", "texto": "Convierte el tablero en Scrum" }
       ],
       "correctas": ["B"],
-      "explicacion": "Hide done es de columnas Kanban. El board filter puede seguir incluyendo Done; el tablero no lo pinta."
+      "explicacion": "Ocultar completados es un ajuste de columnas Kanban. El board filter puede seguir incluyendo Done; el tablero no lo pinta."
     },
     {
       "id": "m07-q31",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El filtro de DEV Scrum ya es project = DEV ORDER BY Rank ASC. Luis arrastra en el backlog y al recargar el orden vuelve. Tiene Browse y Edit. Causa típica:",
+      "stem": "El filtro del Scrum de Desarrollo ya es project = DEV ORDER BY Rank ASC. Luis arrastra en el backlog y, al recargar, el orden vuelve atrás. Tiene Browse Projects y Edit Issues. ¿Qué permiso suele faltar?",
       "opciones": [
-        { "id": "A", "texto": "El ORDER BY Rank no basta: hace falta permiso para rankear (Schedule Issues)" },
-        { "id": "B", "texto": "Falta un filtro rápido Bugs" },
-        { "id": "C", "texto": "Hay que quitar las swimlanes" },
-        { "id": "D", "texto": "El tablero debería ser Kanban" }
+        { "id": "A", "texto": "Schedule Issues, para persistir el ranking" },
+        { "id": "B", "texto": "Un filtro rápido de bugs" },
+        { "id": "C", "texto": "Quitar las swimlanes" },
+        { "id": "D", "texto": "Convertir el tablero a Kanban" }
       ],
       "correctas": ["A"],
-      "explicacion": "Rank en el JQL habilita el orden del tablero; persistir el arrastre es un permiso, no Edit Issues."
+      "explicacion": "Rank en el JQL habilita el orden del tablero; persistir el arrastre es Schedule Issues, no Edit Issues."
     },
     {
       "id": "m07-q32",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "DEV ya tiene NORTECH DEV Scrum. Creas otro Scrum sobre el mismo espacio para el squad móvil. Es:",
+      "stem": "Desarrollo ya tiene un tablero Scrum para el equipo de plataforma. El administrador de proyecto crea otro Scrum en el mismo proyecto para el squad móvil. ¿Es válido?",
       "opciones": [
-        { "id": "A", "texto": "Imposible: un espacio = un tablero" },
-        { "id": "B", "texto": "Válido: otro tablero = otro filtro (p. ej. component = Movil)" },
-        { "id": "C", "texto": "Solo en team-managed" },
-        { "id": "D", "texto": "Rompe el mapeo de columnas del primero" }
+        { "id": "A", "texto": "No: un proyecto solo puede tener un tablero" },
+        { "id": "B", "texto": "Sí: otro tablero puede usar otro filtro, por ejemplo component = Movil" },
+        { "id": "C", "texto": "Solo si el proyecto es team-managed" },
+        { "id": "D", "texto": "No: el segundo tablero rompe el mapeo de columnas del primero" }
       ],
       "correctas": ["B"],
-      "explicacion": "Varios tableros pueden compartir espacio si el JQL parte el trabajo (componente, etiqueta, equipo)."
+      "explicacion": "Varios tableros pueden compartir proyecto si el JQL parte el trabajo (componente, etiqueta, equipo)."
     },
     {
       "id": "m07-q33",
       "dominio": "board-configuration",
       "tipo": "multi",
-      "stem": "Marca lo que es propio de Scrum y no del Kanban clásico de SUP:",
+      "stem": "Un administrador de proyecto compara el Scrum de Desarrollo con el Kanban clásico de Soporte. ¿Qué es propio de Scrum y no del Kanban clásico? (Elige tres.)",
       "opciones": [
-        { "id": "A", "texto": "Sprints e Iniciar/Completar sprint" },
+        { "id": "A", "texto": "Sprints e Iniciar o Completar sprint" },
         { "id": "B", "texto": "Velocity ligada al tablero Scrum" },
         { "id": "C", "texto": "Límites WIP de columna" },
         { "id": "D", "texto": "Burndown ligado al método de estimación" }
       ],
       "correctas": ["A", "B", "D"],
-      "explicacion": "WIP es la palanca Kanban. Velocity, sprints y burndown de sprint son Scrum."
+      "explicacion": "El WIP es la palanca típica de Kanban. Velocity, sprints y burndown de sprint son de Scrum."
     },
     {
       "id": "m07-q34",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En SUP el board filter es project = SUP ORDER BY Rank ASC y hay un subfiltro Kanban. El subfiltro:",
+      "stem": "En el Kanban de Soporte el filtro del tablero es project = SUP ORDER BY Rank ASC y hay un subfiltro Kanban. ¿Qué hace el subfiltro?",
       "opciones": [
-        { "id": "A", "texto": "Sustituye al board filter" },
-        { "id": "B", "texto": "Se aplica después, solo en Kanban; un status != Done mal pensado vacía el tablero" },
-        { "id": "C", "texto": "Es un filtro rápido que Luis deja pulsado" },
-        { "id": "D", "texto": "Solo existe en Scrum" }
+        { "id": "A", "texto": "Sustituye al filtro del tablero" },
+        { "id": "B", "texto": "Se aplica después, solo en Kanban; un status != Done mal pensado puede vaciar el tablero" },
+        { "id": "C", "texto": "Es lo mismo que un filtro rápido que un usuario deja pulsado" },
+        { "id": "D", "texto": "Solo existe en tableros Scrum" }
       ],
       "correctas": ["B"],
-      "explicacion": "Sub-filter ≠ board filter ≠ quick filter. Trampa clásica de Kanban vacío."
+      "explicacion": "Subfiltro ≠ filtro del tablero ≠ filtro rápido. Un subfiltro restrictivo es la trampa clásica del Kanban vacío."
     },
     {
       "id": "m07-q35",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Al completar el sprint de DEV, 3 elementos siguen In Progress. El tablero te pide:",
+      "stem": "Al completar el sprint de Desarrollo, tres issues siguen en In Progress. ¿Qué pide el tablero?",
       "opciones": [
-        { "id": "A", "texto": "Borrarlos" },
-        { "id": "B", "texto": "Moverlos al backlog o a otro sprint (no se «evaporan»)" },
-        { "id": "C", "texto": "Pasarlos a Unmapped" },
+        { "id": "A", "texto": "Borrarlas" },
+        { "id": "B", "texto": "Moverlas al backlog o a otro sprint; no desaparecen solas" },
+        { "id": "C", "texto": "Pasarlas a Sin asignar" },
         { "id": "D", "texto": "Quitar el mapeo de columnas" }
       ],
       "correctas": ["B"],
-      "explicacion": "Complete sprint trata el trabajo incompleto: backlog o siguiente sprint."
+      "explicacion": "Completar el sprint obliga a decidir el destino del trabajo incompleto: backlog o siguiente sprint."
     },
     {
       "id": "m07-q36",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Calles = Epics en DEV. Un elemento sin epic:",
+      "stem": "Las swimlanes del tablero de Desarrollo están en Epics. Una issue cumple el filtro pero no tiene epic. ¿Dónde aparece?",
       "opciones": [
         { "id": "A", "texto": "No puede existir en el tablero" },
-        { "id": "B", "texto": "Cae en la calle «Sin epic» / Issues without epics" },
+        { "id": "B", "texto": "En la calle Issues without epics (sin epic)" },
         { "id": "C", "texto": "Se oculta aunque cumpla el filtro" },
-        { "id": "D", "texto": "Rompe el Rank" }
+        { "id": "D", "texto": "Rompe el Rank del tablero" }
       ],
       "correctas": ["B"],
-      "explicacion": "Hay una swimlane residual para huérfanos. No es unmapped ni un subfiltro."
+      "explicacion": "Hay una swimlane residual para las issues sin epic. No es Sin asignar ni un subfiltro."
     },
     {
       "id": "m07-q37",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El filtro del tablero PMO es project is not EMPTY. Riesgo principal:",
+      "stem": "El filtro del tablero de PMO es project is not EMPTY. ¿Cuál es el riesgo principal?",
       "opciones": [
-        { "id": "A", "texto": "El tablero va más rápido" },
-        { "id": "B", "texto": "Fuga: quien tenga Browse amplio ve trabajo de otros espacios (RRHH, SUP…)" },
+        { "id": "A", "texto": "El tablero carga más rápido" },
+        { "id": "B", "texto": "Quien tenga Browse Projects amplio verá trabajo de otros proyectos (RRHH, Soporte…)" },
         { "id": "C", "texto": "Se desactivan los filtros rápidos" },
-        { "id": "D", "texto": "Kanban exige sprints" }
+        { "id": "D", "texto": "El tablero Kanban exigirá sprints" }
       ],
       "correctas": ["B"],
-      "explicacion": "Filtro demasiado amplio + permisos = tablero multi-espacio accidental. El lab avisa de fugas."
+      "explicacion": "Un filtro demasiado amplio más permisos amplios produce un tablero multi-proyecto accidental y fugas de alcance."
     },
     {
       "id": "m07-q38",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El filtro rápido Bugs = issuetype = Bug no filtra nada (o error). Primer sitio:",
+      "stem": "El filtro rápido Bugs (issuetype = Bug) no filtra nada o muestra un error. ¿Cuál es el primer sitio que debería comprobar el administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Probar el mismo JQL en búsqueda avanzada; comillas/nombre del tipo" },
-        { "id": "B", "texto": "Borrar las columnas" },
-        { "id": "C", "texto": "Cambiar Location a SUP" },
-        { "id": "D", "texto": "Poner WIP a 0" }
+        { "id": "A", "texto": "El mismo JQL en la búsqueda avanzada: comillas y nombre exacto del tipo" },
+        { "id": "B", "texto": "Borrar las columnas del tablero" },
+        { "id": "C", "texto": "Cambiar la ubicación del tablero a Soporte" },
+        { "id": "D", "texto": "Poner el WIP de In Progress a 0" }
       ],
       "correctas": ["A"],
-      "explicacion": "Quick filter con JQL inválido o tipo mal escrito no hace nada útil. Se testea fuera del tablero."
+      "explicacion": "Un filtro rápido con JQL inválido o un tipo mal escrito no hace nada útil. Se prueba fuera del tablero, en Search."
     },
     {
       "id": "m07-q39",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Orden de diagnóstico de un tablero vacío en Nortech (lab M07):",
+      "stem": "Un tablero de Nortech aparece vacío aunque hay trabajo en los proyectos. ¿En qué orden debería diagnosticarlo un administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Nombre del tablero → card colors → working days" },
-        { "id": "B", "texto": "Filtro → subfiltro → permisos Browse → columnas unmapped" },
-        { "id": "C", "texto": "Solo el nombre NORTECH" },
-        { "id": "D", "texto": "Primero los filtros rápidos, luego el filtro" }
+        { "id": "A", "texto": "Nombre del tablero, luego colores de tarjeta, luego días laborables" },
+        { "id": "B", "texto": "Filtro del tablero, subfiltro, Browse Projects y columnas en Sin asignar" },
+        { "id": "C", "texto": "Solo el nombre del tablero" },
+        { "id": "D", "texto": "Primero los filtros rápidos y, si fallan, el filtro del tablero" }
       ],
       "correctas": ["B"],
-      "explicacion": "La tabla de errores frecuentes: filter, sub-filter, permisos, columnas. En ese orden."
+      "explicacion": "El orden útil es filtro, subfiltro, permisos y mapeo de columnas. Los filtros rápidos son una vista de sesión, no el primer recorte estructural."
     },
     {
       "id": "m07-q40",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Al clicar una tarjeta, el panel lateral no muestra el campo que ves en la cara de la tarjeta. Lo ajustas en:",
+      "stem": "Al seleccionar una tarjeta, el panel lateral no muestra un campo que sí aparece en la cara de la tarjeta. ¿Dónde lo ajusta el administrador de proyecto?",
       "opciones": [
-        { "id": "A", "texto": "Issue detail view / vista de detalle del tablero (además del card layout)" },
-        { "id": "B", "texto": "El subfiltro" },
-        { "id": "C", "texto": "Working days" },
-        { "id": "D", "texto": "El WIP de In Progress" }
+        { "id": "A", "texto": "En la vista de detalle de la issue del tablero, además del card layout" },
+        { "id": "B", "texto": "En el subfiltro" },
+        { "id": "C", "texto": "En los días laborables" },
+        { "id": "D", "texto": "En el WIP de In Progress" }
       ],
       "correctas": ["A"],
-      "explicacion": "Card layout = cara de la tarjeta. Issue detail view = panel al seleccionar. Ambos son del tablero."
+      "explicacion": "Card layout es la cara de la tarjeta. Issue detail view es el panel al seleccionar. Ambos se configuran en el tablero."
     },
     {
       "id": "m07-q41",
       "dominio": "board-configuration",
       "tipo": "multi",
-      "stem": "Estimación del tablero DEV. Marca lo correcto según el método:",
+      "stem": "El administrador de proyecto revisa el método de estimación del Scrum de Desarrollo. ¿Qué afirmaciones son correctas? (Elige tres.)",
       "opciones": [
-        { "id": "A", "texto": "Story points: el burndown baja al completar elementos con puntos > 0" },
-        { "id": "B", "texto": "Story points: elementos en 0 no mueven el burndown de puntos" },
-        { "id": "C", "texto": "Issue count: cada elemento completado quita 1, da igual los puntos" },
+        { "id": "A", "texto": "Con story points, el burndown baja al completar issues con puntos mayores que 0" },
+        { "id": "B", "texto": "Con story points, las issues en 0 no mueven el burndown de puntos" },
+        { "id": "C", "texto": "Con issue count, cada issue completada resta 1, da igual los puntos" },
         { "id": "D", "texto": "El método de estimación es un filtro rápido" }
       ],
       "correctas": ["A", "B", "C"],
-      "explicacion": "Tres statistics: puntos, tiempo original o recuento. El lab pregunta el efecto en el burndown."
+      "explicacion": "Hay tres statistics habituales: puntos, tiempo original o recuento. El método no es un filtro rápido."
     },
     {
       "id": "m07-q42",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Pasas Estimación de DEV Scrum de Story points a Issue count. Cierras un bug con 0 puntos. El burndown:",
+      "stem": "Pasas la estimación del Scrum de Desarrollo de Story points a Issue count. Cierras un bug con 0 puntos. ¿Qué hace el burndown?",
       "opciones": [
-        { "id": "A", "texto": "No se mueve, porque valía 0 puntos" },
-        { "id": "B", "texto": "Baja 1: ahora cuenta elementos, no puntos" },
+        { "id": "A", "texto": "No se mueve, porque el bug valía 0 puntos" },
+        { "id": "B", "texto": "Baja 1: ahora cuenta issues, no puntos" },
         { "id": "C", "texto": "Convierte el tablero en Kanban" },
         { "id": "D", "texto": "Oculta la columna Done" }
       ],
       "correctas": ["B"],
-      "explicacion": "Issue count ignora story points. Time tracking usaría la estimación original de tiempo."
+      "explicacion": "Issue count ignora los story points. Time tracking usaría la estimación original de tiempo."
     },
     {
       "id": "m07-q43",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "WIP máximo 3 en In Progress de SUP. Un cuarto elemento se arrastra igual. Comportamiento Cloud típico:",
+      "stem": "En el Kanban de Soporte el WIP máximo de In Progress es 3. Un usuario arrastra una cuarta tarjeta. ¿Cuál es el comportamiento típico en Cloud?",
       "opciones": [
-        { "id": "A", "texto": "Jira bloquea el drag siempre, como si la columna no existiera" },
-        { "id": "B", "texto": "Aviso visual de constraint; el límite WIP no impide el movimiento por sí solo" },
+        { "id": "A", "texto": "Jira bloquea el arrastre como si la columna no existiera" },
+        { "id": "B", "texto": "Hay un aviso visual de restricción; el límite WIP no impide el movimiento por sí solo" },
         { "id": "C", "texto": "Se cierra el tablero" },
         { "id": "D", "texto": "Se borra el subfiltro" }
       ],
       "correctas": ["B"],
-      "explicacion": "Column constraint = señal. No es lo mismo que unmapped ni que el board filter."
+      "explicacion": "La restricción de columna es una señal, no un bloqueo duro. No es lo mismo que Sin asignar ni que el filtro del tablero."
     },
     {
       "id": "m07-q44",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "General del tablero: nombre NORTECH DEV Scrum, ubicación DEV. El nombre:",
+      "stem": "En General del tablero, el nombre es NORTECH DEV Scrum y la ubicación es Desarrollo. ¿Qué cambia el nombre?",
       "opciones": [
-        { "id": "A", "texto": "Cambia la clave del espacio a NORTECH" },
-        { "id": "B", "texto": "Es la etiqueta humana; no altera el JQL ni los permisos" },
-        { "id": "C", "texto": "Sustituye al board filter" },
+        { "id": "A", "texto": "La clave del proyecto pasa a NORTECH" },
+        { "id": "B", "texto": "Solo la etiqueta humana; no altera el JQL ni los permisos" },
+        { "id": "C", "texto": "Sustituye al filtro del tablero" },
         { "id": "D", "texto": "Activa Kanban" }
       ],
       "correctas": ["B"],
-      "explicacion": "Nombre y location son metadatos. El contenido lo marca el filtro."
+      "explicacion": "Nombre y ubicación son metadatos. El contenido lo marca el filtro."
     },
     {
       "id": "m07-q45",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En el Kanban multi-espacio OPS+PMO, rankeas un elemento OPS encima de uno PMO. Eso:",
+      "stem": "En un Kanban multi-proyecto de Operaciones y PMO, un administrador rankea una issue de OPS encima de una de PMO. ¿Es válido?",
       "opciones": [
-        { "id": "A", "texto": "Es válido en un tablero compartido; Rank es del elemento, no del espacio" },
-        { "id": "B", "texto": "Es imposible entre espacios" },
-        { "id": "C", "texto": "Copia el elemento a PMO" },
-        { "id": "D", "texto": "Solo funciona con sprints" }
+        { "id": "A", "texto": "Sí: en un tablero compartido el Rank es de la issue, no del proyecto" },
+        { "id": "B", "texto": "No: no se puede rankear entre proyectos" },
+        { "id": "C", "texto": "Jira copia la issue a PMO para poder ordenarla" },
+        { "id": "D", "texto": "Solo funciona si el tablero es Scrum" }
       ],
       "correctas": ["A"],
-      "explicacion": "Un board multi-proyecto ordena un único Rank. Sigue haciendo falta poder rankear en cada espacio."
+      "explicacion": "Un tablero multi-proyecto ordena un único Rank. Sigue haciendo falta poder rankear en cada proyecto implicado."
     },
     {
       "id": "m07-q46",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El Kanban NORTECH OPS+PMO usa project in (OPS, PMO). Marta (PMO) no tiene Browse en OPS. En el tablero:",
+      "stem": "El Kanban de Operaciones y PMO usa project in (OPS, PMO). Marta (PMO) no tiene Browse Projects en Operaciones. ¿Qué ve en el tablero?",
       "opciones": [
-        { "id": "A", "texto": "Ve OPS y PMO igual, porque el filtro incluye OPS" },
-        { "id": "B", "texto": "No ve las de OPS: el filtro no salta Browse" },
-        { "id": "C", "texto": "Jira le otorga Browse al abrir el tablero" },
-        { "id": "D", "texto": "Solo ve Unmapped" }
+        { "id": "A", "texto": "Issues de OPS y de PMO por igual, porque el filtro incluye OPS" },
+        { "id": "B", "texto": "No ve las de Operaciones: el filtro no salta Browse Projects" },
+        { "id": "C", "texto": "Jira le otorga Browse Projects al abrir el tablero" },
+        { "id": "D", "texto": "Solo ve la columna Sin asignar" }
       ],
       "correctas": ["B"],
-      "explicacion": "Reto M07-01: sin Browse en OPS, el usuario de PMO no ve esas issues. Permisos ∩ filtro."
+      "explicacion": "Sin Browse Projects en Operaciones, esas issues no existen para Marta. Permisos ∩ filtro."
     },
     {
       "id": "m07-q47",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Carlos ve el backlog de DEV, rankea, pero Iniciar sprint está inactivo. Permiso que falta:",
+      "stem": "Carlos ve el backlog de Desarrollo y puede rankear, pero Iniciar sprint está inactivo. ¿Qué permiso suele faltar?",
       "opciones": [
-        { "id": "A", "texto": "Manage Sprints (a menudo con Administer Projects)" },
+        { "id": "A", "texto": "Manage Sprints (a menudo junto con Administer Projects)" },
         { "id": "B", "texto": "Browse Projects" },
-        { "id": "C", "texto": "Un filtro rápido Sprint" },
-        { "id": "D", "texto": "Card layout" }
+        { "id": "C", "texto": "Un filtro rápido llamado Sprint" },
+        { "id": "D", "texto": "Card layout configurado" }
       ],
       "correctas": ["A"],
-      "explicacion": "Ver el tablero ≠ gestionar el sprint. El lab lo lista como error frecuente."
+      "explicacion": "Ver el tablero y rankear no implica gestionar el timebox. Iniciar o completar sprint exige Manage Sprints."
     },
     {
       "id": "m07-q48",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Marta (desarrolladora, con Browse) no puede abrir Configuración del tablero DEV (columnas, estimación). Quién sí:",
+      "stem": "Marta es desarrolladora con Browse Projects y no puede abrir la configuración del tablero de Desarrollo (columnas, estimación). ¿Quién sí puede?",
       "opciones": [
-        { "id": "A", "texto": "Cualquier usuario con Browse" },
-        { "id": "B", "texto": "Administradores del tablero / Administer Projects" },
-        { "id": "C", "texto": "Solo quien pulsó un filtro rápido" },
-        { "id": "D", "texto": "El grupo nortech-rrhh por defecto" }
+        { "id": "A", "texto": "Cualquier usuario con Browse Projects" },
+        { "id": "B", "texto": "Los administradores del tablero o quien tenga Administer Projects" },
+        { "id": "C", "texto": "Solo quien haya pulsado un filtro rápido" },
+        { "id": "D", "texto": "El grupo de RRHH, por defecto" }
       ],
       "correctas": ["B"],
-      "explicacion": "Configurar columnas, filtros y estimación no es Browse: es admin del board o del espacio."
+      "explicacion": "Configurar columnas, filtros y estimación no es Browse Projects: hace falta ser administrador del board o del proyecto."
     },
     {
       "id": "m07-q49",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Luis tiene Browse en DEV y usa NORTECH DEV Scrum cada día. Eso implica que puede Iniciar sprint:",
+      "stem": "Luis tiene Browse Projects en Desarrollo y usa el tablero Scrum cada día. ¿Puede iniciar el sprint solo por eso?",
       "opciones": [
         { "id": "A", "texto": "Sí: ver el tablero incluye gestionar sprints" },
-        { "id": "B", "texto": "No: hace falta Manage Sprints; Browse solo deja ver el trabajo" },
+        { "id": "B", "texto": "No: hace falta Manage Sprints; Browse Projects solo deja ver el trabajo" },
         { "id": "C", "texto": "Sí, si el tablero es Kanban" },
-        { "id": "D", "texto": "Sí, si Location es DEV" }
+        { "id": "D", "texto": "Sí, si la ubicación del tablero es Desarrollo" }
       ],
       "correctas": ["B"],
       "explicacion": "Ver el board y gestionar el timebox son permisos distintos. ACP-620 los separa."
@@ -692,15 +692,15 @@
       "id": "m07-q50",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En el Kanban OPS+PMO, Ana tiene Schedule Issues en PMO pero no en OPS. Al rankear una tarjeta OPS:",
+      "stem": "En el Kanban de Operaciones y PMO, Ana tiene Schedule Issues en PMO pero no en Operaciones. Intenta rankear una tarjeta de OPS. ¿Qué ocurre?",
       "opciones": [
-        { "id": "A", "texto": "El orden se guarda igual en ambos espacios" },
-        { "id": "B", "texto": "Puede fallar o no persistir en OPS: el rank exige el permiso en el espacio de esa issue" },
+        { "id": "A", "texto": "El orden se guarda igual en ambos proyectos" },
+        { "id": "B", "texto": "Puede fallar o no persistir en Operaciones: el rank exige el permiso en el proyecto de esa issue" },
         { "id": "C", "texto": "Jira copia la issue a PMO para poder rankearla" },
-        { "id": "D", "texto": "Location PMO otorga Schedule Issues en OPS" }
+        { "id": "D", "texto": "La ubicación PMO otorga Schedule Issues en Operaciones" }
       ],
       "correctas": ["B"],
-      "explicacion": "Multi-proyecto: filtro + Browse + (si rankeas) Schedule Issues en cada espacio implicado."
+      "explicacion": "En un tablero multi-proyecto hacen falta el filtro, Browse Projects y, si se rankea, Schedule Issues en cada proyecto implicado."
     }
   ]
 }

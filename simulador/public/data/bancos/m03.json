@@ -6,701 +6,701 @@
       "id": "m03-q1",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Tres equipos deben compartir el mismo workflow y los mismos campos. Recomiendas:",
+      "stem": "Eres administrador de Jira. Tres equipos de Nortech deben compartir el mismo flujo de trabajo y los mismos campos para que los informes de la PMO coincidan. ¿Qué tipo de proyecto recomiendas?",
       "opciones": [
         { "id": "A", "texto": "Tres proyectos team-managed" },
-        { "id": "B", "texto": "Proyectos company-managed con schemes compartidos" },
-        { "id": "C", "texto": "Un único tablero sin proyectos" },
-        { "id": "D", "texto": "Un proyecto por issue type" }
+        { "id": "B", "texto": "Proyectos company-managed con esquemas compartidos" },
+        { "id": "C", "texto": "Un único tablero, sin proyectos" },
+        { "id": "D", "texto": "Un proyecto por cada tipo de trabajo" }
       ],
       "correctas": ["B"],
-      "explicacion": "Shared configuration es el caso de uso de CMP. TMP no comparte schemes entre proyectos."
+      "explicacion": "La configuración compartida es el caso de uso de company-managed. Un team-managed no comparte esquemas entre proyectos."
     },
     {
       "id": "m03-q2",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Un equipo pequeño quiere empezar hoy y no hay Jira admin disponible hasta el mes que viene. Recomiendas:",
+      "stem": "Eres administrador de un equipo pequeño. Quieren empezar a trabajar hoy y el administrador de Jira no estará disponible hasta el mes que viene. ¿Qué recomiendas?",
       "opciones": [
-        { "id": "A", "texto": "Esperar" },
-        { "id": "B", "texto": "Team-managed, sabiendo el coste de migrar a CMP después" },
-        { "id": "C", "texto": "Company-managed igualmente" },
-        { "id": "D", "texto": "Jira Data Center" }
+        { "id": "A", "texto": "Esperar a que llegue el administrador de Jira" },
+        { "id": "B", "texto": "Un proyecto team-managed, asumiendo el coste de migrar después" },
+        { "id": "C", "texto": "Un proyecto company-managed de todos modos" },
+        { "id": "D", "texto": "Migrar el trabajo a Jira Data Center" }
       ],
       "correctas": ["B"],
-      "explicacion": "ACP-620 pide recomendar TMP cuando el gobierno central no está. Hay que conocer el trade-off."
+      "explicacion": "Sin gobierno central, team-managed desbloquea al equipo. El trade-off es que más adelante no hay conversión de un clic a company-managed."
     },
     {
       "id": "m03-q3",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Quieres que los bugs de la capa API caigan siempre en Marta. Lo más limpio:",
+      "stem": "Eres administrador del proyecto DEV, company-managed. La PMO quiere que los defectos de la capa API se asignen siempre a Marta cuando nadie elige responsable. ¿Qué configuras?",
       "opciones": [
-        { "id": "A", "texto": "Automation global para todos los proyectos" },
-        { "id": "B", "texto": "Componente api con lead Marta y default assignee = Component lead" },
-        { "id": "C", "texto": "Un label marta" },
-        { "id": "D", "texto": "Hacer a Marta org admin" }
+        { "id": "A", "texto": "Una automation global para todos los proyectos" },
+        { "id": "B", "texto": "El componente api, lead Marta y default assignee Component lead" },
+        { "id": "C", "texto": "La etiqueta marta en cada defecto" },
+        { "id": "D", "texto": "El rol de administrador de organización para Marta" }
       ],
       "correctas": ["B"],
-      "explicacion": "Es el mecanismo nativo de asignación por componente. Automation es M09, para reglas más ricas."
+      "explicacion": "Es el mecanismo nativo de asignación por componente. Una automation sirve para reglas más ricas; no hace falta para este caso."
     },
     {
       "id": "m03-q4",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Quitar una issue de la versión 1.0.0 justo antes del release:",
+      "stem": "Eres administrador del proyecto DEV. Un defecto está en la versión 1.0.0 y el responsable de producto pide quitarlo justo antes de publicar. ¿Qué impacto tiene?",
       "opciones": [
-        { "id": "A", "texto": "No afecta a nadie" },
-        { "id": "B", "texto": "Cambia el alcance de la versión (informes de release y lo que se entrega)" },
-        { "id": "C", "texto": "Borra el workflow" },
-        { "id": "D", "texto": "Cambia el permission scheme" }
+        { "id": "A", "texto": "No cambia nada en informes ni en la entrega" },
+        { "id": "B", "texto": "Cambia el alcance de la versión 1.0.0" },
+        { "id": "C", "texto": "Elimina el flujo de trabajo del proyecto" },
+        { "id": "D", "texto": "Cambia el esquema de permisos del proyecto" }
       ],
       "correctas": ["B"],
-      "explicacion": "Scope change. El examen pregunta el impacto de mover issues entre versiones/sprints."
+      "explicacion": "Quitar o mover un elemento entre versiones es un cambio de alcance. Afecta a los informes de release y a lo que se entrega."
     },
     {
       "id": "m03-q5",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "La clave del proyecto:",
+      "stem": "Eres administrador de Jira. Vas a crear el proyecto de Desarrollo y debes elegir la clave. ¿Qué debes tener en cuenta?",
       "opciones": [
-        { "id": "A", "texto": "Se puede cambiar siempre sin coste" },
-        { "id": "B", "texto": "Es el prefijo de las issues (DEV-12); cambiarla es posible pero doloroso" },
-        { "id": "C", "texto": "Debe ser un UUID" },
-        { "id": "D", "texto": "Solo existe en TMP" }
+        { "id": "A", "texto": "La clave se puede cambiar siempre sin coste" },
+        { "id": "B", "texto": "La clave es el prefijo de las incidencias y cambiarla es costoso" },
+        { "id": "C", "texto": "La clave debe ser un identificador UUID" },
+        { "id": "D", "texto": "La clave solo existe en proyectos team-managed" }
       ],
       "correctas": ["B"],
-      "explicacion": "Elige bien DEV / SUP el día 1."
+      "explicacion": "La clave es el prefijo de los elementos (DEV-12). Elígelas bien el primer día: DEV, SUP, OPS y PMO."
     },
     {
       "id": "m03-q6",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "En el asistente Crear espacio, Cloud suele destacar «gestionado por el equipo». Para Nortech Development eliges:",
+      "stem": "Eres administrador de Jira. Debes crear el proyecto Nortech Development. El asistente de creación destaca «gestionado por el equipo». ¿Qué tipo eliges?",
       "opciones": [
-        { "id": "A", "texto": "Gestionado por la empresa: los espacios corporativos deben poder compartir configuración después" },
-        { "id": "B", "texto": "Lo resaltado, porque el asistente es la política de Nortech" },
-        { "id": "C", "texto": "Jira Data Center" },
-        { "id": "D", "texto": "Un tablero suelto, sin espacio" }
+        { "id": "A", "texto": "Gestionado por la empresa" },
+        { "id": "B", "texto": "El tipo que destaca el asistente" },
+        { "id": "C", "texto": "Un despliegue en Jira Data Center" },
+        { "id": "D", "texto": "Un tablero suelto, sin proyecto" }
       ],
       "correctas": ["A"],
-      "explicacion": "El resalte no es la decisión de gobierno. DEV, SUP, OPS y PMO nacen CMP."
+      "explicacion": "El resalte del asistente no es la política de gobierno. DEV, SUP, OPS y PMO nacen company-managed para poder compartir configuración."
     },
     {
       "id": "m03-q7",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "En la barra izquierda, el enlace Proyectos del pie abre:",
+      "stem": "Eres administrador de Jira. Necesitas crear un proyecto Jira. En la barra izquierda aparecen Proyectos en el pie y también Espacio. ¿Qué abre el enlace Proyectos del pie?",
       "opciones": [
         { "id": "A", "texto": "El asistente Crear espacio de Jira" },
-        { "id": "B", "texto": "Solo los espacios team-managed" },
-        { "id": "C", "texto": "Otro producto de Atlassian (Projects), no la galería de espacios Jira" },
-        { "id": "D", "texto": "admin.atlassian.com" }
+        { "id": "B", "texto": "Solo la lista de proyectos team-managed" },
+        { "id": "C", "texto": "Otro producto de Atlassian, no la galería de Jira" },
+        { "id": "D", "texto": "La consola admin.atlassian.com" }
       ],
       "correctas": ["C"],
-      "explicacion": "Espacio = proyecto Jira. El camino es Crear espacio o Más espacios; el pie Proyectos es otro producto."
+      "explicacion": "En la interfaz en español, espacio es el proyecto de Jira. El camino es Crear espacio o Más espacios. El pie Proyectos es otro producto de Atlassian."
     },
     {
       "id": "m03-q8",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Plantilla y tipo para Nortech Support (clave SUP):",
+      "stem": "Eres administrador de Jira. Nortech Support trabaja incidencias en flujo continuo y usará la clave SUP. ¿Qué plantilla y tipo eliges?",
       "opciones": [
-        { "id": "A", "texto": "Kanban (seguimiento de incidencias / IT), gestionado por la empresa" },
-        { "id": "B", "texto": "Scrum con sprints, obligatorio" },
-        { "id": "C", "texto": "Solo un espacio Confluence" },
-        { "id": "D", "texto": "Team-managed de negocio" }
+        { "id": "A", "texto": "Kanban, gestionado por la empresa" },
+        { "id": "B", "texto": "Scrum con sprints, de forma obligatoria" },
+        { "id": "C", "texto": "Solo un espacio de Confluence" },
+        { "id": "D", "texto": "Un proyecto team-managed de negocio" }
       ],
       "correctas": ["A"],
-      "explicacion": "Soporte trabaja en flujo continuo. Kanban CMP es el encaje de Nortech."
+      "explicacion": "Soporte trabaja en flujo continuo. Kanban company-managed es el encaje: incidencias o IT, sin sprints obligatorios."
     },
     {
       "id": "m03-q9",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Plantilla y tipo para Nortech Development (clave DEV):",
+      "stem": "Eres administrador de Jira. Nortech Development planifica por sprints y usará la clave DEV. ¿Qué plantilla y tipo eliges?",
       "opciones": [
-        { "id": "A", "texto": "Kanban obligatorio" },
-        { "id": "B", "texto": "Negocio sin tablero" },
-        { "id": "C", "texto": "Scrum (sprints y backlog), gestionado por la empresa" },
-        { "id": "D", "texto": "Jira Service Management" }
+        { "id": "A", "texto": "Kanban, de forma obligatoria" },
+        { "id": "B", "texto": "Negocio, sin tablero" },
+        { "id": "C", "texto": "Scrum, gestionado por la empresa" },
+        { "id": "D", "texto": "Un proyecto de Jira Service Management" }
       ],
       "correctas": ["C"],
-      "explicacion": "Desarrollo planifica por sprint. La plantilla Scrum rellena tipos y un tablero inicial; el tipo es CMP."
+      "explicacion": "Desarrollo planifica por sprint. La plantilla Scrum rellena tipos y un tablero inicial; el tipo es company-managed."
     },
     {
       "id": "m03-q10",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "OPS (Nortech Operations) y PMO (Nortech PMO) se crean con:",
+      "stem": "Eres administrador de Jira. Operaciones y la PMO necesitan proyectos para seguimiento de tareas, no para software con sprints. ¿Con qué plantilla y tipo los creas?",
       "opciones": [
         { "id": "A", "texto": "Scrum con sprints" },
-        { "id": "B", "texto": "Solo TMP Kanban" },
+        { "id": "B", "texto": "Kanban team-managed" },
         { "id": "C", "texto": "Service desk" },
-        { "id": "D", "texto": "Plantilla de negocio (seguimiento de tareas / gestión de proyectos), company-managed" }
+        { "id": "D", "texto": "Plantilla de negocio, company-managed" }
       ],
       "correctas": ["D"],
-      "explicacion": "Operaciones y PMO no son equipos de software Scrum. Negocio + CMP."
+      "explicacion": "Operaciones y PMO no son equipos de software Scrum. Negocio o seguimiento de tareas, company-managed, con claves OPS y PMO."
     },
     {
       "id": "m03-q11",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Al crear DEV, la clave ya la ocupa Sample Scrum. ¿Qué haces?",
+      "stem": "Eres administrador de Jira. Al crear Nortech Development, la clave DEV ya la ocupa el proyecto Sample Scrum. ¿Qué haces?",
       "opciones": [
-        { "id": "A", "texto": "Otra clave (DEV2) o borrar el sample; no uses el sample como si fuera Nortech Development" },
-        { "id": "B", "texto": "Reutilizar el sample como espacio corporativo" },
-        { "id": "C", "texto": "Poner la clave en minúsculas para saltarte el choque" },
-        { "id": "D", "texto": "Crear un TMP con la misma clave" }
+        { "id": "A", "texto": "Usas otra clave o eliminas el sample" },
+        { "id": "B", "texto": "Reutilizas el sample como proyecto corporativo" },
+        { "id": "C", "texto": "Pones la clave en minúsculas para evitar el choque" },
+        { "id": "D", "texto": "Creas un team-managed con la misma clave" }
       ],
       "correctas": ["A"],
-      "explicacion": "La clave es única. Sample Scrum no es uno de los cuatro espacios Nortech."
+      "explicacion": "La clave es única en el site. Sample Scrum no es Nortech Development: o eliges otra clave, o borras el sample y reservas DEV."
     },
     {
       "id": "m03-q12",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "No ves la opción Gestionado por la empresa en el asistente. Lo más útil:",
+      "stem": "Eres administrador de Jira. En el asistente no aparece la opción Gestionado por la empresa y necesitas un proyecto company-managed. ¿Qué haces?",
       "opciones": [
-        { "id": "A", "texto": "Asumir que el plan Free lo prohíbe" },
-        { "id": "B", "texto": "Instalar una app Forge" },
-        { "id": "C", "texto": "Cambiar de plantilla o buscar más plantillas / empresa: algunas galerías nacen solo TMP" },
-        { "id": "D", "texto": "Pasar a Data Center" }
+        { "id": "A", "texto": "Asumes que el plan Free lo prohíbe" },
+        { "id": "B", "texto": "Instalas una app de Forge" },
+        { "id": "C", "texto": "Cambias de plantilla o buscas más plantillas de empresa" },
+        { "id": "D", "texto": "Pasas el site a Data Center" }
       ],
       "correctas": ["C"],
-      "explicacion": "La UI nueva o una plantilla concreta pueden ocultar CMP. Se cambia de plantilla, no se improvisa un TMP."
+      "explicacion": "Una galería nueva o una plantilla concreta pueden mostrar solo team-managed. Se cambia de plantilla; no se improvisa un team-managed."
     },
     {
       "id": "m03-q13",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "¿Quién puede crear un espacio company-managed en el site de Nortech?",
+      "stem": "Eres usuario con acceso al producto Jira. La PMO te pide crear un proyecto company-managed para Operaciones. ¿Quién puede crearlo?",
       "opciones": [
-        { "id": "A", "texto": "Cualquier usuario con product access" },
-        { "id": "B", "texto": "Solo el project admin de otro espacio" },
-        { "id": "C", "texto": "Un watcher de DEV-1" },
-        { "id": "D", "texto": "Un administrador de Jira o quien tenga el permiso global de crear espacios (Create projects)" }
+        { "id": "A", "texto": "Cualquier usuario con acceso al producto" },
+        { "id": "B", "texto": "Solo el administrador de otro proyecto" },
+        { "id": "C", "texto": "Cualquier watcher de una incidencia" },
+        { "id": "D", "texto": "Un administrador de Jira o quien tenga el permiso global Create projects" }
       ],
       "correctas": ["D"],
-      "explicacion": "CMP no lo crea cualquiera. Hace falta Administer Jira o el permiso de crear espacios. Un usuario normal a menudo solo puede crear TMP."
+      "explicacion": "Un company-managed no lo crea cualquiera. Hace falta Administer Jira o el permiso global de crear proyectos. Un usuario normal a menudo solo puede crear team-managed."
     },
     {
       "id": "m03-q14",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Abres DEV y ves «Añadir un estado» estilo TMP o Funciones de gestionado por el equipo. Lo más limpio:",
+      "stem": "Eres administrador de Jira. Abres DEV y ves «Añadir un estado» al estilo team-managed y funciones de gestionado por el equipo. Pretendías un company-managed. ¿Qué haces?",
       "opciones": [
-        { "id": "A", "texto": "Borrar el espacio y recrearlo como gestionado por la empresa" },
-        { "id": "B", "texto": "Dejarlo: «ya lo arreglas luego»" },
-        { "id": "C", "texto": "Cambiar solo el nombre a Nortech Development" },
-        { "id": "D", "texto": "Convertirlo a CMP con un clic" }
+        { "id": "A", "texto": "Borras el proyecto y lo recreas como gestionado por la empresa" },
+        { "id": "B", "texto": "Lo dejas y lo corriges más adelante" },
+        { "id": "C", "texto": "Cambias solo el nombre a Nortech Development" },
+        { "id": "D", "texto": "Lo conviertes a company-managed con un clic" }
       ],
       "correctas": ["A"],
-      "explicacion": "Si nació TMP por error, se borra y se crea otra vez. No se aparca el problema."
+      "explicacion": "Si nació team-managed por error, se borra y se crea otra vez. En Cloud no hay un clic que lo convierta a company-managed."
     },
     {
       "id": "m03-q15",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Nortech quiere pasar LAB-TMP a company-managed para reutilizarlo como quinto espacio corporativo. En Cloud:",
+      "stem": "Eres administrador de Jira. La PMO quiere pasar un piloto team-managed a company-managed para reutilizarlo como quinto proyecto corporativo. En Jira Cloud, ¿qué es cierto?",
       "opciones": [
         { "id": "A", "texto": "Hay un botón Convertir a empresa sin pérdida" },
         { "id": "B", "texto": "Basta con cambiar la clave a CMP" },
-        { "id": "C", "texto": "No hay conversión de un clic TMP→CMP; se crea un CMP nuevo" },
+        { "id": "C", "texto": "No hay conversión de un clic; se crea un company-managed nuevo" },
         { "id": "D", "texto": "Renombrar Default lo convierte" }
       ],
       "correctas": ["C"],
-      "explicacion": "No existe el atajo mágico. LAB-TMP es demostración; los corporativos se crean ya como empresa."
+      "explicacion": "No existe el atajo mágico de team-managed a company-managed. Los corporativos se crean ya como empresa; el piloto no se recicla con un clic."
     },
     {
       "id": "m03-q16",
       "dominio": "project-creation",
       "tipo": "multi",
-      "stem": "Señala las parejas correctas de los espacios corporativos de Nortech:",
+      "stem": "Eres administrador de Jira. Debes crear los cuatro proyectos corporativos de Nortech con la plantilla y el tipo adecuados. ¿Qué parejas son correctas?",
       "opciones": [
         { "id": "A", "texto": "DEV — Scrum, gestionado por la empresa" },
         { "id": "B", "texto": "SUP — Kanban, gestionado por la empresa" },
-        { "id": "C", "texto": "Sample Scrum — es el espacio DEV del curso" },
+        { "id": "C", "texto": "Sample Scrum — es el proyecto DEV de Nortech" },
         { "id": "D", "texto": "OPS y PMO — negocio, gestionado por la empresa" }
       ],
       "correctas": ["A", "B", "D"],
-      "explicacion": "Claves DEV, SUP, OPS, PMO. Sample Scrum aparece en la lista, pero no es ninguno de esos cuatro."
+      "explicacion": "Las claves corporativas son DEV, SUP, OPS y PMO. Sample Scrum puede aparecer en la lista, pero no es ninguno de esos cuatro."
     },
     {
       "id": "m03-q17",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "El nombre Nortech Development y la clave DEV:",
+      "stem": "Eres administrador de Jira. Acabas de crear Nortech Development con clave DEV. ¿Qué relación hay entre el nombre y la clave?",
       "opciones": [
-        { "id": "A", "texto": "Son intercambiables" },
-        { "id": "B", "texto": "El nombre se puede retocar; la clave es el prefijo estable de los elementos de trabajo (DEV-12)" },
+        { "id": "A", "texto": "Nombre y clave son intercambiables" },
+        { "id": "B", "texto": "El nombre se puede retocar; la clave es el prefijo estable de las incidencias" },
         { "id": "C", "texto": "El nombre no se puede cambiar nunca" },
-        { "id": "D", "texto": "La clave solo existe en TMP" }
+        { "id": "D", "texto": "La clave solo existe en team-managed" }
       ],
       "correctas": ["B"],
-      "explicacion": "La clave es identidad (prefijo). El nombre es etiqueta. Elige DEV / SUP / OPS / PMO el día 1."
+      "explicacion": "La clave es identidad: el prefijo de los elementos. El nombre es etiqueta y se puede ajustar. Elige DEV, SUP, OPS y PMO el primer día."
     },
     {
       "id": "m03-q18",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Diferencia de configuración entre CMP y TMP al crear el espacio:",
+      "stem": "Eres administrador de Jira. Debes explicar a la PMO por qué los proyectos corporativos serán company-managed y no team-managed. ¿Cuál es la diferencia de configuración?",
       "opciones": [
-        { "id": "A", "texto": "CMP comparte esquemas a nivel site; TMP guarda la configuración local al espacio" },
-        { "id": "B", "texto": "TMP comparte esquemas; CMP es siempre local" },
+        { "id": "A", "texto": "Company-managed comparte esquemas; team-managed es local" },
+        { "id": "B", "texto": "Team-managed comparte esquemas; company-managed es local" },
         { "id": "C", "texto": "No hay diferencia: solo cambia el nombre" },
-        { "id": "D", "texto": "CMP no tiene clave" }
+        { "id": "D", "texto": "Company-managed no usa clave de proyecto" }
       ],
       "correctas": ["A"],
-      "explicacion": "Esa es la palanca de gobierno. Nortech elige CMP para los cuatro espacios corporativos."
+      "explicacion": "Esa es la palanca de gobierno. Nortech elige company-managed para los cuatro proyectos corporativos precisamente para poder compartir esquemas."
     },
     {
       "id": "m03-q19",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Un piloto de Calidad quiere empezar hoy, sin administrador de Jira hasta el trimestre que viene. ACP-620 aceptaría:",
+      "stem": "Eres administrador de un piloto de Calidad. Quieren empezar hoy y no habrá administrador de Jira hasta el trimestre que viene. ¿Qué opción es aceptable?",
       "opciones": [
-        { "id": "A", "texto": "Obligar CMP y esperar" },
-        { "id": "B", "texto": "Un único espacio para toda la empresa" },
+        { "id": "A", "texto": "Obligar un company-managed y esperar" },
+        { "id": "B", "texto": "Un único proyecto para toda la empresa" },
         { "id": "C", "texto": "Migrar a Data Center" },
-        { "id": "D", "texto": "Un espacio team-managed, sabiendo que luego no hay conversión de un clic a CMP" }
+        { "id": "D", "texto": "Un proyecto team-managed, sabiendo que no hay conversión de un clic" }
       ],
       "correctas": ["D"],
-      "explicacion": "Sin gobierno central, TMP desbloquea. El coste es la migración. En Nortech el estándar del curso sigue siendo CMP."
+      "explicacion": "Sin gobierno central, team-managed desbloquea. El coste es la migración posterior. El estándar corporativo de Nortech sigue siendo company-managed."
     },
     {
       "id": "m03-q20",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Las claves que debes reservar el día 1 para Nortech son:",
+      "stem": "Eres administrador de Jira. Vas a crear los cuatro proyectos corporativos de Nortech el primer día. ¿Qué claves debes reservar?",
       "opciones": [
-        { "id": "A", "texto": "SCRUM, KANBAN, BIZ, TMP" },
+        { "id": "A", "texto": "SCRUM, KANBAN, BIZ y TMP" },
         { "id": "B", "texto": "DEV, SUP, OPS y PMO" },
         { "id": "C", "texto": "Las que asigne Sample Scrum" },
-        { "id": "D", "texto": "Un UUID por espacio" }
+        { "id": "D", "texto": "Un UUID por proyecto" }
       ],
       "correctas": ["B"],
-      "explicacion": "Nortech Development, Support, Operations y PMO. Esas cuatro claves son el mapa del curso."
+      "explicacion": "Nortech Development, Support, Operations y PMO. Esas cuatro claves son el mapa de los proyectos corporativos."
     },
     {
       "id": "m03-q21",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "La plantilla Scrum al crear DEV:",
+      "stem": "Eres administrador de Jira. Al crear DEV eliges la plantilla Scrum y el tipo company-managed. ¿Qué hace la plantilla Scrum?",
       "opciones": [
         { "id": "A", "texto": "Fija el proceso para siempre" },
         { "id": "B", "texto": "Impide usar versiones" },
-        { "id": "C", "texto": "Rellena tipos de trabajo y un tablero inicial; más adelante el CMP podrá compartir esquemas" },
+        { "id": "C", "texto": "Rellena tipos de trabajo y un tablero inicial" },
         { "id": "D", "texto": "Crea un espacio Confluence obligatorio" }
       ],
       "correctas": ["C"],
-      "explicacion": "La plantilla es un arranque. Elegir CMP deja la puerta abierta a esquemas compartidos; no hay que montarlos al crear el espacio."
+      "explicacion": "La plantilla es un arranque. Elegir company-managed deja la puerta abierta a esquemas compartidos; no hay que montarlos al crear el proyecto."
     },
     {
       "id": "m03-q22",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Para abrir el asistente de los cuatro espacios Nortech usas:",
+      "stem": "Eres administrador de Jira. Necesitas abrir el asistente para crear los proyectos de Nortech. En la barra hay Crear espacio y también Proyectos en el pie. ¿Qué usas?",
       "opciones": [
-        { "id": "A", "texto": "Crear espacio (o Más espacios → crear), no el enlace Proyectos del pie" },
-        { "id": "B", "texto": "Solo admin.atlassian.com → billing" },
-        { "id": "C", "texto": "El pie Proyectos, que es el mismo asistente" },
+        { "id": "A", "texto": "Crear espacio o Más espacios" },
+        { "id": "B", "texto": "Solo admin.atlassian.com → facturación" },
+        { "id": "C", "texto": "El enlace Proyectos del pie, que es el mismo asistente" },
         { "id": "D", "texto": "La factura del site" }
       ],
       "correctas": ["A"],
-      "explicacion": "Crear espacio / Más espacios es Jira. El pie Proyectos es otro producto."
+      "explicacion": "Crear espacio o Más espacios es Jira. El pie Proyectos es otro producto de Atlassian."
     },
     {
       "id": "m03-q23",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Creas LAB-TMP (clave TMP) para ver Funciones de gestionado por el equipo. Después:",
+      "stem": "Eres administrador de Jira. Has creado un piloto team-managed para ver las funciones de gestionado por el equipo. ¿Qué haces con ese proyecto respecto a los corporativos?",
       "opciones": [
-        { "id": "A", "texto": "Lo usas como quinto espacio corporativo junto a DEV" },
+        { "id": "A", "texto": "Lo usas como quinto proyecto corporativo junto a DEV" },
         { "id": "B", "texto": "Le pones la clave DEV" },
-        { "id": "C", "texto": "Es obligatorio para PMO" },
-        { "id": "D", "texto": "Es solo demostración: TMP no comparte esquemas de site y no sustituye a los cuatro CMP" }
+        { "id": "C", "texto": "Lo dejas como proyecto obligatorio de la PMO" },
+        { "id": "D", "texto": "Lo dejas como demostración; no sustituye a los company-managed" }
       ],
       "correctas": ["D"],
-      "explicacion": "LAB-TMP enseña acceso Abierto/Limitado/Privado y tipos locales. El trabajo corporativo va sobre DEV, SUP, OPS y PMO."
+      "explicacion": "El piloto enseña acceso Abierto, Limitado o Privado y tipos locales. El trabajo corporativo va sobre DEV, SUP, OPS y PMO."
     },
     {
       "id": "m03-q24",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Tras crear los cuatro CMP, en Más espacios sigue apareciendo Sample Scrum. Eso significa:",
+      "stem": "Eres administrador de Jira. Tras crear DEV, SUP, OPS y PMO, en Más espacios sigue apareciendo Sample Scrum. ¿Qué significa?",
       "opciones": [
         { "id": "A", "texto": "Debes borrar DEV, SUP, OPS y PMO" },
-        { "id": "B", "texto": "El sample no es tu espacio corporativo; no lo trates como DEV" },
+        { "id": "B", "texto": "El sample no es tu proyecto corporativo" },
         { "id": "C", "texto": "Las claves se pueden repetir" },
         { "id": "D", "texto": "Sample Scrum ya es Nortech Development" }
       ],
       "correctas": ["B"],
-      "explicacion": "La lista mezcla samples y labs. Los cuatro espacios Nortech son otros objetos, con sus propias claves."
+      "explicacion": "La lista mezcla samples y proyectos reales. Los cuatro de Nortech son otros objetos, con sus propias claves."
     },
     {
       "id": "m03-q25",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "En Configuración del espacio → Detalles de DEV no debería aparecer, si pretendías CMP:",
+      "stem": "Eres administrador de Jira. Pretendías un company-managed y abres Configuración del proyecto → Detalles de DEV. ¿Qué no debería aparecer?",
       "opciones": [
         { "id": "A", "texto": "La clave DEV" },
         { "id": "B", "texto": "El nombre Nortech Development" },
         { "id": "C", "texto": "La etiqueta gestionado por el equipo" },
-        { "id": "D", "texto": "El responsable del espacio (project lead)" }
+        { "id": "D", "texto": "El responsable del proyecto" }
       ],
       "correctas": ["C"],
-      "explicacion": "Esa frase confirma un TMP. Se borra y se recrea como empresa."
+      "explicacion": "Esa etiqueta confirma un team-managed. Se borra y se recrea como empresa; no se convierte con un clic."
     },
     {
       "id": "m03-q26",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Creas la categoría Nortech y asignas DEV, SUP, OPS y PMO. Sirve para:",
+      "stem": "Eres administrador de Jira. Creas la categoría Nortech y asignas DEV, SUP, OPS y PMO. ¿Para qué sirve?",
       "opciones": [
-        { "id": "A", "texto": "Agrupar en Más espacios (y en gadgets); no concede permisos ni sustituye a los grupos" },
-        { "id": "B", "texto": "Sustituir a los grupos de Directory" },
+        { "id": "A", "texto": "Agrupar proyectos en listas; no concede permisos" },
+        { "id": "B", "texto": "Sustituir a los grupos del Directorio" },
         { "id": "C", "texto": "Definir los tipos de elemento de trabajo" },
-        { "id": "D", "texto": "Convertir TMP en CMP" }
+        { "id": "D", "texto": "Convertir team-managed en company-managed" }
       ],
       "correctas": ["A"],
-      "explicacion": "Categoría ≠ grupo. Es organización de lista, no modelo de seguridad."
+      "explicacion": "La categoría organiza Más espacios y algunos gadgets. No es un grupo ni un modelo de seguridad."
     },
     {
       "id": "m03-q27",
       "dominio": "project-creation",
       "tipo": "multi",
-      "stem": "Señala qué justifica crear DEV, SUP, OPS y PMO como company-managed:",
+      "stem": "Eres administrador de Jira. La PMO pide crear DEV, SUP, OPS y PMO como company-managed. ¿Qué justifica esa decisión?",
       "opciones": [
-        { "id": "A", "texto": "Van a poder compartir configuración (esquemas) más adelante" },
+        { "id": "A", "texto": "Podrán compartir configuración más adelante" },
         { "id": "B", "texto": "Cada equipo quiere su proceso local sin pasar por un admin" },
         { "id": "C", "texto": "Quieres componentes y versiones clásicos" },
         { "id": "D", "texto": "La PMO exige gobierno centralizado" }
       ],
       "correctas": ["A", "C", "D"],
-      "explicacion": "B es el caso TMP. CMP es gobierno, funciones clásicas y la puerta a esquemas compartidos. No hace falta saber cómo se copia un esquema."
+      "explicacion": "B es el caso team-managed. Company-managed es gobierno, funciones clásicas y la puerta a esquemas compartidos. No hace falta saber aún cómo se copia un esquema."
     },
     {
       "id": "m03-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En DEV, el componente web tiene lead = tú y Default assignee = Component lead. Un Bug con web y asignatario vacío:",
+      "stem": "Eres administrador del proyecto DEV. El componente web tiene lead igual a ti y Default assignee igual a Component lead. Creas un Bug con componente web y asignatario vacío. ¿Qué ocurre?",
       "opciones": [
         { "id": "A", "texto": "Se asigna a todos los Developers" },
         { "id": "B", "texto": "Queda sin asignar siempre" },
-        { "id": "C", "texto": "Va al org admin" },
-        { "id": "D", "texto": "Queda asignado al lead de web (tú), sin automation" }
+        { "id": "C", "texto": "Va al administrador de la organización" },
+        { "id": "D", "texto": "Queda asignado al lead de web" }
       ],
       "correctas": ["D"],
-      "explicacion": "Component lead + default assignee es el truco nativo. No hace falta una regla de automation."
+      "explicacion": "Component lead más default assignee es el mecanismo nativo. No hace falta una regla de automation."
     },
     {
       "id": "m03-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El componente data tiene Default assignee = Project default. Un Bug con data y asignatario vacío:",
+      "stem": "Eres administrador del proyecto DEV. El componente data tiene Default assignee igual a Project default. Creas un Bug con data y asignatario vacío. ¿A quién se asigna?",
       "opciones": [
-        { "id": "A", "texto": "Usa el asignatario por defecto del espacio (project lead o Unassigned), no el lead del componente" },
-        { "id": "B", "texto": "Va siempre al component lead" },
-        { "id": "C", "texto": "Se asigna a todos los Developers" },
-        { "id": "D", "texto": "Bloquea la creación" }
+        { "id": "A", "texto": "Al asignatario por defecto del proyecto" },
+        { "id": "B", "texto": "Siempre al lead del componente" },
+        { "id": "C", "texto": "A todos los Developers" },
+        { "id": "D", "texto": "Nadie: la creación se bloquea" }
       ],
       "correctas": ["A"],
-      "explicacion": "Project default ≠ Component lead. En el lab, data se deja a propósito en Project default."
+      "explicacion": "Project default no es Component lead. El elemento usa el asignatario por defecto del proyecto, a menudo el project lead o Unassigned."
     },
     {
       "id": "m03-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Pones el label urgente en un elemento de DEV. ¿Sustituye al componente api?",
+      "stem": "Eres administrador del proyecto DEV. Un compañero pone la etiqueta urgente en un elemento y pregunta si eso sustituye al componente api. ¿Qué respondes?",
       "opciones": [
-        { "id": "A", "texto": "Sí: el label asigna al lead de api" },
+        { "id": "A", "texto": "Sí: la etiqueta asigna al lead de api" },
         { "id": "B", "texto": "Sí: sustituye a la versión de corrección" },
-        { "id": "C", "texto": "No: el label no tiene lead ni default assignee; filtra, no gobierna ownership" },
-        { "id": "D", "texto": "Sí: cambia quién administra el espacio" }
+        { "id": "C", "texto": "No: la etiqueta no tiene lead ni asignatario por defecto" },
+        { "id": "D", "texto": "Sí: cambia quién administra el proyecto" }
       ],
       "correctas": ["C"],
-      "explicacion": "Labels son ad hoc, sin gobernanza fuerte. Componentes tienen dueño. No los mezcles en el diseño."
+      "explicacion": "Las etiquetas son ad hoc y no gobiernan ownership. Los componentes tienen dueño. No los mezcles en el diseño."
     },
     {
       "id": "m03-q31",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Nortech necesita un dato de negocio que debe informarse (por ejemplo «Línea de producto»), no solo un dueño técnico. El mecanismo de la familia correcta es:",
+      "stem": "Eres administrador de Jira. Nortech necesita un dato de negocio que debe informarse, por ejemplo Línea de producto, no solo un dueño técnico. ¿Qué mecanismo usas?",
       "opciones": [
-        { "id": "A", "texto": "Solo un label" },
-        { "id": "B", "texto": "Un custom field (existe como categoría; el detalle de pantallas se deja para después)" },
+        { "id": "A", "texto": "Solo una etiqueta" },
+        { "id": "B", "texto": "Un campo personalizado" },
         { "id": "C", "texto": "Solo una versión" },
-        { "id": "D", "texto": "Un TMP por línea" }
+        { "id": "D", "texto": "Un team-managed por línea de producto" }
       ],
       "correctas": ["B"],
-      "explicacion": "Componentes = dueño. Labels = ad hoc. Versiones = release. Custom fields = dato gobernado. No hace falta configurar pantallas aquí."
+      "explicacion": "Componentes = dueño. Etiquetas = ad hoc. Versiones = release. Un campo personalizado = dato gobernado. No hace falta configurar pantallas para elegir la familia."
     },
     {
       "id": "m03-q32",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "¿Dónde se crean los componentes api, web y data de DEV?",
+      "stem": "Eres administrador del proyecto DEV, company-managed. Necesitas crear los componentes api, web y data. ¿Dónde los creas?",
       "opciones": [
-        { "id": "A", "texto": "Configuración del espacio → Componentes (espacio CMP)" },
+        { "id": "A", "texto": "Configuración del proyecto → Componentes" },
         { "id": "B", "texto": "admin.atlassian.com → Directory" },
-        { "id": "C", "texto": "El pie Proyectos de la barra" },
+        { "id": "C", "texto": "El enlace Proyectos del pie" },
         { "id": "D", "texto": "La categoría Nortech" }
       ],
       "correctas": ["A"],
-      "explicacion": "Componentes son del espacio CMP, no de la organización."
+      "explicacion": "Los componentes son del proyecto company-managed, no de la organización ni de otro producto de Atlassian."
     },
     {
       "id": "m03-q33",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En LAB-TMP no encuentras el menú Componentes como en DEV. Porque:",
+      "stem": "Eres administrador de un proyecto team-managed. Buscas el menú Componentes como en DEV y no lo encuentras. ¿Por qué?",
       "opciones": [
         { "id": "A", "texto": "Falta el plan Premium" },
         { "id": "B", "texto": "El site está en español" },
-        { "id": "C", "texto": "Los componentes clásicos son de CMP; en TMP usas campos" },
+        { "id": "C", "texto": "Los componentes clásicos son de company-managed" },
         { "id": "D", "texto": "Hay que instalar una app" }
       ],
       "correctas": ["C"],
-      "explicacion": "Por eso DEV es company-managed: component lead y default assignee son de CMP."
+      "explicacion": "Por eso DEV es company-managed: component lead y default assignee son de ese tipo. En team-managed se usan campos locales."
     },
     {
       "id": "m03-q34",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En DEV creas las versiones 1.0.0 (inicio hoy) y 1.1.0 (sin empezar). ¿Para qué?",
+      "stem": "Eres administrador del proyecto DEV. Creas las versiones 1.0.0 con inicio hoy y 1.1.0 sin empezar. ¿Para qué sirven?",
       "opciones": [
         { "id": "A", "texto": "Sustituir a los componentes" },
-        { "id": "B", "texto": "Definir releases: qué entra en cada entrega (Fix Version/s alimenta el hub)" },
-        { "id": "C", "texto": "Crear claves de espacio" },
-        { "id": "D", "texto": "Convertir DEV a TMP" }
+        { "id": "B", "texto": "Definir el alcance de cada entrega" },
+        { "id": "C", "texto": "Crear claves de proyecto" },
+        { "id": "D", "texto": "Convertir DEV a team-managed" }
       ],
       "correctas": ["B"],
-      "explicacion": "Versiones = alcance de release. 1.0.0 se puede marcar Unreleased / In progress; 1.1.0 espera."
+      "explicacion": "Las versiones definen el alcance de un release. Fix Version/s alimenta el hub. 1.0.0 puede estar Unreleased o In progress; 1.1.0 espera."
     },
     {
       "id": "m03-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Pones Fix Version/s = 1.0.0 en un Bug de DEV. Significa:",
+      "stem": "Eres administrador del proyecto DEV. En un Bug pones Fix Version/s igual a 1.0.0. ¿Qué significa?",
       "opciones": [
         { "id": "A", "texto": "El sprint activo" },
-        { "id": "B", "texto": "Un label corporativo" },
+        { "id": "B", "texto": "Una etiqueta corporativa" },
         { "id": "C", "texto": "El componente api" },
-        { "id": "D", "texto": "La versión de corrección / release que incluirá el cambio" }
+        { "id": "D", "texto": "La versión de corrección que incluirá el cambio" }
       ],
       "correctas": ["D"],
-      "explicacion": "Fix Version alimenta el release hub. Meter o sacar el elemento cambia el alcance."
+      "explicacion": "Fix Version alimenta el hub de release. Meter o sacar el elemento cambia el alcance de esa versión."
     },
     {
       "id": "m03-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El hub de la versión 1.0.0 muestra sobre todo:",
+      "stem": "Eres administrador del proyecto DEV. Abres el hub de la versión 1.0.0 para preparar el release. ¿Qué muestra sobre todo?",
       "opciones": [
-        { "id": "A", "texto": "El alcance: elementos asociados a esa versión y su progreso" },
-        { "id": "B", "texto": "Los grupos de Directory" },
-        { "id": "C", "texto": "El tipo del espacio (CMP/TMP)" },
+        { "id": "A", "texto": "El alcance: elementos asociados y su progreso" },
+        { "id": "B", "texto": "Los grupos del Directorio" },
+        { "id": "C", "texto": "El tipo del proyecto" },
         { "id": "D", "texto": "La categoría Nortech" }
       ],
       "correctas": ["A"],
-      "explicacion": "Release hub = scope. Es donde ves el impacto de añadir o quitar trabajo."
+      "explicacion": "El hub de release es el alcance. Ahí ves el impacto de añadir o quitar trabajo."
     },
     {
       "id": "m03-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Mueves un elemento de 1.0.0 a 1.1.0 el día del release. Impacto:",
+      "stem": "Eres administrador del proyecto DEV. El día del release mueves un elemento de 1.0.0 a 1.1.0. ¿Cuál es el impacto?",
       "opciones": [
         { "id": "A", "texto": "Los informes no cambian" },
         { "id": "B", "texto": "Se borra el componente api" },
-        { "id": "C", "texto": "Cambio de alcance: 1.0.0 pierde ese trabajo y 1.1.0 lo gana" },
-        { "id": "D", "texto": "Cambia la clave del espacio" }
+        { "id": "C", "texto": "1.0.0 pierde ese trabajo y 1.1.0 lo gana" },
+        { "id": "D", "texto": "Cambia la clave del proyecto" }
       ],
       "correctas": ["C"],
-      "explicacion": "Mover entre versiones es el mismo tipo de scope change que sacar el elemento antes del release."
+      "explicacion": "Mover entre versiones es el mismo tipo de cambio de alcance que sacar el elemento antes de publicar."
     },
     {
       "id": "m03-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En Personas de DEV pones el grupo nortech-dev en el rol Developers. ¿Por qué?",
+      "stem": "Eres administrador del proyecto DEV. En Personas pones el grupo nortech-dev en el rol Developers. ¿Por qué lo haces?",
       "opciones": [
         { "id": "A", "texto": "Los grupos no pueden estar en roles" },
-        { "id": "B", "texto": "Sin rol, el esquema de permisos por defecto puede dejarte solo a ti con acceso" },
+        { "id": "B", "texto": "Sin rol, el esquema por defecto puede dejarte solo a ti con acceso" },
         { "id": "C", "texto": "Es obligatorio para la plantilla Scrum" },
         { "id": "D", "texto": "Así se evitan los componentes" }
       ],
       "correctas": ["B"],
-      "explicacion": "Personas engancha el grupo al rol del espacio. Lo haces al crear DEV; no hace falta editar un pack de esquemas."
+      "explicacion": "Personas engancha el grupo al rol del proyecto. Lo haces al crear DEV; no hace falta editar un paquete de esquemas para dar acceso básico."
     },
     {
       "id": "m03-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un compañero abre Jira pero no ve DEV. En Personas no hay nadie en Developers ni Users. Lo más probable:",
+      "stem": "Eres administrador del proyecto DEV. Un compañero abre Jira pero no ve DEV. En Personas no hay nadie en Developers ni Users. ¿Qué es lo más probable?",
       "opciones": [
         { "id": "A", "texto": "Falta la categoría Nortech" },
         { "id": "B", "texto": "Solo puede ver versiones" },
-        { "id": "C", "texto": "Es org admin automático" },
-        { "id": "D", "texto": "No está en un rol del espacio: el permiso de ver el espacio no le aplica" }
+        { "id": "C", "texto": "Es administrador de organización automático" },
+        { "id": "D", "texto": "No está en un rol del proyecto" }
       ],
       "correctas": ["D"],
-      "explicacion": "Ya entra a Jira. Falta Personas. El lab lo avisa: sin rol, el default te deja solo a ti."
+      "explicacion": "Ya entra a Jira. Falta Personas. Sin rol, el esquema por defecto suele dejarte solo a ti con Browse."
     },
     {
       "id": "m03-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El project admin de DEV (CMP), sin ser administrador de Jira, puede:",
+      "stem": "Eres administrador del proyecto DEV, company-managed, y no eres administrador de Jira. ¿Qué puedes hacer?",
       "opciones": [
-        { "id": "A", "texto": "Gestionar componentes, versiones y Personas del espacio" },
-        { "id": "B", "texto": "Crear espacios company-managed en todo el site" },
-        { "id": "C", "texto": "Cambiar el product access de la organización" },
-        { "id": "D", "texto": "Convertir DEV a TMP desde Detalles" }
+        { "id": "A", "texto": "Gestionar componentes, versiones y Personas del proyecto" },
+        { "id": "B", "texto": "Crear proyectos company-managed en todo el site" },
+        { "id": "C", "texto": "Cambiar el acceso al producto de la organización" },
+        { "id": "D", "texto": "Convertir DEV a team-managed desde Detalles" }
       ],
       "correctas": ["A"],
-      "explicacion": "ACP-620 cubre lo que el project admin sí toca en el espacio: People, components, versions y detalles."
+      "explicacion": "El administrador de proyecto toca People, componentes, versiones y detalles. Crear company-managed o el acceso al producto son de administrador de Jira o de la organización."
     },
     {
       "id": "m03-q41",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "No ves Versiones / Lanzamientos en la barra de DEV. Revisas primero:",
+      "stem": "Eres administrador del proyecto DEV. No ves Versiones ni Lanzamientos en la barra. ¿Qué revisas primero?",
       "opciones": [
         { "id": "A", "texto": "El plan Free" },
         { "id": "B", "texto": "Marketplace" },
-        { "id": "C", "texto": "Configuración del espacio → Detalles / Funciones (releases activas)" },
+        { "id": "C", "texto": "Detalles o Funciones del proyecto, releases activas" },
         { "id": "D", "texto": "La categoría Nortech" }
       ],
       "correctas": ["C"],
-      "explicacion": "La barra oculta funciones. En un TMP ni siquiera hay versiones clásicas."
+      "explicacion": "La barra oculta funciones. En Detalles o Funciones se activan los releases. En un team-managed ni siquiera hay versiones clásicas."
     },
     {
       "id": "m03-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Comparas label urgente, componente api y versión 1.0.0. El dueño técnico lo da:",
+      "stem": "Eres administrador del proyecto DEV. Comparas la etiqueta urgente, el componente api y la versión 1.0.0. ¿Cuál da el dueño técnico?",
       "opciones": [
-        { "id": "A", "texto": "El label urgente" },
-        { "id": "B", "texto": "El componente api (lead + default assignee)" },
+        { "id": "A", "texto": "La etiqueta urgente" },
+        { "id": "B", "texto": "El componente api" },
         { "id": "C", "texto": "La versión 1.0.0" },
         { "id": "D", "texto": "La categoría Nortech" }
       ],
       "correctas": ["B"],
-      "explicacion": "Ownership = componente. Versión = release. Label = etiqueta suelta. Categoría = lista de espacios."
+      "explicacion": "Ownership = componente, con lead y default assignee. Versión = release. Etiqueta = marca suelta. Categoría = lista de proyectos."
     },
     {
       "id": "m03-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "La descripción del componente api sirve para:",
+      "stem": "Eres administrador del proyecto DEV. Escribes una descripción en el componente api. ¿Para qué sirve?",
       "opciones": [
         { "id": "A", "texto": "Asignar el trabajo automáticamente" },
-        { "id": "B", "texto": "Ser un permiso del espacio" },
+        { "id": "B", "texto": "Ser un permiso del proyecto" },
         { "id": "C", "texto": "Activar sprints" },
-        { "id": "D", "texto": "Documentar el alcance del componente; no sustituye al lead ni al default assignee" }
+        { "id": "D", "texto": "Documentar el alcance del componente" }
       ],
       "correctas": ["D"],
-      "explicacion": "Texto de ayuda. La asignación la decide Default assignee + lead."
+      "explicacion": "Es texto de ayuda. La asignación la decide Default assignee más el lead, no la descripción."
     },
     {
       "id": "m03-q44",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "¿Qué mecanismos de M03 sirven para subcategorizar elementos de trabajo?",
+      "stem": "Eres administrador del proyecto DEV. Quieres subcategorizar el trabajo sin mezclar mecanismos. ¿Cuáles sirven para clasificar elementos de trabajo?",
       "opciones": [
-        { "id": "A", "texto": "Componentes (dueño técnico)" },
-        { "id": "B", "texto": "Labels (etiquetas ad hoc)" },
-        { "id": "C", "texto": "Versiones (qué entra en un release)" },
-        { "id": "D", "texto": "El enlace Proyectos del pie de la barra" }
+        { "id": "A", "texto": "Componentes" },
+        { "id": "B", "texto": "Etiquetas" },
+        { "id": "C", "texto": "Versiones" },
+        { "id": "D", "texto": "El enlace Proyectos del pie" }
       ],
       "correctas": ["A", "B", "C"],
-      "explicacion": "Los custom fields existen como cuarta categoría (dato de negocio), pero no se configuran en este módulo. Proyectos del pie no clasifica trabajo."
+      "explicacion": "Componentes dan dueño técnico, etiquetas son ad hoc y versiones marcan el release. Un campo personalizado sería dato de negocio; no hace falta configurarlo aquí. El pie Proyectos no clasifica trabajo."
     },
     {
       "id": "m03-q45",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Creas un Bug en DEV, componente api, asignatario vacío. Default assignee de api = Component lead. Resultado esperado:",
+      "stem": "Eres administrador del proyecto DEV. Creas un Bug con componente api y asignatario vacío. Default assignee de api es Component lead. ¿Qué resultado esperas?",
       "opciones": [
         { "id": "A", "texto": "El Bug queda asignado al lead de api" },
-        { "id": "B", "texto": "El Bug se asigna al label urgente" },
+        { "id": "B", "texto": "El Bug se asigna a la etiqueta urgente" },
         { "id": "C", "texto": "Se crea una regla de automation sola" },
-        { "id": "D", "texto": "El Bug cambia de espacio a SUP" }
+        { "id": "D", "texto": "El Bug cambia de proyecto a SUP" }
       ],
       "correctas": ["A"],
-      "explicacion": "Es la prueba del lab: componente + lead + Component lead, sin automation."
+      "explicacion": "Componente más lead más Component lead asigna sin automation. Es la prueba de que el mecanismo nativo funciona."
     },
     {
       "id": "m03-q46",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Marcar 1.0.0 como Released:",
+      "stem": "Eres administrador del proyecto DEV. Marcas la versión 1.0.0 como Released. ¿Qué ocurre?",
       "opciones": [
-        { "id": "A", "texto": "Borra los elementos de esa versión" },
-        { "id": "B", "texto": "Cambia la clave del espacio a REL" },
-        { "id": "C", "texto": "Cierra el release (fecha de publicación); los elementos no se eliminan" },
-        { "id": "D", "texto": "Convierte DEV a TMP" }
+        { "id": "A", "texto": "Se borran los elementos de esa versión" },
+        { "id": "B", "texto": "Cambia la clave del proyecto a REL" },
+        { "id": "C", "texto": "Se cierra el release; los elementos no se eliminan" },
+        { "id": "D", "texto": "DEV se convierte en team-managed" }
       ],
       "correctas": ["C"],
-      "explicacion": "Released ≠ borrar. El histórico y Fix Version se conservan. Quitar un elemento antes sí cambia el alcance."
+      "explicacion": "Released cierra la publicación y pone fecha. El histórico y Fix Version se conservan. Quitar un elemento antes sí cambia el alcance."
     },
     {
       "id": "m03-q47",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Un project admin de DEV company-managed suele poder:",
+      "stem": "Eres administrador del proyecto DEV, company-managed, y no eres administrador de Jira. ¿Qué sueles poder hacer?",
       "opciones": [
         { "id": "A", "texto": "Añadir el grupo nortech-dev al rol Developers" },
         { "id": "B", "texto": "Crear el componente mobile" },
         { "id": "C", "texto": "Publicar la versión 1.0.0" },
-        { "id": "D", "texto": "Crear por su cuenta un espacio CMP para RRHH" }
+        { "id": "D", "texto": "Crear por tu cuenta un company-managed para RRHH" }
       ],
       "correctas": ["A", "B", "C"],
-      "explicacion": "People, components y releases son del espacio. Crear CMP exige administrador de Jira o el permiso Create projects."
+      "explicacion": "People, componentes y releases son del proyecto. Crear un company-managed exige administrador de Jira o el permiso Create projects."
     },
     {
       "id": "m03-q48",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "1.0.0 está Unreleased / In progress y 1.1.0 aún no ha empezado. Si sacas un Bug de 1.0.0:",
+      "stem": "Eres administrador del proyecto DEV. La versión 1.0.0 está Unreleased o In progress y 1.1.0 aún no ha empezado. Sacas un Bug de 1.0.0. ¿Qué ocurre?",
       "opciones": [
-        { "id": "A", "texto": "No pasa nada en el hub" },
-        { "id": "B", "texto": "Cambias el alcance de 1.0.0: el hub y lo que se entrega ya no incluyen ese trabajo" },
+        { "id": "A", "texto": "No pasa nada en el hub de la versión" },
+        { "id": "B", "texto": "Cambias el alcance de 1.0.0" },
         { "id": "C", "texto": "Se borra el componente web" },
         { "id": "D", "texto": "DEV pierde la clave" }
       ],
       "correctas": ["B"],
-      "explicacion": "Scope change. El estado Unreleased / In progress no congela el alcance: meter o sacar sigue contando."
+      "explicacion": "El estado Unreleased o In progress no congela el alcance. Meter o sacar trabajo sigue contando en el hub y en lo que se entrega."
     },
     {
       "id": "m03-q49",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Cambiar la clave de DEV a NDEV es posible, pero:",
+      "stem": "Eres administrador de Jira. Marketing pide cambiar la clave de DEV a NDEV. Es posible, pero ¿qué debes advertir?",
       "opciones": [
-        { "id": "A", "texto": "Duele: el prefijo de los elementos (DEV-12) y los enlaces que lo citan dejan de cuadrar" },
+        { "id": "A", "texto": "El prefijo de las incidencias y los enlaces dejarán de cuadrar" },
         { "id": "B", "texto": "No tiene ningún coste" },
-        { "id": "C", "texto": "Solo se puede en TMP" },
+        { "id": "C", "texto": "Solo se puede en team-managed" },
         { "id": "D", "texto": "Obliga a borrar las versiones" }
       ],
       "correctas": ["A"],
-      "explicacion": "La clave es el prefijo. Por eso se elige DEV / SUP / OPS / PMO el día 1 y no se renombra a la ligera."
+      "explicacion": "La clave es el prefijo. Por eso se elige DEV, SUP, OPS y PMO el primer día y no se renombra a la ligera."
     },
     {
       "id": "m03-q50",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Asignas la categoría Nortech a los cuatro espacios. Un compañero sin rol en DEV:",
+      "stem": "Eres administrador de Jira. Asignas la categoría Nortech a los cuatro proyectos. Un compañero no tiene rol en DEV. ¿Qué ocurre?",
       "opciones": [
-        { "id": "A", "texto": "Ya ve DEV porque la categoría da Browse" },
-        { "id": "B", "texto": "Pasa a ser Jira admin" },
+        { "id": "A", "texto": "Ya ve DEV: la categoría concede Browse" },
+        { "id": "B", "texto": "Pasa a ser administrador de Jira" },
         { "id": "C", "texto": "Recibe el componente api" },
-        { "id": "D", "texto": "Sigue sin acceso: la categoría agrupa la lista, no sustituye a Personas ni a los grupos" }
+        { "id": "D", "texto": "Sigue sin acceso: la categoría no sustituye a Personas" }
       ],
       "correctas": ["D"],
-      "explicacion": "Categoría ≠ grupo ≠ rol. Personas es lo que abre el espacio."
+      "explicacion": "Categoría no es grupo ni rol. Personas es lo que abre el proyecto. La categoría solo agrupa la lista."
     }
   ]
 }
