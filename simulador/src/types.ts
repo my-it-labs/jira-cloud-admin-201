@@ -56,4 +56,5 @@ export type Intento = {
   preguntas: PreguntaExamen[];
   respuestas: Record<string, string[]>;
   marcadas: string[];
+  entregadoAt?: number;
 };

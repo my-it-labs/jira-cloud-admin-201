@@ -1,10 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { acierta, cargarBancos, montarIntento, puntuar } from './engine';
+import { borrarEstado, escribirEstado, leerEstado } from './storage';
+import type { Vista } from './storage';
 import type { ConfigExamen, DominioId, Intento, Pregunta } from './types';
-
-type Vista = 'inicio' | 'examen' | 'resultados';
-
-const STORAGE = 'acp620-intento';
 
 function fmt(segundos: number): string {
   const s = Math.max(0, segundos);
@@ -27,41 +25,51 @@ export function App() {
   const [intento, setIntento] = useState<Intento | null>(null);
   const [idx, setIdx] = useState(0);
   const [restante, setRestante] = useState(0);
-  const [confirmando, setConfirmando] = useState(false);
+  const [confirmando, setConfirmando] = useState<'entregar' | 'borrar' | null>(null);
+
+  const persistir = useCallback((next: { vista?: Vista; idx?: number; intento?: Intento | null }) => {
+    const vistaNext = next.vista ?? vista;
+    const idxNext = next.idx ?? idx;
+    const intentoNext = next.intento === undefined ? intento : next.intento;
+    if (next.vista !== undefined) setVista(next.vista);
+    if (next.idx !== undefined) setIdx(next.idx);
+    if (next.intento !== undefined) setIntento(next.intento);
+    escribirEstado({ version: 1, vista: vistaNext, idx: idxNext, intento: intentoNext });
+  }, [vista, idx, intento]);
 
   useEffect(() => {
     cargarBancos()
       .then(({ config: c, preguntas }) => {
         setConfig(c);
         setPool(preguntas);
-        try {
-          const raw = sessionStorage.getItem(STORAGE);
-          if (raw) {
-            const saved = JSON.parse(raw) as Intento;
-            if (saved?.preguntas?.length) {
-              setIntento(saved);
-              const elapsed = Math.floor((Date.now() - saved.iniciado) / 1000);
-              setRestante(Math.max(0, saved.minutos * 60 - elapsed));
-              setVista('examen');
-            }
-          }
-        } catch {
-          sessionStorage.removeItem(STORAGE);
+        const saved = leerEstado();
+        if (!saved?.intento?.preguntas.length) return;
+        const elapsed = Math.floor((Date.now() - saved.intento.iniciado) / 1000);
+        const left = saved.intento.minutos * 60 - elapsed;
+        setIntento(saved.intento);
+        setIdx(Math.min(Math.max(0, saved.idx), saved.intento.preguntas.length - 1));
+        if (!saved.intento.entregadoAt && left <= 0) {
+          const cerrado = { ...saved.intento, entregadoAt: Date.now() };
+          setIntento(cerrado);
+          setRestante(0);
+          setVista('resultados');
+          escribirEstado({ version: 1, vista: 'resultados', idx: saved.idx, intento: cerrado });
+          return;
         }
+        setRestante(Math.max(0, left));
+        setVista(saved.vista);
       })
       .catch((e: unknown) => setError(e instanceof Error ? e.message : 'No se pudo cargar el banco'));
   }, []);
 
-  const guardar = useCallback((next: Intento) => {
-    setIntento(next);
-    sessionStorage.setItem(STORAGE, JSON.stringify(next));
-  }, []);
-
   const terminar = useCallback(() => {
-    sessionStorage.removeItem(STORAGE);
-    setConfirmando(false);
-    setVista('resultados');
-  }, []);
+    if (!intento) return;
+    setConfirmando(null);
+    persistir({
+      vista: 'resultados',
+      intento: { ...intento, entregadoAt: intento.entregadoAt ?? Date.now() },
+    });
+  }, [persistir, intento]);
 
   useEffect(() => {
     if (vista !== 'examen' || !intento) return;
@@ -79,41 +87,54 @@ export function App() {
 
   const start = (modo: Intento['modo'], modulo?: string) => {
     if (!config) return;
+    if (intento && !intento.entregadoAt) {
+      const ok = window.confirm('Hay un examen a medias en este navegador. ¿Empezar otro y borrar el actual?');
+      if (!ok) return;
+    }
     const created = montarIntento(pool, config, modo, modulo);
-    setIdx(0);
     setRestante(created.minutos * 60);
-    guardar(created);
-    setVista('examen');
+    persistir({ vista: 'examen', idx: 0, intento: created });
+  };
+
+  const irA = (i: number) => persistir({ idx: i });
+
+  const borrarTodo = () => {
+    borrarEstado();
+    setIntento(null);
+    setIdx(0);
+    setRestante(0);
+    setConfirmando(null);
+    setVista('inicio');
   };
 
   const pregunta = intento?.preguntas[idx];
   const puntuacion = useMemo(() => (intento && vista === 'resultados' ? puntuar(intento) : null), [intento, vista]);
+  const modulos = useMemo(() => [...new Set(pool.map((p) => p.modulo).filter(Boolean))] as string[], [pool]);
 
   const responder = (opcionId: string) => {
     if (!intento || !pregunta) return;
     const prev = intento.respuestas[pregunta.id] ?? [];
-    let nextSel: string[];
-    if (pregunta.tipo === 'multi') {
-      nextSel = prev.includes(opcionId) ? prev.filter((x) => x !== opcionId) : [...prev, opcionId];
-    } else {
-      nextSel = [opcionId];
-    }
-    guardar({
-      ...intento,
-      respuestas: { ...intento.respuestas, [pregunta.id]: nextSel },
+    const nextSel =
+      pregunta.tipo === 'multi'
+        ? prev.includes(opcionId)
+          ? prev.filter((x) => x !== opcionId)
+          : [...prev, opcionId]
+        : [opcionId];
+    persistir({
+      intento: { ...intento, respuestas: { ...intento.respuestas, [pregunta.id]: nextSel } },
     });
   };
 
   const marcar = () => {
     if (!intento || !pregunta) return;
     const tiene = intento.marcadas.includes(pregunta.id);
-    guardar({
-      ...intento,
-      marcadas: tiene ? intento.marcadas.filter((id) => id !== pregunta.id) : [...intento.marcadas, pregunta.id],
+    persistir({
+      intento: {
+        ...intento,
+        marcadas: tiene ? intento.marcadas.filter((id) => id !== pregunta.id) : [...intento.marcadas, pregunta.id],
+      },
     });
   };
-
-  const modulos = useMemo(() => [...new Set(pool.map((p) => p.modulo).filter(Boolean))] as string[], [pool]);
 
   if (error) {
     return (
@@ -136,9 +157,16 @@ export function App() {
         config={config}
         pool={pool}
         modulos={modulos}
+        intento={intento}
         onOficial={() => start('oficial')}
         onRapido={() => start('rapido')}
         onModulo={(m) => start('modulo', m)}
+        onContinuar={() => persistir({ vista: 'examen' })}
+        onVerResultado={() => persistir({ vista: 'resultados' })}
+        onBorrar={() => setConfirmando('borrar')}
+        confirmando={confirmando === 'borrar'}
+        onCancelarBorrar={() => setConfirmando(null)}
+        onConfirmarBorrar={borrarTodo}
       />
     );
   }
@@ -153,13 +181,21 @@ export function App() {
         <header className="barra">
           <div>
             <strong>{config.codigo}</strong>
-            <span className="muted"> · intento {intento.id}</span>
+            <span className="muted-barra"> · intento {intento.id}</span>
           </div>
           <div className={`reloj ${urgente ? 'urgente' : ''}`} aria-live="polite">
             {fmt(restante)}
           </div>
-          <div className="muted">
-            {contestadas}/{intento.preguntas.length} contestadas
+          <div className="barra-acciones">
+            <span className="muted-barra">
+              {contestadas}/{intento.preguntas.length} contestadas
+            </span>
+            <button type="button" className="ghost-barra" onClick={() => persistir({ vista: 'inicio' })}>
+              Salir (queda guardado)
+            </button>
+            <button type="button" className="ghost-barra" onClick={() => setConfirmando('borrar')}>
+              Borrar progreso
+            </button>
           </div>
         </header>
         <div className="cuerpo">
@@ -172,7 +208,7 @@ export function App() {
                   key={p.id}
                   type="button"
                   className={`chip ${i === idx ? 'activa' : ''} ${done ? 'hecha' : ''} ${flagged ? 'marcada' : ''}`}
-                  onClick={() => setIdx(i)}
+                  onClick={() => irA(i)}
                 >
                   {i + 1}
                 </button>
@@ -207,23 +243,19 @@ export function App() {
               })}
             </ul>
             <footer className="acciones">
-              <button type="button" disabled={idx === 0} onClick={() => setIdx((i) => i - 1)}>
+              <button type="button" disabled={idx === 0} onClick={() => irA(idx - 1)}>
                 Anterior
               </button>
-              <button
-                type="button"
-                disabled={idx === intento.preguntas.length - 1}
-                onClick={() => setIdx((i) => i + 1)}
-              >
+              <button type="button" disabled={idx === intento.preguntas.length - 1} onClick={() => irA(idx + 1)}>
                 Siguiente
               </button>
-              <button type="button" className="peligro" onClick={() => setConfirmando(true)}>
+              <button type="button" className="peligro" onClick={() => setConfirmando('entregar')}>
                 Entregar examen
               </button>
             </footer>
           </section>
         </div>
-        {confirmando && (
+        {confirmando === 'entregar' && (
           <div className="modal" role="dialog" aria-modal="true">
             <div className="tarjeta">
               <h2>¿Entregar ahora?</h2>
@@ -232,7 +264,7 @@ export function App() {
                 {contestadas < intento.preguntas.length ? ' Las en blanco cuentan como incorrectas.' : ''}
               </p>
               <div className="acciones">
-                <button type="button" onClick={() => setConfirmando(false)}>
+                <button type="button" onClick={() => setConfirmando(null)}>
                   Seguir
                 </button>
                 <button type="button" className="peligro" onClick={terminar}>
@@ -241,6 +273,9 @@ export function App() {
               </div>
             </div>
           </div>
+        )}
+        {confirmando === 'borrar' && (
+          <ConfirmBorrar onCancel={() => setConfirmando(null)} onOk={borrarTodo} />
         )}
       </div>
     );
@@ -251,7 +286,7 @@ export function App() {
     return (
       <main className="resultados">
         <header>
-          <p className="muted">Intento {intento.id}</p>
+          <p className="muted">Intento {intento.id} · guardado en este navegador</p>
           <h1>{pasa ? 'Apto (simulacro)' : 'No apto (simulacro)'}</h1>
           <p className="score">
             {puntuacion.ok} / {puntuacion.total} · {pct(puntuacion.ratio)} · corte {pct(config.corte)}
@@ -310,19 +345,19 @@ export function App() {
           </ol>
         </section>
         <footer className="acciones">
-          <button
-            type="button"
-            onClick={() => {
-              setIntento(null);
-              setVista('inicio');
-            }}
-          >
+          <button type="button" onClick={() => persistir({ vista: 'inicio' })}>
             Volver al inicio
           </button>
           <button type="button" className="primario" onClick={() => start(intento.modo, intento.filtroModulo)}>
             Nuevo intento (otro sorteo)
           </button>
+          <button type="button" className="peligro" onClick={() => setConfirmando('borrar')}>
+            Borrar progreso
+          </button>
         </footer>
+        {confirmando === 'borrar' && (
+          <ConfirmBorrar onCancel={() => setConfirmando(null)} onOk={borrarTodo} />
+        )}
       </main>
     );
   }
@@ -330,28 +365,84 @@ export function App() {
   return null;
 }
 
+function ConfirmBorrar({ onCancel, onOk }: { onCancel: () => void; onOk: () => void }) {
+  return (
+    <div className="modal" role="dialog" aria-modal="true">
+      <div className="tarjeta">
+        <h2>¿Borrar el progreso de este navegador?</h2>
+        <p>Se elimina el intento, las respuestas y el último resultado guardados en localStorage. No se puede deshacer.</p>
+        <div className="acciones">
+          <button type="button" onClick={onCancel}>
+            Cancelar
+          </button>
+          <button type="button" className="peligro" onClick={onOk}>
+            Borrar todo
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Inicio({
   config,
   pool,
   modulos,
+  intento,
   onOficial,
   onRapido,
   onModulo,
+  onContinuar,
+  onVerResultado,
+  onBorrar,
+  confirmando,
+  onCancelarBorrar,
+  onConfirmarBorrar,
 }: {
   config: ConfigExamen;
   pool: Pregunta[];
   modulos: string[];
+  intento: Intento | null;
   onOficial: () => void;
   onRapido: () => void;
   onModulo: (m: string) => void;
+  onContinuar: () => void;
+  onVerResultado: () => void;
+  onBorrar: () => void;
+  confirmando: boolean;
+  onCancelarBorrar: () => void;
+  onConfirmarBorrar: () => void;
 }) {
   const [modulo, setModulo] = useState(modulos[0] ?? 'M01');
   const corto = pool.length < config.preguntasObjetivo;
+  const aMedias = Boolean(intento);
   return (
     <main className="inicio">
       <p className="kicker">{config.codigo}</p>
       <h1>{config.titulo}</h1>
       <p className="lead">{config.subtitulo}</p>
+      {aMedias && (
+        <div className="aviso">
+          <p>
+            Hay progreso guardado en <strong>este navegador</strong> (intento {intento!.id}). Recargar o cerrar la pestaña no
+            lo borra.
+          </p>
+          <div className="acciones">
+            {!intento!.entregadoAt ? (
+              <button type="button" className="primario" onClick={onContinuar}>
+                Continuar examen
+              </button>
+            ) : (
+              <button type="button" className="primario" onClick={onVerResultado}>
+                Ver último resultado
+              </button>
+            )}
+            <button type="button" className="peligro" onClick={onBorrar}>
+              Borrar progreso
+            </button>
+          </div>
+        </div>
+      )}
       <dl className="ficha">
         <div>
           <dt>Formato oficial (aprox.)</dt>
@@ -393,6 +484,10 @@ function Inicio({
           Empezar
         </button>
       </div>
+      <p className="hint">
+        El estado (pregunta actual, respuestas, marcas y resultado) se guarda en localStorage de este navegador, no en un
+        servidor. Un botón de <em>Borrar progreso</em> lo deja a cero.
+      </p>
       <ul className="pesos">
         {(Object.keys(config.dominios) as DominioId[]).map((d) => (
           <li key={d}>
@@ -400,6 +495,7 @@ function Inicio({
           </li>
         ))}
       </ul>
+      {confirmando && <ConfirmBorrar onCancel={onCancelarBorrar} onOk={onConfirmarBorrar} />}
     </main>
   );
 }

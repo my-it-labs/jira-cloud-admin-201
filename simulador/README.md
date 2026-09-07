@@ -4,6 +4,8 @@ App React (Vite) de autoevaluación. Carga preguntas desde JSON en `public/data/
 
 No es el examen oficial ni un dump. Las preguntas son originales del curso.
 
+El progreso de cada alumno se guarda en **localStorage de su navegador** (pregunta actual, respuestas, marcas, temporizador y último resultado). No hay servidor ni cuenta: otro dispositivo o un borrado de datos del sitio lo pierde. En la app hay **Borrar progreso** para dejarlo a cero.
+
 ## Local
 
 ```bash

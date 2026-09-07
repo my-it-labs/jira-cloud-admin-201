@@ -151,6 +151,24 @@ button:disabled {
   color: #ffbdad;
 }
 
+.muted-barra {
+  color: #b3bac5;
+}
+
+.barra-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.ghost-barra {
+  background: transparent;
+  color: #fff;
+  border-color: #8993a4;
+}
+
 .cuerpo {
   display: grid;
   grid-template-columns: 11rem 1fr;
