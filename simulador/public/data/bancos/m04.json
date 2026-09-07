@@ -43,6 +43,664 @@
       ],
       "correctas": ["B"],
       "explicacion": "Layout = qué campos y cuándo. En TMP es la issue layout del propio proyecto."
+    },
+    {
+      "id": "m04-q4",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Acabas de crear OPS como company-managed. Los schemes que recibe de inicio son:",
+      "opciones": [
+        { "id": "A", "texto": "Los NORTECH-* automáticamente" },
+        { "id": "B", "texto": "Los Default (o los de la plantilla); hay que asociar NORTECH a propósito" },
+        { "id": "C", "texto": "Ninguno: un CMP no tiene schemes" },
+        { "id": "D", "texto": "Solo el tablero Scrum" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Crear el espacio no aplica la plantilla corporativa. M04 es copiar, nombrar y asociar."
+    },
+    {
+      "id": "m04-q5",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "RRHH pide un espacio nuevo que debe nacer alineado con DEV y SUP. El día 1:",
+      "opciones": [
+        { "id": "A", "texto": "Crear TMP y luego pegarle schemes" },
+        { "id": "B", "texto": "Crear CMP y asociar NORTECH Issue Types, Permissions y Notifications" },
+        { "id": "C", "texto": "Editar Default y dejarlo sin nombre" },
+        { "id": "D", "texto": "Solo un dashboard compartido" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Espacio nuevo + plantilla NORTECH. TMP no asocia schemes de site."
+    },
+    {
+      "id": "m04-q6",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Creas un espacio CMP «con configuración compartida» a partir de DEV. El nuevo espacio:",
+      "opciones": [
+        { "id": "A", "texto": "Copia todos los elementos de trabajo de DEV" },
+        { "id": "B", "texto": "Apunta a los mismos schemes que DEV" },
+        { "id": "C", "texto": "Nace como TMP" },
+        { "id": "D", "texto": "Clona el site" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Shared configuration reutiliza paquetes. No clona el backlog."
+    },
+    {
+      "id": "m04-q7",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Calidad quiere un espacio. Si lo creas team-managed:",
+      "opciones": [
+        { "id": "A", "texto": "Podrá usar NORTECH Permissions" },
+        { "id": "B", "texto": "No podrá asociar schemes de site; la plantilla corporativa no aplica" },
+        { "id": "C", "texto": "Compartirá workflow con DEV" },
+        { "id": "D", "texto": "Tendrá componentes clásicos" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Schemes = CMP. Un TMP de Calidad queda fuera de NORTECH-*."
+    },
+    {
+      "id": "m04-q8",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "PMO se crea CMP pero se deja en Default a propósito. Sirve para:",
+      "opciones": [
+        { "id": "A", "texto": "Romper el site" },
+        { "id": "B", "texto": "Ver un espacio fuera de plantilla y compararlo con DEV/SUP" },
+        { "id": "C", "texto": "Convertirlo a TMP" },
+        { "id": "D", "texto": "Evitar Personas" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El reto de M04 deja PMO en Default para contrastar. OPS sí se engancha a NORTECH Permissions."
+    },
+    {
+      "id": "m04-q9",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "El espacio CAL debe compartir permisos con DEV pero no los tipos. Lo limpio:",
+      "opciones": [
+        { "id": "A", "texto": "Un único scheme para todo" },
+        { "id": "B", "texto": "Asociar NORTECH Permissions y un issue type scheme propio (copia)" },
+        { "id": "C", "texto": "Editar Default Issue Types" },
+        { "id": "D", "texto": "Usar labels en lugar de tipos" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los schemes se combinan. Permisos compartidos + tipos excepcionales = copia solo del issue type scheme."
+    },
+    {
+      "id": "m04-q10",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "La plantilla Scrum al crear DEV, respecto a los schemes:",
+      "opciones": [
+        { "id": "A", "texto": "Impide cambiar de scheme después" },
+        { "id": "B", "texto": "Deja schemes iniciales (a menudo Default); M04 los sustituye por NORTECH-*" },
+        { "id": "C", "texto": "Crea automation global" },
+        { "id": "D", "texto": "Solo aplica si el espacio es TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "La plantilla arranca. La plantilla corporativa se monta copiando y asociando."
+    },
+    {
+      "id": "m04-q11",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "¿Por qué DEV y SUP se crean company-managed antes de montar NORTECH-*?",
+      "opciones": [
+        { "id": "A", "texto": "Los schemes de site solo se asocian a espacios CMP" },
+        { "id": "B", "texto": "TMP comparte schemes mejor" },
+        { "id": "C", "texto": "El plan Free lo exige" },
+        { "id": "D", "texto": "Las categorías lo exigen" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Sin CMP no hay plantilla reutilizable. Por eso M03 precede a M04."
+    },
+    {
+      "id": "m04-q12",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Ya existe la plantilla NORTECH y nace un quinto espacio. El día 1 haces:",
+      "opciones": [
+        { "id": "A", "texto": "Crear CMP y asociar NORTECH-*; no editar Default" },
+        { "id": "B", "texto": "Crear TMP y copiar schemes" },
+        { "id": "C", "texto": "Editar Default para que el nuevo nazca bien" },
+        { "id": "D", "texto": "Crear el espacio sin clave" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Escalar = asociar la plantilla. Tocar Default contamina el resto del site."
+    },
+    {
+      "id": "m04-q13",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Editas el scheme Default de permisos «para ir más rápido»:",
+      "opciones": [
+        { "id": "A", "texto": "Solo afecta al espacio desde el que abriste" },
+        { "id": "B", "texto": "Afecta a todos los espacios (y futuros) que aún usan Default" },
+        { "id": "C", "texto": "No tiene efecto hasta reiniciar Jira" },
+        { "id": "D", "texto": "Solo cambia los TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Default es compartido y es la cuna de espacios nuevos. Siempre se copia a NORTECH-*."
+    },
+    {
+      "id": "m04-q14",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Convención de nombres de la plantilla corporativa de Nortech:",
+      "opciones": [
+        { "id": "A", "texto": "Default (1), Default (2)" },
+        { "id": "B", "texto": "Prefijo NORTECH-* (NORTECH Permissions, NORTECH Issue Types, …)" },
+        { "id": "C", "texto": "Un UUID por scheme" },
+        { "id": "D", "texto": "El nombre del tablero" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Nombrar es gobierno. En el resumen del espacio debes ver NORTECH de un vistazo."
+    },
+    {
+      "id": "m04-q15",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "En la plantilla corporativa de M04 copias y asocias al menos:",
+      "opciones": [
+        { "id": "A", "texto": "Esquema de tipos (NORTECH Issue Types)" },
+        { "id": "B", "texto": "Esquema de permisos (NORTECH Permissions)" },
+        { "id": "C", "texto": "Esquema de notificaciones (NORTECH Notifications)" },
+        { "id": "D", "texto": "El plan Premium del site" }
+      ],
+      "correctas": ["A", "B", "C"],
+      "explicacion": "Tipos, permisos y notificaciones son el núcleo del lab. El workflow se copia también para no editar Default en M05."
+    },
+    {
+      "id": "m04-q16",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un scheme en company-managed es:",
+      "opciones": [
+        { "id": "A", "texto": "Un tablero" },
+        { "id": "B", "texto": "Un paquete nombrado al que el espacio apunta; al cambiar el paquete cambian todos los apuntadores" },
+        { "id": "C", "texto": "Un grupo de Directory" },
+        { "id": "D", "texto": "Un sprint" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Esa es la palanca de escala: un objeto, muchos espacios."
+    },
+    {
+      "id": "m04-q17",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "NORTECH Issue Types controla:",
+      "opciones": [
+        { "id": "A", "texto": "Quién ve el espacio" },
+        { "id": "B", "texto": "Qué tipos hay (Bug, Story, Task, Sub-task, …)" },
+        { "id": "C", "texto": "El SMTP del site" },
+        { "id": "D", "texto": "Las columnas del Kanban" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Issue type scheme = taxonomía. Permisos y tablero son otros paquetes."
+    },
+    {
+      "id": "m04-q18",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "NORTECH Workflows controla:",
+      "opciones": [
+        { "id": "A", "texto": "Qué workflow usa cada tipo de elemento de trabajo" },
+        { "id": "B", "texto": "Qué campos son required" },
+        { "id": "C", "texto": "El product access" },
+        { "id": "D", "texto": "Las versiones de DEV" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "El workflow scheme mapea tipo → flujo. Required es field configuration (M06)."
+    },
+    {
+      "id": "m04-q19",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Screen scheme frente a issue type screen scheme:",
+      "opciones": [
+        { "id": "A", "texto": "Son el mismo objeto" },
+        { "id": "B", "texto": "El screen scheme mapea Crear/Editar/Ver a pantallas; el issue type screen scheme elige un screen scheme por tipo" },
+        { "id": "C", "texto": "Solo existen en TMP" },
+        { "id": "D", "texto": "Sustituyen al permission scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Dos capas: operación (create/edit/view) y tipo (Bug vs Story). ACP-620 las distingue."
+    },
+    {
+      "id": "m04-q20",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Required, hidden y renderer de un campo se asocian al espacio vía:",
+      "opciones": [
+        { "id": "A", "texto": "Board swimlanes" },
+        { "id": "B", "texto": "Field configuration scheme" },
+        { "id": "C", "texto": "Sprint duration" },
+        { "id": "D", "texto": "Webhooks" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Field configuration = reglas del campo. Field configuration scheme = qué config usa cada tipo."
+    },
+    {
+      "id": "m04-q21",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Al copiar el notification scheme a NORTECH Notifications, el objetivo del lab es:",
+      "opciones": [
+        { "id": "A", "texto": "Avisar a todos los Developers en cada evento" },
+        { "id": "B", "texto": "Dejar Asignatario y Reportero en eventos clave; no inundar el correo" },
+        { "id": "C", "texto": "Desactivar el correo del site" },
+        { "id": "D", "texto": "Notificar solo al org admin" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Default suele ser ruidoso. La plantilla corporativa recorta destinatarios."
+    },
+    {
+      "id": "m04-q22",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Browse Projects en NORTECH Permissions se concede a:",
+      "opciones": [
+        { "id": "A", "texto": "Toda la organización" },
+        { "id": "B", "texto": "Project Role (Administrators, Developers, Users); los grupos entran por Personas" },
+        { "id": "C", "texto": "Solo watchers" },
+        { "id": "D", "texto": "El filtro del tablero" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El scheme habla de roles. Personas engancha nortech-dev / nortech-soporte a esos roles."
+    },
+    {
+      "id": "m04-q23",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Create Issues en la plantilla NORTECH Permissions del lab se da a:",
+      "opciones": [
+        { "id": "A", "texto": "Solo Administrators" },
+        { "id": "B", "texto": "Developers + Users" },
+        { "id": "C", "texto": "Anyone en Internet" },
+        { "id": "D", "texto": "Solo el project lead" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Crear elementos es de quienes trabajan el espacio, no solo del admin."
+    },
+    {
+      "id": "m04-q24",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Assignable User en NORTECH Permissions apunta a:",
+      "opciones": [
+        { "id": "A", "texto": "Developers (quién puede aparecer en el desplegable de asignatario)" },
+        { "id": "B", "texto": "Todos los usuarios del site" },
+        { "id": "C", "texto": "Solo espacios TMP" },
+        { "id": "D", "texto": "Los gadgets del dashboard" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Assignable User ≠ Assign Issues. El primero llena el desplegable; el segundo dice quién asigna."
+    },
+    {
+      "id": "m04-q25",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Antes de modificar un scheme que usan DEV y SUP:",
+      "opciones": [
+        { "id": "A", "texto": "Confirmar en el resumen qué espacios lo apuntan" },
+        { "id": "B", "texto": "Si la excepción es de un solo espacio, copiar el scheme y asociar solo ese" },
+        { "id": "C", "texto": "Editar Default para no tocar NORTECH" },
+        { "id": "D", "texto": "Asumir que el cambio es instantáneo en todos los apuntadores" }
+      ],
+      "correctas": ["A", "B", "D"],
+      "explicacion": "Impacto, copia para excepciones y efecto inmediato. Default no es un sandbox."
+    },
+    {
+      "id": "m04-q26",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Administer Projects en NORTECH Permissions se concede a:",
+      "opciones": [
+        { "id": "A", "texto": "Cualquier usuario con product access" },
+        { "id": "B", "texto": "El rol Administrators (Personas, componentes, versiones…)" },
+        { "id": "C", "texto": "Quien tenga product access a Confluence" },
+        { "id": "D", "texto": "El board admin de otro espacio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Administer Projects es de espacio, no de site. No convierte a nadie en Jira admin."
+    },
+    {
+      "id": "m04-q27",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El grupo nortech-soporte no tiene permiso en SUP aunque NORTECH Permissions es correcto. Suele faltar:",
+      "opciones": [
+        { "id": "A", "texto": "Reescribir el scheme desde cero" },
+        { "id": "B", "texto": "Personas: el grupo en el rol que el scheme menciona" },
+        { "id": "C", "texto": "Editar Default" },
+        { "id": "D", "texto": "Convertir SUP a TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El scheme no «ve» grupos si el modelo es por roles. Personas cierra el circuito."
+    },
+    {
+      "id": "m04-q28",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Dónde ves de un vistazo qué schemes usa DEV?",
+      "opciones": [
+        { "id": "A", "texto": "Directory de la organización" },
+        { "id": "B", "texto": "Configuración del espacio → Esquemas / Resumen" },
+        { "id": "C", "texto": "El sprint report" },
+        { "id": "D", "texto": "admin.atlassian.com → billing" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Es el mapa que miras cuando «en SUP pasó X y en DEV no»."
+    },
+    {
+      "id": "m04-q29",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "No puedes asociar NORTECH Permissions a un espacio. Lo más probable:",
+      "opciones": [
+        { "id": "A", "texto": "Es un bug de Cloud" },
+        { "id": "B", "texto": "No eres Jira admin o el espacio es TMP" },
+        { "id": "C", "texto": "Falta Confluence" },
+        { "id": "D", "texto": "El nombre NORTECH es demasiado largo" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Asociar schemes es de administrador de Jira y solo en CMP."
+    },
+    {
+      "id": "m04-q30",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Cambias la descripción de NORTECH Permissions desde DEV. En SUP:",
+      "opciones": [
+        { "id": "A", "texto": "Ves otro objeto distinto" },
+        { "id": "B", "texto": "Ves el mismo scheme (un solo objeto compartido)" },
+        { "id": "C", "texto": "No cambia nada" },
+        { "id": "D", "texto": "SUP vuelve a Default" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Compartido de verdad = un objeto. La prueba de entendimiento de M04."
+    },
+    {
+      "id": "m04-q31",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Quieres que OPS use también NORTECH Permissions. Acción:",
+      "opciones": [
+        { "id": "A", "texto": "Volver a copiar el scheme" },
+        { "id": "B", "texto": "OPS → Permisos → usar un esquema distinto → NORTECH Permissions" },
+        { "id": "C", "texto": "Crear un TMP" },
+        { "id": "D", "texto": "Editar el issue type scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Asociar no es copiar. Un scheme, tres espacios (DEV, SUP, OPS)."
+    },
+    {
+      "id": "m04-q32",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "PMO sigue en Default de permisos. Un cambio en NORTECH Permissions:",
+      "opciones": [
+        { "id": "A", "texto": "Cambia PMO" },
+        { "id": "B", "texto": "No afecta a PMO; solo a quienes apuntan a NORTECH" },
+        { "id": "C", "texto": "Cambia todos los TMP" },
+        { "id": "D", "texto": "Reinicia el site" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El apuntador decide el impacto. Por eso se deja PMO fuera a propósito."
+    },
+    {
+      "id": "m04-q33",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Quitas Story de NORTECH Issue Types, compartido por DEV y SUP:",
+      "opciones": [
+        { "id": "A", "texto": "Solo afecta al espacio donde clicaste" },
+        { "id": "B", "texto": "Ambos dejan de ofrecer Story; hay que gestionar los elementos ya creados" },
+        { "id": "C", "texto": "Se borra el workflow" },
+        { "id": "D", "texto": "Solo se oculta el tablero" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Mismo scheme = mismo catálogo de tipos. Quitar un tipo en uso es operación delicada."
+    },
+    {
+      "id": "m04-q34",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "OPS necesita el tipo Change y nadie más. Lo limpio:",
+      "opciones": [
+        { "id": "A", "texto": "Añadirlo a NORTECH Issue Types" },
+        { "id": "B", "texto": "Copiar NORTECH Issue Types, añadir Change y asociar solo OPS" },
+        { "id": "C", "texto": "Un label Change" },
+        { "id": "D", "texto": "Editar Default Issue Types" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Excepción = copia + asociación puntual. No ensucies la plantilla ni Default."
+    },
+    {
+      "id": "m04-q35",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Sobre permisos y grupos en los CMP de Nortech, es correcto:",
+      "opciones": [
+        { "id": "A", "texto": "El scheme referencia roles (y a veces grupos)" },
+        { "id": "B", "texto": "El modelo corporativo es grupo → rol → scheme" },
+        { "id": "C", "texto": "Meter a todos en Jira admin sustituye al scheme" },
+        { "id": "D", "texto": "Personas es donde el project admin engancha grupos a roles" }
+      ],
+      "correctas": ["A", "B", "D"],
+      "explicacion": "Jira admin para todos es un agujero, no un atajo. El scheme + roles escala."
+    },
+    {
+      "id": "m04-q36",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En M04 copias el workflow scheme a NORTECH Workflows aunque el flujo siga siendo el default. Para:",
+      "opciones": [
+        { "id": "A", "texto": "Nada: es un paso decorativo" },
+        { "id": "B", "texto": "Que M05 edite esta copia, no el Default" },
+        { "id": "C", "texto": "Activar sprints" },
+        { "id": "D", "texto": "Crear campos globales" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Separar el objeto el día 1 evita el accidente clásico: editar Default cuando diseñas el flujo."
+    },
+    {
+      "id": "m04-q37",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El issue security scheme:",
+      "opciones": [
+        { "id": "A", "texto": "Es lo mismo que el permission scheme" },
+        { "id": "B", "texto": "Define niveles de visibilidad por elemento de trabajo; el curso lo trata en M10" },
+        { "id": "C", "texto": "Es obligatorio en Free" },
+        { "id": "D", "texto": "Solo existe en TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Browse Projects abre el espacio; issue security oculta elementos concretos dentro de él."
+    },
+    {
+      "id": "m04-q38",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un campo está en la pantalla de DEV pero no se ve. Causa típica de scheme/config:",
+      "opciones": [
+        { "id": "A", "texto": "El SMTP" },
+        { "id": "B", "texto": "Field configuration Hidden o un contexto que excluye el espacio" },
+        { "id": "C", "texto": "El sprint activo" },
+        { "id": "D", "texto": "Falta Marketplace" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Pantalla ≠ visible. Hidden en field config o contexto de campo (M06) lo tapa."
+    },
+    {
+      "id": "m04-q39",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Para que un campo sea obligatorio en CMP, ¿basta con ponerlo en la screen?",
+      "opciones": [
+        { "id": "A", "texto": "Sí: la screen lo hace required" },
+        { "id": "B", "texto": "No: required/hidden viven en la field configuration; la screen decide si aparece" },
+        { "id": "C", "texto": "Sí: lo decide el permission scheme" },
+        { "id": "D", "texto": "Sí: lo decide la columna del board" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Screen = presencia. Field configuration = obligatoriedad y visibilidad lógica."
+    },
+    {
+      "id": "m04-q40",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Evento Issue Assigned en NORTECH Notifications. Destinatario típico:",
+      "opciones": [
+        { "id": "A", "texto": "Toda la organización" },
+        { "id": "B", "texto": "Current Assignee (y Reporter/watchers solo si lo configuras)" },
+        { "id": "C", "texto": "Solo el org admin" },
+        { "id": "D", "texto": "El filtro JQL del tablero" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Notificar al nuevo asignatario es el caso de uso. Evita «all developers»."
+    },
+    {
+      "id": "m04-q41",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Dejar All Watchers + all Developers en cada evento del scheme:",
+      "opciones": [
+        { "id": "A", "texto": "Es la plantilla recomendada de Nortech" },
+        { "id": "B", "texto": "Inunda el correo corporativo; por eso se recorta NORTECH Notifications" },
+        { "id": "C", "texto": "Obliga a pasar a Premium" },
+        { "id": "D", "texto": "Sustituye a Browse Projects" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Notification scheme es gobierno de ruido, no de permisos."
+    },
+    {
+      "id": "m04-q42",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "DEV y SUP apuntan al mismo issue type scheme. Añades Sub-task:",
+      "opciones": [
+        { "id": "A", "texto": "Solo DEV lo ve" },
+        { "id": "B", "texto": "Ambos ofrecen Sub-task" },
+        { "id": "C", "texto": "Hay que reiniciar Jira" },
+        { "id": "D", "texto": "Se crean dos TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Un scheme, dos espacios. El efecto es inmediato y simétrico."
+    },
+    {
+      "id": "m04-q43",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Desasocias DEV de NORTECH Permissions y lo vuelves a Default:",
+      "opciones": [
+        { "id": "A", "texto": "DEV sigue con las reglas NORTECH" },
+        { "id": "B", "texto": "DEV pasa a las reglas de Default; SUP no cambia" },
+        { "id": "C", "texto": "Se borra el scheme NORTECH" },
+        { "id": "D", "texto": "Se pierden los elementos de trabajo" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Asociar/desasociar cambia el apuntador, no destruye el paquete ni los datos."
+    },
+    {
+      "id": "m04-q44",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "La lista de permission schemes muestra «usado por 3 proyectos»:",
+      "opciones": [
+        { "id": "A", "texto": "Es un texto decorativo" },
+        { "id": "B", "texto": "Es la señal de impacto: editar ese scheme toca esos 3 espacios" },
+        { "id": "C", "texto": "Son tableros, no espacios" },
+        { "id": "D", "texto": "Son filtros JQL" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Mira el contador antes de editar. Es el mismo criterio que el resumen del espacio."
+    },
+    {
+      "id": "m04-q45",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Prácticas seguras con los schemes Default del site:",
+      "opciones": [
+        { "id": "A", "texto": "No editarlos para «arreglar» un espacio" },
+        { "id": "B", "texto": "Copiar → nombrar NORTECH-* → asociar" },
+        { "id": "C", "texto": "Dejar PMO en Default a propósito como contraste es válido" },
+        { "id": "D", "texto": "Renombrar Default a NORTECH para ahorrar un paso" }
+      ],
+      "correctas": ["A", "B", "C"],
+      "explicacion": "Renombrar Default no lo aísla: sigue siendo el scheme que heredan espacios nuevos y huérfanos."
+    },
+    {
+      "id": "m04-q46",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Pantalla de Crear frente a pantalla de Editar en CMP:",
+      "opciones": [
+        { "id": "A", "texto": "Siempre son la misma y no se pueden separar" },
+        { "id": "B", "texto": "El screen scheme puede usar pantallas distintas en Create y Edit" },
+        { "id": "C", "texto": "Create solo existe en TMP" },
+        { "id": "D", "texto": "Lo decide la duración del sprint" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Create más corto, Edit más completo: patrón clásico de layout en ACP-620."
+    },
+    {
+      "id": "m04-q47",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Bug debe usar el flujo de incidencias y Story el de entrega, en el mismo espacio:",
+      "opciones": [
+        { "id": "A", "texto": "Hace falta un espacio por tipo" },
+        { "id": "B", "texto": "Un workflow scheme con un workflow distinto por tipo" },
+        { "id": "C", "texto": "Dos permission schemes" },
+        { "id": "D", "texto": "Labels distintos" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El workflow scheme existe precisamente para mapear tipo → flujo."
+    },
+    {
+      "id": "m04-q48",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El project admin de DEV quiere un tipo Epic extra solo en DEV. No es Jira admin:",
+      "opciones": [
+        { "id": "A", "texto": "Edita NORTECH Issue Types" },
+        { "id": "B", "texto": "No puede asociar un scheme nuevo: pide a un Jira admin que copie y asocie" },
+        { "id": "C", "texto": "Crea un custom field llamado Epic" },
+        { "id": "D", "texto": "Cambia el espacio a TMP desde Detalles" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Project admin no monta schemes de site. La excepción la ejecuta un Jira admin."
+    },
+    {
+      "id": "m04-q49",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Wiki Style Renderer frente a Default Text Renderer en un campo se configura en:",
+      "opciones": [
+        { "id": "A", "texto": "Permission scheme" },
+        { "id": "B", "texto": "Field configuration" },
+        { "id": "C", "texto": "Notification scheme" },
+        { "id": "D", "texto": "La columna del board" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Renderer es parte de la field configuration, junto a required/hidden."
+    },
+    {
+      "id": "m04-q50",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Tras asociar NORTECH-* a DEV y SUP, «en SUP pasó X y en DEV no». Miras primero:",
+      "opciones": [
+        { "id": "A", "texto": "La facturación del site" },
+        { "id": "B", "texto": "El mapa de schemes de cada espacio: si ya no apuntan al mismo paquete, la plantilla se rompió" },
+        { "id": "C", "texto": "El nombre del site" },
+        { "id": "D", "texto": "Confluence" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Diagnóstico de schemes: comparar apuntadores. Personas y datos vienen después."
     }
   ]
 }

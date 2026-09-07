@@ -85,6 +85,625 @@
       ],
       "correctas": ["B"],
       "explicacion": "Dominios: creación de proyectos, tableros, gestión de proyectos, automation, reporting. SSO y org policies son más de administrador de Cloud (otro examen)."
+    },
+    {
+      "id": "m01-q7",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "PMO de Nortech pide un espacio para el portafolio, sin sprints ni backlog Scrum. ¿Qué familia de plantilla encaja?",
+      "opciones": [
+        { "id": "A", "texto": "Scrum de Jira Software, porque todo espacio corporativo debe ser Scrum" },
+        { "id": "B", "texto": "Jira Service Management, obligatorio para PMO" },
+        { "id": "C", "texto": "Business / Work Management (gestión de proyecto), no una plantilla ágil de desarrollo" },
+        { "id": "D", "texto": "Renombrar el Sample Scrum del trial a PMO" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "OPS y PMO usan plantillas de negocio. Scrum es para DEV. Sample Scrum no es el espacio PMO."
+    },
+    {
+      "id": "m01-q8",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Al crear un espacio, el asistente destaca gestionado por el equipo. Nortech quiere schemes compartidos (M04). ¿Qué eliges?",
+      "opciones": [
+        { "id": "A", "texto": "Gestionado por la empresa (company-managed), aunque no sea el destacado" },
+        { "id": "B", "texto": "Team-managed, porque el asistente lo recomienda siempre" },
+        { "id": "C", "texto": "Dejar solo Sample Scrum y no crear DEV" },
+        { "id": "D", "texto": "Un espacio por cada elemento de trabajo" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "El curso y el gobierno corporativo van en CMP. TMP no comparte schemes entre espacios."
+    },
+    {
+      "id": "m01-q9",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "El trial ha creado un Sample Scrum (clave tipo SCRUM). ¿Cómo obtienes DEV, SUP, OPS y PMO?",
+      "opciones": [
+        { "id": "A", "texto": "Renombras Sample Scrum a Nortech Development y reutilizas la clave SCRUM como DEV" },
+        { "id": "B", "texto": "Creas los cuatro espacios Nortech aparte; Sample Scrum no es DEV/SUP/OPS/PMO" },
+        { "id": "C", "texto": "Divides Sample Scrum en cuatro tableros y das por creados los espacios" },
+        { "id": "D", "texto": "Los conviertes en issue types dentro de Sample Scrum" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El proyecto de muestra de Atlassian no sustituye los espacios corporativos. Se crean en M03."
+    },
+    {
+      "id": "m01-q10",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "En Cloud, ¿quién puede crear un espacio company-managed?",
+      "opciones": [
+        { "id": "A", "texto": "Cualquier usuario con licencia, siempre, sin permiso extra" },
+        { "id": "B", "texto": "Solo el organization admin; el Jira admin no puede" },
+        { "id": "C", "texto": "Quien tenga el permiso global Create projects (típicamente Jira admin) o el equivalente del plan" },
+        { "id": "D", "texto": "Solo desde Confluence, nunca desde Jira" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Crear espacios CMP es permiso de site, no de un espacio concreto. Org admin y project admin no son lo mismo."
+    },
+    {
+      "id": "m01-q11",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Nortech Development (clave DEV) vive en esta jerarquía:",
+      "opciones": [
+        { "id": "A", "texto": "Espacio → Producto → Site → Organización" },
+        { "id": "B", "texto": "Organización → Site → Producto (Jira) → Espacio" },
+        { "id": "C", "texto": "Tablero → Dashboard → Espacio → Site" },
+        { "id": "D", "texto": "Permission scheme → Grupo → Organización" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Cuatro capas. El espacio (project del examen) es la última. El producto Jira cuelga del site."
+    },
+    {
+      "id": "m01-q12",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Soporte de Nortech quiere cola, portal y SLAs. ¿Qué producto o plantilla pides?",
+      "opciones": [
+        { "id": "A", "texto": "Un espacio Scrum de Jira Software, porque SUP es como DEV" },
+        { "id": "B", "texto": "Jira Service Management, si está licenciado en el site" },
+        { "id": "C", "texto": "Un espacio de Confluence con etiquetas" },
+        { "id": "D", "texto": "Advanced Roadmaps en Free" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "SLAs y portal son de JSM. En el curso, SUP de Software usa Kanban; no confundir con JSM."
+    },
+    {
+      "id": "m01-q13",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "DEV y un futuro espacio móvil deben compartir workflow y campos. Recomiendas:",
+      "opciones": [
+        { "id": "A", "texto": "Dos espacios team-managed, cada uno con su proceso local" },
+        { "id": "B", "texto": "Un único tablero sin espacios" },
+        { "id": "C", "texto": "Espacios company-managed con schemes compartidos" },
+        { "id": "D", "texto": "Solo labels en Sample Scrum" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Configuración compartida = CMP. TMP no comparte schemes entre espacios."
+    },
+    {
+      "id": "m01-q14",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Eliges el nombre de site curso-jira-20260903. ¿Qué obtienes?",
+      "opciones": [
+        { "id": "A", "texto": "La clave del espacio DEV" },
+        { "id": "B", "texto": "La URL permanente https://curso-jira-20260903.atlassian.net" },
+        { "id": "C", "texto": "El nombre del grupo nortech-dev" },
+        { "id": "D", "texto": "Solo el display name de la organización, sin URL" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El slug del alta es el site. No es la clave de un espacio ni un grupo del Directorio."
+    },
+    {
+      "id": "m01-q15",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "El asistente ofrece reactivar un site antiguo y puede pedir cobro inmediato. ¿Qué haces en el curso?",
+      "opciones": [
+        { "id": "A", "texto": "Lo reactivas para no inventar otro nombre" },
+        { "id": "B", "texto": "Fusionas el site antiguo con el trial en un solo espacio" },
+        { "id": "C", "texto": "Eliges Empezar un sitio nuevo y un slug libre" },
+        { "id": "D", "texto": "Pasas a Jira Data Center" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Reactivar un site viejo no es el laboratorio. Un site nuevo evita facturación sorpresa."
+    },
+    {
+      "id": "m01-q16",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Operaciones de Nortech (OPS) no hace sprints. ¿Qué plantilla usas al crear el espacio?",
+      "opciones": [
+        { "id": "A", "texto": "Scrum, para reutilizar el Sample Scrum" },
+        { "id": "B", "texto": "Business / Project management (Work Management)" },
+        { "id": "C", "texto": "Portal JSM, aunque no haya licencia" },
+        { "id": "D", "texto": "Ninguna: OPS se modela como componente de DEV" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "OPS y PMO son espacios de negocio. DEV es Scrum; SUP, Kanban de Software."
+    },
+    {
+      "id": "m01-q17",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "¿Qué diferencia hay entre crear un site y crear un espacio?",
+      "opciones": [
+        { "id": "A", "texto": "Ninguna: son sinónimos en la UI de 2026" },
+        { "id": "B", "texto": "El espacio es la URL *.atlassian.net; el site es un tablero" },
+        { "id": "C", "texto": "El site es la URL del tenant; el espacio (project) es el contenedor de elementos de trabajo dentro de Jira" },
+        { "id": "D", "texto": "El site vive dentro de un espacio company-managed" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Site ≠ espacio. Primero existe el site con el producto Jira; luego creas espacios."
+    },
+    {
+      "id": "m01-q18",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Un equipo de 4 en Nortech Labs quiere cambiar tipos de elemento de trabajo esta semana y no hay Jira admin hasta el mes que viene. Recomiendas:",
+      "opciones": [
+        { "id": "A", "texto": "Company-managed igualmente y esperar al admin" },
+        { "id": "B", "texto": "Team-managed, sabiendo el coste si luego migran a CMP" },
+        { "id": "C", "texto": "Jira Data Center on-prem" },
+        { "id": "D", "texto": "Usar Sample Scrum como si fuera DEV" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "ACP-620 pide TMP cuando el gobierno central no está. Hay que conocer el trade-off de migrar."
+    },
+    {
+      "id": "m01-q19",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Creas el espacio Nortech Development con clave DEV. El primer elemento de trabajo será:",
+      "opciones": [
+        { "id": "A", "texto": "NORTECH-1, porque la empresa se llama Nortech" },
+        { "id": "B", "texto": "SCRUM-1, porque el trial ya tiene Sample Scrum" },
+        { "id": "C", "texto": "DEV-1 (o el siguiente número de esa clave)" },
+        { "id": "D", "texto": "Un UUID que asigna el Directorio" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "La clave del espacio es el prefijo. Sample Scrum no genera las claves DEV."
+    },
+    {
+      "id": "m01-q20",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Un compañero propone no crear espacios y modelar DEV, SUP, OPS y PMO como tipos de elemento en Sample Scrum. ¿Es el modelo corporativo?",
+      "opciones": [
+        { "id": "A", "texto": "Sí: un solo espacio basta si hay cuatro issue types" },
+        { "id": "B", "texto": "No: son espacios distintos, con clave, plantilla y schemes propios" },
+        { "id": "C", "texto": "Sí, pero solo en plan Premium" },
+        { "id": "D", "texto": "Sí, si los conviertes en componentes" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Departamentos Nortech = espacios (y grupos). No se recicla el Sample Scrum como contenedor único."
+    },
+    {
+      "id": "m01-q21",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "¿Quién decide que el site tenga Jira Software y no (o además) Jira Service Management?",
+      "opciones": [
+        { "id": "A", "texto": "El project admin en Personas del espacio" },
+        { "id": "B", "texto": "El administrador de la organización/site en Atlassian Administration → Aplicaciones" },
+        { "id": "C", "texto": "El dueño del filtro del tablero" },
+        { "id": "D", "texto": "Cualquier miembro de nortech-pmo" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los productos se licencian en la org/site. Un espacio no instala JSM."
+    },
+    {
+      "id": "m01-q22",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Quieres practicar automation amplia, sandbox y (si aparece) Advanced Roadmaps. ¿Qué plan de alta eliges?",
+      "opciones": [
+        { "id": "A", "texto": "Free: incluye sandbox y roadmaps" },
+        { "id": "B", "texto": "Standard: siempre trae sandbox" },
+        { "id": "C", "texto": "Premium trial (30 días, sin tarjeta); Standard 14 días si Premium falla" },
+        { "id": "D", "texto": "JSM Free, que sustituye a Jira Software" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Premium: más automation, audit avanzado y sandbox. Free recorta M09–M10."
+    },
+    {
+      "id": "m01-q23",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "En la barra izquierda ves Proyectos y también Espacio / Más espacios. Para crear DEV de Nortech:",
+      "opciones": [
+        { "id": "A", "texto": "Abres Proyectos: es la lista de espacios de Jira" },
+        { "id": "B", "texto": "Usas Crear espacio (espacio = project del examen). Proyectos es otro producto de Atlassian" },
+        { "id": "C", "texto": "Proyectos es el único sitio que crea company-managed" },
+        { "id": "D", "texto": "Proyectos abre el permission scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "UI 2026: espacio = project ACP-620. El enlace Proyectos no es esa lista."
+    },
+    {
+      "id": "m01-q24",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Tras el alta, el asistente pide plantilla Scrum e invitaciones. Para este curso:",
+      "opciones": [
+        { "id": "A", "texto": "Debes invitar a toda la empresa o el site no sirve" },
+        { "id": "B", "texto": "Puedes aceptar Scrum si te lo piden y dejar invitaciones para más tarde; DEV/SUP/OPS/PMO se crean después" },
+        { "id": "C", "texto": "Debes crear DEV en el mismo minuto o Atlassian borra el site" },
+        { "id": "D", "texto": "Debes activar SSO antes de entrar a Jira" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El sample no bloquea el laboratorio. Las invitaciones corporativas son M02; los espacios Nortech, M03."
+    },
+    {
+      "id": "m01-q25",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Vas a invitar usuarios y crear grupos nortech-dev. ¿Dónde?",
+      "opciones": [
+        { "id": "A", "texto": "Configuración del Sample Scrum → Personas" },
+        { "id": "B", "texto": "admin.atlassian.com → Directorio" },
+        { "id": "C", "texto": "Configuración del tablero → Filtro" },
+        { "id": "D", "texto": "Notification scheme del espacio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Identidades y grupos son de la organización, no de un espacio."
+    },
+    {
+      "id": "m01-q26",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Dentro de Sample Scrum el engranaje solo muestra la configuración del espacio. ¿Qué haces para llegar a Atlassian Administration?",
+      "opciones": [
+        { "id": "A", "texto": "Sigues en el espacio: es la única consola" },
+        { "id": "B", "texto": "Sales a Para ti / Más espacios y usas el engranaje global (o admin.atlassian.com)" },
+        { "id": "C", "texto": "Abres el filtro del tablero" },
+        { "id": "D", "texto": "Instalas una app de Marketplace" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El engranaje del espacio no es el de la org. Sal del espacio de muestra."
+    },
+    {
+      "id": "m01-q27",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Pulsas Aplicaciones en la barra izquierda de Jira y ves un catálogo. ¿Es el plan Premium del site?",
+      "opciones": [
+        { "id": "A", "texto": "Sí: ahí está Facturación de la org" },
+        { "id": "B", "texto": "No: eso son apps del producto. El plan Jira/Premium está en Administration → Aplicaciones de Atlassian" },
+        { "id": "C", "texto": "Sí, si el espacio es company-managed" },
+        { "id": "D", "texto": "No existe otra pantalla de aplicaciones" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Dos Aplicaciones distintas. El trial y la URL del site no se gestionan en el marketplace del producto."
+    },
+    {
+      "id": "m01-q28",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Qué puede hacer el organization admin que no puede el administrador de un espacio?",
+      "opciones": [
+        { "id": "A", "texto": "Invitar personas a la organización y gestionar Directorio / facturación / SSO" },
+        { "id": "B", "texto": "Solo editar columnas del tablero DEV" },
+        { "id": "C", "texto": "Solo crear componentes en PMO" },
+        { "id": "D", "texto": "Nada: son el mismo rol con otro nombre" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Org admin ≠ project admin. ACP-620 se centra en el segundo; el curso cubre ambos."
+    },
+    {
+      "id": "m01-q29",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Jira admin (permiso global) frente a project admin en un CMP de Nortech:",
+      "opciones": [
+        { "id": "A", "texto": "Son idénticos: ambos editan schemes compartidos" },
+        { "id": "B", "texto": "El project admin siempre cambia el workflow compartido" },
+        { "id": "C", "texto": "Jira admin gestiona schemes, campos y workflows de site; el project admin se limita a su espacio" },
+        { "id": "D", "texto": "Jira admin no puede abrir Configuración de sistema" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "En CMP el proceso compartido es territorio del administrador de Jira."
+    },
+    {
+      "id": "m01-q30",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Marta está en el Directorio pero no tiene acceso a la aplicación Jira. ¿Qué ve?",
+      "opciones": [
+        { "id": "A", "texto": "Todos los espacios, en solo lectura" },
+        { "id": "B", "texto": "No abre el producto Jira" },
+        { "id": "C", "texto": "Es project admin de DEV por defecto" },
+        { "id": "D", "texto": "Solo pierde los dashboards, el resto funciona" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Primera puerta: product access. Sin ella no hay Browse ni roles que valgan."
+    },
+    {
+      "id": "m01-q31",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Nortech tiene nortech.atlassian.net y nortech-sandbox.atlassian.net. El grupo nortech-dev:",
+      "opciones": [
+        { "id": "A", "texto": "Se crea dos veces, uno por site, y no se reutiliza" },
+        { "id": "B", "texto": "Es de la org; el acceso a Jira se concede por producto/site" },
+        { "id": "C", "texto": "Solo existe dentro del espacio DEV" },
+        { "id": "D", "texto": "Sustituye al permission scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Grupo en Directorio (org). Product access es la siguiente palanca, por site/producto."
+    },
+    {
+      "id": "m01-q32",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Dónde viven workflows globales, campos y schemes de un CMP?",
+      "opciones": [
+        { "id": "A", "texto": "Personas del espacio Sample Scrum" },
+        { "id": "B", "texto": "Jira → Configuración → Sistema / Elementos de trabajo (Issues)" },
+        { "id": "C", "texto": "Directorio → Grupos" },
+        { "id": "D", "texto": "El filtro del tablero" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Consola de administrador de Jira (site), distinta de Administration de la org."
+    },
+    {
+      "id": "m01-q33",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En la UI en castellano de 2026, lo que ACP-620 llama issue aparece como:",
+      "opciones": [
+        { "id": "A", "texto": "Proyecto (barra izquierda)" },
+        { "id": "B", "texto": "Espacio" },
+        { "id": "C", "texto": "Elemento de trabajo (work item)" },
+        { "id": "D", "texto": "Organización" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Issue = elemento de trabajo. Espacio = project. Proyectos (sidebar) es otro producto."
+    },
+    {
+      "id": "m01-q34",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En la UI en castellano, el project de ACP-620 es:",
+      "opciones": [
+        { "id": "A", "texto": "El enlace Proyectos de la barra, que lista todos los CMP" },
+        { "id": "B", "texto": "El espacio de Jira" },
+        { "id": "C", "texto": "La organización en admin.atlassian.com" },
+        { "id": "D", "texto": "El site *.atlassian.net" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Espacio = project. No confundir con el producto Atlassian Projects."
+    },
+    {
+      "id": "m01-q35",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Quieres ver el registro de auditoría de Jira (site), no el de la org. ¿Dónde?",
+      "opciones": [
+        { "id": "A", "texto": "Menú del tablero → Informes" },
+        { "id": "B", "texto": "Jira → Configuración → Sistema → Registro de auditoría" },
+        { "id": "C", "texto": "Lead del componente api" },
+        { "id": "D", "texto": "Sprint report de Sample Scrum" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Hay dos auditorías: org (Administration → Seguridad) y Jira (Sistema). Premium enseña más."
+    },
+    {
+      "id": "m01-q36",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En Directorio no eres administrador de la organización del trial. ¿Qué implica?",
+      "opciones": [
+        { "id": "A", "texto": "Puedes crear grupos igual" },
+        { "id": "B", "texto": "No verás Grupos / no invitarás: quizá no es la cuenta del alta" },
+        { "id": "C", "texto": "Pasas a project admin de todos los espacios" },
+        { "id": "D", "texto": "Free se convierte solo en Premium" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El laboratorio exige la cuenta que creó el site. Revisa perfil o SSO."
+    },
+    {
+      "id": "m01-q37",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En Facturación ves Añadir datos de pago o Reactivar. En el trial del curso:",
+      "opciones": [
+        { "id": "A", "texto": "Añades la tarjeta para no perder el site" },
+        { "id": "B", "texto": "Te quedas en la vista previa / Aplicaciones de Atlassian; no reactives un plan de pago" },
+        { "id": "C", "texto": "Borras la organización" },
+        { "id": "D", "texto": "Cambias a Server" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El trial Premium no pide tarjeta. Reactivar un site viejo sí puede cobrar."
+    },
+    {
+      "id": "m01-q38",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Orden correcto para que un desarrollador de Nortech trabaje en DEV:",
+      "opciones": [
+        { "id": "A", "texto": "Rol de espacio primero; luego invitar a la org" },
+        { "id": "B", "texto": "Invitar a la org → acceso al producto Jira → grupos → roles de espacio + permission scheme" },
+        { "id": "C", "texto": "Permission scheme, luego crear el site" },
+        { "id": "D", "texto": "Columnas del tablero y después el Directorio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Cuatro palancas en ese orden. El scheme no actúa si no hay producto ni usuario."
+    },
+    {
+      "id": "m01-q39",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El plan ofrece Trusted / user access admin. ¿Para qué sirve?",
+      "opciones": [
+        { "id": "A", "texto": "Sustituye a Browse Projects en todos los espacios" },
+        { "id": "B", "texto": "Editar workflows globales" },
+        { "id": "C", "texto": "Invitar usuarios sin ser organization admin completo" },
+        { "id": "D", "texto": "Es lo mismo que project admin" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Delegación de altas. No da gobierno de schemes ni de un espacio."
+    },
+    {
+      "id": "m01-q40",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Desde Para ti (sin entrar a un espacio) quieres Campos personalizados globales. ¿Ruta?",
+      "opciones": [
+        { "id": "A", "texto": "Configuración del Sample Scrum → Fields" },
+        { "id": "B", "texto": "Configuración (engranaje global) → Elementos de trabajo / Incidencias → Campos personalizados" },
+        { "id": "C", "texto": "Directorio → Usuarios" },
+        { "id": "D", "texto": "Automation → Plantillas" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Campos CMP son de site. Si solo ves settings del espacio, estás dentro de Sample Scrum."
+    },
+    {
+      "id": "m01-q41",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Anotas tres URLs del laboratorio. ¿Cuáles son consolas distintas?",
+      "opciones": [
+        { "id": "A", "texto": "Las tres abren Sample Scrum si eliges mal el menú; las correctas son site Jira, admin.atlassian.com y Sistema de Jira" },
+        { "id": "B", "texto": "Solo URLs de tableros" },
+        { "id": "C", "texto": "Solo espacios de Confluence" },
+        { "id": "D", "texto": "Solo Facturación" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Producto, organización y admin de Jira. Si las tres parecen un espacio, sal con el logo."
+    },
+    {
+      "id": "m01-q42",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Comparas Premium trial y Standard trial para el curso:",
+      "opciones": [
+        { "id": "A", "texto": "Límites idénticos en automation y auditoría" },
+        { "id": "B", "texto": "Premium: 30 días, más automation y gobierno; Standard 14 días cubre casi todo; Free recorta M09–M10" },
+        { "id": "C", "texto": "Standard no admite usuarios" },
+        { "id": "D", "texto": "Free incluye Advanced Roadmaps" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El plan se comprueba en Administration → Aplicaciones / Facturación."
+    },
+    {
+      "id": "m01-q43",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El permission scheme de DEV actúa:",
+      "opciones": [
+        { "id": "A", "texto": "Antes del product access: sustituye a la licencia" },
+        { "id": "B", "texto": "Después de que el usuario abre Jira, dentro de los espacios" },
+        { "id": "C", "texto": "Solo en Confluence" },
+        { "id": "D", "texto": "En lugar de los grupos del Directorio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Sin producto no hay scheme que aplicar. Grupo + rol + scheme es la puerta 2."
+    },
+    {
+      "id": "m01-q44",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Quién puede nombrar a otro organization admin en Nortech?",
+      "opciones": [
+        { "id": "A", "texto": "Cualquier project admin de PMO" },
+        { "id": "B", "texto": "El dueño del tablero DEV" },
+        { "id": "C", "texto": "Un organization admin (con cuidado: es palanca de incidente)" },
+        { "id": "D", "texto": "Cualquier miembro de nortech-dev" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "No conviertas al invitado de práctica en org admin. Basta usuario + grupos."
+    },
+    {
+      "id": "m01-q45",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En Más espacios aparece Sample Scrum junto a (aún no) DEV. ¿Qué haces en M01?",
+      "opciones": [
+        { "id": "A", "texto": "Lo usas como DEV y das de alta a nortech-dev ahí" },
+        { "id": "B", "texto": "Lo dejas; los espacios Nortech se crean en M03 y no reutilizan esa muestra" },
+        { "id": "C", "texto": "Le cambias la clave a PMO" },
+        { "id": "D", "texto": "Lo mueves a otra organización" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El sample no es el mapa corporativo. M01 es entorno y consolas, no crear DEV."
+    },
+    {
+      "id": "m01-q46",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "¿Cuáles DOS consolas NO son la configuración de un solo espacio?",
+      "opciones": [
+        { "id": "A", "texto": "Atlassian Administration (admin.atlassian.com)" },
+        { "id": "B", "texto": "Project settings de Sample Scrum" },
+        { "id": "C", "texto": "Configuración de sistema de Jira (site)" },
+        { "id": "D", "texto": "Columnas del tablero de un espacio" },
+        { "id": "E", "texto": "Personas de OPS" }
+      ],
+      "correctas": ["A", "C"],
+      "explicacion": "Org y admin de Jira son de tenant/site. Personas y board son de un espacio."
+    },
+    {
+      "id": "m01-q47",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Para que un alta nueva llegue a abrir Jira, ¿qué DOS pasos van primero?",
+      "opciones": [
+        { "id": "A", "texto": "Invitación a la organización" },
+        { "id": "B", "texto": "Un gadget de dashboard" },
+        { "id": "C", "texto": "Acceso al producto Jira (product access)" },
+        { "id": "D", "texto": "Un filtro guardado llamado mine" },
+        { "id": "E", "texto": "Configurar SMTP" }
+      ],
+      "correctas": ["A", "C"],
+      "explicacion": "Org + producto. Grupos y roles de espacio vienen después."
+    },
+    {
+      "id": "m01-q48",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "¿Cuáles DOS viven a nivel de organización, no dentro de un espacio?",
+      "opciones": [
+        { "id": "A", "texto": "Grupos del Directorio (nortech-dev, nortech-soporte, …)" },
+        { "id": "B", "texto": "Componentes del espacio DEV" },
+        { "id": "C", "texto": "El rol Organization admin" },
+        { "id": "D", "texto": "Versiones 1.2.0 de DEV" },
+        { "id": "E", "texto": "Swimlanes del tablero" }
+      ],
+      "correctas": ["A", "C"],
+      "explicacion": "Grupos y rol de org son de admin.atlassian.com. Componentes y versiones son del espacio."
+    },
+    {
+      "id": "m01-q49",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "admin.atlassian.com pide otra cuenta distinta a la del trial. Causa habitual:",
+      "opciones": [
+        { "id": "A", "texto": "Es normal: usa cualquier perfil de Chrome" },
+        { "id": "B", "texto": "SSO o varios perfiles; entra con la misma identidad del alta" },
+        { "id": "C", "texto": "Hay que crear una org nueva cada vez que abres Administration" },
+        { "id": "D", "texto": "Se ignora: todo se hace en settings del espacio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Misma cuenta que M01-01. Si no, no serás org admin del laboratorio."
+    },
+    {
+      "id": "m01-q50",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Permiso global de Jira frente a permiso de espacio:",
+      "opciones": [
+        { "id": "A", "texto": "Son la misma pantalla" },
+        { "id": "B", "texto": "Los globales (Sistema) son de site; los de espacio salen del scheme + roles" },
+        { "id": "C", "texto": "Los globales solo existen en team-managed" },
+        { "id": "D", "texto": "El permiso de espacio invita a la organización" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Make bulk changes es global y aun así exige permisos de elemento en cada espacio."
     }
   ]
 }

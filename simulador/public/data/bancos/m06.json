@@ -29,6 +29,678 @@
       ],
       "correctas": ["B"],
       "explicacion": "ACP-620 espera que no busques schemes globales en TMP."
+    },
+    {
+      "id": "m06-q3",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Checklist si un custom field no aparece en Create del espacio DEV (CMP):",
+      "opciones": [
+        { "id": "A", "texto": "Solo el SMTP" },
+        { "id": "B", "texto": "Contexto, pantalla y field configuration (Hidden)" },
+        { "id": "C", "texto": "La duración del sprint" },
+        { "id": "D", "texto": "Marketplace" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Tres capas: ¿existe para este espacio/tipo? ¿está en la pantalla de Create? ¿está Hidden? La primera que falle explica el síntoma."
+    },
+    {
+      "id": "m06-q4",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Departamento existe y está en una pantalla, pero Create de DEV no lo muestra. El contexto más coherente:",
+      "opciones": [
+        { "id": "A", "texto": "Incluye todos los espacios" },
+        { "id": "B", "texto": "Está limitado a PMO y SUP (DEV queda fuera)" },
+        { "id": "C", "texto": "Obliga a pasar DEV a TMP" },
+        { "id": "D", "texto": "Borra el campo al guardar" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El mismo campo no se hereda donde el contexto no lista el espacio. RRHH/PMO sí; Desarrollo no."
+    },
+    {
+      "id": "m06-q5",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Limitaste un contexto a SUP pero DEV sigue viendo el campo. Causa frecuente:",
+      "opciones": [
+        { "id": "A", "texto": "El tablero Scrum" },
+        { "id": "B", "texto": "El contexto Global por defecto sigue activo (todos los espacios)" },
+        { "id": "C", "texto": "Falta Confluence" },
+        { "id": "D", "texto": "El site está en Free" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Añadir un contexto no apaga el Global. Un Global sin proyectos restringidos = todos. Desactívalo o restríngeelo."
+    },
+    {
+      "id": "m06-q6",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En PMO quieres la opción Dirección y en SUP no. Lo limpio:",
+      "opciones": [
+        { "id": "A", "texto": "Crear Departamento PMO duplicado" },
+        { "id": "B", "texto": "Un campo Departamento con dos contextos y opciones distintas" },
+        { "id": "C", "texto": "Dos espacios team-managed" },
+        { "id": "D", "texto": "Un label dirección" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Un ID, dos listas. Evitas un segundo campo y un JQL distinto por departamento."
+    },
+    {
+      "id": "m06-q7",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En CMP, el formulario de Create lo define principalmente:",
+      "opciones": [
+        { "id": "A", "texto": "El permission scheme" },
+        { "id": "B", "texto": "La pantalla asociada a la operación Create" },
+        { "id": "C", "texto": "El sprint activo" },
+        { "id": "D", "texto": "El audit log" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "La pantalla es el formulario. El scheme de pantallas (y el de tipos) decide qué pantalla usa Create."
+    },
+    {
+      "id": "m06-q8",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El espacio CMP no apunta a una pantalla suelta. Apunta a:",
+      "opciones": [
+        { "id": "A", "texto": "Un gadget" },
+        { "id": "B", "texto": "Un screen scheme (vía issue type screen scheme)" },
+        { "id": "C", "texto": "Un único workflow" },
+        { "id": "D", "texto": "El tablero del espacio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Si Create de DEV y SUP se ven iguales, el issue type screen scheme no está asociado y siguen la pantalla compartida."
+    },
+    {
+      "id": "m06-q9",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Severidad QA está en Edit y View de SUP, no en Create. El reporter externo:",
+      "opciones": [
+        { "id": "A", "texto": "La rellena al crear el elemento" },
+        { "id": "B", "texto": "No la ve al crear; un agente la edita después" },
+        { "id": "C", "texto": "No puede editarla nunca" },
+        { "id": "D", "texto": "Obliga a Premium" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Reto del lab: datos que no se piden al alta. Cada operación (Create / Edit / View) usa su pantalla."
+    },
+    {
+      "id": "m06-q10",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Para que un custom field sea usable en Create de un CMP, ¿qué tiene que cumplirse?",
+      "opciones": [
+        { "id": "A", "texto": "Contexto que incluya el espacio y el tipo" },
+        { "id": "B", "texto": "El campo en la pantalla de Create" },
+        { "id": "C", "texto": "Field configuration no Hidden" },
+        { "id": "D", "texto": "Un quick filter del board que mencione el campo" }
+      ],
+      "correctas": ["A", "B", "C"],
+      "explicacion": "Las tres capas del «no me aparece». El quick filter no forma parte del formulario."
+    },
+    {
+      "id": "m06-q11",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Severidad QA es Required en la field configuration pero no está en la pantalla de Create. Al crear:",
+      "opciones": [
+        { "id": "A", "texto": "Siempre obliga, aunque no se vea" },
+        { "id": "B", "texto": "El required no se aplica de forma útil: el campo debe estar en la pantalla" },
+        { "id": "C", "texto": "SUP se convierte en TMP" },
+        { "id": "D", "texto": "Se oculta Description" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Error frecuente del lab: Required no obliga si el campo no está en Create. Añádelo a la pantalla o quita el required."
+    },
+    {
+      "id": "m06-q12",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Entorno está en la pantalla DEV pero no se ve. La field configuration lo tiene Hidden. Resultado:",
+      "opciones": [
+        { "id": "A", "texto": "Se ve igual: la pantalla gana" },
+        { "id": "B", "texto": "Hidden gana: no se muestra aunque esté en la pantalla" },
+        { "id": "C", "texto": "Solo se ve en JQL" },
+        { "id": "D", "texto": "Rompe el workflow" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Hidden quita el campo de Create/Edit/View aunque la screen lo liste. Es la tercera palanca."
+    },
+    {
+      "id": "m06-q13",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Required de la field configuration frente a marcar el custom field al crearlo:",
+      "opciones": [
+        { "id": "A", "texto": "Son el mismo interruptor" },
+        { "id": "B", "texto": "Quien obliga en el espacio es la field configuration (y que esté en la pantalla)" },
+        { "id": "C", "texto": "Solo existe en TMP" },
+        { "id": "D", "texto": "Lo decide el board" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Required en field config ≠ un flag mágico del alta del campo. En TMP el equivalente vive en la issue layout del espacio."
+    },
+    {
+      "id": "m06-q14",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "En un TMP de RRHH, para añadir un campo al Create del espacio:",
+      "opciones": [
+        { "id": "A", "texto": "Creas un screen scheme global NORTECH" },
+        { "id": "B", "texto": "Usas Issue layout / campos del propio espacio" },
+        { "id": "C", "texto": "Editas NORTECH Fields de los CMP" },
+        { "id": "D", "texto": "Cambias product access" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "TMP no usa screens ni field configuration schemes. Todo es layout del espacio."
+    },
+    {
+      "id": "m06-q15",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Crear el custom field global Departamento (lista RRHH/Finanzas/Legal) en CMP lo hace:",
+      "opciones": [
+        { "id": "A", "texto": "Cualquier miembro con Browse Projects" },
+        { "id": "B", "texto": "Un Jira admin, en Elementos de trabajo → Campos personalizados" },
+        { "id": "C", "texto": "El administrador del tablero" },
+        { "id": "D", "texto": "Un filtro compartido" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los custom fields de CMP son objetos de site. El project admin no los crea en la administración global."
+    },
+    {
+      "id": "m06-q16",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "En un TMP de RRHH, el project admin puede:",
+      "opciones": [
+        { "id": "A", "texto": "Crear schemes globales para DEV" },
+        { "id": "B", "texto": "Añadir campos en la issue layout de su espacio, no en los CMP ajenos" },
+        { "id": "C", "texto": "Editar el workflow scheme de SUP" },
+        { "id": "D", "texto": "Cambiar el plan del site" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Autonomía TMP = su espacio. No escribe la plantilla corporativa de pantallas de Nortech."
+    },
+    {
+      "id": "m06-q17",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "NORTECH Fields (Severidad QA Required) está asociado a SUP. DEV usa NORTECH DEV Fields. Al crear un Bug en DEV:",
+      "opciones": [
+        { "id": "A", "texto": "Exige Severidad QA" },
+        { "id": "B", "texto": "No hereda el required de SUP" },
+        { "id": "C", "texto": "DEV se convierte en SUP" },
+        { "id": "D", "texto": "Falla siempre el Create" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "La field configuration scheme se asocia por espacio. Por eso DEV tiene copia propia sin el required de Calidad."
+    },
+    {
+      "id": "m06-q18",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Desarrollo no debe cargar Severidad QA aunque el campo sea global. Lo coherente:",
+      "opciones": [
+        { "id": "A", "texto": "Borrar el campo del site" },
+        { "id": "B", "texto": "Ocultarlo en la field config de DEV y/o no ponerlo en su pantalla ni contexto" },
+        { "id": "C", "texto": "Quitar Browse Projects a Developers" },
+        { "id": "D", "texto": "Una regla de Automation que borre el valor" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "No destruyas el campo de SUP. Capa pantalla + hidden + contexto dejan DEV limpio."
+    },
+    {
+      "id": "m06-q19",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Description debe admitir markup. En la field configuration de CMP:",
+      "opciones": [
+        { "id": "A", "texto": "Permission scheme" },
+        { "id": "B", "texto": "Renderer Wiki style (frente a Default)" },
+        { "id": "C", "texto": "Screen scheme" },
+        { "id": "D", "texto": "statusCategory" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Field configuration → Description → Renderers. Wiki permite markup. No es un scheme de pantallas."
+    },
+    {
+      "id": "m06-q20",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Cambias el renderer de Description en producción sin aviso. El riesgo:",
+      "opciones": [
+        { "id": "A", "texto": "Ninguno: solo afecta a issues nuevas" },
+        { "id": "B", "texto": "Cambia cómo se ve el histórico ya guardado" },
+        { "id": "C", "texto": "Borra elementos de trabajo" },
+        { "id": "D", "texto": "Cambia el workflow scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El reto del lab: el renderer altera la lectura del pasado. Avísalo antes de tocarlo en un espacio vivo."
+    },
+    {
+      "id": "m06-q21",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Hay dos entradas «Departamento» en Campos personalizados. La causa:",
+      "opciones": [
+        { "id": "A", "texto": "Un contexto extra" },
+        { "id": "B", "texto": "Lo creaste dos veces; Jira no fusiona por nombre" },
+        { "id": "C", "texto": "El board duplica campos" },
+        { "id": "D", "texto": "TMP clona solo los CMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Busca por nombre exacto antes de crear. Dos IDs = dos campos en JQL, pantallas y reports."
+    },
+    {
+      "id": "m06-q22",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Una field configuration en CMP puede:",
+      "opciones": [
+        { "id": "A", "texto": "Marcar un campo Required" },
+        { "id": "B", "texto": "Marcar un campo Hidden" },
+        { "id": "C", "texto": "Elegir el renderer (Wiki / Default)" },
+        { "id": "D", "texto": "Crear un espacio nuevo" }
+      ],
+      "correctas": ["A", "B", "C"],
+      "explicacion": "Required, Hidden y renderer viven aquí. Crear espacios es otra consola."
+    },
+    {
+      "id": "m06-q23",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El contexto de Severidad QA aplica solo a Bug. Al crear Story en SUP:",
+      "opciones": [
+        { "id": "A", "texto": "El campo aparece igual" },
+        { "id": "B", "texto": "El campo no aplica a Story" },
+        { "id": "C", "texto": "Falla el permission scheme" },
+        { "id": "D", "texto": "Se crea un Bug en su lugar" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El contexto recorta por espacio y por tipo. Misma pantalla, distinto tipo = el campo puede desaparecer."
+    },
+    {
+      "id": "m06-q24",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El usuario tiene Edit Issues, el campo está en Edit, el contexto incluye SUP, y no lo ve. Siguiente palanca:",
+      "opciones": [
+        { "id": "A", "texto": "SMTP" },
+        { "id": "B", "texto": "Field configuration Hidden" },
+        { "id": "C", "texto": "El sprint" },
+        { "id": "D", "texto": "Marketplace" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Permiso + pantalla + contexto OK. Hidden es lo que queda. No es un problema de correo ni de apps."
+    },
+    {
+      "id": "m06-q25",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Nortech no edita la field configuration Default del site. Lo limpio:",
+      "opciones": [
+        { "id": "A", "texto": "Editar Default: afecta poco" },
+        { "id": "B", "texto": "Copiar a NORTECH Fields / NORTECH DEV Fields y asociar por scheme" },
+        { "id": "C", "texto": "Pasar todos los espacios a TMP" },
+        { "id": "D", "texto": "Ocultar los espacios" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Igual que workflows: se copia la plantilla, se nombra y se asocia. Editar Default golpea a quien aún la usa."
+    },
+    {
+      "id": "m06-q26",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Create de DEV y de SUP muestran los mismos campos de RRHH. La sospecha:",
+      "opciones": [
+        { "id": "A", "texto": "Los custom fields no existen" },
+        { "id": "B", "texto": "El issue type screen scheme no está asociado (siguen la pantalla compartida)" },
+        { "id": "C", "texto": "Falta el workflow de aprobación" },
+        { "id": "D", "texto": "El plan es Premium" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Comprueba tu entendimiento del lab: abre Create en ambos. Si son iguales, el scheme de pantallas no está enganchado."
+    },
+    {
+      "id": "m06-q27",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Departamento debe ser una sola opción (RRHH, Finanzas, Legal):",
+      "opciones": [
+        { "id": "A", "texto": "Labels libres" },
+        { "id": "B", "texto": "Select list (single choice)" },
+        { "id": "C", "texto": "Number" },
+        { "id": "D", "texto": "Date time picker" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Lista gobernada, una valor. Labels no imponen el catálogo de Nortech."
+    },
+    {
+      "id": "m06-q28",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Story points en DEV. Tipo adecuado:",
+      "opciones": [
+        { "id": "A", "texto": "Select list de departamentos" },
+        { "id": "B", "texto": "Number, o el campo nativo Story Points si ya existe" },
+        { "id": "C", "texto": "Checkbox Cambio estándar" },
+        { "id": "D", "texto": "User picker" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Es un número. No dupliques el nativo: búscalo antes de crear otro Number."
+    },
+    {
+      "id": "m06-q29",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "Departamento = RRHH no encuentra nada en DEV. Lo más coherente:",
+      "opciones": [
+        { "id": "A", "texto": "JQL no admite select lists" },
+        { "id": "B", "texto": "El contexto no incluye DEV: no hay valor que indexar ahí" },
+        { "id": "C", "texto": "Falta el tablero" },
+        { "id": "D", "texto": "Hay que usar Automation para el JQL" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Sin contexto (o sin pantalla/uso) el campo no se rellena en DEV. El JQL de select es válido donde el campo aplica."
+    },
+    {
+      "id": "m06-q30",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "Un gadget Filter Results muestra Departamento en PMO y vacío en filas de DEV (mismo filtro multi-espacio):",
+      "opciones": [
+        { "id": "A", "texto": "El gadget está roto" },
+        { "id": "B", "texto": "Contexto/pantalla: DEV no usa ese campo" },
+        { "id": "C", "texto": "Hay que pagar Data Center" },
+        { "id": "D", "texto": "Resolution está vacía" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El gadget pinta el campo si existe para esa fila. DEV fuera de contexto = celda vacía, no un bug del dashboard."
+    },
+    {
+      "id": "m06-q31",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Bug usa NORTECH DEV Create/Edit y Solicitud usa NORTECH PMO. Eso se modela con:",
+      "opciones": [
+        { "id": "A", "texto": "Una sola pantalla para todos los tipos" },
+        { "id": "B", "texto": "Un issue type screen scheme (tipo → screen scheme)" },
+        { "id": "C", "texto": "Solo field configuration" },
+        { "id": "D", "texto": "Columnas del board" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Issue type screen scheme encadena tipo → screen scheme → pantallas Create/Edit/View."
+    },
+    {
+      "id": "m06-q32",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un screen scheme CMP mapea:",
+      "opciones": [
+        { "id": "A", "texto": "Roles a grupos" },
+        { "id": "B", "texto": "Operaciones Create / Edit / View a pantallas" },
+        { "id": "C", "texto": "Estados a columnas" },
+        { "id": "D", "texto": "Filtros a dashboards" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Create, Edit y View pueden ser la misma pantalla o tres distintas. Roles y columnas son otros objetos."
+    },
+    {
+      "id": "m06-q33",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Política Nortech: Create de DEV no pide Severidad QA. Acción:",
+      "opciones": [
+        { "id": "A", "texto": "Poner el campo en todas las pantallas" },
+        { "id": "B", "texto": "No incluirlo en NORTECH DEV Create/Edit (y contexto o Hidden si hace falta)" },
+        { "id": "C", "texto": "Borrar el tipo Bug" },
+        { "id": "D", "texto": "Quitar el rol Developers" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Cada departamento tiene una pregunta extra, no un Jira distinto. DEV no hereda el formulario de SUP."
+    },
+    {
+      "id": "m06-q34",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "El campo existe en el site. ¿Qué puede ocultarlo en un espacio CMP?",
+      "opciones": [
+        { "id": "A", "texto": "Contexto que excluye el espacio o el tipo" },
+        { "id": "B", "texto": "No está en la pantalla de esa operación" },
+        { "id": "C", "texto": "Field configuration Hidden" },
+        { "id": "D", "texto": "El nombre del espacio tiene mayúsculas" }
+      ],
+      "correctas": ["A", "B", "C"],
+      "explicacion": "Las tres capas. El key del espacio no oculta campos."
+    },
+    {
+      "id": "m06-q35",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "ACP-620 dice «configure issue field layout». En un TMP eso apunta a:",
+      "opciones": [
+        { "id": "A", "texto": "El workflow scheme global" },
+        { "id": "B", "texto": "La issue layout del espacio" },
+        { "id": "C", "texto": "El permission scheme" },
+        { "id": "D", "texto": "Product access" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "En CMP layout ≈ screens + field configuration. En TMP es la issue layout del propio espacio."
+    },
+    {
+      "id": "m06-q36",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Creaste NORTECH Fields (Severidad Required) pero SUP no obliga el campo. Falta:",
+      "opciones": [
+        { "id": "A", "texto": "Volver a crear el custom field" },
+        { "id": "B", "texto": "Asociar el field configuration scheme al espacio SUP" },
+        { "id": "C", "texto": "Abrir un sprint" },
+        { "id": "D", "texto": "Activar Confluence" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El objeto field config no actúa hasta el scheme asociado al espacio. Igual que workflows y pantallas."
+    },
+    {
+      "id": "m06-q37",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Doce espacios CMP comparten NORTECH Fields. Marcas Entorno Hidden. El efecto:",
+      "opciones": [
+        { "id": "A", "texto": "Solo el espacio desde el que editaste" },
+        { "id": "B", "texto": "Los doce, al instante" },
+        { "id": "C", "texto": "Solo los team-managed" },
+        { "id": "D", "texto": "Tras reiniciar Jira" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Scheme compartido = poder y riesgo. Si DEV no debe heredar Hidden, usa NORTECH DEV Fields."
+    },
+    {
+      "id": "m06-q38",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El campo ruidoso Entorno ensucia Create de SUP. Palanca de field configuration:",
+      "opciones": [
+        { "id": "A", "texto": "Required" },
+        { "id": "B", "texto": "Hidden" },
+        { "id": "C", "texto": "Wiki renderer" },
+        { "id": "D", "texto": "Transición global" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Hidden lo quita aunque esté en la pantalla. Required lo haría obligatorio; el renderer no lo oculta."
+    },
+    {
+      "id": "m06-q39",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "PMO necesita informar y filtrar departamento con lista fija. Lo gobernado:",
+      "opciones": [
+        { "id": "A", "texto": "Labels libres" },
+        { "id": "B", "texto": "Custom field select + contexto" },
+        { "id": "C", "texto": "Un comentario en la descripción" },
+        { "id": "D", "texto": "El resumen del elemento" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Lista cerrada, JQL limpio, pantallas por espacio. Labels no evitan «rrhh», «RRHH» y «Recursos»."
+    },
+    {
+      "id": "m06-q40",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un campo está solo en la pantalla View (ni Create ni Edit). El usuario con Edit Issues:",
+      "opciones": [
+        { "id": "A", "texto": "Lo rellena en Create" },
+        { "id": "B", "texto": "Lo ve en el elemento pero no lo cambia por el formulario Edit" },
+        { "id": "C", "texto": "Lo borra al verlo" },
+        { "id": "D", "texto": "Cambia el workflow" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "View ≠ Edit. Útil para datos calculados o que no deben pedirse en el alta ni en la edición habitual."
+    },
+    {
+      "id": "m06-q41",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El contexto de Departamento lista solo PMO y SUP. En OPS:",
+      "opciones": [
+        { "id": "A", "texto": "Hereda las opciones de PMO" },
+        { "id": "B", "texto": "El campo no aplica: OPS no está en el contexto" },
+        { "id": "C", "texto": "Usa el contexto de DEV" },
+        { "id": "D", "texto": "Crea el campo otra vez automáticamente" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Contexto restrictivo = lista explícita de espacios. OPS no entra por proximidad organizativa."
+    },
+    {
+      "id": "m06-q42",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Ventaja de dos contextos frente a duplicar el campo Departamento:",
+      "opciones": [
+        { "id": "A", "texto": "Dos IDs distintos en JQL" },
+        { "id": "B", "texto": "Un solo campo (un ID) con listas o espacios distintos" },
+        { "id": "C", "texto": "Ya no hace falta pantalla" },
+        { "id": "D", "texto": "Sustituye a la field configuration" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Un campo, distintas listas. Siguen haciendo falta pantalla y field config; no se evitan las otras capas."
+    },
+    {
+      "id": "m06-q43",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "El campo Turno nació en un TMP de Ops. Quieres el mismo control en el CMP SUP:",
+      "opciones": [
+        { "id": "A", "texto": "Se comparte solo: TMP exporta schemes" },
+        { "id": "B", "texto": "En CMP creas un custom field (o migras); TMP no comparte schemes" },
+        { "id": "C", "texto": "Copias el tablero de Ops" },
+        { "id": "D", "texto": "Reutilizas el permission scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los campos de TMP viven en su espacio. SUP CMP usa objetos globales. El tablero no transporta formularios."
+    },
+    {
+      "id": "m06-q44",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Cambio estándar en OPS (sí/no). Tipo habitual:",
+      "opciones": [
+        { "id": "A", "texto": "Date picker" },
+        { "id": "B", "texto": "Checkbox o select Sí/No" },
+        { "id": "C", "texto": "Sprint" },
+        { "id": "D", "texto": "Issue security level" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Una pregunta binaria de operaciones. No es fecha, sprint ni seguridad."
+    },
+    {
+      "id": "m06-q45",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El campo está en View y el agente lo busca en Create. Diagnóstico:",
+      "opciones": [
+        { "id": "A", "texto": "El contexto está mal siempre" },
+        { "id": "B", "texto": "Cada operación usa su pantalla: hay que añadirlo a Create" },
+        { "id": "C", "texto": "Hidden es la única causa posible" },
+        { "id": "D", "texto": "Falta una regla de Automation" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Create, Edit y View son tres huecos. Estar en uno no lo pone en los otros."
+    },
+    {
+      "id": "m06-q46",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "Objetivos del modelo de formularios Nortech. Elige las correctas:",
+      "opciones": [
+        { "id": "A", "texto": "RRHH y Calidad piden datos que DEV no ve en Create" },
+        { "id": "B", "texto": "Un campo Departamento, no un Jira distinto por departamento" },
+        { "id": "C", "texto": "TMP y CMP usan exactamente los mismos schemes globales" },
+        { "id": "D", "texto": "La field config de DEV puede ocultar Severidad QA" }
+      ],
+      "correctas": ["A", "B", "D"],
+      "explicacion": "Formularios por departamento sin duplicar Jira. TMP no consume los schemes globales de CMP."
+    },
+    {
+      "id": "m06-q47",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Crees que Departamento no existe y vas a crearlo otra vez. Antes:",
+      "opciones": [
+        { "id": "A", "texto": "Crear un TMP de prueba" },
+        { "id": "B", "texto": "Buscar el campo por nombre exacto en Campos personalizados" },
+        { "id": "C", "texto": "Borrar todas las pantallas" },
+        { "id": "D", "texto": "Cambiar el plan a Free" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Error frecuente: campo duplicado. No clones; busca el ID que ya existe."
+    },
+    {
+      "id": "m06-q48",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un contexto Global sin espacios restringidos equivale a:",
+      "opciones": [
+        { "id": "A", "texto": "Ningún espacio" },
+        { "id": "B", "texto": "Todos los espacios (y los tipos que liste el contexto)" },
+        { "id": "C", "texto": "Solo team-managed" },
+        { "id": "D", "texto": "Solo el espacio PMO" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Global vacío de proyectos = todos. Por eso DEV ve Departamento hasta que restringes o desactivas ese contexto."
+    },
+    {
+      "id": "m06-q49",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Asociar NORTECH SUP Screens al espacio SUP es administración de:",
+      "opciones": [
+        { "id": "A", "texto": "Solo el board" },
+        { "id": "B", "texto": "Schemes de pantallas del espacio CMP" },
+        { "id": "C", "texto": "Automation global" },
+        { "id": "D", "texto": "La facturación de la org" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El espacio CMP se engancha a issue type screen scheme / screen scheme. El board no asigna formularios."
+    },
+    {
+      "id": "m06-q50",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Cómo compruebas que el screen scheme de SUP está asociado:",
+      "opciones": [
+        { "id": "A", "texto": "Mirar solo la lista de workflows" },
+        { "id": "B", "texto": "Abrir Create en SUP vs DEV y ver campos distintos (p. ej. Severidad QA)" },
+        { "id": "C", "texto": "Contar sprints abiertos" },
+        { "id": "D", "texto": "Revisar el SMTP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "La prueba del lab: Create distinto por departamento. Si son iguales, el scheme no está asociado."
     }
   ]
 }

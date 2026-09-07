@@ -34,6 +34,8 @@ export type ConfigExamen = {
   titulo: string;
   subtitulo: string;
   preguntasObjetivo: number;
+  preguntasPorModulo: number;
+  preguntasRapido: number;
   minutos: number;
   corte: number;
   dominios: Record<DominioId, { peso: number; etiqueta: string }>;

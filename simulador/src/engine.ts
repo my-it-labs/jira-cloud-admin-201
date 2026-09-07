@@ -112,7 +112,11 @@ export function montarIntento(
     base = pool.filter((p) => p.modulo === filtroModulo);
   }
   const objetivo =
-    modo === 'rapido' ? Math.min(15, base.length) : Math.min(config.preguntasObjetivo, base.length);
+    modo === 'rapido'
+      ? Math.min(config.preguntasRapido, base.length)
+      : modo === 'modulo'
+        ? Math.min(config.preguntasPorModulo, base.length)
+        : Math.min(config.preguntasObjetivo, base.length);
   const seleccion =
     modo === 'oficial'
       ? tomarPorDominio(base, objetivo, config.dominios, rand)

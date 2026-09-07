@@ -3,6 +3,8 @@
   "titulo": "Managing Jira Projects for Cloud",
   "subtitulo": "Simulador de preparación (preguntas originales del curso, no es el examen oficial)",
   "preguntasObjetivo": 70,
+  "preguntasPorModulo": 5,
+  "preguntasRapido": 15,
   "minutos": 180,
   "corte": 0.64,
   "dominios": {

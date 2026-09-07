@@ -1,6 +1,12 @@
 # Simulador ACP-620
 
-App React (Vite) de autoevaluación. Carga preguntas desde JSON en `public/data/` y genera **cada intento distinto**: sortea ítems por dominio, baraja el orden y reetiqueta las opciones.
+Cada JSON de módulo (`public/data/bancos/`) tiene **50 ítems**. Modos:
+
+| Modo | Qué sortea | Tiempo |
+|------|------------|--------|
+| Examen cronometrado | **70** preguntas (pesos de dominios ACP-620) | 180 min |
+| Práctica rápida | 15 del banco completo | proporcional |
+| Por módulo | **5 de 50** de ese módulo | proporcional |
 
 No es el examen oficial ni un dump. Las preguntas son originales del curso.
 

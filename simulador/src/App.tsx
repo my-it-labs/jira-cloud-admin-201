@@ -415,6 +415,7 @@ function Inicio({
 }) {
   const [modulo, setModulo] = useState(modulos[0] ?? 'M01');
   const corto = pool.length < config.preguntasObjetivo;
+  const porBanco = modulos.length ? Math.round(pool.length / modulos.length) : 0;
   const aMedias = Boolean(intento);
   return (
     <main className="inicio">
@@ -453,7 +454,8 @@ function Inicio({
         <div>
           <dt>Banco de este curso</dt>
           <dd>
-            {pool.length} preguntas en {modulos.length} JSON
+            {modulos.length} módulos × {porBanco} ítems. El cronometrado sortea {config.preguntasObjetivo}. Por módulo,{' '}
+            {config.preguntasPorModulo} al azar.
           </dd>
         </div>
       </dl>
@@ -468,11 +470,11 @@ function Inicio({
           Examen cronometrado
         </button>
         <button type="button" onClick={onRapido}>
-          Práctica rápida (15)
+          Práctica rápida ({config.preguntasRapido})
         </button>
       </div>
       <div className="modulo-box">
-        <label htmlFor="mod">Por módulo</label>
+        <label htmlFor="mod">Por módulo ({config.preguntasPorModulo} de {porBanco} al azar)</label>
         <select id="mod" value={modulo} onChange={(e) => setModulo(e.target.value)}>
           {modulos.map((m) => (
             <option key={m} value={m}>
