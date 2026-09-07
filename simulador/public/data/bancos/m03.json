@@ -1,0 +1,76 @@
+{
+  "id": "m03",
+  "modulo": "M03",
+  "preguntas": [
+    {
+      "id": "m03-q1",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Tres equipos deben compartir el mismo workflow y los mismos campos. Recomiendas:",
+      "opciones": [
+        { "id": "A", "texto": "Tres proyectos team-managed" },
+        { "id": "B", "texto": "Proyectos company-managed con schemes compartidos" },
+        { "id": "C", "texto": "Un único tablero sin proyectos" },
+        { "id": "D", "texto": "Un proyecto por issue type" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Shared configuration es el caso de uso de CMP. TMP no comparte schemes entre proyectos."
+    },
+    {
+      "id": "m03-q2",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Un equipo pequeño quiere empezar hoy y no hay Jira admin disponible hasta el mes que viene. Recomiendas:",
+      "opciones": [
+        { "id": "A", "texto": "Esperar" },
+        { "id": "B", "texto": "Team-managed, sabiendo el coste de migrar a CMP después" },
+        { "id": "C", "texto": "Company-managed igualmente" },
+        { "id": "D", "texto": "Jira Data Center" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "ACP-620 pide recomendar TMP cuando el gobierno central no está. Hay que conocer el trade-off."
+    },
+    {
+      "id": "m03-q3",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Quieres que los bugs de la capa API caigan siempre en Marta. Lo más limpio:",
+      "opciones": [
+        { "id": "A", "texto": "Automation global para todos los proyectos" },
+        { "id": "B", "texto": "Componente api con lead Marta y default assignee = Component lead" },
+        { "id": "C", "texto": "Un label marta" },
+        { "id": "D", "texto": "Hacer a Marta org admin" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Es el mecanismo nativo de asignación por componente. Automation es para reglas más ricas."
+    },
+    {
+      "id": "m03-q4",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Quitar una issue de la versión 1.0.0 justo antes del release:",
+      "opciones": [
+        { "id": "A", "texto": "No afecta a nadie" },
+        { "id": "B", "texto": "Cambia el alcance de la versión (informes de release y lo que se entrega)" },
+        { "id": "C", "texto": "Borra el workflow" },
+        { "id": "D", "texto": "Cambia el permission scheme" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Scope change. El examen pregunta el impacto de mover issues entre versiones/sprints."
+    },
+    {
+      "id": "m03-q5",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "La clave del proyecto:",
+      "opciones": [
+        { "id": "A", "texto": "Se puede cambiar siempre sin coste" },
+        { "id": "B", "texto": "Es el prefijo de las issues (DEV-12); cambiarla es posible pero doloroso" },
+        { "id": "C", "texto": "Debe ser un UUID" },
+        { "id": "D", "texto": "Solo existe en TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Elige bien DEV / SUP el día 1."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "m07",
+  "modulo": "M07",
+  "preguntas": [
+    {
+      "id": "m07-q1",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "El board no muestra issues que sí salen en Search con el mismo JQL. Lo siguiente a mirar:",
+      "opciones": [
+        { "id": "A", "texto": "Sub-filter Kanban y columnas unmapped" },
+        { "id": "B", "texto": "El plan Free" },
+        { "id": "C", "texto": "Confluence" },
+        { "id": "D", "texto": "El nombre del site" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Filter OK implica sub-filter o mapping. También swimlanes «hide done»."
+    },
+    {
+      "id": "m07-q2",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Un board para tres equipos en tres proyectos. El filtro debe:",
+      "opciones": [
+        { "id": "A", "texto": "project = DEV y ya" },
+        { "id": "B", "texto": "Incluir los tres proyectos y cada usuario necesita Browse en esos proyectos" },
+        { "id": "C", "texto": "Ser assignee is EMPTY" },
+        { "id": "D", "texto": "Usar solo labels" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Permisos ∩ filtro. Si no hay Browse, la issue no existe para ese usuario."
+    },
+    {
+      "id": "m07-q3",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Burndown de story points no baja al cerrar issues sin puntos:",
+      "opciones": [
+        { "id": "A", "texto": "Bug de Jira" },
+        { "id": "B", "texto": "La estimación está en story points y esas issues valen 0" },
+        { "id": "C", "texto": "Falta Marketplace" },
+        { "id": "D", "texto": "El sprint no existe" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Estimation method. Time tracking produce otro informe."
+    },
+    {
+      "id": "m07-q4",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Kanban with backlog sirve para:",
+      "opciones": [
+        { "id": "A", "texto": "Sustituir sprints de Scrum sin más" },
+        { "id": "B", "texto": "Separar el trabajo aún no comprometido (backlog) del flujo WIP" },
+        { "id": "C", "texto": "Solo TMP" },
+        { "id": "D", "texto": "Solo JSM" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Recomendación de tipo de board: escenario típico ACP-620."
+    }
+  ]
+}

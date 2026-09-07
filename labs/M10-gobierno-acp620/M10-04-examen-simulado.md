@@ -2,9 +2,9 @@
 
 [← Página anterior](M10-03-auditoria-operacion.md)
 
-> Batería final. 15 escenarios. No cronometres salvo que quieras simular el examen (70 min en el oficial, más o menos: confirma en Atlassian University). Una respuesta por pregunta.
+> Batería final. 15 escenarios en este lab. El [simulador](https://my-it-labs.github.io/jira-cloud-admin-201/) mezcla estas preguntas con las de todos los módulos, cronometra (~180 min en el formato oficial) y te autoevalúa. Confirma duración y corte en Atlassian University.
 
-Trabaja en papel o a pantalla. Abre las soluciones **al final**, no pregunta a pregunta.
+Trabaja en papel o a pantalla. Abre las soluciones **al final**, no pregunta a pregunta. Si usas el simulador, no mires este fichero hasta haber entregado.
 
 ---
 

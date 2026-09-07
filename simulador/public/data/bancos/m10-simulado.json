@@ -1,0 +1,216 @@
+{
+  "id": "m10-simulado",
+  "modulo": "M10",
+  "preguntas": [
+    {
+      "id": "m10-q1",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Un equipo de 6 personas, sin Jira admin hasta dentro de un mes, quiere Kanban ya. Recomiendas:",
+      "opciones": [
+        { "id": "A", "texto": "Company-managed" },
+        { "id": "B", "texto": "Team-managed Kanban" },
+        { "id": "C", "texto": "Jira Data Center" },
+        { "id": "D", "texto": "Solo Confluence" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "TMP cuando no hay admin de schemes."
+    },
+    {
+      "id": "m10-q2",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "El burndown de story points no se mueve al registrar horas. Estimation del board está en:",
+      "opciones": [
+        { "id": "A", "texto": "Story points" },
+        { "id": "B", "texto": "Original time estimate" },
+        { "id": "C", "texto": "Issue count" },
+        { "id": "D", "texto": "No se puede saber" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Si estima en puntos, las horas no queman ese burndown. El enunciado dice que las horas no mueven el burndown → el board no está en time tracking, suele ser story points."
+    },
+    {
+      "id": "m10-q3",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Filtro del board: project = DEV AND issuetype != Sub-task. Las subtareas:",
+      "opciones": [
+        { "id": "A", "texto": "Salen igual" },
+        { "id": "B", "texto": "No alimentan el board (pueden verse en la issue padre)" },
+        { "id": "C", "texto": "Rompen el sprint" },
+        { "id": "D", "texto": "Exigen Premium" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El filtro del board es el universo. Las subtareas quedan fuera de ese JQL."
+    },
+    {
+      "id": "m10-q4",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Quick filter vs board filter:",
+      "opciones": [
+        { "id": "A", "texto": "Son lo mismo" },
+        { "id": "B", "texto": "El board filter define el universo; el quick filter lo reduce temporalmente" },
+        { "id": "C", "texto": "El quick filter es global de la org" },
+        { "id": "D", "texto": "El quick filter cambia el workflow" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El board filter es el conjunto; el quick filter es una vista temporal encima."
+    },
+    {
+      "id": "m10-q5",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Default assignee del componente = Component lead. Marta es lead de api pero no Assignable User. Al crear un Bug api:",
+      "opciones": [
+        { "id": "A", "texto": "Se asigna a Marta igual" },
+        { "id": "B", "texto": "Falla o cae al project default / unassigned" },
+        { "id": "C", "texto": "Se borra el componente" },
+        { "id": "D", "texto": "Se crea un proyecto nuevo" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Sin Assignable User no puede ser assignee, aunque sea component lead."
+    },
+    {
+      "id": "m10-q6",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "Gadget Filter Results con filtro privado en dashboard compartido:",
+      "opciones": [
+        { "id": "A", "texto": "Todos ven los datos" },
+        { "id": "B", "texto": "Otros ven error de permisos" },
+        { "id": "C", "texto": "Jira comparte el filtro solo" },
+        { "id": "D", "texto": "Se convierte en report ágil" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Hay que compartir el filtro, no solo el dashboard."
+    },
+    {
+      "id": "m10-q7",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "Identifica el report: barras de velocidad por sprint.",
+      "opciones": [
+        { "id": "A", "texto": "CFD" },
+        { "id": "B", "texto": "Velocity" },
+        { "id": "C", "texto": "Created vs Resolved" },
+        { "id": "D", "texto": "Control chart" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Velocity = barras por sprint. CFD son áreas apiladas."
+    },
+    {
+      "id": "m10-q8",
+      "dominio": "automation",
+      "tipo": "single",
+      "stem": "Regla: When issue created, Then create issue (mismo proyecto, mismo tipo). Riesgo:",
+      "opciones": [
+        { "id": "A", "texto": "Ninguno" },
+        { "id": "B", "texto": "Loop / explosión de issues" },
+        { "id": "C", "texto": "Solo falla en Kanban" },
+        { "id": "D", "texto": "Obliga a Premium" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Cada issue nueva dispara otra. Hay que acotar tipo, condición o «issues created by this rule»."
+    },
+    {
+      "id": "m10-q9",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Manage sprints permission falta. El usuario:",
+      "opciones": [
+        { "id": "A", "texto": "Puede Start sprint igual" },
+        { "id": "B", "texto": "No gestiona sprints (completar, iniciar, editar)" },
+        { "id": "C", "texto": "No puede Create issue" },
+        { "id": "D", "texto": "Pierde product access" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Manage sprints es un permiso de proyecto distinto de Create issue."
+    },
+    {
+      "id": "m10-q10",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Issue security nivel Cliente sin el reporter. El cliente:",
+      "opciones": [
+        { "id": "A", "texto": "Siempre ve el ticket" },
+        { "id": "B", "texto": "Puede no ver ni el que abrió" },
+        { "id": "C", "texto": "Se convierte en admin" },
+        { "id": "D", "texto": "El nivel se ignora en Cloud" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Si el nivel no incluye al Reporter, el ticket «desaparece» para quien lo creó."
+    },
+    {
+      "id": "m10-q11",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Company-managed: ¿quién crea un custom field global?",
+      "opciones": [
+        { "id": "A", "texto": "Cualquier project admin" },
+        { "id": "B", "texto": "Jira administrator" },
+        { "id": "C", "texto": "Cualquier Developer" },
+        { "id": "D", "texto": "El gadget Assigned to Me" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los custom fields globales son de Jira admin, no del project admin."
+    },
+    {
+      "id": "m10-q12",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Kanban sub-filter status = \"To Do\". El efecto:",
+      "opciones": [
+        { "id": "A", "texto": "El tablero muestra todo el workflow" },
+        { "id": "B", "texto": "Solo To Do (columnas In Progress/Done vacías salvo que el sub-filter mienta)" },
+        { "id": "C", "texto": "Crea sprints" },
+        { "id": "D", "texto": "Comparte el dashboard" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El sub-filter de Kanban recorta el universo del board filter."
+    },
+    {
+      "id": "m10-q13",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "fixVersion = 1.0.0 AND statusCategory != Done sirve para:",
+      "opciones": [
+        { "id": "A", "texto": "SSO" },
+        { "id": "B", "texto": "Trabajo pendiente de una release" },
+        { "id": "C", "texto": "Instalar apps" },
+        { "id": "D", "texto": "Crear la org" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "JQL de alcance de versión aún no Done."
+    },
+    {
+      "id": "m10-q14",
+      "dominio": "automation",
+      "tipo": "single",
+      "stem": "Bulk change no aparece. Suele faltar:",
+      "opciones": [
+        { "id": "A", "texto": "Global permission Make bulk changes + permisos de issue" },
+        { "id": "B", "texto": "Confluence" },
+        { "id": "C", "texto": "Un board Scrum" },
+        { "id": "D", "texto": "Issue security" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "Bulk change es permiso global más los permisos de cada issue."
+    },
+    {
+      "id": "m10-q15",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "Agile at scale en el temario ACP-620: Jira facilita varios equipos sobre todo con:",
+      "opciones": [
+        { "id": "A", "texto": "Un proyecto TMP por persona y nada compartido" },
+        { "id": "B", "texto": "Boards/filtros multi-proyecto, versions, (si el plan) planes/roadmaps — siempre respetando permisos" },
+        { "id": "C", "texto": "Desactivar JQL" },
+        { "id": "D", "texto": "Un único usuario admin para todos los clics" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Escala = filtro amplio + permisos, no un TMP por persona."
+    }
+  ]
+}

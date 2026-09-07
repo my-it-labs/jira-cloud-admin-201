@@ -1,0 +1,76 @@
+{
+  "id": "m02",
+  "modulo": "M02",
+  "preguntas": [
+    {
+      "id": "m02-q1",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un desarrollador puede abrir Jira pero no ve el proyecto DEV. ¿Qué miras primero?",
+      "opciones": [
+        { "id": "A", "texto": "Product access" },
+        { "id": "B", "texto": "Browse Projects en el permission scheme / rol del proyecto" },
+        { "id": "C", "texto": "El SMTP" },
+        { "id": "D", "texto": "El nombre del tablero" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Ya abre Jira (product access OK). Falta permiso de proyecto (rol + scheme). Si no abriera Jira, entonces A."
+    },
+    {
+      "id": "m02-q2",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Cuál es la forma más escalable de dar a todo Desarrollo el rol Developers en 15 proyectos?",
+      "opciones": [
+        { "id": "A", "texto": "Añadir cada usuario a cada proyecto" },
+        { "id": "B", "texto": "Meter usuarios en el grupo nortech-dev y asignar ese grupo al rol Developers" },
+        { "id": "C", "texto": "Hacerlos a todos Jira admin" },
+        { "id": "D", "texto": "Compartir el dashboard" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Grupo en Directory + rol de proyecto. Es el modelo corporativo. C es un agujero de seguridad."
+    },
+    {
+      "id": "m02-q3",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "La global permission Make bulk changes afecta a:",
+      "opciones": [
+        { "id": "A", "texto": "Solo un proyecto" },
+        { "id": "B", "texto": "Usuarios/grupos a nivel de site (pueden bulk change donde ya tengan permiso de issue)" },
+        { "id": "C", "texto": "Solo team-managed" },
+        { "id": "D", "texto": "Solo Confluence" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Global permissions (Jira settings → System) son de site. Siguen necesitando los permisos de issue en cada proyecto."
+    },
+    {
+      "id": "m02-q4",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un project admin puede invitar a la organización a un proveedor externo.",
+      "opciones": [
+        { "id": "A", "texto": "Siempre" },
+        { "id": "B", "texto": "Nunca: invitar a la org es de org/site admin (o user access admin)" },
+        { "id": "C", "texto": "Solo si el proyecto es Scrum" },
+        { "id": "D", "texto": "Solo desde el board" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "People del proyecto asigna roles a usuarios que ya existen. El alta en la org es otra consola."
+    },
+    {
+      "id": "m02-q5",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Assign Issues vs Assignable User: un usuario no sale en el desplegable de Assignee. Suele faltar:",
+      "opciones": [
+        { "id": "A", "texto": "Assign Issues (quien asigna)" },
+        { "id": "B", "texto": "Assignable User (quién puede ser asignado)" },
+        { "id": "C", "texto": "Create Issues" },
+        { "id": "D", "texto": "Un gadget" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Assignable User controla el desplegable. Assign Issues controla quién puede cambiar el assignee."
+    }
+  ]
+}

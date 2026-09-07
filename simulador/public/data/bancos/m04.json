@@ -1,0 +1,48 @@
+{
+  "id": "m04",
+  "modulo": "M04",
+  "preguntas": [
+    {
+      "id": "m04-q1",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Cambias el permission scheme compartido por 20 proyectos. El efecto:",
+      "opciones": [
+        { "id": "A", "texto": "Solo el proyecto desde el que editaste" },
+        { "id": "B", "texto": "Los 20 al instante" },
+        { "id": "C", "texto": "Tras reiniciar Jira" },
+        { "id": "D", "texto": "Solo team-managed" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Por eso se copian schemes y se nombran. Es poder y riesgo."
+    },
+    {
+      "id": "m04-q2",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Un proyecto company-managed necesita un issue type extra solo él. Lo más limpio:",
+      "opciones": [
+        { "id": "A", "texto": "Editar el issue type scheme compartido (afecta a todos)" },
+        { "id": "B", "texto": "Copiar el issue type scheme, añadir el tipo, asociar solo ese proyecto" },
+        { "id": "C", "texto": "Crear un TMP" },
+        { "id": "D", "texto": "Usar un label" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Excepción = scheme propio. No rompas la plantilla corporativa."
+    },
+    {
+      "id": "m04-q3",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "«Configure issue field layout» en ACP-620, en CMP, apunta sobre todo a:",
+      "opciones": [
+        { "id": "A", "texto": "Board swimlanes" },
+        { "id": "B", "texto": "Screens + field configuration (required/hidden)" },
+        { "id": "C", "texto": "Product access" },
+        { "id": "D", "texto": "Sprint duration" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Layout = qué campos y cuándo. En TMP es la issue layout del propio proyecto."
+    }
+  ]
+}

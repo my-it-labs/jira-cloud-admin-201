@@ -1,0 +1,48 @@
+{
+  "id": "m05",
+  "modulo": "M05",
+  "preguntas": [
+    {
+      "id": "m05-q1",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "La transición se ve pero al pulsar da error de campo obligatorio. Es:",
+      "opciones": [
+        { "id": "A", "texto": "Una condición" },
+        { "id": "B", "texto": "Un validador" },
+        { "id": "C", "texto": "Un quick filter" },
+        { "id": "D", "texto": "Product access" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Condición oculta o bloquea antes (el botón no sale o no aplica). Validador evalúa al ejecutar."
+    },
+    {
+      "id": "m05-q2",
+      "dominio": "board-configuration",
+      "tipo": "single",
+      "stem": "Una issue está In Review y no sale en el Kanban. Lo más probable:",
+      "opciones": [
+        { "id": "A", "texto": "Se borró" },
+        { "id": "B", "texto": "El estado no está mapeado a ninguna columna del board" },
+        { "id": "C", "texto": "Falta Confluence" },
+        { "id": "D", "texto": "El site está en Free" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Clásico. El board filter también puede excluirla."
+    },
+    {
+      "id": "m05-q3",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Post function típica al cerrar:",
+      "opciones": [
+        { "id": "A", "texto": "Crear el proyecto" },
+        { "id": "B", "texto": "Set Resolution y disparar evento" },
+        { "id": "C", "texto": "Cambiar el plan a Premium" },
+        { "id": "D", "texto": "Invitar usuarios" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Resolution vacía = la issue no cuenta como resuelta en muchos reports."
+    }
+  ]
+}

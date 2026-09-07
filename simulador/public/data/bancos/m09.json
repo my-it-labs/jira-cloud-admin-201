@@ -1,0 +1,48 @@
+{
+  "id": "m09",
+  "modulo": "M09",
+  "preguntas": [
+    {
+      "id": "m09-q1",
+      "dominio": "automation",
+      "tipo": "single",
+      "stem": "La regla debería asignar y el audit log dice que el usuario no tiene permiso. Actúas sobre:",
+      "opciones": [
+        { "id": "A", "texto": "El board filter" },
+        { "id": "B", "texto": "Permission scheme / Assignable User / actor de la regla" },
+        { "id": "C", "texto": "El nombre del sprint" },
+        { "id": "D", "texto": "Confluence" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Automation es un usuario más."
+    },
+    {
+      "id": "m09-q2",
+      "dominio": "automation",
+      "tipo": "single",
+      "stem": "Necesitas cambiar el assignee de 80 issues una vez. Lo más adecuado:",
+      "opciones": [
+        { "id": "A", "texto": "Una regla scheduled eterna" },
+        { "id": "B", "texto": "Bulk change" },
+        { "id": "C", "texto": "Un nuevo proyecto" },
+        { "id": "D", "texto": "Issue security" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Identificar la vía: bulk vs automation vs workflow."
+    },
+    {
+      "id": "m09-q3",
+      "dominio": "automation",
+      "tipo": "single",
+      "stem": "Una regla con trigger Issue updated y action Edit issue (misma issue) sin condición:",
+      "opciones": [
+        { "id": "A", "texto": "Es óptima" },
+        { "id": "B", "texto": "Riesgo de loop" },
+        { "id": "C", "texto": "Obligatoria en Scrum" },
+        { "id": "D", "texto": "Solo en Free" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Hay que acotar (campo concreto, «ignore issues in this rule»)."
+    }
+  ]
+}

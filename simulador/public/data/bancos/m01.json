@@ -1,0 +1,90 @@
+{
+  "id": "m01",
+  "modulo": "M01",
+  "preguntas": [
+    {
+      "id": "m01-q1",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "Un equipo pide que *ellos* puedan cambiar el workflow sin pasar por el administrador de Jira. ¿Qué tipo de proyecto encaja?",
+      "opciones": [
+        { "id": "A", "texto": "Company-managed, porque los schemes se editan en el proyecto" },
+        { "id": "B", "texto": "Team-managed, porque el project admin configura el proceso dentro de su proyecto" },
+        { "id": "C", "texto": "Cualquiera: el workflow siempre es global" },
+        { "id": "D", "texto": "Un proyecto de Jira Service Management, obligatorio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "En team-managed el alcance es el proyecto. En company-managed el workflow vive en un scheme global (o compartido) y lo toca un Jira admin. ACP-620 espera que sepas recomendar TMP vs CMP."
+    },
+    {
+      "id": "m01-q2",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Necesitas invitar a 12 personas al site. Estás en plan Free. ¿Qué ocurre?",
+      "opciones": [
+        { "id": "A", "texto": "Puedes invitarlas; Free no tiene límite de usuarios" },
+        { "id": "B", "texto": "Free limita a 10 usuarios: o subes de plan o no entran todas" },
+        { "id": "C", "texto": "Entran como clientes de JSM sin contar" },
+        { "id": "D", "texto": "Solo entran si las pones en un grupo" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Free = máximo 10 usuarios. Por eso el curso usa trial Premium/Standard para no chocar con invitaciones de práctica."
+    },
+    {
+      "id": "m01-q3",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Un project admin no encuentra Custom fields en Project settings de un proyecto company-managed. ¿Es normal?",
+      "opciones": [
+        { "id": "A", "texto": "No: siempre están en Project settings" },
+        { "id": "B", "texto": "Sí: los custom fields globales se administran en Jira settings → Issues" },
+        { "id": "C", "texto": "Solo existen en team-managed" },
+        { "id": "D", "texto": "Hay que instalar una app del Marketplace" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "En CMP los campos son de site. El project admin no crea campos globales. En TMP sí hay campos a nivel de proyecto."
+    },
+    {
+      "id": "m01-q4",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Dónde se decide quién tiene product access a Jira (puede entrar al producto)?",
+      "opciones": [
+        { "id": "A", "texto": "Permission scheme del proyecto" },
+        { "id": "B", "texto": "Board filter" },
+        { "id": "C", "texto": "Atlassian Administration → product access / Directory" },
+        { "id": "D", "texto": "Notification scheme" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "Sin product access el usuario ni llega a Jira. El permission scheme actúa después, dentro de los proyectos."
+    },
+    {
+      "id": "m01-q5",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Tu organización tiene dos sites (acme.atlassian.net y acme-sandbox.atlassian.net). Un grupo creado en Directory:",
+      "opciones": [
+        { "id": "A", "texto": "Existe solo en el site donde lo creaste" },
+        { "id": "B", "texto": "Es de la organización y puede usarse para product access de los sites" },
+        { "id": "C", "texto": "Se replica automáticamente a Confluence on-prem" },
+        { "id": "D", "texto": "Solo sirve para tableros" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los grupos viven en la org. Luego se asignan a productos/sites. No confundir con project roles."
+    },
+    {
+      "id": "m01-q6",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "ACP-620 evalúa principalmente a:",
+      "opciones": [
+        { "id": "A", "texto": "Organization admin que configura SSO" },
+        { "id": "B", "texto": "Quien gestiona proyectos en Cloud (project admin / Jira admin de proyecto)" },
+        { "id": "C", "texto": "Desarrolladores Forge" },
+        { "id": "D", "texto": "Agentes de Jira Service Management exclusivamente" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Dominios: creación de proyectos, tableros, gestión de proyectos, automation, reporting. SSO y org policies son más de administrador de Cloud (otro examen)."
+    }
+  ]
+}

@@ -7,7 +7,7 @@
 - Proteger issues con **issue security** (multiempresa / departamentos).
 - Enlazar **Confluence** y mirar el **Marketplace** con criterio.
 - Diagnosticar accesos, permisos, workflows y automation.
-- Hacer un **examen simulado** ACP-620.
+- Hacer un **examen simulado** ACP-620 ([simulador en GitHub Pages](https://my-it-labs.github.io/jira-cloud-admin-201/)).
 
 ## Explicación
 

@@ -17,3 +17,4 @@ infra/.env
 
 # Node (si se instala el arnés de capturas en local)
 node_modules/
+simulador/dist/

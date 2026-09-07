@@ -1,0 +1,14 @@
+{
+  "bancos": [
+    "bancos/m01.json",
+    "bancos/m02.json",
+    "bancos/m03.json",
+    "bancos/m04.json",
+    "bancos/m05.json",
+    "bancos/m06.json",
+    "bancos/m07.json",
+    "bancos/m08.json",
+    "bancos/m09.json",
+    "bancos/m10-simulado.json"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "codigo": "ACP-620",
+  "titulo": "Managing Jira Projects for Cloud",
+  "subtitulo": "Simulador de preparación (preguntas originales del curso, no es el examen oficial)",
+  "preguntasObjetivo": 70,
+  "minutos": 180,
+  "corte": 0.64,
+  "dominios": {
+    "project-creation": { "peso": 0.13, "etiqueta": "Project creation" },
+    "board-configuration": { "peso": 0.29, "etiqueta": "Board configuration" },
+    "managing-projects": { "peso": 0.25, "etiqueta": "Managing projects" },
+    "automation": { "peso": 0.14, "etiqueta": "Automation" },
+    "reporting": { "peso": 0.19, "etiqueta": "Reporting" }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "m06",
+  "modulo": "M06",
+  "preguntas": [
+    {
+      "id": "m06-q1",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El campo existe, está en la pantalla, el usuario tiene Edit Issues, y aun así no se ve. Falta mirar:",
+      "opciones": [
+        { "id": "A", "texto": "El SMTP" },
+        { "id": "B", "texto": "Field configuration Hidden o contexto que excluye el proyecto" },
+        { "id": "C", "texto": "El sprint" },
+        { "id": "D", "texto": "Marketplace" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Tercera palanca. También issue type: el contexto puede limitarse a Bug y estás creando Story."
+    },
+    {
+      "id": "m06-q2",
+      "dominio": "project-creation",
+      "tipo": "single",
+      "stem": "En team-managed, el equivalente más cercano a screens es:",
+      "opciones": [
+        { "id": "A", "texto": "Permission scheme" },
+        { "id": "B", "texto": "Issue layout / fields del proyecto" },
+        { "id": "C", "texto": "Automation" },
+        { "id": "D", "texto": "Audit log" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "ACP-620 espera que no busques schemes globales en TMP."
+    }
+  ]
+}

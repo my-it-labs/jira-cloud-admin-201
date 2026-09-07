@@ -6,6 +6,8 @@ Administración de **Jira Cloud** en entornos empresariales. Cada alumno trabaja
 
 El curso prepara el examen **ACP-620: Managing Jira Projects for Cloud**. También cubre administración de organización y de site (usuarios, facturación, gobierno), que van más allá de ese examen: hace falta para el perfil de administrador de plataforma que pidió Atos.
 
+**Simulador de examen** (autoevaluación, cada intento es un sorteo distinto): [GitHub Pages](https://my-it-labs.github.io/jira-cloud-admin-201/) · código en [`simulador/`](simulador/).
+
 ## Antes de empezar
 
 | Requisito | Dónde |

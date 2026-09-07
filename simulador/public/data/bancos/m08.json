@@ -1,0 +1,62 @@
+{
+  "id": "m08",
+  "modulo": "M08",
+  "preguntas": [
+    {
+      "id": "m08-q1",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "La PMO quiere «issues abiertas de DEV por persona» en una página que se abre cada mañana. ¿Qué montas?",
+      "opciones": [
+        { "id": "A", "texto": "Solo un sprint report" },
+        { "id": "B", "texto": "Filtro JQL + gadget Two Dimensional o Filter Results en un dashboard" },
+        { "id": "C", "texto": "Issue security" },
+        { "id": "D", "texto": "Un workflow nuevo" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Dashboard + filtro. El sprint report es de un sprint concreto, no la pared diaria."
+    },
+    {
+      "id": "m08-q2",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "assignee = currentUser() en un filtro compartido:",
+      "opciones": [
+        { "id": "A", "texto": "Muestra siempre las issues de Ana" },
+        { "id": "B", "texto": "Es dinámico: cada viewer ve las suyas" },
+        { "id": "C", "texto": "Es JQL ilegal" },
+        { "id": "D", "texto": "Solo funciona en TMP" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Por eso es el quick filter y gadget Assigned to Me."
+    },
+    {
+      "id": "m08-q3",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "Te muestran un gráfico de áreas apiladas por estado a lo largo del tiempo. Es:",
+      "opciones": [
+        { "id": "A", "texto": "Velocity" },
+        { "id": "B", "texto": "Cumulative Flow Diagram" },
+        { "id": "C", "texto": "Created vs Resolved" },
+        { "id": "D", "texto": "Pie chart gadget" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Identificar el report por la forma es típico de ACP-620."
+    },
+    {
+      "id": "m08-q4",
+      "dominio": "reporting",
+      "tipo": "single",
+      "stem": "El gadget del dashboard falla para el director y a ti te funciona:",
+      "opciones": [
+        { "id": "A", "texto": "Jira caído" },
+        { "id": "B", "texto": "El filtro no está compartido con él / no tiene Browse" },
+        { "id": "C", "texto": "Falta Premium" },
+        { "id": "D", "texto": "El board es Kanban" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Permisos del filtro ∩ permisos del proyecto."
+    }
+  ]
+}
