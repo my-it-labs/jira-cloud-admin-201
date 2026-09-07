@@ -3,6 +3,8 @@
 [← Página anterior](M04-01-plantilla-corporativa.md) · [Siguiente página →](../M05-workflows-empresariales/README.md)
 
 > Preguntas de escenario alineadas con **ACP-620: Managing Jira Projects for Cloud**. No es el examen oficial.
+>
+> Cubren **este módulo**, no el siguiente. En el [simulador](https://my-it-labs.github.io/jira-cloud-admin-201/) el modo por módulo sortea 5 del mismo temario; el cronometrado de 70 mezcla todo el curso.
 
 Elige **una** respuesta. Luego abre la solución y lee el porqué, aunque hayas acertado.
 

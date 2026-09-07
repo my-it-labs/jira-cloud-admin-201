@@ -76,29 +76,29 @@
       "id": "m02-q6",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Metes a Luis en nortech-dev. Aún no tiene rol en DEV. ¿Puede transicionar elementos de trabajo?",
+      "stem": "Metes a Luis en nortech-dev. Aún no tiene rol en ningún espacio. ¿Puede transicionar elementos de trabajo?",
       "opciones": [
         { "id": "A", "texto": "Sí: el grupo otorga Transition Issues solo" },
-        { "id": "B", "texto": "No: el grupo no da permisos de trabajo; falta rol + permission scheme" },
-        { "id": "C", "texto": "Sí, si el espacio es Sample Scrum" },
+        { "id": "B", "texto": "No: el grupo no da permisos de trabajo; falta rol + esquema de permisos" },
+        { "id": "C", "texto": "Sí, si el espacio se llama Sample Scrum" },
         { "id": "D", "texto": "Sí, porque nortech-dev implica Jira admin" }
       ],
       "correctas": ["B"],
-      "explicacion": "El scheme dice qué hace el rol Developers. Tú pones el grupo en ese rol."
+      "explicacion": "El esquema dice qué hace el rol Developers. Tú pones el grupo en ese rol (Personas). El grupo solo no basta."
     },
     {
       "id": "m02-q7",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En DEV → Personas añades a Ana al rol Users. Ana no existe en el Directorio. ¿Qué ocurre?",
+      "stem": "En Personas de un espacio añades a Ana al rol Users. Ana no existe en el Directorio. ¿Qué ocurre?",
       "opciones": [
         { "id": "A", "texto": "Jira la invita sola a la organización" },
         { "id": "B", "texto": "No puedes dar de alta a la org desde Personas; primero se invita en Administration" },
-        { "id": "C", "texto": "Se crea como cliente JSM sin licencia" },
-        { "id": "D", "texto": "El tablero la añade al site" }
+        { "id": "C", "texto": "Se crea como cliente de portal sin licencia" },
+        { "id": "D", "texto": "El home Para ti la añade al site" }
       ],
       "correctas": ["B"],
-      "explicacion": "Personas asigna roles a cuentas que ya existen. El project admin no invita a la org."
+      "explicacion": "Personas asigna roles a cuentas que ya existen. El project admin no invita a la organización."
     },
     {
       "id": "m02-q8",
@@ -106,27 +106,27 @@
       "tipo": "single",
       "stem": "El invitado de Nortech ve No tienes acceso a este producto al abrir el site. ¿Primera palanca?",
       "opciones": [
-        { "id": "A", "texto": "Browse Projects del scheme de DEV" },
+        { "id": "A", "texto": "Browse Projects del esquema de un espacio" },
         { "id": "B", "texto": "Acceso a la aplicación Jira (grupo con product access)" },
-        { "id": "C", "texto": "Notification scheme" },
-        { "id": "D", "texto": "Nombre del tablero Kanban" }
+        { "id": "C", "texto": "El nombre del espacio en Más espacios" },
+        { "id": "D", "texto": "Make bulk changes" }
       ],
       "correctas": ["B"],
-      "explicacion": "No abre Jira: no es Browse. Administration → Configuración de acceso a la aplicación."
+      "explicacion": "No abre Jira: no es Browse. Administration → Aplicaciones → Configuración de acceso a la aplicación."
     },
     {
       "id": "m02-q9",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Creas grupos departamentales. ¿Qué nombres pide el curso para no arrastrar un typo?",
+      "stem": "Creas grupos departamentales de Nortech. ¿Qué nombres pide el curso para no arrastrar un typo?",
       "opciones": [
-        { "id": "A", "texto": "DEV, SUP, OPS como grupos (igual que las claves de espacio)" },
+        { "id": "A", "texto": "jira-users y jira-administrators solamente" },
         { "id": "B", "texto": "nortech-dev, nortech-soporte, nortech-ops, nortech-pmo, nortech-rrhh, nortech-calidad" },
-        { "id": "C", "texto": "jira-users y jira-administrators solo" },
-        { "id": "D", "texto": "Un grupo por elemento de trabajo" }
+        { "id": "C", "texto": "Un grupo por elemento de trabajo" },
+        { "id": "D", "texto": "Nortech Dev y Soporte Nortech, con espacios y mayúsculas" }
       ],
       "correctas": ["B"],
-      "explicacion": "Kebab y minúsculas. Las claves DEV/SUP son de espacios (M03), no de grupos."
+      "explicacion": "Kebab y minúsculas. Un typo ahora se arrastra el resto del curso."
     },
     {
       "id": "m02-q10",
@@ -135,9 +135,9 @@
       "stem": "Invitas a un compañero para labs de seguridad. ¿Qué rol de organización le das?",
       "opciones": [
         { "id": "A", "texto": "Organization admin, para que vea Facturación" },
-        { "id": "B", "texto": "Usuario (no admin); si todos son admin, M04–M10 no demuestran restricción" },
+        { "id": "B", "texto": "Usuario (no admin); si todos son admin, no demuestras restricción" },
         { "id": "C", "texto": "Site admin y Jira admin a la vez" },
-        { "id": "D", "texto": "Ninguno: se invita desde el tablero" }
+        { "id": "D", "texto": "Ninguno: se invita desde Personas de un espacio" }
       ],
       "correctas": ["B"],
       "explicacion": "El invitado no debe ver Administration. Tú eres el org admin del trial."
@@ -148,13 +148,13 @@
       "tipo": "single",
       "stem": "Revocas temporalmente el product access del invitado y recarga en incógnito. ¿Qué compruebas?",
       "opciones": [
-        { "id": "A", "texto": "Que el permission scheme se ha borrado" },
+        { "id": "A", "texto": "Que el esquema de permisos se ha borrado" },
         { "id": "B", "texto": "El síntoma no tengo Jira, para no diagnosticar Browse cuando falta el producto" },
         { "id": "C", "texto": "Que los grupos del Directorio desaparecen" },
-        { "id": "D", "texto": "Que Sample Scrum se convierte en DEV" }
+        { "id": "D", "texto": "Que el invitado pasa a organization admin" }
       ],
       "correctas": ["B"],
-      "explicacion": "Puerta 1 vs puerta 2. Sin aplicación, el scheme es irrelevante."
+      "explicacion": "Puerta 1 vs puerta 2. Sin aplicación, el esquema de permisos es irrelevante."
     },
     {
       "id": "m02-q12",
@@ -162,7 +162,7 @@
       "tipo": "single",
       "stem": "El usuario de prueba ve Facturación y puede crear grupos. ¿Qué hiciste mal?",
       "opciones": [
-        { "id": "A", "texto": "Le faltaba Browse en DEV" },
+        { "id": "A", "texto": "Le faltaba Browse en un espacio" },
         { "id": "B", "texto": "Lo nombraste administrador de organización o de site" },
         { "id": "C", "texto": "No le diste Assignable User" },
         { "id": "D", "texto": "El plan Free lo hace admin a todos" }
@@ -178,8 +178,8 @@
       "opciones": [
         { "id": "A", "texto": "Assignable User" },
         { "id": "B", "texto": "Assign Issues (quién asigna)" },
-        { "id": "C", "texto": "Create Issues" },
-        { "id": "D", "texto": "Un gadget de asignados" }
+        { "id": "C", "texto": "Product access a Jira" },
+        { "id": "D", "texto": "Ser organization admin" }
       ],
       "correctas": ["B"],
       "explicacion": "Marta es asignable. Carlos necesita Assign Issues. Son dos permisos distintos."
@@ -188,12 +188,12 @@
       "id": "m02-q14",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Entra un desarrollador nuevo y Nortech tiene 15 espacios CMP con nortech-dev en Developers. Lo más limpio:",
+      "stem": "Entra un desarrollador nuevo y nortech-dev ya está en el rol Developers de varios espacios. Lo más limpio:",
       "opciones": [
-        { "id": "A", "texto": "Añadirlo a Personas de cada uno de los 15 espacios" },
+        { "id": "A", "texto": "Añadirlo a Personas de cada espacio, uno a uno" },
         { "id": "B", "texto": "Añadirlo al grupo nortech-dev en el Directorio" },
         { "id": "C", "texto": "Hacerlo Jira admin" },
-        { "id": "D", "texto": "Compartirle 15 dashboards" }
+        { "id": "D", "texto": "Invitarlo otra vez como organization admin" }
       ],
       "correctas": ["B"],
       "explicacion": "Un alta en el grupo hereda todos los roles donde ya está el grupo."
@@ -202,284 +202,200 @@
       "id": "m02-q15",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El scheme dice: el rol Developers puede Transition issues. ¿Cómo lo recibe nortech-dev?",
+      "stem": "El esquema dice: el rol Developers puede transicionar. ¿Cómo lo recibe nortech-dev?",
       "opciones": [
-        { "id": "A", "texto": "El grupo se escribe en el scheme en lugar del rol" },
-        { "id": "B", "texto": "Pones nortech-dev en el rol Developers (Personas) de cada espacio que use ese scheme" },
+        { "id": "A", "texto": "El grupo se escribe en el esquema en lugar del rol" },
+        { "id": "B", "texto": "Pones nortech-dev en el rol Developers (Personas) de cada espacio que use ese esquema" },
         { "id": "C", "texto": "Basta con product access" },
-        { "id": "D", "texto": "El grupo hereda Transition de jira-administrators" }
+        { "id": "D", "texto": "El grupo hereda la transición de jira-administrators" }
       ],
       "correctas": ["B"],
-      "explicacion": "Scheme habla de roles. Personas mapea grupo → rol. Tres palancas, no una."
+      "explicacion": "El esquema habla de roles. Personas mapea grupo → rol. Tres palancas, no una."
     },
     {
       "id": "m02-q16",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO ve DEV en Más espacios pero no puede pulsar Crear. Suele faltar:",
-      "opciones": [
-        { "id": "A", "texto": "Product access (no abre Jira)" },
-        { "id": "B", "texto": "Create Issues en el permission scheme / su rol" },
-        { "id": "C", "texto": "SMTP" },
-        { "id": "D", "texto": "Advanced Roadmaps" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Si ve el espacio, Browse está. Crear es otro permiso del scheme."
-    },
-    {
-      "id": "m02-q17",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "¿Qué permiso de espacio permite componentes, versiones y Personas (CMP) sin ser Jira admin?",
-      "opciones": [
-        { "id": "A", "texto": "Browse Projects" },
-        { "id": "B", "texto": "Administer Projects (administrador de espacio)" },
-        { "id": "C", "texto": "Make bulk changes" },
-        { "id": "D", "texto": "Assignable User" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Project admin ≠ Jira admin. En CMP no edita schemes globales."
-    },
-    {
-      "id": "m02-q18",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "RRHH debe no ver ni el nombre del espacio DEV. ¿Qué quitas?",
-      "opciones": [
-        { "id": "A", "texto": "El product access de todo Jira a nortech-rrhh" },
-        { "id": "B", "texto": "Browse Projects (y el rol que lo concede) para nortech-rrhh en DEV" },
-        { "id": "C", "texto": "Create Issues, dejando Browse" },
-        { "id": "D", "texto": "El filtro del tablero, solo" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Sin Browse el espacio no existe para ese usuario. Quitar Jira entero a RRHH es excesivo si usan PMO."
-    },
-    {
-      "id": "m02-q19",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Soporte puede comentar en DEV pero no editar campos. Distingues:",
-      "opciones": [
-        { "id": "A", "texto": "Add Comments ≠ Edit Issues; se conceden aparte en el scheme" },
-        { "id": "B", "texto": "Comment implica Edit siempre" },
-        { "id": "C", "texto": "Es un fallo de product access" },
-        { "id": "D", "texto": "Hay que hacerlos org admin" }
-      ],
-      "correctas": ["A"],
-      "explicacion": "Permisos granulares. No subas a Jira admin para un comentario."
-    },
-    {
-      "id": "m02-q20",
-      "dominio": "managing-projects",
-      "tipo": "single",
       "stem": "El trial dejó acceso a Jira a todos los usuarios. En Nortech quieres acotar. ¿Dónde?",
       "opciones": [
-        { "id": "A", "texto": "Notification scheme de Sample Scrum" },
+        { "id": "A", "texto": "Personas de Sample Scrum" },
         { "id": "B", "texto": "Administration → Aplicaciones → Configuración de acceso a la aplicación (grupos Nortech, no all users)" },
-        { "id": "C", "texto": "Columnas del tablero" },
-        { "id": "D", "texto": "Issue security de un único ticket" }
+        { "id": "C", "texto": "El home Para ti" },
+        { "id": "D", "texto": "Facturación → Añadir datos de pago" }
       ],
       "correctas": ["B"],
       "explicacion": "Product access por grupos. Quita el acceso indiscriminado del trial."
     },
     {
-      "id": "m02-q21",
+      "id": "m02-q17",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un espacio abierto a Any logged in user en Browse. Efecto:",
-      "opciones": [
-        { "id": "A", "texto": "Solo nortech-dev lo ve" },
-        { "id": "B", "texto": "Cualquiera con product access a Jira puede ver el espacio" },
-        { "id": "C", "texto": "Nadie lo ve hasta ser org admin" },
-        { "id": "D", "texto": "Solo funciona en TMP" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Any logged in user ≠ Any user de Internet, pero es amplio. En corporativo usa grupos/roles."
-    },
-    {
-      "id": "m02-q22",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Roles por defecto de un CMP (Administrators, Developers, Users). ¿Para qué sirven?",
+      "stem": "Roles por defecto de un espacio (p. ej. Developers). ¿Para qué sirven?",
       "opciones": [
         { "id": "A", "texto": "Sustituyen a los grupos del Directorio" },
-        { "id": "B", "texto": "Son huecos que el scheme referencia; tú metes grupos o usuarios" },
+        { "id": "B", "texto": "Son huecos que el esquema de permisos referencia; tú metes grupos o usuarios" },
         { "id": "C", "texto": "Son product access" },
-        { "id": "D", "texto": "Solo existen en Sample Scrum" }
+        { "id": "D", "texto": "Invitan a la organización ellos solos" }
       ],
       "correctas": ["B"],
-      "explicacion": "Rol ≠ grupo. El scheme nombra roles; Personas rellena la membresía."
+      "explicacion": "Rol ≠ grupo. El esquema nombra roles; Personas rellena la membresía."
     },
     {
-      "id": "m02-q23",
+      "id": "m02-q18",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Añades a Elena solo como usuaria suelta en Developers de DEV (sin grupo). Dentro de un año:",
+      "stem": "Añades a Elena solo como usuaria suelta en Developers de un espacio (sin grupo). Dentro de un año:",
       "opciones": [
-        { "id": "A", "texto": "Escala igual que nortech-dev en 15 espacios" },
+        { "id": "A", "texto": "Escala igual que nortech-dev en todos los espacios" },
         { "id": "B", "texto": "Habrá que tocarla espacio a espacio; por eso el modelo corporativo usa grupos" },
-        { "id": "C", "texto": "Jira la replica a todos los CMP" },
+        { "id": "C", "texto": "Jira la replica a todos los espacios sola" },
         { "id": "D", "texto": "Pasa a org admin sola" }
       ],
       "correctas": ["B"],
       "explicacion": "Excepciones puntuales sí; el departamento, no."
     },
     {
+      "id": "m02-q19",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "RRHH debe no ver ni el nombre del espacio DEV, pero sí usar Jira en otros espacios. ¿Qué quitas?",
+      "opciones": [
+        { "id": "A", "texto": "El product access de todo Jira a nortech-rrhh" },
+        { "id": "B", "texto": "Browse Projects (y el rol que lo concede) para nortech-rrhh en DEV" },
+        { "id": "C", "texto": "Assignable User en todos los espacios" },
+        { "id": "D", "texto": "El acceso a admin.atlassian.com" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Sin Browse el espacio no existe para ese usuario. Quitar Jira entero a RRHH es excesivo si usan otros espacios."
+    },
+    {
+      "id": "m02-q20",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "RRHH debe invitar altas sin ser organization admin. Si el plan lo ofrece:",
+      "opciones": [
+        { "id": "A", "texto": "Les das project admin de un espacio" },
+        { "id": "B", "texto": "User access admin / trusted: invitan a la org sin ser org admin total" },
+        { "id": "C", "texto": "Les das Jira admin global" },
+        { "id": "D", "texto": "Invitan desde Personas de cualquier espacio" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Personas no invita a la org. Trusted acota el poder frente a org admin."
+    },
+    {
+      "id": "m02-q21",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Tras invitar y crear grupos, ¿dónde buscas el rastro si el plan lo muestra?",
+      "opciones": [
+        { "id": "A", "texto": "Home Para ti" },
+        { "id": "B", "texto": "Administration → Seguridad (org) y/o Jira → Sistema → Registro de auditoría" },
+        { "id": "C", "texto": "Personas de un espacio" },
+        { "id": "D", "texto": "El desplegable de Assignee" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Hoy basta saber dónde está. Free puede no mostrar nada útil; Premium tiene más eventos."
+    },
+    {
+      "id": "m02-q22",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Invitar a usuarios falla en un site Free con 10 cuentas. Causa probable:",
+      "opciones": [
+        { "id": "A", "texto": "Los grupos están mal escritos" },
+        { "id": "B", "texto": "Tope de 10 usuarios: quita cuentas de prueba o sube de plan" },
+        { "id": "C", "texto": "Falta Browse en un espacio" },
+        { "id": "D", "texto": "Cloud no permite invitaciones" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Por eso el curso usa trial Premium/Standard. El grupo no evita el asiento."
+    },
+    {
+      "id": "m02-q23",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Estás solo en el trial. ¿Por qué M02 pide un segundo usuario (aunque sea tu alias)?",
+      "opciones": [
+        { "id": "A", "texto": "Jira Cloud exige dos org admins" },
+        { "id": "B", "texto": "Sin un no-admin no validas product access ni permisos de espacio" },
+        { "id": "C", "texto": "El segundo usuario convierte Sample Scrum en un espacio Nortech" },
+        { "id": "D", "texto": "Free no funciona con un solo usuario" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Tú eres org admin: no eres el sujeto de las restricciones. Incógnito + invitado."
+    },
+    {
       "id": "m02-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En JSM, un cliente del portal y un agente licenciado. En Jira Software de Nortech, el invitado de M02 es:",
+      "stem": "Creas nortech-admins y solo te metes tú. ¿Ya eres más administrador de Jira?",
       "opciones": [
-        { "id": "A", "texto": "Cliente de portal que no cuenta como usuario" },
-        { "id": "B", "texto": "Usuario con producto Jira (asiento); no es cliente JSM por estar en nortech-soporte" },
-        { "id": "C", "texto": "Gratis si no lo pones en un grupo" },
-        { "id": "D", "texto": "Solo existe en Sample Scrum" }
+        { "id": "A", "texto": "Sí: el nombre del grupo concede Administer Jira" },
+        { "id": "B", "texto": "No: el grupo está vacío de permisos hasta que se asignen (no es el lab de hoy)" },
+        { "id": "C", "texto": "Sí, en todos los espacios team-managed" },
+        { "id": "D", "texto": "Sí, sustituye a organization admin" }
       ],
       "correctas": ["B"],
-      "explicacion": "Free/Standard/Premium cuentan usuarios de Jira. No mezcles clientes JSM con licensed users."
+      "explicacion": "El reto de M02-01 es solo el grupo. El nombre no concede Administer Jira."
     },
     {
       "id": "m02-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Al asignar, el desplegable no busca usuarios. Además de Assignable User, a veces falta el permiso global:",
+      "stem": "nortech-soporte existe, el invitado es miembro, pero no abre Jira. ¿Qué faltó?",
       "opciones": [
-        { "id": "A", "texto": "Make bulk changes" },
-        { "id": "B", "texto": "Browse users and groups" },
-        { "id": "C", "texto": "Administer Jira" },
-        { "id": "D", "texto": "Share dashboards and filters" }
+        { "id": "A", "texto": "Ponerlo en Personas de Sample Scrum" },
+        { "id": "B", "texto": "Conceder a ese grupo (o al usuario) acceso de usuario a la aplicación Jira" },
+        { "id": "C", "texto": "Hacerlo organization admin" },
+        { "id": "D", "texto": "Darle Make bulk changes" }
       ],
       "correctas": ["B"],
-      "explicacion": "Sin Browse users, el picker no lista gente. Sigue haciendo falta Assignable User en el espacio."
+      "explicacion": "Grupo en Directorio ≠ product access. Son pantallas distintas."
     },
     {
       "id": "m02-q26",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Luis no ve un filtro compartido con nortech-dev. Ya está en el grupo. ¿Qué más?",
+      "stem": "El invitado entra a Jira y aún no hay espacios corporativos de Nortech. ¿Está roto Jira?",
       "opciones": [
-        { "id": "A", "texto": "Nada: el share basta aunque no tenga Browse en los espacios del JQL" },
-        { "id": "B", "texto": "Necesita Browse (y product access): el share no salta permisos de espacio" },
-        { "id": "C", "texto": "Debe ser org admin" },
-        { "id": "D", "texto": "Hay que publicarlo en Sample Scrum" }
+        { "id": "A", "texto": "Sí: sin un espacio DEV no hay product access" },
+        { "id": "B", "texto": "No: puerta 1 OK; faltan espacios y roles, no la aplicación" },
+        { "id": "C", "texto": "Sí: debe verse Sample Scrum como espacio de Soporte" },
+        { "id": "D", "texto": "Sí: hay que hacerlo org admin" }
       ],
       "correctas": ["B"],
-      "explicacion": "Filtro ∩ Browse. Sin permiso de espacio, los elementos no existen para él."
+      "explicacion": "Comprueba tu entendimiento de M02-02. Vacío ≠ sin licencia."
     },
     {
       "id": "m02-q27",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Issue security scheme frente a permission scheme:",
+      "stem": "Eres solo administrador de espacio. Un usuario ya está en la org y en Jira. ¿Puedes meterlo en Developers?",
       "opciones": [
-        { "id": "A", "texto": "Son lo mismo" },
-        { "id": "B", "texto": "Permission = acciones en el espacio; issue security = quién ve ciertos elementos aunque tenga Browse" },
-        { "id": "C", "texto": "Issue security invita a la org" },
-        { "id": "D", "texto": "Solo existen en TMP" }
+        { "id": "A", "texto": "No: solo el org admin toca Personas" },
+        { "id": "B", "texto": "Sí: Personas del espacio asigna roles a usuarios o grupos existentes" },
+        { "id": "C", "texto": "Sí, y además lo invitas a la org" },
+        { "id": "D", "texto": "No: hay que editar el esquema de permisos" }
       ],
       "correctas": ["B"],
-      "explicacion": "Browse te mete en el espacio; el nivel de seguridad oculta tickets sensibles (M10)."
+      "explicacion": "El administrador de espacio gestiona Personas. No cubre el alta en la organización."
     },
     {
       "id": "m02-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Calidad debe crear bugs en DEV pero no transicionar el flujo de desarrollo. Configuras:",
+      "stem": "Un usuario con Jira no encuentra DEV en Buscar ni en Más espacios. Tras confirmar product access:",
       "opciones": [
-        { "id": "A", "texto": "Create Issues sí; Transition Issues no, vía rol/scheme (p. ej. Users vs Developers)" },
-        { "id": "B", "texto": "Solo product access, que ya incluye transiciones" },
-        { "id": "C", "texto": "Hacerlos Jira admin y pedirles que no transicionen" },
-        { "id": "D", "texto": "Quitarles Jira y que escriban en Confluence" }
+        { "id": "A", "texto": "El SMTP" },
+        { "id": "B", "texto": "Browse Projects / membresía de rol o grupo en ese espacio" },
+        { "id": "C", "texto": "Si el site es Premium o Standard" },
+        { "id": "D", "texto": "Si el usuario es organization admin" }
       ],
-      "correctas": ["A"],
-      "explicacion": "Permisos distintos. nortech-calidad en un rol con Create, no con Transition."
+      "correctas": ["B"],
+      "explicacion": "Misma lógica que la puerta 2: abre Jira (puerta 1 OK). Falta rol + Browse."
     },
     {
       "id": "m02-q29",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "¿A quién das Delete Issues en los CMP de Nortech?",
-      "opciones": [
-        { "id": "A", "texto": "A Any logged in user" },
-        { "id": "B", "texto": "A un rol estrecho (Administrators o equivalente), no a todo Developers" },
-        { "id": "C", "texto": "A nortech-rrhh por defecto" },
-        { "id": "D", "texto": "A nadie: Cloud no tiene Delete Issues" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Borrar es irreversible a efectos prácticos. No lo copies del scheme de muestra sin revisar."
-    },
-    {
-      "id": "m02-q30",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Un lead puede transicionar a Hecho pero no poner resolución. Suele ser:",
-      "opciones": [
-        { "id": "A", "texto": "Falta product access" },
-        { "id": "B", "texto": "Transition Issues no implica Resolve Issues / la pantalla de resolución no está en esa transición" },
-        { "id": "C", "texto": "Falta SMTP" },
-        { "id": "D", "texto": "El usuario no está en la org" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Permiso + pantalla de workflow. No es un problema de Directorio."
-    },
-    {
-      "id": "m02-q31",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Mueves un elemento de DEV a SUP. Además de Move Issues, hace falta:",
-      "opciones": [
-        { "id": "A", "texto": "Solo ser org admin" },
-        { "id": "B", "texto": "Create Issues (u equivalente) en el destino y Browse en ambos espacios" },
-        { "id": "C", "texto": "Que ambos sean Sample Scrum" },
-        { "id": "D", "texto": "Un dashboard compartido" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Mover cruza dos espacios. El scheme de cada uno aplica."
-    },
-    {
-      "id": "m02-q32",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "OPS no puede enlazar un incidente con un ticket de DEV. Revisa:",
-      "opciones": [
-        { "id": "A", "texto": "Link Issues en el scheme y Browse en el otro espacio" },
-        { "id": "B", "texto": "Solo el nombre del tablero" },
-        { "id": "C", "texto": "Facturación" },
-        { "id": "D", "texto": "Si el site es Free (los enlaces no existen en Free)" }
-      ],
-      "correctas": ["A"],
-      "explicacion": "Enlazar exige permiso y visibilidad del destino. Free sí permite links."
-    },
-    {
-      "id": "m02-q33",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Un contratista registra horas en DEV. Permisos típicos:",
-      "opciones": [
-        { "id": "A", "texto": "Solo Browse; Work on Issues viene gratis" },
-        { "id": "B", "texto": "Work on Issues (y a veces Delete own worklogs), más Browse" },
-        { "id": "C", "texto": "Administer Projects" },
-        { "id": "D", "texto": "Organization admin" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "El worklog es un permiso de elemento, no de org."
-    },
-    {
-      "id": "m02-q34",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Alguien no recibe correo de mención en DEV. ¿Es un fallo de Browse?",
-      "opciones": [
-        { "id": "A", "texto": "Sí: notification scheme y permiso son lo mismo" },
-        { "id": "B", "texto": "No necesariamente: el notification scheme avisa; el permission scheme autoriza" },
-        { "id": "C", "texto": "Sí: sin Browse no hay SMTP de site" },
-        { "id": "D", "texto": "Las menciones solo funcionan en Sample Scrum" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Puede ver el espacio y no estar en el notification scheme (o al revés en mails)."
-    },
-    {
-      "id": "m02-q35",
       "dominio": "managing-projects",
       "tipo": "single",
       "stem": "PMO pide que todo nortech-pmo sea Jira admin para ir más rápido. ¿Por qué no?",
@@ -487,224 +403,304 @@
         { "id": "A", "texto": "Jira admin no existe en Cloud" },
         { "id": "B", "texto": "Es un agujero: editarían schemes, campos y seguridad de todo el site" },
         { "id": "C", "texto": "PMO no puede tener product access" },
-        { "id": "D", "texto": "Solo Sample Scrum admite Jira admin" }
+        { "id": "D", "texto": "Solo el invitado puede ser Jira admin" }
       ],
       "correctas": ["B"],
       "explicacion": "Delegación = roles de espacio + grupos. Jira admin es de plataforma."
     },
     {
-      "id": "m02-q36",
+      "id": "m02-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Sara está en nortech-dev y nortech-calidad. En DEV, Developers tiene Edit y Calidad no. ¿Qué gana?",
+      "stem": "Sales de nortech-dev. El grupo sigue en Developers de varios espacios. Efecto:",
       "opciones": [
-        { "id": "A", "texto": "El denegador gana siempre: no edita" },
-        { "id": "B", "texto": "La unión de permisos de sus roles: puede editar" },
-        { "id": "C", "texto": "Solo el primer grupo alfabético" },
-        { "id": "D", "texto": "Ningún permiso hasta elegir un grupo" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "En Jira los permisos se acumulan. No hay deny explícito por grupo."
-    },
-    {
-      "id": "m02-q37",
-      "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Sales de nortech-dev. El grupo sigue en Developers de 15 espacios. Efecto:",
-      "opciones": [
-        { "id": "A", "texto": "Sigues con el rol en los 15" },
-        { "id": "B", "texto": "Pierdes el rol vía grupo en esos espacios (salvo membresía suelta)" },
+        { "id": "A", "texto": "Sigues con el rol en esos espacios" },
+        { "id": "B", "texto": "Pierdes el rol vía grupo (salvo membresía suelta)" },
         { "id": "C", "texto": "Te quitan el product access automáticamente" },
-        { "id": "D", "texto": "Se borra el permission scheme" }
+        { "id": "D", "texto": "Se borra el esquema de permisos" }
       ],
       "correctas": ["B"],
       "explicacion": "Por eso el offboarding es quitar del grupo. Product access es otra palanca."
     },
     {
+      "id": "m02-q31",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Dónde invitas al compañero de práctica?",
+      "opciones": [
+        { "id": "A", "texto": "Personas de un espacio" },
+        { "id": "B", "texto": "admin.atlassian.com → Directorio → Usuarios → Invitar a usuarios" },
+        { "id": "C", "texto": "Jira → Configuración → Sistema → Make bulk changes" },
+        { "id": "D", "texto": "El home Para ti → Crear" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "El diálogo pide correo y aplicaciones (Jira). Rol: usuario, no administrador."
+    },
+    {
+      "id": "m02-q32",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Dónde creas nortech-ops y el resto de grupos departamentales?",
+      "opciones": [
+        { "id": "A", "texto": "Personas del espacio" },
+        { "id": "B", "texto": "Directorio → Grupos" },
+        { "id": "C", "texto": "Esquema de permisos" },
+        { "id": "D", "texto": "Facturación" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Los grupos viven en la organización. Personas solo asigna un grupo ya existente a un rol."
+    },
+    {
+      "id": "m02-q33",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "¿Quién puede nombrar a otro organization admin en Nortech?",
+      "opciones": [
+        { "id": "A", "texto": "Cualquier administrador de espacio" },
+        { "id": "B", "texto": "Cualquier miembro de nortech-dev" },
+        { "id": "C", "texto": "Un organization admin (con cuidado: no lo hagas con el invitado)" },
+        { "id": "D", "texto": "Cualquier usuario con product access" }
+      ],
+      "correctas": ["C"],
+      "explicacion": "M02-02: encuentra la pantalla y no lo hagas. Para labs de espacio basta usuario + grupos."
+    },
+    {
+      "id": "m02-q34",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Orden conceptual de las palancas para que alguien trabaje en un espacio:",
+      "opciones": [
+        { "id": "A", "texto": "Rol de espacio primero; luego invitar a la org" },
+        { "id": "B", "texto": "Invitar a la org → acceso al producto Jira → grupos → rol de espacio + esquema de permisos" },
+        { "id": "C", "texto": "Esquema de permisos, luego crear el site" },
+        { "id": "D", "texto": "Solo Make bulk changes" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Cuatro palancas en ese orden. El esquema no actúa si no hay producto ni usuario."
+    },
+    {
+      "id": "m02-q35",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Al invitar, el diálogo pide correo y aplicaciones. Para el lab de M02 eliges:",
+      "opciones": [
+        { "id": "A", "texto": "Aplicación Jira y rol usuario (no administrador)" },
+        { "id": "B", "texto": "Sin aplicación y rol organization admin" },
+        { "id": "C", "texto": "Solo Confluence, nunca Jira" },
+        { "id": "D", "texto": "Rol Jira admin global desde el diálogo de invitación" }
+      ],
+      "correctas": ["A"],
+      "explicacion": "M02-01: aplicación Jira, rol usuario. El invitado no debe ser admin."
+    },
+    {
+      "id": "m02-q36",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "En Directorio no aparece Grupos. Causa probable:",
+      "opciones": [
+        { "id": "A", "texto": "El espacio DEV aún no existe" },
+        { "id": "B", "texto": "No eres administrador de organización; vuelve a la cuenta del trial" },
+        { "id": "C", "texto": "Falta Assignable User" },
+        { "id": "D", "texto": "Make bulk changes está denegado" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Grupos es de la org. Sin org admin no ves esa pantalla."
+    },
+    {
+      "id": "m02-q37",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "Creaste NorteCh Dev (con mayúsculas y espacio) además de nortech-dev. ¿Qué problema hay?",
+      "opciones": [
+        { "id": "A", "texto": "Ninguno: Jira unifica los nombres" },
+        { "id": "B", "texto": "Grupo duplicado con otro nombre; usa exactamente nortech-dev (kebab, minúsculas)" },
+        { "id": "C", "texto": "El segundo nombre concede Jira admin" },
+        { "id": "D", "texto": "Hay que borrarlos y usar jira-users" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Errores frecuentes de M02-01: mayúsculas y espacios crean otro grupo. El typo se arrastra."
+    },
+    {
       "id": "m02-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "RRHH debe invitar altas sin ser organization admin. Si el plan lo ofrece:",
+      "stem": "Añades tu usuario a nortech-dev y al invitado a nortech-soporte. ¿Eso ya les da trabajo en un espacio?",
       "opciones": [
-        { "id": "A", "texto": "Les das project admin de DEV" },
-        { "id": "B", "texto": "User access admin / trusted: invitan a la org sin SSO ni billing" },
-        { "id": "C", "texto": "Les das Jira admin global" },
-        { "id": "D", "texto": "Invitan desde Personas de PMO" }
+        { "id": "A", "texto": "Sí: la membresía del grupo abre todos los espacios" },
+        { "id": "B", "texto": "No: falta product access (si no lo tienen) y luego rol + esquema" },
+        { "id": "C", "texto": "Sí, pero solo en team-managed" },
+        { "id": "D", "texto": "Sí, porque nortech-soporte implica Browse en todos los espacios" }
       ],
       "correctas": ["B"],
-      "explicacion": "Personas no invita a la org. Trusted acota el poder frente a org admin."
+      "explicacion": "Membresía de departamento ≠ permiso de trabajo. El esquema habla de roles, no del grupo solo."
     },
     {
       "id": "m02-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Tras invitar y crear grupos, ¿dónde buscas el rastro si el plan lo muestra?",
+      "stem": "Para validar al invitado, M02-02 pide una ventana de incógnito. ¿Por qué?",
       "opciones": [
-        { "id": "A", "texto": "Sprint report" },
-        { "id": "B", "texto": "Administration → Seguridad (org) y/o Jira → Sistema → Registro de auditoría" },
-        { "id": "C", "texto": "Filtro del tablero" },
-        { "id": "D", "texto": "Componentes de DEV" }
+        { "id": "A", "texto": "Incógnito convierte al invitado en org admin" },
+        { "id": "B", "texto": "Tu sesión de admin no muestra lo que ve un no-admin; hay que entrar con el invitado" },
+        { "id": "C", "texto": "Incógnito concede product access" },
+        { "id": "D", "texto": "Sin incógnito no existen los grupos" }
       ],
       "correctas": ["B"],
-      "explicacion": "Free puede no mostrar nada útil. Premium tiene más eventos. M10 lo retoma."
+      "explicacion": "Tú no eres el sujeto de las restricciones. Entra con el invitado, revoca, recarga y vuelve a conceder."
     },
     {
       "id": "m02-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Invitar a usuarios falla en un site Free con 10 cuentas. Causa probable:",
+      "stem": "Make bulk changes se concede en permisos globales (Sistema). Aun así, el usuario:",
       "opciones": [
-        { "id": "A", "texto": "Los grupos están mal escritos" },
-        { "id": "B", "texto": "Tope de 10 usuarios: quita cuentas de prueba o sube de plan" },
-        { "id": "C", "texto": "Falta Browse en Sample Scrum" },
-        { "id": "D", "texto": "Cloud no permite invitaciones" }
+        { "id": "A", "texto": "Puede hacer bulk en cualquier espacio del site, sin más" },
+        { "id": "B", "texto": "Solo puede hacer bulk donde ya tenga permiso sobre el elemento de trabajo" },
+        { "id": "C", "texto": "Pasa a organization admin" },
+        { "id": "D", "texto": "Pierde product access" }
       ],
       "correctas": ["B"],
-      "explicacion": "Por eso el curso usa trial Premium/Standard. El grupo no evita el asiento."
+      "explicacion": "Los globales son de site. Siguen haciendo falta los permisos de elemento en cada espacio."
     },
     {
       "id": "m02-q41",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Estás solo en el trial. ¿Por qué M02 pide un segundo usuario (aunque sea tu alias)?",
+      "stem": "El administrador de espacio gestiona Personas. ¿Puede invitar a un proveedor a la organización?",
       "opciones": [
-        { "id": "A", "texto": "Jira Cloud exige dos org admins" },
-        { "id": "B", "texto": "Sin un no-admin no validas product access ni permisos de espacio" },
-        { "id": "C", "texto": "El segundo usuario convierte Sample Scrum en DEV" },
-        { "id": "D", "texto": "Free no funciona con un solo usuario" }
+        { "id": "A", "texto": "Sí, desde Personas" },
+        { "id": "B", "texto": "No: invitar a la org es de org/site admin (o user access admin si el plan lo ofrece)" },
+        { "id": "C", "texto": "Sí, si el espacio es company-managed" },
+        { "id": "D", "texto": "Sí, si el proveedor está en nortech-dev" }
       ],
       "correctas": ["B"],
-      "explicacion": "Tú eres org admin: no eres el sujeto de las restricciones. Incógnito + invitado."
+      "explicacion": "Delegación de M02: el administrador de espacio no invita a la org. Personas rellena roles de gente que ya existe."
     },
     {
       "id": "m02-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Creas nortech-admins y solo te metes tú. ¿Ya eres más administrador de Jira?",
+      "stem": "Tú (cuenta del trial) vs el invitado. ¿Quién debe ser organization admin?",
       "opciones": [
-        { "id": "A", "texto": "Sí: el nombre del grupo concede Administer Jira" },
-        { "id": "B", "texto": "No: el grupo está vacío de permisos hasta Global permissions / schemes (M04)" },
-        { "id": "C", "texto": "Sí, en todos los TMP" },
-        { "id": "D", "texto": "Sí, sustituye a organization admin" }
+        { "id": "A", "texto": "Los dos, para que el lab sea simétrico" },
+        { "id": "B", "texto": "Tú; el invitado es usuario, no admin" },
+        { "id": "C", "texto": "Solo el invitado" },
+        { "id": "D", "texto": "Nadie: Cloud no tiene organization admin" }
       ],
       "correctas": ["B"],
-      "explicacion": "El reto de M02-01 es solo el grupo. No dispares permisos extra aún."
+      "explicacion": "Directorio: tú admin de org/site; el invitado, usuario. Si todos son admin, no hay restricción que demostrar."
     },
     {
       "id": "m02-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "nortech-soporte existe, el invitado es miembro, pero no abre Jira. ¿Qué faltó?",
+      "stem": "El invitado lleva horas en estado Invitado y no acepta. ¿Qué haces?",
       "opciones": [
-        { "id": "A", "texto": "Ponerlo en Personas de Sample Scrum" },
-        { "id": "B", "texto": "Conceder a ese grupo (o al usuario) acceso de usuario a la aplicación Jira" },
-        { "id": "C", "texto": "Crear el espacio SUP antes de invitar" },
-        { "id": "D", "texto": "Un componente lead" }
+        { "id": "A", "texto": "Lo haces organization admin para forzar el alta" },
+        { "id": "B", "texto": "Reenvías el mail de invitación" },
+        { "id": "C", "texto": "Le das Browse desde Personas aunque no exista" },
+        { "id": "D", "texto": "Borras nortech-soporte" }
       ],
       "correctas": ["B"],
-      "explicacion": "Grupo en Directorio ≠ product access. Son pantallas distintas."
+      "explicacion": "M02-01: si lleva horas en invited, reenvía el mail. No lo conviertas en admin."
     },
     {
       "id": "m02-q44",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El invitado entra a Jira y aún no hay espacios Nortech (M03). ¿Está roto Jira?",
+      "stem": "Encuentras en Directorio la pantalla donde podrías dar al invitado el rol de organization admin. ¿Qué haces en M02?",
       "opciones": [
-        { "id": "A", "texto": "Sí: sin DEV no hay product access" },
-        { "id": "B", "texto": "No: puerta 1 OK; faltan espacios y roles, no la aplicación" },
-        { "id": "C", "texto": "Sí: debe verse Sample Scrum como SUP" },
-        { "id": "D", "texto": "Sí: hay que hacerlo org admin" }
+        { "id": "A", "texto": "Se lo das para que vea Facturación" },
+        { "id": "B", "texto": "No lo haces: es una palanca que no corresponde al invitado de práctica" },
+        { "id": "C", "texto": "Se lo das solo si el plan es Free" },
+        { "id": "D", "texto": "Se lo das y luego le quitas product access" }
       ],
       "correctas": ["B"],
-      "explicacion": "Comprueba tu entendimiento de M02-02. Vacío ≠ sin licencia."
+      "explicacion": "Reto de M02-02: encuentra la pantalla y no lo hagas. Basta usuario + grupos."
     },
     {
       "id": "m02-q45",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres solo project admin de DEV. Un usuario ya está en la org y en Jira. ¿Puedes meterlo en Developers?",
+      "stem": "En plan Free no ves eventos útiles en el registro de auditoría. ¿Es un fallo del lab?",
       "opciones": [
-        { "id": "A", "texto": "No: solo el org admin toca Personas" },
-        { "id": "B", "texto": "Sí: Personas del espacio asigna roles a usuarios o grupos existentes" },
-        { "id": "C", "texto": "Sí, y además lo invitas a la org" },
-        { "id": "D", "texto": "No: hay que editar el permission scheme" }
+        { "id": "A", "texto": "Sí: hay que instalar una app" },
+        { "id": "B", "texto": "No: Free puede no mostrar nada útil; anótalo y sigue. Premium/Standard muestran más" },
+        { "id": "C", "texto": "Sí: el registro solo existe en Personas" },
+        { "id": "D", "texto": "Sí: hay que hacer al invitado org admin para verlo" }
       ],
       "correctas": ["B"],
-      "explicacion": "Administer Projects cubre Personas. No cubre el alta en la organización."
+      "explicacion": "M02 solo pide la ubicación. Free puede estar vacío; no es un playbook de incidente."
     },
     {
       "id": "m02-q46",
       "dominio": "managing-projects",
-      "tipo": "single",
-      "stem": "Un usuario con Jira no encuentra DEV en Buscar ni en Más espacios. Tras confirmar product access:",
-      "opciones": [
-        { "id": "A", "texto": "El SMTP" },
-        { "id": "B", "texto": "Browse Projects / membresía de rol o grupo en ese espacio" },
-        { "id": "C", "texto": "El nombre del sprint" },
-        { "id": "D", "texto": "Si el espacio se llama Sample Scrum por error (DEV no es el sample)" }
-      ],
-      "correctas": ["B"],
-      "explicacion": "Misma lógica que q1, con UI 2026 (espacios). Sample Scrum no es DEV."
-    },
-    {
-      "id": "m02-q47",
-      "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Marta no aparece en Assignee de DEV. ¿Cuáles DOS causas son las habituales?",
+      "stem": "Marta no aparece en Assignee de un espacio. ¿Cuáles DOS causas son las habituales?",
       "opciones": [
-        { "id": "A", "texto": "No tiene Assignable User (rol/scheme)" },
-        { "id": "B", "texto": "El dashboard no está compartido" },
+        { "id": "A", "texto": "No tiene Assignable User (rol/esquema)" },
+        { "id": "B", "texto": "El home Para ti está en inglés" },
         { "id": "C", "texto": "No tiene product access o no está en un grupo/rol visible para el picker" },
-        { "id": "D", "texto": "El componente no tiene lead" },
-        { "id": "E", "texto": "Falta un gadget Assigned to Me" }
+        { "id": "D", "texto": "Falta Make bulk changes" }
       ],
       "correctas": ["A", "C"],
       "explicacion": "Desplegable = Assignable User + que Jira pueda ver a Marta. Assign Issues es de quien asigna."
     },
     {
+      "id": "m02-q47",
+      "dominio": "managing-projects",
+      "tipo": "multi",
+      "stem": "¿Cuáles DOS acciones son de organization admin (o user access admin), no de administrador de espacio?",
+      "opciones": [
+        { "id": "A", "texto": "Invitar a un proveedor a la organización" },
+        { "id": "B", "texto": "Añadir nortech-dev al rol Developers en Personas" },
+        { "id": "C", "texto": "Crear el grupo nortech-ops en el Directorio" },
+        { "id": "D", "texto": "Abrir la config de un espacio y ver Personas" }
+      ],
+      "correctas": ["A", "C"],
+      "explicacion": "Alta y grupos = Directorio. Personas = espacio."
+    },
+    {
       "id": "m02-q48",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "¿Cuáles DOS acciones son de organization admin (o user access admin), no de project admin?",
+      "stem": "Diagnóstico: Ana no ve el espacio DEV. ¿Cuáles DOS comprobaciones, en orden de puertas?",
       "opciones": [
-        { "id": "A", "texto": "Invitar a un proveedor a la organización" },
-        { "id": "B", "texto": "Añadir nortech-dev al rol Developers en DEV" },
-        { "id": "C", "texto": "Crear el grupo nortech-ops en el Directorio" },
-        { "id": "D", "texto": "Crear un componente api en DEV" },
-        { "id": "E", "texto": "Configurar columnas del tablero" }
+        { "id": "A", "texto": "¿Abre Jira? Si no, product access" },
+        { "id": "B", "texto": "¿El site se llama Sample Scrum?" },
+        { "id": "C", "texto": "Si abre Jira: Browse + rol/grupo en ese espacio" },
+        { "id": "D", "texto": "¿Tiene Make bulk changes?" }
       ],
       "correctas": ["A", "C"],
-      "explicacion": "Alta y grupos = Directorio. Personas, componentes y board = espacio."
+      "explicacion": "Producto primero, espacio después. No diagnostiques Browse cuando falta la aplicación."
     },
     {
       "id": "m02-q49",
-      "dominio": "managing-projects",
-      "tipo": "multi",
-      "stem": "Diagnóstico: Ana no ve DEV. ¿Cuáles DOS comprobaciones, en orden de puertas?",
-      "opciones": [
-        { "id": "A", "texto": "¿Abre Jira? Si no, product access" },
-        { "id": "B", "texto": "¿El SMTP corporativo está en IPv6?" },
-        { "id": "C", "texto": "Si abre Jira: Browse + rol/grupo en DEV (no uses Sample Scrum como DEV)" },
-        { "id": "D", "texto": "¿El tablero se llama Scrum?" },
-        { "id": "E", "texto": "¿Tiene Forge instalado?" }
-      ],
-      "correctas": ["A", "C"],
-      "explicacion": "Producto primero, espacio después. El sample no sustituye a DEV."
-    },
-    {
-      "id": "m02-q50",
       "dominio": "managing-projects",
       "tipo": "multi",
       "stem": "Modelo mínimo Nortech. ¿Cuáles DOS afirmaciones son correctas?",
       "opciones": [
         { "id": "A", "texto": "Grupos departamentales en el Directorio + product access a Jira por esos grupos" },
         { "id": "B", "texto": "Hacer Jira admin a todos los departamentos" },
-        { "id": "C", "texto": "En cada espacio, el grupo va a un rol que el permission scheme entiende" },
-        { "id": "D", "texto": "El project admin invita a la org desde Personas" },
-        { "id": "E", "texto": "Sample Scrum es el espacio oficial de Soporte" }
+        { "id": "C", "texto": "En cada espacio, el grupo va a un rol que el esquema de permisos entiende" },
+        { "id": "D", "texto": "El administrador de espacio invita a la org desde Personas" }
       ],
       "correctas": ["A", "C"],
-      "explicacion": "Grupo → producto → rol → scheme. Ni Jira admin masivo ni sample como SUP."
+      "explicacion": "Grupo → producto → rol → esquema. Ni Jira admin masivo ni alta a la org desde Personas."
+    },
+    {
+      "id": "m02-q50",
+      "dominio": "managing-projects",
+      "tipo": "single",
+      "stem": "El invitado abre Jira y no ve Administration ni Facturación. ¿El lab está bien encaminado?",
+      "opciones": [
+        { "id": "A", "texto": "No: debe ver Facturación para practicar billing" },
+        { "id": "B", "texto": "Sí: es usuario con producto, no org admin; tú conservas Administration" },
+        { "id": "C", "texto": "No: sin Administration no hay product access" },
+        { "id": "D", "texto": "No: hay que meterlo en nortech-admins y darle Jira admin" }
+      ],
+      "correctas": ["B"],
+      "explicacion": "Resultado esperado de M02-02: el invitado no ve Facturación ni crea grupos. Tú sigues siendo el org admin."
     }
   ]
 }

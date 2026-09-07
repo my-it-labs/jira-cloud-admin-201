@@ -454,8 +454,8 @@ function Inicio({
         <div>
           <dt>Banco de este curso</dt>
           <dd>
-            {modulos.length} módulos × {porBanco} ítems. El cronometrado sortea {config.preguntasObjetivo}. Por módulo,{' '}
-            {config.preguntasPorModulo} al azar.
+            {modulos.length} módulos × {porBanco} ítems. El cronometrado sortea {config.preguntasObjetivo} de todo el
+            curso. Por módulo, {config.preguntasPorModulo} al azar de <strong>ese</strong> temario.
           </dd>
         </div>
       </dl>
@@ -474,7 +474,7 @@ function Inicio({
         </button>
       </div>
       <div className="modulo-box">
-        <label htmlFor="mod">Por módulo ({config.preguntasPorModulo} de {porBanco} al azar)</label>
+        <label htmlFor="mod">Por módulo ({config.preguntasPorModulo} de {porBanco} de ese temario)</label>
         <select id="mod" value={modulo} onChange={(e) => setModulo(e.target.value)}>
           {modulos.map((m) => (
             <option key={m} value={m}>

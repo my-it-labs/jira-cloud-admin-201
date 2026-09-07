@@ -52,8 +52,8 @@
       "opciones": [
         { "id": "A", "texto": "Un validador de comentario" },
         { "id": "B", "texto": "Una condición de rol en la transición Done" },
-        { "id": "C", "texto": "El WIP del Kanban" },
-        { "id": "D", "texto": "Falta el gadget Velocity" }
+        { "id": "C", "texto": "Un custom field Hidden" },
+        { "id": "D", "texto": "statusCategory mal puesto" }
       ],
       "correctas": ["B"],
       "explicacion": "La condición decide quién puede ver o usar la transición. El validador dejaría ver el botón y fallaría al pulsar."
@@ -80,8 +80,8 @@
       "opciones": [
         { "id": "A", "texto": "Editar el workflow por defecto del site" },
         { "id": "B", "texto": "Copiarlo, nombrarlo NORTECH Incidencias y editar la copia" },
-        { "id": "C", "texto": "Sustituir el flujo por una regla de Automation" },
-        { "id": "D", "texto": "Cambiar solo las columnas del tablero" }
+        { "id": "C", "texto": "Sustituir el flujo por una regla de Automation (eso es M09)" },
+        { "id": "D", "texto": "Cambiar solo el nombre del espacio" }
       ],
       "correctas": ["B"],
       "explicacion": "Nunca edites el workflow por defecto: lo usan otros espacios. Copia, nombra y publica la copia."
@@ -104,7 +104,7 @@
       "id": "m05-q8",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El workflow ya tiene In Review. En el Kanban de DEV las tarjetas desaparecen al pulsar Review. En la configuración del tablero:",
+      "stem": "El workflow ya tiene In Review. En el tablero de DEV las tarjetas desaparecen al pulsar Review. En la configuración del tablero:",
       "opciones": [
         { "id": "A", "texto": "Borras el estado del workflow" },
         { "id": "B", "texto": "Arrastras In Review a una columna (o creas la columna y lo mapeas)" },
@@ -122,11 +122,11 @@
       "opciones": [
         { "id": "A", "texto": "Un custom field Sí/No" },
         { "id": "B", "texto": "Una transición global hacia To Do" },
-        { "id": "C", "texto": "Un quick filter" },
-        { "id": "D", "texto": "Un componente api" }
+        { "id": "C", "texto": "Un validador de comentario" },
+        { "id": "D", "texto": "Cambiar statusCategory a Unresolved" }
       ],
       "correctas": ["B"],
-      "explicacion": "La transición global está disponible desde cualquier estado (o desde varios). No es un campo ni un filtro del board."
+      "explicacion": "La transición global está disponible desde cualquier estado (o desde varios). No es un campo ni una categoría."
     },
     {
       "id": "m05-q10",
@@ -140,7 +140,7 @@
         { "id": "D", "texto": "Cambia el permission scheme" }
       ],
       "correctas": ["B"],
-      "explicacion": "statusCategory (To Do / In Progress / Done) es lo que usan muchos informes y el backlog, no el nombre localizado."
+      "explicacion": "statusCategory (To Do / In Progress / Done) es lo que usan muchos informes, no el nombre localizado."
     },
     {
       "id": "m05-q11",
@@ -148,10 +148,10 @@
       "tipo": "single",
       "stem": "Varios elementos en Done salen Unresolved en Created vs Resolved. La causa habitual:",
       "opciones": [
-        { "id": "A", "texto": "El JQL no admite Done" },
+        { "id": "A", "texto": "El nombre Done no existe en Cloud" },
         { "id": "B", "texto": "Resolution vacía: falta la post function Set Resolution al cerrar" },
-        { "id": "C", "texto": "El tablero es Scrum" },
-        { "id": "D", "texto": "El espacio es team-managed" }
+        { "id": "C", "texto": "El espacio es team-managed" },
+        { "id": "D", "texto": "Falta Confluence" }
       ],
       "correctas": ["B"],
       "explicacion": "Resuelta ≠ estado Done. Sin Resolution, muchos reports siguen contando el elemento como no resuelto."
@@ -164,8 +164,8 @@
       "opciones": [
         { "id": "A", "texto": "Un validador de adjunto" },
         { "id": "B", "texto": "La post function Clear Resolution" },
-        { "id": "C", "texto": "Un sprint activo" },
-        { "id": "D", "texto": "Product access de Jira Product Discovery" }
+        { "id": "C", "texto": "Un estado extra In Review" },
+        { "id": "D", "texto": "Publicar un segundo workflow" }
       ],
       "correctas": ["B"],
       "explicacion": "Al reabrir hay que limpiar Resolution. Si no, el elemento abierto sigue «resuelto» en los reports."
@@ -178,7 +178,7 @@
       "opciones": [
         { "id": "A", "texto": "Un custom field Sí/No que cierra solo" },
         { "id": "B", "texto": "Dos transiciones (Approve y Reject) hacia estados distintos" },
-        { "id": "C", "texto": "Un dashboard de PMO" },
+        { "id": "C", "texto": "Un único estado llamado Decisión" },
         { "id": "D", "texto": "Duplicar el espacio PMO" }
       ],
       "correctas": ["B"],
@@ -188,15 +188,15 @@
       "id": "m05-q14",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "PMO quiere ver Approved y Rejected en la misma columna Cerrado del Kanban:",
+      "stem": "Una Solicitud de PMO está en Approved. El elemento existe en el espacio, pero el tablero no lo pinta. Lo más probable:",
       "opciones": [
-        { "id": "A", "texto": "Fusionar los dos estados en el workflow" },
-        { "id": "B", "texto": "Mapear ambos estados a esa columna" },
-        { "id": "C", "texto": "Crear dos tableros obligatorios" },
-        { "id": "D", "texto": "Sustituir el flujo por Automation" }
+        { "id": "A", "texto": "Se borró al aprobar" },
+        { "id": "B", "texto": "Approved no está mapeado a ninguna columna" },
+        { "id": "C", "texto": "Falta un custom field en la pantalla" },
+        { "id": "D", "texto": "El site está en Free" }
       ],
       "correctas": ["B"],
-      "explicacion": "Una columna puede agrupar varios estados. El workflow sigue teniendo dos salidas; el board solo las pinta juntas."
+      "explicacion": "El tablero solo muestra estados con columna. Unmapped = invisible en el board; el elemento sigue en el espacio."
     },
     {
       "id": "m05-q15",
@@ -207,14 +207,14 @@
         { "id": "A", "texto": "Condiciones" },
         { "id": "B", "texto": "Validadores" },
         { "id": "C", "texto": "Post functions" },
-        { "id": "D", "texto": "Swimlanes del tablero" }
+        { "id": "D", "texto": "Contextos del custom field" }
       ],
       "correctas": ["A", "B", "C"],
-      "explicacion": "Condición, validador y post function viven en la transición. Las swimlanes son del board (M07), no del workflow."
+      "explicacion": "Condición, validador y post function viven en la transición. El contexto del campo es de M06, no del flujo."
     },
     {
       "id": "m05-q16",
-      "dominio": "project-creation",
+      "dominio": "managing-projects",
       "tipo": "single",
       "stem": "En un espacio team-managed de Calidad, el flujo se edita:",
       "opciones": [
@@ -224,7 +224,7 @@
         { "id": "D", "texto": "En el permission scheme" }
       ],
       "correctas": ["B"],
-      "explicacion": "TMP no comparte workflows por scheme. ACP-620 espera que no busques objetos globales de CMP en un TMP."
+      "explicacion": "TMP: el flujo se edita dentro del espacio. CMP: Jira admin + objeto workflow y scheme."
     },
     {
       "id": "m05-q17",
@@ -232,27 +232,27 @@
       "tipo": "single",
       "stem": "El solicitante (rol Users de PMO) se autoaprueba. En la transición Approve falta:",
       "opciones": [
-        { "id": "A", "texto": "Un gadget Filter Results" },
+        { "id": "A", "texto": "Una post function de Resolution" },
         { "id": "B", "texto": "La condición «el usuario está en el rol Administrators»" },
-        { "id": "C", "texto": "Pasar PMO a Scrum" },
-        { "id": "D", "texto": "Story points obligatorios" }
+        { "id": "C", "texto": "statusCategory To Do en Open" },
+        { "id": "D", "texto": "Un segundo espacio PMO" }
       ],
       "correctas": ["B"],
-      "explicacion": "Condición = quién pulsa. Users no debe autoaprobarse. Automation que deshaga el tránsito no sustituye el gobierno del workflow."
+      "explicacion": "Condición = quién pulsa. Users no debe autoaprobarse. Automation (M09) no sustituye el gobierno del workflow."
     },
     {
       "id": "m05-q18",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "JQL key = DEV-184 encuentra el elemento In Review, pero el tablero no lo muestra. Permisos y workflow están bien. Lo más probable:",
+      "stem": "Abres DEV-184 por clave: está In Review en el espacio. El tablero no lo muestra. Permisos y workflow están bien. Lo más probable:",
       "opciones": [
         { "id": "A", "texto": "El elemento se borró" },
-        { "id": "B", "texto": "El estado está unmapped o el filtro/sub-filter del board lo excluye" },
+        { "id": "B", "texto": "In Review está unmapped (sin columna)" },
         { "id": "C", "texto": "El site está en Free" },
         { "id": "D", "texto": "Falta SMTP" }
       ],
       "correctas": ["B"],
-      "explicacion": "El espacio conserva el elemento. El board es filtro + columnas: sin mapeo o fuera del JQL, no se pinta."
+      "explicacion": "El espacio conserva el elemento. El board es una vista: sin mapeo a columna, no se pinta."
     },
     {
       "id": "m05-q19",
@@ -263,7 +263,7 @@
         { "id": "A", "texto": "Una condición de rol" },
         { "id": "B", "texto": "Un validador (comentario o campo requerido)" },
         { "id": "C", "texto": "Una post function" },
-        { "id": "D", "texto": "Un quick filter" }
+        { "id": "D", "texto": "Un estado global" }
       ],
       "correctas": ["B"],
       "explicacion": "El botón visible + error al ejecutar = validador. La condición habría ocultado Rework. La post function corre después de transitar."
@@ -291,7 +291,7 @@
         { "id": "A", "texto": "Resolution está vacía" },
         { "id": "B", "texto": "La condición es demasiado estricta (rol vacío o equivocado)" },
         { "id": "C", "texto": "Falta Confluence" },
-        { "id": "D", "texto": "El board filter es project = DEV" }
+        { "id": "D", "texto": "statusCategory de To Do está mal" }
       ],
       "correctas": ["B"],
       "explicacion": "Síntoma clásico de condición mal puesta. Se relaja el rol (p. ej. Developers) o se quita la condición."
@@ -305,24 +305,24 @@
         { "id": "A", "texto": "Antes de mostrar el botón" },
         { "id": "B", "texto": "Tras una transición válida (condición y validador OK)" },
         { "id": "C", "texto": "Al abrir Create" },
-        { "id": "D", "texto": "Al aplicar un quick filter" }
+        { "id": "D", "texto": "Al publicar el draft, aunque nadie transite" }
       ],
       "correctas": ["B"],
       "explicacion": "Orden: condición (¿se puede?) → validador (¿datos OK?) → cambio de estado → post functions (Resolution, evento, assignee)."
     },
     {
       "id": "m05-q23",
-      "dominio": "reporting",
+      "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Cola de elementos «abiertos» de SUP sin listar cada estado. El JQL más estable:",
+      "stem": "Open, To Do y Backlog pueden compartir statusCategory To Do. ¿Es válido?",
       "opciones": [
-        { "id": "A", "texto": "status = To Do" },
-        { "id": "B", "texto": "statusCategory != Done" },
-        { "id": "C", "texto": "resolution = Done" },
-        { "id": "D", "texto": "sprint in openSprints()" }
+        { "id": "A", "texto": "No: una categoría = un solo estado" },
+        { "id": "B", "texto": "Sí: la categoría agrupa; el workflow define el camino" },
+        { "id": "C", "texto": "Solo en team-managed" },
+        { "id": "D", "texto": "Solo si hay una regla de Automation" }
       ],
       "correctas": ["B"],
-      "explicacion": "statusCategory agrupa To Do e In Progress aunque renombres estados. status = To Do se deja In Review fuera."
+      "explicacion": "Varios estados en la misma categoría es normal. Muchos informes se apoyan en To Do / In Progress / Done, no en el nombre."
     },
     {
       "id": "m05-q24",
@@ -330,7 +330,7 @@
       "tipo": "single",
       "stem": "Una Solicitud en PMO usa el flujo de Bug. La causa:",
       "opciones": [
-        { "id": "A", "texto": "El Kanban de PMO" },
+        { "id": "A", "texto": "El nombre del espacio" },
         { "id": "B", "texto": "El workflow scheme no mapeó Solicitud a NORTECH Aprobación" },
         { "id": "C", "texto": "Falta el campo Departamento" },
         { "id": "D", "texto": "El usuario no es org admin" }
@@ -342,15 +342,15 @@
       "id": "m05-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Añades el tipo Solicitud al issue type scheme que también usa DEV. El riesgo:",
+      "stem": "El flujo de aprobación no debe aplicarse a los Bug de DEV. Lo coherente:",
       "opciones": [
-        { "id": "A", "texto": "Ninguno: los tipos no se comparten" },
-        { "id": "B", "texto": "DEV podrá crear Solicitud (contaminas el scheme compartido)" },
-        { "id": "C", "texto": "Se borra el tipo Bug" },
-        { "id": "D", "texto": "DEV se convierte en TMP" }
+        { "id": "A", "texto": "Poner NORTECH Aprobación como flujo de All Unassigned en DEV" },
+        { "id": "B", "texto": "Mapear Solicitud → NORTECH Aprobación solo en el workflow scheme de PMO" },
+        { "id": "C", "texto": "Borrar el tipo Bug" },
+        { "id": "D", "texto": "Editar el workflow por defecto del site" }
       ],
       "correctas": ["B"],
-      "explicacion": "Excepción = scheme propio (NORTECH PMO Types). No edites la plantilla que comparte Desarrollo."
+      "explicacion": "El scheme asocia flujo por tipo y por espacio. DEV sigue con NORTECH Incidencias en Bug; PMO usa Aprobación en Solicitud."
     },
     {
       "id": "m05-q26",
@@ -384,29 +384,29 @@
       "id": "m05-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Marta está en Administrators y la condición de Done lo permite, pero no ve la transición. Falta mirar:",
+      "stem": "Marta está en Administrators de PMO y Approve tiene esa condición, pero las Solicitudes siguen el diagrama viejo. Falta:",
       "opciones": [
-        { "id": "A", "texto": "El SMTP" },
-        { "id": "B", "texto": "El permiso Transition Issues del permission scheme" },
-        { "id": "C", "texto": "Si el plan es Free" },
-        { "id": "D", "texto": "Las swimlanes" }
+        { "id": "A", "texto": "Crear un custom field Aprobador" },
+        { "id": "B", "texto": "Publicar el draft del workflow (o del workflow scheme)" },
+        { "id": "C", "texto": "Pasar PMO a team-managed" },
+        { "id": "D", "texto": "Cambiar statusCategory de Open" }
       ],
       "correctas": ["B"],
-      "explicacion": "La condición se suma al permiso de transitar. Sin Transition Issues no hay botón, aunque el rol de la condición cuadre."
+      "explicacion": "Si el editor o el scheme siguen en Draft, los elementos no usan el flujo nuevo. Publish."
     },
     {
       "id": "m05-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Al pulsar Done aparece una pantalla para elegir Resolución. Eso es:",
+      "stem": "Las post functions por defecto al transitar a Done suelen:",
       "opciones": [
-        { "id": "A", "texto": "Una condición" },
-        { "id": "B", "texto": "Una pantalla asociada a la transición" },
-        { "id": "C", "texto": "Un contexto de custom field" },
-        { "id": "D", "texto": "Un quick filter" }
+        { "id": "A", "texto": "Ocultar el botón Done" },
+        { "id": "B", "texto": "Poner Resolution; conviene comprobar que Done tiene statusCategory Done" },
+        { "id": "C", "texto": "Crear el espacio" },
+        { "id": "D", "texto": "Mapear columnas del tablero" }
       ],
       "correctas": ["B"],
-      "explicacion": "La transition screen pide datos al transitar. No oculta el botón (condición) ni sustituye al validador, aunque a menudo se combinan."
+      "explicacion": "Cierre idiomático: Resolution + categoría Done. Si la post function falta, el estado puede ser Done y el informe Unresolved."
     },
     {
       "id": "m05-q30",
@@ -424,7 +424,7 @@
     },
     {
       "id": "m05-q31",
-      "dominio": "managing-projects",
+      "dominio": "reporting",
       "tipo": "single",
       "stem": "Un elemento puede estar en Done con Resolution vacía. La consecuencia:",
       "opciones": [
@@ -440,15 +440,15 @@
       "id": "m05-q32",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En el espacio CMP DEV creas una columna QA en el Scrum. El estado QA:",
+      "stem": "Publicas el estado nuevo In Review en el workflow CMP de DEV. En el tablero, hasta que lo asignes a una columna:",
       "opciones": [
-        { "id": "A", "texto": "Se crea solo en el workflow global" },
-        { "id": "B", "texto": "No existe hasta añadirlo al workflow; la columna vacía no inventa el estado" },
-        { "id": "C", "texto": "Sustituye automáticamente a In Review" },
+        { "id": "A", "texto": "Jira borra los elementos en In Review" },
+        { "id": "B", "texto": "El estado queda unmapped y esas tarjetas no se ven en el board" },
+        { "id": "C", "texto": "In Review sustituye automáticamente a Done" },
         { "id": "D", "texto": "Obliga a Premium" }
       ],
       "correctas": ["B"],
-      "explicacion": "En CMP el board mapea estados ya definidos. En TMP columna y estado van más acoplados; no es el caso de DEV corporativo."
+      "explicacion": "Añadir el estado al flujo no lo pinta. Hay que mapearlo a una columna; si no, desaparece del tablero."
     },
     {
       "id": "m05-q33",
@@ -476,21 +476,21 @@
         { "id": "D", "texto": "Automation primero y luego el workflow" }
       ],
       "correctas": ["B"],
-      "explicacion": "Si la condición falla, no hay botón. Si el validador falla, no hay tránsito ni post function. Automation no es el motor del flujo."
+      "explicacion": "Si la condición falla, no hay botón. Si el validador falla, no hay tránsito ni post function. Automation (M09) no es el motor del flujo."
     },
     {
       "id": "m05-q35",
-      "dominio": "project-creation",
+      "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "DEV, SUP y OPS deben compartir NORTECH Incidencias. Recomiendas:",
+      "stem": "DEV, SUP y OPS ya son company-managed y deben compartir NORTECH Incidencias. Recomiendas:",
       "opciones": [
-        { "id": "A", "texto": "Tres TMP con el flujo copiado a mano" },
-        { "id": "B", "texto": "Espacios company-managed y un workflow scheme compartido" },
-        { "id": "C", "texto": "Un tablero sin espacios" },
+        { "id": "A", "texto": "Editar el flujo tres veces, una en cada espacio como si fueran TMP" },
+        { "id": "B", "texto": "Un workflow publicado y el mismo workflow scheme (mapeo por tipo) asociado a esos espacios" },
+        { "id": "C", "texto": "Sustituir los flujos por Automation" },
         { "id": "D", "texto": "Solo labels de estado" }
       ],
       "correctas": ["B"],
-      "explicacion": "Shared configuration es el caso de uso de CMP. TMP no comparte el workflow scheme entre espacios."
+      "explicacion": "En CMP el Jira admin publica el workflow y lo asocia vía scheme. TMP edita el flujo dentro de cada espacio y no comparte scheme."
     },
     {
       "id": "m05-q36",
@@ -510,29 +510,29 @@
       "id": "m05-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Open, To Do y Backlog pueden compartir statusCategory To Do. ¿Es válido?",
+      "stem": "Approved y Closed deben dejar de contar como trabajo pendiente. Su statusCategory:",
       "opciones": [
-        { "id": "A", "texto": "No: una categoría = un solo estado" },
-        { "id": "B", "texto": "Sí: la categoría agrupa; el workflow define el camino" },
-        { "id": "C", "texto": "Solo en team-managed" },
-        { "id": "D", "texto": "Solo si hay una regla de Automation" }
+        { "id": "A", "texto": "To Do" },
+        { "id": "B", "texto": "Done" },
+        { "id": "C", "texto": "In Progress" },
+        { "id": "D", "texto": "Unresolved" }
       ],
       "correctas": ["B"],
-      "explicacion": "Varios estados en la misma categoría es normal. JQL por statusCategory y el backlog se apoyan en eso."
+      "explicacion": "El nombre Approved no basta. Categoría Done (y Resolution si aplica) es lo que muchos informes tratan como terminado."
     },
     {
       "id": "m05-q38",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Las tarjetas In Review no salen. El project lead crea swimlanes por assignee. ¿Arregla el unmapped?",
+      "stem": "Las tarjetas In Review no salen en el tablero. ¿Qué las hace visibles?",
       "opciones": [
-        { "id": "A", "texto": "Sí: las calles sustituyen a las columnas" },
-        { "id": "B", "texto": "No: las swimlanes agrupan filas; sin columna el estado sigue invisible" },
-        { "id": "C", "texto": "Sí, si las swimlanes son por query" },
-        { "id": "D", "texto": "Solo en Kanban, no en Scrum" }
+        { "id": "A", "texto": "Renombrar el tablero" },
+        { "id": "B", "texto": "Mapear In Review a una columna (sacarlo de Unmapped)" },
+        { "id": "C", "texto": "Una post function Set Resolution" },
+        { "id": "D", "texto": "Pasar el espacio a TMP" }
       ],
       "correctas": ["B"],
-      "explicacion": "Primero mapea In Review a una columna. Las calles no resucitan un estado unmapped."
+      "explicacion": "Primero mapea In Review a una columna. El board es una vista; el workflow no se arregla renombrando el tablero."
     },
     {
       "id": "m05-q39",
@@ -566,15 +566,15 @@
       "id": "m05-q41",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Filtro para la cola de no resueltas de SUP, aunque alguna esté en un estado Cerrado mal categorizado:",
+      "stem": "Informes de no resueltas de SUP, aunque alguna esté en un estado llamado Cerrado:",
       "opciones": [
-        { "id": "A", "texto": "status = Done" },
-        { "id": "B", "texto": "resolution is EMPTY" },
-        { "id": "C", "texto": "statusCategory = Done" },
-        { "id": "D", "texto": "assignee is EMPTY" }
+        { "id": "A", "texto": "El nombre Cerrado basta para contarlas resueltas" },
+        { "id": "B", "texto": "Si Resolution está vacía, muchos reports las siguen contando Unresolved" },
+        { "id": "C", "texto": "statusCategory se ignora siempre" },
+        { "id": "D", "texto": "Solo cuenta el tablero" }
       ],
       "correctas": ["B"],
-      "explicacion": "Unresolved = Resolution vacía. Un Cerrado con categoría Done y Resolution vacía sigue saliendo en esta cola."
+      "explicacion": "Unresolved = Resolution vacía. Un Cerrado con categoría Done y Resolution vacía sigue saliendo en esa cola."
     },
     {
       "id": "m05-q42",
@@ -588,7 +588,7 @@
         { "id": "D", "texto": "La condición setea Resolution" }
       ],
       "correctas": ["B"],
-      "explicacion": "Diagnóstico de lab: botón ausente → condición (o permiso). Botón presente + error → validador."
+      "explicacion": "Diagnóstico de lab: botón ausente → condición. Botón presente + error → validador."
     },
     {
       "id": "m05-q43",
@@ -599,24 +599,24 @@
         { "id": "A", "texto": "Crear el espacio" },
         { "id": "B", "texto": "Disparar el evento (p. ej. Issue Closed) para notificaciones" },
         { "id": "C", "texto": "Cambiar el plan del site" },
-        { "id": "D", "texto": "Mapear columnas del board" }
+        { "id": "D", "texto": "Crear un custom field" }
       ],
       "correctas": ["B"],
-      "explicacion": "Las post functions de cierre clásicas: Resolution + evento. El board y el plan no se tocan desde el workflow."
+      "explicacion": "Las post functions de cierre clásicas: Resolution + evento. El plan y los campos no se tocan desde el workflow."
     },
     {
       "id": "m05-q44",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Un Bug en Done no está en el Kanban. Done sí está mapeado a una columna. Siguiente sospecha:",
+      "stem": "Done sí está mapeado a una columna. In Review no. Un Bug en In Review:",
       "opciones": [
-        { "id": "A", "texto": "El workflow scheme" },
-        { "id": "B", "texto": "Filtro o sub-filter del board (p. ej. status != Done)" },
-        { "id": "C", "texto": "La field configuration Hidden" },
-        { "id": "D", "texto": "Issue security de otro espacio" }
+        { "id": "A", "texto": "Se ve en la columna Done" },
+        { "id": "B", "texto": "No se ve en el tablero (unmapped); sigue en el espacio" },
+        { "id": "C", "texto": "Se borra al transitar a Review" },
+        { "id": "D", "texto": "Cambia de tipo a Story" }
       ],
       "correctas": ["B"],
-      "explicacion": "Si la columna existe, el universo JQL (filtro o sub-filter Kanban) es lo siguiente. Un status != Done vacía la columna Done."
+      "explicacion": "Cada estado necesita su columna (o compartir una). Unmapped oculta esas tarjetas; el elemento no desaparece del espacio."
     },
     {
       "id": "m05-q45",
@@ -624,10 +624,10 @@
       "tipo": "single",
       "stem": "PMO pide que solo Administrators apruebe. En CMP la palanca de gobierno es:",
       "opciones": [
-        { "id": "A", "texto": "Una regla de Automation que deshaga el tránsito a posteriori" },
+        { "id": "A", "texto": "Una regla de Automation (M09) que deshaga el tránsito a posteriori" },
         { "id": "B", "texto": "Una condición de rol en la transición Approve" },
-        { "id": "C", "texto": "Un quick filter Aprobadores" },
-        { "id": "D", "texto": "Ocultar el tablero de PMO" }
+        { "id": "C", "texto": "Ocultar el tablero de PMO" },
+        { "id": "D", "texto": "Un custom field Sí/No" }
       ],
       "correctas": ["B"],
       "explicacion": "El workflow es quien autoriza el tránsito. Automation no es un workflow: llega tarde y se puede saltar."
@@ -636,7 +636,7 @@
       "id": "m05-q46",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Approved tiene statusCategory To Do. En el backlog Scrum esos elementos:",
+      "stem": "Approved tiene statusCategory To Do. En informes de trabajo pendiente esos elementos:",
       "opciones": [
         { "id": "A", "texto": "Desaparecen del espacio" },
         { "id": "B", "texto": "Pueden seguir contando como pendientes (categoría To Do)" },
@@ -644,7 +644,7 @@
         { "id": "D", "texto": "Exigen Premium" }
       ],
       "correctas": ["B"],
-      "explicacion": "El nombre Approved no basta. Hay que poner statusCategory Done (y Resolution si aplica) para que dejen el backlog."
+      "explicacion": "El nombre Approved no basta. Hay que poner statusCategory Done (y Resolution si aplica) para que dejen de contar como pendientes."
     },
     {
       "id": "m05-q47",
@@ -658,7 +658,7 @@
         { "id": "D", "texto": "Un draft sin publicar ya aplica a todos los TMP y CMP" }
       ],
       "correctas": ["A", "B", "C"],
-      "explicacion": "Tabla de errores frecuentes del módulo. El draft no aplica hasta Publish, ni en CMP ni como atajo de TMP."
+      "explicacion": "Tabla de errores frecuentes del módulo. El draft no aplica hasta Publish."
     },
     {
       "id": "m05-q48",
