@@ -31,8 +31,8 @@
 ### Plantillas
 
 - **Scrum** → DEV (sprints, backlog).
-- **Kanban** (bug tracking / IT) → SUP.
-- **Business / Project management** → OPS y PMO.
+- **Kanban** → SUP.
+- **Negocio** (Seguimiento de tareas / Gestión del trabajo) → OPS y PMO. Si no ves «gestión de proyectos», usa esa misma familia o Kanban CMP; no hace falta una plantilla distinta para PMO.
 
 ## Demostración
 

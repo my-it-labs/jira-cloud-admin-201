@@ -48,9 +48,11 @@ Tener cuatro espacios **gestionados por la empresa** (*company-managed*) con cla
 
 | Nombre | Clave | Plantilla | Tipo |
 |--------|-------|-----------|------|
-| Nortech Support | SUP | Kanban | Gestionado por la empresa |
-| Nortech Operations | OPS | Negocio / seguimiento de tareas | Gestionado por la empresa |
-| Nortech PMO | PMO | Negocio / gestión de proyectos | Gestionado por la empresa |
+| Nortech Support | SUP | **Kanban** | Gestionado por la empresa |
+| Nortech Operations | OPS | Negocio: **Seguimiento de tareas** (o **Gestión del trabajo**) | Gestionado por la empresa |
+| Nortech PMO | PMO | La **misma** familia que OPS | Gestionado por la empresa |
+
+En la galería de 2026 **no** hay un recuadro «Negocio / gestión de proyectos». PMO no es Scrum: busca plantillas de **negocio / trabajo / tareas**. Si solo ves Software, **Kanban** gestionado por la empresa vale igual (sin sprints). Lo que no puedes es dejarlo team-managed.
 
 **Por qué:** Mismos cuatro espacios que la propuesta formativa (desarrollo, soporte, operaciones, PMO).
 
@@ -101,4 +103,5 @@ Crea un quinto espacio **gestionado por el equipo** `LAB-TMP` (clave `TMP`) y á
 |---------|----------------|-----------------|
 | Clave ocupada | Espacio de muestra | Otra clave (`DEV2`) o borra el sample |
 | No sale **Gestionado por la empresa** | UI nueva / plantilla solo TMP | Cambia de plantilla; busca más plantillas / empresa |
+| No sale «gestión de proyectos» para PMO | Atlassian unificó las plantillas de negocio | **Seguimiento de tareas** o **Gestión del trabajo**, CMP; si no, **Kanban** CMP |
 | No puedes **Crear espacio** | No eres administrador de Jira | Cuenta del trial |
