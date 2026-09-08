@@ -6,701 +6,2309 @@
       "id": "m06-q1",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El campo Departamento existe, está en la pantalla de Edit y Marta tiene Edit Issues. Aun así no lo ve en SUP. ¿Qué debes revisar?",
+      "stem": {
+        "es": "El campo Departamento existe, está en la pantalla de Edit y Marta tiene Edit Issues. Aun así no lo ve en SUP. ¿Qué debes revisar?",
+        "en": "The Department field exists, it is on the Edit screen, and Marta has Edit Issues. She still cannot see it in SUP. What should you check?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El servidor de correo" },
-        { "id": "B", "texto": "Si la field configuration lo tiene Hidden o el contexto excluye el proyecto" },
-        { "id": "C", "texto": "El sprint" },
-        { "id": "D", "texto": "Una app del Marketplace" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El servidor de correo",
+            "en": "The mail server"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Si la field configuration lo tiene Hidden o el contexto excluye el proyecto",
+            "en": "Whether the field configuration has it Hidden or the context excludes the project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El sprint",
+            "en": "The sprint"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Una app del Marketplace",
+            "en": "A Marketplace app"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Tercera palanca: Hidden o contexto. El contexto también puede limitarse a Bug cuando estás creando Story."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Tercera palanca: Hidden o contexto. El contexto también puede limitarse a Bug cuando estás creando Story.",
+        "en": "Third lever: Hidden or context. The context can also be limited to Bug while you are creating a Story."
+      }
     },
     {
       "id": "m06-q2",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "RRHH es team-managed y quiere añadir un campo al crear incidencias. ¿Qué usan en lugar de screens globales?",
+      "stem": {
+        "es": "RRHH es team-managed y quiere añadir un campo al crear incidencias. ¿Qué usan en lugar de screens globales?",
+        "en": "RRHH is team-managed and wants to add a field when creating issues. What do they use instead of global screens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El permission scheme" },
-        { "id": "B", "texto": "Issue layout / campos del propio proyecto" },
-        { "id": "C", "texto": "Una regla de automatización" },
-        { "id": "D", "texto": "El audit log" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El permission scheme",
+            "en": "The permission scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Issue layout / campos del propio proyecto",
+            "en": "Issue layout / fields of the project itself"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Una regla de automatización",
+            "en": "An automation rule"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El audit log",
+            "en": "The audit log"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En team-managed no buscas schemes globales. El layout de campos vive en el propio proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En team-managed no buscas schemes globales. El layout de campos vive en el propio proyecto.",
+        "en": "In team-managed you do not look for global schemes. The field layout lives in the project itself."
+      }
     },
     {
       "id": "m06-q3",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un campo personalizado no aparece al crear un Bug en DEV (company-managed). ¿Qué compruebas?",
+      "stem": {
+        "es": "Un campo personalizado no aparece al crear un Bug en DEV (company-managed). ¿Qué compruebas?",
+        "en": "A custom field does not appear when creating a Bug in DEV (company-managed). What do you check?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo el correo" },
-        { "id": "B", "texto": "Contexto, pantalla de Create y que no esté Hidden" },
-        { "id": "C", "texto": "El nombre del workflow" },
-        { "id": "D", "texto": "El Marketplace" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo el correo",
+            "en": "Mail only"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Contexto, pantalla de Create y que no esté Hidden",
+            "en": "Context, the Create screen, and that it is not Hidden"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del workflow",
+            "en": "The workflow name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El Marketplace",
+            "en": "The Marketplace"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Tres capas: ¿existe para este proyecto/tipo? ¿está en la pantalla de Create? ¿está Hidden? La primera que falle explica el síntoma."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Tres capas: ¿existe para este proyecto/tipo? ¿está en la pantalla de Create? ¿está Hidden? La primera que falle explica el síntoma.",
+        "en": "Three layers: does it exist for this project/type? is it on the Create screen? is it Hidden? The first one that fails explains the symptom."
+      }
     },
     {
       "id": "m06-q4",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Departamento existe y está en una pantalla, pero Create de DEV no lo muestra. PMO y SUP sí. ¿Qué contexto encaja?",
+      "stem": {
+        "es": "Departamento existe y está en una pantalla, pero Create de DEV no lo muestra. PMO y SUP sí. ¿Qué contexto encaja?",
+        "en": "Department exists and is on a screen, but DEV Create does not show it. PMO and SUP do. Which context fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Incluye todos los proyectos" },
-        { "id": "B", "texto": "Está limitado a PMO y SUP (DEV queda fuera)" },
-        { "id": "C", "texto": "Obliga a pasar DEV a team-managed" },
-        { "id": "D", "texto": "Borra el campo al guardar" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Incluye todos los proyectos",
+            "en": "It includes all projects"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Está limitado a PMO y SUP (DEV queda fuera)",
+            "en": "It is limited to PMO and SUP (DEV is left out)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Obliga a pasar DEV a team-managed",
+            "en": "It forces DEV to become team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borra el campo al guardar",
+            "en": "It deletes the field on save"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El mismo campo no se hereda donde el contexto no lista el proyecto. RRHH/PMO sí; Desarrollo no."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El mismo campo no se hereda donde el contexto no lista el proyecto. RRHH/PMO sí; Desarrollo no.",
+        "en": "The same field is not inherited where the context does not list the project. HR/PMO yes; Development no."
+      }
     },
     {
       "id": "m06-q5",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Limitaste un contexto a SUP, pero DEV sigue viendo el campo. ¿Cuál es la causa frecuente?",
+      "stem": {
+        "es": "Limitaste un contexto a SUP, pero DEV sigue viendo el campo. ¿Cuál es la causa frecuente?",
+        "en": "You limited a context to SUP, but DEV still sees the field. What is the frequent cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "La field configuration Required" },
-        { "id": "B", "texto": "El contexto Global por defecto sigue activo para todos los proyectos" },
-        { "id": "C", "texto": "Falta Confluence" },
-        { "id": "D", "texto": "El site está en Free" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "La field configuration Required",
+            "en": "Field configuration Required"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El contexto Global por defecto sigue activo para todos los proyectos",
+            "en": "The default Global context is still active for all projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta Confluence",
+            "en": "Confluence is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El site está en Free",
+            "en": "The site is on Free"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Añadir un contexto no apaga el Global. Un Global sin proyectos restringidos = todos. Hay que desactivarlo o restringirlo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Añadir un contexto no apaga el Global. Un Global sin proyectos restringidos = todos. Hay que desactivarlo o restringirlo.",
+        "en": "Adding a context does not turn off Global. A Global with no restricted projects = all. You must deactivate or restrict it."
+      }
     },
     {
       "id": "m06-q6",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En PMO quieres la opción Dirección y en SUP no. ¿Qué es lo limpio?",
+      "stem": {
+        "es": "En PMO quieres la opción Dirección y en SUP no. ¿Qué es lo limpio?",
+        "en": "In PMO you want the Leadership option and in SUP you do not. What is the clean approach?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear un campo Departamento PMO duplicado" },
-        { "id": "B", "texto": "Un campo Departamento con dos contextos y opciones distintas" },
-        { "id": "C", "texto": "Dos proyectos team-managed" },
-        { "id": "D", "texto": "Un comentario en Description" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear un campo Departamento PMO duplicado",
+            "en": "Create a duplicate Department PMO field"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un campo Departamento con dos contextos y opciones distintas",
+            "en": "One Department field with two contexts and different options"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Dos proyectos team-managed",
+            "en": "Two team-managed projects"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un comentario en Description",
+            "en": "A comment in Description"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un ID, dos listas. Evitas un segundo campo y formularios distintos por duplicado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un ID, dos listas. Evitas un segundo campo y formularios distintos por duplicado.",
+        "en": "One ID, two lists. You avoid a second field and different forms from the duplicate."
+      }
     },
     {
       "id": "m06-q7",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Luis abre Create en DEV (company-managed) y no ve los mismos campos que en Edit. ¿Qué objeto define ese formulario de alta?",
+      "stem": {
+        "es": "Luis abre Create en DEV (company-managed) y no ve los mismos campos que en Edit. ¿Qué objeto define ese formulario de alta?",
+        "en": "Luis opens Create in DEV (company-managed) and does not see the same fields as in Edit. Which object defines that create form?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El permission scheme" },
-        { "id": "B", "texto": "La pantalla asociada a la operación Create" },
-        { "id": "C", "texto": "La categoría del estado" },
-        { "id": "D", "texto": "El audit log" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El permission scheme",
+            "en": "The permission scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La pantalla asociada a la operación Create",
+            "en": "The screen associated with the Create operation"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La categoría del estado",
+            "en": "The status category"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El audit log",
+            "en": "The audit log"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La pantalla es el formulario. El scheme de pantallas (y el de tipos) decide qué pantalla usa Create."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La pantalla es el formulario. El scheme de pantallas (y el de tipos) decide qué pantalla usa Create.",
+        "en": "The screen is the form. The screen scheme (and the issue type screen scheme) decides which screen Create uses."
+      }
     },
     {
       "id": "m06-q8",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Asocias pantallas a SUP (company-managed) y no encuentras un campo «pantalla del proyecto». ¿A qué debe apuntar el proyecto?",
+      "stem": {
+        "es": "Asocias pantallas a SUP (company-managed) y no encuentras un campo «pantalla del proyecto». ¿A qué debe apuntar el proyecto?",
+        "en": "You associate screens to SUP (company-managed) and cannot find a project-level screen field. What must the project point to?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un workflow" },
-        { "id": "B", "texto": "Un screen scheme (vía issue type screen scheme)" },
-        { "id": "C", "texto": "Un único campo personalizado" },
-        { "id": "D", "texto": "El nombre del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un workflow",
+            "en": "A workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un screen scheme (vía issue type screen scheme)",
+            "en": "A screen scheme (via issue type screen scheme)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un único campo personalizado",
+            "en": "A single custom field"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre del proyecto",
+            "en": "The project name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si Create de DEV y SUP se ven iguales, el issue type screen scheme no está asociado y siguen la pantalla compartida."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si Create de DEV y SUP se ven iguales, el issue type screen scheme no está asociado y siguen la pantalla compartida.",
+        "en": "If DEV and SUP Create look the same, the issue type screen scheme is not associated and they still use the shared screen."
+      }
     },
     {
       "id": "m06-q9",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Severidad QA está en Edit y View de SUP, no en Create. Un reporter externo, ¿qué puede hacer?",
+      "stem": {
+        "es": "Severidad QA está en Edit y View de SUP, no en Create. Un reporter externo, ¿qué puede hacer?",
+        "en": "QA Severity is on Edit and View in SUP, not on Create. What can an external reporter do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Rellenarla al crear el elemento" },
-        { "id": "B", "texto": "No la ve al crear; un agente la edita después" },
-        { "id": "C", "texto": "No puede editarla nunca" },
-        { "id": "D", "texto": "Obliga a Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Rellenarla al crear el elemento",
+            "en": "Fill it in when creating the issue"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No la ve al crear; un agente la edita después",
+            "en": "They do not see it on create; an agent edits it afterwards"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No puede editarla nunca",
+            "en": "They can never edit it"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Obliga a Premium",
+            "en": "It requires Premium"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Datos que no se piden al alta. Cada operación (Create / Edit / View) usa su pantalla."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Datos que no se piden al alta. Cada operación (Create / Edit / View) usa su pantalla.",
+        "en": "Data that is not asked at create. Each operation (Create / Edit / View) uses its screen."
+      }
     },
     {
       "id": "m06-q10",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Para que un campo personalizado sea usable al crear en un proyecto company-managed, ¿qué tiene que cumplirse?",
+      "stem": {
+        "es": "Para que un campo personalizado sea usable al crear en un proyecto company-managed, ¿qué tiene que cumplirse?",
+        "en": "For a custom field to be usable on create in a company-managed project, what must be true?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Contexto que incluya el proyecto y el tipo" },
-        { "id": "B", "texto": "El campo en la pantalla de Create" },
-        { "id": "C", "texto": "Field configuration no Hidden" },
-        { "id": "D", "texto": "Que el estado inicial se llame To Do" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Contexto que incluya el proyecto y el tipo",
+            "en": "A context that includes the project and the issue type"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El campo en la pantalla de Create",
+            "en": "The field on the Create screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Field configuration no Hidden",
+            "en": "Field configuration not Hidden"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que el estado inicial se llame To Do",
+            "en": "That the initial status is named To Do"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Las tres capas del «no me aparece». El nombre del estado no forma parte del formulario."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Las tres capas del «no me aparece». El nombre del estado no forma parte del formulario.",
+        "en": "The three layers of \"it does not appear\". The status name is not part of the form."
+      }
     },
     {
       "id": "m06-q11",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Severidad QA es Required en la field configuration, pero no está en la pantalla de Create de SUP. Al crear un Bug, ¿qué ocurre?",
+      "stem": {
+        "es": "Severidad QA es Required en la field configuration, pero no está en la pantalla de Create de SUP. Al crear un Bug, ¿qué ocurre?",
+        "en": "QA Severity is Required in the field configuration, but it is not on SUP's Create screen. When creating a Bug, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Siempre obliga, aunque no se vea" },
-        { "id": "B", "texto": "El required no se aplica de forma útil: el campo debe estar en la pantalla" },
-        { "id": "C", "texto": "SUP se convierte en team-managed" },
-        { "id": "D", "texto": "Se oculta Description" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Siempre obliga, aunque no se vea",
+            "en": "It is always enforced, even if not visible"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El required no se aplica de forma útil: el campo debe estar en la pantalla",
+            "en": "Required does not apply usefully: the field must be on the screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "SUP se convierte en team-managed",
+            "en": "SUP becomes team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se oculta Description",
+            "en": "Description is hidden"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Required no obliga si el campo no está en Create. Hay que añadirlo a la pantalla o quitar el required."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Required no obliga si el campo no está en Create. Hay que añadirlo a la pantalla o quitar el required.",
+        "en": "Required does not enforce if the field is not on Create. Add it to the screen or remove required."
+      }
     },
     {
       "id": "m06-q12",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Entorno está en la pantalla de DEV pero no se ve. La field configuration lo tiene Hidden. ¿Qué gana?",
+      "stem": {
+        "es": "Entorno está en la pantalla de DEV pero no se ve. La field configuration lo tiene Hidden. ¿Qué gana?",
+        "en": "Environment is on DEV's screen but is not visible. The field configuration has it Hidden. Which wins?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Se ve igual: la pantalla gana" },
-        { "id": "B", "texto": "Hidden gana: no se muestra aunque esté en la pantalla" },
-        { "id": "C", "texto": "Solo se ve al transitar" },
-        { "id": "D", "texto": "Rompe el workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Se ve igual: la pantalla gana",
+            "en": "It still shows: the screen wins"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hidden gana: no se muestra aunque esté en la pantalla",
+            "en": "Hidden wins: it is not shown even if it is on the screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo se ve al transitar",
+            "en": "It only shows on transition"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Rompe el workflow",
+            "en": "It breaks the workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hidden quita el campo de Create/Edit/View aunque la screen lo liste. Es la tercera palanca."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hidden quita el campo de Create/Edit/View aunque la screen lo liste. Es la tercera palanca.",
+        "en": "Hidden removes the field from Create/Edit/View even if the screen lists it. That is the third lever."
+      }
     },
     {
       "id": "m06-q13",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Al crear el campo lo marcaste como importante, pero Create de PMO no lo exige. ¿Qué obliga de verdad en company-managed?",
+      "stem": {
+        "es": "Al crear el campo lo marcaste como importante, pero Create de PMO no lo exige. ¿Qué obliga de verdad en company-managed?",
+        "en": "When creating the field you marked it as important, but PMO Create does not require it. What actually enforces required in company-managed?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El interruptor del alta del campo" },
-        { "id": "B", "texto": "Required en la field configuration, y que el campo esté en la pantalla" },
-        { "id": "C", "texto": "Solo existe en team-managed" },
-        { "id": "D", "texto": "El nombre del campo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El interruptor del alta del campo",
+            "en": "The toggle at field creation"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Required en la field configuration, y que el campo esté en la pantalla",
+            "en": "Required in the field configuration, and the field on the screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo existe en team-managed",
+            "en": "It only exists in team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre del campo",
+            "en": "The field name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Required en field config no es un flag mágico del alta del campo. En team-managed el equivalente vive en la issue layout del proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Required en field config no es un flag mágico del alta del campo. En team-managed el equivalente vive en la issue layout del proyecto.",
+        "en": "Required in field configuration is not a magic flag from field creation. In team-managed the equivalent lives in the project's issue layout."
+      }
     },
     {
       "id": "m06-q14",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "En un team-managed de RRHH, para añadir un campo al Create del proyecto, ¿qué haces?",
+      "stem": {
+        "es": "En un team-managed de RRHH, para añadir un campo al Create del proyecto, ¿qué haces?",
+        "en": "In an RRHH team-managed project, to add a field to the project's Create, what do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Creas un screen scheme global NORTECH" },
-        { "id": "B", "texto": "Usas Issue layout / campos del propio proyecto" },
-        { "id": "C", "texto": "Editas NORTECH Fields de los company-managed" },
-        { "id": "D", "texto": "Cambias el plan del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Creas un screen scheme global NORTECH",
+            "en": "Create a global NORTECH screen scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Usas Issue layout / campos del propio proyecto",
+            "en": "Use Issue layout / fields of the project itself"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editas NORTECH Fields de los company-managed",
+            "en": "Edit NORTECH Fields of the company-managed projects"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambias el plan del site",
+            "en": "Change the site plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Team-managed no usa screens ni field configuration schemes. Todo es layout del proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Team-managed no usa screens ni field configuration schemes. Todo es layout del proyecto.",
+        "en": "Team-managed does not use screens or field configuration schemes. Everything is the project's layout."
+      }
     },
     {
       "id": "m06-q15",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Nortech necesita el campo global Departamento (lista RRHH/Finanzas/Legal) en proyectos company-managed. ¿Quién lo crea y dónde?",
+      "stem": {
+        "es": "Nortech necesita el campo global Departamento (lista RRHH/Finanzas/Legal) en proyectos company-managed. ¿Quién lo crea y dónde?",
+        "en": "Nortech needs the global Department field (HR/Finance/Legal list) in company-managed projects. Who creates it and where?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cualquier miembro con Browse Projects" },
-        { "id": "B", "texto": "Un Jira admin, en Elementos de trabajo → Campos personalizados" },
-        { "id": "C", "texto": "El administrador de un team-managed ajeno" },
-        { "id": "D", "texto": "Quien cree un filtro compartido" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cualquier miembro con Browse Projects",
+            "en": "Any member with Browse Projects"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un Jira admin, en Elementos de trabajo → Campos personalizados",
+            "en": "A Jira admin, in Issues → Custom fields"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El administrador de un team-managed ajeno",
+            "en": "The admin of an unrelated team-managed project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Quien cree un filtro compartido",
+            "en": "Whoever creates a shared filter"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los custom fields de company-managed son objetos de site. El project admin no los crea en la administración global."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los custom fields de company-managed son objetos de site. El project admin no los crea en la administración global.",
+        "en": "Custom fields in company-managed are site objects. The project admin does not create them in global administration."
+      }
     },
     {
       "id": "m06-q16",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "El project admin de un team-managed de RRHH, ¿qué puede hacer con campos?",
+      "stem": {
+        "es": "El project admin de un team-managed de RRHH, ¿qué puede hacer con campos?",
+        "en": "The project admin of an RRHH team-managed project — what can they do with fields?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear schemes globales para DEV" },
-        { "id": "B", "texto": "Añadir campos en la issue layout de su proyecto, no en los company-managed ajenos" },
-        { "id": "C", "texto": "Editar el field configuration scheme de SUP" },
-        { "id": "D", "texto": "Cambiar el plan del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear schemes globales para DEV",
+            "en": "Create global schemes for DEV"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Añadir campos en la issue layout de su proyecto, no en los company-managed ajenos",
+            "en": "Add fields in their project's issue layout, not in other company-managed projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editar el field configuration scheme de SUP",
+            "en": "Edit SUP's field configuration scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar el plan del site",
+            "en": "Change the site plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Autonomía team-managed = su proyecto. No escribe la plantilla corporativa de pantallas de Nortech."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Autonomía team-managed = su proyecto. No escribe la plantilla corporativa de pantallas de Nortech.",
+        "en": "Team-managed autonomy = their project. They do not write Nortech's corporate screen template."
+      }
     },
     {
       "id": "m06-q17",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "NORTECH Fields (Severidad QA Required) está asociado a SUP. DEV usa NORTECH DEV Fields. Al crear un Bug en DEV, ¿qué ocurre?",
+      "stem": {
+        "es": "NORTECH Fields (Severidad QA Required) está asociado a SUP. DEV usa NORTECH DEV Fields. Al crear un Bug en DEV, ¿qué ocurre?",
+        "en": "NORTECH Fields (QA Severity Required) is associated to SUP. DEV uses NORTECH DEV Fields. When creating a Bug in DEV, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Exige Severidad QA" },
-        { "id": "B", "texto": "No hereda el required de SUP" },
-        { "id": "C", "texto": "DEV se convierte en SUP" },
-        { "id": "D", "texto": "Falla siempre el Create" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Exige Severidad QA",
+            "en": "It requires QA Severity"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No hereda el required de SUP",
+            "en": "It does not inherit SUP's required"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "DEV se convierte en SUP",
+            "en": "DEV becomes SUP"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falla siempre el Create",
+            "en": "Create always fails"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La field configuration scheme se asocia por proyecto. Por eso DEV tiene copia propia sin el required de Calidad."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La field configuration scheme se asocia por proyecto. Por eso DEV tiene copia propia sin el required de Calidad.",
+        "en": "The field configuration scheme is associated per project. That is why DEV has its own copy without Quality's required."
+      }
     },
     {
       "id": "m06-q18",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Desarrollo no debe cargar Severidad QA aunque el campo sea global. ¿Qué es coherente?",
+      "stem": {
+        "es": "Desarrollo no debe cargar Severidad QA aunque el campo sea global. ¿Qué es coherente?",
+        "en": "Development must not load QA Severity even though the field is global. What is consistent?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar el campo del site" },
-        { "id": "B", "texto": "Ocultarlo en la field config de DEV y/o no ponerlo en su pantalla ni contexto" },
-        { "id": "C", "texto": "Quitar Browse Projects a Developers" },
-        { "id": "D", "texto": "Renombrar el proyecto DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar el campo del site",
+            "en": "Delete the field from the site"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ocultarlo en la field config de DEV y/o no ponerlo en su pantalla ni contexto",
+            "en": "Hide it in DEV's field configuration and/or leave it off DEV's screen and context"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Quitar Browse Projects a Developers",
+            "en": "Remove Browse Projects from Developers"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Renombrar el proyecto DEV",
+            "en": "Rename the DEV project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "No destruyas el campo de SUP. Capa pantalla + Hidden + contexto dejan DEV limpio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "No destruyas el campo de SUP. Capa pantalla + Hidden + contexto dejan DEV limpio.",
+        "en": "Do not destroy SUP's field. Screen + Hidden + context layers leave DEV clean."
+      }
     },
     {
       "id": "m06-q19",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Description debe admitir markup en SUP. En la field configuration company-managed, ¿qué cambias?",
+      "stem": {
+        "es": "Description debe admitir markup en SUP. En la field configuration company-managed, ¿qué cambias?",
+        "en": "Description must allow markup in SUP. In the company-managed field configuration, what do you change?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El permission scheme" },
-        { "id": "B", "texto": "El renderer a Wiki style (frente a Default)" },
-        { "id": "C", "texto": "El screen scheme" },
-        { "id": "D", "texto": "La categoría del estado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El permission scheme",
+            "en": "The permission scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El renderer a Wiki style (frente a Default)",
+            "en": "The renderer to Wiki style (versus Default)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El screen scheme",
+            "en": "The screen scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La categoría del estado",
+            "en": "The status category"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Field configuration → Description → Renderers. Wiki permite markup. No es un scheme de pantallas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Field configuration → Description → Renderers. Wiki permite markup. No es un scheme de pantallas.",
+        "en": "Field configuration → Description → Renderers. Wiki allows markup. It is not a screen scheme."
+      }
     },
     {
       "id": "m06-q20",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Cambias el renderer de Description en SUP en producción, sin aviso. ¿Cuál es el riesgo?",
+      "stem": {
+        "es": "Cambias el renderer de Description en SUP en producción, sin aviso. ¿Cuál es el riesgo?",
+        "en": "You change the Description renderer in SUP in production, without warning. What is the risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ninguno: solo afecta a issues nuevas" },
-        { "id": "B", "texto": "Cambia cómo se ve el histórico ya guardado" },
-        { "id": "C", "texto": "Borra elementos de trabajo" },
-        { "id": "D", "texto": "Cambia el workflow scheme" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ninguno: solo afecta a issues nuevas",
+            "en": "None: it only affects new issues"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Cambia cómo se ve el histórico ya guardado",
+            "en": "It changes how already-saved history is displayed"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borra elementos de trabajo",
+            "en": "It deletes work items"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambia el workflow scheme",
+            "en": "It changes the workflow scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El renderer altera la lectura del pasado. Hay que avisar antes de tocarlo en un proyecto vivo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El renderer altera la lectura del pasado. Hay que avisar antes de tocarlo en un proyecto vivo.",
+        "en": "The renderer changes how the past is read. Warn before touching it on a live project."
+      }
     },
     {
       "id": "m06-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En Campos personalizados hay dos entradas «Departamento». ¿Qué ha pasado?",
+      "stem": {
+        "es": "En Campos personalizados hay dos entradas «Departamento». ¿Qué ha pasado?",
+        "en": "In Custom fields there are two Department entries. What happened?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un contexto extra" },
-        { "id": "B", "texto": "Lo creaste dos veces; Jira no fusiona por nombre" },
-        { "id": "C", "texto": "La pantalla duplica campos" },
-        { "id": "D", "texto": "Un team-managed clona los company-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un contexto extra",
+            "en": "An extra context"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Lo creaste dos veces; Jira no fusiona por nombre",
+            "en": "You created it twice; Jira does not merge by name"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La pantalla duplica campos",
+            "en": "The screen duplicates fields"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un team-managed clona los company-managed",
+            "en": "A team-managed clones the company-managed ones"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hay que buscar por nombre exacto antes de crear. Dos IDs = dos campos en pantallas, contextos e informes."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hay que buscar por nombre exacto antes de crear. Dos IDs = dos campos en pantallas, contextos e informes.",
+        "en": "Search by exact name before creating. Two IDs = two fields on screens, contexts, and reports."
+      }
     },
     {
       "id": "m06-q22",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Editas una field configuration company-managed. ¿Qué puedes hacer ahí?",
+      "stem": {
+        "es": "Editas una field configuration company-managed. ¿Qué puedes hacer ahí?",
+        "en": "You edit a company-managed field configuration. What can you do there?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Marcar un campo Required" },
-        { "id": "B", "texto": "Marcar un campo Hidden" },
-        { "id": "C", "texto": "Elegir el renderer (Wiki / Default)" },
-        { "id": "D", "texto": "Crear un proyecto nuevo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Marcar un campo Required",
+            "en": "Mark a field Required"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Marcar un campo Hidden",
+            "en": "Mark a field Hidden"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Elegir el renderer (Wiki / Default)",
+            "en": "Choose the renderer (Wiki / Default)"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear un proyecto nuevo",
+            "en": "Create a new project"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Required, Hidden y renderer viven aquí. Crear proyectos es otra consola."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Required, Hidden y renderer viven aquí. Crear proyectos es otra consola.",
+        "en": "Required, Hidden, and renderer live here. Creating projects is another console."
+      }
     },
     {
       "id": "m06-q23",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El contexto de Severidad QA aplica solo a Bug. Al crear una Story en SUP, ¿qué ocurre?",
+      "stem": {
+        "es": "El contexto de Severidad QA aplica solo a Bug. Al crear una Story en SUP, ¿qué ocurre?",
+        "en": "The QA Severity context applies only to Bug. When creating a Story in SUP, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El campo aparece igual" },
-        { "id": "B", "texto": "El campo no aplica a Story" },
-        { "id": "C", "texto": "Falla el permission scheme" },
-        { "id": "D", "texto": "Se crea un Bug en su lugar" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El campo aparece igual",
+            "en": "The field still appears"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El campo no aplica a Story",
+            "en": "The field does not apply to Story"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falla el permission scheme",
+            "en": "The permission scheme fails"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se crea un Bug en su lugar",
+            "en": "A Bug is created instead"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El contexto recorta por proyecto y por tipo. Misma pantalla, distinto tipo = el campo puede desaparecer."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El contexto recorta por proyecto y por tipo. Misma pantalla, distinto tipo = el campo puede desaparecer.",
+        "en": "Context cuts by project and by type. Same screen, different type = the field can disappear."
+      }
     },
     {
       "id": "m06-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Marta tiene Edit Issues, el campo está en Edit, el contexto incluye SUP, y no lo ve. ¿Qué palanca queda?",
+      "stem": {
+        "es": "Marta tiene Edit Issues, el campo está en Edit, el contexto incluye SUP, y no lo ve. ¿Qué palanca queda?",
+        "en": "Marta has Edit Issues, the field is on Edit, the context includes SUP, and she still cannot see it. Which lever remains?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El correo SMTP" },
-        { "id": "B", "texto": "Field configuration Hidden" },
-        { "id": "C", "texto": "El nombre del proyecto" },
-        { "id": "D", "texto": "El Marketplace" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El correo SMTP",
+            "en": "SMTP mail"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Field configuration Hidden",
+            "en": "Field configuration Hidden"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del proyecto",
+            "en": "The project name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El Marketplace",
+            "en": "The Marketplace"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Permiso + pantalla + contexto OK. Hidden es lo que queda. No es un problema de correo ni de apps."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Permiso + pantalla + contexto OK. Hidden es lo que queda. No es un problema de correo ni de apps.",
+        "en": "Permission + screen + context OK. Hidden is what remains. It is not a mail or apps problem."
+      }
     },
     {
       "id": "m06-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Nortech no quiere editar la field configuration Default del site. ¿Qué es lo limpio?",
+      "stem": {
+        "es": "Nortech no quiere editar la field configuration Default del site. ¿Qué es lo limpio?",
+        "en": "Nortech does not want to edit the site Default field configuration. What is the clean approach?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Editar Default: afecta poco" },
-        { "id": "B", "texto": "Usar una field configuration nombrada y asociarla con un field configuration scheme" },
-        { "id": "C", "texto": "Pasar todos los proyectos a team-managed" },
-        { "id": "D", "texto": "Ocultar los proyectos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Editar Default: afecta poco",
+            "en": "Edit Default: it has little impact"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Usar una field configuration nombrada y asociarla con un field configuration scheme",
+            "en": "Use a named field configuration and associate it with a field configuration scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pasar todos los proyectos a team-managed",
+            "en": "Convert all projects to team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Ocultar los proyectos",
+            "en": "Hide the projects"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El paquete se llama field configuration scheme. Se trabaja con una config nombrada asociada al proyecto, no con Default."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El paquete se llama field configuration scheme. Se trabaja con una config nombrada asociada al proyecto, no con Default.",
+        "en": "The package is called field configuration scheme. You work with a named config associated to the project, not with Default."
+      }
     },
     {
       "id": "m06-q26",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Create de DEV y de SUP muestran los mismos campos de RRHH. ¿Qué sospechas?",
+      "stem": {
+        "es": "Create de DEV y de SUP muestran los mismos campos de RRHH. ¿Qué sospechas?",
+        "en": "Create in DEV and in SUP show the same HR fields. What do you suspect?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los campos personalizados no existen" },
-        { "id": "B", "texto": "El issue type screen scheme no está asociado (siguen la pantalla compartida)" },
-        { "id": "C", "texto": "Falta el workflow de aprobación" },
-        { "id": "D", "texto": "El plan es Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los campos personalizados no existen",
+            "en": "The custom fields do not exist"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El issue type screen scheme no está asociado (siguen la pantalla compartida)",
+            "en": "The issue type screen scheme is not associated (they still use the shared screen)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta el workflow de aprobación",
+            "en": "The approval workflow is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El plan es Premium",
+            "en": "The plan is Premium"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Abre Create en ambos. Si son iguales, el scheme de pantallas no está enganchado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Abre Create en ambos. Si son iguales, el scheme de pantallas no está enganchado.",
+        "en": "Open Create in both. If they look the same, the screen scheme is not hooked up."
+      }
     },
     {
       "id": "m06-q27",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Departamento debe ser una sola opción (RRHH, Finanzas o Legal). ¿Qué tipo de campo usas?",
+      "stem": {
+        "es": "Departamento debe ser una sola opción (RRHH, Finanzas o Legal). ¿Qué tipo de campo usas?",
+        "en": "Department must be a single option (HR, Finance, or Legal). Which field type do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Labels libres" },
-        { "id": "B", "texto": "Select list (single choice)" },
-        { "id": "C", "texto": "Number" },
-        { "id": "D", "texto": "Date time picker" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Labels libres",
+            "en": "Free labels"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Select list (single choice)",
+            "en": "Select list (single choice)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Number",
+            "en": "Number"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Date time picker",
+            "en": "Date time picker"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Lista gobernada, un valor. Labels no imponen el catálogo de Nortech."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Lista gobernada, un valor. Labels no imponen el catálogo de Nortech.",
+        "en": "A governed list, one value. Labels do not enforce Nortech's catalog."
+      }
     },
     {
       "id": "m06-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "DEV quiere estimar Bugs y Stories con puntos. ¿Qué tipo de campo encaja?",
+      "stem": {
+        "es": "DEV quiere estimar Bugs y Stories con puntos. ¿Qué tipo de campo encaja?",
+        "en": "DEV wants to estimate Bugs and Stories with points. Which field type fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Select list de departamentos" },
-        { "id": "B", "texto": "Number, o el campo nativo Story Points si ya existe" },
-        { "id": "C", "texto": "Checkbox de cambio estándar" },
-        { "id": "D", "texto": "User picker" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Select list de departamentos",
+            "en": "Department select list"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Number, o el campo nativo Story Points si ya existe",
+            "en": "Number, or the native Story Points field if it already exists"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Checkbox de cambio estándar",
+            "en": "Standard-change checkbox"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "User picker",
+            "en": "User picker"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Es un número. No dupliques el nativo: búscalo antes de crear otro Number."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Es un número. No dupliques el nativo: búscalo antes de crear otro Number.",
+        "en": "It is a number. Do not duplicate the native field: search for it before creating another Number."
+      }
     },
     {
       "id": "m06-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO quiere Departamento obligatorio al crear la Solicitud. En company-managed, ¿qué palanca usas?",
+      "stem": {
+        "es": "PMO quiere Departamento obligatorio al crear la Solicitud. En company-managed, ¿qué palanca usas?",
+        "en": "PMO wants Department required when creating the Solicitud. In company-managed, which lever do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un validador en la transición Approve" },
-        { "id": "B", "texto": "Field configuration Required, con el campo en la pantalla de Create" },
-        { "id": "C", "texto": "Categoría Done" },
-        { "id": "D", "texto": "Ocultar el campo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un validador en la transición Approve",
+            "en": "A validator on the Approve transition"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Field configuration Required, con el campo en la pantalla de Create",
+            "en": "Field configuration Required, with the field on the Create screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Categoría Done",
+            "en": "Done category"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Ocultar el campo",
+            "en": "Hide the field"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Required al alta es field configuration + pantalla. Un validador en la transición gobierna el tránsito, no el Create."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Required al alta es field configuration + pantalla. Un validador en la transición gobierna el tránsito, no el Create.",
+        "en": "Required at create is field configuration + screen. A validator on the transition governs the transition, not Create."
+      }
     },
     {
       "id": "m06-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un agente ve Severidad QA en View y la busca en Create. ¿Cuál es el diagnóstico?",
+      "stem": {
+        "es": "Un agente ve Severidad QA en View y la busca en Create. ¿Cuál es el diagnóstico?",
+        "en": "An agent sees QA Severity on View and looks for it on Create. What is the diagnosis?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El contexto está mal siempre" },
-        { "id": "B", "texto": "Cada operación usa su pantalla: hay que añadirlo a Create" },
-        { "id": "C", "texto": "Hidden es la única causa posible" },
-        { "id": "D", "texto": "Falta un estado extra" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El contexto está mal siempre",
+            "en": "The context is always wrong"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Cada operación usa su pantalla: hay que añadirlo a Create",
+            "en": "Each operation uses its screen: you must add it to Create"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hidden es la única causa posible",
+            "en": "Hidden is the only possible cause"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falta un estado extra",
+            "en": "An extra status is missing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Create, Edit y View son tres huecos. Estar en uno no lo pone en los otros."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Create, Edit y View son tres huecos. Estar en uno no lo pone en los otros.",
+        "en": "Create, Edit, and View are three slots. Being on one does not put it on the others."
+      }
     },
     {
       "id": "m06-q31",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Bug usa NORTECH DEV Create/Edit y Solicitud usa NORTECH PMO. ¿Con qué se modela?",
+      "stem": {
+        "es": "Bug usa NORTECH DEV Create/Edit y Solicitud usa NORTECH PMO. ¿Con qué se modela?",
+        "en": "Bug uses NORTECH DEV Create/Edit and Solicitud uses NORTECH PMO. What models that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una sola pantalla para todos los tipos" },
-        { "id": "B", "texto": "Un issue type screen scheme (tipo → screen scheme)" },
-        { "id": "C", "texto": "Solo field configuration" },
-        { "id": "D", "texto": "El nombre del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una sola pantalla para todos los tipos",
+            "en": "A single screen for all types"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un issue type screen scheme (tipo → screen scheme)",
+            "en": "An issue type screen scheme (type → screen scheme)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo field configuration",
+            "en": "Field configuration only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre del proyecto",
+            "en": "The project name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Issue type screen scheme encadena tipo → screen scheme → pantallas Create/Edit/View."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Issue type screen scheme encadena tipo → screen scheme → pantallas Create/Edit/View.",
+        "en": "Issue type screen scheme chains type → screen scheme → Create/Edit/View screens."
+      }
     },
     {
       "id": "m06-q32",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Create de SUP pide Severidad QA y Edit no. ¿Qué objeto mapea cada operación a su pantalla?",
+      "stem": {
+        "es": "Create de SUP pide Severidad QA y Edit no. ¿Qué objeto mapea cada operación a su pantalla?",
+        "en": "SUP Create asks for QA Severity and Edit does not. Which object maps each operation to its screen?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Roles a grupos" },
-        { "id": "B", "texto": "Operaciones Create / Edit / View a pantallas" },
-        { "id": "C", "texto": "Estados a transiciones" },
-        { "id": "D", "texto": "Tipos a workflows" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Roles a grupos",
+            "en": "Roles to groups"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Operaciones Create / Edit / View a pantallas",
+            "en": "Create / Edit / View operations to screens"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Estados a transiciones",
+            "en": "Statuses to transitions"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Tipos a workflows",
+            "en": "Types to workflows"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Create, Edit y View pueden ser la misma pantalla o tres distintas. Roles y flujos son otros objetos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Create, Edit y View pueden ser la misma pantalla o tres distintas. Roles y flujos son otros objetos.",
+        "en": "Create, Edit, and View can be the same screen or three different ones. Roles and workflows are other objects."
+      }
     },
     {
       "id": "m06-q33",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Política Nortech: Create de DEV no pide Severidad QA. ¿Qué haces?",
+      "stem": {
+        "es": "Política Nortech: Create de DEV no pide Severidad QA. ¿Qué haces?",
+        "en": "Nortech policy: DEV Create does not ask for QA Severity. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Poner el campo en todas las pantallas" },
-        { "id": "B", "texto": "No incluirlo en NORTECH DEV Create/Edit (y contexto o Hidden si hace falta)" },
-        { "id": "C", "texto": "Borrar el tipo Bug" },
-        { "id": "D", "texto": "Quitar el rol Developers" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Poner el campo en todas las pantallas",
+            "en": "Put the field on all screens"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No incluirlo en NORTECH DEV Create/Edit (y contexto o Hidden si hace falta)",
+            "en": "Leave it out of NORTECH DEV Create/Edit (and context or Hidden if needed)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borrar el tipo Bug",
+            "en": "Delete the Bug type"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Quitar el rol Developers",
+            "en": "Remove the Developers role"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cada departamento tiene una pregunta extra, no un Jira distinto. DEV no hereda el formulario de SUP."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cada departamento tiene una pregunta extra, no un Jira distinto. DEV no hereda el formulario de SUP.",
+        "en": "Each department has an extra question, not a different Jira. DEV does not inherit SUP's form."
+      }
     },
     {
       "id": "m06-q34",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "El campo existe en el site. En un proyecto company-managed, ¿qué puede ocultarlo?",
+      "stem": {
+        "es": "El campo existe en el site. En un proyecto company-managed, ¿qué puede ocultarlo?",
+        "en": "The field exists on the site. In a company-managed project, what can hide it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Contexto que excluye el proyecto o el tipo" },
-        { "id": "B", "texto": "No está en la pantalla de esa operación" },
-        { "id": "C", "texto": "Field configuration Hidden" },
-        { "id": "D", "texto": "El nombre del proyecto tiene mayúsculas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Contexto que excluye el proyecto o el tipo",
+            "en": "A context that excludes the project or the type"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No está en la pantalla de esa operación",
+            "en": "It is not on that operation's screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Field configuration Hidden",
+            "en": "Field configuration Hidden"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre del proyecto tiene mayúsculas",
+            "en": "The project name has capitals"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Las tres capas. El key del proyecto no oculta campos."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Las tres capas. El key del proyecto no oculta campos.",
+        "en": "The three layers. The project key does not hide fields."
+      }
     },
     {
       "id": "m06-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Te piden configurar el layout de campos de un proyecto company-managed. ¿Dónde actúas?",
+      "stem": {
+        "es": "Te piden configurar el layout de campos de un proyecto company-managed. ¿Dónde actúas?",
+        "en": "You are asked to configure the field layout of a company-managed project. Where do you act?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En el workflow scheme" },
-        { "id": "B", "texto": "En screens y field configuration (required/hidden/renderer)" },
-        { "id": "C", "texto": "En el permission scheme" },
-        { "id": "D", "texto": "En el plan del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En el workflow scheme",
+            "en": "In the workflow scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En screens y field configuration (required/hidden/renderer)",
+            "en": "In screens and field configuration (required/hidden/renderer)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En el permission scheme",
+            "en": "In the permission scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el plan del site",
+            "en": "In the site plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En company-managed layout ≈ pantallas + field configuration. En team-managed es la issue layout del propio proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En company-managed layout ≈ pantallas + field configuration. En team-managed es la issue layout del propio proyecto.",
+        "en": "In company-managed layout ≈ screens + field configuration. In team-managed it is the project's own issue layout."
+      }
     },
     {
       "id": "m06-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Creaste NORTECH Fields (Severidad Required) pero SUP no obliga el campo. ¿Qué falta?",
+      "stem": {
+        "es": "Creaste NORTECH Fields (Severidad Required) pero SUP no obliga el campo. ¿Qué falta?",
+        "en": "You created NORTECH Fields (Severity Required) but SUP does not require the field. What is missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Volver a crear el campo personalizado" },
-        { "id": "B", "texto": "Asociar el field configuration scheme al proyecto SUP" },
-        { "id": "C", "texto": "Cambiar el nombre del campo" },
-        { "id": "D", "texto": "Activar Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Volver a crear el campo personalizado",
+            "en": "Recreate the custom field"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Asociar el field configuration scheme al proyecto SUP",
+            "en": "Associate the field configuration scheme to the SUP project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar el nombre del campo",
+            "en": "Change the field name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Activar Confluence",
+            "en": "Enable Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El objeto field config no actúa hasta el scheme asociado al proyecto. Igual que las pantallas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El objeto field config no actúa hasta el scheme asociado al proyecto. Igual que las pantallas.",
+        "en": "The field configuration object does not act until the scheme is associated to the project. Same as screens."
+      }
     },
     {
       "id": "m06-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Doce proyectos company-managed comparten el mismo field configuration scheme. Marcas Entorno Hidden. ¿A quién afecta?",
+      "stem": {
+        "es": "Doce proyectos company-managed comparten el mismo field configuration scheme. Marcas Entorno Hidden. ¿A quién afecta?",
+        "en": "Twelve company-managed projects share the same field configuration scheme. You mark Environment Hidden. Who is affected?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo al proyecto desde el que editaste" },
-        { "id": "B", "texto": "A los doce, al instante" },
-        { "id": "C", "texto": "Solo a los team-managed" },
-        { "id": "D", "texto": "Tras reiniciar Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo al proyecto desde el que editaste",
+            "en": "Only the project you edited from"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "A los doce, al instante",
+            "en": "All twelve, immediately"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo a los team-managed",
+            "en": "Only team-managed projects"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Tras reiniciar Jira",
+            "en": "After restarting Jira"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El field configuration scheme es el paquete: lo apuntan varios proyectos. Si DEV no debe heredar Hidden, usa otra field configuration."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El field configuration scheme es el paquete: lo apuntan varios proyectos. Si DEV no debe heredar Hidden, usa otra field configuration.",
+        "en": "The field configuration scheme is the package: several projects point at it. If DEV must not inherit Hidden, use another field configuration."
+      }
     },
     {
       "id": "m06-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El campo Entorno ensucia Create de SUP. ¿Qué palanca de field configuration lo quita de la vista?",
+      "stem": {
+        "es": "El campo Entorno ensucia Create de SUP. ¿Qué palanca de field configuration lo quita de la vista?",
+        "en": "The Environment field clutters SUP Create. Which field configuration lever removes it from view?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Required" },
-        { "id": "B", "texto": "Hidden" },
-        { "id": "C", "texto": "Wiki renderer" },
-        { "id": "D", "texto": "Un segundo contexto Global" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Required",
+            "en": "Required"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hidden",
+            "en": "Hidden"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Wiki renderer",
+            "en": "Wiki renderer"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un segundo contexto Global",
+            "en": "A second Global context"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hidden lo quita aunque esté en la pantalla. Required lo haría obligatorio; el renderer no lo oculta."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hidden lo quita aunque esté en la pantalla. Required lo haría obligatorio; el renderer no lo oculta.",
+        "en": "Hidden removes it even if it is on the screen. Required would make it mandatory; the renderer does not hide it."
+      }
     },
     {
       "id": "m06-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO necesita informar departamento con lista fija, y DEV no debe verlo. ¿Qué es lo gobernado?",
+      "stem": {
+        "es": "PMO necesita informar departamento con lista fija, y DEV no debe verlo. ¿Qué es lo gobernado?",
+        "en": "PMO needs to report department with a fixed list, and DEV must not see it. What is the governed approach?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Labels libres" },
-        { "id": "B", "texto": "Campo select + contexto (PMO/SUP, no DEV)" },
-        { "id": "C", "texto": "Un comentario en la descripción" },
-        { "id": "D", "texto": "El resumen del elemento" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Labels libres",
+            "en": "Free labels"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Campo select + contexto (PMO/SUP, no DEV)",
+            "en": "Select field + context (PMO/SUP, not DEV)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un comentario en la descripción",
+            "en": "A comment in the description"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El resumen del elemento",
+            "en": "The issue summary"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Lista cerrada y contexto para que DEV no herede Departamento. Labels no evitan rrhh, RRHH y Recursos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Lista cerrada y contexto para que DEV no herede Departamento. Labels no evitan rrhh, RRHH y Recursos.",
+        "en": "Closed list and context so DEV does not inherit Department. Labels do not prevent rrhh, RRHH, and Recursos."
+      }
     },
     {
       "id": "m06-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un campo está solo en la pantalla View (ni Create ni Edit). Un usuario con Edit Issues:",
+      "stem": {
+        "es": "Un campo está solo en la pantalla View (ni Create ni Edit). Un usuario con Edit Issues:",
+        "en": "A field is only on the View screen (neither Create nor Edit). A user with Edit Issues:"
+      },
       "opciones": [
-        { "id": "A", "texto": "Lo rellena en Create" },
-        { "id": "B", "texto": "Lo ve en el elemento pero no lo cambia por el formulario Edit" },
-        { "id": "C", "texto": "Lo borra al verlo" },
-        { "id": "D", "texto": "Cambia el workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Lo rellena en Create",
+            "en": "Fills it in on Create"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Lo ve en el elemento pero no lo cambia por el formulario Edit",
+            "en": "Sees it on the issue but cannot change it via the Edit form"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Lo borra al verlo",
+            "en": "Deletes it when viewing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambia el workflow",
+            "en": "Changes the workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "View no es Edit. Útil para datos que no deben pedirse en el alta ni en la edición habitual."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "View no es Edit. Útil para datos que no deben pedirse en el alta ni en la edición habitual.",
+        "en": "View is not Edit. Useful for data that should not be asked at create or in everyday edit."
+      }
     },
     {
       "id": "m06-q41",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El contexto de Departamento lista solo PMO y SUP. En OPS, ¿qué ocurre?",
+      "stem": {
+        "es": "El contexto de Departamento lista solo PMO y SUP. En OPS, ¿qué ocurre?",
+        "en": "The Department context lists only PMO and SUP. In OPS, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Hereda las opciones de PMO" },
-        { "id": "B", "texto": "El campo no aplica: OPS no está en el contexto" },
-        { "id": "C", "texto": "Usa el contexto de DEV" },
-        { "id": "D", "texto": "Crea el campo otra vez automáticamente" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Hereda las opciones de PMO",
+            "en": "It inherits PMO's options"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El campo no aplica: OPS no está en el contexto",
+            "en": "The field does not apply: OPS is not in the context"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Usa el contexto de DEV",
+            "en": "It uses DEV's context"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crea el campo otra vez automáticamente",
+            "en": "It creates the field again automatically"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Contexto restrictivo = lista explícita de proyectos. OPS no entra por proximidad organizativa."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Contexto restrictivo = lista explícita de proyectos. OPS no entra por proximidad organizativa.",
+        "en": "Restrictive context = explicit project list. OPS does not get in by organizational proximity."
+      }
     },
     {
       "id": "m06-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO y SUP necesitan listas distintas de Departamento. ¿Qué ventaja tiene usar dos contextos frente a duplicar el campo?",
+      "stem": {
+        "es": "PMO y SUP necesitan listas distintas de Departamento. ¿Qué ventaja tiene usar dos contextos frente a duplicar el campo?",
+        "en": "PMO and SUP need different Department lists. What is the advantage of two contexts versus duplicating the field?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Obtienes dos IDs distintos" },
-        { "id": "B", "texto": "Un solo campo (un ID) con listas o proyectos distintos" },
-        { "id": "C", "texto": "Ya no hace falta pantalla" },
-        { "id": "D", "texto": "Sustituye a la field configuration" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Obtienes dos IDs distintos",
+            "en": "You get two different IDs"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un solo campo (un ID) con listas o proyectos distintos",
+            "en": "One field (one ID) with different lists or projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ya no hace falta pantalla",
+            "en": "A screen is no longer needed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sustituye a la field configuration",
+            "en": "It replaces field configuration"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un campo, distintas listas. Siguen haciendo falta pantalla y field config; no se evitan las otras capas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un campo, distintas listas. Siguen haciendo falta pantalla y field config; no se evitan las otras capas.",
+        "en": "One field, different lists. Screen and field configuration are still needed; the other layers are not skipped."
+      }
     },
     {
       "id": "m06-q43",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "El campo Turno nació en un team-managed de Ops. Quieres el mismo control en el company-managed SUP. ¿Qué haces?",
+      "stem": {
+        "es": "El campo Turno nació en un team-managed de Ops. Quieres el mismo control en el company-managed SUP. ¿Qué haces?",
+        "en": "The Shift field was born in an Ops team-managed project. You want the same control in company-managed SUP. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Compartirlo: el team-managed exporta field configuration schemes" },
-        { "id": "B", "texto": "En el company-managed creas un custom field (o migras); el team-managed no comparte schemes" },
-        { "id": "C", "texto": "Copias la issue layout del team-managed al site" },
-        { "id": "D", "texto": "Reutilizas el nombre del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Compartirlo: el team-managed exporta field configuration schemes",
+            "en": "Share it: team-managed exports field configuration schemes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En el company-managed creas un custom field (o migras); el team-managed no comparte schemes",
+            "en": "In the company-managed project you create a custom field (or migrate); team-managed does not share schemes"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Copias la issue layout del team-managed al site",
+            "en": "Copy the team-managed issue layout to the site"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Reutilizas el nombre del proyecto",
+            "en": "Reuse the project name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los campos de team-managed viven en su proyecto. SUP company-managed usa objetos globales (custom field + pantalla + field config)."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los campos de team-managed viven en su proyecto. SUP company-managed usa objetos globales (custom field + pantalla + field config).",
+        "en": "Team-managed fields live in their project. Company-managed SUP uses global objects (custom field + screen + field configuration)."
+      }
     },
     {
       "id": "m06-q44",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "OPS necesita marcar si un cambio es estándar (sí/no). ¿Qué tipo usas?",
+      "stem": {
+        "es": "OPS necesita marcar si un cambio es estándar (sí/no). ¿Qué tipo usas?",
+        "en": "OPS needs to mark whether a change is standard (yes/no). Which type do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Date picker" },
-        { "id": "B", "texto": "Checkbox o select Sí/No" },
-        { "id": "C", "texto": "Number de story points" },
-        { "id": "D", "texto": "Select de departamentos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Date picker",
+            "en": "Date picker"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Checkbox o select Sí/No",
+            "en": "Checkbox or Yes/No select"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Number de story points",
+            "en": "Story points Number"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Select de departamentos",
+            "en": "Department select"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Una pregunta binaria de operaciones. No es fecha ni el catálogo de RRHH."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Una pregunta binaria de operaciones. No es fecha ni el catálogo de RRHH.",
+        "en": "A binary operations question. It is not a date or the HR catalog."
+      }
     },
     {
       "id": "m06-q45",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Te piden configurar el layout de campos en un company-managed. No usas el editor de transiciones. ¿Con qué lo resuelves?",
+      "stem": {
+        "es": "Te piden configurar el layout de campos en un company-managed. No usas el editor de transiciones. ¿Con qué lo resuelves?",
+        "en": "You are asked to configure field layout in a company-managed project. You do not use the transition editor. What do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Condiciones y post functions" },
-        { "id": "B", "texto": "Pantallas Create/Edit/View y field configuration" },
-        { "id": "C", "texto": "La categoría del estado" },
-        { "id": "D", "texto": "El nombre del workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Condiciones y post functions",
+            "en": "Conditions and post functions"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pantallas Create/Edit/View y field configuration",
+            "en": "Create/Edit/View screens and field configuration"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La categoría del estado",
+            "en": "The status category"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre del workflow",
+            "en": "The workflow name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El flujo no coloca campos en el formulario. Lo hacen pantallas y field configuration."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El flujo no coloca campos en el formulario. Lo hacen pantallas y field configuration.",
+        "en": "The workflow does not place fields on the form. Screens and field configuration do."
+      }
     },
     {
       "id": "m06-q46",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Nortech modela formularios por departamento. ¿Qué decisiones son correctas?",
+      "stem": {
+        "es": "Nortech modela formularios por departamento. ¿Qué decisiones son correctas?",
+        "en": "Nortech models forms by department. Which decisions are correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "RRHH y Calidad piden datos que DEV no ve en Create" },
-        { "id": "B", "texto": "Un campo Departamento, no un Jira distinto por departamento" },
-        { "id": "C", "texto": "Team-managed y company-managed usan exactamente los mismos schemes globales" },
-        { "id": "D", "texto": "La field config de DEV puede ocultar Severidad QA" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "RRHH y Calidad piden datos que DEV no ve en Create",
+            "en": "HR and Quality ask for data that DEV does not see on Create"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un campo Departamento, no un Jira distinto por departamento",
+            "en": "One Department field, not a different Jira per department"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Team-managed y company-managed usan exactamente los mismos schemes globales",
+            "en": "Team-managed and company-managed use exactly the same global schemes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La field config de DEV puede ocultar Severidad QA",
+            "en": "DEV's field configuration can hide QA Severity"
+          }
+        }
       ],
-      "correctas": ["A", "B", "D"],
-      "explicacion": "Formularios por departamento sin duplicar Jira. Team-managed no consume los schemes globales de company-managed."
+      "correctas": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explicacion": {
+        "es": "Formularios por departamento sin duplicar Jira. Team-managed no consume los schemes globales de company-managed.",
+        "en": "Forms by department without duplicating Jira. Team-managed does not consume company-managed global schemes."
+      }
     },
     {
       "id": "m06-q47",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Crees que Departamento no existe y vas a crearlo otra vez. ¿Qué haces antes?",
+      "stem": {
+        "es": "Crees que Departamento no existe y vas a crearlo otra vez. ¿Qué haces antes?",
+        "en": "You think Department does not exist and you are about to create it again. What do you do first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear un team-managed de prueba" },
-        { "id": "B", "texto": "Buscar el campo por nombre exacto en Campos personalizados" },
-        { "id": "C", "texto": "Borrar todas las pantallas" },
-        { "id": "D", "texto": "Cambiar el plan a Free" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear un team-managed de prueba",
+            "en": "Create a trial team-managed project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Buscar el campo por nombre exacto en Campos personalizados",
+            "en": "Search for the field by exact name in Custom fields"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borrar todas las pantallas",
+            "en": "Delete all screens"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar el plan a Free",
+            "en": "Change the plan to Free"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Error frecuente: campo duplicado. No clones; busca el ID que ya existe."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Error frecuente: campo duplicado. No clones; busca el ID que ya existe.",
+        "en": "Frequent error: duplicate field. Do not clone; look up the ID that already exists."
+      }
     },
     {
       "id": "m06-q48",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Creaste un contexto Global de Departamento y no restringiste proyectos. DEV empieza a ver el campo. ¿A qué equivale ese contexto?",
+      "stem": {
+        "es": "Creaste un contexto Global de Departamento y no restringiste proyectos. DEV empieza a ver el campo. ¿A qué equivale ese contexto?",
+        "en": "You created a Global Department context and did not restrict projects. DEV starts seeing the field. What does that context equal?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ningún proyecto" },
-        { "id": "B", "texto": "Todos los proyectos (y los tipos que liste el contexto)" },
-        { "id": "C", "texto": "Solo team-managed" },
-        { "id": "D", "texto": "Solo el proyecto PMO" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ningún proyecto",
+            "en": "No projects"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Todos los proyectos (y los tipos que liste el contexto)",
+            "en": "All projects (and the types the context lists)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo team-managed",
+            "en": "Team-managed only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el proyecto PMO",
+            "en": "Only the PMO project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Global vacío de proyectos = todos. Por eso DEV ve Departamento hasta que restringes o desactivas ese contexto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Global vacío de proyectos = todos. Por eso DEV ve Departamento hasta que restringes o desactivas ese contexto.",
+        "en": "Global empty of projects = all. That is why DEV sees Department until you restrict or deactivate that context."
+      }
     },
     {
       "id": "m06-q49",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Quieres que SUP use NORTECH SUP Screens. ¿Qué estás administrando al asociar ese scheme al proyecto?",
+      "stem": {
+        "es": "Quieres que SUP use NORTECH SUP Screens. ¿Qué estás administrando al asociar ese scheme al proyecto?",
+        "en": "You want SUP to use NORTECH SUP Screens. What are you administering when you associate that scheme to the project?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo el workflow" },
-        { "id": "B", "texto": "Schemes de pantallas del proyecto company-managed" },
-        { "id": "C", "texto": "La field configuration Hidden de DEV" },
-        { "id": "D", "texto": "La facturación de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo el workflow",
+            "en": "Only the workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Schemes de pantallas del proyecto company-managed",
+            "en": "Screen schemes of the company-managed project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La field configuration Hidden de DEV",
+            "en": "DEV's Hidden field configuration"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La facturación de la organización",
+            "en": "Organization billing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El proyecto company-managed se engancha a issue type screen scheme / screen scheme. El flujo no asigna formularios."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El proyecto company-managed se engancha a issue type screen scheme / screen scheme. El flujo no asigna formularios.",
+        "en": "The company-managed project hooks to issue type screen scheme / screen scheme. The workflow does not assign forms."
+      }
     },
     {
       "id": "m06-q50",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Quieres comprobar que el screen scheme de SUP está asociado. ¿Qué haces?",
+      "stem": {
+        "es": "Quieres comprobar que el screen scheme de SUP está asociado. ¿Qué haces?",
+        "en": "You want to verify that SUP's screen scheme is associated. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Mirar solo la lista de workflows" },
-        { "id": "B", "texto": "Abrir Create en SUP y en DEV y ver campos distintos (por ejemplo Severidad QA)" },
-        { "id": "C", "texto": "Contar estados del flujo" },
-        { "id": "D", "texto": "Revisar el correo SMTP" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Mirar solo la lista de workflows",
+            "en": "Look only at the workflow list"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Abrir Create en SUP y en DEV y ver campos distintos (por ejemplo Severidad QA)",
+            "en": "Open Create in SUP and in DEV and see different fields (for example QA Severity)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Contar estados del flujo",
+            "en": "Count workflow statuses"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Revisar el correo SMTP",
+            "en": "Check SMTP mail"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Create distinto por departamento. Si son iguales, el scheme no está asociado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Create distinto por departamento. Si son iguales, el scheme no está asociado.",
+        "en": "Create differs by department. If they look the same, the scheme is not associated."
+      }
     }
   ]
 }

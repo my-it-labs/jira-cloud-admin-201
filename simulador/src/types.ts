@@ -1,3 +1,5 @@
+import type { I18nText } from './i18n';
+
 export type TipoPregunta = 'single' | 'multi';
 
 export type DominioId =
@@ -9,17 +11,17 @@ export type DominioId =
 
 export type Opcion = {
   id: string;
-  texto: string;
+  texto: I18nText;
 };
 
 export type Pregunta = {
   id: string;
   dominio: DominioId;
   tipo: TipoPregunta;
-  stem: string;
+  stem: I18nText;
   opciones: Opcion[];
   correctas: string[];
-  explicacion: string;
+  explicacion: I18nText;
   modulo?: string;
 };
 
@@ -31,14 +33,14 @@ export type Banco = {
 
 export type ConfigExamen = {
   codigo: string;
-  titulo: string;
-  subtitulo: string;
+  titulo: I18nText;
+  subtitulo: I18nText;
   preguntasObjetivo: number;
   preguntasPorModulo: number;
   preguntasRapido: number;
   minutos: number;
   corte: number;
-  dominios: Record<DominioId, { peso: number; etiqueta: string }>;
+  dominios: Record<DominioId, { peso: number; etiqueta: I18nText }>;
 };
 
 export type IndiceBancos = {

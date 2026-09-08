@@ -6,701 +6,2309 @@
       "id": "m09-q1",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En SUP, una regla debe asignar cada Bug nuevo al responsable del componente. El registro de auditoría indica que el usuario no tiene permiso. ¿Sobre qué debes actuar?",
+      "stem": {
+        "es": "En SUP, una regla debe asignar cada Bug nuevo al responsable del componente. El registro de auditoría indica que el usuario no tiene permiso. ¿Sobre qué debes actuar?",
+        "en": "In SUP, a rule must assign each new Bug to the component lead. The audit log says the user does not have permission. What should you act on?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El filtro del tablero" },
-        { "id": "B", "texto": "El esquema de permisos, Assignable User y el actor de la regla" },
-        { "id": "C", "texto": "El nombre del sprint" },
-        { "id": "D", "texto": "Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El filtro del tablero",
+            "en": "The board filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El esquema de permisos, Assignable User y el actor de la regla",
+            "en": "The permission scheme, Assignable User, and the rule actor"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del sprint",
+            "en": "The sprint name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Confluence",
+            "en": "Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Automation se ejecuta como un usuario más. Sin Assign Issues para el actor o sin Assignable User para el destinatario, la asignación falla."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Automation se ejecuta como un usuario más. Sin Assign Issues para el actor o sin Assignable User para el destinatario, la asignación falla.",
+        "en": "Automation runs as another user. Without Assign Issues for the actor or Assignable User for the target, the assignment fails."
+      }
     },
     {
       "id": "m09-q2",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "PMO pide reasignar 80 incidencias de SUP a Marta, una sola vez, y no quiere nada ejecutándose después. ¿Qué es lo más adecuado?",
+      "stem": {
+        "es": "PMO pide reasignar 80 incidencias de SUP a Marta, una sola vez, y no quiere nada ejecutándose después. ¿Qué es lo más adecuado?",
+        "en": "PMO asks to reassign 80 SUP issues to Marta, once, and does not want anything running afterwards. What is most appropriate?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una regla programada que corra de forma indefinida" },
-        { "id": "B", "texto": "Un cambio masivo (bulk change)" },
-        { "id": "C", "texto": "Crear un proyecto nuevo" },
-        { "id": "D", "texto": "Un esquema de seguridad de incidencias" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una regla programada que corra de forma indefinida",
+            "en": "A scheduled rule that runs indefinitely"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un cambio masivo (bulk change)",
+            "en": "A bulk change"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crear un proyecto nuevo",
+            "en": "Create a new project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un esquema de seguridad de incidencias",
+            "en": "An issue security scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un cambio puntual de muchas issues, con un humano al volante, es bulk change. Automation es para eventos que se repetirán; el workflow, para lo que ocurre siempre al transitar."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un cambio puntual de muchas issues, con un humano al volante, es bulk change. Automation es para eventos que se repetirán; el workflow, para lo que ocurre siempre al transitar.",
+        "en": "A one-off change of many issues, with a human at the wheel, is bulk change. Automation is for events that will repeat; the workflow is for what always happens on transition."
+      }
     },
     {
       "id": "m09-q3",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Un project admin publica una regla con disparador Issue updated y acción Edit issue sobre la misma incidencia, sin condición ni salvaguarda. ¿Cuál es el riesgo principal?",
+      "stem": {
+        "es": "Un project admin publica una regla con disparador Issue updated y acción Edit issue sobre la misma incidencia, sin condición ni salvaguarda. ¿Cuál es el riesgo principal?",
+        "en": "A project admin publishes a rule with an Issue updated trigger and an Edit issue action on the same issue, with no condition or safeguard. What is the main risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es la configuración óptima" },
-        { "id": "B", "texto": "Un bucle: cada edición vuelve a disparar la regla" },
-        { "id": "C", "texto": "Es obligatoria en Scrum" },
-        { "id": "D", "texto": "Solo funciona en el plan Free" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es la configuración óptima",
+            "en": "It is the optimal configuration"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un bucle: cada edición vuelve a disparar la regla",
+            "en": "A loop: each edit fires the rule again"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Es obligatoria en Scrum",
+            "en": "It is mandatory in Scrum"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo funciona en el plan Free",
+            "en": "It only works on the Free plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hay que acotar el campo que dispara, añadir condiciones y marcar ignore issues in this rule / only include issues not recently updated by this rule."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hay que acotar el campo que dispara, añadir condiciones y marcar ignore issues in this rule / only include issues not recently updated by this rule.",
+        "en": "You must narrow the field that fires the rule, add conditions, and select ignore issues in this rule / only include issues not recently updated by this rule."
+      }
     },
     {
       "id": "m09-q4",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Soporte de Nortech quiere avisar si una incidencia Highest de SUP lleva más de un día sin actualizarse. ¿Qué disparador encaja?",
+      "stem": {
+        "es": "Soporte de Nortech quiere avisar si una incidencia Highest de SUP lleva más de un día sin actualizarse. ¿Qué disparador encaja?",
+        "en": "Nortech Support wants an alert if a Highest SUP issue has not been updated for more than a day. Which trigger fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Issue created / Trabajo creado" },
-        { "id": "B", "texto": "Scheduled / Programado con un JQL de antigüedad" },
-        { "id": "C", "texto": "Sprint iniciado" },
-        { "id": "D", "texto": "El filtro del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Issue created / Trabajo creado",
+            "en": "Issue created"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Scheduled / Programado con un JQL de antigüedad",
+            "en": "Scheduled, with a JQL query for age"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sprint iniciado",
+            "en": "Sprint started"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro del tablero",
+            "en": "The board filter"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Scheduled barre un JQL de forma periódica. Un evento de creación no detecta el «llevan dos días sin tocarse»."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Scheduled barre un JQL de forma periódica. Un evento de creación no detecta el «llevan dos días sin tocarse».",
+        "en": "Scheduled sweeps a JQL query on a schedule. A create event does not detect issues that have sat untouched for two days."
+      }
     },
     {
       "id": "m09-q5",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La regla de autoasignación de SUP no debe tocar las Tasks de la misma cola, solo los Bugs. ¿Dónde lo acotas?",
+      "stem": {
+        "es": "La regla de autoasignación de SUP no debe tocar las Tasks de la misma cola, solo los Bugs. ¿Dónde lo acotas?",
+        "en": "The SUP auto-assignment rule must not touch Tasks in the same queue, only Bugs. Where do you narrow that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una condición: tipo = Bug" },
-        { "id": "B", "texto": "Un nivel de seguridad Cliente" },
-        { "id": "C", "texto": "Un gadget Velocity" },
-        { "id": "D", "texto": "Cambiar la clave del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una condición: tipo = Bug",
+            "en": "A condition: type = Bug"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un nivel de seguridad Cliente",
+            "en": "A Cliente security level"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un gadget Velocity",
+            "en": "A Velocity gadget"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar la clave del proyecto",
+            "en": "Change the project key"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "When + If. El disparador de creación por sí solo no distingue el tipo de incidencia."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "When + If. El disparador de creación por sí solo no distingue el tipo de incidencia.",
+        "en": "When + If. The create trigger by itself does not distinguish issue type."
+      }
     },
     {
       "id": "m09-q6",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En DEV, el resumen de una subtarea creada por automatización aparece literalmente como «QA — {{issue.key}}» en lugar de la clave del padre. ¿Cuál es la causa más probable?",
+      "stem": {
+        "es": "En DEV, el resumen de una subtarea creada por automatización aparece literalmente como «QA — {{issue.key}}» en lugar de la clave del padre. ¿Cuál es la causa más probable?",
+        "en": "In DEV, the summary of a sub-task created by automation appears literally as “QA — {{issue.key}}” instead of the parent's key. What is the most likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Falta el plan Premium" },
-        { "id": "B", "texto": "El tablero es Kanban" },
-        { "id": "C", "texto": "El smart value está mal escrito o entre comillas raras" },
-        { "id": "D", "texto": "Confluence no está instalado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Falta el plan Premium",
+            "en": "The Premium plan is missing"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El tablero es Kanban",
+            "en": "The board is Kanban"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El smart value está mal escrito o entre comillas raras",
+            "en": "The smart value is mistyped or wrapped in unusual quotes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Confluence no está instalado",
+            "en": "Confluence is not installed"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "{{issue.key}} sin espacios ni comillas raras se sustituye (por ejemplo DEV-12). Si queda el texto literal, la sintaxis falló."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "{{issue.key}} sin espacios ni comillas raras se sustituye (por ejemplo DEV-12). Si queda el texto literal, la sintaxis falló.",
+        "en": "{{issue.key}} with no spaces or unusual quotes is replaced (for example DEV-12). If the literal text remains, the syntax failed."
+      }
     },
     {
       "id": "m09-q7",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Tras crear subtareas de QA y documentación, el equipo de DEV quiere asignarlas al usuario actual. ¿Qué pieza de la regla usas?",
+      "stem": {
+        "es": "Tras crear subtareas de QA y documentación, el equipo de DEV quiere asignarlas al usuario actual. ¿Qué pieza de la regla usas?",
+        "en": "After creating QA and documentation sub-tasks, the DEV team wants to assign them to the current user. Which piece of the rule do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un filtro rápido del tablero" },
-        { "id": "B", "texto": "Un informe Cumulative Flow" },
-        { "id": "C", "texto": "Un esquema de seguridad de incidencias" },
-        { "id": "D", "texto": "Una rama For each / Related issues hacia las subtareas y luego Assign" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un filtro rápido del tablero",
+            "en": "A board quick filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un informe Cumulative Flow",
+            "en": "A Cumulative Flow report"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un esquema de seguridad de incidencias",
+            "en": "An issue security scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Una rama For each / Related issues hacia las subtareas y luego Assign",
+            "en": "A For each / Related issues branch toward the sub-tasks, then Assign"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "El branch itera elementos relacionados. La acción del tronco no recorre sola las subtareas."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "El branch itera elementos relacionados. La acción del tronco no recorre sola las subtareas.",
+        "en": "The branch iterates related items. The trunk action does not walk the sub-tasks on its own."
+      }
     },
     {
       "id": "m09-q8",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Una regla de SUP asigna al component lead. Marta es responsable del componente api pero no está en Assignable User. ¿Qué verás en el registro de auditoría?",
+      "stem": {
+        "es": "Una regla de SUP asigna al component lead. Marta es responsable del componente api pero no está en Assignable User. ¿Qué verás en el registro de auditoría?",
+        "en": "A SUP rule assigns to the component lead. Marta is lead of the api component but is not in Assignable User. What will you see in the audit log?"
+      },
       "opciones": [
-        { "id": "A", "texto": "SUCCESS: el lead siempre es asignable" },
-        { "id": "B", "texto": "FAIL de permiso: el destinatario también debe ser Assignable User" },
-        { "id": "C", "texto": "Se crea un proyecto llamado api" },
-        { "id": "D", "texto": "Automation ignora el esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "SUCCESS: el lead siempre es asignable",
+            "en": "SUCCESS: the lead is always assignable"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "FAIL de permiso: el destinatario también debe ser Assignable User",
+            "en": "A permission FAIL: the target must also be an Assignable User"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se crea un proyecto llamado api",
+            "en": "A project named api is created"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Automation ignora el esquema de permisos",
+            "en": "Automation ignores the permission scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El actor necesita Assign Issues y Marta necesita Assignable User. Ser component lead no salta el esquema de permisos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El actor necesita Assign Issues y Marta necesita Assignable User. Ser component lead no salta el esquema de permisos.",
+        "en": "The actor needs Assign Issues and Marta needs Assignable User. Being component lead does not skip the permission scheme."
+      }
     },
     {
       "id": "m09-q9",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En Automatización global, el uso del sitio está al 100 % y las reglas de SUP han dejado de ejecutarse. ¿Qué haces primero?",
+      "stem": {
+        "es": "En Automatización global, el uso del sitio está al 100 % y las reglas de SUP han dejado de ejecutarse. ¿Qué haces primero?",
+        "en": "In global Automation, site usage is at 100% and SUP rules have stopped running. What do you do first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Desactivar reglas de demostración y acotar el alcance al proyecto" },
-        { "id": "B", "texto": "Borrar el proyecto DEV" },
-        { "id": "C", "texto": "Instalar una app de pago de timesheet" },
-        { "id": "D", "texto": "Cambiar el workflow al Default" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Desactivar reglas de demostración y acotar el alcance al proyecto",
+            "en": "Disable demo rules and narrow the scope to the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Borrar el proyecto DEV",
+            "en": "Delete the DEV project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Instalar una app de pago de timesheet",
+            "en": "Install a paid timesheet app"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar el workflow al Default",
+            "en": "Switch the workflow to Default"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Los planes Cloud tienen límite de ejecuciones. Las reglas programadas y de alcance global consumen cuota con rapidez."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Los planes Cloud tienen límite de ejecuciones. Las reglas programadas y de alcance global consumen cuota con rapidez.",
+        "en": "Cloud plans have an execution limit. Scheduled and global-scope rules consume quota quickly."
+      }
     },
     {
       "id": "m09-q10",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Cada vez que un elemento de PMO transita a Done debe quedar Resolution = Done, siempre, sin condiciones. ¿Qué es lo más simple?",
+      "stem": {
+        "es": "Cada vez que un elemento de PMO transita a Done debe quedar Resolution = Done, siempre, sin condiciones. ¿Qué es lo más simple?",
+        "en": "Every time a PMO item transitions to Done, Resolution must be Done — always, with no conditions. What is simplest?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una regla programada diaria" },
-        { "id": "B", "texto": "Un bulk change cada viernes" },
-        { "id": "C", "texto": "Una post function del workflow" },
-        { "id": "D", "texto": "Un gadget Filter Results" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una regla programada diaria",
+            "en": "A daily scheduled rule"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un bulk change cada viernes",
+            "en": "A bulk change every Friday"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Una post function del workflow",
+            "en": "A workflow post function"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un gadget Filter Results",
+            "en": "A Filter Results gadget"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Si ocurre siempre al transitar y no hay ramas, el workflow basta. Automation encaja cuando hay eventos con condiciones ricas."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Si ocurre siempre al transitar y no hay ramas, el workflow basta. Automation encaja cuando hay eventos con condiciones ricas.",
+        "en": "If it always happens on transition and there are no branches, the workflow is enough. Automation fits when events have rich conditions."
+      }
     },
     {
       "id": "m09-q11",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En SUP el componente api ya tiene Default assignee = Component lead y Marta es Assignable User. PMO solo pide esa asignación, sin etiqueta ni ramas. ¿Qué montas?",
+      "stem": {
+        "es": "En SUP el componente api ya tiene Default assignee = Component lead y Marta es Assignable User. PMO solo pide esa asignación, sin etiqueta ni ramas. ¿Qué montas?",
+        "en": "In SUP the api component already has Default assignee = Component lead and Marta is an Assignable User. PMO only wants that assignment, with no label or branches. What do you set up?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Nada extra: el valor por defecto del componente basta" },
-        { "id": "B", "texto": "Una regla global por cada Bug del sitio" },
-        { "id": "C", "texto": "Un esquema de seguridad Cliente" },
-        { "id": "D", "texto": "Un tablero Scrum nuevo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Nada extra: el valor por defecto del componente basta",
+            "en": "Nothing extra: the component default is enough"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Una regla global por cada Bug del sitio",
+            "en": "A global rule for every Bug on the site"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un esquema de seguridad Cliente",
+            "en": "A Cliente issue security scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un tablero Scrum nuevo",
+            "en": "A new Scrum board"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Elige el mecanismo más simple que cumpla el requisito. La regla aporta etiqueta, prioridad por texto y branches; no es obligatoria para asignar al lead."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Elige el mecanismo más simple que cumpla el requisito. La regla aporta etiqueta, prioridad por texto y branches; no es obligatoria para asignar al lead.",
+        "en": "Choose the simplest mechanism that meets the requirement. The rule adds a label, priority by text, and branches; it is not required to assign to the lead."
+      }
     },
     {
       "id": "m09-q12",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La regla de autoasignación de Bugs tiene alcance solo del proyecto SUP. Un desarrollador crea un Bug en DEV. ¿Qué ocurre?",
+      "stem": {
+        "es": "La regla de autoasignación de Bugs tiene alcance solo del proyecto SUP. Un desarrollador crea un Bug en DEV. ¿Qué ocurre?",
+        "en": "The Bug auto-assignment rule is scoped to the SUP project only. A developer creates a Bug in DEV. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "La regla se dispara igual" },
-        { "id": "B", "texto": "No se dispara: el alcance no incluye DEV" },
-        { "id": "C", "texto": "DEV pasa a team-managed" },
-        { "id": "D", "texto": "Se consume el sprint de DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "La regla se dispara igual",
+            "en": "The rule still fires"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No se dispara: el alcance no incluye DEV",
+            "en": "It does not fire: the scope does not include DEV"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "DEV pasa a team-managed",
+            "en": "DEV becomes team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se consume el sprint de DEV",
+            "en": "The DEV sprint is consumed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El alcance puede ser un proyecto, varios o global. Una regla de SUP no ve las incidencias de DEV."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El alcance puede ser un proyecto, varios o global. Una regla de SUP no ve las incidencias de DEV.",
+        "en": "Scope can be one project, several, or global. A SUP rule does not see DEV issues."
+      }
     },
     {
       "id": "m09-q13",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Una regla edita la misma incidencia que la disparó (Issue updated → Edit). Además de acotar el campo, ¿qué debería marcar el project admin?",
+      "stem": {
+        "es": "Una regla edita la misma incidencia que la disparó (Issue updated → Edit). Además de acotar el campo, ¿qué debería marcar el project admin?",
+        "en": "A rule edits the same issue that triggered it (Issue updated → Edit). Besides narrowing the field, what should the project admin select?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Quitar todas las condiciones" },
-        { "id": "B", "texto": "Ignore issues in this rule / only include issues not recently updated by this rule" },
-        { "id": "C", "texto": "Cambiar el disparador a Sprint started" },
-        { "id": "D", "texto": "Compartir el dashboard" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Quitar todas las condiciones",
+            "en": "Remove all conditions"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ignore issues in this rule / only include issues not recently updated by this rule",
+            "en": "Ignore issues in this rule / only include issues not recently updated by this rule"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar el disparador a Sprint started",
+            "en": "Change the trigger to Sprint started"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Compartir el dashboard",
+            "en": "Share the dashboard"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sin esa salvaguarda, el propio edit vuelve a disparar la regla y se forma un bucle."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sin esa salvaguarda, el propio edit vuelve a disparar la regla y se forma un bucle.",
+        "en": "Without that safeguard, the edit itself fires the rule again and a loop forms."
+      }
     },
     {
       "id": "m09-q14",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Cuando una Solicitud de PMO llega a In Review hay que dejar el comentario «Pendiente de aprobación». ¿Qué disparador usas?",
+      "stem": {
+        "es": "Cuando una Solicitud de PMO llega a In Review hay que dejar el comentario «Pendiente de aprobación». ¿Qué disparador usas?",
+        "en": "When a PMO Request reaches In Review, a comment “Pending approval” must be added. Which trigger do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Programado cada noche" },
-        { "id": "B", "texto": "Issue transitioned / Transición con destino In Review" },
-        { "id": "C", "texto": "Board created" },
-        { "id": "D", "texto": "User added to group" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Programado cada noche",
+            "en": "Scheduled every night"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Issue transitioned / Transición con destino In Review",
+            "en": "Issue transitioned, with destination In Review"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Board created",
+            "en": "Board created"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "User added to group",
+            "en": "User added to group"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Scheduled barre un JQL; transitioned reacciona al momento. «Cuando aprueban» es un evento de transición."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Scheduled barre un JQL; transitioned reacciona al momento. «Cuando aprueban» es un evento de transición.",
+        "en": "Scheduled sweeps a JQL query; transitioned reacts at the moment. “When they approve” is a transition event."
+      }
     },
     {
       "id": "m09-q15",
       "dominio": "automation",
       "tipo": "multi",
-      "stem": "Un project admin de SUP monta una regla típica de triaje. ¿Qué piezas forman esa regla?",
+      "stem": {
+        "es": "Un project admin de SUP monta una regla típica de triaje. ¿Qué piezas forman esa regla?",
+        "en": "A SUP project admin builds a typical triage rule. Which pieces make up that rule?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Disparador (When)" },
-        { "id": "B", "texto": "Condición (If)" },
-        { "id": "C", "texto": "Acción (Then)" },
-        { "id": "D", "texto": "El filtro del tablero Scrum de DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Disparador (When)",
+            "en": "Trigger (When)"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Condición (If)",
+            "en": "Condition (If)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Acción (Then)",
+            "en": "Action (Then)"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro del tablero Scrum de DEV",
+            "en": "The DEV Scrum board filter"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "When → If → Then, más branches For each si hace falta. El filtro del tablero no es un componente de la regla."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "When → If → Then, más branches For each si hace falta. El filtro del tablero no es un componente de la regla.",
+        "en": "When → If → Then, plus For each branches if needed. The board filter is not a component of the rule."
+      }
     },
     {
       "id": "m09-q16",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En DEV, una regla crea subtareas al transitar a In Progress, sin condición de tipo Story. ¿Cuál es el riesgo?",
+      "stem": {
+        "es": "En DEV, una regla crea subtareas al transitar a In Progress, sin condición de tipo Story. ¿Cuál es el riesgo?",
+        "en": "In DEV, a rule creates sub-tasks on transition to In Progress, with no Story type condition. What is the risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ninguno: las subtareas no transitan" },
-        { "id": "B", "texto": "Bucle: las subtareas pueden volver a crear nietos" },
-        { "id": "C", "texto": "Solo falla en Kanban" },
-        { "id": "D", "texto": "Obliga a instalar Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ninguno: las subtareas no transitan",
+            "en": "None: sub-tasks do not transition"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Bucle: las subtareas pueden volver a crear nietos",
+            "en": "A loop: the sub-tasks can create grandchildren"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo falla en Kanban",
+            "en": "It only fails on Kanban"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Obliga a instalar Confluence",
+            "en": "It forces you to install Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "If type = Story (o subtasks is EMPTY) evita que el hijo dispare otra creación."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "If type = Story (o subtasks is EMPTY) evita que el hijo dispare otra creación.",
+        "en": "If type = Story (or subtasks is EMPTY) stops the child from firing another create."
+      }
     },
     {
       "id": "m09-q17",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Un comentario automático debe citar al asignado de la incidencia. ¿Qué smart value básico usas?",
+      "stem": {
+        "es": "Un comentario automático debe citar al asignado de la incidencia. ¿Qué smart value básico usas?",
+        "en": "An automatic comment must mention the issue's assignee. Which basic smart value do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "{{issue.assignee.displayName}}" },
-        { "id": "B", "texto": "{{board.velocity}}" },
-        { "id": "C", "texto": "{{confluence.space}}" },
-        { "id": "D", "texto": "{{sprint.permission}}" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "{{issue.assignee.displayName}}",
+            "en": "{{issue.assignee.displayName}}"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "{{board.velocity}}",
+            "en": "{{board.velocity}}"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "{{confluence.space}}",
+            "en": "{{confluence.space}}"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "{{sprint.permission}}",
+            "en": "{{sprint.permission}}"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Los smart values leen la incidencia. {{issue.key}} y {{issue.assignee.displayName}} son los más habituales."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Los smart values leen la incidencia. {{issue.key}} y {{issue.assignee.displayName}} son los más habituales.",
+        "en": "Smart values read the issue. {{issue.key}} and {{issue.assignee.displayName}} are the most common."
+      }
     },
     {
       "id": "m09-q18",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "El programador del plan retrasa las reglas scheduled de escalado y PMO necesita ver el efecto hoy en SUP. ¿Qué haces para la prueba?",
+      "stem": {
+        "es": "El programador del plan retrasa las reglas scheduled de escalado y PMO necesita ver el efecto hoy en SUP. ¿Qué haces para la prueba?",
+        "en": "The plan's scheduler delays the scheduled escalation rules, and PMO needs to see the effect in SUP today. What do you do for the test?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar la regla y usar solo el tablero" },
-        { "id": "B", "texto": "Esperar al próximo sprint" },
-        { "id": "C", "texto": "Usar un disparador Manual para la prueba" },
-        { "id": "D", "texto": "Instalar Jira Data Center" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar la regla y usar solo el tablero",
+            "en": "Delete the rule and use only the board"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Esperar al próximo sprint",
+            "en": "Wait for the next sprint"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Usar un disparador Manual para la prueba",
+            "en": "Use a Manual trigger for the test"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Instalar Jira Data Center",
+            "en": "Install Jira Data Center"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Manual dispara ya y deja rastro en el registro de auditoría. El scheduled se deja para producción."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Manual dispara ya y deja rastro en el registro de auditoría. El scheduled se deja para producción.",
+        "en": "Manual fires immediately and leaves a trail in the audit log. Leave scheduled for production."
+      }
     },
     {
       "id": "m09-q19",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Hoy hay que retiquetear 80 Bugs de SUP y, a partir de mañana, todo Bug nuevo debe llevar la etiqueta auto-triaged. ¿Qué vía usas?",
+      "stem": {
+        "es": "Hoy hay que retiquetear 80 Bugs de SUP y, a partir de mañana, todo Bug nuevo debe llevar la etiqueta auto-triaged. ¿Qué vía usas?",
+        "en": "Today you must relabel 80 SUP Bugs and, from tomorrow, every new Bug must get the auto-triaged label. Which approach do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo una regla scheduled eterna sobre los 80" },
-        { "id": "B", "texto": "Bulk change ahora y una regla con trigger Issue created para el futuro" },
-        { "id": "C", "texto": "Un esquema de permisos nuevo" },
-        { "id": "D", "texto": "Copiar el proyecto 80 veces" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo una regla scheduled eterna sobre los 80",
+            "en": "Only an eternal scheduled rule over those 80"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Bulk change ahora y una regla con trigger Issue created para el futuro",
+            "en": "Bulk change now and a rule with an Issue created trigger for the future"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un esquema de permisos nuevo",
+            "en": "A new permission scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Copiar el proyecto 80 veces",
+            "en": "Copy the project 80 times"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Bulk = una vez, humano al volante. Automation = eventos que vendrán."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Bulk = una vez, humano al volante. Automation = eventos que vendrán.",
+        "en": "Bulk change = once, human at the wheel. Automation = events that will come."
+      }
     },
     {
       "id": "m09-q20",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Al pasar una Story de DEV a Done debe nacer una Task en OPS vinculada con blocks. Además de Create y Link, ¿qué hace falta?",
+      "stem": {
+        "es": "Al pasar una Story de DEV a Done debe nacer una Task en OPS vinculada con blocks. Además de Create y Link, ¿qué hace falta?",
+        "en": "When a DEV Story moves to Done, a Task must be created in OPS and linked with blocks. Besides Create and Link, what else is needed?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Alcance múltiple o global y permisos del actor en OPS" },
-        { "id": "B", "texto": "Solo el filtro del tablero de DEV" },
-        { "id": "C", "texto": "Un gadget Assigned to Me" },
-        { "id": "D", "texto": "Desactivar Browse Projects" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Alcance múltiple o global y permisos del actor en OPS",
+            "en": "Multi-project or global scope, and the actor's permissions in OPS"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo el filtro del tablero de DEV",
+            "en": "Only the DEV board filter"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un gadget Assigned to Me",
+            "en": "An Assigned to Me gadget"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Desactivar Browse Projects",
+            "en": "Disable Browse Projects"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Crear en otro proyecto exige alcance multi o global, Create Issues en OPS y más cuota de ejecuciones."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Crear en otro proyecto exige alcance multi o global, Create Issues en OPS y más cuota de ejecuciones.",
+        "en": "Creating in another project requires multi or global scope, Create Issues in OPS, and more execution quota."
+      }
     },
     {
       "id": "m09-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El actor de la regla de autoasignación de SUP es Automation for Jira. ¿Dónde se concede Assign Issues?",
+      "stem": {
+        "es": "El actor de la regla de autoasignación de SUP es Automation for Jira. ¿Dónde se concede Assign Issues?",
+        "en": "The actor of the SUP auto-assignment rule is Automation for Jira. Where is Assign Issues granted?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En el filtro del tablero Scrum" },
-        { "id": "B", "texto": "En el esquema de permisos del proyecto" },
-        { "id": "C", "texto": "En un gadget Two Dimensional" },
-        { "id": "D", "texto": "En el nombre del sprint" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En el filtro del tablero Scrum",
+            "en": "In the Scrum board filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En el esquema de permisos del proyecto",
+            "en": "In the project's permission scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En un gadget Two Dimensional",
+            "en": "In a Two Dimensional gadget"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el nombre del sprint",
+            "en": "In the sprint name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La regla es un usuario más. Sin Assign Issues en el esquema, el registro de auditoría marca FAIL."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La regla es un usuario más. Sin Assign Issues en el esquema, el registro de auditoría marca FAIL.",
+        "en": "The rule is another user. Without Assign Issues in the scheme, the audit log marks FAIL."
+      }
     },
     {
       "id": "m09-q22",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Creas un Bug de prueba en SUP y el registro de la regla está vacío: ni SUCCESS ni FAIL. ¿Qué miras primero?",
+      "stem": {
+        "es": "Creas un Bug de prueba en SUP y el registro de la regla está vacío: ni SUCCESS ni FAIL. ¿Qué miras primero?",
+        "en": "You create a test Bug in SUP and the rule log is empty: neither SUCCESS nor FAIL. What do you check first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Si el disparador, la condición o el alcance excluyeron la incidencia" },
-        { "id": "B", "texto": "El SMTP del sitio" },
-        { "id": "C", "texto": "El nombre del sprint activo" },
-        { "id": "D", "texto": "Si Confluence tiene trial" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Si el disparador, la condición o el alcance excluyeron la incidencia",
+            "en": "Whether the trigger, condition, or scope excluded the issue"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El SMTP del sitio",
+            "en": "The site's SMTP"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del sprint activo",
+            "en": "The name of the active sprint"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Si Confluence tiene trial",
+            "en": "Whether Confluence has a trial"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Vacío = no disparó. FAIL = disparó y falló (permiso, campo, actor)."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Vacío = no disparó. FAIL = disparó y falló (permiso, campo, actor).",
+        "en": "Empty = it did not fire. FAIL = it fired and failed (permission, field, actor)."
+      }
     },
     {
       "id": "m09-q23",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "El JQL del scheduled de escalado es project = SUP AND priority = Highest AND statusCategory != Done AND updated <= -1d. ¿Qué selecciona?",
+      "stem": {
+        "es": "El JQL del scheduled de escalado es project = SUP AND priority = Highest AND statusCategory != Done AND updated <= -1d. ¿Qué selecciona?",
+        "en": "The scheduled escalation JQL is project = SUP AND priority = Highest AND statusCategory != Done AND updated <= -1d. What does it select?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Todos los Bugs del sitio" },
-        { "id": "B", "texto": "Highest de SUP abiertos y sin actualizar al menos un día" },
-        { "id": "C", "texto": "Solo las subtareas de DEV" },
-        { "id": "D", "texto": "Los sprints cerrados de PMO" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Todos los Bugs del sitio",
+            "en": "Every Bug on the site"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Highest de SUP abiertos y sin actualizar al menos un día",
+            "en": "Open Highest issues in SUP that have not been updated for at least a day"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo las subtareas de DEV",
+            "en": "Only DEV sub-tasks"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Los sprints cerrados de PMO",
+            "en": "Closed PMO sprints"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Ese JQL es el universo del barrido. statusCategory != Done excluye lo ya resuelto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Ese JQL es el universo del barrido. statusCategory != Done excluye lo ya resuelto.",
+        "en": "That JQL is the sweep universe. statusCategory != Done excludes already resolved work."
+      }
     },
     {
       "id": "m09-q24",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Ayer la asignación automática de SUP funcionaba y hoy no. El tablero no ha cambiado. ¿Cuáles son tres causas típicas en Automatización?",
+      "stem": {
+        "es": "Ayer la asignación automática de SUP funcionaba y hoy no. El tablero no ha cambiado. ¿Cuáles son tres causas típicas en Automatización?",
+        "en": "Yesterday SUP auto-assignment worked and today it does not. The board has not changed. What are three typical causes in Automation?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Regla desactivada, cuota agotada o actor sin permiso" },
-        { "id": "B", "texto": "El burndown está en story points" },
-        { "id": "C", "texto": "El gadget Pie chart" },
-        { "id": "D", "texto": "La clave del proyecto tiene tres letras" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Regla desactivada, cuota agotada o actor sin permiso",
+            "en": "Rule disabled, quota exhausted, or actor without permission"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El burndown está en story points",
+            "en": "The burndown is in story points"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El gadget Pie chart",
+            "en": "The Pie Chart gadget"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La clave del proyecto tiene tres letras",
+            "en": "The project key has three letters"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Off, cuota o actor. El tablero no ejecuta la regla."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Off, cuota o actor. El tablero no ejecuta la regla.",
+        "en": "Off, quota, or actor. The board does not run the rule."
+      }
     },
     {
       "id": "m09-q25",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La regla tiene dos condiciones seguidas: tipo = Bug y componente = api. Llega una Task con componente api. ¿Qué ocurre?",
+      "stem": {
+        "es": "La regla tiene dos condiciones seguidas: tipo = Bug y componente = api. Llega una Task con componente api. ¿Qué ocurre?",
+        "en": "The rule has two conditions in a row: type = Bug and component = api. A Task with component api arrives. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cumple y se asigna" },
-        { "id": "B", "texto": "No pasa el If: hacen falta las dos a la vez" },
-        { "id": "C", "texto": "Se crea un proyecto api" },
-        { "id": "D", "texto": "Se rompe el issue type scheme" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cumple y se asigna",
+            "en": "It matches and is assigned"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No pasa el If: hacen falta las dos a la vez",
+            "en": "It fails the If: both conditions must be true at once"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se crea un proyecto api",
+            "en": "An api project is created"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se rompe el issue type scheme",
+            "en": "The issue type scheme breaks"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Condiciones en serie equivalen a AND. El disparador de creación solo no basta."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Condiciones en serie equivalen a AND. El disparador de creación solo no basta.",
+        "en": "Conditions in series are equivalent to AND. The create trigger alone is not enough."
+      }
     },
     {
       "id": "m09-q26",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "El disparador es Issue commented y la acción comenta «Escalado automático…» en la misma incidencia. ¿Cuál es el riesgo?",
+      "stem": {
+        "es": "El disparador es Issue commented y la acción comenta «Escalado automático…» en la misma incidencia. ¿Cuál es el riesgo?",
+        "en": "The trigger is Issue commented and the action comments “Automatic escalation…” on the same issue. What is the risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es el patrón oficial de Scrum" },
-        { "id": "B", "texto": "Solo corre en team-managed" },
-        { "id": "C", "texto": "Un bucle de comentarios" },
-        { "id": "D", "texto": "Jira bloquea siempre el comentario" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es el patrón oficial de Scrum",
+            "en": "It is the official Scrum pattern"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo corre en team-managed",
+            "en": "It only runs on team-managed"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un bucle de comentarios",
+            "en": "A comment loop"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Jira bloquea siempre el comentario",
+            "en": "Jira always blocks the comment"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Mitiga con otro disparador, una condición del tipo «el comentario no contiene Escalado automático», o ignore this rule."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Mitiga con otro disparador, una condición del tipo «el comentario no contiene Escalado automático», o ignore this rule.",
+        "en": "Mitigate with another trigger, a condition such as “the comment does not contain Automatic escalation”, or ignore this rule."
+      }
     },
     {
       "id": "m09-q27",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Una regla con alcance solo de DEV intenta Create issue en OPS y el registro de auditoría falla. ¿Qué es lo más probable?",
+      "stem": {
+        "es": "Una regla con alcance solo de DEV intenta Create issue en OPS y el registro de auditoría falla. ¿Qué es lo más probable?",
+        "en": "A rule scoped only to DEV tries Create issue in OPS and the audit log fails. What is most likely?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Alcance de un solo proyecto o actor sin Create Issues en OPS" },
-        { "id": "B", "texto": "Falta un swimlane" },
-        { "id": "C", "texto": "El dashboard no está compartido" },
-        { "id": "D", "texto": "Velocity exige Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Alcance de un solo proyecto o actor sin Create Issues en OPS",
+            "en": "Single-project scope, or the actor lacks Create Issues in OPS"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Falta un swimlane",
+            "en": "A swimlane is missing"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El dashboard no está compartido",
+            "en": "The dashboard is not shared"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Velocity exige Premium",
+            "en": "Velocity requires Premium"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Crear fuera del proyecto de la regla pide alcance multi o global y permisos en el destino."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Crear fuera del proyecto de la regla pide alcance multi o global y permisos en el destino.",
+        "en": "Creating outside the rule's project needs multi or global scope and permissions on the destination."
+      }
     },
     {
       "id": "m09-q28",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Nortech está en un plan Cloud con cupo de ejecuciones. ¿Qué es cierto sobre los límites?",
+      "stem": {
+        "es": "Nortech está en un plan Cloud con cupo de ejecuciones. ¿Qué es cierto sobre los límites?",
+        "en": "Nortech is on a Cloud plan with an execution quota. What is true about the limits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Free, Standard y Premium tienen cupos distintos; scheduled cuenta cada incidencia" },
-        { "id": "B", "texto": "Las reglas son ilimitadas en todos los planes" },
-        { "id": "C", "texto": "Solo cuentan las reglas de Confluence" },
-        { "id": "D", "texto": "El cupo es por tablero, no por sitio" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Free, Standard y Premium tienen cupos distintos; scheduled cuenta cada incidencia",
+            "en": "Free, Standard, and Premium have different quotas; scheduled counts each issue"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las reglas son ilimitadas en todos los planes",
+            "en": "Rules are unlimited on every plan"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo cuentan las reglas de Confluence",
+            "en": "Only Confluence rules count"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El cupo es por tablero, no por sitio",
+            "en": "The quota is per board, not per site"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Por eso conviene reglas de un proyecto, no globales, y desactivar las de demostración."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Por eso conviene reglas de un proyecto, no globales, y desactivar las de demostración.",
+        "en": "That is why project-scoped rules beat global ones, and why demo rules should be disabled."
+      }
     },
     {
       "id": "m09-q29",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Al crear la subtarea, el resumen «Docs — {{issue.key}}» está bien escrito. ¿Qué produce?",
+      "stem": {
+        "es": "Al crear la subtarea, el resumen «Docs — {{issue.key}}» está bien escrito. ¿Qué produce?",
+        "en": "When creating the sub-task, the summary “Docs — {{issue.key}}” is written correctly. What does it produce?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Docs — {{issue.key}} literal para siempre" },
-        { "id": "B", "texto": "Docs — DEV-12 (la clave del padre)" },
-        { "id": "C", "texto": "Un proyecto nuevo llamado Docs" },
-        { "id": "D", "texto": "El cierre del sprint" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Docs — {{issue.key}} literal para siempre",
+            "en": "Docs — {{issue.key}} literally, forever"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Docs — DEV-12 (la clave del padre)",
+            "en": "Docs — DEV-12 (the parent's key)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un proyecto nuevo llamado Docs",
+            "en": "A new project named Docs"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El cierre del sprint",
+            "en": "The sprint being completed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El smart value se resuelve en tiempo de ejecución sobre la incidencia que disparó (el padre)."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El smart value se resuelve en tiempo de ejecución sobre la incidencia que disparó (el padre).",
+        "en": "The smart value is resolved at runtime on the issue that fired the rule (the parent)."
+      }
     },
     {
       "id": "m09-q30",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Añades la condición «subtasks is EMPTY» a la regla que crea QA y Docs al arrancar una Story. ¿Para qué sirve?",
+      "stem": {
+        "es": "Añades la condición «subtasks is EMPTY» a la regla que crea QA y Docs al arrancar una Story. ¿Para qué sirve?",
+        "en": "You add the condition “subtasks is EMPTY” to the rule that creates QA and Docs when a Story starts. What is it for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Obligar un bucle en cada transición" },
-        { "id": "B", "texto": "No recrear QA y Docs si la Story ya tiene hijas" },
-        { "id": "C", "texto": "Ocultar el tablero" },
-        { "id": "D", "texto": "Compartir el filtro del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Obligar un bucle en cada transición",
+            "en": "To force a loop on every transition"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No recrear QA y Docs si la Story ya tiene hijas",
+            "en": "To avoid recreating QA and Docs if the Story already has children"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ocultar el tablero",
+            "en": "To hide the board"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Compartir el filtro del tablero",
+            "en": "To share the board filter"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Es una segunda red de seguridad además de tipo = Story."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Es una segunda red de seguridad además de tipo = Story.",
+        "en": "It is a second safety net besides type = Story."
+      }
     },
     {
       "id": "m09-q31",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En Rule details, Actor = Automation for Jira. ¿Con los permisos de quién se evalúan las acciones?",
+      "stem": {
+        "es": "En Rule details, Actor = Automation for Jira. ¿Con los permisos de quién se evalúan las acciones?",
+        "en": "In Rule details, Actor = Automation for Jira. Whose permissions are the actions evaluated with?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El actor configurado" },
-        { "id": "B", "texto": "Siempre el reporter" },
-        { "id": "C", "texto": "El gadget Two Dimensional" },
-        { "id": "D", "texto": "El org admin, aunque no esté en el esquema" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El actor configurado",
+            "en": "The configured actor"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Siempre el reporter",
+            "en": "Always the reporter"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El gadget Two Dimensional",
+            "en": "The Two Dimensional gadget"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El org admin, aunque no esté en el esquema",
+            "en": "The org admin, even if they are not in the scheme"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Puedes poner un usuario de servicio, pero ese usuario también necesita Assign o Edit."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Puedes poner un usuario de servicio, pero ese usuario también necesita Assign o Edit.",
+        "en": "You can set a service user, but that user also needs Assign or Edit."
+      }
     },
     {
       "id": "m09-q32",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Nortech necesita un flujo que bulk change, workflow y Automation nativa no cubren. ¿Qué vía queda?",
+      "stem": {
+        "es": "Nortech necesita un flujo que bulk change, workflow y Automation nativa no cubren. ¿Qué vía queda?",
+        "en": "Nortech needs a flow that bulk change, workflow, and native Automation do not cover. What option remains?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una app del Marketplace" },
-        { "id": "B", "texto": "Un filtro rápido" },
-        { "id": "C", "texto": "Cambiar la estimación a story points" },
-        { "id": "D", "texto": "Borrar el esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una app del Marketplace",
+            "en": "A Marketplace app"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un filtro rápido",
+            "en": "A quick filter"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar la estimación a story points",
+            "en": "Change estimation to story points"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borrar el esquema de permisos",
+            "en": "Delete the permission scheme"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Bulk, workflow y Automation cubren lo nativo. Las apps cubren lo que nativo no da; hay que gobernarlas."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Bulk, workflow y Automation cubren lo nativo. Las apps cubren lo que nativo no da; hay que gobernarlas.",
+        "en": "Bulk change, workflow, and Automation cover native cases. Apps cover what native does not provide; they must be governed."
+      }
     },
     {
       "id": "m09-q33",
       "dominio": "automation",
       "tipo": "multi",
-      "stem": "Una regla de DEV edita la misma incidencia que la disparó. ¿Qué reduce el riesgo de bucle?",
+      "stem": {
+        "es": "Una regla de DEV edita la misma incidencia que la disparó. ¿Qué reduce el riesgo de bucle?",
+        "en": "A DEV rule edits the same issue that triggered it. What reduces the loop risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Acotar el disparador a un campo concreto" },
-        { "id": "B", "texto": "Ignore issues in this rule / not recently updated by this rule" },
-        { "id": "C", "texto": "Quitar todas las condiciones y usar Issue updated genérico" },
-        { "id": "D", "texto": "Una condición de tipo (por ejemplo Story, no Sub-task)" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Acotar el disparador a un campo concreto",
+            "en": "Narrow the trigger to a specific field"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ignore issues in this rule / not recently updated by this rule",
+            "en": "Ignore issues in this rule / not recently updated by this rule"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Quitar todas las condiciones y usar Issue updated genérico",
+            "en": "Remove all conditions and use a generic Issue updated trigger"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Una condición de tipo (por ejemplo Story, no Sub-task)",
+            "en": "A type condition (for example Story, not Sub-task)"
+          }
+        }
       ],
-      "correctas": ["A", "B", "D"],
-      "explicacion": "Ampliar el disparador y quitar el If es lo contrario de mitigar. Tipo, campo e ignore this rule sí reducen el bucle."
+      "correctas": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explicacion": {
+        "es": "Ampliar el disparador y quitar el If es lo contrario de mitigar. Tipo, campo e ignore this rule sí reducen el bucle.",
+        "en": "Widening the trigger and removing the If is the opposite of mitigation. Type, field, and ignore this rule do reduce loops."
+      }
     },
     {
       "id": "m09-q34",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "El project admin de SUP crea la regla de autoasignación en el proyecto, no como regla global. ¿Por qué?",
+      "stem": {
+        "es": "El project admin de SUP crea la regla de autoasignación en el proyecto, no como regla global. ¿Por qué?",
+        "en": "The SUP project admin creates the auto-assignment rule in the project, not as a global rule. Why?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Las reglas de proyecto no dejan registro de auditoría" },
-        { "id": "B", "texto": "Para no gastar cuota: el alcance global dispara en más proyectos" },
-        { "id": "C", "texto": "Solo las globales pueden asignar" },
-        { "id": "D", "texto": "SUP debe ser team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Las reglas de proyecto no dejan registro de auditoría",
+            "en": "Project rules leave no audit log"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Para no gastar cuota: el alcance global dispara en más proyectos",
+            "en": "To save quota: global scope fires in more projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo las globales pueden asignar",
+            "en": "Only global rules can assign"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "SUP debe ser team-managed",
+            "en": "SUP must be team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Alcance de proyecto frente a múltiple o global. En planes con cupo, el alcance global consume ejecuciones en todo el sitio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Alcance de proyecto frente a múltiple o global. En planes con cupo, el alcance global consume ejecuciones en todo el sitio.",
+        "en": "Project scope versus multiple or global. On plans with a quota, global scope consumes executions across the whole site."
+      }
     },
     {
       "id": "m09-q35",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La acción Assign issue → Component lead se ejecuta sobre un Bug de SUP sin componente. ¿Qué ocurre?",
+      "stem": {
+        "es": "La acción Assign issue → Component lead se ejecuta sobre un Bug de SUP sin componente. ¿Qué ocurre?",
+        "en": "The Assign issue → Component lead action runs on a SUP Bug with no component. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Asigna siempre al project lead" },
-        { "id": "B", "texto": "Puede fallar o no asignar: no hay lead de componente" },
-        { "id": "C", "texto": "Crea sola el componente api" },
-        { "id": "D", "texto": "Mueve la incidencia a DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Asigna siempre al project lead",
+            "en": "It always assigns to the project lead"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Puede fallar o no asignar: no hay lead de componente",
+            "en": "It can fail or leave the issue unassigned: there is no component lead"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crea sola el componente api",
+            "en": "It creates the api component by itself"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Mueve la incidencia a DEV",
+            "en": "It moves the issue to DEV"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Component lead exige un componente. Alternativa: un usuario fijo del grupo de soporte."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Component lead exige un componente. Alternativa: un usuario fijo del grupo de soporte.",
+        "en": "Component lead requires a component. Alternative: a fixed user from the support group."
+      }
     },
     {
       "id": "m09-q36",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La regla no corre y el registro de auditoría está vacío. ¿Por dónde empiezas el diagnóstico?",
+      "stem": {
+        "es": "La regla no corre y el registro de auditoría está vacío. ¿Por dónde empiezas el diagnóstico?",
+        "en": "The rule does not run and the audit log is empty. Where do you start diagnosis?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Alcance, disparador o condición de tipo; se mira el registro de auditoría" },
-        { "id": "B", "texto": "El burndown de story points" },
-        { "id": "C", "texto": "Un nivel de seguridad Cliente" },
-        { "id": "D", "texto": "Un swimlane por consultas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Alcance, disparador o condición de tipo; se mira el registro de auditoría",
+            "en": "Scope, trigger, or type condition; look at the audit log"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El burndown de story points",
+            "en": "The story points burndown"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un nivel de seguridad Cliente",
+            "en": "A Cliente security level"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un swimlane por consultas",
+            "en": "A queries swimlane"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "No reescribas la regla a ciegas. El registro distingue «no disparó» de FAIL de permiso."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "No reescribas la regla a ciegas. El registro distingue «no disparó» de FAIL de permiso.",
+        "en": "Do not rewrite the rule blindly. The log distinguishes “did not fire” from a permission FAIL."
+      }
     },
     {
       "id": "m09-q37",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La regla tiene If: Summary contains DOWN y Then: Set priority Highest. Llega un Bug «Caída DOWN api» en SUP. ¿Qué ocurre?",
+      "stem": {
+        "es": "La regla tiene If: Summary contains DOWN y Then: Set priority Highest. Llega un Bug «Caída DOWN api» en SUP. ¿Qué ocurre?",
+        "en": "The rule has If: Summary contains DOWN and Then: Set priority Highest. A Bug “Caída DOWN api” arrives in SUP. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No cambia la prioridad" },
-        { "id": "B", "texto": "Pasa a Highest si la condición coincide" },
-        { "id": "C", "texto": "Se convierte en Story" },
-        { "id": "D", "texto": "Abre un proyecto DOWN" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No cambia la prioridad",
+            "en": "Priority does not change"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pasa a Highest si la condición coincide",
+            "en": "It becomes Highest if the condition matches"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se convierte en Story",
+            "en": "It becomes a Story"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Abre un proyecto DOWN",
+            "en": "A DOWN project is opened"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Una condición avanzada o contains sobre el summary decide si se sube la prioridad."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Una condición avanzada o contains sobre el summary decide si se sube la prioridad.",
+        "en": "An advanced condition or contains on the summary decides whether priority is raised."
+      }
     },
     {
       "id": "m09-q38",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Un administrador publica una regla global When issue created → Edit en todo el sitio de Nortech. ¿Qué efecto tiene?",
+      "stem": {
+        "es": "Un administrador publica una regla global When issue created → Edit en todo el sitio de Nortech. ¿Qué efecto tiene?",
+        "en": "An administrator publishes a global rule When issue created → Edit across the whole Nortech site. What effect does that have?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es más barata que una regla de un proyecto" },
-        { "id": "B", "texto": "Dispara en todos los proyectos del alcance y consume cuota rápido" },
-        { "id": "C", "texto": "Solo afecta a team-managed" },
-        { "id": "D", "texto": "No deja registro de auditoría" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es más barata que una regla de un proyecto",
+            "en": "It is cheaper than a project rule"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Dispara en todos los proyectos del alcance y consume cuota rápido",
+            "en": "It fires in every project in scope and consumes quota quickly"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo afecta a team-managed",
+            "en": "It only affects team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No deja registro de auditoría",
+            "en": "It leaves no audit log"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Una regla de un solo proyecto dispara menos. La global recorre todo el sitio y agota el cupo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Una regla de un solo proyecto dispara menos. La global recorre todo el sitio y agota el cupo.",
+        "en": "A single-project rule fires less often. The global rule walks the whole site and exhausts the quota."
+      }
     },
     {
       "id": "m09-q39",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "El requisito es: «cuando alguien cree un Bug en SUP, asignarlo». ¿Scheduled o evento?",
+      "stem": {
+        "es": "El requisito es: «cuando alguien cree un Bug en SUP, asignarlo». ¿Scheduled o evento?",
+        "en": "The requirement is: “when someone creates a Bug in SUP, assign it”. Scheduled or event?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Scheduled cada hora sobre todos los Bugs" },
-        { "id": "B", "texto": "Evento Issue created / Trabajo creado" },
-        { "id": "C", "texto": "Una post function de Create Project" },
-        { "id": "D", "texto": "Un cumulative flow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Scheduled cada hora sobre todos los Bugs",
+            "en": "Scheduled every hour over all Bugs"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Evento Issue created / Trabajo creado",
+            "en": "An Issue created event"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Una post function de Create Project",
+            "en": "A Create Project post function"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un cumulative flow",
+            "en": "A cumulative flow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "«Cuando crean» es un evento. Scheduled encaja con antigüedad o SLA, y cuesta más cuota."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "«Cuando crean» es un evento. Scheduled encaja con antigüedad o SLA, y cuesta más cuota.",
+        "en": "“When they create” is an event. Scheduled fits age or SLA, and costs more quota."
+      }
     },
     {
       "id": "m09-q40",
       "dominio": "automation",
       "tipo": "multi",
-      "stem": "La acción Assign al component lead falla en el registro de auditoría. ¿Qué suele faltar?",
+      "stem": {
+        "es": "La acción Assign al component lead falla en el registro de auditoría. ¿Qué suele faltar?",
+        "en": "The Assign to component lead action fails in the audit log. What is usually missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Assign Issues para el actor" },
-        { "id": "B", "texto": "Assignable User para Marta, la lead" },
-        { "id": "C", "texto": "Un gadget Created vs Resolved" },
-        { "id": "D", "texto": "Que la incidencia tenga componente y lead" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Assign Issues para el actor",
+            "en": "Assign Issues for the actor"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Assignable User para Marta, la lead",
+            "en": "Assignable User for Marta, the lead"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un gadget Created vs Resolved",
+            "en": "A Created vs Resolved gadget"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que la incidencia tenga componente y lead",
+            "en": "That the issue has a component and a lead"
+          }
+        }
       ],
-      "correctas": ["A", "B", "D"],
-      "explicacion": "Hacen falta actor con permiso, destinatario asignable y un componente con lead. El informe no asigna."
+      "correctas": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explicacion": {
+        "es": "Hacen falta actor con permiso, destinatario asignable y un componente con lead. El informe no asigna.",
+        "en": "You need an actor with permission, an assignable target, and a component with a lead. The report does not assign."
+      }
     },
     {
       "id": "m09-q41",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "En DEV puedes usar Create sub-tasks o dos veces Create issue de tipo Sub-task. ¿Cuándo valen ambas?",
+      "stem": {
+        "es": "En DEV puedes usar Create sub-tasks o dos veces Create issue de tipo Sub-task. ¿Cuándo valen ambas?",
+        "en": "In DEV you can use Create sub-tasks or Create issue twice as type Sub-task. When do both work?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El issue type scheme del proyecto incluye Sub-task y hay un padre" },
-        { "id": "B", "texto": "El proyecto es team-managed de forma obligatoria" },
-        { "id": "C", "texto": "El tablero estima en horas" },
-        { "id": "D", "texto": "Existe una página de Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El issue type scheme del proyecto incluye Sub-task y hay un padre",
+            "en": "The project's issue type scheme includes Sub-task and there is a parent"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El proyecto es team-managed de forma obligatoria",
+            "en": "The project must be team-managed"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El tablero estima en horas",
+            "en": "The board estimates in hours"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Existe una página de Confluence",
+            "en": "A Confluence page exists"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Si el esquema de tipos no admite Sub-task, ninguna de las dos acciones crea hijas."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Si el esquema de tipos no admite Sub-task, ninguna de las dos acciones crea hijas.",
+        "en": "If the type scheme does not allow Sub-task, neither action creates children."
+      }
     },
     {
       "id": "m09-q42",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La opción «Only include issues that have not been recently updated by this rule» está pensada para:",
+      "stem": {
+        "es": "La opción «Only include issues that have not been recently updated by this rule» está pensada para:",
+        "en": "The option “Only include issues that have not been recently updated by this rule” is intended to:"
+      },
       "opciones": [
-        { "id": "A", "texto": "Compartir dashboards" },
-        { "id": "B", "texto": "Evitar que la propia regla se redispare en cadena" },
-        { "id": "C", "texto": "Sustituir el esquema de permisos" },
-        { "id": "D", "texto": "Mapear columnas del Kanban" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Compartir dashboards",
+            "en": "Share dashboards"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Evitar que la propia regla se redispare en cadena",
+            "en": "Stop the rule from re-firing itself in a chain"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sustituir el esquema de permisos",
+            "en": "Replace the permission scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Mapear columnas del Kanban",
+            "en": "Map Kanban columns"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Es la salvaguarda de bucles del producto, junto con acotar campo y tipo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Es la salvaguarda de bucles del producto, junto con acotar campo y tipo.",
+        "en": "It is the product's loop safeguard, together with narrowing field and type."
+      }
     },
     {
       "id": "m09-q43",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Escalar un Highest de SUP debe dejar un comentario visible y subir la prioridad. ¿Por qué no basta un correo suelto fuera de Jira?",
+      "stem": {
+        "es": "Escalar un Highest de SUP debe dejar un comentario visible y subir la prioridad. ¿Por qué no basta un correo suelto fuera de Jira?",
+        "en": "Escalating a Highest SUP issue must leave a visible comment and raise the priority. Why is a standalone email outside Jira not enough?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El comentario queda en el hilo y el registro de la regla lo traza" },
-        { "id": "B", "texto": "Jira Cloud no puede comentar" },
-        { "id": "C", "texto": "La prioridad solo se cambia en Confluence" },
-        { "id": "D", "texto": "Los correos sustituyen el esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El comentario queda en el hilo y el registro de la regla lo traza",
+            "en": "The comment stays on the thread and the rule audit log traces it"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Jira Cloud no puede comentar",
+            "en": "Jira Cloud cannot comment"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La prioridad solo se cambia en Confluence",
+            "en": "Priority can only be changed in Confluence"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Los correos sustituyen el esquema de permisos",
+            "en": "Emails replace the permission scheme"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Comment y Edit priority dejan rastro en la incidencia. El correo solo no cambia el campo."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Comment y Edit priority dejan rastro en la incidencia. El correo solo no cambia el campo.",
+        "en": "Comment and Edit priority leave a trail on the issue. Email alone does not change the field."
+      }
     },
     {
       "id": "m09-q44",
       "dominio": "automation",
       "tipo": "multi",
-      "stem": "PMO de Nortech te pide elegir la vía correcta en cada caso. ¿Cuáles son adecuadas?",
+      "stem": {
+        "es": "PMO de Nortech te pide elegir la vía correcta en cada caso. ¿Cuáles son adecuadas?",
+        "en": "Nortech PMO asks you to pick the right path in each case. Which are appropriate?"
+      },
       "opciones": [
-        { "id": "A", "texto": "80 asignados de una vez → bulk change" },
-        { "id": "B", "texto": "Siempre al transitar, sin condiciones → post function" },
-        { "id": "C", "texto": "Evento, JQL y ramas a otro proyecto → Automatización" },
-        { "id": "D", "texto": "Cambio único de 80 → regla scheduled que corre para siempre" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "80 asignados de una vez → bulk change",
+            "en": "80 assignees at once → bulk change"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Siempre al transitar, sin condiciones → post function",
+            "en": "Always on transition, no conditions → post function"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Evento, JQL y ramas a otro proyecto → Automatización",
+            "en": "Event, JQL, and branches to another project → automation"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambio único de 80 → regla scheduled que corre para siempre",
+            "en": "One-off change of 80 → a scheduled rule that runs forever"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Una scheduled eterna no sustituye un bulk puntual: gasta cuota y se olvida encendida."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Una scheduled eterna no sustituye un bulk puntual: gasta cuota y se olvida encendida.",
+        "en": "An eternal scheduled rule does not replace a one-off bulk change: it spends quota and is left running."
+      }
     },
     {
       "id": "m09-q45",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Dos reglas de SUP comentan al transitar a In Review y las incidencias reciben el mensaje duplicado. ¿Qué haces primero?",
+      "stem": {
+        "es": "Dos reglas de SUP comentan al transitar a In Review y las incidencias reciben el mensaje duplicado. ¿Qué haces primero?",
+        "en": "Two SUP rules comment on transition to In Review and issues get the message twice. What do you do first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear un proyecto PMO-2" },
-        { "id": "B", "texto": "Instalar una app del Marketplace" },
-        { "id": "C", "texto": "Desactivar la regla duplicada y revisar el registro de ambas" },
-        { "id": "D", "texto": "Cambiar el tablero a story points" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear un proyecto PMO-2",
+            "en": "Create a PMO-2 project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Instalar una app del Marketplace",
+            "en": "Install a Marketplace app"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Desactivar la regla duplicada y revisar el registro de ambas",
+            "en": "Disable the duplicate rule and review both audit logs"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar el tablero a story points",
+            "en": "Switch the board to story points"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Inventario de reglas. Dos reglas activas sobre la misma transición explican el doble comentario."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Inventario de reglas. Dos reglas activas sobre la misma transición explican el doble comentario.",
+        "en": "Inventory the rules. Two active rules on the same transition explain the double comment."
+      }
     },
     {
       "id": "m09-q46",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Al pulsar Submit, PMO debe quedar In Review por el workflow y aparecer el comentario de aprobación. ¿Qué papel tiene la regla?",
+      "stem": {
+        "es": "Al pulsar Submit, PMO debe quedar In Review por el workflow y aparecer el comentario de aprobación. ¿Qué papel tiene la regla?",
+        "en": "On Submit, PMO must land In Review via the workflow and the approval comment must appear. What role does the rule play?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sustituye el workflow: quita la transición y solo comenta" },
-        { "id": "B", "texto": "Avisa; el workflow pone el estado. No sustituyas el flujo por la regla" },
-        { "id": "C", "texto": "Crea el proyecto PMO" },
-        { "id": "D", "texto": "Mapea columnas del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sustituye el workflow: quita la transición y solo comenta",
+            "en": "It replaces the workflow: remove the transition and only comment"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Avisa; el workflow pone el estado. No sustituyas el flujo por la regla",
+            "en": "It notifies; the workflow sets the status. Do not replace the flow with the rule"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crea el proyecto PMO",
+            "en": "It creates the PMO project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Mapea columnas del tablero",
+            "en": "It maps board columns"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El workflow cambia el estado; Automation notifica. La regla no reemplaza las transiciones."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El workflow cambia el estado; Automation notifica. La regla no reemplaza las transiciones.",
+        "en": "The workflow changes the status; Automation notifies. The rule does not replace transitions."
+      }
     },
     {
       "id": "m09-q47",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Además del comentario, la regla de escalado de Highest estancados en SUP suele incluir otra acción. ¿Cuál?",
+      "stem": {
+        "es": "Además del comentario, la regla de escalado de Highest estancados en SUP suele incluir otra acción. ¿Cuál?",
+        "en": "Besides the comment, the escalation rule for stalled Highest issues in SUP usually includes another action. Which one?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar la incidencia" },
-        { "id": "B", "texto": "Edit issue: prioridad o Assignee al project lead" },
-        { "id": "C", "texto": "Instalar un timesheet de pago" },
-        { "id": "D", "texto": "Compartir el dashboard de PMO" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar la incidencia",
+            "en": "Delete the issue"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Edit issue: prioridad o Assignee al project lead",
+            "en": "Edit issue: priority or Assignee to the project lead"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Instalar un timesheet de pago",
+            "en": "Install a paid timesheet"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Compartir el dashboard de PMO",
+            "en": "Share the PMO dashboard"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Escalado = comentario más prioridad o reasignación. No es un informe ni una app."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Escalado = comentario más prioridad o reasignación. No es un informe ni una app.",
+        "en": "Escalation = comment plus priority or reassignment. It is not a report or an app."
+      }
     },
     {
       "id": "m09-q48",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Un project admin necesita aplicar Assign a cada subtarea recién creada. ¿Para qué sirve For each / Related issues?",
+      "stem": {
+        "es": "Un project admin necesita aplicar Assign a cada subtarea recién creada. ¿Para qué sirve For each / Related issues?",
+        "en": "A project admin needs to apply Assign to each newly created sub-task. What is For each / Related issues for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sustituir el esquema de permisos" },
-        { "id": "B", "texto": "Iterar subtareas o incidencias vinculadas y aplicarles acciones" },
-        { "id": "C", "texto": "Crear el tablero Scrum" },
-        { "id": "D", "texto": "Instalar apps del Marketplace" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sustituir el esquema de permisos",
+            "en": "Replace the permission scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Iterar subtareas o incidencias vinculadas y aplicarles acciones",
+            "en": "Iterate sub-tasks or linked issues and apply actions to them"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crear el tablero Scrum",
+            "en": "Create the Scrum board"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Instalar apps del Marketplace",
+            "en": "Install Marketplace apps"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "For each es un branch: recorre subtasks o linked issues y ejecuta acciones sobre cada una."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "For each es un branch: recorre subtasks o linked issues y ejecuta acciones sobre cada una.",
+        "en": "For each is a branch: it walks sub-tasks or linked issues and runs actions on each one."
+      }
     },
     {
       "id": "m09-q49",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "La regla de autoasignación de Bugs en SUP incluye Edit issue → Labels auto-triaged. ¿Cuál es el propósito?",
+      "stem": {
+        "es": "La regla de autoasignación de Bugs en SUP incluye Edit issue → Labels auto-triaged. ¿Cuál es el propósito?",
+        "en": "The SUP Bug auto-assignment rule includes Edit issue → Labels auto-triaged. What is the purpose?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Clasificar el Bug además de asignarlo" },
-        { "id": "B", "texto": "Sustituir Assignable User" },
-        { "id": "C", "texto": "Ocultar la incidencia con issue security" },
-        { "id": "D", "texto": "Crear el proyecto SUP" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Clasificar el Bug además de asignarlo",
+            "en": "Classify the Bug as well as assign it"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sustituir Assignable User",
+            "en": "Replace Assignable User"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ocultar la incidencia con issue security",
+            "en": "Hide the issue with issue security"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear el proyecto SUP",
+            "en": "Create the SUP project"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Clasificación más priorización más asignación. El default del componente no pone la etiqueta."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Clasificación más priorización más asignación. El default del componente no pone la etiqueta.",
+        "en": "Classification plus prioritization plus assignment. The component default does not set the label."
+      }
     },
     {
       "id": "m09-q50",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "El registro de auditoría de la regla marca FAIL al asignar. ¿Qué es lo correcto?",
+      "stem": {
+        "es": "El registro de auditoría de la regla marca FAIL al asignar. ¿Qué es lo correcto?",
+        "en": "The rule audit log marks FAIL on assign. What is correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Reescribir la regla a ciegas con otro disparador" },
-        { "id": "B", "texto": "Leer el mensaje (permiso, campo, actor) y actuar sobre eso" },
-        { "id": "C", "texto": "Borrar el proyecto SUP" },
-        { "id": "D", "texto": "Cambiar el tablero a Kanban" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Reescribir la regla a ciegas con otro disparador",
+            "en": "Rewrite the rule blindly with another trigger"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Leer el mensaje (permiso, campo, actor) y actuar sobre eso",
+            "en": "Read the message (permission, field, actor) and act on that"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borrar el proyecto SUP",
+            "en": "Delete the SUP project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar el tablero a Kanban",
+            "en": "Switch the board to Kanban"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si hay FAIL, el mensaje es el diagnóstico. No reescribas el disparador a ciegas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si hay FAIL, el mensaje es el diagnóstico. No reescribas el disparador a ciegas.",
+        "en": "If there is a FAIL, the message is the diagnosis. Do not rewrite the trigger blindly."
+      }
     }
   ]
 }

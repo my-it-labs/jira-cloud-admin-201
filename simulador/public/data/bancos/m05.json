@@ -6,701 +6,2309 @@
       "id": "m05-q1",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Ana, desarrolladora en DEV, ve la transición Done en DEV-184. Al pulsarla, Jira muestra un error de campo obligatorio y el estado no cambia. ¿Qué está impidiendo el tránsito?",
+      "stem": {
+        "es": "Ana, desarrolladora en DEV, ve la transición Done en DEV-184. Al pulsarla, Jira muestra un error de campo obligatorio y el estado no cambia. ¿Qué está impidiendo el tránsito?",
+        "en": "Ana, a developer on DEV, can see the Done transition on DEV-184. When she clicks it, Jira shows a required-field error and the status does not change. What is blocking the transition?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una condición de rol en Done" },
-        { "id": "B", "texto": "Un validador de campo obligatorio en Done" },
-        { "id": "C", "texto": "Un filtro rápido del tablero" },
-        { "id": "D", "texto": "Falta de product access" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una condición de rol en Done",
+            "en": "A role condition on Done"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un validador de campo obligatorio en Done",
+            "en": "A required-field validator on Done"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un filtro rápido del tablero",
+            "en": "A board quick filter"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falta de product access",
+            "en": "Missing product access"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si el botón se ve, la condición ya dejó pasar. El validador evalúa al ejecutar y puede exigir un campo. Una condición habría ocultado Done."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si el botón se ve, la condición ya dejó pasar. El validador evalúa al ejecutar y puede exigir un campo. Una condición habría ocultado Done.",
+        "en": "If the button is visible, the condition already allowed it. The validator runs on execute and can require a field. A condition would have hidden Done."
+      }
     },
     {
       "id": "m05-q2",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Luis abre DEV-201 por clave: está In Review. En el Kanban de Desarrollo la tarjeta no aparece. El proyecto y los permisos están bien. ¿Qué es lo más probable?",
+      "stem": {
+        "es": "Luis abre DEV-201 por clave: está In Review. En el Kanban de Desarrollo la tarjeta no aparece. El proyecto y los permisos están bien. ¿Qué es lo más probable?",
+        "en": "Luis opens DEV-201 by key: it is In Review. The card does not appear on the Development Kanban. The project and permissions are fine. What is most likely?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Alguien borró el elemento" },
-        { "id": "B", "texto": "In Review no está mapeado a ninguna columna del tablero" },
-        { "id": "C", "texto": "Falta instalar Confluence" },
-        { "id": "D", "texto": "El site está en plan Free" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Alguien borró el elemento",
+            "en": "Someone deleted the issue"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "In Review no está mapeado a ninguna columna del tablero",
+            "en": "In Review is not mapped to any board column"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta instalar Confluence",
+            "en": "Confluence is not installed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El site está en plan Free",
+            "en": "The site is on the Free plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El tablero solo pinta estados con columna. Unmapped = invisible en el board; el elemento sigue en el proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El tablero solo pinta estados con columna. Unmapped = invisible en el board; el elemento sigue en el proyecto.",
+        "en": "The board only paints statuses that have a column. Unmapped = invisible on the board; the issue remains in the project."
+      }
     },
     {
       "id": "m05-q3",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO mueve solicitudes a Done, pero Created vs Resolved las sigue mostrando como no resueltas. ¿Qué debe ocurrir al cerrar?",
+      "stem": {
+        "es": "PMO mueve solicitudes a Done, pero Created vs Resolved las sigue mostrando como no resueltas. ¿Qué debe ocurrir al cerrar?",
+        "en": "PMO moves requests to Done, but Created vs Resolved still shows them as unresolved. What must happen on close?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear otro proyecto" },
-        { "id": "B", "texto": "Una post function que ponga Resolution y dispare el evento de cierre" },
-        { "id": "C", "texto": "Subir el site a Premium" },
-        { "id": "D", "texto": "Invitar más usuarios" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear otro proyecto",
+            "en": "Create another project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Una post function que ponga Resolution y dispare el evento de cierre",
+            "en": "A post function that sets Resolution and fires the close event"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Subir el site a Premium",
+            "en": "Upgrade the site to Premium"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Invitar más usuarios",
+            "en": "Invite more users"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Estado Done y Resolution son campos distintos. Sin Set Resolution, muchos informes cuentan el elemento como Unresolved."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Estado Done y Resolution son campos distintos. Sin Set Resolution, muchos informes cuentan el elemento como Unresolved.",
+        "en": "Done status and Resolution are different fields. Without Set Resolution, many reports count the issue as Unresolved."
+      }
     },
     {
       "id": "m05-q4",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En el proyecto company-managed DEV, Ana (rol Users) no ve la transición Done. Luis, en Administrators, sí la ve. ¿Cuál es la causa más probable?",
+      "stem": {
+        "es": "En el proyecto company-managed DEV, Ana (rol Users) no ve la transición Done. Luis, en Administrators, sí la ve. ¿Cuál es la causa más probable?",
+        "en": "In the company-managed project DEV, Ana (Users role) cannot see the Done transition. Luis, in Administrators, can. What is the most likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un validador que exige comentario" },
-        { "id": "B", "texto": "Una condición de rol en la transición Done" },
-        { "id": "C", "texto": "Un campo personalizado Hidden" },
-        { "id": "D", "texto": "La categoría del estado mal puesta" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un validador que exige comentario",
+            "en": "A validator that requires a comment"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Una condición de rol en la transición Done",
+            "en": "A role condition on the Done transition"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un campo personalizado Hidden",
+            "en": "A Hidden custom field"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La categoría del estado mal puesta",
+            "en": "The status category is wrong"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La condición decide quién ve o puede usar la transición. Un validador dejaría el botón visible y fallaría al pulsar."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La condición decide quién ve o puede usar la transición. Un validador dejaría el botón visible y fallaría al pulsar.",
+        "en": "The condition decides who sees or can use the transition. A validator would leave the button visible and fail when clicked."
+      }
     },
     {
       "id": "m05-q5",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Has añadido In Review en el editor de NORTECH Incidencias. Los Bugs nuevos de DEV siguen To Do → In Progress → Done. ¿Qué debes hacer primero?",
+      "stem": {
+        "es": "Has añadido In Review en el editor de NORTECH Incidencias. Los Bugs nuevos de DEV siguen To Do → In Progress → Done. ¿Qué debes hacer primero?",
+        "en": "You added In Review in the NORTECH Incidencias editor. New Bugs in DEV still go To Do → In Progress → Done. What should you do first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar el proyecto DEV" },
-        { "id": "B", "texto": "Publicar el borrador del workflow" },
-        { "id": "C", "texto": "Convertir DEV a team-managed" },
-        { "id": "D", "texto": "Instalar Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar el proyecto DEV",
+            "en": "Delete the DEV project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Publicar el borrador del workflow",
+            "en": "Publish the workflow draft"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Convertir DEV a team-managed",
+            "en": "Convert DEV to team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Instalar Confluence",
+            "en": "Install Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Mientras el editor esté en Draft, los elementos no usan los cambios. Hay que Publish / Publish draft."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Mientras el editor esté en Draft, los elementos no usan los cambios. Hay que Publish / Publish draft.",
+        "en": "While the editor is in Draft, issues do not use the changes. You must Publish / Publish draft."
+      }
     },
     {
       "id": "m05-q6",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Nortech necesita un flujo propio de incidencias para varios proyectos company-managed. ¿Qué enfoque es el más limpio?",
+      "stem": {
+        "es": "Nortech necesita un flujo propio de incidencias para varios proyectos company-managed. ¿Qué enfoque es el más limpio?",
+        "en": "Nortech needs its own incident workflow for several company-managed projects. What is the cleanest approach?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Editar el workflow por defecto del site" },
-        { "id": "B", "texto": "Copiarlo, nombrarlo NORTECH Incidencias y editar la copia" },
-        { "id": "C", "texto": "Sustituir el flujo por una regla de automatización" },
-        { "id": "D", "texto": "Cambiar solo el nombre del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Editar el workflow por defecto del site",
+            "en": "Edit the site default workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Copiarlo, nombrarlo NORTECH Incidencias y editar la copia",
+            "en": "Copy it, name it NORTECH Incidencias, and edit the copy"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sustituir el flujo por una regla de automatización",
+            "en": "Replace the workflow with an automation rule"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar solo el nombre del proyecto",
+            "en": "Change only the project name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El workflow por defecto lo usan otros proyectos. Se copia, se nombra y se publica la copia."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El workflow por defecto lo usan otros proyectos. Se copia, se nombra y se publica la copia.",
+        "en": "Other projects use the default workflow. Copy it, name it, and publish the copy."
+      }
     },
     {
       "id": "m05-q7",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El workflow scheme NORTECH Workflows asigna NORTECH Incidencias a Bug y Story. Un Bug del proyecto DEV, ¿qué flujo usa?",
+      "stem": {
+        "es": "El workflow scheme NORTECH Workflows asigna NORTECH Incidencias a Bug y Story. Un Bug del proyecto DEV, ¿qué flujo usa?",
+        "en": "The NORTECH Workflows workflow scheme assigns NORTECH Incidencias to Bug and Story. Which workflow does a Bug in DEV use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El flujo de Solicitud" },
-        { "id": "B", "texto": "NORTECH Incidencias" },
-        { "id": "C", "texto": "Ninguno: no tiene workflow" },
-        { "id": "D", "texto": "Solo las columnas del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El flujo de Solicitud",
+            "en": "The Request workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "NORTECH Incidencias",
+            "en": "NORTECH Incidencias"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ninguno: no tiene workflow",
+            "en": "None: it has no workflow"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo las columnas del tablero",
+            "en": "Only the board columns"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El workflow scheme elige el flujo por tipo de elemento. El tablero no asigna el workflow."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El workflow scheme elige el flujo por tipo de elemento. El tablero no asigna el workflow.",
+        "en": "The workflow scheme chooses the workflow by issue type. The board does not assign the workflow."
+      }
     },
     {
       "id": "m05-q8",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El workflow ya tiene In Review. En el tablero de DEV las tarjetas desaparecen al pulsar Review. ¿Qué haces en la configuración del tablero?",
+      "stem": {
+        "es": "El workflow ya tiene In Review. En el tablero de DEV las tarjetas desaparecen al pulsar Review. ¿Qué haces en la configuración del tablero?",
+        "en": "The workflow already has In Review. On the DEV board, cards disappear when you click Review. What do you do in board settings?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar el estado del workflow" },
-        { "id": "B", "texto": "Arrastrar In Review a una columna (o crear la columna y mapearlo)" },
-        { "id": "C", "texto": "Subir el site a Premium" },
-        { "id": "D", "texto": "Crear el campo Resolución" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar el estado del workflow",
+            "en": "Delete the status from the workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Arrastrar In Review a una columna (o crear la columna y mapearlo)",
+            "en": "Drag In Review onto a column (or create the column and map it)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Subir el site a Premium",
+            "en": "Upgrade the site to Premium"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear el campo Resolución",
+            "en": "Create the Resolution field"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El tablero solo muestra estados mapeados. In Review sin columna = invisible en el board, no en el proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El tablero solo muestra estados mapeados. In Review sin columna = invisible en el board, no en el proyecto.",
+        "en": "The board only shows mapped statuses. In Review without a column = invisible on the board, not in the project."
+      }
     },
     {
       "id": "m05-q9",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO quiere reabrir a To Do desde Done y, si hace falta, desde otros estados. En el diagrama company-managed, ¿qué añades?",
+      "stem": {
+        "es": "PMO quiere reabrir a To Do desde Done y, si hace falta, desde otros estados. En el diagrama company-managed, ¿qué añades?",
+        "en": "PMO wants to reopen to To Do from Done and, if needed, from other statuses. In the company-managed diagram, what do you add?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un campo personalizado Sí/No" },
-        { "id": "B", "texto": "Una transición global hacia To Do" },
-        { "id": "C", "texto": "Un validador de comentario" },
-        { "id": "D", "texto": "Cambiar la categoría del estado a Unresolved" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un campo personalizado Sí/No",
+            "en": "A Yes/No custom field"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Una transición global hacia To Do",
+            "en": "A global transition to To Do"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un validador de comentario",
+            "en": "A comment validator"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar la categoría del estado a Unresolved",
+            "en": "Change the status category to Unresolved"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La transición global está disponible desde cualquier estado (o desde varios). No es un campo ni una categoría."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La transición global está disponible desde cualquier estado (o desde varios). No es un campo ni una categoría.",
+        "en": "A global transition is available from any status (or from several). It is not a field or a category."
+      }
     },
     {
       "id": "m05-q10",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El estado se llama Hecho, pero su categoría sigue en In Progress. ¿Qué ocurre en tableros e informes?",
+      "stem": {
+        "es": "El estado se llama Hecho, pero su categoría sigue en In Progress. ¿Qué ocurre en tableros e informes?",
+        "en": "The status is named Hecho, but its category is still In Progress. What happens on boards and reports?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Nada: solo cuenta el nombre" },
-        { "id": "B", "texto": "Tratan el estado como trabajo no terminado" },
-        { "id": "C", "texto": "Se borra el elemento" },
-        { "id": "D", "texto": "Cambia el permission scheme" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Nada: solo cuenta el nombre",
+            "en": "Nothing: only the name counts"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Tratan el estado como trabajo no terminado",
+            "en": "They treat the status as unfinished work"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se borra el elemento",
+            "en": "The issue is deleted"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambia el permission scheme",
+            "en": "The permission scheme changes"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La categoría (To Do / In Progress / Done) es lo que usan muchos informes, no el nombre localizado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La categoría (To Do / In Progress / Done) es lo que usan muchos informes, no el nombre localizado.",
+        "en": "The category (To Do / In Progress / Done) is what many reports use, not the localized name."
+      }
     },
     {
       "id": "m05-q11",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Varios elementos están en Done y Created vs Resolved los marca Unresolved. ¿Cuál es la causa habitual?",
+      "stem": {
+        "es": "Varios elementos están en Done y Created vs Resolved los marca Unresolved. ¿Cuál es la causa habitual?",
+        "en": "Several issues are in Done and Created vs Resolved marks them Unresolved. What is the usual cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El nombre Done no existe en Cloud" },
-        { "id": "B", "texto": "Resolution está vacía: falta Set Resolution al cerrar" },
-        { "id": "C", "texto": "El proyecto es team-managed" },
-        { "id": "D", "texto": "Falta Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El nombre Done no existe en Cloud",
+            "en": "The name Done does not exist in Cloud"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Resolution está vacía: falta Set Resolution al cerrar",
+            "en": "Resolution is empty: Set Resolution is missing on close"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El proyecto es team-managed",
+            "en": "The project is team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falta Confluence",
+            "en": "Confluence is missing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Resuelta no es lo mismo que estado Done. Sin Resolution, muchos informes siguen contando el elemento como no resuelto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Resuelta no es lo mismo que estado Done. Sin Resolution, muchos informes siguen contando el elemento como no resuelto.",
+        "en": "Resolved is not the same as Done status. Without Resolution, many reports still count the issue as unresolved."
+      }
     },
     {
       "id": "m05-q12",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Reabres un Bug de Done a To Do y Resolution sigue en Done. Los informes lo cuentan resuelto. ¿Qué falta en Reopen?",
+      "stem": {
+        "es": "Reabres un Bug de Done a To Do y Resolution sigue en Done. Los informes lo cuentan resuelto. ¿Qué falta en Reopen?",
+        "en": "You reopen a Bug from Done to To Do and Resolution stays Done. Reports count it as resolved. What is missing on Reopen?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un validador de adjunto" },
-        { "id": "B", "texto": "La post function Clear Resolution" },
-        { "id": "C", "texto": "Un estado extra In Review" },
-        { "id": "D", "texto": "Publicar un segundo workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un validador de adjunto",
+            "en": "An attachment validator"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La post function Clear Resolution",
+            "en": "The Clear Resolution post function"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un estado extra In Review",
+            "en": "An extra In Review status"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Publicar un segundo workflow",
+            "en": "Publishing a second workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Al reabrir hay que limpiar Resolution. Si no, el elemento abierto sigue «resuelto» en los informes."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Al reabrir hay que limpiar Resolution. Si no, el elemento abierto sigue «resuelto» en los informes.",
+        "en": "On reopen you must clear Resolution. If you do not, the open issue still looks resolved in reports."
+      }
     },
     {
       "id": "m05-q13",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Desde In Review, PMO debe poder aprobar o rechazar una Solicitud. ¿Qué patrón usas en NORTECH Aprobación?",
+      "stem": {
+        "es": "Desde In Review, PMO debe poder aprobar o rechazar una Solicitud. ¿Qué patrón usas en NORTECH Aprobación?",
+        "en": "From In Review, PMO must be able to approve or reject a Solicitud. What pattern do you use in NORTECH Aprobación?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un campo Sí/No que cierre solo" },
-        { "id": "B", "texto": "Dos transiciones (Approve y Reject) hacia estados distintos" },
-        { "id": "C", "texto": "Un único estado llamado Decisión" },
-        { "id": "D", "texto": "Duplicar el proyecto PMO" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un campo Sí/No que cierre solo",
+            "en": "A Yes/No field that closes on its own"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Dos transiciones (Approve y Reject) hacia estados distintos",
+            "en": "Two transitions (Approve and Reject) to different statuses"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un único estado llamado Decisión",
+            "en": "A single status named Decision"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Duplicar el proyecto PMO",
+            "en": "Duplicate the PMO project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La bifurcación son dos transiciones, no un campo mágico. Approved y Rejected quedan distinguibles."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La bifurcación son dos transiciones, no un campo mágico. Approved y Rejected quedan distinguibles.",
+        "en": "The fork is two transitions, not a magic field. Approved and Rejected stay distinguishable."
+      }
     },
     {
       "id": "m05-q14",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Una Solicitud de PMO está en Approved. El elemento existe en el proyecto, pero el tablero no lo pinta. ¿Qué es lo más probable?",
+      "stem": {
+        "es": "Una Solicitud de PMO está en Approved. El elemento existe en el proyecto, pero el tablero no lo pinta. ¿Qué es lo más probable?",
+        "en": "A PMO Solicitud is in Approved. The issue exists in the project, but the board does not paint it. What is most likely?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Se borró al aprobar" },
-        { "id": "B", "texto": "Approved no está mapeado a ninguna columna" },
-        { "id": "C", "texto": "Falta un campo en la pantalla" },
-        { "id": "D", "texto": "El site está en Free" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Se borró al aprobar",
+            "en": "It was deleted on approve"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Approved no está mapeado a ninguna columna",
+            "en": "Approved is not mapped to any column"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta un campo en la pantalla",
+            "en": "A field is missing from the screen"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El site está en Free",
+            "en": "The site is on Free"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El tablero solo muestra estados con columna. Unmapped = invisible en el board; el elemento sigue en el proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El tablero solo muestra estados con columna. Unmapped = invisible en el board; el elemento sigue en el proyecto.",
+        "en": "The board only shows statuses with a column. Unmapped = invisible on the board; the issue remains in the project."
+      }
     },
     {
       "id": "m05-q15",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Marta edita la transición Approve del workflow company-managed de PMO. ¿Qué puede configurar sobre esa transición?",
+      "stem": {
+        "es": "Marta edita la transición Approve del workflow company-managed de PMO. ¿Qué puede configurar sobre esa transición?",
+        "en": "Marta edits the Approve transition on PMO's company-managed workflow. What can she configure on that transition?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Condiciones" },
-        { "id": "B", "texto": "Validadores" },
-        { "id": "C", "texto": "Post functions" },
-        { "id": "D", "texto": "Contextos de un campo personalizado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Condiciones",
+            "en": "Conditions"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Validadores",
+            "en": "Validators"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Post functions",
+            "en": "Post functions"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Contextos de un campo personalizado",
+            "en": "Custom field contexts"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Condición, validador y post function viven en la transición. El contexto del campo no forma parte del flujo."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Condición, validador y post function viven en la transición. El contexto del campo no forma parte del flujo.",
+        "en": "Condition, validator, and post function live on the transition. Field context is not part of the workflow."
+      }
     },
     {
       "id": "m05-q16",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Calidad es team-managed y quiere cambiar su flujo. ¿Dónde lo edita el project admin?",
+      "stem": {
+        "es": "Calidad es team-managed y quiere cambiar su flujo. ¿Dónde lo edita el project admin?",
+        "en": "Calidad is team-managed and wants to change its workflow. Where does the project admin edit it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En los flujos globales del site" },
-        { "id": "B", "texto": "En la configuración del propio proyecto (no hay workflow scheme compartido)" },
-        { "id": "C", "texto": "Solo en admin.atlassian.com" },
-        { "id": "D", "texto": "En el permission scheme" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En los flujos globales del site",
+            "en": "In the site's global workflows"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En la configuración del propio proyecto (no hay workflow scheme compartido)",
+            "en": "In the project's own settings (there is no shared workflow scheme)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo en admin.atlassian.com",
+            "en": "Only in admin.atlassian.com"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el permission scheme",
+            "en": "In the permission scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En team-managed el flujo se edita dentro del proyecto. En company-managed lo toca un Jira admin sobre el objeto workflow y el scheme."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En team-managed el flujo se edita dentro del proyecto. En company-managed lo toca un Jira admin sobre el objeto workflow y el scheme.",
+        "en": "In team-managed the workflow is edited inside the project. In company-managed a Jira admin edits the workflow object and the scheme."
+      }
     },
     {
       "id": "m05-q17",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El solicitante (rol Users de PMO) se autoaprueba las Solicitudes. ¿Qué falta en la transición Approve?",
+      "stem": {
+        "es": "El solicitante (rol Users de PMO) se autoaprueba las Solicitudes. ¿Qué falta en la transición Approve?",
+        "en": "The requester (PMO Users role) self-approves Solicitud issues. What is missing on the Approve transition?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una post function de Resolution" },
-        { "id": "B", "texto": "La condición de que el usuario esté en el rol Administrators" },
-        { "id": "C", "texto": "Categoría To Do en Open" },
-        { "id": "D", "texto": "Un segundo proyecto PMO" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una post function de Resolution",
+            "en": "A Resolution post function"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La condición de que el usuario esté en el rol Administrators",
+            "en": "The condition that the user is in the Administrators role"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Categoría To Do en Open",
+            "en": "To Do category on Open"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un segundo proyecto PMO",
+            "en": "A second PMO project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La condición decide quién pulsa. Users no debe autoaprobarse. Una regla de automatización no sustituye el gobierno del workflow."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La condición decide quién pulsa. Users no debe autoaprobarse. Una regla de automatización no sustituye el gobierno del workflow.",
+        "en": "The condition decides who clicks. Users must not self-approve. An automation rule does not replace workflow governance."
+      }
     },
     {
       "id": "m05-q18",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Abres DEV-184 por clave: está In Review en el proyecto. El tablero no lo muestra. Permisos y workflow están bien. ¿Qué es lo más probable?",
+      "stem": {
+        "es": "Abres DEV-184 por clave: está In Review en el proyecto. El tablero no lo muestra. Permisos y workflow están bien. ¿Qué es lo más probable?",
+        "en": "You open DEV-184 by key: it is In Review in the project. The board does not show it. Permissions and workflow are fine. What is most likely?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El elemento se borró" },
-        { "id": "B", "texto": "In Review está sin mapear a ninguna columna" },
-        { "id": "C", "texto": "El site está en Free" },
-        { "id": "D", "texto": "Falta el correo SMTP" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El elemento se borró",
+            "en": "The issue was deleted"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "In Review está sin mapear a ninguna columna",
+            "en": "In Review is unmapped to any column"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El site está en Free",
+            "en": "The site is on Free"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falta el correo SMTP",
+            "en": "SMTP mail is missing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El proyecto conserva el elemento. El tablero es una vista: sin mapeo a columna, no se pinta."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El proyecto conserva el elemento. El tablero es una vista: sin mapeo a columna, no se pinta.",
+        "en": "The project still has the issue. The board is a view: without column mapping, it is not painted."
+      }
     },
     {
       "id": "m05-q19",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Rework se ve en la issue, pero al pulsarla Jira exige un comentario y falla. ¿Qué lo provoca?",
+      "stem": {
+        "es": "Rework se ve en la issue, pero al pulsarla Jira exige un comentario y falla. ¿Qué lo provoca?",
+        "en": "Rework is visible on the issue, but when you click it Jira requires a comment and fails. What causes that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una condición de rol" },
-        { "id": "B", "texto": "Un validador de comentario o campo requerido" },
-        { "id": "C", "texto": "Una post function" },
-        { "id": "D", "texto": "Un estado global" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una condición de rol",
+            "en": "A role condition"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un validador de comentario o campo requerido",
+            "en": "A comment or required-field validator"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Una post function",
+            "en": "A post function"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un estado global",
+            "en": "A global status"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Botón visible + error al ejecutar = validador. La condición habría ocultado Rework. La post function corre después de transitar."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Botón visible + error al ejecutar = validador. La condición habría ocultado Rework. La post function corre después de transitar.",
+        "en": "Visible button + error on execute = validator. A condition would have hidden Rework. The post function runs after the transition."
+      }
     },
     {
       "id": "m05-q20",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "DEV tiene un flujo de seis estados y quiere un Kanban de tres columnas. ¿Es viable?",
+      "stem": {
+        "es": "DEV tiene un flujo de seis estados y quiere un Kanban de tres columnas. ¿Es viable?",
+        "en": "DEV has a six-status workflow and wants a three-column Kanban. Is that viable?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No: el workflow son las columnas" },
-        { "id": "B", "texto": "Sí: el flujo define el camino y el tablero solo muestra" },
-        { "id": "C", "texto": "No: cada columna crea siempre un estado nuevo en company-managed" },
-        { "id": "D", "texto": "No: sin tablero no hay workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No: el workflow son las columnas",
+            "en": "No: the workflow is the columns"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sí: el flujo define el camino y el tablero solo muestra",
+            "en": "Yes: the workflow defines the path and the board only displays"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No: cada columna crea siempre un estado nuevo en company-managed",
+            "en": "No: each column always creates a new status in company-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No: sin tablero no hay workflow",
+            "en": "No: without a board there is no workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Varios estados pueden compartir columna; unmapped los oculta. El tablero no sustituye al workflow."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Varios estados pueden compartir columna; unmapped los oculta. El tablero no sustituye al workflow.",
+        "en": "Several statuses can share a column; unmapped hides them. The board does not replace the workflow."
+      }
     },
     {
       "id": "m05-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Tras publicar NORTECH Incidencias, nadie —ni siquiera Developers— puede pulsar Done. ¿Qué lo explica?",
+      "stem": {
+        "es": "Tras publicar NORTECH Incidencias, nadie —ni siquiera Developers— puede pulsar Done. ¿Qué lo explica?",
+        "en": "After publishing NORTECH Incidencias, nobody — not even Developers — can click Done. What explains that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Resolution está vacía" },
-        { "id": "B", "texto": "La condición es demasiado estricta (rol vacío o equivocado)" },
-        { "id": "C", "texto": "Falta Confluence" },
-        { "id": "D", "texto": "La categoría de To Do está mal" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Resolution está vacía",
+            "en": "Resolution is empty"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La condición es demasiado estricta (rol vacío o equivocado)",
+            "en": "The condition is too strict (empty or wrong role)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta Confluence",
+            "en": "Confluence is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La categoría de To Do está mal",
+            "en": "The To Do category is wrong"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Síntoma clásico de condición mal puesta. Se relaja el rol (por ejemplo Developers) o se quita la condición."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Síntoma clásico de condición mal puesta. Se relaja el rol (por ejemplo Developers) o se quita la condición.",
+        "en": "Classic symptom of a bad condition. Relax the role (for example Developers) or remove the condition."
+      }
     },
     {
       "id": "m05-q22",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Ana pulsa Done: el botón estaba visible y el validador no se queja. ¿Cuándo se ejecuta la post function que pone Resolution?",
+      "stem": {
+        "es": "Ana pulsa Done: el botón estaba visible y el validador no se queja. ¿Cuándo se ejecuta la post function que pone Resolution?",
+        "en": "Ana clicks Done: the button was visible and the validator does not complain. When does the post function that sets Resolution run?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Antes de mostrar el botón" },
-        { "id": "B", "texto": "Tras una transición válida" },
-        { "id": "C", "texto": "Al abrir Create" },
-        { "id": "D", "texto": "Al publicar el borrador, aunque nadie transite" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Antes de mostrar el botón",
+            "en": "Before showing the button"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Tras una transición válida",
+            "en": "After a valid transition"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Al abrir Create",
+            "en": "When opening Create"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Al publicar el borrador, aunque nadie transite",
+            "en": "When publishing the draft, even if nobody transitions"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Orden: condición (¿se puede?) → validador (¿datos OK?) → cambio de estado → post functions (Resolution, evento, assignee)."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Orden: condición (¿se puede?) → validador (¿datos OK?) → cambio de estado → post functions (Resolution, evento, assignee).",
+        "en": "Order: condition (allowed?) → validator (data OK?) → status change → post functions (Resolution, event, assignee)."
+      }
     },
     {
       "id": "m05-q23",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Open, To Do y Backlog comparten categoría To Do. PMO pregunta si eso es válido. ¿Qué respondes?",
+      "stem": {
+        "es": "Open, To Do y Backlog comparten categoría To Do. PMO pregunta si eso es válido. ¿Qué respondes?",
+        "en": "Open, To Do, and Backlog share the To Do category. PMO asks if that is valid. What do you answer?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No: una categoría admite un solo estado" },
-        { "id": "B", "texto": "Sí: la categoría agrupa; el workflow define el camino" },
-        { "id": "C", "texto": "Solo en team-managed" },
-        { "id": "D", "texto": "Solo si hay una regla de automatización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No: una categoría admite un solo estado",
+            "en": "No: a category allows only one status"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sí: la categoría agrupa; el workflow define el camino",
+            "en": "Yes: the category groups; the workflow defines the path"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo en team-managed",
+            "en": "Only in team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo si hay una regla de automatización",
+            "en": "Only if there is an automation rule"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Varios estados en la misma categoría es normal. Muchos informes se apoyan en To Do / In Progress / Done, no en el nombre."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Varios estados en la misma categoría es normal. Muchos informes se apoyan en To Do / In Progress / Done, no en el nombre.",
+        "en": "Several statuses in the same category is normal. Many reports rely on To Do / In Progress / Done, not on the name."
+      }
     },
     {
       "id": "m05-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Una Solicitud en PMO usa el flujo de Bug. ¿Cuál es la causa?",
+      "stem": {
+        "es": "Una Solicitud en PMO usa el flujo de Bug. ¿Cuál es la causa?",
+        "en": "A Solicitud in PMO uses the Bug workflow. What is the cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El nombre del proyecto" },
-        { "id": "B", "texto": "El workflow scheme no mapeó Solicitud a NORTECH Aprobación" },
-        { "id": "C", "texto": "Falta el campo Departamento" },
-        { "id": "D", "texto": "El usuario no es org admin" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El nombre del proyecto",
+            "en": "The project name"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El workflow scheme no mapeó Solicitud a NORTECH Aprobación",
+            "en": "The workflow scheme did not map Solicitud to NORTECH Aprobación"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta el campo Departamento",
+            "en": "The Department field is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El usuario no es org admin",
+            "en": "The user is not an org admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sin mapeo explícito, el tipo cae en All Unassigned Issue Types (a menudo el flujo de software). Assign en el scheme y publica."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sin mapeo explícito, el tipo cae en All Unassigned Issue Types (a menudo el flujo de software). Assign en el scheme y publica.",
+        "en": "Without an explicit mapping, the type falls into All Unassigned Issue Types (often the software workflow). Assign it in the scheme and publish."
+      }
     },
     {
       "id": "m05-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El flujo de aprobación no debe aplicarse a los Bug de DEV. ¿Qué es coherente?",
+      "stem": {
+        "es": "El flujo de aprobación no debe aplicarse a los Bug de DEV. ¿Qué es coherente?",
+        "en": "The approval workflow must not apply to Bugs in DEV. What is consistent?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Poner NORTECH Aprobación como flujo de All Unassigned en DEV" },
-        { "id": "B", "texto": "Mapear Solicitud → NORTECH Aprobación solo en el workflow scheme de PMO" },
-        { "id": "C", "texto": "Borrar el tipo Bug" },
-        { "id": "D", "texto": "Editar el workflow por defecto del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Poner NORTECH Aprobación como flujo de All Unassigned en DEV",
+            "en": "Set NORTECH Aprobación as the All Unassigned workflow in DEV"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Mapear Solicitud → NORTECH Aprobación solo en el workflow scheme de PMO",
+            "en": "Map Solicitud → NORTECH Aprobación only in PMO's workflow scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borrar el tipo Bug",
+            "en": "Delete the Bug type"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Editar el workflow por defecto del site",
+            "en": "Edit the site default workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El scheme asocia flujo por tipo y por proyecto. DEV sigue con NORTECH Incidencias en Bug; PMO usa Aprobación en Solicitud."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El scheme asocia flujo por tipo y por proyecto. DEV sigue con NORTECH Incidencias en Bug; PMO usa Aprobación en Solicitud.",
+        "en": "The scheme associates workflow by type and by project. DEV keeps NORTECH Incidencias on Bug; PMO uses Aprobación on Solicitud."
+      }
     },
     {
       "id": "m05-q26",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "En Columnas del tablero de DEV ves estados en Sin asignar / Unmapped. ¿Para qué sirve esa zona?",
+      "stem": {
+        "es": "En Columnas del tablero de DEV ves estados en Sin asignar / Unmapped. ¿Para qué sirve esa zona?",
+        "en": "In Columns on the DEV board you see statuses under Unmapped. What is that zone for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar estados del workflow" },
-        { "id": "B", "texto": "Ver estados del flujo que no tienen columna (las tarjetas no salen)" },
-        { "id": "C", "texto": "Crear campos personalizados" },
-        { "id": "D", "texto": "Publicar el borrador del workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar estados del workflow",
+            "en": "Delete statuses from the workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ver estados del flujo que no tienen columna (las tarjetas no salen)",
+            "en": "See workflow statuses that have no column (cards do not appear)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crear campos personalizados",
+            "en": "Create custom fields"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Publicar el borrador del workflow",
+            "en": "Publish the workflow draft"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Unmapped no elimina el estado del workflow. Solo deja esas tarjetas fuera del board. Hay que arrastrarlas a una columna."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Unmapped no elimina el estado del workflow. Solo deja esas tarjetas fuera del board. Hay que arrastrarlas a una columna.",
+        "en": "Unmapped does not remove the status from the workflow. It only leaves those cards off the board. Drag them onto a column."
+      }
     },
     {
       "id": "m05-q27",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "PMO diseña NORTECH Aprobación. ¿Qué decisiones son correctas para ese flujo?",
+      "stem": {
+        "es": "PMO diseña NORTECH Aprobación. ¿Qué decisiones son correctas para ese flujo?",
+        "en": "PMO designs NORTECH Aprobación. Which decisions are correct for that workflow?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Approve y Reject como dos transiciones, no un campo" },
-        { "id": "B", "texto": "Condición de rol para que Users no se autoapruebe" },
-        { "id": "C", "texto": "Un validador que exija Assignee al aprobar" },
-        { "id": "D", "texto": "Usar el tablero en lugar del workflow scheme" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Approve y Reject como dos transiciones, no un campo",
+            "en": "Approve and Reject as two transitions, not a field"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Condición de rol para que Users no se autoapruebe",
+            "en": "A role condition so Users cannot self-approve"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un validador que exija Assignee al aprobar",
+            "en": "A validator that requires Assignee on approve"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Usar el tablero en lugar del workflow scheme",
+            "en": "Use the board instead of the workflow scheme"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Bifurcación + condición + validador. El tablero no asigna flujos por tipo."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Bifurcación + condición + validador. El tablero no asigna flujos por tipo.",
+        "en": "Fork + condition + validator. The board does not assign workflows by type."
+      }
     },
     {
       "id": "m05-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Marta está en Administrators de PMO y Approve tiene esa condición, pero las Solicitudes siguen el diagrama viejo. ¿Qué falta?",
+      "stem": {
+        "es": "Marta está en Administrators de PMO y Approve tiene esa condición, pero las Solicitudes siguen el diagrama viejo. ¿Qué falta?",
+        "en": "Marta is in PMO Administrators and Approve has that condition, but Solicitud issues still follow the old diagram. What is missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear un campo Aprobador" },
-        { "id": "B", "texto": "Publicar el borrador del workflow (o del workflow scheme)" },
-        { "id": "C", "texto": "Pasar PMO a team-managed" },
-        { "id": "D", "texto": "Cambiar la categoría de Open" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear un campo Aprobador",
+            "en": "Create an Approver field"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Publicar el borrador del workflow (o del workflow scheme)",
+            "en": "Publish the workflow draft (or the workflow scheme)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pasar PMO a team-managed",
+            "en": "Convert PMO to team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar la categoría de Open",
+            "en": "Change the Open category"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si el editor o el scheme siguen en Draft, los elementos no usan el flujo nuevo. Hay que Publish."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si el editor o el scheme siguen en Draft, los elementos no usan el flujo nuevo. Hay que Publish.",
+        "en": "If the editor or the scheme is still in Draft, issues do not use the new workflow. You must Publish."
+      }
     },
     {
       "id": "m05-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Cierras un Bug a Done y quieres que cuente como resuelto. Además de la categoría Done, ¿qué verificas en las post functions?",
+      "stem": {
+        "es": "Cierras un Bug a Done y quieres que cuente como resuelto. Además de la categoría Done, ¿qué verificas en las post functions?",
+        "en": "You close a Bug to Done and want it to count as resolved. Besides the Done category, what do you check in the post functions?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Que oculten el botón Done" },
-        { "id": "B", "texto": "Que pongan Resolution" },
-        { "id": "C", "texto": "Que creen el proyecto" },
-        { "id": "D", "texto": "Que mapeen columnas del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Que oculten el botón Done",
+            "en": "That they hide the Done button"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Que pongan Resolution",
+            "en": "That they set Resolution"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que creen el proyecto",
+            "en": "That they create the project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que mapeen columnas del tablero",
+            "en": "That they map board columns"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cierre idiomático: Resolution + categoría Done. Si la post function falta, el estado puede ser Done y el informe Unresolved."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cierre idiomático: Resolution + categoría Done. Si la post function falta, el estado puede ser Done y el informe Unresolved.",
+        "en": "Idiomatic close: Resolution + Done category. If the post function is missing, status can be Done and the report Unresolved."
+      }
     },
     {
       "id": "m05-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Has mapeado NORTECH Aprobación en el scheme de PMO, pero las Solicitudes no cambian. ¿Qué falta?",
+      "stem": {
+        "es": "Has mapeado NORTECH Aprobación en el scheme de PMO, pero las Solicitudes no cambian. ¿Qué falta?",
+        "en": "You mapped NORTECH Aprobación in PMO's scheme, but Solicitud issues do not change. What is missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Reiniciar el portátil" },
-        { "id": "B", "texto": "Publicar el workflow scheme" },
-        { "id": "C", "texto": "Crear un team-managed paralelo" },
-        { "id": "D", "texto": "Invitar a Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Reiniciar el portátil",
+            "en": "Restart the laptop"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Publicar el workflow scheme",
+            "en": "Publish the workflow scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crear un team-managed paralelo",
+            "en": "Create a parallel team-managed project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Invitar a Confluence",
+            "en": "Invite Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Igual que el workflow, el scheme tiene draft. Hasta Publish, los proyectos siguen el mapeo anterior."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Igual que el workflow, el scheme tiene draft. Hasta Publish, los proyectos siguen el mapeo anterior.",
+        "en": "Like the workflow, the scheme has a draft. Until Publish, projects keep the previous mapping."
+      }
     },
     {
       "id": "m05-q31",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Un elemento está en Done con Resolution vacía. ¿Qué consecuencia tiene?",
+      "stem": {
+        "es": "Un elemento está en Done con Resolution vacía. ¿Qué consecuencia tiene?",
+        "en": "An issue is in Done with Resolution empty. What is the consequence?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es imposible en Cloud" },
-        { "id": "B", "texto": "El estado es Done pero muchos informes lo cuentan Unresolved" },
-        { "id": "C", "texto": "Se elimina el proyecto" },
-        { "id": "D", "texto": "La categoría pasa a To Do sola" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es imposible en Cloud",
+            "en": "It is impossible in Cloud"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El estado es Done pero muchos informes lo cuentan Unresolved",
+            "en": "Status is Done but many reports count it Unresolved"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se elimina el proyecto",
+            "en": "The project is deleted"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La categoría pasa a To Do sola",
+            "en": "The category switches to To Do on its own"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Estado y Resolution son campos distintos. Hay que comprobar la post function al transitar a Done."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Estado y Resolution son campos distintos. Hay que comprobar la post function al transitar a Done.",
+        "en": "Status and Resolution are different fields. Check the post function on the transition to Done."
+      }
     },
     {
       "id": "m05-q32",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Publicas In Review en el workflow company-managed de DEV. Hasta que lo asignes a una columna del tablero, ¿qué ocurre?",
+      "stem": {
+        "es": "Publicas In Review en el workflow company-managed de DEV. Hasta que lo asignes a una columna del tablero, ¿qué ocurre?",
+        "en": "You publish In Review on DEV's company-managed workflow. Until you assign it to a board column, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Jira borra los elementos en In Review" },
-        { "id": "B", "texto": "El estado queda sin mapear y esas tarjetas no se ven en el tablero" },
-        { "id": "C", "texto": "In Review sustituye automáticamente a Done" },
-        { "id": "D", "texto": "Obliga a Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Jira borra los elementos en In Review",
+            "en": "Jira deletes issues in In Review"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El estado queda sin mapear y esas tarjetas no se ven en el tablero",
+            "en": "The status stays unmapped and those cards are not visible on the board"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "In Review sustituye automáticamente a Done",
+            "en": "In Review automatically replaces Done"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Obliga a Premium",
+            "en": "It requires Premium"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Añadir el estado al flujo no lo pinta. Hay que mapearlo a una columna; si no, desaparece del tablero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Añadir el estado al flujo no lo pinta. Hay que mapearlo a una columna; si no, desaparece del tablero.",
+        "en": "Adding the status to the workflow does not paint it. You must map it to a column; otherwise it disappears from the board."
+      }
     },
     {
       "id": "m05-q33",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En Reject quieres que los informes distingan del Approve. ¿Qué es lo idiomático?",
+      "stem": {
+        "es": "En Reject quieres que los informes distingan del Approve. ¿Qué es lo idiomático?",
+        "en": "On Reject you want reports to distinguish it from Approve. What is idiomatic?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un label rechazado" },
-        { "id": "B", "texto": "Post function Resolution = Won't Do en Reject y Done en Approve" },
-        { "id": "C", "texto": "Dos proyectos PMO" },
-        { "id": "D", "texto": "Ocultar el campo Resolución" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un label rechazado",
+            "en": "A rejected label"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Post function Resolution = Won't Do en Reject y Done en Approve",
+            "en": "Post function Resolution = Won't Do on Reject and Done on Approve"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Dos proyectos PMO",
+            "en": "Two PMO projects"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Ocultar el campo Resolución",
+            "en": "Hide the Resolution field"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Misma familia de estados cerrados, Resolution distinta. Los informes de resueltas separan aprobado y rechazado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Misma familia de estados cerrados, Resolution distinta. Los informes de resueltas separan aprobado y rechazado.",
+        "en": "Same family of closed statuses, different Resolution. Resolved reports separate approved and rejected."
+      }
     },
     {
       "id": "m05-q34",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Luis no ve Approve. Ana sí, pero al pulsar falla por Assignee vacío. Cuando lo rellena, el estado cambia y se pone Resolution. ¿Qué orden lo explica?",
+      "stem": {
+        "es": "Luis no ve Approve. Ana sí, pero al pulsar falla por Assignee vacío. Cuando lo rellena, el estado cambia y se pone Resolution. ¿Qué orden lo explica?",
+        "en": "Luis cannot see Approve. Ana can, but clicking fails because Assignee is empty. When she fills it, the status changes and Resolution is set. What order explains that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Primero post function, luego validador, luego condición" },
-        { "id": "B", "texto": "Primero condición, luego validador, luego cambio de estado y post functions" },
-        { "id": "C", "texto": "El tablero decide el orden" },
-        { "id": "D", "texto": "Primero una automatización y luego el workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Primero post function, luego validador, luego condición",
+            "en": "First post function, then validator, then condition"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Primero condición, luego validador, luego cambio de estado y post functions",
+            "en": "First condition, then validator, then status change and post functions"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El tablero decide el orden",
+            "en": "The board decides the order"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Primero una automatización y luego el workflow",
+            "en": "First an automation, then the workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si la condición falla, no hay botón. Si el validador falla, no hay tránsito ni post function. La automatización no es el motor del flujo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si la condición falla, no hay botón. Si el validador falla, no hay tránsito ni post function. La automatización no es el motor del flujo.",
+        "en": "If the condition fails, there is no button. If the validator fails, there is no transition and no post function. Automation is not the workflow engine."
+      }
     },
     {
       "id": "m05-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "DEV, SUP y OPS ya son company-managed y deben compartir NORTECH Incidencias. ¿Qué recomiendas?",
+      "stem": {
+        "es": "DEV, SUP y OPS ya son company-managed y deben compartir NORTECH Incidencias. ¿Qué recomiendas?",
+        "en": "DEV, SUP, and OPS are already company-managed and must share NORTECH Incidencias. What do you recommend?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Editar el flujo tres veces, una en cada proyecto como si fueran team-managed" },
-        { "id": "B", "texto": "Un workflow publicado y el mismo workflow scheme asociado a esos proyectos" },
-        { "id": "C", "texto": "Sustituir los flujos por automatización" },
-        { "id": "D", "texto": "Solo labels de estado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Editar el flujo tres veces, una en cada proyecto como si fueran team-managed",
+            "en": "Edit the workflow three times, once in each project as if they were team-managed"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un workflow publicado y el mismo workflow scheme asociado a esos proyectos",
+            "en": "One published workflow and the same workflow scheme associated to those projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sustituir los flujos por automatización",
+            "en": "Replace the workflows with automation"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo labels de estado",
+            "en": "Status labels only"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En company-managed el Jira admin publica el workflow y lo asocia vía scheme. Team-managed edita el flujo dentro de cada proyecto y no comparte scheme."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En company-managed el Jira admin publica el workflow y lo asocia vía scheme. Team-managed edita el flujo dentro de cada proyecto y no comparte scheme.",
+        "en": "In company-managed the Jira admin publishes the workflow and associates it via scheme. Team-managed edits the workflow inside each project and does not share a scheme."
+      }
     },
     {
       "id": "m05-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO quiere que In Review cuente como trabajo en curso (amarillo). ¿Qué categoría le asignas?",
+      "stem": {
+        "es": "PMO quiere que In Review cuente como trabajo en curso (amarillo). ¿Qué categoría le asignas?",
+        "en": "PMO wants In Review to count as in-progress work (yellow). Which category do you assign?"
+      },
       "opciones": [
-        { "id": "A", "texto": "To Do" },
-        { "id": "B", "texto": "In Progress" },
-        { "id": "C", "texto": "Done" },
-        { "id": "D", "texto": "Unresolved" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "To Do",
+            "en": "To Do"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "In Progress",
+            "en": "In Progress"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Done",
+            "en": "Done"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Unresolved",
+            "en": "Unresolved"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "To Do / In Progress / Done son las tres categorías. Unresolved es Resolution, no categoría de estado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "To Do / In Progress / Done son las tres categorías. Unresolved es Resolution, no categoría de estado.",
+        "en": "To Do / In Progress / Done are the three categories. Unresolved is Resolution, not a status category."
+      }
     },
     {
       "id": "m05-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Approved y Closed siguen saliendo en la cola de trabajo pendiente. ¿Qué categoría les corresponde?",
+      "stem": {
+        "es": "Approved y Closed siguen saliendo en la cola de trabajo pendiente. ¿Qué categoría les corresponde?",
+        "en": "Approved and Closed still appear in the pending-work queue. Which category do they belong in?"
+      },
       "opciones": [
-        { "id": "A", "texto": "To Do" },
-        { "id": "B", "texto": "Done" },
-        { "id": "C", "texto": "In Progress" },
-        { "id": "D", "texto": "Unresolved" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "To Do",
+            "en": "To Do"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Done",
+            "en": "Done"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "In Progress",
+            "en": "In Progress"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Unresolved",
+            "en": "Unresolved"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El nombre Approved no basta. Categoría Done (y Resolution si aplica) es lo que muchos informes tratan como terminado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El nombre Approved no basta. Categoría Done (y Resolution si aplica) es lo que muchos informes tratan como terminado.",
+        "en": "The name Approved is not enough. Done category (and Resolution if applicable) is what many reports treat as finished."
+      }
     },
     {
       "id": "m05-q38",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Las tarjetas In Review no salen en el tablero de DEV. ¿Qué las hace visibles?",
+      "stem": {
+        "es": "Las tarjetas In Review no salen en el tablero de DEV. ¿Qué las hace visibles?",
+        "en": "In Review cards do not appear on the DEV board. What makes them visible?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Renombrar el tablero" },
-        { "id": "B", "texto": "Mapear In Review a una columna (sacarlo de Unmapped)" },
-        { "id": "C", "texto": "Una post function Set Resolution" },
-        { "id": "D", "texto": "Pasar el proyecto a team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Renombrar el tablero",
+            "en": "Rename the board"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Mapear In Review a una columna (sacarlo de Unmapped)",
+            "en": "Map In Review to a column (take it out of Unmapped)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Una post function Set Resolution",
+            "en": "A Set Resolution post function"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pasar el proyecto a team-managed",
+            "en": "Convert the project to team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Primero se mapea In Review a una columna. El tablero es una vista; el workflow no se arregla renombrando el tablero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Primero se mapea In Review a una columna. El tablero es una vista; el workflow no se arregla renombrando el tablero.",
+        "en": "First map In Review to a column. The board is a view; renaming the board does not fix the workflow."
+      }
     },
     {
       "id": "m05-q39",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Nortech va a personalizar el flujo de incidencias. ¿Por qué copiáis el workflow del sistema en lugar de editarlo?",
+      "stem": {
+        "es": "Nortech va a personalizar el flujo de incidencias. ¿Por qué copiáis el workflow del sistema en lugar de editarlo?",
+        "en": "Nortech is going to customize the incident workflow. Why do you copy the system workflow instead of editing it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Para no romper otros proyectos que usen el default" },
-        { "id": "B", "texto": "Para nombrar NORTECH Incidencias y gobernar el diseño" },
-        { "id": "C", "texto": "Porque el default no se puede asociar a ningún scheme" },
-        { "id": "D", "texto": "Para publicar un borrador propio sin tocar la plantilla del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Para no romper otros proyectos que usen el default",
+            "en": "To avoid breaking other projects that use the default"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Para nombrar NORTECH Incidencias y gobernar el diseño",
+            "en": "To name it NORTECH Incidencias and govern the design"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Porque el default no se puede asociar a ningún scheme",
+            "en": "Because the default cannot be associated to any scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Para publicar un borrador propio sin tocar la plantilla del site",
+            "en": "To publish your own draft without touching the site template"
+          }
+        }
       ],
-      "correctas": ["A", "B", "D"],
-      "explicacion": "El default sí se puede asociar; por eso es peligroso editarlo. Se copia, se nombra y se publica la copia."
+      "correctas": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explicacion": {
+        "es": "El default sí se puede asociar; por eso es peligroso editarlo. Se copia, se nombra y se publica la copia.",
+        "en": "The default can be associated; that is why editing it is dangerous. Copy it, name it, and publish the copy."
+      }
     },
     {
       "id": "m05-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Approve y Reject tienen condición de rol Administrators. Un reporter solo en Users, ¿qué ve?",
+      "stem": {
+        "es": "Approve y Reject tienen condición de rol Administrators. Un reporter solo en Users, ¿qué ve?",
+        "en": "Approve and Reject have an Administrators role condition. A reporter who is only in Users — what do they see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ve y ejecuta Approve" },
-        { "id": "B", "texto": "No ve (o no puede usar) Approve ni Reject" },
-        { "id": "C", "texto": "Solo ve Reject" },
-        { "id": "D", "texto": "Cierra por una post function automática" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ve y ejecuta Approve",
+            "en": "They see and execute Approve"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No ve (o no puede usar) Approve ni Reject",
+            "en": "They do not see (or cannot use) Approve or Reject"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo ve Reject",
+            "en": "They only see Reject"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cierra por una post function automática",
+            "en": "They close via an automatic post function"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La misma condición en ambas salidas impide la autoaprobación y el autorechazo. Submit puede seguir visible."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La misma condición en ambas salidas impide la autoaprobación y el autorechazo. Submit puede seguir visible.",
+        "en": "The same condition on both exits blocks self-approval and self-rejection. Submit can remain visible."
+      }
     },
     {
       "id": "m05-q41",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Soporte tiene tickets en un estado llamado Cerrado, pero el informe de no resueltas los sigue listando. ¿Qué lo explica?",
+      "stem": {
+        "es": "Soporte tiene tickets en un estado llamado Cerrado, pero el informe de no resueltas los sigue listando. ¿Qué lo explica?",
+        "en": "Support has tickets in a status named Cerrado, but the unresolved report still lists them. What explains that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El nombre Cerrado basta para contarlas resueltas" },
-        { "id": "B", "texto": "Si Resolution está vacía, muchos informes las siguen contando Unresolved" },
-        { "id": "C", "texto": "La categoría del estado se ignora siempre" },
-        { "id": "D", "texto": "Solo cuenta el tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El nombre Cerrado basta para contarlas resueltas",
+            "en": "The name Cerrado is enough to count them as resolved"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Si Resolution está vacía, muchos informes las siguen contando Unresolved",
+            "en": "If Resolution is empty, many reports still count them Unresolved"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La categoría del estado se ignora siempre",
+            "en": "Status category is always ignored"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo cuenta el tablero",
+            "en": "Only the board counts"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Unresolved = Resolution vacía. Un Cerrado con categoría Done y Resolution vacía sigue saliendo en esa cola."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Unresolved = Resolution vacía. Un Cerrado con categoría Done y Resolution vacía sigue saliendo en esa cola.",
+        "en": "Unresolved = empty Resolution. A Cerrado with Done category and empty Resolution still appears in that queue."
+      }
     },
     {
       "id": "m05-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Ana no ve Rework. Luis sí, pero al pulsar recibe un error de comentario obligatorio. ¿Qué diferencia lo explica?",
+      "stem": {
+        "es": "Ana no ve Rework. Luis sí, pero al pulsar recibe un error de comentario obligatorio. ¿Qué diferencia lo explica?",
+        "en": "Ana cannot see Rework. Luis can, but clicking it returns a required-comment error. What difference explains that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Tratar ambos síntomas como el mismo ajuste" },
-        { "id": "B", "texto": "Buscar una condición donde falta el botón y un validador donde el botón falla" },
-        { "id": "C", "texto": "Quitar el validador para ocultar el botón" },
-        { "id": "D", "texto": "Usar una condición para poner Resolution" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Tratar ambos síntomas como el mismo ajuste",
+            "en": "Treat both symptoms as the same setting"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Buscar una condición donde falta el botón y un validador donde el botón falla",
+            "en": "Look for a condition where the button is missing and a validator where the button fails"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Quitar el validador para ocultar el botón",
+            "en": "Remove the validator to hide the button"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Usar una condición para poner Resolution",
+            "en": "Use a condition to set Resolution"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La condición oculta o impide elegir la transición. El validador la deja ver y falla al ejecutar. La condición no setea Resolution."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La condición oculta o impide elegir la transición. El validador la deja ver y falla al ejecutar. La condición no setea Resolution.",
+        "en": "The condition hides or prevents choosing the transition. The validator leaves it visible and fails on execute. The condition does not set Resolution."
+      }
     },
     {
       "id": "m05-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Además de Set Resolution, al cerrar PMO quiere que salten las notificaciones de cierre. ¿Qué post function añades?",
+      "stem": {
+        "es": "Además de Set Resolution, al cerrar PMO quiere que salten las notificaciones de cierre. ¿Qué post function añades?",
+        "en": "Besides Set Resolution, on close PMO wants close notifications to fire. Which post function do you add?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Crear el proyecto" },
-        { "id": "B", "texto": "Disparar el evento (por ejemplo Issue Closed)" },
-        { "id": "C", "texto": "Cambiar el plan del site" },
-        { "id": "D", "texto": "Crear un campo personalizado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Crear el proyecto",
+            "en": "Create the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Disparar el evento (por ejemplo Issue Closed)",
+            "en": "Fire the event (for example Issue Closed)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar el plan del site",
+            "en": "Change the site plan"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear un campo personalizado",
+            "en": "Create a custom field"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Las post functions de cierre clásicas: Resolution + evento. El plan y los campos no se tocan desde el workflow."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Las post functions de cierre clásicas: Resolution + evento. El plan y los campos no se tocan desde el workflow.",
+        "en": "Classic close post functions: Resolution + event. Plan and fields are not changed from the workflow."
+      }
     },
     {
       "id": "m05-q44",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Done está mapeado a una columna. In Review no. Un Bug en In Review, ¿dónde se ve?",
+      "stem": {
+        "es": "Done está mapeado a una columna. In Review no. Un Bug en In Review, ¿dónde se ve?",
+        "en": "Done is mapped to a column. In Review is not. A Bug in In Review — where is it seen?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En la columna Done" },
-        { "id": "B", "texto": "No se ve en el tablero; sigue en el proyecto" },
-        { "id": "C", "texto": "Se borra al transitar a Review" },
-        { "id": "D", "texto": "Cambia de tipo a Story" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En la columna Done",
+            "en": "In the Done column"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No se ve en el tablero; sigue en el proyecto",
+            "en": "It is not seen on the board; it remains in the project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se borra al transitar a Review",
+            "en": "It is deleted when transitioning to Review"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambia de tipo a Story",
+            "en": "It changes type to Story"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cada estado necesita su columna (o compartir una). Unmapped oculta esas tarjetas; el elemento no desaparece del proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cada estado necesita su columna (o compartir una). Unmapped oculta esas tarjetas; el elemento no desaparece del proyecto.",
+        "en": "Each status needs its column (or to share one). Unmapped hides those cards; the issue does not leave the project."
+      }
     },
     {
       "id": "m05-q45",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "PMO pide que solo Administrators apruebe. En un proyecto company-managed, ¿qué palanca usas?",
+      "stem": {
+        "es": "PMO pide que solo Administrators apruebe. En un proyecto company-managed, ¿qué palanca usas?",
+        "en": "PMO asks that only Administrators approve. In a company-managed project, which lever do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Una regla de automatización que deshaga el tránsito a posteriori" },
-        { "id": "B", "texto": "Una condición de rol en la transición Approve" },
-        { "id": "C", "texto": "Ocultar el tablero de PMO" },
-        { "id": "D", "texto": "Un campo Sí/No" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Una regla de automatización que deshaga el tránsito a posteriori",
+            "en": "An automation rule that undoes the transition afterwards"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Una condición de rol en la transición Approve",
+            "en": "A role condition on the Approve transition"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ocultar el tablero de PMO",
+            "en": "Hide the PMO board"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un campo Sí/No",
+            "en": "A Yes/No field"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El workflow autoriza el tránsito. Una automatización llega tarde y se puede saltar."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El workflow autoriza el tránsito. Una automatización llega tarde y se puede saltar.",
+        "en": "The workflow authorizes the transition. Automation arrives too late and can be skipped."
+      }
     },
     {
       "id": "m05-q46",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Approved tiene categoría To Do. En informes de trabajo pendiente, esos elementos:",
+      "stem": {
+        "es": "Approved tiene categoría To Do. En informes de trabajo pendiente, esos elementos:",
+        "en": "Approved has category To Do. In pending-work reports, those issues:"
+      },
       "opciones": [
-        { "id": "A", "texto": "Desaparecen del proyecto" },
-        { "id": "B", "texto": "Pueden seguir contando como pendientes" },
-        { "id": "C", "texto": "Se resuelven solos" },
-        { "id": "D", "texto": "Exigen Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Desaparecen del proyecto",
+            "en": "Disappear from the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pueden seguir contando como pendientes",
+            "en": "Can still count as pending"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se resuelven solos",
+            "en": "Resolve themselves"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Exigen Premium",
+            "en": "Require Premium"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El nombre Approved no basta. Hay que poner categoría Done (y Resolution si aplica) para que dejen de contar como pendientes."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El nombre Approved no basta. Hay que poner categoría Done (y Resolution si aplica) para que dejen de contar como pendientes.",
+        "en": "The name Approved is not enough. Set category Done (and Resolution if applicable) so they stop counting as pending."
+      }
     },
     {
       "id": "m05-q47",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "DEV acaba de publicar un flujo nuevo y reporta tres fallos. ¿Cuáles diagnósticos son correctos?",
+      "stem": {
+        "es": "DEV acaba de publicar un flujo nuevo y reporta tres fallos. ¿Cuáles diagnósticos son correctos?",
+        "en": "DEV just published a new workflow and reports three failures. Which diagnoses are correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Nadie puede Done → condición demasiado estricta" },
-        { "id": "B", "texto": "Resolution vacía en Done → falta Set Resolution" },
-        { "id": "C", "texto": "No ves In Review en el tablero → estado sin columna" },
-        { "id": "D", "texto": "Un borrador sin publicar ya aplica a todos los proyectos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Nadie puede Done → condición demasiado estricta",
+            "en": "Nobody can Done → condition too strict"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Resolution vacía en Done → falta Set Resolution",
+            "en": "Empty Resolution on Done → Set Resolution is missing"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No ves In Review en el tablero → estado sin columna",
+            "en": "You cannot see In Review on the board → status has no column"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un borrador sin publicar ya aplica a todos los proyectos",
+            "en": "An unpublished draft already applies to all projects"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Condición, Resolution y mapeo a columna explican esos síntomas. El draft no aplica hasta Publish."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Condición, Resolution y mapeo a columna explican esos síntomas. El draft no aplica hasta Publish.",
+        "en": "Condition, Resolution, and column mapping explain those symptoms. The draft does not apply until Publish."
+      }
     },
     {
       "id": "m05-q48",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Publicas NORTECH Incidencias pero no lo asignas en ningún scheme. Los Bugs de DEV:",
+      "stem": {
+        "es": "Publicas NORTECH Incidencias pero no lo asignas en ningún scheme. Los Bugs de DEV:",
+        "en": "You publish NORTECH Incidencias but do not assign it in any scheme. Bugs in DEV:"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cambian al nuevo flujo igual" },
-        { "id": "B", "texto": "Siguen el workflow que el scheme tenga mapeado" },
-        { "id": "C", "texto": "Se quedan sin estado" },
-        { "id": "D", "texto": "Pasan a team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cambian al nuevo flujo igual",
+            "en": "Switch to the new workflow anyway"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Siguen el workflow que el scheme tenga mapeado",
+            "en": "Follow the workflow the scheme has mapped"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se quedan sin estado",
+            "en": "End up with no status"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pasan a team-managed",
+            "en": "Become team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Publicar el objeto no lo engancha. El scheme decide qué flujo usa cada tipo en cada proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Publicar el objeto no lo engancha. El scheme decide qué flujo usa cada tipo en cada proyecto.",
+        "en": "Publishing the object does not hook it up. The scheme decides which workflow each type uses in each project."
+      }
     },
     {
       "id": "m05-q49",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En el scheme, All Unassigned Issue Types apunta a un flujo simple. Solicitud no está listada. ¿Qué flujo usará?",
+      "stem": {
+        "es": "En el scheme, All Unassigned Issue Types apunta a un flujo simple. Solicitud no está listada. ¿Qué flujo usará?",
+        "en": "In the scheme, All Unassigned Issue Types points to a simple workflow. Solicitud is not listed. Which workflow will it use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "NORTECH Aprobación por el nombre del tipo" },
-        { "id": "B", "texto": "El flujo por defecto de unassigned" },
-        { "id": "C", "texto": "Ningún workflow" },
-        { "id": "D", "texto": "El mapeo de columnas del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "NORTECH Aprobación por el nombre del tipo",
+            "en": "NORTECH Aprobación because of the type name"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El flujo por defecto de unassigned",
+            "en": "The default unassigned workflow"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ningún workflow",
+            "en": "No workflow"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El mapeo de columnas del tablero",
+            "en": "The board column mapping"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sin fila propia, el tipo hereda Unassigned. Por eso PMO debe Assign Solicitud → NORTECH Aprobación."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sin fila propia, el tipo hereda Unassigned. Por eso PMO debe Assign Solicitud → NORTECH Aprobación.",
+        "en": "Without its own row, the type inherits Unassigned. That is why PMO must Assign Solicitud → NORTECH Aprobación."
+      }
     },
     {
       "id": "m05-q50",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Has publicado NORTECH Incidencias y lo has asociado a DEV. ¿Cómo compruebas que el proceso funciona?",
+      "stem": {
+        "es": "Has publicado NORTECH Incidencias y lo has asociado a DEV. ¿Cómo compruebas que el proceso funciona?",
+        "en": "You published NORTECH Incidencias and associated it to DEV. How do you verify the process works?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo mirar el diagrama" },
-        { "id": "B", "texto": "Crear un Bug y transitar Start → Review → Done comprobando rol y Resolution" },
-        { "id": "C", "texto": "Crear un dashboard" },
-        { "id": "D", "texto": "Bajar el site a Free" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo mirar el diagrama",
+            "en": "Only look at the diagram"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Crear un Bug y transitar Start → Review → Done comprobando rol y Resolution",
+            "en": "Create a Bug and transition Start → Review → Done, checking role and Resolution"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crear un dashboard",
+            "en": "Create a dashboard"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Bajar el site a Free",
+            "en": "Downgrade the site to Free"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Se valida el proceso de verdad, no el dibujo. El Bug llega a Done y Resolution no queda vacía."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Se valida el proceso de verdad, no el dibujo. El Bug llega a Done y Resolution no queda vacía.",
+        "en": "You validate the real process, not the drawing. The Bug reaches Done and Resolution is not empty."
+      }
     }
   ]
 }

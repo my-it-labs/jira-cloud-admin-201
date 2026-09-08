@@ -49,6 +49,44 @@ code {
   margin: 0;
 }
 
+.inicio-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.lang-switch button {
+  border: 0;
+  border-radius: 0;
+  padding: 0.35rem 0.65rem;
+  background: var(--card);
+}
+
+.lang-switch button.on {
+  background: var(--brand);
+  color: #fff;
+}
+
+.barra .lang-switch {
+  border-color: #8993a4;
+}
+
+.barra .lang-switch button {
+  background: transparent;
+  color: #fff;
+}
+
+.barra .lang-switch button.on {
+  background: #0052cc;
+}
+
 h1 {
   font-size: 1.85rem;
   line-height: 1.25;

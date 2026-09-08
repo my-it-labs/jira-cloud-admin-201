@@ -10,6 +10,8 @@ Cada JSON de módulo (`public/data/bancos/`) tiene **50 ítems**. Modos:
 
 No es el examen oficial ni un dump. Las preguntas son originales del curso. Cada JSON cubre **solo el laboratorio de ese módulo**; el cronometrado mezcla M01–M10.
 
+La app está en **español e inglés** (interruptor ES/EN). El ACP-620 oficial es en inglés: practica en EN. Cada ítem guarda `stem` / `texto` / `explicacion` como `{ "es": "…", "en": "…" }`.
+
 El progreso de cada alumno se guarda en **localStorage de su navegador** (pregunta actual, respuestas, marcas, temporizador y último resultado). No hay servidor ni cuenta: otro dispositivo o un borrado de datos del sitio lo pierde. En la app hay **Borrar progreso** para dejarlo a cero.
 
 ## Local
@@ -38,15 +40,15 @@ npm run preview
   "id": "m07-q12",
   "dominio": "board-configuration",
   "tipo": "single",
-  "stem": "Enunciado…",
+  "stem": { "es": "Enunciado…", "en": "Stem…" },
   "opciones": [
-    { "id": "A", "texto": "…" },
-    { "id": "B", "texto": "…" },
-    { "id": "C", "texto": "…" },
-    { "id": "D", "texto": "…" }
+    { "id": "A", "texto": { "es": "…", "en": "…" } },
+    { "id": "B", "texto": { "es": "…", "en": "…" } },
+    { "id": "C", "texto": { "es": "…", "en": "…" } },
+    { "id": "D", "texto": { "es": "…", "en": "…" } }
   ],
   "correctas": ["B"],
-  "explicacion": "Por qué."
+  "explicacion": { "es": "Por qué.", "en": "Why." }
 }
 ```
 

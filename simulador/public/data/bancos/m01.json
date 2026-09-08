@@ -6,701 +6,2305 @@
       "id": "m01-q1",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira en Nortech. Un equipo de producto quiere cambiar el flujo de trabajo ellos mismos, sin esperar a un administrador de Jira. Buscan autonomía dentro de su propio contenedor. ¿Qué tipo de proyecto encaja?",
+      "stem": {
+        "es": "Eres administrador de Jira en Nortech. Un equipo de producto quiere cambiar el flujo de trabajo ellos mismos, sin esperar a un administrador de Jira. Buscan autonomía dentro de su propio contenedor. ¿Qué tipo de proyecto encaja?",
+        "en": "You are a Jira administrator at Nortech. A product team wants to change the workflow themselves, without waiting for a Jira administrator. They want autonomy inside their own container. Which project type fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Company-managed" },
-        { "id": "B", "texto": "Team-managed" },
-        { "id": "C", "texto": "Cualquiera: el flujo es siempre global" },
-        { "id": "D", "texto": "Un proyecto de Jira Service Management" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Company-managed",
+            "en": "Company-managed"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Team-managed",
+            "en": "Team-managed"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cualquiera: el flujo es siempre global",
+            "en": "Either: the workflow is always global"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un proyecto de Jira Service Management",
+            "en": "A Jira Service Management project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En team-managed el alcance es el propio proyecto y el administrador de ese proyecto configura el proceso. En company-managed el workflow vive en un scheme compartido y lo toca un administrador de Jira."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En team-managed el alcance es el propio proyecto y el administrador de ese proyecto configura el proceso. En company-managed el workflow vive en un scheme compartido y lo toca un administrador de Jira.",
+        "en": "In team-managed the scope is that project and the project administrator configures the process. In company-managed the workflow lives in a shared scheme and a Jira administrator changes it."
+      }
     },
     {
       "id": "m01-q2",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El site está en plan Free y necesitas invitar a 12 personas para que usen Jira. Quieres saber si todas podrán entrar. ¿Qué ocurre?",
+      "stem": {
+        "es": "Eres administrador de la organización. El site está en plan Free y necesitas invitar a 12 personas para que usen Jira. Quieres saber si todas podrán entrar. ¿Qué ocurre?",
+        "en": "You are an organization admin. The site is on the Free plan and you need to invite 12 people to use Jira. You want to know whether all of them will get in. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Puedes invitarlas; Free no limita usuarios" },
-        { "id": "B", "texto": "Free admite 10 usuarios; no entran todas o subes de plan" },
-        { "id": "C", "texto": "Entran como clientes de JSM y no cuentan" },
-        { "id": "D", "texto": "Solo entran si las añades a un grupo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Puedes invitarlas; Free no limita usuarios",
+            "en": "You can invite them; Free does not limit users"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Free admite 10 usuarios; no entran todas o subes de plan",
+            "en": "Free allows 10 users; they will not all get in, or you upgrade the plan"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Entran como clientes de JSM y no cuentan",
+            "en": "They join as JSM customers and do not count"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo entran si las añades a un grupo",
+            "en": "They only get in if you add them to a group"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Free tiene un máximo de 10 usuarios. Para practicar invitaciones sin chocar con ese tope se usa un trial Standard o Premium."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Free tiene un máximo de 10 usuarios. Para practicar invitaciones sin chocar con ese tope se usa un trial Standard o Premium.",
+        "en": "Free has a maximum of 10 users. To practice invitations without hitting that cap, use a Standard or Premium trial."
+      }
     },
     {
       "id": "m01-q3",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto company-managed. En la configuración del proyecto buscas Campos personalizados para crear uno nuevo. Esa opción no aparece. ¿Es lo esperado?",
+      "stem": {
+        "es": "Eres administrador de un proyecto company-managed. En la configuración del proyecto buscas Campos personalizados para crear uno nuevo. Esa opción no aparece. ¿Es lo esperado?",
+        "en": "You are a company-managed project administrator. In project settings you look for Custom fields to create a new one. That option does not appear. Is that expected?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No: siempre están en la configuración del proyecto" },
-        { "id": "B", "texto": "Sí: los campos globales se administran en Configuración de Jira → Elementos de trabajo" },
-        { "id": "C", "texto": "Los campos personalizados solo existen en team-managed" },
-        { "id": "D", "texto": "Hay que instalar una app del Marketplace" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No: siempre están en la configuración del proyecto",
+            "en": "No: they are always in project settings"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sí: los campos globales se administran en Configuración de Jira → Elementos de trabajo",
+            "en": "Yes: site-wide fields are administered in Jira settings → Issues"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Los campos personalizados solo existen en team-managed",
+            "en": "Custom fields only exist in team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Hay que instalar una app del Marketplace",
+            "en": "You must install a Marketplace app"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En company-managed los campos son de site. El administrador del proyecto no crea campos globales. En team-managed sí hay campos a nivel de proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En company-managed los campos son de site. El administrador del proyecto no crea campos globales. En team-managed sí hay campos a nivel de proyecto.",
+        "en": "In company-managed, fields are site-wide. The project administrator does not create global fields. Team-managed does have project-level fields."
+      }
     },
     {
       "id": "m01-q4",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Varios compañeros aparecen en el Directorio pero no pueden abrir el producto Jira. Necesitas decidir quién tiene acceso al producto. ¿Dónde se configura?",
+      "stem": {
+        "es": "Eres administrador de Jira. Varios compañeros aparecen en el Directorio pero no pueden abrir el producto Jira. Necesitas decidir quién tiene acceso al producto. ¿Dónde se configura?",
+        "en": "You are a Jira administrator. Several colleagues appear in Directory but cannot open the Jira product. You need to decide who has product access. Where is that configured?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En el esquema de permisos del proyecto" },
-        { "id": "B", "texto": "En el filtro del tablero" },
-        { "id": "C", "texto": "En Atlassian Administration → acceso a productos / Directorio" },
-        { "id": "D", "texto": "En el esquema de notificaciones" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En el esquema de permisos del proyecto",
+            "en": "In the project's permission scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En el filtro del tablero",
+            "en": "In the board filter"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Atlassian Administration → acceso a productos / Directorio",
+            "en": "In Atlassian Administration → product access / Directory"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el esquema de notificaciones",
+            "en": "In the notification scheme"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Sin product access el usuario ni llega a Jira. El esquema de permisos actúa después, dentro de los proyectos."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Sin product access el usuario ni llega a Jira. El esquema de permisos actúa después, dentro de los proyectos.",
+        "en": "Without product access the user never reaches Jira. The permission scheme applies later, inside projects."
+      }
     },
     {
       "id": "m01-q5",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Nortech tiene dos sites: acme.atlassian.net y acme-sandbox.atlassian.net. Creas un grupo en el Directorio para usarlo en el acceso a productos. ¿Qué alcance tiene ese grupo?",
+      "stem": {
+        "es": "Eres administrador de la organización. Nortech tiene dos sites: acme.atlassian.net y acme-sandbox.atlassian.net. Creas un grupo en el Directorio para usarlo en el acceso a productos. ¿Qué alcance tiene ese grupo?",
+        "en": "You are an organization admin. Nortech has two sites: acme.atlassian.net and acme-sandbox.atlassian.net. You create a group in Directory to use it for product access. What is the scope of that group?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Existe solo en el site donde lo creaste" },
-        { "id": "B", "texto": "Es de la organización y puede usarse en los sites" },
-        { "id": "C", "texto": "Se replica automáticamente a Confluence on-prem" },
-        { "id": "D", "texto": "Solo sirve para tableros" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Existe solo en el site donde lo creaste",
+            "en": "It exists only on the site where you created it"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Es de la organización y puede usarse en los sites",
+            "en": "It belongs to the organization and can be used across sites"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se replica automáticamente a Confluence on-prem",
+            "en": "It is automatically replicated to Confluence on-prem"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo sirve para tableros",
+            "en": "It only works for boards"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los grupos viven en la organización. Luego se asignan a productos o sites. No confundirlos con los roles de un proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los grupos viven en la organización. Luego se asignan a productos o sites. No confundirlos con los roles de un proyecto.",
+        "en": "Groups live in the organization. They are then assigned to products or sites. Do not confuse them with project roles."
+      }
     },
     {
       "id": "m01-q6",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres responsable de formación en Nortech. La dirección quiere certificar a quien crea proyectos, configura tableros y gestiona el trabajo diario en Jira Cloud. No buscan a quien configura SSO ni desarrolla apps. ¿Qué perfil encaja?",
+      "stem": {
+        "es": "Eres responsable de formación en Nortech. La dirección quiere certificar a quien crea proyectos, configura tableros y gestiona el trabajo diario en Jira Cloud. No buscan a quien configura SSO ni desarrolla apps. ¿Qué perfil encaja?",
+        "en": "You own training at Nortech. Leadership wants to certify the person who creates projects, configures boards, and manages day-to-day work in Jira Cloud. They are not looking for someone who configures SSO or develops apps. Which profile fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Administrador de la organización que configura SSO" },
-        { "id": "B", "texto": "Quien gestiona proyectos en Cloud" },
-        { "id": "C", "texto": "Desarrollador Forge" },
-        { "id": "D", "texto": "Agente de Jira Service Management exclusivamente" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Administrador de la organización que configura SSO",
+            "en": "An organization admin who configures SSO"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Quien gestiona proyectos en Cloud",
+            "en": "Someone who manages projects in Cloud"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Desarrollador Forge",
+            "en": "A Forge developer"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Agente de Jira Service Management exclusivamente",
+            "en": "A Jira Service Management agent only"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El perfil de gestión de proyectos cubre creación de proyectos, tableros, automation y reporting. SSO y políticas de organización son de administrador de Cloud; Forge es otro oficio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El perfil de gestión de proyectos cubre creación de proyectos, tableros, automation y reporting. SSO y políticas de organización son de administrador de Cloud; Forge es otro oficio.",
+        "en": "The project-management profile covers project creation, boards, automation, and reporting. SSO and organization policies belong to Cloud admin; Forge is a different job."
+      }
     },
     {
       "id": "m01-q7",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. PMO necesita un contenedor para el portafolio y el seguimiento de iniciativas, no una cola de soporte. Revisas el catálogo de Cloud. ¿Qué familia de proyecto encaja?",
+      "stem": {
+        "es": "Eres administrador de Jira. PMO necesita un contenedor para el portafolio y el seguimiento de iniciativas, no una cola de soporte. Revisas el catálogo de Cloud. ¿Qué familia de proyecto encaja?",
+        "en": "You are a Jira administrator. PMO needs a container for the portfolio and initiative tracking, not a support queue. You review the Cloud catalog. Which project family fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo Scrum de Software" },
-        { "id": "B", "texto": "Jira Service Management" },
-        { "id": "C", "texto": "Work Management / Business" },
-        { "id": "D", "texto": "Solo la organización, sin producto Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo Scrum de Software",
+            "en": "Software Scrum only"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Jira Service Management",
+            "en": "Jira Service Management"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Work Management / Business",
+            "en": "Work Management / Business"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo la organización, sin producto Jira",
+            "en": "The organization only, with no Jira product"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Software cubre desarrollo; Jira Service Management cubre cola y SLAs; Business / Work Management cubre operaciones, PMO y RRHH."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Software cubre desarrollo; Jira Service Management cubre cola y SLAs; Business / Work Management cubre operaciones, PMO y RRHH.",
+        "en": "Software covers development; Jira Service Management covers queues and SLAs; Business / Work Management covers operations, PMO, and HR."
+      }
     },
     {
       "id": "m01-q8",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Desarrollo quiere un proyecto para sprints, código y releases. No necesitan portal ni SLAs. ¿Qué producto o plantilla encaja?",
+      "stem": {
+        "es": "Eres administrador de Jira. Desarrollo quiere un proyecto para sprints, código y releases. No necesitan portal ni SLAs. ¿Qué producto o plantilla encaja?",
+        "en": "You are a Jira administrator. Development wants a project for sprints, code, and releases. They do not need a portal or SLAs. Which product or template fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Work Management / Business" },
-        { "id": "B", "texto": "Jira Service Management" },
-        { "id": "C", "texto": "Jira Software" },
-        { "id": "D", "texto": "Solo Confluence, sin Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Work Management / Business",
+            "en": "Work Management / Business"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Jira Service Management",
+            "en": "Jira Service Management"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira Software",
+            "en": "Jira Software"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo Confluence, sin Jira",
+            "en": "Confluence only, without Jira"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Desarrollo y releases corresponden a Jira Software. JSM es cola y SLAs; Business cubre trabajo de negocio, no releases de producto."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Desarrollo y releases corresponden a Jira Software. JSM es cola y SLAs; Business cubre trabajo de negocio, no releases de producto.",
+        "en": "Development and releases belong to Jira Software. JSM is queues and SLAs; Business covers business work, not product releases."
+      }
     },
     {
       "id": "m01-q9",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Soporte pide cola, portal de clientes y SLAs. El site ya tiene licencia de ese producto. ¿Qué producto hace falta?",
+      "stem": {
+        "es": "Eres administrador de Jira. Soporte pide cola, portal de clientes y SLAs. El site ya tiene licencia de ese producto. ¿Qué producto hace falta?",
+        "en": "You are a Jira administrator. Support asks for a queue, a customer portal, and SLAs. The site already has a license for that product. Which product is needed?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un proyecto Software igual que el de Desarrollo" },
-        { "id": "B", "texto": "Jira Service Management" },
-        { "id": "C", "texto": "Advanced Roadmaps en plan Free" },
-        { "id": "D", "texto": "Solo el Directorio de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un proyecto Software igual que el de Desarrollo",
+            "en": "A Software project like Development's"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Jira Service Management",
+            "en": "Jira Service Management"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Advanced Roadmaps en plan Free",
+            "en": "Advanced Roadmaps on the Free plan"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el Directorio de la organización",
+            "en": "Directory in the organization only"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cola de soporte y SLAs son de Jira Service Management, si el site lo tiene licenciado. Es decisión de catálogo de producto, no del asistente de creación."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cola de soporte y SLAs son de Jira Service Management, si el site lo tiene licenciado. Es decisión de catálogo de producto, no del asistente de creación.",
+        "en": "Support queues and SLAs belong to Jira Service Management, if the site is licensed for it. That is a product-catalog decision, not a create-project wizard decision."
+      }
     },
     {
       "id": "m01-q10",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Durante el alta eliges el nombre de site nortech-lab-20260907. Necesitas saber qué identifica ese nombre. ¿Qué obtienes?",
+      "stem": {
+        "es": "Eres administrador de la organización. Durante el alta eliges el nombre de site nortech-lab-20260907. Necesitas saber qué identifica ese nombre. ¿Qué obtienes?",
+        "en": "You are an organization admin. During signup you choose the site name nortech-lab-20260907. You need to know what that name identifies. What do you get?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El nombre de un proyecto de Jira" },
-        { "id": "B", "texto": "La URL https://nortech-lab-20260907.atlassian.net" },
-        { "id": "C", "texto": "El nombre de un grupo del Directorio" },
-        { "id": "D", "texto": "Solo el nombre visible de la organización, sin URL" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El nombre de un proyecto de Jira",
+            "en": "The name of a Jira project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La URL https://nortech-lab-20260907.atlassian.net",
+            "en": "The URL https://nortech-lab-20260907.atlassian.net"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre de un grupo del Directorio",
+            "en": "The name of a Directory group"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el nombre visible de la organización, sin URL",
+            "en": "Only the visible organization name, with no URL"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El slug del alta es el site: https://nombre.atlassian.net. No es un espacio ni un grupo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El slug del alta es el site: https://nombre.atlassian.net. No es un espacio ni un grupo.",
+        "en": "The signup slug is the site: https://name.atlassian.net. It is not a project or a group."
+      }
     },
     {
       "id": "m01-q11",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El asistente de alta propone reactivar un site antiguo y avisa de un posible cobro inmediato. Necesitas un entorno de prueba nuevo, sin facturación inesperada. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. El asistente de alta propone reactivar un site antiguo y avisa de un posible cobro inmediato. Necesitas un entorno de prueba nuevo, sin facturación inesperada. ¿Qué haces?",
+        "en": "You are an organization admin. The signup wizard offers to reactivate an old site and warns of a possible immediate charge. You need a new test environment, with no surprise billing. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Reactivas el site antiguo para reutilizar el nombre" },
-        { "id": "B", "texto": "Fusionas el site viejo con el trial" },
-        { "id": "C", "texto": "Eliges empezar un sitio nuevo con un nombre libre" },
-        { "id": "D", "texto": "Pasas a Jira Data Center" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Reactivas el site antiguo para reutilizar el nombre",
+            "en": "You reactivate the old site to reuse the name"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Fusionas el site viejo con el trial",
+            "en": "You merge the old site with the trial"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Eliges empezar un sitio nuevo con un nombre libre",
+            "en": "You choose to start a new site with an available name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pasas a Jira Data Center",
+            "en": "You switch to Jira Data Center"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Reactivar un site viejo puede facturar. Un site nuevo con un slug libre evita esa sorpresa."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Reactivar un site viejo puede facturar. Un site nuevo con un slug libre evita esa sorpresa.",
+        "en": "Reactivating an old site can bill you. A new site with a free slug avoids that surprise."
+      }
     },
     {
       "id": "m01-q12",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Nortech va a crear un proyecto de Desarrollo. Necesitas situarlo en la jerarquía de Cloud. ¿En qué orden viven organización, site, producto y proyecto?",
+      "stem": {
+        "es": "Eres administrador de Jira. Nortech va a crear un proyecto de Desarrollo. Necesitas situarlo en la jerarquía de Cloud. ¿En qué orden viven organización, site, producto y proyecto?",
+        "en": "You are a Jira administrator. Nortech is about to create a Development project. You need to place it in the Cloud hierarchy. In what order do organization, site, product, and project live? In the Spanish UI the project appears as «Espacio»."
+      },
       "opciones": [
-        { "id": "A", "texto": "Espacio → Producto → Site → Organización" },
-        { "id": "B", "texto": "Organización → Site → Producto (Jira) → Espacio" },
-        { "id": "C", "texto": "Para ti → Organización → Elemento de trabajo" },
-        { "id": "D", "texto": "Grupo → Organización → Site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Espacio → Producto → Site → Organización",
+            "en": "Espacio → Product → Site → Organization"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Organización → Site → Producto (Jira) → Espacio",
+            "en": "Organization → Site → Product (Jira) → Espacio"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Para ti → Organización → Elemento de trabajo",
+            "en": "For you → Organization → Issue"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Grupo → Organización → Site",
+            "en": "Group → Organization → Site"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cuatro capas: organización, site, producto y espacio. En la UI en castellano de 2026, espacio es el project del examen. El producto Jira cuelga del site."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cuatro capas: organización, site, producto y espacio. En la UI en castellano de 2026, espacio es el project del examen. El producto Jira cuelga del site.",
+        "en": "Four layers: organization, site, product, and Espacio. In the 2026 Spanish UI, Espacio is the exam's project. The Jira product hangs off the site."
+      }
     },
     {
       "id": "m01-q13",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Un compañero usa «site» y «espacio» como si fueran lo mismo. Necesitas aclararlo antes de crear proyectos. ¿Cuál es la distinción?",
+      "stem": {
+        "es": "Eres administrador de Jira. Un compañero usa «site» y «espacio» como si fueran lo mismo. Necesitas aclararlo antes de crear proyectos. ¿Cuál es la distinción?",
+        "en": "You are a Jira administrator. A colleague uses «site» and «Espacio» as if they were the same thing. You need to clarify it before creating projects. What is the distinction?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ninguna: son sinónimos en la interfaz" },
-        { "id": "B", "texto": "El espacio es la URL *.atlassian.net; el site es un elemento de trabajo" },
-        { "id": "C", "texto": "El site es la URL del tenant; el espacio es el contenedor de trabajo en Jira" },
-        { "id": "D", "texto": "El site vive dentro de un espacio company-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ninguna: son sinónimos en la interfaz",
+            "en": "None: they are synonyms in the interface"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El espacio es la URL *.atlassian.net; el site es un elemento de trabajo",
+            "en": "Espacio is the *.atlassian.net URL; the site is an issue"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El site es la URL del tenant; el espacio es el contenedor de trabajo en Jira",
+            "en": "The site is the tenant URL; Espacio is the work container in Jira"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El site vive dentro de un espacio company-managed",
+            "en": "The site lives inside a company-managed Espacio"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Site no es espacio. Primero existe el site con el producto Jira; los espacios cuelgan de ese producto. En castellano, espacio = project."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Site no es espacio. Primero existe el site con el producto Jira; los espacios cuelgan de ese producto. En castellano, espacio = project.",
+        "en": "Site is not Espacio. First the site exists with the Jira product; Espacio items hang off that product. In Spanish, Espacio = project."
+      }
     },
     {
       "id": "m01-q14",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. El trial incluye un proyecto Sample Scrum. PMO espera contenedores distintos para Desarrollo, Soporte, Operaciones y PMO. ¿Qué haces con Sample Scrum?",
+      "stem": {
+        "es": "Eres administrador de Jira. El trial incluye un proyecto Sample Scrum. PMO espera contenedores distintos para Desarrollo, Soporte, Operaciones y PMO. ¿Qué haces con Sample Scrum?",
+        "en": "You are a Jira administrator. The trial includes a Sample Scrum project. PMO expects separate containers for Development, Support, Operations, and PMO. What do you do with Sample Scrum?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Lo renombras y lo usas como Desarrollo" },
-        { "id": "B", "texto": "Lo dejas aparte; los proyectos corporativos se crean por separado" },
-        { "id": "C", "texto": "Lo usas como pestañas internas por departamento" },
-        { "id": "D", "texto": "Borras el site y repites el alta" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Lo renombras y lo usas como Desarrollo",
+            "en": "You rename it and use it as Development"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Lo dejas aparte; los proyectos corporativos se crean por separado",
+            "en": "You leave it aside; corporate projects are created separately"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Lo usas como pestañas internas por departamento",
+            "en": "You use it as internal tabs per department"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borras el site y repites el alta",
+            "en": "You delete the site and repeat signup"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Puedes dejar el proyecto de muestra. No lo recicles como DEV, SUP, OPS o PMO: esos se crean después, cada uno con su clave y plantilla."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Puedes dejar el proyecto de muestra. No lo recicles como DEV, SUP, OPS o PMO: esos se crean después, cada uno con su clave y plantilla.",
+        "en": "You can leave the sample project. Do not recycle it as DEV, SUP, OPS, or PMO: those are created later, each with its own key and template."
+      }
     },
     {
       "id": "m01-q15",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Tras verificar el correo, el asistente pide una plantilla Scrum e invitaciones. Aún no tienes la lista de usuarios. ¿Qué puedes hacer?",
+      "stem": {
+        "es": "Eres administrador de la organización. Tras verificar el correo, el asistente pide una plantilla Scrum e invitaciones. Aún no tienes la lista de usuarios. ¿Qué puedes hacer?",
+        "en": "You are an organization admin. After email verification, the wizard asks for a Scrum template and invitations. You do not have the user list yet. What can you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Debes invitar a toda la empresa o el site no sirve" },
-        { "id": "B", "texto": "Puedes aceptar Scrum si te lo piden y dejar las invitaciones para más tarde" },
-        { "id": "C", "texto": "Debes activar SSO antes de entrar a Jira" },
-        { "id": "D", "texto": "Debes pagar Premium o Atlassian borra el site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Debes invitar a toda la empresa o el site no sirve",
+            "en": "You must invite the whole company or the site is unusable"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Puedes aceptar Scrum si te lo piden y dejar las invitaciones para más tarde",
+            "en": "You can accept Scrum if asked and leave invitations for later"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Debes activar SSO antes de entrar a Jira",
+            "en": "You must enable SSO before entering Jira"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Debes pagar Premium o Atlassian borra el site",
+            "en": "You must pay for Premium or Atlassian deletes the site"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La plantilla Scrum del alta es opcional y las invitaciones se pueden posponer. El proyecto de muestra no bloquea el resto del trabajo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La plantilla Scrum del alta es opcional y las invitaciones se pueden posponer. El proyecto de muestra no bloquea el resto del trabajo.",
+        "en": "The signup Scrum template is optional and invitations can be postponed. The sample project does not block the rest of the work."
+      }
     },
     {
       "id": "m01-q16",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Nortech quiere practicar automation avanzada, sandbox y Advanced Roadmaps. Buscas un plan de prueba sin tarjeta. ¿Qué eliges?",
+      "stem": {
+        "es": "Eres administrador de la organización. Nortech quiere practicar automation avanzada, sandbox y Advanced Roadmaps. Buscas un plan de prueba sin tarjeta. ¿Qué eliges?",
+        "en": "You are an organization admin. Nortech wants to practice advanced automation, sandbox, and Advanced Roadmaps. You want a trial plan with no credit card. What do you choose?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Free: incluye sandbox y roadmaps" },
-        { "id": "B", "texto": "Standard: siempre incluye sandbox" },
-        { "id": "C", "texto": "Premium trial de 30 días; Standard 14 días si Premium no está disponible" },
-        { "id": "D", "texto": "Solo JSM Free, que sustituye a Jira Software" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Free: incluye sandbox y roadmaps",
+            "en": "Free: includes sandbox and roadmaps"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Standard: siempre incluye sandbox",
+            "en": "Standard: always includes sandbox"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Premium trial de 30 días; Standard 14 días si Premium no está disponible",
+            "en": "A 30-day Premium trial; 14-day Standard if Premium is not available"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo JSM Free, que sustituye a Jira Software",
+            "en": "JSM Free only, which replaces Jira Software"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Premium incluye más automation, auditoría avanzada, sandbox y Advanced Roadmaps. El trial Premium dura 30 días sin tarjeta; Standard 14 días es el fallback."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Premium incluye más automation, auditoría avanzada, sandbox y Advanced Roadmaps. El trial Premium dura 30 días sin tarjeta; Standard 14 días es el fallback.",
+        "en": "Premium includes more automation, advanced audit, sandbox, and Advanced Roadmaps. The Premium trial lasts 30 days with no card; 14-day Standard is the fallback."
+      }
     },
     {
       "id": "m01-q17",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto team-managed. El equipo quiere ajustar el flujo de trabajo de ese proyecto. Nadie más debe verse afectado. ¿Quién edita el flujo?",
+      "stem": {
+        "es": "Eres administrador de un proyecto team-managed. El equipo quiere ajustar el flujo de trabajo de ese proyecto. Nadie más debe verse afectado. ¿Quién edita el flujo?",
+        "en": "You are a team-managed project administrator. The team wants to adjust that project's workflow. Nobody else should be affected. Who edits the workflow?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo un administrador de la organización, en Facturación" },
-        { "id": "B", "texto": "El administrador del proyecto, dentro de ese espacio" },
-        { "id": "C", "texto": "Nadie: el flujo no existe en team-managed" },
-        { "id": "D", "texto": "Solo desde Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo un administrador de la organización, en Facturación",
+            "en": "Only an organization admin, in Billing"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El administrador del proyecto, dentro de ese espacio",
+            "en": "The project administrator, inside that project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Nadie: el flujo no existe en team-managed",
+            "en": "Nobody: workflows do not exist in team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo desde Confluence",
+            "en": "Only from Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En team-managed el administrador del proyecto hace casi todo dentro de su espacio y no comparte schemes. En company-managed el workflow lo toca un administrador de Jira."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En team-managed el administrador del proyecto hace casi todo dentro de su espacio y no comparte schemes. En company-managed el workflow lo toca un administrador de Jira.",
+        "en": "In team-managed the project administrator does almost everything inside their project and does not share schemes. In company-managed, a Jira administrator changes the workflow."
+      }
     },
     {
       "id": "m01-q18",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Dos equipos futuros deben compartir el mismo proceso: mismos schemes de flujo, campos y tipos. ¿Qué tipo de proyecto encaja?",
+      "stem": {
+        "es": "Eres administrador de Jira. Dos equipos futuros deben compartir el mismo proceso: mismos schemes de flujo, campos y tipos. ¿Qué tipo de proyecto encaja?",
+        "en": "You are a Jira administrator. Two future teams must share the same process: the same workflow, field, and type schemes. Which project type fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Dos team-managed, cada uno con proceso local" },
-        { "id": "B", "texto": "Company-managed, con schemes compartidos en el site" },
-        { "id": "C", "texto": "Un único Sample Scrum para ambos equipos" },
-        { "id": "D", "texto": "Solo Business, que no tiene proceso" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Dos team-managed, cada uno con proceso local",
+            "en": "Two team-managed projects, each with a local process"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Company-managed, con schemes compartidos en el site",
+            "en": "Company-managed, with schemes shared on the site"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un único Sample Scrum para ambos equipos",
+            "en": "A single Sample Scrum for both teams"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo Business, que no tiene proceso",
+            "en": "Business only, which has no process"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En company-managed los schemes son globales o compartidos. Team-managed no comparte schemes entre espacios."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En company-managed los schemes son globales o compartidos. Team-managed no comparte schemes entre espacios.",
+        "en": "In company-managed, schemes are global or shared. Team-managed does not share schemes across projects."
+      }
     },
     {
       "id": "m01-q19",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto company-managed. El flujo de trabajo está compartido con otros proyectos. Un compañero pide que lo cambies desde la configuración de tu proyecto. ¿Quién puede editar ese flujo compartido?",
+      "stem": {
+        "es": "Eres administrador de un proyecto company-managed. El flujo de trabajo está compartido con otros proyectos. Un compañero pide que lo cambies desde la configuración de tu proyecto. ¿Quién puede editar ese flujo compartido?",
+        "en": "You are a company-managed project administrator. The workflow is shared with other projects. A colleague asks you to change it from your project settings. Who can edit that shared workflow?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cualquier administrador de proyecto desde su espacio" },
-        { "id": "B", "texto": "Un administrador de Jira del site, no el de un solo proyecto" },
-        { "id": "C", "texto": "Solo el administrador de la organización, en el Directorio" },
-        { "id": "D", "texto": "El dueño de la página de inicio Para ti" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cualquier administrador de proyecto desde su espacio",
+            "en": "Any project administrator from their project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un administrador de Jira del site, no el de un solo proyecto",
+            "en": "A site Jira administrator, not a single project's admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo el administrador de la organización, en el Directorio",
+            "en": "Only the organization admin, in Directory"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El dueño de la página de inicio Para ti",
+            "en": "The owner of the For you home page"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En company-managed el proceso compartido es territorio del administrador de Jira. El administrador de un espacio se limita a su proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En company-managed el proceso compartido es territorio del administrador de Jira. El administrador de un espacio se limita a su proyecto.",
+        "en": "In company-managed the shared process is Jira administrator territory. A project administrator is limited to their project."
+      }
     },
     {
       "id": "m01-q20",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Necesitas crear un proyecto de Software llamado Development. En la barra izquierda aparecen Proyectos y Espacio. ¿Dónde lo creas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Necesitas crear un proyecto de Software llamado Development. En la barra izquierda aparecen Proyectos y Espacio. ¿Dónde lo creas?",
+        "en": "You are a Jira administrator. You need to create a Software project named Development. In the left sidebar the Spanish UI shows «Proyectos» and «Espacio». Where do you create it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Proyectos" },
-        { "id": "B", "texto": "En Espacio → Crear espacio" },
-        { "id": "C", "texto": "En Directorio de Atlassian Administration" },
-        { "id": "D", "texto": "En Facturación" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Proyectos",
+            "en": "In Proyectos"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En Espacio → Crear espacio",
+            "en": "In Espacio → Crear espacio"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Directorio de Atlassian Administration",
+            "en": "In Atlassian Administration Directory"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En Facturación",
+            "en": "In Billing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En la UI en castellano de 2026, espacio es el project de Jira. El enlace Proyectos es otro producto de Atlassian, no la lista de proyectos de Jira."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En la UI en castellano de 2026, espacio es el project de Jira. El enlace Proyectos es otro producto de Atlassian, no la lista de proyectos de Jira.",
+        "en": "In the 2026 Spanish UI, Espacio is the Jira project. The Proyectos link is a different Atlassian product, not the Jira project list."
+      }
     },
     {
       "id": "m01-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Trabajas en la interfaz en castellano. Un documento en inglés habla de project. ¿Cómo aparece ese concepto en la interfaz?",
+      "stem": {
+        "es": "Eres administrador de Jira. Trabajas en la interfaz en castellano. Un documento en inglés habla de project. ¿Cómo aparece ese concepto en la interfaz?",
+        "en": "You are a Jira administrator. You work in the Spanish interface. An English document talks about a project. How does that concept appear in the interface?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Como el enlace Proyectos de la barra" },
-        { "id": "B", "texto": "Como Espacio" },
-        { "id": "C", "texto": "Como Organización en admin.atlassian.com" },
-        { "id": "D", "texto": "Como el site *.atlassian.net" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Como el enlace Proyectos de la barra",
+            "en": "As the Proyectos sidebar link"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Como Espacio",
+            "en": "As Espacio"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Como Organización en admin.atlassian.com",
+            "en": "As Organization on admin.atlassian.com"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Como el site *.atlassian.net",
+            "en": "As the *.atlassian.net site"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Espacio = project. No confundir con el producto Atlassian Projects, que es el enlace Proyectos de la barra."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Espacio = project. No confundir con el producto Atlassian Projects, que es el enlace Proyectos de la barra.",
+        "en": "Espacio = project. Do not confuse it with the Atlassian Projects product, which is the Proyectos sidebar link."
+      }
     },
     {
       "id": "m01-q22",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Un procedimiento en inglés pide editar una issue. Usas la interfaz en castellano. ¿Cómo se llama ese objeto?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Un procedimiento en inglés pide editar una issue. Usas la interfaz en castellano. ¿Cómo se llama ese objeto?",
+        "en": "You are a project administrator. An English procedure asks you to edit an issue. You use the Spanish interface. What is that object called?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Proyecto" },
-        { "id": "B", "texto": "Espacio" },
-        { "id": "C", "texto": "Elemento de trabajo" },
-        { "id": "D", "texto": "Organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Proyecto",
+            "en": "Proyecto"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Espacio",
+            "en": "Espacio"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Elemento de trabajo",
+            "en": "Elemento de trabajo"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Organización",
+            "en": "Organización"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Issue = elemento de trabajo. Espacio = project. El enlace Proyectos de la barra es otro producto."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Issue = elemento de trabajo. Espacio = project. El enlace Proyectos de la barra es otro producto.",
+        "en": "Issue = elemento de trabajo. Espacio = project. The Proyectos sidebar link is a different product."
+      }
     },
     {
       "id": "m01-q23",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Estás en Para ti, sin un proyecto abierto. Necesitas abrir Atlassian Administration para ver el Directorio. ¿Cómo llegas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Estás en Para ti, sin un proyecto abierto. Necesitas abrir Atlassian Administration para ver el Directorio. ¿Cómo llegas?",
+        "en": "You are an organization admin. You are on For you, with no project open. You need to open Atlassian Administration to see Directory. How do you get there?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Desde Aplicaciones en la barra izquierda de Jira" },
-        { "id": "B", "texto": "Desde el engranaje superior derecho o el menú de cuadrícula → Administration" },
-        { "id": "C", "texto": "Desde la configuración de Sample Scrum" },
-        { "id": "D", "texto": "Desde el botón Crear de la barra superior" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Desde Aplicaciones en la barra izquierda de Jira",
+            "en": "From Apps in Jira's left sidebar"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Desde el engranaje superior derecho o el menú de cuadrícula → Administration",
+            "en": "From the top-right gear or the grid menu → Administration"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Desde la configuración de Sample Scrum",
+            "en": "From Sample Scrum settings"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Desde el botón Crear de la barra superior",
+            "en": "From the Create button in the top bar"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Administration se abre con el engranaje global (arriba a la derecha) o con el menú de cuadrícula (waffle). Aplicaciones de la barra de Jira no es la organización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Administration se abre con el engranaje global (arriba a la derecha) o con el menú de cuadrícula (waffle). Aplicaciones de la barra de Jira no es la organización.",
+        "en": "Administration opens from the global gear (top right) or the grid (waffle) menu. Apps in the Jira sidebar is not the organization."
+      }
     },
     {
       "id": "m01-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Pulsas Aplicaciones en la barra izquierda y ves un catálogo. Quieres comprobar el plan Premium del site. ¿Esa pantalla es la de facturación del plan?",
+      "stem": {
+        "es": "Eres administrador de Jira. Pulsas Aplicaciones en la barra izquierda y ves un catálogo. Quieres comprobar el plan Premium del site. ¿Esa pantalla es la de facturación del plan?",
+        "en": "You are a Jira administrator. You click Apps in the left sidebar and see a catalog. You want to check the site's Premium plan. Is that screen the plan billing page?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: ahí está Facturación de la organización" },
-        { "id": "B", "texto": "No: el plan se ve en Administration → Aplicaciones de Atlassian" },
-        { "id": "C", "texto": "Sí, si estás en Para ti" },
-        { "id": "D", "texto": "No existe otra pantalla de aplicaciones" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: ahí está Facturación de la organización",
+            "en": "Yes: organization Billing is there"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: el plan se ve en Administration → Aplicaciones de Atlassian",
+            "en": "No: the plan is in Administration → Atlassian apps"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí, si estás en Para ti",
+            "en": "Yes, if you are on For you"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No existe otra pantalla de aplicaciones",
+            "en": "There is no other apps screen"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hay dos pantallas llamadas Aplicaciones. El catálogo del producto no gestiona el trial ni la URL del site; eso está en Administration."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hay dos pantallas llamadas Aplicaciones. El catálogo del producto no gestiona el trial ni la URL del site; eso está en Administration.",
+        "en": "There are two screens called Apps. The product catalog does not manage the trial or the site URL; that is in Administration."
+      }
     },
     {
       "id": "m01-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Estás dentro de Sample Scrum y el engranaje solo muestra la configuración de ese proyecto. Necesitas Atlassian Administration. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. Estás dentro de Sample Scrum y el engranaje solo muestra la configuración de ese proyecto. Necesitas Atlassian Administration. ¿Qué haces?",
+        "en": "You are an organization admin. You are inside Sample Scrum and the gear only shows that project's settings. You need Atlassian Administration. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sigues en el proyecto: es la única consola" },
-        { "id": "B", "texto": "Sales a Para ti o Más espacios y usas el engranaje global" },
-        { "id": "C", "texto": "Abres el menú de cuadrícula y vuelves a Sample Scrum" },
-        { "id": "D", "texto": "Borras Sample Scrum para que aparezca Administration" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sigues en el proyecto: es la única consola",
+            "en": "You stay in the project: it is the only console"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sales a Para ti o Más espacios y usas el engranaje global",
+            "en": "You go to For you or More spaces and use the global gear"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Abres el menú de cuadrícula y vuelves a Sample Scrum",
+            "en": "You open the grid menu and return to Sample Scrum"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borras Sample Scrum para que aparezca Administration",
+            "en": "You delete Sample Scrum so Administration appears"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El engranaje del espacio no es el de la organización. Sal del proyecto de muestra a Para ti y usa el engranaje global."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El engranaje del espacio no es el de la organización. Sal del proyecto de muestra a Para ti y usa el engranaje global.",
+        "en": "The project's gear is not the organization's. Leave the sample project for For you and use the global gear."
+      }
     },
     {
       "id": "m01-q26",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Necesitas revisar workflows, campos y schemes de proyectos company-managed. No quieres la configuración de un solo proyecto. ¿Dónde viven esos objetos globales?",
+      "stem": {
+        "es": "Eres administrador de Jira. Necesitas revisar workflows, campos y schemes de proyectos company-managed. No quieres la configuración de un solo proyecto. ¿Dónde viven esos objetos globales?",
+        "en": "You are a Jira administrator. You need to review workflows, fields, and schemes for company-managed projects. You do not want a single project's settings. Where do those global objects live?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Personas de Sample Scrum" },
-        { "id": "B", "texto": "En Jira → Configuración → Sistema / Elementos de trabajo" },
-        { "id": "C", "texto": "En Directorio → Usuarios" },
-        { "id": "D", "texto": "En Facturación de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Personas de Sample Scrum",
+            "en": "In Sample Scrum People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En Jira → Configuración → Sistema / Elementos de trabajo",
+            "en": "In Jira → Settings → System / Issues"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Directorio → Usuarios",
+            "en": "In Directory → Users"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En Facturación de la organización",
+            "en": "In organization Billing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Es la consola del administrador de Jira del site, distinta de Atlassian Administration. La ubicación es Sistema / Elementos de trabajo (Issues)."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Es la consola del administrador de Jira del site, distinta de Atlassian Administration. La ubicación es Sistema / Elementos de trabajo (Issues).",
+        "en": "That is the site Jira administrator console, distinct from Atlassian Administration. The location is System / Issues."
+      }
     },
     {
       "id": "m01-q27",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. PMO pregunta qué puede hacer el administrador de la organización que tú no puedes. Necesitas delimitar responsabilidades. ¿Qué distingue al administrador de la organización?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. PMO pregunta qué puede hacer el administrador de la organización que tú no puedes. Necesitas delimitar responsabilidades. ¿Qué distingue al administrador de la organización?",
+        "en": "You are a project administrator. PMO asks what the organization admin can do that you cannot. You need to draw the line. What distinguishes the organization admin?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Invitar personas a la organización y gestionar Directorio, facturación y SSO" },
-        { "id": "B", "texto": "Solo abrir la página de inicio Para ti" },
-        { "id": "C", "texto": "Solo cambiar el nombre de un proyecto de muestra" },
-        { "id": "D", "texto": "Nada: son el mismo rol con otro nombre" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Invitar personas a la organización y gestionar Directorio, facturación y SSO",
+            "en": "Invite people to the organization and manage Directory, billing, and SSO"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo abrir la página de inicio Para ti",
+            "en": "Only open the For you home page"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo cambiar el nombre de un proyecto de muestra",
+            "en": "Only rename a sample project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Nada: son el mismo rol con otro nombre",
+            "en": "Nothing: they are the same role with another name"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El administrador de la organización invita a la org y gestiona Directorio, facturación y SSO. El administrador de un espacio configura ese proyecto. No son el mismo rol."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El administrador de la organización invita a la org y gestiona Directorio, facturación y SSO. El administrador de un espacio configura ese proyecto. No son el mismo rol.",
+        "en": "The organization admin invites people to the org and manages Directory, billing, and SSO. A project administrator configures that project. They are not the same role."
+      }
     },
     {
       "id": "m01-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto company-managed. Un compañero con permiso global Jira admin propone que ambos editéis el scheme compartido. ¿Cuál es la diferencia de alcance?",
+      "stem": {
+        "es": "Eres administrador de un proyecto company-managed. Un compañero con permiso global Jira admin propone que ambos editéis el scheme compartido. ¿Cuál es la diferencia de alcance?",
+        "en": "You are a company-managed project administrator. A colleague with the global Jira admin permission proposes that you both edit the shared scheme. What is the difference in scope?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Son idénticos: ambos editan schemes compartidos" },
-        { "id": "B", "texto": "El administrador del proyecto siempre cambia el flujo compartido" },
-        { "id": "C", "texto": "Jira admin gestiona schemes y campos de site; el de proyecto se limita a su espacio" },
-        { "id": "D", "texto": "Jira admin no puede abrir Configuración de sistema" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Son idénticos: ambos editan schemes compartidos",
+            "en": "They are identical: both edit shared schemes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El administrador del proyecto siempre cambia el flujo compartido",
+            "en": "The project administrator always changes the shared workflow"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira admin gestiona schemes y campos de site; el de proyecto se limita a su espacio",
+            "en": "Jira admin manages site schemes and fields; the project admin is limited to their project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Jira admin no puede abrir Configuración de sistema",
+            "en": "Jira admin cannot open System settings"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Jira admin coincide con administrador de site o de producto dentro de Jira. En company-managed el proceso compartido no lo edita el administrador de un solo proyecto."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Jira admin coincide con administrador de site o de producto dentro de Jira. En company-managed el proceso compartido no lo edita el administrador de un solo proyecto.",
+        "en": "Jira admin matches site or product admin inside Jira. In company-managed, a single project's administrator does not edit the shared process."
+      }
     },
     {
       "id": "m01-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres la persona que creó el site de prueba. Abres el Directorio y tu propia ficha. Necesitas confirmar que puedes administrar usuarios y facturación. ¿Qué rol debes tener?",
+      "stem": {
+        "es": "Eres la persona que creó el site de prueba. Abres el Directorio y tu propia ficha. Necesitas confirmar que puedes administrar usuarios y facturación. ¿Qué rol debes tener?",
+        "en": "You are the person who created the trial site. You open Directory and your own profile. You need to confirm you can administer users and billing. Which role must you have?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo usuario, nunca administrador" },
-        { "id": "B", "texto": "Administrador de la organización o del site" },
-        { "id": "C", "texto": "Administrador de todos los proyectos por defecto" },
-        { "id": "D", "texto": "Cliente de portal sin producto Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo usuario, nunca administrador",
+            "en": "User only, never administrator"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Administrador de la organización o del site",
+            "en": "Organization admin or site admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Administrador de todos los proyectos por defecto",
+            "en": "Administrator of every project by default"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cliente de portal sin producto Jira",
+            "en": "Portal customer with no Jira product"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La cuenta del alta es el administrador de la organización del trial. Si no lo eres, revisa la identidad con la que has entrado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La cuenta del alta es el administrador de la organización del trial. Si no lo eres, revisa la identidad con la que has entrado.",
+        "en": "The signup account is the trial's organization admin. If you are not, check the identity you signed in with."
+      }
     },
     {
       "id": "m01-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. En Facturación ves Añadir datos de pago y Reactivar. Estás en un trial Premium y no quieres un cargo. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. En Facturación ves Añadir datos de pago y Reactivar. Estás en un trial Premium y no quieres un cargo. ¿Qué haces?",
+        "en": "You are an organization admin. In Billing you see Add payment details and Reactivate. You are on a Premium trial and do not want a charge. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Añades la tarjeta para no perder el site" },
-        { "id": "B", "texto": "Te quedas en la vista previa; no añades pago ni reactivas" },
-        { "id": "C", "texto": "Borras la organización" },
-        { "id": "D", "texto": "Cambias a Server" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Añades la tarjeta para no perder el site",
+            "en": "You add the card so you do not lose the site"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Te quedas en la vista previa; no añades pago ni reactivas",
+            "en": "You stay on the preview; you do not add payment or reactivate"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borras la organización",
+            "en": "You delete the organization"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambias a Server",
+            "en": "You switch to Server"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El trial Premium no pide tarjeta. Reactivar un site viejo o pulsar Gestionar sí puede cobrar."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El trial Premium no pide tarjeta. Reactivar un site viejo o pulsar Gestionar sí puede cobrar.",
+        "en": "The Premium trial does not ask for a card. Reactivating an old site or clicking Manage can charge you."
+      }
     },
     {
       "id": "m01-q31",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Comparas Free, Standard y Premium antes de elegir el plan del site. Quieres techos de automation, auditoría y usuarios. ¿Qué resumen es correcto?",
+      "stem": {
+        "es": "Eres administrador de la organización. Comparas Free, Standard y Premium antes de elegir el plan del site. Quieres techos de automation, auditoría y usuarios. ¿Qué resumen es correcto?",
+        "en": "You are an organization admin. You compare Free, Standard, and Premium before choosing the site plan. You want automation, audit, and user caps. Which summary is correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los tres tienen los mismos techos de automation y auditoría" },
-        { "id": "B", "texto": "Premium dura 30 días con más automation, audit y sandbox; Standard 14 días; Free limita a 10 usuarios" },
-        { "id": "C", "texto": "Standard no admite usuarios" },
-        { "id": "D", "texto": "Free incluye Advanced Roadmaps" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los tres tienen los mismos techos de automation y auditoría",
+            "en": "All three have the same automation and audit caps"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Premium dura 30 días con más automation, audit y sandbox; Standard 14 días; Free limita a 10 usuarios",
+            "en": "Premium lasts 30 days with more automation, audit, and sandbox; Standard 14 days; Free limits to 10 users"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Standard no admite usuarios",
+            "en": "Standard does not allow users"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Free incluye Advanced Roadmaps",
+            "en": "Free includes Advanced Roadmaps"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El plan se comprueba en Administration → Aplicaciones / Facturación. Free recorta gobierno, usuarios y automation."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El plan se comprueba en Administration → Aplicaciones / Facturación. Free recorta gobierno, usuarios y automation.",
+        "en": "Check the plan in Administration → Apps / Billing. Free cuts governance, users, and automation."
+      }
     },
     {
       "id": "m01-q32",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. PMO pide Advanced Roadmaps para el portafolio. Debes saber en qué plan está incluida esa capacidad. ¿Dónde está?",
+      "stem": {
+        "es": "Eres administrador de Jira. PMO pide Advanced Roadmaps para el portafolio. Debes saber en qué plan está incluida esa capacidad. ¿Dónde está?",
+        "en": "You are a Jira administrator. PMO asks for Advanced Roadmaps for the portfolio. You need to know which plan includes that capability. Where is it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Free" },
-        { "id": "B", "texto": "En Standard" },
-        { "id": "C", "texto": "En Premium; no en Free ni Standard" },
-        { "id": "D", "texto": "Sustituye a Jira Software" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Free",
+            "en": "On Free"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En Standard",
+            "en": "On Standard"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Premium; no en Free ni Standard",
+            "en": "On Premium; not on Free or Standard"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sustituye a Jira Software",
+            "en": "It replaces Jira Software"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Solo Premium trae Advanced Roadmaps. Es visión de plan, no configuración de roadmaps."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Solo Premium trae Advanced Roadmaps. Es visión de plan, no configuración de roadmaps.",
+        "en": "Only Premium includes Advanced Roadmaps. This is a plan view, not roadmap configuration."
+      }
     },
     {
       "id": "m01-q33",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Seguridad pide sandbox y registro de auditoría avanzado. Quieres saber qué plan los incluye. ¿Cuál es la respuesta?",
+      "stem": {
+        "es": "Eres administrador de la organización. Seguridad pide sandbox y registro de auditoría avanzado. Quieres saber qué plan los incluye. ¿Cuál es la respuesta?",
+        "en": "You are an organization admin. Security asks for sandbox and an advanced audit log. You want to know which plan includes them. What is the answer?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Vienen en Free" },
-        { "id": "B", "texto": "Son de Premium; Standard tiene auditoría básica" },
-        { "id": "C", "texto": "Solo existen en Data Center" },
-        { "id": "D", "texto": "Se activan desde Sample Scrum" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Vienen en Free",
+            "en": "They come with Free"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Son de Premium; Standard tiene auditoría básica",
+            "en": "They are Premium; Standard has basic audit"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo existen en Data Center",
+            "en": "They only exist in Data Center"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se activan desde Sample Scrum",
+            "en": "They are enabled from Sample Scrum"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Free no tiene audit avanzado ni sandbox. Premium sí (sandbox en Premium o superior). Standard tiene auditoría básica."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Free no tiene audit avanzado ni sandbox. Premium sí (sandbox en Premium o superior). Standard tiene auditoría básica.",
+        "en": "Free has neither advanced audit nor sandbox. Premium does (sandbox on Premium or above). Standard has basic audit."
+      }
     },
     {
       "id": "m01-q34",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El alta pide tarjeta de crédito. Querías un trial Premium sin pago. ¿Cuál es la causa habitual?",
+      "stem": {
+        "es": "Eres administrador de la organización. El alta pide tarjeta de crédito. Querías un trial Premium sin pago. ¿Cuál es la causa habitual?",
+        "en": "You are an organization admin. Signup asks for a credit card. You wanted a Premium trial with no payment. What is the usual cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El correo es Gmail" },
-        { "id": "B", "texto": "Has caído en un plan de pago, no en la URL de trial" },
-        { "id": "C", "texto": "El nombre de site está ocupado" },
-        { "id": "D", "texto": "Estás en la página de inicio Para ti" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El correo es Gmail",
+            "en": "The email is Gmail"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Has caído en un plan de pago, no en la URL de trial",
+            "en": "You landed on a paid plan, not the trial URL"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre de site está ocupado",
+            "en": "The site name is taken"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Estás en la página de inicio Para ti",
+            "en": "You are on the For you home page"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Vuelve a la URL de Premium trial. El trial no pide tarjeta; un flujo de plan de pago sí."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Vuelve a la URL de Premium trial. El trial no pide tarjeta; un flujo de plan de pago sí.",
+        "en": "Go back to the Premium trial URL. The trial does not ask for a card; a paid-plan flow does."
+      }
     },
     {
       "id": "m01-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El asistente indica que el nombre de site ya está en uso. Necesitas completar el alta. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. El asistente indica que el nombre de site ya está en uso. Necesitas completar el alta. ¿Qué haces?",
+        "en": "You are an organization admin. The wizard says the site name is already in use. You need to complete signup. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Reactivas el site de otra empresa" },
-        { "id": "B", "texto": "Añades un número o iniciales al nombre" },
-        { "id": "C", "texto": "Usas Sample Scrum como nombre de site" },
-        { "id": "D", "texto": "Pasas a Free automáticamente" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Reactivas el site de otra empresa",
+            "en": "You reactivate another company's site"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Añades un número o iniciales al nombre",
+            "en": "You add a number or initials to the name"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Usas Sample Scrum como nombre de site",
+            "en": "You use Sample Scrum as the site name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pasas a Free automáticamente",
+            "en": "You switch to Free automatically"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El slug debe ser único en Atlassian. Cambia una letra o añade un sufijo; no reactives un site ajeno."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El slug debe ser único en Atlassian. Cambia una letra o añade un sufijo; no reactives un site ajeno.",
+        "en": "The slug must be unique on Atlassian. Change a letter or add a suffix; do not reactivate someone else's site."
+      }
     },
     {
       "id": "m01-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Tras el alta ves dos URLs *.atlassian.net. Necesitas un único entorno de trabajo. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. Tras el alta ves dos URLs *.atlassian.net. Necesitas un único entorno de trabajo. ¿Qué haces?",
+        "en": "You are an organization admin. After signup you see two *.atlassian.net URLs. You need a single working environment. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Mezclas el trabajo entre las dos URLs" },
-        { "id": "B", "texto": "Te quedas con un solo site y trabajas siempre contra esa URL" },
-        { "id": "C", "texto": "Borras la organización" },
-        { "id": "D", "texto": "Usas una URL por cada proyecto futuro" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Mezclas el trabajo entre las dos URLs",
+            "en": "You mix work across the two URLs"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Te quedas con un solo site y trabajas siempre contra esa URL",
+            "en": "You keep a single site and always work against that URL"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borras la organización",
+            "en": "You delete the organization"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Usas una URL por cada proyecto futuro",
+            "en": "You use one URL per future project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un solo site para todo el trabajo. En Administration → Aplicaciones ves los sites de la organización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un solo site para todo el trabajo. En Administration → Aplicaciones ves los sites de la organización.",
+        "en": "One site for all the work. In Administration → Apps you see the organization's sites."
+      }
     },
     {
       "id": "m01-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. admin.atlassian.com pide otra cuenta distinta a la del alta del site. Necesitas entrar como administrador. ¿Cuál es la causa habitual?",
+      "stem": {
+        "es": "Eres administrador de la organización. admin.atlassian.com pide otra cuenta distinta a la del alta del site. Necesitas entrar como administrador. ¿Cuál es la causa habitual?",
+        "en": "You are an organization admin. admin.atlassian.com asks for a different account from the one that created the site. You need to sign in as administrator. What is the usual cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es normal: vale cualquier perfil del navegador" },
-        { "id": "B", "texto": "Hay varios perfiles o SSO; entra con la misma identidad del alta" },
-        { "id": "C", "texto": "Hay que crear una organización nueva cada vez" },
-        { "id": "D", "texto": "Se ignora: todo se hace en la configuración del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es normal: vale cualquier perfil del navegador",
+            "en": "It is normal: any browser profile works"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hay varios perfiles o SSO; entra con la misma identidad del alta",
+            "en": "There are several profiles or SSO; sign in with the same identity used at signup"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hay que crear una organización nueva cada vez",
+            "en": "You must create a new organization every time"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se ignora: todo se hace en la configuración del proyecto",
+            "en": "Ignore it: everything is done in project settings"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Misma cuenta que creó el site. Si no, no serás administrador de la organización de ese laboratorio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Misma cuenta que creó el site. Si no, no serás administrador de la organización de ese laboratorio.",
+        "en": "Use the same account that created the site. Otherwise you will not be organization admin for that lab."
+      }
     },
     {
       "id": "m01-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres la persona que creó el site. En el Directorio no apareces como administrador de la organización. Necesitas crear grupos. ¿Qué implica?",
+      "stem": {
+        "es": "Eres la persona que creó el site. En el Directorio no apareces como administrador de la organización. Necesitas crear grupos. ¿Qué implica?",
+        "en": "You are the person who created the site. In Directory you do not appear as organization admin. You need to create groups. What does that imply?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Puedes crear grupos igual" },
-        { "id": "B", "texto": "No administrarás grupos; quizá no es la cuenta del alta" },
-        { "id": "C", "texto": "Pasas a administrador de todos los proyectos" },
-        { "id": "D", "texto": "El plan Free se convierte en Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Puedes crear grupos igual",
+            "en": "You can create groups anyway"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No administrarás grupos; quizá no es la cuenta del alta",
+            "en": "You will not administer groups; it may not be the signup account"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pasas a administrador de todos los proyectos",
+            "en": "You become administrator of every project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El plan Free se convierte en Premium",
+            "en": "The Free plan becomes Premium"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sin rol de administrador de la organización no verás Grupos. Revisa perfil o SSO: debe ser la cuenta que creó el site."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sin rol de administrador de la organización no verás Grupos. Revisa perfil o SSO: debe ser la cuenta que creó el site.",
+        "en": "Without the organization admin role you will not see Groups. Check profile or SSO: it must be the account that created the site."
+      }
     },
     {
       "id": "m01-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Anotas las URLs con las que trabajas: el producto Jira, la organización y la configuración de sistema. Necesitas no confundirlas. ¿Cuáles son consolas distintas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Anotas las URLs con las que trabajas: el producto Jira, la organización y la configuración de sistema. Necesitas no confundirlas. ¿Cuáles son consolas distintas?",
+        "en": "You are a Jira administrator. You note the URLs you work with: the Jira product, the organization, and System settings. You need not to confuse them. Which are distinct consoles?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El site de Jira, admin.atlassian.com y Sistema de Jira" },
-        { "id": "B", "texto": "Tres veces el mismo proyecto de muestra" },
-        { "id": "C", "texto": "Solo Facturación" },
-        { "id": "D", "texto": "Solo espacios de Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El site de Jira, admin.atlassian.com y Sistema de Jira",
+            "en": "The Jira site, admin.atlassian.com, and Jira System"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Tres veces el mismo proyecto de muestra",
+            "en": "The same sample project three times"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo Facturación",
+            "en": "Billing only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo espacios de Confluence",
+            "en": "Confluence spaces only"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Producto, organización y administrador de Jira son tres consolas. Si las tres parecen un espacio, sal con el logo a Para ti."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Producto, organización y administrador de Jira son tres consolas. Si las tres parecen un espacio, sal con el logo a Para ti.",
+        "en": "Product, organization, and Jira administrator are three consoles. If all three look like a project, leave with the logo to For you."
+      }
     },
     {
       "id": "m01-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Desde Para ti, sin entrar a un proyecto, quieres Campos personalizados globales de company-managed. ¿Qué ruta usas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Desde Para ti, sin entrar a un proyecto, quieres Campos personalizados globales de company-managed. ¿Qué ruta usas?",
+        "en": "You are a Jira administrator. From For you, without entering a project, you want company-managed global Custom fields. Which path do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Configuración de Sample Scrum → Fields" },
-        { "id": "B", "texto": "Configuración → Elementos de trabajo → Campos personalizados" },
-        { "id": "C", "texto": "Directorio → Usuarios" },
-        { "id": "D", "texto": "Menú de cuadrícula → el proyecto de muestra" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Configuración de Sample Scrum → Fields",
+            "en": "Sample Scrum settings → Fields"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Configuración → Elementos de trabajo → Campos personalizados",
+            "en": "Settings → Issues → Custom fields"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Directorio → Usuarios",
+            "en": "Directory → Users"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Menú de cuadrícula → el proyecto de muestra",
+            "en": "Grid menu → the sample project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los campos de company-managed son de site. Si solo ves settings del espacio, estás dentro de un proyecto, no en la consola global."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los campos de company-managed son de site. Si solo ves settings del espacio, estás dentro de un proyecto, no en la consola global.",
+        "en": "Company-managed fields are site-wide. If you only see project settings, you are inside a project, not in the global console."
+      }
     },
     {
       "id": "m01-q41",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de producto de Jira. PMO pregunta qué configuras tú frente a un administrador de proyecto. ¿Qué administras?",
+      "stem": {
+        "es": "Eres administrador de producto de Jira. PMO pregunta qué configuras tú frente a un administrador de proyecto. ¿Qué administras?",
+        "en": "You are a Jira product administrator. PMO asks what you configure compared with a project administrator. What do you administer?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo Personas de un proyecto" },
-        { "id": "B", "texto": "La configuración global de Jira: workflows, campos y schemes" },
-        { "id": "C", "texto": "Solo Facturación" },
-        { "id": "D", "texto": "Solo el nombre del site en el alta" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo Personas de un proyecto",
+            "en": "Only People in a project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La configuración global de Jira: workflows, campos y schemes",
+            "en": "Jira's global configuration: workflows, fields, and schemes"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo Facturación",
+            "en": "Billing only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el nombre del site en el alta",
+            "en": "Only the site name at signup"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Jira admin (permiso global) es lo mismo que product admin dentro de Jira. Distinto del administrador de la organización y del administrador de un espacio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Jira admin (permiso global) es lo mismo que product admin dentro de Jira. Distinto del administrador de la organización y del administrador de un espacio.",
+        "en": "Jira admin (global permission) is the same as product admin inside Jira. Distinct from the organization admin and from a project administrator."
+      }
     },
     {
       "id": "m01-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Estás en Jira y necesitas abrir Atlassian Administration. Junto al logo ves el menú de cuadrícula. ¿Qué consola abres desde ahí?",
+      "stem": {
+        "es": "Eres administrador de la organización. Estás en Jira y necesitas abrir Atlassian Administration. Junto al logo ves el menú de cuadrícula. ¿Qué consola abres desde ahí?",
+        "en": "You are an organization admin. You are in Jira and need to open Atlassian Administration. Next to the logo you see the grid menu. Which console do you open from there?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El asistente para crear proyectos corporativos" },
-        { "id": "B", "texto": "Atlassian Administration" },
-        { "id": "C", "texto": "El editor de flujo de Sample Scrum" },
-        { "id": "D", "texto": "El diálogo de invitaciones del Directorio" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El asistente para crear proyectos corporativos",
+            "en": "The wizard to create corporate projects"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Atlassian Administration",
+            "en": "Atlassian Administration"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El editor de flujo de Sample Scrum",
+            "en": "The Sample Scrum workflow editor"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El diálogo de invitaciones del Directorio",
+            "en": "The Directory invitations dialog"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El menú de cuadrícula (waffle) abre Administration. Si no aparece, entra en admin.atlassian.com con la cuenta del trial."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El menú de cuadrícula (waffle) abre Administration. Si no aparece, entra en admin.atlassian.com con la cuenta del trial.",
+        "en": "The grid (waffle) menu opens Administration. If it does not appear, go to admin.atlassian.com with the trial account."
+      }
     },
     {
       "id": "m01-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Debes decidir dónde se administran usuarios, SSO y políticas de seguridad. Un compañero propone hacerlo en la configuración de un proyecto. ¿En qué capa se administran?",
+      "stem": {
+        "es": "Eres administrador de la organización. Debes decidir dónde se administran usuarios, SSO y políticas de seguridad. Un compañero propone hacerlo en la configuración de un proyecto. ¿En qué capa se administran?",
+        "en": "You are an organization admin. You must decide where users, SSO, and security policies are administered. A colleague proposes doing it in a project's settings. At which layer are they administered?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En el espacio (configuración de un proyecto)" },
-        { "id": "B", "texto": "En la organización (admin.atlassian.com)" },
-        { "id": "C", "texto": "En el elemento de trabajo" },
-        { "id": "D", "texto": "En el enlace Proyectos de la barra" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En el espacio (configuración de un proyecto)",
+            "en": "In Espacio (a project's settings)"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En la organización (admin.atlassian.com)",
+            "en": "In the organization (admin.atlassian.com)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En el elemento de trabajo",
+            "en": "In the issue"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el enlace Proyectos de la barra",
+            "en": "In the Proyectos sidebar link"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La organización decide usuarios, SSO y políticas. Un espacio no administra la organización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La organización decide usuarios, SSO y políticas. Un espacio no administra la organización.",
+        "en": "The organization decides users, SSO, and policies. A project does not administer the organization."
+      }
     },
     {
       "id": "m01-q44",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Quieres saber qué productos hay en la URL: Jira, Confluence u otros. ¿En qué capa se decide el catálogo de productos?",
+      "stem": {
+        "es": "Eres administrador de la organización. Quieres saber qué productos hay en la URL: Jira, Confluence u otros. ¿En qué capa se decide el catálogo de productos?",
+        "en": "You are an organization admin. You want to know which products are on the URL: Jira, Confluence, or others. At which layer is the product catalog decided?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Espacio" },
-        { "id": "B", "texto": "Site" },
-        { "id": "C", "texto": "Elemento de trabajo" },
-        { "id": "D", "texto": "Sample Scrum" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Espacio",
+            "en": "Espacio"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Site",
+            "en": "Site"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Elemento de trabajo",
+            "en": "Issue"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sample Scrum",
+            "en": "Sample Scrum"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El site es https://nombre.atlassian.net y ahí viven los productos. El espacio es un contenedor dentro de Jira."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El site es https://nombre.atlassian.net y ahí viven los productos. El espacio es un contenedor dentro de Jira.",
+        "en": "The site is https://name.atlassian.net and that is where products live. Espacio is a container inside Jira."
+      }
     },
     {
       "id": "m01-q45",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. En Más espacios aparece Sample Scrum. PMO aún no ha pedido los proyectos corporativos. ¿Qué haces con el proyecto de muestra?",
+      "stem": {
+        "es": "Eres administrador de Jira. En Más espacios aparece Sample Scrum. PMO aún no ha pedido los proyectos corporativos. ¿Qué haces con el proyecto de muestra?",
+        "en": "You are a Jira administrator. In More spaces, Sample Scrum appears. PMO has not yet asked for the corporate projects. What do you do with the sample project?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Lo usas como proyecto de Desarrollo" },
-        { "id": "B", "texto": "Lo dejas; no lo uses como DEV, SUP, OPS ni PMO" },
-        { "id": "C", "texto": "Le cambias el tipo a Jira Service Management" },
-        { "id": "D", "texto": "Lo mueves a otra organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Lo usas como proyecto de Desarrollo",
+            "en": "You use it as the Development project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Lo dejas; no lo uses como DEV, SUP, OPS ni PMO",
+            "en": "You leave it; do not use it as DEV, SUP, OPS, or PMO"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Le cambias el tipo a Jira Service Management",
+            "en": "You change its type to Jira Service Management"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Lo mueves a otra organización",
+            "en": "You move it to another organization"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La muestra no es el mapa corporativo. Puedes dejarla; los espacios DEV, SUP, OPS y PMO se crean más adelante."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La muestra no es el mapa corporativo. Puedes dejarla; los espacios DEV, SUP, OPS y PMO se crean más adelante.",
+        "en": "The sample is not the corporate map. You can leave it; the DEV, SUP, OPS, and PMO projects are created later."
+      }
     },
     {
       "id": "m01-q46",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de la organización. Necesitas abrir Atlassian Administration, no la configuración de un proyecto. ¿Cuáles dos rutas llegan a la organización?",
+      "stem": {
+        "es": "Eres administrador de la organización. Necesitas abrir Atlassian Administration, no la configuración de un proyecto. ¿Cuáles dos rutas llegan a la organización?",
+        "en": "You are an organization admin. You need to open Atlassian Administration, not a project's settings. Which two paths reach the organization?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Engranaje global → Atlassian Administration" },
-        { "id": "B", "texto": "Configuración de Sample Scrum" },
-        { "id": "C", "texto": "Menú de cuadrícula → Administration, o admin.atlassian.com" },
-        { "id": "D", "texto": "El enlace Proyectos de la barra izquierda" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Engranaje global → Atlassian Administration",
+            "en": "Global gear → Atlassian Administration"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Configuración de Sample Scrum",
+            "en": "Sample Scrum settings"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Menú de cuadrícula → Administration, o admin.atlassian.com",
+            "en": "Grid menu → Administration, or admin.atlassian.com"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El enlace Proyectos de la barra izquierda",
+            "en": "The Proyectos link in the left sidebar"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "La organización se abre con el engranaje global, el menú de cuadrícula o admin.atlassian.com. Settings del espacio y Proyectos no son esa consola."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "La organización se abre con el engranaje global, el menú de cuadrícula o admin.atlassian.com. Settings del espacio y Proyectos no son esa consola.",
+        "en": "The organization opens from the global gear, the grid menu, or admin.atlassian.com. Project settings and Proyectos are not that console."
+      }
     },
     {
       "id": "m01-q47",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de la organización. Comparas planes antes de abrir el trial. ¿Cuáles dos afirmaciones sobre planes son correctas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Comparas planes antes de abrir el trial. ¿Cuáles dos afirmaciones sobre planes son correctas?",
+        "en": "You are an organization admin. You compare plans before starting the trial. Which two statements about plans are correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Free limita a 10 usuarios" },
-        { "id": "B", "texto": "El trial Premium dura 30 días y no pide tarjeta" },
-        { "id": "C", "texto": "Free incluye Advanced Roadmaps y sandbox" },
-        { "id": "D", "texto": "El trial Standard dura 90 días" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Free limita a 10 usuarios",
+            "en": "Free limits to 10 users"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El trial Premium dura 30 días y no pide tarjeta",
+            "en": "The Premium trial lasts 30 days and does not ask for a card"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Free incluye Advanced Roadmaps y sandbox",
+            "en": "Free includes Advanced Roadmaps and sandbox"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El trial Standard dura 90 días",
+            "en": "The Standard trial lasts 90 days"
+          }
+        }
       ],
-      "correctas": ["A", "B"],
-      "explicacion": "Free = 10 usuarios, sin roadmaps ni sandbox. Premium trial = 30 días sin tarjeta. Standard fallback = 14 días."
+      "correctas": [
+        "A",
+        "B"
+      ],
+      "explicacion": {
+        "es": "Free = 10 usuarios, sin roadmaps ni sandbox. Premium trial = 30 días sin tarjeta. Standard fallback = 14 días.",
+        "en": "Free = 10 users, no roadmaps or sandbox. Premium trial = 30 days with no card. Standard fallback = 14 days."
+      }
     },
     {
       "id": "m01-q48",
       "dominio": "project-creation",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Un proyecto (espacio) ya existe. Necesitas identificar las capas que están por encima. ¿Cuáles dos capas quedan por encima del espacio?",
+      "stem": {
+        "es": "Eres administrador de Jira. Un proyecto (espacio) ya existe. Necesitas identificar las capas que están por encima. ¿Cuáles dos capas quedan por encima del espacio?",
+        "en": "You are a Jira administrator. A project («Espacio» in the Spanish UI) already exists. You need to identify the layers above it. Which two layers sit above Espacio?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Organización" },
-        { "id": "B", "texto": "El elemento de trabajo" },
-        { "id": "C", "texto": "Site y el producto Jira en ese site" },
-        { "id": "D", "texto": "El enlace Proyectos de la barra" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Organización",
+            "en": "Organization"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El elemento de trabajo",
+            "en": "The issue"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Site y el producto Jira en ese site",
+            "en": "Site and the Jira product on that site"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El enlace Proyectos de la barra",
+            "en": "The Proyectos sidebar link"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "Organización → Site → Producto (Jira) → Espacio. El elemento de trabajo vive dentro del espacio. En castellano, espacio = project."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Organización → Site → Producto (Jira) → Espacio. El elemento de trabajo vive dentro del espacio. En castellano, espacio = project.",
+        "en": "Organization → Site → Product (Jira) → Espacio. The issue lives inside Espacio. In Spanish, Espacio = project."
+      }
     },
     {
       "id": "m01-q49",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres usuario de Jira. En Configuración no ves Sistema. Necesitas administrar workflows globales. ¿Qué implica?",
+      "stem": {
+        "es": "Eres usuario de Jira. En Configuración no ves Sistema. Necesitas administrar workflows globales. ¿Qué implica?",
+        "en": "You are a Jira user. In Settings you do not see System. You need to administer global workflows. What does that imply?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El plan Free oculta Sistema siempre" },
-        { "id": "B", "texto": "No eres administrador de Jira; en el Directorio debes ser admin de la org o del site" },
-        { "id": "C", "texto": "Hay que abrir Sample Scrum primero" },
-        { "id": "D", "texto": "Sistema solo existe en team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El plan Free oculta Sistema siempre",
+            "en": "The Free plan always hides System"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No eres administrador de Jira; en el Directorio debes ser admin de la org o del site",
+            "en": "You are not a Jira administrator; in Directory you must be org or site admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hay que abrir Sample Scrum primero",
+            "en": "You must open Sample Scrum first"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sistema solo existe en team-managed",
+            "en": "System only exists in team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sistema es territorio del administrador de Jira. Si no aparece, la cuenta no es la del alta o no eres admin."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sistema es territorio del administrador de Jira. Si no aparece, la cuenta no es la del alta o no eres admin.",
+        "en": "System is Jira administrator territory. If it does not appear, the account is not the signup account or you are not an admin."
+      }
     },
     {
       "id": "m01-q50",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Quieres distinguir consolas de tenant frente a la de un solo proyecto. ¿Cuáles dos consolas no son la configuración de un espacio?",
+      "stem": {
+        "es": "Eres administrador de Jira. Quieres distinguir consolas de tenant frente a la de un solo proyecto. ¿Cuáles dos consolas no son la configuración de un espacio?",
+        "en": "You are a Jira administrator. You want to distinguish tenant consoles from a single project's. Which two consoles are not a project's settings?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Atlassian Administration" },
-        { "id": "B", "texto": "Configuración de proyecto de Sample Scrum" },
-        { "id": "C", "texto": "Configuración de sistema de Jira" },
-        { "id": "D", "texto": "El inicio de un espacio abierto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Atlassian Administration",
+            "en": "Atlassian Administration"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Configuración de proyecto de Sample Scrum",
+            "en": "Sample Scrum project settings"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Configuración de sistema de Jira",
+            "en": "Jira System settings"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El inicio de un espacio abierto",
+            "en": "The home of an open project"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "Atlassian Administration y la configuración de sistema de Jira son de organización o site. Project settings y el home de un espacio son de un solo proyecto."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Atlassian Administration y la configuración de sistema de Jira son de organización o site. Project settings y el home de un espacio son de un solo proyecto.",
+        "en": "Atlassian Administration and Jira System settings belong to the organization or site. Project settings and a project's home belong to a single project."
+      }
     }
   ]
 }

@@ -6,701 +6,2309 @@
       "id": "m08-q1",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La PMO quiere ver cada mañana las issues abiertas de Desarrollo por persona en una página que se abre al llegar. ¿Qué debería montar un administrador de proyecto?",
+      "stem": {
+        "es": "La PMO quiere ver cada mañana las issues abiertas de Desarrollo por persona en una página que se abre al llegar. ¿Qué debería montar un administrador de proyecto?",
+        "en": "The PMO wants to see Development’s open issues by person every morning on a page that opens when they arrive. What should a project administrator set up?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo el informe de un sprint concreto" },
-        { "id": "B", "texto": "Un filtro JQL y un gadget Two Dimensional o Filter Results en un dashboard" },
-        { "id": "C", "texto": "Un esquema de seguridad de issues" },
-        { "id": "D", "texto": "Un workflow nuevo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo el informe de un sprint concreto",
+            "en": "Only the report for a specific sprint"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un filtro JQL y un gadget Two Dimensional o Filter Results en un dashboard",
+            "en": "A JQL filter and a Two Dimensional or Filter Results gadget on a dashboard"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un esquema de seguridad de issues",
+            "en": "An issue security scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un workflow nuevo",
+            "en": "A new workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La pared diaria es un dashboard alimentado por un filtro. El sprint report cubre un timebox concreto, no el seguimiento matinal."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La pared diaria es un dashboard alimentado por un filtro. El sprint report cubre un timebox concreto, no el seguimiento matinal.",
+        "en": "The daily wall is a dashboard fed by a filter. The sprint report covers a specific timebox, not morning follow-up."
+      }
     },
     {
       "id": "m08-q2",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Guardas un filtro compartido con assignee = currentUser() y lo usas en un gadget. ¿Qué ve cada persona que abre el filtro?",
+      "stem": {
+        "es": "Guardas un filtro compartido con assignee = currentUser() y lo usas en un gadget. ¿Qué ve cada persona que abre el filtro?",
+        "en": "You save a shared filter with assignee = currentUser() and use it in a gadget. What does each person who opens the filter see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Siempre las issues de Ana, que guardó el filtro" },
-        { "id": "B", "texto": "Las suyas: currentUser() se evalúa para quien está viendo" },
-        { "id": "C", "texto": "Nada: currentUser() es JQL ilegal en Cloud" },
-        { "id": "D", "texto": "Solo funciona en proyectos team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Siempre las issues de Ana, que guardó el filtro",
+            "en": "Always Ana’s issues, because she saved the filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las suyas: currentUser() se evalúa para quien está viendo",
+            "en": "Their own: currentUser() is evaluated for whoever is viewing"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Nada: currentUser() es JQL ilegal en Cloud",
+            "en": "Nothing: currentUser() is illegal JQL in Cloud"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo funciona en proyectos team-managed",
+            "en": "It only works in team-managed projects"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "currentUser() es dinámico. Por eso sirve en filtros rápidos y en el gadget Assigned to Me."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "currentUser() es dinámico. Por eso sirve en filtros rápidos y en el gadget Assigned to Me.",
+        "en": "currentUser() is dynamic. That is why it works in quick filters and in the Assigned to Me gadget."
+      }
     },
     {
       "id": "m08-q3",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Te muestran un gráfico de áreas apiladas por estado a lo largo del tiempo. ¿Qué informe es?",
+      "stem": {
+        "es": "Te muestran un gráfico de áreas apiladas por estado a lo largo del tiempo. ¿Qué informe es?",
+        "en": "You are shown a stacked area chart by status over time. Which report is it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Velocity" },
-        { "id": "B", "texto": "Cumulative Flow Diagram" },
-        { "id": "C", "texto": "Created vs Resolved" },
-        { "id": "D", "texto": "Pie Chart gadget" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Cumulative Flow Diagram",
+            "en": "Cumulative Flow Diagram"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Created vs Resolved",
+            "en": "Created vs Resolved"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pie Chart gadget",
+            "en": "Pie Chart gadget"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El CFD se reconoce por las áreas apiladas de estados o columnas en el tiempo. Velocity son barras por sprint; Created vs Resolved son dos series."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El CFD se reconoce por las áreas apiladas de estados o columnas en el tiempo. Velocity son barras por sprint; Created vs Resolved son dos series.",
+        "en": "The CFD is recognized by stacked areas of statuses or columns over time. Velocity is bars per sprint; Created vs Resolved is two series."
+      }
     },
     {
       "id": "m08-q4",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Un gadget del dashboard funciona para ti y falla para el director. ¿Cuál es la causa más probable?",
+      "stem": {
+        "es": "Un gadget del dashboard funciona para ti y falla para el director. ¿Cuál es la causa más probable?",
+        "en": "A dashboard gadget works for you and fails for the director. What is the most likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Jira Cloud está caído solo para su cuenta" },
-        { "id": "B", "texto": "El filtro no está compartido con él o no tiene Browse Projects" },
-        { "id": "C", "texto": "El site no está en Premium" },
-        { "id": "D", "texto": "El tablero de origen es Kanban" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Jira Cloud está caído solo para su cuenta",
+            "en": "Jira Cloud is down only for their account"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El filtro no está compartido con él o no tiene Browse Projects",
+            "en": "The filter is not shared with them or they do not have Browse Projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El site no está en Premium",
+            "en": "The site is not on Premium"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El tablero de origen es Kanban",
+            "en": "The source board is Kanban"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El gadget hereda los viewers del filtro y los permisos de los proyectos. Sin share o sin Browse Projects, el director ve el error."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El gadget hereda los viewers del filtro y los permisos de los proyectos. Sin share o sin Browse Projects, el director ve el error.",
+        "en": "The gadget inherits the filter’s viewers and the projects’ permissions. Without a share or without Browse Projects, the director sees the error."
+      }
     },
     {
       "id": "m08-q5",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Nortech renombra el estado In Progress a En curso. El filtro de issues abiertas de Desarrollo usa statusCategory != Done. ¿Qué ocurre con el filtro?",
+      "stem": {
+        "es": "Nortech renombra el estado In Progress a En curso. El filtro de issues abiertas de Desarrollo usa statusCategory != Done. ¿Qué ocurre con el filtro?",
+        "en": "Nortech renames the In Progress status to En curso. The open-issues filter for Development uses statusCategory != Done. What happens to the filter?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Se rompe hasta reescribir cada nombre de estado" },
-        { "id": "B", "texto": "Sigue válido: statusCategory no depende del nombre del estado" },
-        { "id": "C", "texto": "Solo funciona si el gadget es un Pie Chart" },
-        { "id": "D", "texto": "Convierte Done en To Do" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Se rompe hasta reescribir cada nombre de estado",
+            "en": "It breaks until every status name is rewritten"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sigue válido: statusCategory no depende del nombre del estado",
+            "en": "It stays valid: statusCategory does not depend on the status name"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo funciona si el gadget es un Pie Chart",
+            "en": "It only works if the gadget is a Pie Chart"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Convierte Done en To Do",
+            "en": "It turns Done into To Do"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "statusCategory (To Do, In Progress, Done) sobrevive a cambios de nombre. Es más robusto que status = \"In Progress\"."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "statusCategory (To Do, In Progress, Done) sobrevive a cambios de nombre. Es más robusto que status = \"In Progress\".",
+        "en": "statusCategory (To Do, In Progress, Done) survives name changes. It is more robust than status = \"In Progress\"."
+      }
     },
     {
       "id": "m08-q6",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Guardas un filtro privado con assignee = currentUser() AND updated >= -7d. Ana busca ese filtro en Todos los filtros. ¿Qué ve?",
+      "stem": {
+        "es": "Guardas un filtro privado con assignee = currentUser() AND updated >= -7d. Ana busca ese filtro en Todos los filtros. ¿Qué ve?",
+        "en": "You save a private filter with assignee = currentUser() AND updated >= -7d. Ana searches for that filter in All filters. What does she see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sus propias issues de 7 días, porque el JQL es dinámico" },
-        { "id": "B", "texto": "Nada: si no está compartido, ella no lo ve en la lista" },
-        { "id": "C", "texto": "Siempre tus issues, porque tú lo guardaste" },
-        { "id": "D", "texto": "Jira le crea una copia compartida al buscarlo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sus propias issues de 7 días, porque el JQL es dinámico",
+            "en": "Her own issues from 7 days, because the JQL is dynamic"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Nada: si no está compartido, ella no lo ve en la lista",
+            "en": "Nothing: if it is not shared, she does not see it in the list"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Siempre tus issues, porque tú lo guardaste",
+            "en": "Always your issues, because you saved it"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Jira le crea una copia compartida al buscarlo",
+            "en": "Jira creates a shared copy for her when she searches"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "currentUser() solo se evalúa para quien puede ejecutar el filtro. Privado significa que Ana no lo ve ni lo ejecuta."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "currentUser() solo se evalúa para quien puede ejecutar el filtro. Privado significa que Ana no lo ve ni lo ejecuta.",
+        "en": "currentUser() is only evaluated for whoever can run the filter. Private means Ana neither sees it nor runs it."
+      }
     },
     {
       "id": "m08-q7",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Un administrador de proyecto ejecuta status WAS \"In Progress\" AND status = Done AND resolved >= -14d. ¿Qué issues devuelve?",
+      "stem": {
+        "es": "Un administrador de proyecto ejecuta status WAS \"In Progress\" AND status = Done AND resolved >= -14d. ¿Qué issues devuelve?",
+        "en": "A project administrator runs status WAS \"In Progress\" AND status = Done AND resolved >= -14d. Which issues does it return?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Las que ahora están en In Progress" },
-        { "id": "B", "texto": "Las cerradas en 14 días que en algún momento pasaron por In Progress" },
-        { "id": "C", "texto": "Solo las del sprint activo" },
-        { "id": "D", "texto": "Un Cumulative Flow Diagram" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Las que ahora están en In Progress",
+            "en": "Those that are now in In Progress"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las cerradas en 14 días que en algún momento pasaron por In Progress",
+            "en": "Those closed in 14 days that at some point passed through In Progress"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo las del sprint activo",
+            "en": "Only those in the active sprint"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un Cumulative Flow Diagram",
+            "en": "A Cumulative Flow Diagram"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "WAS consulta el historial. El filtro pide el estado actual Done y un paso previo por In Progress, no el estado actual solo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "WAS consulta el historial. El filtro pide el estado actual Done y un paso previo por In Progress, no el estado actual solo.",
+        "en": "WAS queries history. The filter asks for current status Done and a prior step through In Progress, not the current status alone."
+      }
     },
     {
       "id": "m08-q8",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La PMO quiere las issues de Desarrollo cuyo asignatario cambió esta semana. ¿Qué JQL es el más adecuado?",
+      "stem": {
+        "es": "La PMO quiere las issues de Desarrollo cuyo asignatario cambió esta semana. ¿Qué JQL es el más adecuado?",
+        "en": "The PMO wants Development issues whose assignee changed this week. Which JQL is most appropriate?"
+      },
       "opciones": [
-        { "id": "A", "texto": "assignee CHANGED DURING (startOfWeek(), endOfWeek())" },
-        { "id": "B", "texto": "assignee is EMPTY" },
-        { "id": "C", "texto": "project = DEV ORDER BY created DESC" },
-        { "id": "D", "texto": "statusCategory = Done" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "assignee CHANGED DURING (startOfWeek(), endOfWeek())",
+            "en": "assignee CHANGED DURING (startOfWeek(), endOfWeek())"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "assignee is EMPTY",
+            "en": "assignee is EMPTY"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "project = DEV ORDER BY created DESC",
+            "en": "project = DEV ORDER BY created DESC"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "statusCategory = Done",
+            "en": "statusCategory = Done"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "CHANGED (y WAS) son operadores de historial. created no habla de reasignaciones."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "CHANGED (y WAS) son operadores de historial. created no habla de reasignaciones.",
+        "en": "CHANGED (and WAS) are history operators. created does not speak to reassignments."
+      }
     },
     {
       "id": "m08-q9",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La consulta project = DEV AND sprint in openSprints() no devuelve nada. ¿Cuál es la causa frecuente?",
+      "stem": {
+        "es": "La consulta project = DEV AND sprint in openSprints() no devuelve nada. ¿Cuál es la causa frecuente?",
+        "en": "The query project = DEV AND sprint in openSprints() returns nothing. What is a frequent cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No hay un sprint iniciado en Desarrollo" },
-        { "id": "B", "texto": "openSprints() es JQL ilegal en Cloud" },
-        { "id": "C", "texto": "Falta el gadget Pie Chart en el dashboard" },
-        { "id": "D", "texto": "statusCategory no existe en Software" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No hay un sprint iniciado en Desarrollo",
+            "en": "There is no started sprint in Development"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "openSprints() es JQL ilegal en Cloud",
+            "en": "openSprints() is illegal JQL in Cloud"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta el gadget Pie Chart en el dashboard",
+            "en": "The Pie Chart gadget is missing from the dashboard"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "statusCategory no existe en Software",
+            "en": "statusCategory does not exist in Software"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "openSprints() solo incluye sprints en curso. Sin Iniciar sprint, el conjunto es vacío."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "openSprints() solo incluye sprints en curso. Sin Iniciar sprint, el conjunto es vacío.",
+        "en": "openSprints() only includes sprints in progress. Without Start sprint, the set is empty."
+      }
     },
     {
       "id": "m08-q10",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Un administrador de proyecto necesita las issues creadas hoy en Soporte. ¿Qué JQL es el más robusto?",
+      "stem": {
+        "es": "Un administrador de proyecto necesita las issues creadas hoy en Soporte. ¿Qué JQL es el más robusto?",
+        "en": "A project administrator needs issues created today in Support. Which JQL is the most robust?"
+      },
       "opciones": [
-        { "id": "A", "texto": "created >= startOfDay() (o created >= startOfDay() AND created <= endOfDay())" },
-        { "id": "B", "texto": "created = today, sin función de fecha" },
-        { "id": "C", "texto": "updated >= -7d" },
-        { "id": "D", "texto": "resolution = Unresolved" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "created >= startOfDay() (o created >= startOfDay() AND created <= endOfDay())",
+            "en": "created >= startOfDay() (or created >= startOfDay() AND created <= endOfDay())"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "created = today, sin función de fecha",
+            "en": "created = today, with no date function"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "updated >= -7d",
+            "en": "updated >= -7d"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "resolution = Unresolved",
+            "en": "resolution = Unresolved"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Las funciones de fecha (startOfDay, endOfDay, -7d) son el patrón estable. created = today no es JQL válido."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Las funciones de fecha (startOfDay, endOfDay, -7d) son el patrón estable. created = today no es JQL válido.",
+        "en": "Date functions (startOfDay, endOfDay, -7d) are the stable pattern. created = today is not valid JQL."
+      }
     },
     {
       "id": "m08-q11",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El filtro de issues abiertas de Desarrollo se comparte con el proyecto DEV. Un invitado con Browse Projects en DEV abre el filtro. ¿Qué puede hacer?",
+      "stem": {
+        "es": "El filtro de issues abiertas de Desarrollo se comparte con el proyecto DEV. Un invitado con Browse Projects en DEV abre el filtro. ¿Qué puede hacer?",
+        "en": "The open-issues filter for Development is shared with the DEV project. A guest with Browse Projects on DEV opens the filter. What can they do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Nada hasta ser administrador de Jira" },
-        { "id": "B", "texto": "Ver y ejecutar el filtro; sin Browse Projects no vería filas" },
-        { "id": "C", "texto": "Editar el JQL por ser viewer" },
-        { "id": "D", "texto": "Ver también las issues de RRHH" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Nada hasta ser administrador de Jira",
+            "en": "Nothing until they are a Jira administrator"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ver y ejecutar el filtro; sin Browse Projects no vería filas",
+            "en": "View and run the filter; without Browse Projects they would see no rows"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editar el JQL por ser viewer",
+            "en": "Edit the JQL because they are a viewer"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Ver también las issues de RRHH",
+            "en": "Also see HR issues"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Viewers ejecutan; editors cambian el JQL. El share del filtro más Browse Projects decide si hay filas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Viewers ejecutan; editors cambian el JQL. El share del filtro más Browse Projects decide si hay filas.",
+        "en": "Viewers run; editors change the JQL. The filter share plus Browse Projects decides whether there are rows."
+      }
     },
     {
       "id": "m08-q12",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El dashboard de PMO está compartido con el grupo nortech-pmo, pero el gadget usa un filtro solo tuyo. ¿Qué ve el grupo?",
+      "stem": {
+        "es": "El dashboard de PMO está compartido con el grupo nortech-pmo, pero el gadget usa un filtro solo tuyo. ¿Qué ve el grupo?",
+        "en": "The PMO dashboard is shared with the nortech-pmo group, but the gadget uses a filter that is only yours. What does the group see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los mismos datos que tú" },
-        { "id": "B", "texto": "Un error de permisos en el gadget, porque el filtro es privado" },
-        { "id": "C", "texto": "El sprint report del tablero Scrum" },
-        { "id": "D", "texto": "Un Cumulative Flow Diagram" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los mismos datos que tú",
+            "en": "The same data as you"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un error de permisos en el gadget, porque el filtro es privado",
+            "en": "A permissions error on the gadget, because the filter is private"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El sprint report del tablero Scrum",
+            "en": "The Scrum board’s sprint report"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un Cumulative Flow Diagram",
+            "en": "A Cumulative Flow Diagram"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Dashboard compartido más filtro privado es el síntoma clásico de gadget roto. Hay que compartir el filtro primero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Dashboard compartido más filtro privado es el síntoma clásico de gadget roto. Hay que compartir el filtro primero.",
+        "en": "A shared dashboard plus a private filter is the classic symptom of a broken gadget. Share the filter first."
+      }
     },
     {
       "id": "m08-q13",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La PMO pide una lista con clave, resumen, asignatario y estado de las issues abiertas de Desarrollo, no un gráfico de pastel. ¿Qué gadget debe usar?",
+      "stem": {
+        "es": "La PMO pide una lista con clave, resumen, asignatario y estado de las issues abiertas de Desarrollo, no un gráfico de pastel. ¿Qué gadget debe usar?",
+        "en": "The PMO wants a list with key, summary, assignee and status of Development’s open issues, not a pie chart. Which gadget should they use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Pie Chart" },
-        { "id": "B", "texto": "Filter Results" },
-        { "id": "C", "texto": "Velocity" },
-        { "id": "D", "texto": "Control chart" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Pie Chart",
+            "en": "Pie Chart"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Filter Results",
+            "en": "Filter Results"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Control chart",
+            "en": "Control chart"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Lista = Filter Results. Distribución = Pie Chart. Velocity y control chart no son gadgets de lista."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Lista = Filter Results. Distribución = Pie Chart. Velocity y control chart no son gadgets de lista.",
+        "en": "List = Filter Results. Distribution = Pie Chart. Velocity and the control chart are not list gadgets."
+      }
     },
     {
       "id": "m08-q14",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La PMO quiere ver quién tiene qué en cada estado de las issues abiertas de Desarrollo. ¿Qué gadget encaja?",
+      "stem": {
+        "es": "La PMO quiere ver quién tiene qué en cada estado de las issues abiertas de Desarrollo. ¿Qué gadget encaja?",
+        "en": "The PMO wants to see who has what in each status among Development’s open issues. Which gadget fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Two Dimensional Filter Statistics, con ejes asignatario y estado" },
-        { "id": "B", "texto": "Assigned to Me" },
-        { "id": "C", "texto": "Activity Stream" },
-        { "id": "D", "texto": "Burndown" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Two Dimensional Filter Statistics, con ejes asignatario y estado",
+            "en": "Two Dimensional Filter Statistics, with assignee and status as axes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Assigned to Me",
+            "en": "Assigned to Me"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Activity Stream",
+            "en": "Activity Stream"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Burndown",
+            "en": "Burndown"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Two Dimensional es la matriz (asignatario × estado). Assigned to Me es personal; Activity Stream es un feed."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Two Dimensional es la matriz (asignatario × estado). Assigned to Me es personal; Activity Stream es un feed.",
+        "en": "Two Dimensional is the matrix (assignee × status). Assigned to Me is personal; Activity Stream is a feed."
+      }
     },
     {
       "id": "m08-q15",
       "dominio": "reporting",
       "tipo": "multi",
-      "stem": "El director debe ver el dashboard de PMO con Filter Results sin error. ¿Qué hace falta? (Elige tres.)",
+      "stem": {
+        "es": "El director debe ver el dashboard de PMO con Filter Results sin error. ¿Qué hace falta? (Elige tres.)",
+        "en": "The director must see the PMO dashboard with Filter Results without an error. What is required? (Choose three.)"
+      },
       "opciones": [
-        { "id": "A", "texto": "El dashboard compartido con él o con su grupo" },
-        { "id": "B", "texto": "El filtro del gadget compartido con él" },
-        { "id": "C", "texto": "Browse Projects en los proyectos que devuelve el JQL" },
-        { "id": "D", "texto": "Que Created vs Resolved esté en el mismo panel" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El dashboard compartido con él o con su grupo",
+            "en": "The dashboard shared with them or their group"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El filtro del gadget compartido con él",
+            "en": "The gadget’s filter shared with them"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Browse Projects en los proyectos que devuelve el JQL",
+            "en": "Browse Projects on the projects the JQL returns"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que Created vs Resolved esté en el mismo panel",
+            "en": "Created vs Resolved on the same dashboard"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Hay tres capas: panel, filtro y Browse Projects. Un informe de análisis del proyecto no arregla un gadget."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Hay tres capas: panel, filtro y Browse Projects. Un informe de análisis del proyecto no arregla un gadget.",
+        "en": "There are three layers: dashboard, filter and Browse Projects. A project analysis report does not fix a gadget."
+      }
     },
     {
       "id": "m08-q16",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Añades Assigned to Me al dashboard compartido con nortech-pmo. ¿Qué ve cada miembro del grupo?",
+      "stem": {
+        "es": "Añades Assigned to Me al dashboard compartido con nortech-pmo. ¿Qué ve cada miembro del grupo?",
+        "en": "You add Assigned to Me to the dashboard shared with nortech-pmo. What does each group member see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Las issues de la persona que añadió el gadget" },
-        { "id": "B", "texto": "Las suyas, equivalente a currentUser()" },
-        { "id": "C", "texto": "Todas las de Desarrollo" },
-        { "id": "D", "texto": "Solo sprints cerrados" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Las issues de la persona que añadió el gadget",
+            "en": "The issues of the person who added the gadget"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las suyas, equivalente a currentUser()",
+            "en": "Their own, equivalent to currentUser()"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Todas las de Desarrollo",
+            "en": "All of Development’s issues"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo sprints cerrados",
+            "en": "Only closed sprints"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Assigned to Me es dinámico por viewer. No sustituye a Filter Results sobre un filtro de equipo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Assigned to Me es dinámico por viewer. No sustituye a Filter Results sobre un filtro de equipo.",
+        "en": "Assigned to Me is dynamic per viewer. It does not replace Filter Results on a team filter."
+      }
     },
     {
       "id": "m08-q17",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Te muestran un gráfico de barras por sprint con comprometido frente a completado en puntos. ¿Qué informe es?",
+      "stem": {
+        "es": "Te muestran un gráfico de barras por sprint con comprometido frente a completado en puntos. ¿Qué informe es?",
+        "en": "You are shown a bar chart per sprint with committed versus completed in points. Which report is it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Created vs Resolved" },
-        { "id": "B", "texto": "Velocity" },
-        { "id": "C", "texto": "Pie Chart" },
-        { "id": "D", "texto": "Average age" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Created vs Resolved",
+            "en": "Created vs Resolved"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pie Chart",
+            "en": "Pie Chart"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Average age",
+            "en": "Average age"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Velocity se reconoce por barras de sprint (comprometido vs completado). CFD = áreas; Created vs Resolved = dos series en el tiempo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Velocity se reconoce por barras de sprint (comprometido vs completado). CFD = áreas; Created vs Resolved = dos series en el tiempo.",
+        "en": "Velocity is recognized by sprint bars (committed vs completed). CFD = areas; Created vs Resolved = two series over time."
+      }
     },
     {
       "id": "m08-q18",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "En Informes del proyecto Desarrollo aparecen dos líneas en el tiempo: creados y resueltos. ¿Qué informe es?",
+      "stem": {
+        "es": "En Informes del proyecto Desarrollo aparecen dos líneas en el tiempo: creados y resueltos. ¿Qué informe es?",
+        "en": "In Reports for the Development project, two lines appear over time: created and resolved. Which report is it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cumulative Flow Diagram" },
-        { "id": "B", "texto": "Created vs Resolved, en el análisis del proyecto" },
-        { "id": "C", "texto": "Sprint report" },
-        { "id": "D", "texto": "Filter Results" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cumulative Flow Diagram",
+            "en": "Cumulative Flow Diagram"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Created vs Resolved, en el análisis del proyecto",
+            "en": "Created vs Resolved, in project analysis"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sprint report",
+            "en": "Sprint report"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Filter Results",
+            "en": "Filter Results"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Created vs Resolved es un informe de análisis del proyecto, no un gadget por defecto ni un informe ágil del tablero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Created vs Resolved es un informe de análisis del proyecto, no un gadget por defecto ni un informe ágil del tablero.",
+        "en": "Created vs Resolved is a project analysis report, not a default gadget and not an agile board report."
+      }
     },
     {
       "id": "m08-q19",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Ves puntos (issues) con media móvil y algunos fuera de banda, midiendo el tiempo en columnas. ¿Qué gráfico es?",
+      "stem": {
+        "es": "Ves puntos (issues) con media móvil y algunos fuera de banda, midiendo el tiempo en columnas. ¿Qué gráfico es?",
+        "en": "You see points (issues) with a rolling average and some outside the band, measuring time in columns. Which chart is it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Control chart" },
-        { "id": "B", "texto": "Velocity" },
-        { "id": "C", "texto": "Pie Chart" },
-        { "id": "D", "texto": "Two Dimensional Filter Statistics" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Control chart",
+            "en": "Control chart"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pie Chart",
+            "en": "Pie Chart"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Two Dimensional Filter Statistics",
+            "en": "Two Dimensional Filter Statistics"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El control chart muestra cycle time o aging en el tablero. Los outliers son puntos lejos de la media."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El control chart muestra cycle time o aging en el tablero. Los outliers son puntos lejos de la media.",
+        "en": "The control chart shows cycle time or aging on the board. Outliers are points far from the average."
+      }
     },
     {
       "id": "m08-q20",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El Scrum Master de Desarrollo pregunta si el equipo va a terminar este sprint. ¿Qué informe debe abrir?",
+      "stem": {
+        "es": "El Scrum Master de Desarrollo pregunta si el equipo va a terminar este sprint. ¿Qué informe debe abrir?",
+        "en": "Development’s Scrum Master asks whether the team will finish this sprint. Which report should they open?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El burndown (y el sprint report) del sprint activo" },
-        { "id": "B", "texto": "Solo la velocity de los últimos seis meses" },
-        { "id": "C", "texto": "Created vs Resolved de Soporte" },
-        { "id": "D", "texto": "Activity Stream" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El burndown (y el sprint report) del sprint activo",
+            "en": "The burndown (and the sprint report) of the active sprint"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo la velocity de los últimos seis meses",
+            "en": "Only velocity for the last six months"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Created vs Resolved de Soporte",
+            "en": "Created vs Resolved for Support"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Activity Stream",
+            "en": "Activity Stream"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El burndown responde al timebox actual. La velocity habla de capacidad histórica entre sprints."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El burndown responde al timebox actual. La velocity habla de capacidad histórica entre sprints.",
+        "en": "The burndown answers the current timebox. Velocity speaks to historical capacity across sprints."
+      }
     },
     {
       "id": "m08-q21",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "En el CFD de Soporte la franja In Progress se ensancha día a día. ¿Cómo se interpreta?",
+      "stem": {
+        "es": "En el CFD de Soporte la franja In Progress se ensancha día a día. ¿Cómo se interpreta?",
+        "en": "On Support’s CFD the In Progress band widens day after day. How is that interpreted?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El equipo vacía In Progress más rápido de lo que entra trabajo" },
-        { "id": "B", "texto": "Hay un cuello de botella: se acumula trabajo en esa columna o estado" },
-        { "id": "C", "texto": "La velocity del equipo es alta" },
-        { "id": "D", "texto": "El filtro del dashboard está privado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El equipo vacía In Progress más rápido de lo que entra trabajo",
+            "en": "The team empties In Progress faster than work arrives"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hay un cuello de botella: se acumula trabajo en esa columna o estado",
+            "en": "There is a bottleneck: work is accumulating in that column or status"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La velocity del equipo es alta",
+            "en": "The team’s velocity is high"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro del dashboard está privado",
+            "en": "The dashboard filter is private"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El ensanchamiento de una banda en el CFD es acumulación. Indica cuello de botella, no throughput alto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El ensanchamiento de una banda en el CFD es acumulación. Indica cuello de botella, no throughput alto.",
+        "en": "A widening band on the CFD is accumulation. It indicates a bottleneck, not high throughput."
+      }
     },
     {
       "id": "m08-q22",
       "dominio": "reporting",
       "tipo": "multi",
-      "stem": "Un administrador de proyecto debe saber dónde vive cada artefacto. ¿Qué ubicaciones son correctas? (Elige tres.)",
+      "stem": {
+        "es": "Un administrador de proyecto debe saber dónde vive cada artefacto. ¿Qué ubicaciones son correctas? (Elige tres.)",
+        "en": "A project administrator must know where each artifact lives. Which locations are correct? (Choose three.)"
+      },
       "opciones": [
-        { "id": "A", "texto": "Velocity: informes del tablero Scrum de Desarrollo" },
-        { "id": "B", "texto": "Filter Results: un dashboard de PMO" },
-        { "id": "C", "texto": "Created vs Resolved: informes de análisis del proyecto" },
-        { "id": "D", "texto": "Velocity: gadget por defecto de cualquier dashboard" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Velocity: informes del tablero Scrum de Desarrollo",
+            "en": "Velocity: reports on Development’s Scrum board"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Filter Results: un dashboard de PMO",
+            "en": "Filter Results: a PMO dashboard"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Created vs Resolved: informes de análisis del proyecto",
+            "en": "Created vs Resolved: project analysis reports"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Velocity: gadget por defecto de cualquier dashboard",
+            "en": "Velocity: a default gadget on any dashboard"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Dashboard, informes del tablero e informes de análisis del proyecto son menús distintos. Velocity no es un gadget por defecto del panel."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Dashboard, informes del tablero e informes de análisis del proyecto son menús distintos. Velocity no es un gadget por defecto del panel.",
+        "en": "Dashboard, board reports and project analysis reports are different menus. Velocity is not a default dashboard gadget."
+      }
     },
     {
       "id": "m08-q23",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La PMO pregunta cuánto llevan abiertas de media las issues no resueltas de Desarrollo. ¿Qué informe responde?",
+      "stem": {
+        "es": "La PMO pregunta cuánto llevan abiertas de media las issues no resueltas de Desarrollo. ¿Qué informe responde?",
+        "en": "The PMO asks how long Development’s unresolved issues have been open on average. Which report answers?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Average age" },
-        { "id": "B", "texto": "Velocity" },
-        { "id": "C", "texto": "Sprint report" },
-        { "id": "D", "texto": "Pie Chart gadget" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Average age",
+            "en": "Average age"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sprint report",
+            "en": "Sprint report"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pie Chart gadget",
+            "en": "Pie Chart gadget"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Average age es la antigüedad de las unresolved. Resolution time mide cuánto tardaron las ya cerradas."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Average age es la antigüedad de las unresolved. Resolution time mide cuánto tardaron las ya cerradas.",
+        "en": "Average age is the age of unresolved issues. Resolution time measures how long already-closed ones took."
+      }
     },
     {
       "id": "m08-q24",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El sprint report de Desarrollo lista una issue como añadida a mitad del sprint. ¿Qué indica?",
+      "stem": {
+        "es": "El sprint report de Desarrollo lista una issue como añadida a mitad del sprint. ¿Qué indica?",
+        "en": "Development’s sprint report lists an issue as added mid-sprint. What does that indicate?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un fallo del Cumulative Flow Diagram" },
-        { "id": "B", "texto": "Un cambio de alcance (scope change) del timebox" },
-        { "id": "C", "texto": "Que el filtro del dashboard es privado" },
-        { "id": "D", "texto": "Que el gadget del panel es un Pie Chart" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un fallo del Cumulative Flow Diagram",
+            "en": "A Cumulative Flow Diagram defect"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un cambio de alcance (scope change) del timebox",
+            "en": "A scope change of the timebox"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que el filtro del dashboard es privado",
+            "en": "That the dashboard filter is private"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que el gadget del panel es un Pie Chart",
+            "en": "That the dashboard gadget is a Pie Chart"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El sprint report distingue completadas, no completadas, añadidas y retiradas. Añadir a mitad es scope change."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El sprint report distingue completadas, no completadas, añadidas y retiradas. Añadir a mitad es scope change.",
+        "en": "The sprint report distinguishes completed, not completed, added and removed. Adding mid-sprint is scope change."
+      }
     },
     {
       "id": "m08-q25",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La velocity de Desarrollo está vacía o no aporta barras útiles. ¿Cuál es la causa más frecuente?",
+      "stem": {
+        "es": "La velocity de Desarrollo está vacía o no aporta barras útiles. ¿Cuál es la causa más frecuente?",
+        "en": "Development’s velocity is empty or does not provide useful bars. What is the most frequent cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Hace falta al menos un sprint cerrado, con estimación en lo completado" },
-        { "id": "B", "texto": "El gadget Filter Results del dashboard está mal configurado" },
-        { "id": "C", "texto": "Falta el gadget Activity Stream" },
-        { "id": "D", "texto": "currentUser() está mal escrito en un filtro" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Hace falta al menos un sprint cerrado, con estimación en lo completado",
+            "en": "At least one closed sprint is needed, with estimation on what was completed"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El gadget Filter Results del dashboard está mal configurado",
+            "en": "The dashboard’s Filter Results gadget is misconfigured"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta el gadget Activity Stream",
+            "en": "The Activity Stream gadget is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "currentUser() está mal escrito en un filtro",
+            "en": "currentUser() is mistyped in a filter"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "La velocity se construye con sprints cerrados. Sin completar un sprint (y estimar lo entregado) no hay barras."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "La velocity se construye con sprints cerrados. Sin completar un sprint (y estimar lo entregado) no hay barras.",
+        "en": "Velocity is built from closed sprints. Without completing a sprint (and estimating what was delivered) there are no bars."
+      }
     },
     {
       "id": "m08-q26",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El CFD de Soporte está plano, con una sola franja. ¿Qué debería ocurrir antes de interpretar cuellos de botella?",
+      "stem": {
+        "es": "El CFD de Soporte está plano, con una sola franja. ¿Qué debería ocurrir antes de interpretar cuellos de botella?",
+        "en": "Support’s CFD is flat, with a single band. What should happen before interpreting bottlenecks?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Mover varias issues entre columnas para generar transiciones" },
-        { "id": "B", "texto": "Añadir Velocity al dashboard" },
-        { "id": "C", "texto": "Borrar el filtro de issues abiertas de Desarrollo" },
-        { "id": "D", "texto": "Quitar Browse Projects al equipo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Mover varias issues entre columnas para generar transiciones",
+            "en": "Move several issues between columns to generate transitions"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Añadir Velocity al dashboard",
+            "en": "Add Velocity to the dashboard"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borrar el filtro de issues abiertas de Desarrollo",
+            "en": "Delete Development’s open-issues filter"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Quitar Browse Projects al equipo",
+            "en": "Remove Browse Projects from the team"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Un CFD plano suele significar pocas transiciones, no un flujo perfecto. Sin movimiento no hay bandas que interpretar."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Un CFD plano suele significar pocas transiciones, no un flujo perfecto. Sin movimiento no hay bandas que interpretar.",
+        "en": "A flat CFD usually means few transitions, not a perfect flow. Without movement there are no bands to interpret."
+      }
     },
     {
       "id": "m08-q27",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La consulta status = In Progress falla. ¿Cuál es el arreglo?",
+      "stem": {
+        "es": "La consulta status = In Progress falla. ¿Cuál es el arreglo?",
+        "en": "The query status = In Progress fails. What is the fix?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Escribir status = \"In Progress\", con el nombre entre comillas" },
-        { "id": "B", "texto": "Usar solo un Pie Chart en lugar de JQL" },
-        { "id": "C", "texto": "Cambiar a Average age" },
-        { "id": "D", "texto": "Poner el dashboard en dos columnas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Escribir status = \"In Progress\", con el nombre entre comillas",
+            "en": "Write status = \"In Progress\", with the name in quotes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Usar solo un Pie Chart en lugar de JQL",
+            "en": "Use only a Pie Chart instead of JQL"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar a Average age",
+            "en": "Switch to Average age"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Poner el dashboard en dos columnas",
+            "en": "Put the dashboard in two columns"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Los nombres con espacio (o palabras reservadas) van entre comillas. Es el error JQL más habitual con estados."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Los nombres con espacio (o palabras reservadas) van entre comillas. Es el error JQL más habitual con estados.",
+        "en": "Names with a space (or reserved words) go in quotes. It is the most common JQL error with statuses."
+      }
     },
     {
       "id": "m08-q28",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "La PMO quiere los bugs de Soporte que aún no tienen componente. ¿Qué JQL debe usar?",
+      "stem": {
+        "es": "La PMO quiere los bugs de Soporte que aún no tienen componente. ¿Qué JQL debe usar?",
+        "en": "The PMO wants Support bugs that still have no component. Which JQL should they use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "project = SUP AND issuetype = Bug AND component is EMPTY" },
-        { "id": "B", "texto": "component = SUP" },
-        { "id": "C", "texto": "sprint in openSprints()" },
-        { "id": "D", "texto": "assignee = currentUser() AND project = DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "project = SUP AND issuetype = Bug AND component is EMPTY",
+            "en": "project = SUP AND issuetype = Bug AND component is EMPTY"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "component = SUP",
+            "en": "component = SUP"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "sprint in openSprints()",
+            "en": "sprint in openSprints()"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "assignee = currentUser() AND project = DEV",
+            "en": "assignee = currentUser() AND project = DEV"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "is EMPTY es el patrón para «sin clasificar». No es un informe ágil ni un filtro de sprint."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "is EMPTY es el patrón para «sin clasificar». No es un informe ágil ni un filtro de sprint.",
+        "en": "is EMPTY is the pattern for “unclassified”. It is not an agile report or a sprint filter."
+      }
     },
     {
       "id": "m08-q29",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Necesitas el trabajo de la versión 1.0.0 de Desarrollo que aún no está Done. ¿Qué JQL encaja?",
+      "stem": {
+        "es": "Necesitas el trabajo de la versión 1.0.0 de Desarrollo que aún no está Done. ¿Qué JQL encaja?",
+        "en": "You need Development version 1.0.0 work that is not yet Done. Which JQL fits?"
+      },
       "opciones": [
-        { "id": "A", "texto": "project = DEV AND fixVersion = \"1.0.0\" AND statusCategory != Done" },
-        { "id": "B", "texto": "affectedVersion is EMPTY" },
-        { "id": "C", "texto": "labels = 1.0.0, porque fixVersion no existe" },
-        { "id": "D", "texto": "sprint is EMPTY" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "project = DEV AND fixVersion = \"1.0.0\" AND statusCategory != Done",
+            "en": "project = DEV AND fixVersion = \"1.0.0\" AND statusCategory != Done"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "affectedVersion is EMPTY",
+            "en": "affectedVersion is EMPTY"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "labels = 1.0.0, porque fixVersion no existe",
+            "en": "labels = 1.0.0, because fixVersion does not exist"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "sprint is EMPTY",
+            "en": "sprint is EMPTY"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "fixVersion es el campo de alcance de la versión. Se combina con statusCategory para dejar fuera lo ya cerrado."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "fixVersion es el campo de alcance de la versión. Se combina con statusCategory para dejar fuera lo ya cerrado.",
+        "en": "fixVersion is the version-scope field. Combine it with statusCategory to leave out what is already closed."
+      }
     },
     {
       "id": "m08-q30",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Ana es viewer del filtro de issues abiertas de Desarrollo y quiere cambiar el JQL. ¿Qué necesita?",
+      "stem": {
+        "es": "Ana es viewer del filtro de issues abiertas de Desarrollo y quiere cambiar el JQL. ¿Qué necesita?",
+        "en": "Ana is a viewer of Development’s open-issues filter and wants to change the JQL. What does she need?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ser editor del filtro, o pedir al propietario que la añada" },
-        { "id": "B", "texto": "Solo Browse Projects" },
-        { "id": "C", "texto": "Marcar el dashboard como favorito" },
-        { "id": "D", "texto": "Añadir el gadget Assigned to Me" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ser editor del filtro, o pedir al propietario que la añada",
+            "en": "To be an editor of the filter, or ask the owner to add her"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo Browse Projects",
+            "en": "Browse Projects only"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Marcar el dashboard como favorito",
+            "en": "To star the dashboard as a favorite"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Añadir el gadget Assigned to Me",
+            "en": "To add the Assigned to Me gadget"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Viewers ejecutan; editors y el owner cambian el JQL. Un dashboard favorito no edita filtros."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Viewers ejecutan; editors y el owner cambian el JQL. Un dashboard favorito no edita filtros.",
+        "en": "Viewers run; editors and the owner change the JQL. A favorite dashboard does not edit filters."
+      }
     },
     {
       "id": "m08-q31",
       "dominio": "reporting",
       "tipo": "multi",
-      "stem": "El dashboard de PMO debe responder lista, distribución y «lo mío». ¿Qué gadgets encajan? (Elige tres.)",
+      "stem": {
+        "es": "El dashboard de PMO debe responder lista, distribución y «lo mío». ¿Qué gadgets encajan? (Elige tres.)",
+        "en": "The PMO dashboard must answer list, distribution and “mine”. Which gadgets fit? (Choose three.)"
+      },
       "opciones": [
-        { "id": "A", "texto": "Filter Results sobre el filtro de issues abiertas de Desarrollo" },
-        { "id": "B", "texto": "Pie Chart, con estadística Status o Priority" },
-        { "id": "C", "texto": "Assigned to Me" },
-        { "id": "D", "texto": "Velocity del tablero Scrum" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Filter Results sobre el filtro de issues abiertas de Desarrollo",
+            "en": "Filter Results on Development’s open-issues filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pie Chart, con estadística Status o Priority",
+            "en": "Pie Chart, with Status or Priority as the statistic"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Assigned to Me",
+            "en": "Assigned to Me"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Velocity del tablero Scrum",
+            "en": "Velocity from the Scrum board"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Lista, pastel y Assigned to Me cubren esas tres preguntas. Velocity se queda en los informes del tablero Scrum."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Lista, pastel y Assigned to Me cubren esas tres preguntas. Velocity se queda en los informes del tablero Scrum.",
+        "en": "List, pie and Assigned to Me cover those three questions. Velocity stays in the Scrum board reports."
+      }
     },
     {
       "id": "m08-q32",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El filtro project in (DEV, SUP) está compartido con nortech-pmo. Marta del grupo no tiene Browse Projects en Soporte. Al ejecutarlo, ¿qué ve?",
+      "stem": {
+        "es": "El filtro project in (DEV, SUP) está compartido con nortech-pmo. Marta del grupo no tiene Browse Projects en Soporte. Al ejecutarlo, ¿qué ve?",
+        "en": "The filter project in (DEV, SUP) is shared with nortech-pmo. Marta in the group does not have Browse Projects on Support. When she runs it, what does she see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Filas de DEV y de SUP por igual" },
-        { "id": "B", "texto": "Solo filas de proyectos donde tiene Browse Projects; SUP no existe para ella" },
-        { "id": "C", "texto": "Jira le otorga Browse Projects al ejecutar el filtro" },
-        { "id": "D", "texto": "El filtro se vuelve privado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Filas de DEV y de SUP por igual",
+            "en": "DEV and SUP rows equally"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo filas de proyectos donde tiene Browse Projects; SUP no existe para ella",
+            "en": "Only rows from projects where she has Browse Projects; SUP does not exist for her"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira le otorga Browse Projects al ejecutar el filtro",
+            "en": "Jira grants her Browse Projects when she runs the filter"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro se vuelve privado",
+            "en": "The filter becomes private"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Compartir el filtro no otorga Browse Projects. El JQL no salta los permisos del proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Compartir el filtro no otorga Browse Projects. El JQL no salta los permisos del proyecto.",
+        "en": "Sharing the filter does not grant Browse Projects. The JQL does not bypass project permissions."
+      }
     },
     {
       "id": "m08-q33",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Dirección quiere una pared de monitores con el trabajo de varios proyectos, no el detalle de un sprint. ¿Qué debe montar el administrador de proyecto?",
+      "stem": {
+        "es": "Dirección quiere una pared de monitores con el trabajo de varios proyectos, no el detalle de un sprint. ¿Qué debe montar el administrador de proyecto?",
+        "en": "Leadership wants a monitor wall with work from several projects, not the detail of one sprint. What should the project administrator set up?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un dashboard compartido con filtros; no un único sprint report" },
-        { "id": "B", "texto": "Solo el burndown de Desarrollo" },
-        { "id": "C", "texto": "Solo Average age" },
-        { "id": "D", "texto": "Solo el control chart" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un dashboard compartido con filtros; no un único sprint report",
+            "en": "A shared dashboard with filters; not a single sprint report"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo el burndown de Desarrollo",
+            "en": "Only Development’s burndown"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo Average age",
+            "en": "Only Average age"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el control chart",
+            "en": "Only the control chart"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El dashboard es la pared diaria. El sprint report cubre un timebox. El contraste es alcance transversal frente a un sprint."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El dashboard es la pared diaria. El sprint report cubre un timebox. El contraste es alcance transversal frente a un sprint.",
+        "en": "The dashboard is the daily wall. The sprint report covers a timebox. The contrast is cross-cutting scope versus one sprint."
+      }
     },
     {
       "id": "m08-q34",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Hay un informe Pie Chart en Informes del proyecto y un gadget Pie Chart en un dashboard. ¿Cuál es la diferencia clave?",
+      "stem": {
+        "es": "Hay un informe Pie Chart en Informes del proyecto y un gadget Pie Chart en un dashboard. ¿Cuál es la diferencia clave?",
+        "en": "There is a Pie Chart report in project Reports and a Pie Chart gadget on a dashboard. What is the key difference?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El informe vive en el proyecto; el gadget vive en un dashboard alimentado por un filtro" },
-        { "id": "B", "texto": "Son el mismo objeto con otro nombre" },
-        { "id": "C", "texto": "El gadget solo existe si también está Velocity" },
-        { "id": "D", "texto": "El informe del proyecto exige currentUser()" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El informe vive en el proyecto; el gadget vive en un dashboard alimentado por un filtro",
+            "en": "The report lives in the project; the gadget lives on a dashboard fed by a filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Son el mismo objeto con otro nombre",
+            "en": "They are the same object with another name"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El gadget solo existe si también está Velocity",
+            "en": "The gadget only exists if Velocity is also present"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El informe del proyecto exige currentUser()",
+            "en": "The project report requires currentUser()"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El gráfico se parece, pero el sitio y el permiso cambian: análisis del proyecto frente a filtro más panel."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El gráfico se parece, pero el sitio y el permiso cambian: análisis del proyecto frente a filtro más panel.",
+        "en": "The chart looks similar, but the place and the permission change: project analysis versus filter plus dashboard."
+      }
     },
     {
       "id": "m08-q35",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Soporte pregunta cuánto tardan en resolver sus tickets. ¿Qué informe de análisis del proyecto responde?",
+      "stem": {
+        "es": "Soporte pregunta cuánto tardan en resolver sus tickets. ¿Qué informe de análisis del proyecto responde?",
+        "en": "Support asks how long they take to resolve their tickets. Which project analysis report answers?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Resolution time" },
-        { "id": "B", "texto": "Velocity" },
-        { "id": "C", "texto": "Filter Results" },
-        { "id": "D", "texto": "Assigned to Me" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Resolution time",
+            "en": "Resolution time"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Filter Results",
+            "en": "Filter Results"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Assigned to Me",
+            "en": "Assigned to Me"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Resolution time mide tickets ya cerrados. Average age mira los aún abiertos. Velocity no es tiempo de ticket."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Resolution time mide tickets ya cerrados. Average age mira los aún abiertos. Velocity no es tiempo de ticket.",
+        "en": "Resolution time measures already-closed tickets. Average age looks at those still open. Velocity is not ticket time."
+      }
     },
     {
       "id": "m08-q36",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Añades Activity Stream al dashboard de PMO. ¿Para qué sirve?",
+      "stem": {
+        "es": "Añades Activity Stream al dashboard de PMO. ¿Para qué sirve?",
+        "en": "You add Activity Stream to the PMO dashboard. What is it for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sustituir al Cumulative Flow Diagram" },
-        { "id": "B", "texto": "Ver actividad reciente, filtrable; no es un recuento por persona" },
-        { "id": "C", "texto": "Calcular la velocity" },
-        { "id": "D", "texto": "Compartir el filtro del gadget" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sustituir al Cumulative Flow Diagram",
+            "en": "To replace the Cumulative Flow Diagram"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ver actividad reciente, filtrable; no es un recuento por persona",
+            "en": "To see recent activity, which can be filtered; it is not a count by person"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Calcular la velocity",
+            "en": "To calculate velocity"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Compartir el filtro del gadget",
+            "en": "To share the gadget’s filter"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Activity Stream es un feed opcional. No responde «abiertas por persona» ni sustituye un informe ágil."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Activity Stream es un feed opcional. No responde «abiertas por persona» ni sustituye un informe ágil.",
+        "en": "Activity Stream is an optional feed. It does not answer “open by person” or replace an agile report."
+      }
     },
     {
       "id": "m08-q37",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Luis tiene el dashboard compartido pero no le aparece en el menú de Paneles. ¿Cuál es el primer gesto?",
+      "stem": {
+        "es": "Luis tiene el dashboard compartido pero no le aparece en el menú de Paneles. ¿Cuál es el primer gesto?",
+        "en": "Luis has the shared dashboard but it does not appear in the Dashboards menu. What is the first action?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Marcarlo como favorito (estrella) y revisar que es viewer" },
-        { "id": "B", "texto": "Recrear el filtro de issues abiertas de Desarrollo" },
-        { "id": "C", "texto": "Cambiar el Pie Chart por Two Dimensional" },
-        { "id": "D", "texto": "Quitar currentUser() de todos los filtros del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Marcarlo como favorito (estrella) y revisar que es viewer",
+            "en": "Star it as a favorite and check that he is a viewer"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Recrear el filtro de issues abiertas de Desarrollo",
+            "en": "Recreate Development’s open-issues filter"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar el Pie Chart por Two Dimensional",
+            "en": "Replace the Pie Chart with Two Dimensional"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Quitar currentUser() de todos los filtros del site",
+            "en": "Remove currentUser() from every filter on the site"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El menú de Paneles muestra favoritos, no todos los dashboards compartidos. Hay que estrellarlo y confirmar viewers."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El menú de Paneles muestra favoritos, no todos los dashboards compartidos. Hay que estrellarlo y confirmar viewers.",
+        "en": "The Dashboards menu shows favorites, not every shared dashboard. Star it and confirm viewers."
+      }
     },
     {
       "id": "m08-q38",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Un administrador de proyecto debe compartir el filtro de issues abiertas de Desarrollo. ¿Qué cambia si lo comparte con el proyecto DEV o con el grupo nortech-pmo?",
+      "stem": {
+        "es": "Un administrador de proyecto debe compartir el filtro de issues abiertas de Desarrollo. ¿Qué cambia si lo comparte con el proyecto DEV o con el grupo nortech-pmo?",
+        "en": "A project administrator must share Development’s open-issues filter. What changes if they share it with the DEV project versus the nortech-pmo group?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Con el proyecto, quien tenga acceso a DEV; con el grupo, la PMO aunque no «viva» en DEV" },
-        { "id": "B", "texto": "Da igual: son el mismo conjunto de personas" },
-        { "id": "C", "texto": "El grupo otorga Browse Projects en DEV" },
-        { "id": "D", "texto": "Solo se puede compartir con todo el mundo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Con el proyecto, quien tenga acceso a DEV; con el grupo, la PMO aunque no «viva» en DEV",
+            "en": "With the project, anyone who has access to DEV; with the group, the PMO even if they do not “live” in DEV"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Da igual: son el mismo conjunto de personas",
+            "en": "It does not matter: they are the same set of people"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El grupo otorga Browse Projects en DEV",
+            "en": "The group grants Browse Projects on DEV"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo se puede compartir con todo el mundo",
+            "en": "It can only be shared with everyone"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Los viewers de un filtro pueden ser proyecto, grupo, rol u organización. El grupo no sustituye Browse Projects."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Los viewers de un filtro pueden ser proyecto, grupo, rol u organización. El grupo no sustituye Browse Projects.",
+        "en": "A filter’s viewers can be a project, group, role or organization. The group does not replace Browse Projects."
+      }
     },
     {
       "id": "m08-q39",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Filter Results usa un filtro con assignee = currentUser() en un dashboard compartido. ¿Qué ve cada viewer?",
+      "stem": {
+        "es": "Filter Results usa un filtro con assignee = currentUser() en un dashboard compartido. ¿Qué ve cada viewer?",
+        "en": "Filter Results uses a filter with assignee = currentUser() on a shared dashboard. What does each viewer see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Tus issues, porque tú guardaste el filtro" },
-        { "id": "B", "texto": "Las suyas, si puede usar el filtro; si el filtro es privado, un error" },
-        { "id": "C", "texto": "El Cumulative Flow Diagram" },
-        { "id": "D", "texto": "Solo sprints cerrados" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Tus issues, porque tú guardaste el filtro",
+            "en": "Your issues, because you saved the filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las suyas, si puede usar el filtro; si el filtro es privado, un error",
+            "en": "Their own, if they can use the filter; if the filter is private, an error"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El Cumulative Flow Diagram",
+            "en": "The Cumulative Flow Diagram"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo sprints cerrados",
+            "en": "Only closed sprints"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "currentUser() se evalúa al ver. Compartir el filtro es requisito; el owner no congela su usuario en el resultado."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "currentUser() se evalúa al ver. Compartir el filtro es requisito; el owner no congela su usuario en el resultado.",
+        "en": "currentUser() is evaluated at view time. Sharing the filter is required; the owner does not freeze their user in the result."
+      }
     },
     {
       "id": "m08-q40",
       "dominio": "reporting",
       "tipo": "multi",
-      "stem": "Un administrador de proyecto escribe JQL para filtros y gadgets. ¿Qué funciones u operadores debe reconocer? (Elige tres.)",
+      "stem": {
+        "es": "Un administrador de proyecto escribe JQL para filtros y gadgets. ¿Qué funciones u operadores debe reconocer? (Elige tres.)",
+        "en": "A project administrator writes JQL for filters and gadgets. Which functions or operators should they recognize? (Choose three.)"
+      },
       "opciones": [
-        { "id": "A", "texto": "currentUser()" },
-        { "id": "B", "texto": "sprint in openSprints()" },
-        { "id": "C", "texto": "WAS y CHANGED" },
-        { "id": "D", "texto": "DELETE FROM jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "currentUser()",
+            "en": "currentUser()"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "sprint in openSprints()",
+            "en": "sprint in openSprints()"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "WAS y CHANGED",
+            "en": "WAS and CHANGED"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "DELETE FROM jira",
+            "en": "DELETE FROM jira"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "También son habituales startOfDay, endOfDay, fixVersion, component y statusCategory. JQL no es SQL destructivo."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "También son habituales startOfDay, endOfDay, fixVersion, component y statusCategory. JQL no es SQL destructivo.",
+        "en": "startOfDay, endOfDay, fixVersion, component and statusCategory are also common. JQL is not destructive SQL."
+      }
     },
     {
       "id": "m08-q41",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El Pie Chart del dashboard de PMO usa el filtro de issues abiertas de Desarrollo. Editas el JQL de ese filtro. ¿Qué ocurre en el gadget?",
+      "stem": {
+        "es": "El Pie Chart del dashboard de PMO usa el filtro de issues abiertas de Desarrollo. Editas el JQL de ese filtro. ¿Qué ocurre en el gadget?",
+        "en": "The Pie Chart on the PMO dashboard uses Development’s open-issues filter. You edit that filter’s JQL. What happens on the gadget?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sigue con el JQL antiguo hasta recrear el gadget" },
-        { "id": "B", "texto": "Muestra el nuevo conjunto: el gadget consume el filtro guardado" },
-        { "id": "C", "texto": "Jira bloquea la edición si hay un dashboard" },
-        { "id": "D", "texto": "Se crea un sprint report" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sigue con el JQL antiguo hasta recrear el gadget",
+            "en": "It keeps the old JQL until you recreate the gadget"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Muestra el nuevo conjunto: el gadget consume el filtro guardado",
+            "en": "It shows the new set: the gadget consumes the saved filter"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira bloquea la edición si hay un dashboard",
+            "en": "Jira blocks the edit if a dashboard exists"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se crea un sprint report",
+            "en": "A sprint report is created"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Gobernar el filtro es gobernar todos los gadgets que lo apuntan. Por eso hay que vigilar quién es editor."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Gobernar el filtro es gobernar todos los gadgets que lo apuntan. Por eso hay que vigilar quién es editor.",
+        "en": "Governing the filter is governing every gadget that points at it. That is why you must watch who is an editor."
+      }
     },
     {
       "id": "m08-q42",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "En Created vs Resolved de Soporte, la serie de creados está siempre por encima de la de resueltos. ¿Cómo se interpreta?",
+      "stem": {
+        "es": "En Created vs Resolved de Soporte, la serie de creados está siempre por encima de la de resueltos. ¿Cómo se interpreta?",
+        "en": "On Support’s Created vs Resolved, the created series is always above the resolved series. How is that interpreted?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El backlog abierto crece" },
-        { "id": "B", "texto": "La velocity de Scrum es alta" },
-        { "id": "C", "texto": "El filtro del dashboard está privado" },
-        { "id": "D", "texto": "Assigned to Me está vacío" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El backlog abierto crece",
+            "en": "The open backlog is growing"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La velocity de Scrum es alta",
+            "en": "Scrum velocity is high"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El filtro del dashboard está privado",
+            "en": "The dashboard filter is private"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Assigned to Me está vacío",
+            "en": "Assigned to Me is empty"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Entrada mayor que salida significa que la cola abierta crece. No es un gráfico de sprint."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Entrada mayor que salida significa que la cola abierta crece. No es un gráfico de sprint.",
+        "en": "Inflow greater than outflow means the open queue is growing. It is not a sprint chart."
+      }
     },
     {
       "id": "m08-q43",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El control chart de Soporte muestra tres puntos muy por encima de la media. ¿Qué significan?",
+      "stem": {
+        "es": "El control chart de Soporte muestra tres puntos muy por encima de la media. ¿Qué significan?",
+        "en": "Support’s control chart shows three points well above the average. What do they mean?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sprints que no se han iniciado" },
-        { "id": "B", "texto": "Outliers: ciclo mucho más largo que el resto; hay que investigarlos, no «corregir» la media" },
-        { "id": "C", "texto": "Que el gadget Pie Chart está mal configurado" },
-        { "id": "D", "texto": "Que el dashboard no está compartido" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sprints que no se han iniciado",
+            "en": "Sprints that have not been started"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Outliers: ciclo mucho más largo que el resto; hay que investigarlos, no «corregir» la media",
+            "en": "Outliers: a much longer cycle than the rest; investigate them, do not “correct” the average"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que el gadget Pie Chart está mal configurado",
+            "en": "That the Pie Chart gadget is misconfigured"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que el dashboard no está compartido",
+            "en": "That the dashboard is not shared"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El control chart mide cycle time por issue. Los outliers no son velocity ni un permiso de panel."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El control chart mide cycle time por issue. Los outliers no son velocity ni un permiso de panel.",
+        "en": "The control chart measures cycle time per issue. Outliers are not velocity or a dashboard permission."
+      }
     },
     {
       "id": "m08-q44",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Compartes el filtro de issues abiertas de Desarrollo con nortech-pmo. Un miembro ve el filtro pero 0 resultados. El share ya está. ¿Qué debes comprobar después?",
+      "stem": {
+        "es": "Compartes el filtro de issues abiertas de Desarrollo con nortech-pmo. Un miembro ve el filtro pero 0 resultados. El share ya está. ¿Qué debes comprobar después?",
+        "en": "You share Development’s open-issues filter with nortech-pmo. A member sees the filter but 0 results. The share is already in place. What should you check next?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Browse Projects en Desarrollo; el JQL no salta los permisos del proyecto" },
-        { "id": "B", "texto": "Si el site está en plan Free" },
-        { "id": "C", "texto": "El nombre del dashboard" },
-        { "id": "D", "texto": "Si statusCategory está prohibido en Cloud" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Browse Projects en Desarrollo; el JQL no salta los permisos del proyecto",
+            "en": "Browse Projects on Development; the JQL does not bypass project permissions"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Si el site está en plan Free",
+            "en": "Whether the site is on the Free plan"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del dashboard",
+            "en": "The dashboard name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Si statusCategory está prohibido en Cloud",
+            "en": "Whether statusCategory is forbidden in Cloud"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El share te deja ejecutar el filtro; Browse Projects te deja ver filas."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El share te deja ejecutar el filtro; Browse Projects te deja ver filas.",
+        "en": "The share lets you run the filter; Browse Projects lets you see rows."
+      }
     },
     {
       "id": "m08-q45",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Average age y Created vs Resolved son informes de análisis del proyecto. ¿Dónde viven Velocity y el CFD?",
+      "stem": {
+        "es": "Average age y Created vs Resolved son informes de análisis del proyecto. ¿Dónde viven Velocity y el CFD?",
+        "en": "Average age and Created vs Resolved are project analysis reports. Where do Velocity and the CFD live?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En los informes ágiles del tablero" },
-        { "id": "B", "texto": "Como gadgets obligatorios de cualquier dashboard" },
-        { "id": "C", "texto": "Como filtros privados" },
-        { "id": "D", "texto": "Como funciones JQL" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En los informes ágiles del tablero",
+            "en": "In the board’s agile reports"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Como gadgets obligatorios de cualquier dashboard",
+            "en": "As mandatory gadgets on any dashboard"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Como filtros privados",
+            "en": "As private filters"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Como funciones JQL",
+            "en": "As JQL functions"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Hay tres familias: informes ágiles del board, análisis de issues del proyecto y gadgets de dashboard. No se mezclan."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Hay tres familias: informes ágiles del board, análisis de issues del proyecto y gadgets de dashboard. No se mezclan.",
+        "en": "There are three families: agile board reports, project issue analysis and dashboard gadgets. They are not mixed."
+      }
     },
     {
       "id": "m08-q46",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Buscas el informe de sprint en el Kanban de Soporte y no está. ¿Por qué?",
+      "stem": {
+        "es": "Buscas el informe de sprint en el Kanban de Soporte y no está. ¿Por qué?",
+        "en": "You look for the sprint report on Support’s Kanban and it is not there. Why?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Falta un gadget Filter Results en el dashboard" },
-        { "id": "B", "texto": "El sprint report vive en el tablero Scrum, no en Kanban" },
-        { "id": "C", "texto": "Hay que añadir Velocity al dashboard de PMO" },
-        { "id": "D", "texto": "El filtro de issues abiertas de Desarrollo está privado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Falta un gadget Filter Results en el dashboard",
+            "en": "A Filter Results gadget is missing from the dashboard"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El sprint report vive en el tablero Scrum, no en Kanban",
+            "en": "The sprint report lives on the Scrum board, not on Kanban"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hay que añadir Velocity al dashboard de PMO",
+            "en": "Velocity must be added to the PMO dashboard"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro de issues abiertas de Desarrollo está privado",
+            "en": "Development’s open-issues filter is private"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si no hay sprint report, casi siempre estás en un tablero Kanban. Es un informe del board Scrum."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si no hay sprint report, casi siempre estás en un tablero Kanban. Es un informe del board Scrum.",
+        "en": "If there is no sprint report, you are almost always on a Kanban board. It is a Scrum board report."
+      }
     },
     {
       "id": "m08-q47",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "La PMO quiere el diagrama de flujo acumulativo de Soporte. ¿Dónde lo abre?",
+      "stem": {
+        "es": "La PMO quiere el diagrama de flujo acumulativo de Soporte. ¿Dónde lo abre?",
+        "en": "The PMO wants Support’s cumulative flow diagram. Where do they open it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Como gadget del dashboard de PMO" },
-        { "id": "B", "texto": "En los informes del tablero (Kanban o Scrum), no en Paneles" },
-        { "id": "C", "texto": "En Created vs Resolved, dentro del análisis del proyecto" },
-        { "id": "D", "texto": "En el filtro de issues actualizadas por el usuario actual" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Como gadget del dashboard de PMO",
+            "en": "As a gadget on the PMO dashboard"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En los informes del tablero (Kanban o Scrum), no en Paneles",
+            "en": "In the board reports (Kanban or Scrum), not in Dashboards"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Created vs Resolved, dentro del análisis del proyecto",
+            "en": "In Created vs Resolved, inside project analysis"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el filtro de issues actualizadas por el usuario actual",
+            "en": "In the filter of issues updated by the current user"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El CFD es un informe ágil del tablero. No se busca en el dashboard ni en el análisis Created vs Resolved."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El CFD es un informe ágil del tablero. No se busca en el dashboard ni en el análisis Created vs Resolved.",
+        "en": "The CFD is an agile board report. You do not look for it on the dashboard or in Created vs Resolved analysis."
+      }
     },
     {
       "id": "m08-q48",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Velocity de Desarrollo no aparece como gadget en el dashboard de PMO. ¿Dónde vive?",
+      "stem": {
+        "es": "Velocity de Desarrollo no aparece como gadget en el dashboard de PMO. ¿Dónde vive?",
+        "en": "Development’s velocity does not appear as a gadget on the PMO dashboard. Where does it live?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Assigned to Me" },
-        { "id": "B", "texto": "En los informes del tablero Scrum de Desarrollo" },
-        { "id": "C", "texto": "En el Pie Chart del análisis del proyecto" },
-        { "id": "D", "texto": "En un filtro privado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Assigned to Me",
+            "en": "In Assigned to Me"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En los informes del tablero Scrum de Desarrollo",
+            "en": "In the reports of Development’s Scrum board"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En el Pie Chart del análisis del proyecto",
+            "en": "In the Pie Chart of project analysis"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En un filtro privado",
+            "en": "In a private filter"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Velocity es un board report de Scrum. En el dashboard no se busca como gadget por defecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Velocity es un board report de Scrum. En el dashboard no se busca como gadget por defecto.",
+        "en": "Velocity is a Scrum board report. On the dashboard you do not look for it as a default gadget."
+      }
     },
     {
       "id": "m08-q49",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "«¿Vamos a terminar este sprint?» se responde con el burndown. ¿Dónde se abre ese gráfico?",
+      "stem": {
+        "es": "«¿Vamos a terminar este sprint?» se responde con el burndown. ¿Dónde se abre ese gráfico?",
+        "en": "“Will we finish this sprint?” is answered with the burndown. Where is that chart opened?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En el dashboard de PMO, como gadget" },
-        { "id": "B", "texto": "En los informes del tablero Scrum de Desarrollo" },
-        { "id": "C", "texto": "En Created vs Resolved del proyecto" },
-        { "id": "D", "texto": "En Filter Results" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En el dashboard de PMO, como gadget",
+            "en": "On the PMO dashboard, as a gadget"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En los informes del tablero Scrum de Desarrollo",
+            "en": "In the reports of Development’s Scrum board"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Created vs Resolved del proyecto",
+            "en": "In the project’s Created vs Resolved"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En Filter Results",
+            "en": "In Filter Results"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El burndown es un informe ágil del board Scrum, no un gadget ni un análisis de proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El burndown es un informe ágil del board Scrum, no un gadget ni un análisis de proyecto.",
+        "en": "The burndown is an agile report of the Scrum board, not a gadget and not project analysis."
+      }
     },
     {
       "id": "m08-q50",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Quieres el control chart de cycle time de Soporte. ¿Dónde lo localizas?",
+      "stem": {
+        "es": "Quieres el control chart de cycle time de Soporte. ¿Dónde lo localizas?",
+        "en": "You want Support’s cycle-time control chart. Where do you find it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En los informes del tablero, no en Paneles" },
-        { "id": "B", "texto": "En el gadget Two Dimensional" },
-        { "id": "C", "texto": "En Average age del proyecto; es el mismo gráfico" },
-        { "id": "D", "texto": "En los viewers del filtro de issues abiertas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En los informes del tablero, no en Paneles",
+            "en": "In the board reports, not in Dashboards"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En el gadget Two Dimensional",
+            "en": "In the Two Dimensional gadget"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Average age del proyecto; es el mismo gráfico",
+            "en": "In the project’s Average age; it is the same chart"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En los viewers del filtro de issues abiertas",
+            "en": "In the viewers of the open-issues filter"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El control chart es un informe ágil del board. Average age es análisis del proyecto; no los mezcles."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El control chart es un informe ágil del board. Average age es análisis del proyecto; no los mezcles.",
+        "en": "The control chart is an agile board report. Average age is project analysis; do not mix them."
+      }
     }
   ]
 }

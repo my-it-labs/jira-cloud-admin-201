@@ -6,701 +6,2305 @@
       "id": "m02-q1",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Un desarrollador abre Jira sin problema, pero no ve el proyecto DEV en la lista. Necesitas el primer diagnóstico. ¿Qué miras primero?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Un desarrollador abre Jira sin problema, pero no ve el proyecto DEV en la lista. Necesitas el primer diagnóstico. ¿Qué miras primero?",
+        "en": "You are a project administrator. A developer opens Jira without a problem, but does not see the DEV project in the list. You need the first diagnosis. What do you check first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Acceso al producto" },
-        { "id": "B", "texto": "Browse Projects en el esquema de permisos o el rol" },
-        { "id": "C", "texto": "La configuración SMTP" },
-        { "id": "D", "texto": "El nombre del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Acceso al producto",
+            "en": "Product access"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Browse Projects en el esquema de permisos o el rol",
+            "en": "Browse Projects in the permission scheme or the role"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La configuración SMTP",
+            "en": "SMTP configuration"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre del tablero",
+            "en": "The board name"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Ya abre Jira: el product access está bien. Falta permiso de proyecto (rol + scheme). Si no abriera Jira, entonces sería acceso al producto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Ya abre Jira: el product access está bien. Falta permiso de proyecto (rol + scheme). Si no abriera Jira, entonces sería acceso al producto.",
+        "en": "They already open Jira: product access is fine. A project permission is missing (role + scheme). If they could not open Jira, then it would be product access."
+      }
     },
     {
       "id": "m02-q2",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Todo el departamento de Desarrollo debe tener el rol Developers en 15 proyectos. Quieres un modelo que escale cuando entre gente nueva. ¿Cuál es la forma más escalable?",
+      "stem": {
+        "es": "Eres administrador de Jira. Todo el departamento de Desarrollo debe tener el rol Developers en 15 proyectos. Quieres un modelo que escale cuando entre gente nueva. ¿Cuál es la forma más escalable?",
+        "en": "You are a Jira administrator. The whole Development department must have the Developers role in 15 projects. You want a model that scales when new people join. What is the most scalable approach?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Añadir cada usuario a cada proyecto" },
-        { "id": "B", "texto": "Poner a los usuarios en un grupo y asignar ese grupo al rol Developers" },
-        { "id": "C", "texto": "Hacerlos a todos administradores de Jira" },
-        { "id": "D", "texto": "Compartir un dashboard" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Añadir cada usuario a cada proyecto",
+            "en": "Add each user to each project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Poner a los usuarios en un grupo y asignar ese grupo al rol Developers",
+            "en": "Put the users in a group and assign that group to the Developers role"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hacerlos a todos administradores de Jira",
+            "en": "Make them all Jira administrators"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Compartir un dashboard",
+            "en": "Share a dashboard"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Grupo en el Directorio más rol de proyecto. Es el modelo corporativo. Hacerlos Jira admin es un agujero de seguridad."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Grupo en el Directorio más rol de proyecto. Es el modelo corporativo. Hacerlos Jira admin es un agujero de seguridad.",
+        "en": "A Directory group plus a project role. That is the corporate model. Making them Jira admin is a security hole."
+      }
     },
     {
       "id": "m02-q3",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Concedes el permiso global Make bulk changes a un grupo. Un compañero pregunta el alcance. ¿A qué afecta ese permiso?",
+      "stem": {
+        "es": "Eres administrador de Jira. Concedes el permiso global Make bulk changes a un grupo. Un compañero pregunta el alcance. ¿A qué afecta ese permiso?",
+        "en": "You are a Jira administrator. You grant the global permission Make bulk changes to a group. A colleague asks about the scope. What does that permission affect?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo a un proyecto" },
-        { "id": "B", "texto": "A usuarios o grupos del site; el bulk solo donde ya tengan permiso de elemento" },
-        { "id": "C", "texto": "Solo a proyectos team-managed" },
-        { "id": "D", "texto": "Solo a Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo a un proyecto",
+            "en": "A single project only"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "A usuarios o grupos del site; el bulk solo donde ya tengan permiso de elemento",
+            "en": "Users or groups on the site; bulk only where they already have issue permission"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo a proyectos team-managed",
+            "en": "Team-managed projects only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo a Confluence",
+            "en": "Confluence only"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los permisos globales (Jira → Configuración → Sistema) son de site. Siguen haciendo falta los permisos de elemento de trabajo en cada proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los permisos globales (Jira → Configuración → Sistema) son de site. Siguen haciendo falta los permisos de elemento de trabajo en cada proyecto.",
+        "en": "Global permissions (Jira → Settings → System) are site-wide. Issue permissions in each project are still required."
+      }
     },
     {
       "id": "m02-q4",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Un proveedor externo aún no está en la organización. Quieres invitarlo tú desde el proyecto. ¿Puedes invitarlo a la organización?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Un proveedor externo aún no está en la organización. Quieres invitarlo tú desde el proyecto. ¿Puedes invitarlo a la organización?",
+        "en": "You are a project administrator. An external vendor is not yet in the organization. You want to invite them yourself from the project. Can you invite them to the organization?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Siempre" },
-        { "id": "B", "texto": "No: invitar a la organización es de administrador de org o de site" },
-        { "id": "C", "texto": "Solo si el proyecto es Scrum" },
-        { "id": "D", "texto": "Solo desde el tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Siempre",
+            "en": "Always"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: invitar a la organización es de administrador de org o de site",
+            "en": "No: inviting to the organization is for org or site admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo si el proyecto es Scrum",
+            "en": "Only if the project is Scrum"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo desde el tablero",
+            "en": "Only from the board"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Personas del proyecto asigna roles a usuarios que ya existen. El alta en la organización es otra consola (org/site admin o user access admin)."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Personas del proyecto asigna roles a usuarios que ya existen. El alta en la organización es otra consola (org/site admin o user access admin).",
+        "en": "Project People assigns roles to users who already exist. Joining the organization is another console (org/site admin or user access admin)."
+      }
     },
     {
       "id": "m02-q5",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Un usuario no aparece en el desplegable de responsable. Otro compañero sí puede asignar. ¿Qué permiso suele faltar al usuario que no sale?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Un usuario no aparece en el desplegable de responsable. Otro compañero sí puede asignar. ¿Qué permiso suele faltar al usuario que no sale?",
+        "en": "You are a project administrator. A user does not appear in the assignee dropdown. Another colleague can assign. Which permission is usually missing for the user who does not appear?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Assign Issues" },
-        { "id": "B", "texto": "Assignable User" },
-        { "id": "C", "texto": "Create Issues" },
-        { "id": "D", "texto": "Un gadget del dashboard" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Assign Issues",
+            "en": "Assign Issues"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Assignable User",
+            "en": "Assignable User"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Create Issues",
+            "en": "Create Issues"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un gadget del dashboard",
+            "en": "A dashboard gadget"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Assignable User controla quién puede ser asignado (el desplegable). Assign Issues controla quién puede cambiar el responsable."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Assignable User controla quién puede ser asignado (el desplegable). Assign Issues controla quién puede cambiar el responsable.",
+        "en": "Assignable User controls who can be assigned (the dropdown). Assign Issues controls who can change the assignee."
+      }
     },
     {
       "id": "m02-q6",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Metes a Luis en el grupo departamental de Desarrollo, pero aún no tiene rol en ningún proyecto. Luis intenta transicionar elementos de trabajo. ¿Puede hacerlo?",
+      "stem": {
+        "es": "Eres administrador de Jira. Metes a Luis en el grupo departamental de Desarrollo, pero aún no tiene rol en ningún proyecto. Luis intenta transicionar elementos de trabajo. ¿Puede hacerlo?",
+        "en": "You are a Jira administrator. You put Luis in the Development department group, but he still has no role in any project. Luis tries to transition issues. Can he?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: el grupo otorga Transition Issues por sí solo" },
-        { "id": "B", "texto": "No: falta un rol y el esquema de permisos" },
-        { "id": "C", "texto": "Sí, si el proyecto se llama Sample Scrum" },
-        { "id": "D", "texto": "Sí: el grupo departamental implica administrador de Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: el grupo otorga Transition Issues por sí solo",
+            "en": "Yes: the group grants Transition Issues by itself"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: falta un rol y el esquema de permisos",
+            "en": "No: a role and the permission scheme are missing"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí, si el proyecto se llama Sample Scrum",
+            "en": "Yes, if the project is named Sample Scrum"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sí: el grupo departamental implica administrador de Jira",
+            "en": "Yes: the department group implies Jira administrator"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El esquema dice qué hace el rol Developers. Tú pones el grupo en ese rol (Personas). El grupo solo no basta."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El esquema dice qué hace el rol Developers. Tú pones el grupo en ese rol (Personas). El grupo solo no basta.",
+        "en": "The scheme says what the Developers role can do. You put the group in that role (People). The group alone is not enough."
+      }
     },
     {
       "id": "m02-q7",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. En Personas intentas añadir a Ana al rol Users. Ana no existe en el Directorio. ¿Qué ocurre?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. En Personas intentas añadir a Ana al rol Users. Ana no existe en el Directorio. ¿Qué ocurre?",
+        "en": "You are a project administrator. In People you try to add Ana to the Users role. Ana does not exist in Directory. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Jira la invita sola a la organización" },
-        { "id": "B", "texto": "No puedes dar de alta a la organización desde Personas" },
-        { "id": "C", "texto": "Se crea como cliente de portal sin licencia" },
-        { "id": "D", "texto": "La página de inicio la añade al site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Jira la invita sola a la organización",
+            "en": "Jira invites her to the organization by itself"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No puedes dar de alta a la organización desde Personas",
+            "en": "You cannot add her to the organization from People"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se crea como cliente de portal sin licencia",
+            "en": "She is created as an unlicensed portal customer"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La página de inicio la añade al site",
+            "en": "The home page adds her to the site"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Personas asigna roles a cuentas que ya existen. El administrador de un espacio no invita a la organización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Personas asigna roles a cuentas que ya existen. El administrador de un espacio no invita a la organización.",
+        "en": "People assigns roles to accounts that already exist. A project administrator does not invite people to the organization."
+      }
     },
     {
       "id": "m02-q8",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Un invitado abre el site y ve que no tiene acceso a este producto. Necesitas la primera palanca. ¿Qué revisas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Un invitado abre el site y ve que no tiene acceso a este producto. Necesitas la primera palanca. ¿Qué revisas?",
+        "en": "You are an organization admin. A guest opens the site and sees they do not have access to this product. You need the first lever. What do you review?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Browse Projects del esquema de un proyecto" },
-        { "id": "B", "texto": "Acceso a la aplicación Jira" },
-        { "id": "C", "texto": "El nombre del proyecto en Más espacios" },
-        { "id": "D", "texto": "Make bulk changes" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Browse Projects del esquema de un proyecto",
+            "en": "Browse Projects in a project's scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Acceso a la aplicación Jira",
+            "en": "Jira product access"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del proyecto en Más espacios",
+            "en": "The project name in More spaces"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Make bulk changes",
+            "en": "Make bulk changes"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "No abre Jira: no es Browse. Se configura en Administration → Aplicaciones → Configuración de acceso a la aplicación."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "No abre Jira: no es Browse. Se configura en Administration → Aplicaciones → Configuración de acceso a la aplicación.",
+        "en": "They cannot open Jira: it is not Browse. It is configured in Administration → Apps → product access settings."
+      }
     },
     {
       "id": "m02-q9",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Vas a crear grupos departamentales para Desarrollo, Soporte, Operaciones, PMO, RRHH y Calidad. Quieres nombres estables, en minúsculas y sin espacios. ¿Qué convención usas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Vas a crear grupos departamentales para Desarrollo, Soporte, Operaciones, PMO, RRHH y Calidad. Quieres nombres estables, en minúsculas y sin espacios. ¿Qué convención usas?",
+        "en": "You are an organization admin. You are about to create department groups for Development, Support, Operations, PMO, HR, and Quality. You want stable names, lowercase and with no spaces. Which convention do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo jira-users y jira-administrators" },
-        { "id": "B", "texto": "nortech-dev, nortech-soporte, nortech-ops, nortech-pmo, nortech-rrhh, nortech-calidad" },
-        { "id": "C", "texto": "Un grupo por elemento de trabajo" },
-        { "id": "D", "texto": "Nombres con espacios y mayúsculas, como Nortech Dev" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo jira-users y jira-administrators",
+            "en": "Only jira-users and jira-administrators"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "nortech-dev, nortech-soporte, nortech-ops, nortech-pmo, nortech-rrhh, nortech-calidad",
+            "en": "nortech-dev, nortech-soporte, nortech-ops, nortech-pmo, nortech-rrhh, nortech-calidad"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un grupo por elemento de trabajo",
+            "en": "One group per issue"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Nombres con espacios y mayúsculas, como Nortech Dev",
+            "en": "Names with spaces and capitals, such as Nortech Dev"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Kebab y minúsculas. Un typo o un espacio crea otro grupo y se arrastra a todos los roles que asignes después."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Kebab y minúsculas. Un typo o un espacio crea otro grupo y se arrastra a todos los roles que asignes después.",
+        "en": "Kebab-case and lowercase. A typo or a space creates another group and it carries into every role you assign later."
+      }
     },
     {
       "id": "m02-q10",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Invitas a un compañero para probar restricciones de acceso. Si también es administrador, no podrás demostrar bloqueos. ¿Qué rol de organización le das?",
+      "stem": {
+        "es": "Eres administrador de la organización. Invitas a un compañero para probar restricciones de acceso. Si también es administrador, no podrás demostrar bloqueos. ¿Qué rol de organización le das?",
+        "en": "You are an organization admin. You invite a colleague to test access restrictions. If they are also an administrator, you will not be able to demonstrate blocks. Which organization role do you give them?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Administrador de la organización" },
-        { "id": "B", "texto": "Usuario, no administrador" },
-        { "id": "C", "texto": "Administrador de site y de Jira a la vez" },
-        { "id": "D", "texto": "Ninguno: se invita desde Personas del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Administrador de la organización",
+            "en": "Organization admin"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Usuario, no administrador",
+            "en": "User, not administrator"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Administrador de site y de Jira a la vez",
+            "en": "Site admin and Jira admin at the same time"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Ninguno: se invita desde Personas del proyecto",
+            "en": "None: they are invited from project People"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El invitado no debe ver Administration. Tú eres el administrador de la organización; él es usuario con producto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El invitado no debe ver Administration. Tú eres el administrador de la organización; él es usuario con producto.",
+        "en": "The guest must not see Administration. You are the organization admin; they are a user with the product."
+      }
     },
     {
       "id": "m02-q11",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Revocas temporalmente el acceso al producto del invitado y le pides que recargue en una sesión aparte. Quieres ver el síntoma correcto. ¿Qué compruebas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Revocas temporalmente el acceso al producto del invitado y le pides que recargue en una sesión aparte. Quieres ver el síntoma correcto. ¿Qué compruebas?",
+        "en": "You are an organization admin. You temporarily revoke the guest's product access and ask them to reload in a separate session. You want to see the correct symptom. What do you check?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Que el esquema de permisos se ha borrado" },
-        { "id": "B", "texto": "Que no puede abrir Jira, para no diagnosticar Browse" },
-        { "id": "C", "texto": "Que los grupos del Directorio desaparecen" },
-        { "id": "D", "texto": "Que el invitado pasa a administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Que el esquema de permisos se ha borrado",
+            "en": "That the permission scheme has been deleted"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Que no puede abrir Jira, para no diagnosticar Browse",
+            "en": "That they cannot open Jira, so you do not diagnose Browse"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que los grupos del Directorio desaparecen",
+            "en": "That Directory groups disappear"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que el invitado pasa a administrador de la organización",
+            "en": "That the guest becomes organization admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Puerta 1 frente a puerta 2. Sin aplicación, el esquema de permisos es irrelevante."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Puerta 1 frente a puerta 2. Sin aplicación, el esquema de permisos es irrelevante.",
+        "en": "Door 1 versus door 2. Without the application, the permission scheme is irrelevant."
+      }
     },
     {
       "id": "m02-q12",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El usuario de prueba ve Facturación y puede crear grupos. Necesitas que sea un usuario normal. ¿Qué hiciste mal?",
+      "stem": {
+        "es": "Eres administrador de la organización. El usuario de prueba ve Facturación y puede crear grupos. Necesitas que sea un usuario normal. ¿Qué hiciste mal?",
+        "en": "You are an organization admin. The test user can see Billing and can create groups. You need them to be a normal user. What did you do wrong?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Le faltaba Browse en un proyecto" },
-        { "id": "B", "texto": "Lo nombraste administrador de organización o de site" },
-        { "id": "C", "texto": "No le diste Assignable User" },
-        { "id": "D", "texto": "El plan Free hace administrador a todos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Le faltaba Browse en un proyecto",
+            "en": "They were missing Browse in a project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Lo nombraste administrador de organización o de site",
+            "en": "You made them organization admin or site admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No le diste Assignable User",
+            "en": "You did not give them Assignable User"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El plan Free hace administrador a todos",
+            "en": "The Free plan makes everyone an administrator"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Quita el rol de organización o de site. Para probar un espacio basta usuario más grupos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Quita el rol de organización o de site. Para probar un espacio basta usuario más grupos.",
+        "en": "Remove the organization or site admin role. To test a project, user plus groups is enough."
+      }
     },
     {
       "id": "m02-q13",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Marta aparece en el desplegable de responsable, pero Carlos no puede cambiar el asignado. ¿Qué permiso le falta a Carlos?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Marta aparece en el desplegable de responsable, pero Carlos no puede cambiar el asignado. ¿Qué permiso le falta a Carlos?",
+        "en": "You are a project administrator. Marta appears in the assignee dropdown, but Carlos cannot change the assignee. Which permission is Carlos missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Assignable User" },
-        { "id": "B", "texto": "Assign Issues" },
-        { "id": "C", "texto": "Acceso al producto Jira" },
-        { "id": "D", "texto": "Ser administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Assignable User",
+            "en": "Assignable User"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Assign Issues",
+            "en": "Assign Issues"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Acceso al producto Jira",
+            "en": "Jira product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Ser administrador de la organización",
+            "en": "Being organization admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Marta es asignable. Carlos necesita Assign Issues. Son dos permisos distintos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Marta es asignable. Carlos necesita Assign Issues. Son dos permisos distintos.",
+        "en": "Marta is assignable. Carlos needs Assign Issues. They are two different permissions."
+      }
     },
     {
       "id": "m02-q14",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Entra un desarrollador nuevo. El grupo de Desarrollo ya está en el rol Developers de varios proyectos. ¿Qué es lo más limpio?",
+      "stem": {
+        "es": "Eres administrador de la organización. Entra un desarrollador nuevo. El grupo de Desarrollo ya está en el rol Developers de varios proyectos. ¿Qué es lo más limpio?",
+        "en": "You are an organization admin. A new developer joins. The Development group is already in the Developers role on several projects. What is the cleanest action?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Añadirlo en Personas de cada proyecto" },
-        { "id": "B", "texto": "Añadirlo al grupo de Desarrollo en el Directorio" },
-        { "id": "C", "texto": "Hacerlo administrador de Jira" },
-        { "id": "D", "texto": "Invitarlo otra vez como administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Añadirlo en Personas de cada proyecto",
+            "en": "Add them in People on each project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Añadirlo al grupo de Desarrollo en el Directorio",
+            "en": "Add them to the Development group in Directory"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hacerlo administrador de Jira",
+            "en": "Make them a Jira administrator"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Invitarlo otra vez como administrador de la organización",
+            "en": "Invite them again as organization admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un alta en el grupo hereda todos los roles donde ya está ese grupo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un alta en el grupo hereda todos los roles donde ya está ese grupo.",
+        "en": "Adding them to the group inherits every role where that group is already assigned."
+      }
     },
     {
       "id": "m02-q15",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. El esquema dice que el rol Developers puede transicionar. El grupo de Desarrollo debe recibir ese permiso. ¿Cómo lo recibe?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. El esquema dice que el rol Developers puede transicionar. El grupo de Desarrollo debe recibir ese permiso. ¿Cómo lo recibe?",
+        "en": "You are a project administrator. The scheme says the Developers role can transition. The Development group must receive that permission. How do they get it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El grupo se escribe en el esquema en lugar del rol" },
-        { "id": "B", "texto": "Pones el grupo en el rol Developers en Personas" },
-        { "id": "C", "texto": "Basta con el acceso al producto" },
-        { "id": "D", "texto": "El grupo hereda la transición de jira-administrators" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El grupo se escribe en el esquema en lugar del rol",
+            "en": "The group is written in the scheme instead of the role"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pones el grupo en el rol Developers en Personas",
+            "en": "You put the group in the Developers role in People"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Basta con el acceso al producto",
+            "en": "Product access is enough"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El grupo hereda la transición de jira-administrators",
+            "en": "The group inherits the transition from jira-administrators"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El esquema habla de roles. Personas mapea grupo → rol. Tres palancas, no una."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El esquema habla de roles. Personas mapea grupo → rol. Tres palancas, no una.",
+        "en": "The scheme talks about roles. People maps group → role. Three levers, not one."
+      }
     },
     {
       "id": "m02-q16",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El trial dejó acceso a Jira a todos los usuarios. Quieres acotar el acceso a grupos departamentales. ¿Dónde lo cambias?",
+      "stem": {
+        "es": "Eres administrador de la organización. El trial dejó acceso a Jira a todos los usuarios. Quieres acotar el acceso a grupos departamentales. ¿Dónde lo cambias?",
+        "en": "You are an organization admin. The trial left Jira access for all users. You want to narrow access to department groups. Where do you change that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Personas de Sample Scrum" },
-        { "id": "B", "texto": "En Administration → Aplicaciones → acceso a la aplicación" },
-        { "id": "C", "texto": "En la página de inicio Para ti" },
-        { "id": "D", "texto": "En Facturación → Añadir datos de pago" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Personas de Sample Scrum",
+            "en": "In Sample Scrum People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En Administration → Aplicaciones → acceso a la aplicación",
+            "en": "In Administration → Apps → product access"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En la página de inicio Para ti",
+            "en": "On the For you home page"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En Facturación → Añadir datos de pago",
+            "en": "In Billing → Add payment details"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Product access por grupos. Quita el acceso indiscriminado del trial."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Product access por grupos. Quita el acceso indiscriminado del trial.",
+        "en": "Product access by groups. Remove the trial's blanket access."
+      }
     },
     {
       "id": "m02-q17",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Ves roles por defecto como Developers. Quieres explicar para qué sirven frente a los grupos. ¿Cuál es su función?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Ves roles por defecto como Developers. Quieres explicar para qué sirven frente a los grupos. ¿Cuál es su función?",
+        "en": "You are a project administrator. You see default roles such as Developers. You want to explain what they are for versus groups. What is their function?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sustituyen a los grupos del Directorio" },
-        { "id": "B", "texto": "Son huecos que el esquema referencia; tú metes grupos o usuarios" },
-        { "id": "C", "texto": "Son acceso al producto" },
-        { "id": "D", "texto": "Invitan a la organización ellos solos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sustituyen a los grupos del Directorio",
+            "en": "They replace Directory groups"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Son huecos que el esquema referencia; tú metes grupos o usuarios",
+            "en": "They are slots the scheme references; you put groups or users in them"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Son acceso al producto",
+            "en": "They are product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Invitan a la organización ellos solos",
+            "en": "They invite people to the organization by themselves"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Rol no es grupo. El esquema nombra roles; Personas rellena la membresía."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Rol no es grupo. El esquema nombra roles; Personas rellena la membresía.",
+        "en": "A role is not a group. The scheme names roles; People fills the membership."
+      }
     },
     {
       "id": "m02-q18",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Añades a Elena solo como usuaria suelta en el rol Developers, sin grupo. Dentro de un año habrá más proyectos. ¿Qué problema tiene este enfoque?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Añades a Elena solo como usuaria suelta en el rol Developers, sin grupo. Dentro de un año habrá más proyectos. ¿Qué problema tiene este enfoque?",
+        "en": "You are a project administrator. You add Elena only as an individual user in the Developers role, with no group. In a year there will be more projects. What is the problem with this approach?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Escala igual que un grupo departamental" },
-        { "id": "B", "texto": "Habrá que tocarla proyecto a proyecto" },
-        { "id": "C", "texto": "Jira la replica a todos los proyectos sola" },
-        { "id": "D", "texto": "Pasa a administradora de la organización sola" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Escala igual que un grupo departamental",
+            "en": "It scales the same as a department group"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Habrá que tocarla proyecto a proyecto",
+            "en": "You will have to touch her project by project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira la replica a todos los proyectos sola",
+            "en": "Jira replicates her to every project by itself"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pasa a administradora de la organización sola",
+            "en": "She becomes organization admin by herself"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Las excepciones puntuales sí se ponen como usuario suelto. El departamento, no: usa un grupo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Las excepciones puntuales sí se ponen como usuario suelto. El departamento, no: usa un grupo.",
+        "en": "One-off exceptions can be added as an individual user. A department cannot: use a group."
+      }
     },
     {
       "id": "m02-q19",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. RRHH debe usar Jira en otros proyectos, pero no ver ni el nombre de DEV. ¿Qué quitas?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. RRHH debe usar Jira en otros proyectos, pero no ver ni el nombre de DEV. ¿Qué quitas?",
+        "en": "You are a project administrator. HR must use Jira in other projects, but must not even see the name of DEV. What do you remove?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El acceso al producto Jira de todo RRHH" },
-        { "id": "B", "texto": "Browse Projects y el rol que lo concede en DEV" },
-        { "id": "C", "texto": "Assignable User en todos los proyectos" },
-        { "id": "D", "texto": "El acceso a admin.atlassian.com" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El acceso al producto Jira de todo RRHH",
+            "en": "Jira product access for all of HR"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Browse Projects y el rol que lo concede en DEV",
+            "en": "Browse Projects and the role that grants it on DEV"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Assignable User en todos los proyectos",
+            "en": "Assignable User on every project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El acceso a admin.atlassian.com",
+            "en": "Access to admin.atlassian.com"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sin Browse el espacio no existe para ese usuario. Quitar Jira entero a RRHH es excesivo si usan otros proyectos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sin Browse el espacio no existe para ese usuario. Quitar Jira entero a RRHH es excesivo si usan otros proyectos.",
+        "en": "Without Browse the project does not exist for that user. Removing Jira entirely from HR is excessive if they use other projects."
+      }
     },
     {
       "id": "m02-q20",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. RRHH debe invitar altas sin ser administrador total de la organización. El plan ofrece un rol intermedio. ¿Qué les das?",
+      "stem": {
+        "es": "Eres administrador de la organización. RRHH debe invitar altas sin ser administrador total de la organización. El plan ofrece un rol intermedio. ¿Qué les das?",
+        "en": "You are an organization admin. HR must invite new joiners without being full organization admin. The plan offers an intermediate role. What do you give them?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Administrador de un proyecto" },
-        { "id": "B", "texto": "User access admin o trusted" },
-        { "id": "C", "texto": "Administrador de Jira global" },
-        { "id": "D", "texto": "Permiso para invitar desde Personas de cualquier proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Administrador de un proyecto",
+            "en": "Project administrator"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "User access admin o trusted",
+            "en": "User access admin or trusted"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Administrador de Jira global",
+            "en": "Global Jira administrator"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Permiso para invitar desde Personas de cualquier proyecto",
+            "en": "Permission to invite from People on any project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Personas no invita a la organización. User access admin / trusted acota el poder frente a organization admin."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Personas no invita a la organización. User access admin / trusted acota el poder frente a organization admin.",
+        "en": "People does not invite to the organization. User access admin / trusted narrows the power compared with organization admin."
+      }
     },
     {
       "id": "m02-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Tras invitar usuarios y crear grupos, quieres el rastro de esos cambios. El plan puede mostrar auditoría. ¿Dónde la buscas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Tras invitar usuarios y crear grupos, quieres el rastro de esos cambios. El plan puede mostrar auditoría. ¿Dónde la buscas?",
+        "en": "You are an organization admin. After inviting users and creating groups, you want the trail of those changes. The plan may show audit. Where do you look?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En la página de inicio Para ti" },
-        { "id": "B", "texto": "En Administration → Seguridad y/o Jira → Sistema → Registro de auditoría" },
-        { "id": "C", "texto": "En Personas de un proyecto" },
-        { "id": "D", "texto": "En el desplegable de responsable" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En la página de inicio Para ti",
+            "en": "On the For you home page"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En Administration → Seguridad y/o Jira → Sistema → Registro de auditoría",
+            "en": "In Administration → Security and/or Jira → System → Audit log"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Personas de un proyecto",
+            "en": "In a project's People"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el desplegable de responsable",
+            "en": "In the assignee dropdown"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Basta saber dónde está. Free puede no mostrar nada útil; Premium tiene más eventos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Basta saber dónde está. Free puede no mostrar nada útil; Premium tiene más eventos.",
+        "en": "Knowing where it is is enough. Free may show nothing useful; Premium has more events."
+      }
     },
     {
       "id": "m02-q22",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El site está en Free con 10 cuentas y las invitaciones fallan. ¿Cuál es la causa probable?",
+      "stem": {
+        "es": "Eres administrador de la organización. El site está en Free con 10 cuentas y las invitaciones fallan. ¿Cuál es la causa probable?",
+        "en": "You are an organization admin. The site is on Free with 10 accounts and invitations fail. What is the likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los grupos están mal escritos" },
-        { "id": "B", "texto": "El tope de 10 usuarios: quita cuentas o sube de plan" },
-        { "id": "C", "texto": "Falta Browse en un proyecto" },
-        { "id": "D", "texto": "Cloud no permite invitaciones" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los grupos están mal escritos",
+            "en": "The groups are misspelled"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El tope de 10 usuarios: quita cuentas o sube de plan",
+            "en": "The 10-user cap: remove accounts or upgrade the plan"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta Browse en un proyecto",
+            "en": "Browse is missing on a project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cloud no permite invitaciones",
+            "en": "Cloud does not allow invitations"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Free limita a 10 usuarios. El grupo no evita el asiento de licencia."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Free limita a 10 usuarios. El grupo no evita el asiento de licencia.",
+        "en": "Free limits to 10 users. The group does not avoid the license seat."
+      }
     },
     {
       "id": "m02-q23",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización y estás solo en el site. Quieres validar restricciones de acceso y de proyecto. ¿Por qué necesitas un segundo usuario?",
+      "stem": {
+        "es": "Eres administrador de la organización y estás solo en el site. Quieres validar restricciones de acceso y de proyecto. ¿Por qué necesitas un segundo usuario?",
+        "en": "You are an organization admin and you are alone on the site. You want to validate product access and project restrictions. Why do you need a second user?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Jira Cloud exige dos administradores de organización" },
-        { "id": "B", "texto": "Sin un no-administrador no validas acceso al producto ni permisos" },
-        { "id": "C", "texto": "El segundo usuario convierte Sample Scrum en un proyecto corporativo" },
-        { "id": "D", "texto": "Free no funciona con un solo usuario" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Jira Cloud exige dos administradores de organización",
+            "en": "Jira Cloud requires two organization admins"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sin un no-administrador no validas acceso al producto ni permisos",
+            "en": "Without a non-administrator you cannot validate product access or permissions"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El segundo usuario convierte Sample Scrum en un proyecto corporativo",
+            "en": "The second user turns Sample Scrum into a corporate project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Free no funciona con un solo usuario",
+            "en": "Free does not work with a single user"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Tú eres administrador de la organización: no eres el sujeto de las restricciones. Entra con el invitado en otra sesión."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Tú eres administrador de la organización: no eres el sujeto de las restricciones. Entra con el invitado en otra sesión.",
+        "en": "You are the organization admin: you are not the subject of the restrictions. Sign in as the guest in another session."
+      }
     },
     {
       "id": "m02-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Creas el grupo nortech-admins y solo te metes tú. Aún no has asignado permisos a ese grupo. ¿Ya eres más administrador de Jira?",
+      "stem": {
+        "es": "Eres administrador de la organización. Creas el grupo nortech-admins y solo te metes tú. Aún no has asignado permisos a ese grupo. ¿Ya eres más administrador de Jira?",
+        "en": "You are an organization admin. You create the group nortech-admins and put only yourself in it. You have not yet assigned permissions to that group. Are you already more of a Jira administrator?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: el nombre del grupo concede Administer Jira" },
-        { "id": "B", "texto": "No: el grupo no da permisos hasta que se asignen" },
-        { "id": "C", "texto": "Sí, en todos los proyectos team-managed" },
-        { "id": "D", "texto": "Sí: sustituye al administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: el nombre del grupo concede Administer Jira",
+            "en": "Yes: the group name grants Administer Jira"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: el grupo no da permisos hasta que se asignen",
+            "en": "No: the group grants no permissions until they are assigned"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí, en todos los proyectos team-managed",
+            "en": "Yes, on every team-managed project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sí: sustituye al administrador de la organización",
+            "en": "Yes: it replaces the organization admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Crear el grupo no concede Administer Jira. El nombre no otorga permisos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Crear el grupo no concede Administer Jira. El nombre no otorga permisos.",
+        "en": "Creating the group does not grant Administer Jira. The name does not confer permissions."
+      }
     },
     {
       "id": "m02-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El grupo de Soporte existe y el invitado es miembro, pero no abre Jira. ¿Qué faltó?",
+      "stem": {
+        "es": "Eres administrador de la organización. El grupo de Soporte existe y el invitado es miembro, pero no abre Jira. ¿Qué faltó?",
+        "en": "You are an organization admin. The Support group exists and the guest is a member, but they cannot open Jira. What was missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ponerlo en Personas de Sample Scrum" },
-        { "id": "B", "texto": "Conceder a ese grupo acceso de usuario a Jira" },
-        { "id": "C", "texto": "Hacerlo administrador de la organización" },
-        { "id": "D", "texto": "Darle Make bulk changes" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ponerlo en Personas de Sample Scrum",
+            "en": "Putting them in Sample Scrum People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Conceder a ese grupo acceso de usuario a Jira",
+            "en": "Granting that group user access to Jira"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Hacerlo administrador de la organización",
+            "en": "Making them organization admin"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Darle Make bulk changes",
+            "en": "Giving them Make bulk changes"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Grupo en el Directorio no es product access. Son pantallas distintas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Grupo en el Directorio no es product access. Son pantallas distintas.",
+        "en": "A Directory group is not product access. They are different screens."
+      }
     },
     {
       "id": "m02-q26",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El invitado entra a Jira y aún no hay proyectos corporativos. Un compañero dice que Jira está roto. ¿Está roto el producto?",
+      "stem": {
+        "es": "Eres administrador de la organización. El invitado entra a Jira y aún no hay proyectos corporativos. Un compañero dice que Jira está roto. ¿Está roto el producto?",
+        "en": "You are an organization admin. The guest enters Jira and there are still no corporate projects. A colleague says Jira is broken. Is the product broken?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: sin un proyecto DEV no hay acceso al producto" },
-        { "id": "B", "texto": "No: el acceso al producto está bien; faltan proyectos y roles" },
-        { "id": "C", "texto": "Sí: debe verse Sample Scrum como proyecto de Soporte" },
-        { "id": "D", "texto": "Sí: hay que hacerlo administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: sin un proyecto DEV no hay acceso al producto",
+            "en": "Yes: without a DEV project there is no product access"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: el acceso al producto está bien; faltan proyectos y roles",
+            "en": "No: product access is fine; projects and roles are missing"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí: debe verse Sample Scrum como proyecto de Soporte",
+            "en": "Yes: Sample Scrum must appear as the Support project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sí: hay que hacerlo administrador de la organización",
+            "en": "Yes: they must be made organization admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Puerta 1 correcta. Vacío no significa sin licencia. Faltan espacios y roles, no la aplicación."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Puerta 1 correcta. Vacío no significa sin licencia. Faltan espacios y roles, no la aplicación.",
+        "en": "Door 1 is correct. Empty does not mean unlicensed. Projects and roles are missing, not the application."
+      }
     },
     {
       "id": "m02-q27",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres solo administrador de un proyecto. Un usuario ya está en la organización y tiene Jira. ¿Puedes meterlo en el rol Developers?",
+      "stem": {
+        "es": "Eres solo administrador de un proyecto. Un usuario ya está en la organización y tiene Jira. ¿Puedes meterlo en el rol Developers?",
+        "en": "You are only a project administrator. A user is already in the organization and has Jira. Can you put them in the Developers role?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No: solo el administrador de la organización toca Personas" },
-        { "id": "B", "texto": "Sí: Personas asigna roles a usuarios o grupos existentes" },
-        { "id": "C", "texto": "Sí, y además lo invitas a la organización" },
-        { "id": "D", "texto": "No: hay que editar el esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No: solo el administrador de la organización toca Personas",
+            "en": "No: only the organization admin touches People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sí: Personas asigna roles a usuarios o grupos existentes",
+            "en": "Yes: People assigns roles to existing users or groups"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí, y además lo invitas a la organización",
+            "en": "Yes, and you also invite them to the organization"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No: hay que editar el esquema de permisos",
+            "en": "No: you must edit the permission scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El administrador de un espacio gestiona Personas. No cubre el alta en la organización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El administrador de un espacio gestiona Personas. No cubre el alta en la organización.",
+        "en": "A project administrator manages People. That does not cover joining the organization."
+      }
     },
     {
       "id": "m02-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Un usuario con Jira no encuentra DEV en Buscar ni en Más espacios. Ya confirmaste el acceso al producto. ¿Qué revisas?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Un usuario con Jira no encuentra DEV en Buscar ni en Más espacios. Ya confirmaste el acceso al producto. ¿Qué revisas?",
+        "en": "You are a project administrator. A user with Jira cannot find DEV in Search or in More spaces. You already confirmed product access. What do you review?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El SMTP" },
-        { "id": "B", "texto": "Browse Projects y la membresía de rol o grupo" },
-        { "id": "C", "texto": "Si el site es Premium o Standard" },
-        { "id": "D", "texto": "Si el usuario es administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El SMTP",
+            "en": "SMTP"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Browse Projects y la membresía de rol o grupo",
+            "en": "Browse Projects and role or group membership"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Si el site es Premium o Standard",
+            "en": "Whether the site is Premium or Standard"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Si el usuario es administrador de la organización",
+            "en": "Whether the user is organization admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Puerta 1 OK (abre Jira). Falta rol más Browse en ese espacio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Puerta 1 OK (abre Jira). Falta rol más Browse en ese espacio.",
+        "en": "Door 1 is OK (they open Jira). A role plus Browse on that project is missing."
+      }
     },
     {
       "id": "m02-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. PMO pide que todo su grupo sea administrador de Jira para ir más rápido. ¿Por qué no lo haces?",
+      "stem": {
+        "es": "Eres administrador de Jira. PMO pide que todo su grupo sea administrador de Jira para ir más rápido. ¿Por qué no lo haces?",
+        "en": "You are a Jira administrator. PMO asks that their whole group become Jira administrators to go faster. Why do you not do that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El rol no existe en Cloud" },
-        { "id": "B", "texto": "Editarían schemes, campos y seguridad de todo el site" },
-        { "id": "C", "texto": "PMO no puede tener acceso al producto" },
-        { "id": "D", "texto": "Solo el invitado de prueba puede ser administrador de Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El rol no existe en Cloud",
+            "en": "The role does not exist in Cloud"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Editarían schemes, campos y seguridad de todo el site",
+            "en": "They would edit schemes, fields, and security for the whole site"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "PMO no puede tener acceso al producto",
+            "en": "PMO cannot have product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el invitado de prueba puede ser administrador de Jira",
+            "en": "Only the test guest can be a Jira administrator"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La delegación se hace con roles de espacio y grupos. Jira admin es de plataforma, no de un departamento."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La delegación se hace con roles de espacio y grupos. Jira admin es de plataforma, no de un departamento.",
+        "en": "Delegation is done with project roles and groups. Jira admin is a platform role, not a department role."
+      }
     },
     {
       "id": "m02-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Sales del grupo de Desarrollo. El grupo sigue en el rol Developers de varios proyectos. ¿Qué efecto tiene?",
+      "stem": {
+        "es": "Eres administrador de la organización. Sales del grupo de Desarrollo. El grupo sigue en el rol Developers de varios proyectos. ¿Qué efecto tiene?",
+        "en": "You are an organization admin. You leave the Development group. The group remains in the Developers role on several projects. What is the effect?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sigues con el rol en esos proyectos" },
-        { "id": "B", "texto": "Pierdes el rol vía grupo, salvo membresía suelta" },
-        { "id": "C", "texto": "Te quitan el acceso al producto automáticamente" },
-        { "id": "D", "texto": "Se borra el esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sigues con el rol en esos proyectos",
+            "en": "You still have the role on those projects"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pierdes el rol vía grupo, salvo membresía suelta",
+            "en": "You lose the role via the group, unless you have a direct membership"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Te quitan el acceso al producto automáticamente",
+            "en": "Product access is removed automatically"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se borra el esquema de permisos",
+            "en": "The permission scheme is deleted"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El offboarding es quitar del grupo. El product access es otra palanca."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El offboarding es quitar del grupo. El product access es otra palanca.",
+        "en": "Offboarding is removing them from the group. Product access is a separate lever."
+      }
     },
     {
       "id": "m02-q31",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Necesitas invitar a un compañero de práctica al site. ¿Dónde lo invitas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Necesitas invitar a un compañero de práctica al site. ¿Dónde lo invitas?",
+        "en": "You are an organization admin. You need to invite a practice colleague to the site. Where do you invite them?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Personas de un proyecto" },
-        { "id": "B", "texto": "En admin.atlassian.com → Directorio → Usuarios → Invitar" },
-        { "id": "C", "texto": "En Jira → Configuración → Sistema → Make bulk changes" },
-        { "id": "D", "texto": "En Para ti → Crear" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Personas de un proyecto",
+            "en": "In a project's People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En admin.atlassian.com → Directorio → Usuarios → Invitar",
+            "en": "In admin.atlassian.com → Directory → Users → Invite"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En Jira → Configuración → Sistema → Make bulk changes",
+            "en": "In Jira → Settings → System → Make bulk changes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En Para ti → Crear",
+            "en": "In For you → Create"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El diálogo pide correo y aplicaciones (Jira). El rol debe ser usuario, no administrador."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El diálogo pide correo y aplicaciones (Jira). El rol debe ser usuario, no administrador.",
+        "en": "The dialog asks for email and apps (Jira). The role must be user, not administrator."
+      }
     },
     {
       "id": "m02-q32",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Necesitas crear los grupos departamentales de Operaciones y el resto. ¿Dónde los creas?",
+      "stem": {
+        "es": "Eres administrador de la organización. Necesitas crear los grupos departamentales de Operaciones y el resto. ¿Dónde los creas?",
+        "en": "You are an organization admin. You need to create the Operations department groups and the rest. Where do you create them?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En Personas del proyecto" },
-        { "id": "B", "texto": "En Directorio → Grupos" },
-        { "id": "C", "texto": "En el esquema de permisos" },
-        { "id": "D", "texto": "En Facturación" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En Personas del proyecto",
+            "en": "In project People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "En Directorio → Grupos",
+            "en": "In Directory → Groups"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En el esquema de permisos",
+            "en": "In the permission scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En Facturación",
+            "en": "In Billing"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los grupos viven en la organización. Personas solo asigna un grupo ya existente a un rol."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los grupos viven en la organización. Personas solo asigna un grupo ya existente a un rol.",
+        "en": "Groups live in the organization. People only assigns an existing group to a role."
+      }
     },
     {
       "id": "m02-q33",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto. Un compañero pide que lo nombres administrador de la organización. ¿Quién puede conceder ese rol?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Un compañero pide que lo nombres administrador de la organización. ¿Quién puede conceder ese rol?",
+        "en": "You are a project administrator. A colleague asks you to make them organization admin. Who can grant that role?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cualquier administrador de proyecto" },
-        { "id": "B", "texto": "Cualquier miembro del grupo de Desarrollo" },
-        { "id": "C", "texto": "Un administrador de la organización" },
-        { "id": "D", "texto": "Cualquier usuario con acceso al producto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cualquier administrador de proyecto",
+            "en": "Any project administrator"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Cualquier miembro del grupo de Desarrollo",
+            "en": "Any member of the Development group"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un administrador de la organización",
+            "en": "An organization admin"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cualquier usuario con acceso al producto",
+            "en": "Any user with product access"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Solo un organization admin nombra a otro. No lo hagas con un usuario de prueba: para un espacio basta usuario más grupos."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Solo un organization admin nombra a otro. No lo hagas con un usuario de prueba: para un espacio basta usuario más grupos.",
+        "en": "Only an organization admin names another. Do not do it for a test user: for a project, user plus groups is enough."
+      }
     },
     {
       "id": "m02-q34",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Alguien nuevo debe trabajar en un proyecto. Quieres aplicar las palancas en el orden correcto. ¿Cuál es el orden conceptual?",
+      "stem": {
+        "es": "Eres administrador de Jira. Alguien nuevo debe trabajar en un proyecto. Quieres aplicar las palancas en el orden correcto. ¿Cuál es el orden conceptual?",
+        "en": "You are a Jira administrator. Someone new must work in a project. You want to apply the levers in the correct order. What is the conceptual order?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Rol de proyecto primero; luego invitar a la organización" },
-        { "id": "B", "texto": "Invitar a la org → acceso a Jira → grupos → rol y esquema" },
-        { "id": "C", "texto": "Esquema de permisos, luego crear el site" },
-        { "id": "D", "texto": "Solo Make bulk changes" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Rol de proyecto primero; luego invitar a la organización",
+            "en": "Project role first; then invite to the organization"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Invitar a la org → acceso a Jira → grupos → rol y esquema",
+            "en": "Invite to the org → Jira access → groups → role and scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Esquema de permisos, luego crear el site",
+            "en": "Permission scheme, then create the site"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo Make bulk changes",
+            "en": "Make bulk changes only"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cuatro palancas en ese orden. El esquema no actúa si no hay producto ni usuario."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cuatro palancas en ese orden. El esquema no actúa si no hay producto ni usuario.",
+        "en": "Four levers in that order. The scheme does not act if there is no product and no user."
+      }
     },
     {
       "id": "m02-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Al invitar, el diálogo pide correo y aplicaciones. Quieres un usuario de prueba con Jira, no un administrador. ¿Qué eliges?",
+      "stem": {
+        "es": "Eres administrador de la organización. Al invitar, el diálogo pide correo y aplicaciones. Quieres un usuario de prueba con Jira, no un administrador. ¿Qué eliges?",
+        "en": "You are an organization admin. When inviting, the dialog asks for email and apps. You want a test user with Jira, not an administrator. What do you choose?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Aplicación Jira y rol de usuario" },
-        { "id": "B", "texto": "Sin aplicación y rol de administrador de la organización" },
-        { "id": "C", "texto": "Solo Confluence, nunca Jira" },
-        { "id": "D", "texto": "Rol de administrador de Jira desde el diálogo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Aplicación Jira y rol de usuario",
+            "en": "Jira app and user role"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sin aplicación y rol de administrador de la organización",
+            "en": "No app and organization admin role"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo Confluence, nunca Jira",
+            "en": "Confluence only, never Jira"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Rol de administrador de Jira desde el diálogo",
+            "en": "Jira administrator role from the dialog"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Aplicación Jira y rol usuario. El invitado no debe ser administrador."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Aplicación Jira y rol usuario. El invitado no debe ser administrador.",
+        "en": "Jira app and user role. The guest must not be an administrator."
+      }
     },
     {
       "id": "m02-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres usuario en el Directorio. No aparece la sección Grupos. Necesitas crear grupos departamentales. ¿Cuál es la causa probable?",
+      "stem": {
+        "es": "Eres usuario en el Directorio. No aparece la sección Grupos. Necesitas crear grupos departamentales. ¿Cuál es la causa probable?",
+        "en": "You are a user in Directory. The Groups section does not appear. You need to create department groups. What is the likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El proyecto DEV aún no existe" },
-        { "id": "B", "texto": "No eres administrador de la organización" },
-        { "id": "C", "texto": "Falta Assignable User" },
-        { "id": "D", "texto": "Make bulk changes está denegado" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El proyecto DEV aún no existe",
+            "en": "The DEV project does not exist yet"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No eres administrador de la organización",
+            "en": "You are not an organization admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta Assignable User",
+            "en": "Assignable User is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Make bulk changes está denegado",
+            "en": "Make bulk changes is denied"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Grupos es de la organización. Sin organization admin no ves esa pantalla."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Grupos es de la organización. Sin organization admin no ves esa pantalla.",
+        "en": "Groups belong to the organization. Without organization admin you do not see that screen."
+      }
     },
     {
       "id": "m02-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Creaste NorteCh Dev con mayúsculas y espacio, además de nortech-dev. Vas a asignar roles. ¿Qué problema hay?",
+      "stem": {
+        "es": "Eres administrador de la organización. Creaste NorteCh Dev con mayúsculas y espacio, además de nortech-dev. Vas a asignar roles. ¿Qué problema hay?",
+        "en": "You are an organization admin. You created NorteCh Dev with capitals and a space, in addition to nortech-dev. You are about to assign roles. What is the problem?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ninguno: Jira unifica los nombres" },
-        { "id": "B", "texto": "Hay un grupo duplicado; usa exactamente nortech-dev" },
-        { "id": "C", "texto": "El segundo nombre concede administrador de Jira" },
-        { "id": "D", "texto": "Hay que borrarlos y usar jira-users" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ninguno: Jira unifica los nombres",
+            "en": "None: Jira unifies the names"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hay un grupo duplicado; usa exactamente nortech-dev",
+            "en": "There is a duplicate group; use exactly nortech-dev"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El segundo nombre concede administrador de Jira",
+            "en": "The second name grants Jira administrator"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Hay que borrarlos y usar jira-users",
+            "en": "You must delete them and use jira-users"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Mayúsculas y espacios crean otro grupo. El typo se arrastra a todos los mapeos de rol."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Mayúsculas y espacios crean otro grupo. El typo se arrastra a todos los mapeos de rol.",
+        "en": "Capitals and spaces create another group. The typo carries into every role mapping."
+      }
     },
     {
       "id": "m02-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Añades tu usuario al grupo de Desarrollo y al invitado al de Soporte. Aún no hay roles de proyecto. ¿Eso ya les da trabajo en un espacio?",
+      "stem": {
+        "es": "Eres administrador de la organización. Añades tu usuario al grupo de Desarrollo y al invitado al de Soporte. Aún no hay roles de proyecto. ¿Eso ya les da trabajo en un espacio?",
+        "en": "You are an organization admin. You add your user to the Development group and the guest to Support. There are still no project roles. Does that already give them work in a project?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: la membresía abre todos los proyectos" },
-        { "id": "B", "texto": "No: falta acceso al producto si no lo tienen, y luego rol y esquema" },
-        { "id": "C", "texto": "Sí, pero solo en team-managed" },
-        { "id": "D", "texto": "Sí: el grupo de Soporte implica Browse en todos los proyectos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: la membresía abre todos los proyectos",
+            "en": "Yes: membership opens every project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: falta acceso al producto si no lo tienen, y luego rol y esquema",
+            "en": "No: product access is still needed if they do not have it, then role and scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí, pero solo en team-managed",
+            "en": "Yes, but only in team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sí: el grupo de Soporte implica Browse en todos los proyectos",
+            "en": "Yes: the Support group implies Browse on every project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Membresía de departamento no es permiso de trabajo. El esquema habla de roles, no del grupo solo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Membresía de departamento no es permiso de trabajo. El esquema habla de roles, no del grupo solo.",
+        "en": "Department membership is not a work permission. The scheme talks about roles, not the group alone."
+      }
     },
     {
       "id": "m02-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. Quieres validar lo que ve el invitado. Tu sesión de administrador no muestra las restricciones. ¿Por qué usas una ventana de incógnito?",
+      "stem": {
+        "es": "Eres administrador de la organización. Quieres validar lo que ve el invitado. Tu sesión de administrador no muestra las restricciones. ¿Por qué usas una ventana de incógnito?",
+        "en": "You are an organization admin. You want to validate what the guest sees. Your administrator session does not show the restrictions. Why do you use a private window?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Incógnito convierte al invitado en administrador" },
-        { "id": "B", "texto": "Hay que entrar con el invitado para ver lo que ve un no-administrador" },
-        { "id": "C", "texto": "Incógnito concede acceso al producto" },
-        { "id": "D", "texto": "Sin incógnito no existen los grupos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Incógnito convierte al invitado en administrador",
+            "en": "Private browsing turns the guest into an administrator"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hay que entrar con el invitado para ver lo que ve un no-administrador",
+            "en": "You must sign in as the guest to see what a non-administrator sees"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Incógnito concede acceso al producto",
+            "en": "Private browsing grants product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sin incógnito no existen los grupos",
+            "en": "Without private browsing the groups do not exist"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Tú no eres el sujeto de las restricciones. Entra con el invitado, revoca, recarga y vuelve a conceder."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Tú no eres el sujeto de las restricciones. Entra con el invitado, revoca, recarga y vuelve a conceder.",
+        "en": "You are not the subject of the restrictions. Sign in as the guest, revoke, reload, and grant again."
+      }
     },
     {
       "id": "m02-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Concedes Make bulk changes en permisos globales. El usuario cree que ya puede editar en masa cualquier proyecto. ¿Qué es correcto?",
+      "stem": {
+        "es": "Eres administrador de Jira. Concedes Make bulk changes en permisos globales. El usuario cree que ya puede editar en masa cualquier proyecto. ¿Qué es correcto?",
+        "en": "You are a Jira administrator. You grant Make bulk changes in global permissions. The user believes they can already bulk-edit any project. What is correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Puede hacer bulk en cualquier proyecto del site, sin más" },
-        { "id": "B", "texto": "Solo puede hacer bulk donde ya tenga permiso sobre el elemento" },
-        { "id": "C", "texto": "Pasa a administrador de la organización" },
-        { "id": "D", "texto": "Pierde el acceso al producto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Puede hacer bulk en cualquier proyecto del site, sin más",
+            "en": "They can bulk-change any project on the site, with nothing more"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo puede hacer bulk donde ya tenga permiso sobre el elemento",
+            "en": "They can only bulk-change where they already have permission on the issue"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pasa a administrador de la organización",
+            "en": "They become organization admin"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pierde el acceso al producto",
+            "en": "They lose product access"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los globales son de site. Siguen haciendo falta los permisos de elemento de trabajo en cada espacio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los globales son de site. Siguen haciendo falta los permisos de elemento de trabajo en cada espacio.",
+        "en": "Globals are site-wide. Issue permissions in each project are still required."
+      }
     },
     {
       "id": "m02-q41",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de un proyecto y gestionas Personas. Un proveedor externo no existe aún en la organización. ¿Puedes invitarlo a la organización desde Personas?",
+      "stem": {
+        "es": "Eres administrador de un proyecto y gestionas Personas. Un proveedor externo no existe aún en la organización. ¿Puedes invitarlo a la organización desde Personas?",
+        "en": "You are a project administrator and you manage People. An external vendor does not yet exist in the organization. Can you invite them to the organization from People?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí, desde Personas" },
-        { "id": "B", "texto": "No: invitar a la org es de administrador de org o user access admin" },
-        { "id": "C", "texto": "Sí, si el proyecto es company-managed" },
-        { "id": "D", "texto": "Sí, si el proveedor está en el grupo de Desarrollo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí, desde Personas",
+            "en": "Yes, from People"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: invitar a la org es de administrador de org o user access admin",
+            "en": "No: inviting to the org is for org admin or user access admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí, si el proyecto es company-managed",
+            "en": "Yes, if the project is company-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sí, si el proveedor está en el grupo de Desarrollo",
+            "en": "Yes, if the vendor is in the Development group"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El administrador de un espacio no invita a la organización. Personas rellena roles de gente que ya existe."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El administrador de un espacio no invita a la organización. Personas rellena roles de gente que ya existe.",
+        "en": "A project administrator does not invite people to the organization. People fills roles for people who already exist."
+      }
     },
     {
       "id": "m02-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres la cuenta que creó el site. Has invitado a un usuario de prueba. ¿Quién debe ser administrador de la organización?",
+      "stem": {
+        "es": "Eres la cuenta que creó el site. Has invitado a un usuario de prueba. ¿Quién debe ser administrador de la organización?",
+        "en": "You are the account that created the site. You have invited a test user. Who should be organization admin?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los dos, para que el entorno sea simétrico" },
-        { "id": "B", "texto": "Tú; el invitado es usuario, no administrador" },
-        { "id": "C", "texto": "Solo el invitado" },
-        { "id": "D", "texto": "Nadie: Cloud no tiene ese rol" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los dos, para que el entorno sea simétrico",
+            "en": "Both, so the environment is symmetrical"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Tú; el invitado es usuario, no administrador",
+            "en": "You; the guest is a user, not an administrator"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo el invitado",
+            "en": "Only the guest"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Nadie: Cloud no tiene ese rol",
+            "en": "Nobody: Cloud does not have that role"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En el Directorio, tú eres admin de org o site; el invitado, usuario. Si todos son admin, no hay restricción que demostrar."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En el Directorio, tú eres admin de org o site; el invitado, usuario. Si todos son admin, no hay restricción que demostrar.",
+        "en": "In Directory, you are org or site admin; the guest is a user. If everyone is admin, there is no restriction to demonstrate."
+      }
     },
     {
       "id": "m02-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El invitado lleva horas en estado Invitado y no acepta el correo. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. El invitado lleva horas en estado Invitado y no acepta el correo. ¿Qué haces?",
+        "en": "You are an organization admin. The guest has been in Invited status for hours and does not accept the email. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Lo haces administrador de la organización para forzar el alta" },
-        { "id": "B", "texto": "Reenvías el correo de invitación" },
-        { "id": "C", "texto": "Le das Browse desde Personas aunque no exista" },
-        { "id": "D", "texto": "Borras el grupo de Soporte" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Lo haces administrador de la organización para forzar el alta",
+            "en": "You make them organization admin to force the signup"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Reenvías el correo de invitación",
+            "en": "You resend the invitation email"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Le das Browse desde Personas aunque no exista",
+            "en": "You grant Browse from People even though they do not exist"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borras el grupo de Soporte",
+            "en": "You delete the Support group"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si lleva horas en invited, reenvía el mail. No lo conviertas en administrador."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si lleva horas en invited, reenvía el mail. No lo conviertas en administrador.",
+        "en": "If they have been invited for hours, resend the mail. Do not turn them into an administrator."
+      }
     },
     {
       "id": "m02-q44",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. En el Directorio encuentras la pantalla para dar al invitado el rol de administrador de la organización. El invitado es solo de prueba. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de la organización. En el Directorio encuentras la pantalla para dar al invitado el rol de administrador de la organización. El invitado es solo de prueba. ¿Qué haces?",
+        "en": "You are an organization admin. In Directory you find the screen to give the guest the organization admin role. The guest is only for testing. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Se lo das para que vea Facturación" },
-        { "id": "B", "texto": "No se lo das: no corresponde al usuario de prueba" },
-        { "id": "C", "texto": "Se lo das solo si el plan es Free" },
-        { "id": "D", "texto": "Se lo das y luego le quitas el acceso al producto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Se lo das para que vea Facturación",
+            "en": "You give it so they can see Billing"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No se lo das: no corresponde al usuario de prueba",
+            "en": "You do not give it: it does not belong to the test user"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se lo das solo si el plan es Free",
+            "en": "You give it only if the plan is Free"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se lo das y luego le quitas el acceso al producto",
+            "en": "You give it and then revoke product access"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Encuentra la pantalla y no lo hagas. Basta usuario más grupos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Encuentra la pantalla y no lo hagas. Basta usuario más grupos.",
+        "en": "Find the screen and do not do it. User plus groups is enough."
+      }
     },
     {
       "id": "m02-q45",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. En plan Free no ves eventos útiles en el registro de auditoría. ¿Es un fallo de configuración?",
+      "stem": {
+        "es": "Eres administrador de la organización. En plan Free no ves eventos útiles en el registro de auditoría. ¿Es un fallo de configuración?",
+        "en": "You are an organization admin. On the Free plan you do not see useful events in the audit log. Is that a configuration failure?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: hay que instalar una app" },
-        { "id": "B", "texto": "No: Free puede no mostrar nada útil; Premium y Standard muestran más" },
-        { "id": "C", "texto": "Sí: el registro solo existe en Personas" },
-        { "id": "D", "texto": "Sí: hay que hacer al invitado administrador para verlo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: hay que instalar una app",
+            "en": "Yes: you must install an app"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: Free puede no mostrar nada útil; Premium y Standard muestran más",
+            "en": "No: Free may show nothing useful; Premium and Standard show more"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Sí: el registro solo existe en Personas",
+            "en": "Yes: the log only exists in People"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sí: hay que hacer al invitado administrador para verlo",
+            "en": "Yes: you must make the guest an administrator to see it"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Lo importante es la ubicación del registro. Free puede estar vacío; no es un playbook de incidente."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Lo importante es la ubicación del registro. Free puede estar vacío; no es un playbook de incidente.",
+        "en": "The important point is where the log lives. Free may be empty; it is not an incident playbook."
+      }
     },
     {
       "id": "m02-q46",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de un proyecto. Marta no aparece en el desplegable de responsable. ¿Cuáles dos causas son las habituales?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Marta no aparece en el desplegable de responsable. ¿Cuáles dos causas son las habituales?",
+        "en": "You are a project administrator. Marta does not appear in the assignee dropdown. Which two causes are the usual ones?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No tiene Assignable User" },
-        { "id": "B", "texto": "La página de inicio está en inglés" },
-        { "id": "C", "texto": "No tiene acceso al producto o no está en un grupo o rol visible" },
-        { "id": "D", "texto": "Falta Make bulk changes" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No tiene Assignable User",
+            "en": "She does not have Assignable User"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La página de inicio está en inglés",
+            "en": "The home page is in English"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No tiene acceso al producto o no está en un grupo o rol visible",
+            "en": "She does not have product access or is not in a visible group or role"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falta Make bulk changes",
+            "en": "Make bulk changes is missing"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "El desplegable = Assignable User más que Jira pueda ver a Marta. Assign Issues es de quien asigna, no de quien aparece."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "El desplegable = Assignable User más que Jira pueda ver a Marta. Assign Issues es de quien asigna, no de quien aparece.",
+        "en": "The dropdown = Assignable User plus Jira being able to see Marta. Assign Issues belongs to whoever assigns, not whoever appears."
+      }
     },
     {
       "id": "m02-q47",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de un proyecto. Quieres saber qué no te corresponde. ¿Cuáles dos acciones son de administrador de la organización o de user access admin?",
+      "stem": {
+        "es": "Eres administrador de un proyecto. Quieres saber qué no te corresponde. ¿Cuáles dos acciones son de administrador de la organización o de user access admin?",
+        "en": "You are a project administrator. You want to know what is not yours to do. Which two actions belong to the organization admin or user access admin?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Invitar a un proveedor a la organización" },
-        { "id": "B", "texto": "Añadir un grupo al rol Developers en Personas" },
-        { "id": "C", "texto": "Crear el grupo de Operaciones en el Directorio" },
-        { "id": "D", "texto": "Abrir la configuración de un proyecto y ver Personas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Invitar a un proveedor a la organización",
+            "en": "Invite a vendor to the organization"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Añadir un grupo al rol Developers en Personas",
+            "en": "Add a group to the Developers role in People"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crear el grupo de Operaciones en el Directorio",
+            "en": "Create the Operations group in Directory"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Abrir la configuración de un proyecto y ver Personas",
+            "en": "Open a project's settings and see People"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "Alta y grupos = Directorio. Personas = espacio."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Alta y grupos = Directorio. Personas = espacio.",
+        "en": "Joiners and groups = Directory. People = project."
+      }
     },
     {
       "id": "m02-q48",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Ana no ve el proyecto DEV. ¿Cuáles dos comprobaciones haces, en orden de puertas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Ana no ve el proyecto DEV. ¿Cuáles dos comprobaciones haces, en orden de puertas?",
+        "en": "You are a Jira administrator. Ana does not see the DEV project. Which two checks do you make, in door order?"
+      },
       "opciones": [
-        { "id": "A", "texto": "¿Abre Jira? Si no, acceso al producto" },
-        { "id": "B", "texto": "¿El site se llama Sample Scrum?" },
-        { "id": "C", "texto": "Si abre Jira: Browse y rol o grupo en ese proyecto" },
-        { "id": "D", "texto": "¿Tiene Make bulk changes?" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "¿Abre Jira? Si no, acceso al producto",
+            "en": "Does she open Jira? If not, product access"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "¿El site se llama Sample Scrum?",
+            "en": "Is the site named Sample Scrum?"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Si abre Jira: Browse y rol o grupo en ese proyecto",
+            "en": "If she opens Jira: Browse and a role or group on that project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "¿Tiene Make bulk changes?",
+            "en": "Does she have Make bulk changes?"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "Producto primero, espacio después. No diagnostiques Browse cuando falta la aplicación."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Producto primero, espacio después. No diagnostiques Browse cuando falta la aplicación.",
+        "en": "Product first, project second. Do not diagnose Browse when the application is missing."
+      }
     },
     {
       "id": "m02-q49",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Diseñas el modelo mínimo de grupos y permisos para varios departamentos. ¿Cuáles dos afirmaciones son correctas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Diseñas el modelo mínimo de grupos y permisos para varios departamentos. ¿Cuáles dos afirmaciones son correctas?",
+        "en": "You are a Jira administrator. You design the minimum group and permission model for several departments. Which two statements are correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Grupos departamentales en el Directorio y acceso a Jira por esos grupos" },
-        { "id": "B", "texto": "Hacer administrador de Jira a todos los departamentos" },
-        { "id": "C", "texto": "En cada proyecto, el grupo va a un rol que el esquema entiende" },
-        { "id": "D", "texto": "El administrador de proyecto invita a la organización desde Personas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Grupos departamentales en el Directorio y acceso a Jira por esos grupos",
+            "en": "Department groups in Directory and Jira access through those groups"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Hacer administrador de Jira a todos los departamentos",
+            "en": "Make every department a Jira administrator"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En cada proyecto, el grupo va a un rol que el esquema entiende",
+            "en": "On each project, the group goes to a role the scheme understands"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El administrador de proyecto invita a la organización desde Personas",
+            "en": "The project administrator invites to the organization from People"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "Grupo → producto → rol → esquema. Ni Jira admin masivo ni alta a la org desde Personas."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Grupo → producto → rol → esquema. Ni Jira admin masivo ni alta a la org desde Personas.",
+        "en": "Group → product → role → scheme. Neither mass Jira admin nor joining the org from People."
+      }
     },
     {
       "id": "m02-q50",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de la organización. El invitado abre Jira y no ve Administration ni Facturación. Quieres saber si el modelo de prueba es el esperado. ¿Está bien encaminado?",
+      "stem": {
+        "es": "Eres administrador de la organización. El invitado abre Jira y no ve Administration ni Facturación. Quieres saber si el modelo de prueba es el esperado. ¿Está bien encaminado?",
+        "en": "You are an organization admin. The guest opens Jira and does not see Administration or Billing. You want to know whether the test model is the expected one. Is it on the right track?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No: debe ver Facturación para practicar cobros" },
-        { "id": "B", "texto": "Sí: es usuario con producto, no administrador de la organización" },
-        { "id": "C", "texto": "No: sin Administration no hay acceso al producto" },
-        { "id": "D", "texto": "No: hay que meterlo en un grupo de admins y darle Jira admin" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No: debe ver Facturación para practicar cobros",
+            "en": "No: they must see Billing to practice charges"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Sí: es usuario con producto, no administrador de la organización",
+            "en": "Yes: they are a user with the product, not an organization admin"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No: sin Administration no hay acceso al producto",
+            "en": "No: without Administration there is no product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No: hay que meterlo en un grupo de admins y darle Jira admin",
+            "en": "No: put them in an admins group and give them Jira admin"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Resultado esperado: el invitado no ve Facturación ni crea grupos. Tú sigues siendo el administrador de la organización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Resultado esperado: el invitado no ve Facturación ni crea grupos. Tú sigues siendo el administrador de la organización.",
+        "en": "Expected result: the guest does not see Billing or create groups. You remain the organization admin."
+      }
     }
   ]
 }

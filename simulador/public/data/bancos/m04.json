@@ -6,701 +6,2307 @@
       "id": "m04-q1",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Veinte proyectos company-managed apuntan al mismo esquema de permisos. Editas ese esquema. ¿Cuál es el efecto?",
+      "stem": {
+        "es": "Eres administrador de Jira. Veinte proyectos company-managed apuntan al mismo esquema de permisos. Editas ese esquema. ¿Cuál es el efecto?",
+        "en": "You are a Jira administrator. Twenty company-managed projects point to the same permission scheme. You edit that scheme. What is the effect?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo el proyecto desde el que editaste" },
-        { "id": "B", "texto": "Los veinte al instante" },
-        { "id": "C", "texto": "Los veinte, tras reiniciar Jira" },
-        { "id": "D", "texto": "Solo los proyectos team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo el proyecto desde el que editaste",
+            "en": "Only the project you edited from"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Los veinte al instante",
+            "en": "All twenty instantly"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Los veinte, tras reiniciar Jira",
+            "en": "All twenty, after restarting Jira"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo los proyectos team-managed",
+            "en": "Only team-managed projects"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un esquema compartido cambia todos los apuntadores de inmediato. Por eso se copian y se nombran: es poder y riesgo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un esquema compartido cambia todos los apuntadores de inmediato. Por eso se copian y se nombran: es poder y riesgo.",
+        "en": "A shared scheme changes all pointers immediately. That is why you copy and name them: it is power and risk."
+      }
     },
     {
       "id": "m04-q2",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Un proyecto company-managed necesita un tipo de trabajo extra que ningún otro debe tener. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de Jira. Un proyecto company-managed necesita un tipo de trabajo extra que ningún otro debe tener. ¿Qué haces?",
+        "en": "You are a Jira administrator. A company-managed project needs an extra work type that no other project should have. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Editas el esquema de tipos compartido" },
-        { "id": "B", "texto": "Copias el esquema, añades el tipo y lo asocias solo a ese proyecto" },
-        { "id": "C", "texto": "Creas un proyecto team-managed" },
-        { "id": "D", "texto": "Usas una etiqueta en lugar del tipo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Editas el esquema de tipos compartido",
+            "en": "Edit the shared issue type scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Copias el esquema, añades el tipo y lo asocias solo a ese proyecto",
+            "en": "Copy the scheme, add the type, and associate it only to that project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Creas un proyecto team-managed",
+            "en": "Create a team-managed project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Usas una etiqueta en lugar del tipo",
+            "en": "Use a label instead of the type"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Excepción = copia más asociación puntual. No rompas la plantilla corporativa editando el esquema compartido."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Excepción = copia más asociación puntual. No rompas la plantilla corporativa editando el esquema compartido.",
+        "en": "Exception = copy plus a one-off association. Do not break the corporate template by editing the shared scheme."
+      }
     },
     {
       "id": "m04-q3",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. En un proyecto company-managed te piden configurar el layout de campos: qué se ve y si es obligatorio. ¿Qué paquetes usas?",
+      "stem": {
+        "es": "Eres administrador de Jira. En un proyecto company-managed te piden configurar el layout de campos: qué se ve y si es obligatorio. ¿Qué paquetes usas?",
+        "en": "You are a Jira administrator. In a company-managed project they ask you to configure the field layout: what is shown and whether it is required. Which packs do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Las swimlanes del tablero" },
-        { "id": "B", "texto": "Pantallas y configuración de campos" },
-        { "id": "C", "texto": "El acceso al producto" },
-        { "id": "D", "texto": "La duración del sprint" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Las swimlanes del tablero",
+            "en": "The board swimlanes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Pantallas y configuración de campos",
+            "en": "Screens and field configuration"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El acceso al producto",
+            "en": "Product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La duración del sprint",
+            "en": "Sprint duration"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En company-managed el layout se reparte entre screens y field configuration. En team-managed el layout es del propio proyecto."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En company-managed el layout se reparte entre screens y field configuration. En team-managed el layout es del propio proyecto.",
+        "en": "In company-managed the layout is split between screens and field configuration. In team-managed the layout belongs to the project itself."
+      }
     },
     {
       "id": "m04-q4",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. RRHH pide un proyecto nuevo alineado con DEV y SUP, que ya son company-managed y usan la plantilla NORTECH. ¿Qué haces el primer día?",
+      "stem": {
+        "es": "Eres administrador de Jira. RRHH pide un proyecto nuevo alineado con DEV y SUP, que ya son company-managed y usan la plantilla NORTECH. ¿Qué haces el primer día?",
+        "en": "You are a Jira administrator. HR asks for a new project aligned with DEV and SUP, which are already company-managed and use the NORTECH template. What do you do on day one?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Creas un team-managed y le pegas esquemas de site" },
-        { "id": "B", "texto": "Editas Default para que nazca bien" },
-        { "id": "C", "texto": "Creas un company-managed y asocias los esquemas NORTECH" },
-        { "id": "D", "texto": "Montas solo un dashboard compartido" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Creas un team-managed y le pegas esquemas de site",
+            "en": "Create a team-managed project and paste site schemes onto it"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Editas Default para que nazca bien",
+            "en": "Edit Default so it is born correctly"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Creas un company-managed y asocias los esquemas NORTECH",
+            "en": "Create a company-managed project and associate the NORTECH schemes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Montas solo un dashboard compartido",
+            "en": "Set up only a shared dashboard"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Proyecto nuevo más plantilla NORTECH. Team-managed no asocia esquemas de site. No se toca Default."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Proyecto nuevo más plantilla NORTECH. Team-managed no asocia esquemas de site. No se toca Default.",
+        "en": "A new project plus the NORTECH template. Team-managed does not associate site schemes. Default is not touched."
+      }
     },
     {
       "id": "m04-q5",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Acabas de crear Calidad como company-managed. ¿Qué esquemas recibe de inicio?",
+      "stem": {
+        "es": "Eres administrador de Jira. Acabas de crear Calidad como company-managed. ¿Qué esquemas recibe de inicio?",
+        "en": "You are a Jira administrator. You have just created Quality as company-managed. Which schemes does it receive at the start?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los NORTECH de forma automática" },
-        { "id": "B", "texto": "Los Default o los de la plantilla; hay que asociar NORTECH" },
-        { "id": "C", "texto": "Ninguno: un company-managed no tiene esquemas" },
-        { "id": "D", "texto": "Solo el tablero Scrum" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los NORTECH de forma automática",
+            "en": "The NORTECH schemes automatically"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Los Default o los de la plantilla; hay que asociar NORTECH",
+            "en": "The Default schemes or the template’s; you still have to associate NORTECH"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ninguno: un company-managed no tiene esquemas",
+            "en": "None: a company-managed project has no schemes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo el tablero Scrum",
+            "en": "Only the Scrum board"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Crear el proyecto no aplica la plantilla corporativa. Hay que copiar, nombrar y asociar NORTECH a propósito."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Crear el proyecto no aplica la plantilla corporativa. Hay que copiar, nombrar y asociar NORTECH a propósito.",
+        "en": "Creating the project does not apply the corporate template. You must copy, name, and associate NORTECH on purpose."
+      }
     },
     {
       "id": "m04-q6",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Creas un proyecto company-managed con configuración compartida a partir de DEV. ¿Qué ocurre con el nuevo proyecto?",
+      "stem": {
+        "es": "Eres administrador de Jira. Creas un proyecto company-managed con configuración compartida a partir de DEV. ¿Qué ocurre con el nuevo proyecto?",
+        "en": "You are a Jira administrator. You create a company-managed project with shared configuration from DEV. What happens to the new project?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Copia todos los elementos de trabajo de DEV" },
-        { "id": "B", "texto": "Nace como team-managed" },
-        { "id": "C", "texto": "Clona el site" },
-        { "id": "D", "texto": "Apunta a los mismos esquemas que DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Copia todos los elementos de trabajo de DEV",
+            "en": "It copies all of DEV’s work items"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Nace como team-managed",
+            "en": "It is created as team-managed"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Clona el site",
+            "en": "It clones the site"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Apunta a los mismos esquemas que DEV",
+            "en": "It points to the same schemes as DEV"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "Shared configuration reutiliza paquetes. No clona el backlog ni el site."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "Shared configuration reutiliza paquetes. No clona el backlog ni el site.",
+        "en": "Shared configuration reuses packs. It does not clone the backlog or the site."
+      }
     },
     {
       "id": "m04-q7",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Calidad pide un proyecto y alguien propone crearlo team-managed. ¿Qué ocurre si lo haces así?",
+      "stem": {
+        "es": "Eres administrador de Jira. Calidad pide un proyecto y alguien propone crearlo team-managed. ¿Qué ocurre si lo haces así?",
+        "en": "You are a Jira administrator. Quality asks for a project and someone proposes creating it as team-managed. What happens if you do that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No podrá asociar esquemas de site" },
-        { "id": "B", "texto": "Podrá usar NORTECH Permissions" },
-        { "id": "C", "texto": "Compartirá el esquema de flujo con DEV" },
-        { "id": "D", "texto": "Tendrá el mismo mapa de esquemas que SUP" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No podrá asociar esquemas de site",
+            "en": "It will not be able to associate site schemes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Podrá usar NORTECH Permissions",
+            "en": "It will be able to use NORTECH Permissions"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Compartirá el esquema de flujo con DEV",
+            "en": "It will share the workflow scheme with DEV"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Tendrá el mismo mapa de esquemas que SUP",
+            "en": "It will have the same scheme map as SUP"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Los esquemas de site solo se asocian a company-managed. Un team-managed de Calidad queda fuera de NORTECH."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Los esquemas de site solo se asocian a company-managed. Un team-managed de Calidad queda fuera de NORTECH.",
+        "en": "Site schemes are associated only to company-managed projects. A team-managed Quality project stays outside NORTECH."
+      }
     },
     {
       "id": "m04-q8",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. DEV y SUP ya existen y la PMO quiere una plantilla de esquemas reutilizable. ¿Por qué tuvieron que nacer company-managed?",
+      "stem": {
+        "es": "Eres administrador de Jira. DEV y SUP ya existen y la PMO quiere una plantilla de esquemas reutilizable. ¿Por qué tuvieron que nacer company-managed?",
+        "en": "You are a Jira administrator. DEV and SUP already exist and the PMO wants a reusable scheme template. Why did they have to be created as company-managed?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los esquemas de site solo se asocian a proyectos company-managed" },
-        { "id": "B", "texto": "Team-managed comparte esquemas mejor" },
-        { "id": "C", "texto": "El plan Free lo exige" },
-        { "id": "D", "texto": "Las categorías lo exigen" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los esquemas de site solo se asocian a proyectos company-managed",
+            "en": "Site schemes are associated only to company-managed projects"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Team-managed comparte esquemas mejor",
+            "en": "Team-managed shares schemes better"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El plan Free lo exige",
+            "en": "The Free plan requires it"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Las categorías lo exigen",
+            "en": "Categories require it"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Sin company-managed no hay plantilla reutilizable. Se asume que los cuatro proyectos corporativos ya están creados."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Sin company-managed no hay plantilla reutilizable. Se asume que los cuatro proyectos corporativos ya están creados.",
+        "en": "Without company-managed there is no reusable template. The four corporate projects are assumed to already exist."
+      }
     },
     {
       "id": "m04-q9",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Ya existe la plantilla NORTECH y nace un quinto proyecto. ¿Qué haces el primer día?",
+      "stem": {
+        "es": "Eres administrador de Jira. Ya existe la plantilla NORTECH y nace un quinto proyecto. ¿Qué haces el primer día?",
+        "en": "You are a Jira administrator. The NORTECH template already exists and a fifth project is born. What do you do on day one?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Creas un team-managed y copias esquemas" },
-        { "id": "B", "texto": "Creas un company-managed y asocias NORTECH; no editas Default" },
-        { "id": "C", "texto": "Editas Default para que el nuevo nazca bien" },
-        { "id": "D", "texto": "Creas el proyecto sin clave" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Creas un team-managed y copias esquemas",
+            "en": "Create a team-managed project and copy schemes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Creas un company-managed y asocias NORTECH; no editas Default",
+            "en": "Create a company-managed project and associate NORTECH; do not edit Default"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editas Default para que el nuevo nazca bien",
+            "en": "Edit Default so the new one is born correctly"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Creas el proyecto sin clave",
+            "en": "Create the project without a key"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Escalar es asociar la plantilla. Tocar Default contamina el resto del site y los proyectos que aún lo usan."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Escalar es asociar la plantilla. Tocar Default contamina el resto del site y los proyectos que aún lo usan.",
+        "en": "Scaling is associating the template. Touching Default contaminates the rest of the site and the projects that still use it."
+      }
     },
     {
       "id": "m04-q10",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. El proyecto CAL, company-managed, debe compartir permisos con DEV pero no los tipos. ¿Qué asocias?",
+      "stem": {
+        "es": "Eres administrador de Jira. El proyecto CAL, company-managed, debe compartir permisos con DEV pero no los tipos. ¿Qué asocias?",
+        "en": "You are a Jira administrator. The CAL company-managed project must share permissions with DEV but not types. What do you associate?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un único esquema para todo" },
-        { "id": "B", "texto": "Default Issue Types" },
-        { "id": "C", "texto": "NORTECH Permissions y una copia propia del esquema de tipos" },
-        { "id": "D", "texto": "Etiquetas en lugar de tipos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un único esquema para todo",
+            "en": "A single scheme for everything"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Default Issue Types",
+            "en": "Default Issue Types"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "NORTECH Permissions y una copia propia del esquema de tipos",
+            "en": "NORTECH Permissions and a private copy of the issue type scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Etiquetas en lugar de tipos",
+            "en": "Labels instead of types"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Los esquemas se combinan. Permisos compartidos y tipos excepcionales = copia solo del issue type scheme."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Los esquemas se combinan. Permisos compartidos y tipos excepcionales = copia solo del issue type scheme.",
+        "en": "Schemes are combined. Shared permissions and exceptional types = copy only the issue type scheme."
+      }
     },
     {
       "id": "m04-q11",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. DEV nació con la plantilla Scrum. Respecto a los esquemas, ¿qué es cierto?",
+      "stem": {
+        "es": "Eres administrador de Jira. DEV nació con la plantilla Scrum. Respecto a los esquemas, ¿qué es cierto?",
+        "en": "You are a Jira administrator. DEV was created with the Scrum template. Regarding schemes, what is true?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Impide cambiar de esquema después" },
-        { "id": "B", "texto": "Crea automation global" },
-        { "id": "C", "texto": "Solo aplica si el proyecto es team-managed" },
-        { "id": "D", "texto": "Deja esquemas iniciales, a menudo Default, que luego sustituyes" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Impide cambiar de esquema después",
+            "en": "It prevents changing scheme later"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Crea automation global",
+            "en": "It creates global automation"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo aplica si el proyecto es team-managed",
+            "en": "It applies only if the project is team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Deja esquemas iniciales, a menudo Default, que luego sustituyes",
+            "en": "It leaves initial schemes, often Default, that you later replace"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "La plantilla de creación arranca. La plantilla corporativa se monta copiando y asociando NORTECH, no recreando los proyectos."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "La plantilla de creación arranca. La plantilla corporativa se monta copiando y asociando NORTECH, no recreando los proyectos.",
+        "en": "The creation template is a start. The corporate template is built by copying and associating NORTECH, not by recreating the projects."
+      }
     },
     {
       "id": "m04-q12",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Existe un piloto team-managed y quieres engancharlo a NORTECH Permissions. ¿Qué ocurre?",
+      "stem": {
+        "es": "Eres administrador de Jira. Existe un piloto team-managed y quieres engancharlo a NORTECH Permissions. ¿Qué ocurre?",
+        "en": "You are a Jira administrator. A team-managed pilot exists and you want to attach it to NORTECH Permissions. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Lo asocias igual que a DEV" },
-        { "id": "B", "texto": "Basta con cambiarle el nombre" },
-        { "id": "C", "texto": "No se puede: team-managed no usa esquemas de site" },
-        { "id": "D", "texto": "Renombras Default a NORTECH" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Lo asocias igual que a DEV",
+            "en": "You associate it the same way as DEV"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Basta con cambiarle el nombre",
+            "en": "Changing its name is enough"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No se puede: team-managed no usa esquemas de site",
+            "en": "You cannot: team-managed does not use site schemes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Renombras Default a NORTECH",
+            "en": "You rename Default to NORTECH"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Asociar esquemas exige company-managed y administrador de Jira. Team-managed tiene configuración local."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Asociar esquemas exige company-managed y administrador de Jira. Team-managed tiene configuración local.",
+        "en": "Associating schemes requires company-managed and a Jira administrator. Team-managed has local configuration."
+      }
     },
     {
       "id": "m04-q13",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. PMO es company-managed y sigue usando Default de permisos, mientras DEV y SUP usan NORTECH. ¿Para qué sirve dejar PMO fuera?",
+      "stem": {
+        "es": "Eres administrador de Jira. PMO es company-managed y sigue usando Default de permisos, mientras DEV y SUP usan NORTECH. ¿Para qué sirve dejar PMO fuera?",
+        "en": "You are a Jira administrator. PMO is company-managed and still uses the Default permission scheme, while DEV and SUP use NORTECH. What is the point of leaving PMO out?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Romper el site" },
-        { "id": "B", "texto": "Convertirlo a team-managed" },
-        { "id": "C", "texto": "Evitar Personas" },
-        { "id": "D", "texto": "Comparar un proyecto fuera de plantilla con DEV y SUP" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Romper el site",
+            "en": "To break the site"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Convertirlo a team-managed",
+            "en": "To convert it to team-managed"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Evitar Personas",
+            "en": "To avoid People"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Comparar un proyecto fuera de plantilla con DEV y SUP",
+            "en": "To compare a project outside the template with DEV and SUP"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "Dejar un proyecto en Default permite ver el contraste. Un cambio en NORTECH no lo toca. OPS sí se puede enganchar a NORTECH Permissions."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "Dejar un proyecto en Default permite ver el contraste. Un cambio en NORTECH no lo toca. OPS sí se puede enganchar a NORTECH Permissions.",
+        "en": "Leaving a project on Default lets you see the contrast. A change in NORTECH does not touch it. OPS can be attached to NORTECH Permissions."
+      }
     },
     {
       "id": "m04-q14",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Debes explicar a la PMO qué es un esquema en un proyecto company-managed. ¿Qué es?",
+      "stem": {
+        "es": "Eres administrador de Jira. Debes explicar a la PMO qué es un esquema en un proyecto company-managed. ¿Qué es?",
+        "en": "You are a Jira administrator. You must explain to the PMO what a scheme is in a company-managed project. What is it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un tablero" },
-        { "id": "B", "texto": "Un grupo del Directorio" },
-        { "id": "C", "texto": "Un paquete nombrado al que el proyecto apunta" },
-        { "id": "D", "texto": "Un sprint" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un tablero",
+            "en": "A board"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un grupo del Directorio",
+            "en": "A Directory group"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un paquete nombrado al que el proyecto apunta",
+            "en": "A named pack that the project points to"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un sprint",
+            "en": "A sprint"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Esa es la palanca de escala: un objeto, muchos proyectos. Al cambiar el paquete cambian todos los apuntadores."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Esa es la palanca de escala: un objeto, muchos proyectos. Al cambiar el paquete cambian todos los apuntadores.",
+        "en": "That is the scale lever: one object, many projects. When you change the pack, all pointers change."
+      }
     },
     {
       "id": "m04-q15",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. DEV y SUP apuntan a NORTECH Permissions. Editas ese esquema. ¿Cuál es el efecto?",
+      "stem": {
+        "es": "Eres administrador de Jira. DEV y SUP apuntan a NORTECH Permissions. Editas ese esquema. ¿Cuál es el efecto?",
+        "en": "You are a Jira administrator. DEV and SUP point to NORTECH Permissions. You edit that scheme. What is the effect?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo el proyecto desde el que abriste la pantalla" },
-        { "id": "B", "texto": "DEV y SUP al instante" },
-        { "id": "C", "texto": "Ambos, tras reiniciar Jira" },
-        { "id": "D", "texto": "También los proyectos team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo el proyecto desde el que abriste la pantalla",
+            "en": "Only the project you opened the screen from"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "DEV y SUP al instante",
+            "en": "DEV and SUP instantly"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Ambos, tras reiniciar Jira",
+            "en": "Both, after restarting Jira"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "También los proyectos team-managed",
+            "en": "Team-managed projects as well"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Compartido = todos los apuntadores, inmediato. Un team-managed no apunta a esquemas de site."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Compartido = todos los apuntadores, inmediato. Un team-managed no apunta a esquemas de site.",
+        "en": "Shared = all pointers, immediately. A team-managed project does not point to site schemes."
+      }
     },
     {
       "id": "m04-q16",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Recorres las familias de esquemas que un company-managed puede apuntar. ¿Cuáles son familias de esquema?",
+      "stem": {
+        "es": "Eres administrador de Jira. Recorres las familias de esquemas que un company-managed puede apuntar. ¿Cuáles son familias de esquema?",
+        "en": "You are a Jira administrator. You walk through the scheme families a company-managed project can point to. Which are scheme families?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Esquema de tipos y esquema de flujos" },
-        { "id": "B", "texto": "Esquemas de pantallas y de configuración de campos" },
-        { "id": "C", "texto": "Esquema de permisos y de notificaciones" },
-        { "id": "D", "texto": "El plan Premium del site" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Esquema de tipos y esquema de flujos",
+            "en": "Issue type scheme and workflow scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Esquemas de pantallas y de configuración de campos",
+            "en": "Screen schemes and field configuration schemes"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Esquema de permisos y de notificaciones",
+            "en": "Permission scheme and notification scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El plan Premium del site",
+            "en": "The site’s Premium plan"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "También existe el esquema de seguridad de incidencias, que nombra visibilidad por elemento. El plan del site no es un esquema."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "También existe el esquema de seguridad de incidencias, que nombra visibilidad por elemento. El plan del site no es un esquema.",
+        "en": "There is also the issue security scheme, which names visibility per item. The site plan is not a scheme."
+      }
     },
     {
       "id": "m04-q17",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. DEV y SUP usan NORTECH Issue Types. ¿Qué controla ese esquema?",
+      "stem": {
+        "es": "Eres administrador de Jira. DEV y SUP usan NORTECH Issue Types. ¿Qué controla ese esquema?",
+        "en": "You are a Jira administrator. DEV and SUP use NORTECH Issue Types. What does that scheme control?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Quién ve el proyecto" },
-        { "id": "B", "texto": "Qué tipos hay, como Bug, Story o Task" },
-        { "id": "C", "texto": "El SMTP del site" },
-        { "id": "D", "texto": "Las columnas de un tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Quién ve el proyecto",
+            "en": "Who can see the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Qué tipos hay, como Bug, Story o Task",
+            "en": "Which types exist, such as Bug, Story, or Task"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El SMTP del site",
+            "en": "The site SMTP"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Las columnas de un tablero",
+            "en": "A board’s columns"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El issue type scheme es la taxonomía. Permisos y tablero son otros paquetes."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El issue type scheme es la taxonomía. Permisos y tablero son otros paquetes.",
+        "en": "The issue type scheme is the taxonomy. Permissions and the board are other packs."
+      }
     },
     {
       "id": "m04-q18",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Asocias NORTECH Workflows a DEV. A nivel de esquema, ¿qué controla?",
+      "stem": {
+        "es": "Eres administrador de Jira. Asocias NORTECH Workflows a DEV. A nivel de esquema, ¿qué controla?",
+        "en": "You are a Jira administrator. You associate NORTECH Workflows with DEV. At scheme level, what does it control?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Qué flujo usa cada tipo de trabajo" },
-        { "id": "B", "texto": "Las condiciones y validadores de cada transición" },
-        { "id": "C", "texto": "El acceso al producto" },
-        { "id": "D", "texto": "Las versiones de DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Qué flujo usa cada tipo de trabajo",
+            "en": "Which workflow each work type uses"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las condiciones y validadores de cada transición",
+            "en": "The conditions and validators of each transition"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El acceso al producto",
+            "en": "Product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Las versiones de DEV",
+            "en": "DEV’s versions"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Hoy basta con copiar y asociar el workflow scheme. Diseñar condiciones o validadores de cada transición no entra en este alcance."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Hoy basta con copiar y asociar el workflow scheme. Diseñar condiciones o validadores de cada transición no entra en este alcance.",
+        "en": "Today it is enough to copy and associate the workflow scheme. Designing conditions or validators on each transition is out of scope."
+      }
     },
     {
       "id": "m04-q19",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Revisas la familia de esquemas de pantallas de un company-managed. ¿Qué decide ese paquete?",
+      "stem": {
+        "es": "Eres administrador de Jira. Revisas la familia de esquemas de pantallas de un company-managed. ¿Qué decide ese paquete?",
+        "en": "You are a Jira administrator. You review the screen scheme family of a company-managed project. What does that pack decide?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Quién puede crear elementos" },
-        { "id": "B", "texto": "Qué pantallas se usan al crear, editar y ver" },
-        { "id": "C", "texto": "El mapeo de columnas del tablero" },
-        { "id": "D", "texto": "Los destinatarios de correo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Quién puede crear elementos",
+            "en": "Who can create items"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Qué pantallas se usan al crear, editar y ver",
+            "en": "Which screens are used on create, edit, and view"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El mapeo de columnas del tablero",
+            "en": "The board column mapping"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Los destinatarios de correo",
+            "en": "Email recipients"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Es el paquete de pantallas, incluida la variante por tipo. No se pide configurar contextos de campo ni el tablero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Es el paquete de pantallas, incluida la variante por tipo. No se pide configurar contextos de campo ni el tablero.",
+        "en": "It is the screen pack, including the per-type variant. You are not asked to configure field contexts or the board."
+      }
     },
     {
       "id": "m04-q20",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Quieres que un campo sea obligatorio u oculto en un proyecto company-managed. ¿A través de qué esquema se asocia eso al proyecto?",
+      "stem": {
+        "es": "Eres administrador de Jira. Quieres que un campo sea obligatorio u oculto en un proyecto company-managed. ¿A través de qué esquema se asocia eso al proyecto?",
+        "en": "You are a Jira administrator. You want a field to be required or hidden in a company-managed project. Through which scheme is that associated to the project?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Swimlanes del tablero" },
-        { "id": "B", "texto": "Duración del sprint" },
-        { "id": "C", "texto": "Esquema de configuración de campos" },
-        { "id": "D", "texto": "Esquema de notificaciones" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Swimlanes del tablero",
+            "en": "Board swimlanes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Duración del sprint",
+            "en": "Sprint duration"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Esquema de configuración de campos",
+            "en": "Field configuration scheme"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Esquema de notificaciones",
+            "en": "Notification scheme"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "El field configuration scheme es el paquete de required, hidden y renderer. Cómo se crean contextos de campo personalizado no entra aquí."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "El field configuration scheme es el paquete de required, hidden y renderer. Cómo se crean contextos de campo personalizado no entra aquí.",
+        "en": "The field configuration scheme is the required, hidden, and renderer pack. How custom-field contexts are created is out of scope here."
+      }
     },
     {
       "id": "m04-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. DEV y SUP usan NORTECH Permissions. ¿Qué controla ese esquema?",
+      "stem": {
+        "es": "Eres administrador de Jira. DEV y SUP usan NORTECH Permissions. ¿Qué controla ese esquema?",
+        "en": "You are a Jira administrator. DEV and SUP use NORTECH Permissions. What does that scheme control?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Quién puede hacer qué en el proyecto" },
-        { "id": "B", "texto": "Qué tipos existen" },
-        { "id": "C", "texto": "Qué pantallas se muestran" },
-        { "id": "D", "texto": "Quién recibe el correo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Quién puede hacer qué en el proyecto",
+            "en": "Who can do what in the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Qué tipos existen",
+            "en": "Which types exist"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Qué pantallas se muestran",
+            "en": "Which screens are shown"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Quién recibe el correo",
+            "en": "Who receives email"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "El permission scheme es el reglamento: Browse, Create, Assignable, Administer y el resto. Tipos, pantallas y notificaciones son otras familias."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "El permission scheme es el reglamento: Browse, Create, Assignable, Administer y el resto. Tipos, pantallas y notificaciones son otras familias.",
+        "en": "The permission scheme is the rulebook: Browse, Create, Assignable, Administer, and the rest. Types, screens, and notifications are other families."
+      }
     },
     {
       "id": "m04-q22",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Asocias NORTECH Notifications a DEV. ¿Qué controla ese esquema?",
+      "stem": {
+        "es": "Eres administrador de Jira. Asocias NORTECH Notifications a DEV. ¿Qué controla ese esquema?",
+        "en": "You are a Jira administrator. You associate NORTECH Notifications with DEV. What does that scheme control?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Quién puede ver el proyecto" },
-        { "id": "B", "texto": "Quién recibe eventos como asignación o comentario" },
-        { "id": "C", "texto": "Qué flujo usa Bug" },
-        { "id": "D", "texto": "Si un campo es obligatorio" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Quién puede ver el proyecto",
+            "en": "Who can see the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Quién recibe eventos como asignación o comentario",
+            "en": "Who receives events such as assignment or comment"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Qué flujo usa Bug",
+            "en": "Which workflow Bug uses"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Si un campo es obligatorio",
+            "en": "Whether a field is required"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El notification scheme gobierna correo y eventos. No sustituye al permission scheme."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El notification scheme gobierna correo y eventos. No sustituye al permission scheme.",
+        "en": "The notification scheme governs email and events. It does not replace the permission scheme."
+      }
     },
     {
       "id": "m04-q23",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. En la lista de familias aparece el esquema de seguridad de incidencias. ¿Qué define, de nombre?",
+      "stem": {
+        "es": "Eres administrador de Jira. En la lista de familias aparece el esquema de seguridad de incidencias. ¿Qué define, de nombre?",
+        "en": "You are a Jira administrator. In the family list the issue security scheme appears. By name, what does it define?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es lo mismo que el esquema de permisos" },
-        { "id": "B", "texto": "Es obligatorio en todos los team-managed" },
-        { "id": "C", "texto": "Niveles de visibilidad por elemento de trabajo" },
-        { "id": "D", "texto": "Sustituye al esquema de tipos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es lo mismo que el esquema de permisos",
+            "en": "It is the same as the permission scheme"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Es obligatorio en todos los team-managed",
+            "en": "It is mandatory in every team-managed project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Niveles de visibilidad por elemento de trabajo",
+            "en": "Visibility levels per work item"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sustituye al esquema de tipos",
+            "en": "It replaces the issue type scheme"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Browse Projects abre el proyecto; issue security oculta elementos concretos. Aquí solo se nombra la familia; no se configura."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Browse Projects abre el proyecto; issue security oculta elementos concretos. Aquí solo se nombra la familia; no se configura.",
+        "en": "Browse Projects opens the project; issue security hides specific items. Here you only name the family; you do not configure it."
+      }
     },
     {
       "id": "m04-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Vas a montar la plantilla corporativa a partir de los esquemas Default del site. ¿Qué gesto es correcto?",
+      "stem": {
+        "es": "Eres administrador de Jira. Vas a montar la plantilla corporativa a partir de los esquemas Default del site. ¿Qué gesto es correcto?",
+        "en": "You are a Jira administrator. You are going to build the corporate template from the site’s Default schemes. Which action is correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Editar Default para ir más rápido" },
-        { "id": "B", "texto": "Renombrar Default a NORTECH" },
-        { "id": "C", "texto": "Borrar Default" },
-        { "id": "D", "texto": "Copiar Default, nombrar NORTECH y asociar a los proyectos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Editar Default para ir más rápido",
+            "en": "Edit Default to go faster"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Renombrar Default a NORTECH",
+            "en": "Rename Default to NORTECH"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Borrar Default",
+            "en": "Delete Default"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Copiar Default, nombrar NORTECH y asociar a los proyectos",
+            "en": "Copy Default, name it NORTECH, and associate it to the projects"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "Nunca se edita Default. Default es cuna de proyectos nuevos y de los que aún lo usan."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "Nunca se edita Default. Default es cuna de proyectos nuevos y de los que aún lo usan.",
+        "en": "Never edit Default. Default is the cradle of new projects and of those that still use it."
+      }
     },
     {
       "id": "m04-q25",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Editas el esquema Default de permisos para un arreglo rápido. ¿A quién afecta?",
+      "stem": {
+        "es": "Eres administrador de Jira. Editas el esquema Default de permisos para un arreglo rápido. ¿A quién afecta?",
+        "en": "You are a Jira administrator. You edit the Default permission scheme for a quick fix. Who is affected?"
+      },
       "opciones": [
-        { "id": "A", "texto": "A todos los proyectos, actuales y futuros, que aún usan Default" },
-        { "id": "B", "texto": "Solo al proyecto desde el que abriste" },
-        { "id": "C", "texto": "A nadie hasta reiniciar Jira" },
-        { "id": "D", "texto": "Solo a los team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "A todos los proyectos, actuales y futuros, que aún usan Default",
+            "en": "Every current and future project that still uses Default"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo al proyecto desde el que abriste",
+            "en": "Only the project you opened from"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "A nadie hasta reiniciar Jira",
+            "en": "Nobody until Jira is restarted"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo a los team-managed",
+            "en": "Only team-managed projects"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Default es compartido. Siempre se copia a un esquema nombrado, por ejemplo NORTECH Permissions."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Default es compartido. Siempre se copia a un esquema nombrado, por ejemplo NORTECH Permissions.",
+        "en": "Default is shared. Always copy it to a named scheme, for example NORTECH Permissions."
+      }
     },
     {
       "id": "m04-q26",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. OPS necesita el tipo Change y ningún otro proyecto debe tenerlo. ¿Qué haces?",
+      "stem": {
+        "es": "Eres administrador de Jira. OPS necesita el tipo Change y ningún otro proyecto debe tenerlo. ¿Qué haces?",
+        "en": "You are a Jira administrator. OPS needs the Change type and no other project should have it. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Lo añades a NORTECH Issue Types" },
-        { "id": "B", "texto": "Copias NORTECH Issue Types, añades Change y lo asocias solo a OPS" },
-        { "id": "C", "texto": "Usas una etiqueta Change" },
-        { "id": "D", "texto": "Editas Default Issue Types" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Lo añades a NORTECH Issue Types",
+            "en": "Add it to NORTECH Issue Types"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Copias NORTECH Issue Types, añades Change y lo asocias solo a OPS",
+            "en": "Copy NORTECH Issue Types, add Change, and associate it only to OPS"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Usas una etiqueta Change",
+            "en": "Use a Change label"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Editas Default Issue Types",
+            "en": "Edit Default Issue Types"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Excepción = copia más asociación puntual. No ensucies la plantilla ni Default."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Excepción = copia más asociación puntual. No ensucies la plantilla ni Default.",
+        "en": "Exception = copy plus a one-off association. Do not dirty the template or Default."
+      }
     },
     {
       "id": "m04-q27",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. En SUP ocurrió un cambio que en DEV no. Quieres ver de un vistazo qué esquemas usa DEV. ¿Dónde miras?",
+      "stem": {
+        "es": "Eres administrador de Jira. En SUP ocurrió un cambio que en DEV no. Quieres ver de un vistazo qué esquemas usa DEV. ¿Dónde miras?",
+        "en": "You are a Jira administrator. A change happened in SUP that did not happen in DEV. You want to see at a glance which schemes DEV uses. Where do you look?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Directory de la organización" },
-        { "id": "B", "texto": "El informe de sprint" },
-        { "id": "C", "texto": "Configuración del proyecto → Resumen" },
-        { "id": "D", "texto": "admin.atlassian.com → facturación" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Directory de la organización",
+            "en": "The organization Directory"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El informe de sprint",
+            "en": "The sprint report"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Configuración del proyecto → Resumen",
+            "en": "Project settings → Summary"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "admin.atlassian.com → facturación",
+            "en": "admin.atlassian.com → billing"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "El resumen o la página de esquemas es el mapa. Es lo primero que miras cuando el comportamiento diverge entre proyectos."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "El resumen o la página de esquemas es el mapa. Es lo primero que miras cuando el comportamiento diverge entre proyectos.",
+        "en": "Summary or the schemes page is the map. It is the first thing you check when behavior diverges between projects."
+      }
     },
     {
       "id": "m04-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Abres el resumen de un piloto team-managed buscando NORTECH Permissions. ¿Qué esperas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Abres el resumen de un piloto team-managed buscando NORTECH Permissions. ¿Qué esperas?",
+        "en": "You are a Jira administrator. You open the summary of a team-managed pilot looking for NORTECH Permissions. What do you expect?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El mismo mapa de esquemas que DEV" },
-        { "id": "B", "texto": "Que no use esquemas de site: la configuración es local" },
-        { "id": "C", "texto": "NORTECH Workflows ya asociado" },
-        { "id": "D", "texto": "Un esquema de seguridad obligatorio" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El mismo mapa de esquemas que DEV",
+            "en": "The same scheme map as DEV"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Que no use esquemas de site: la configuración es local",
+            "en": "That it does not use site schemes: configuration is local"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "NORTECH Workflows ya asociado",
+            "en": "NORTECH Workflows already associated"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un esquema de seguridad obligatorio",
+            "en": "A mandatory security scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Team-managed no apunta a paquetes de site. Por eso no entra en la plantilla corporativa."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Team-managed no apunta a paquetes de site. Por eso no entra en la plantilla corporativa.",
+        "en": "Team-managed does not point to site packs. That is why it does not enter the corporate template."
+      }
     },
     {
       "id": "m04-q29",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. En un company-managed te piden el layout de campos: qué se ve y si es obligatorio. ¿Entre qué se reparte?",
+      "stem": {
+        "es": "Eres administrador de Jira. En un company-managed te piden el layout de campos: qué se ve y si es obligatorio. ¿Entre qué se reparte?",
+        "en": "You are a Jira administrator. In a company-managed project they ask for the field layout: what is shown and whether it is required. What is it split between?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo el esquema de permisos" },
-        { "id": "B", "texto": "Solo las swimlanes del tablero" },
-        { "id": "C", "texto": "Pantallas y configuración de campos" },
-        { "id": "D", "texto": "La duración del sprint" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo el esquema de permisos",
+            "en": "The permission scheme only"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo las swimlanes del tablero",
+            "en": "The board swimlanes only"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pantallas y configuración de campos",
+            "en": "Screens and field configuration"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La duración del sprint",
+            "en": "Sprint duration"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "La pantalla decide si el campo aparece. La field configuration decide required u hidden. En team-managed el layout es del propio proyecto."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "La pantalla decide si el campo aparece. La field configuration decide required u hidden. En team-managed el layout es del propio proyecto.",
+        "en": "The screen decides whether the field appears. Field configuration decides required or hidden. In team-managed the layout belongs to the project itself."
+      }
     },
     {
       "id": "m04-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Copias los esquemas Default para la plantilla de Nortech. ¿Qué convención de nombres usas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Copias los esquemas Default para la plantilla de Nortech. ¿Qué convención de nombres usas?",
+        "en": "You are a Jira administrator. You copy the Default schemes for the Nortech template. Which naming convention do you use?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Default (1) y Default (2)" },
-        { "id": "B", "texto": "Un UUID por esquema" },
-        { "id": "C", "texto": "El nombre del tablero" },
-        { "id": "D", "texto": "El prefijo NORTECH, como NORTECH Permissions" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Default (1) y Default (2)",
+            "en": "Default (1) and Default (2)"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un UUID por esquema",
+            "en": "A UUID per scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del tablero",
+            "en": "The board name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El prefijo NORTECH, como NORTECH Permissions",
+            "en": "The NORTECH prefix, such as NORTECH Permissions"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "Nombrar es gobierno. En el resumen del proyecto debes ver NORTECH de un vistazo."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "Nombrar es gobierno. En el resumen del proyecto debes ver NORTECH de un vistazo.",
+        "en": "Naming is governance. In the project summary you should see NORTECH at a glance."
+      }
     },
     {
       "id": "m04-q31",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Tras montar la plantilla, DEV y SUP deben compartir al menos la misma taxonomía y el mismo reglamento. ¿Qué esquemas comparten?",
+      "stem": {
+        "es": "Eres administrador de Jira. Tras montar la plantilla, DEV y SUP deben compartir al menos la misma taxonomía y el mismo reglamento. ¿Qué esquemas comparten?",
+        "en": "You are a Jira administrator. After building the template, DEV and SUP must share at least the same taxonomy and the same rulebook. Which schemes do they share?"
+      },
       "opciones": [
-        { "id": "A", "texto": "NORTECH Issue Types, Permissions y Notifications" },
-        { "id": "B", "texto": "Solo el nombre del proyecto" },
-        { "id": "C", "texto": "Un team-managed común" },
-        { "id": "D", "texto": "La clave DEV" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "NORTECH Issue Types, Permissions y Notifications",
+            "en": "NORTECH Issue Types, Permissions, and Notifications"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo el nombre del proyecto",
+            "en": "Only the project name"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un team-managed común",
+            "en": "A shared team-managed project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "La clave DEV",
+            "en": "The DEV key"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Misma taxonomía y mismo reglamento. El workflow scheme también se copia para no tocar Default cuando más adelante se diseñe el flujo."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Misma taxonomía y mismo reglamento. El workflow scheme también se copia para no tocar Default cuando más adelante se diseñe el flujo.",
+        "en": "Same taxonomy and same rulebook. The workflow scheme is also copied so Default is not touched when the flow is designed later."
+      }
     },
     {
       "id": "m04-q32",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. En NORTECH Permissions concedes Browse Projects. ¿A quién se lo das en el modelo de Nortech?",
+      "stem": {
+        "es": "Eres administrador de Jira. En NORTECH Permissions concedes Browse Projects. ¿A quién se lo das en el modelo de Nortech?",
+        "en": "You are a Jira administrator. In NORTECH Permissions you grant Browse Projects. Who do you give it to in the Nortech model?"
+      },
       "opciones": [
-        { "id": "A", "texto": "A toda la organización" },
-        { "id": "B", "texto": "A roles de proyecto; los grupos entran por Personas" },
-        { "id": "C", "texto": "Solo a watchers" },
-        { "id": "D", "texto": "Al filtro del tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "A toda la organización",
+            "en": "The whole organization"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "A roles de proyecto; los grupos entran por Personas",
+            "en": "Project roles; groups enter through People"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo a watchers",
+            "en": "Watchers only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Al filtro del tablero",
+            "en": "The board filter"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El esquema habla de roles. Personas engancha nortech-dev o nortech-soporte al rol que el esquema menciona."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El esquema habla de roles. Personas engancha nortech-dev o nortech-soporte al rol que el esquema menciona.",
+        "en": "The scheme talks about roles. People hooks nortech-dev or nortech-soporte to the role the scheme mentions."
+      }
     },
     {
       "id": "m04-q33",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Configuras Create Issues en NORTECH Permissions. ¿A quién se lo das?",
+      "stem": {
+        "es": "Eres administrador de Jira. Configuras Create Issues en NORTECH Permissions. ¿A quién se lo das?",
+        "en": "You are a Jira administrator. You configure Create Issues in NORTECH Permissions. Who do you give it to?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo a Administrators" },
-        { "id": "B", "texto": "A cualquiera en Internet" },
-        { "id": "C", "texto": "A Developers y Users" },
-        { "id": "D", "texto": "Solo al responsable del proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo a Administrators",
+            "en": "Administrators only"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "A cualquiera en Internet",
+            "en": "Anyone on the Internet"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "A Developers y Users",
+            "en": "Developers and Users"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo al responsable del proyecto",
+            "en": "Only the project lead"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Crear elementos es de quienes trabajan el proyecto, no solo del administrador."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Crear elementos es de quienes trabajan el proyecto, no solo del administrador.",
+        "en": "Creating items belongs to the people who work the project, not only to the administrator."
+      }
     },
     {
       "id": "m04-q34",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Configuras Assignable User en NORTECH Permissions. ¿A qué apunta?",
+      "stem": {
+        "es": "Eres administrador de Jira. Configuras Assignable User en NORTECH Permissions. ¿A qué apunta?",
+        "en": "You are a Jira administrator. You configure Assignable User in NORTECH Permissions. What does it point to?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Al rol Developers" },
-        { "id": "B", "texto": "A todos los usuarios del site" },
-        { "id": "C", "texto": "Solo a proyectos team-managed" },
-        { "id": "D", "texto": "A los gadgets del dashboard" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Al rol Developers",
+            "en": "The Developers role"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "A todos los usuarios del site",
+            "en": "All site users"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo a proyectos team-managed",
+            "en": "Team-managed projects only"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "A los gadgets del dashboard",
+            "en": "Dashboard gadgets"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Assignable User llena el desplegable de asignatario. No es lo mismo que Assign Issues."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Assignable User llena el desplegable de asignatario. No es lo mismo que Assign Issues.",
+        "en": "Assignable User fills the assignee dropdown. It is not the same as Assign Issues."
+      }
     },
     {
       "id": "m04-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Configuras Administer Projects en NORTECH Permissions. ¿A quién se lo concedes?",
+      "stem": {
+        "es": "Eres administrador de Jira. Configuras Administer Projects en NORTECH Permissions. ¿A quién se lo concedes?",
+        "en": "You are a Jira administrator. You configure Administer Projects in NORTECH Permissions. Who do you grant it to?"
+      },
       "opciones": [
-        { "id": "A", "texto": "A cualquier usuario con acceso al producto" },
-        { "id": "B", "texto": "A quien tenga acceso a Confluence" },
-        { "id": "C", "texto": "Al administrador de tablero de otro proyecto" },
-        { "id": "D", "texto": "Al rol Administrators" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "A cualquier usuario con acceso al producto",
+            "en": "Any user with product access"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "A quien tenga acceso a Confluence",
+            "en": "Anyone with Confluence access"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Al administrador de tablero de otro proyecto",
+            "en": "The board administrator of another project"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Al rol Administrators",
+            "en": "The Administrators role"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "Administer Projects es de proyecto, no de site. Permite Personas, componentes y versiones. No convierte a nadie en administrador de Jira."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "Administer Projects es de proyecto, no de site. Permite Personas, componentes y versiones. No convierte a nadie en administrador de Jira.",
+        "en": "Administer Projects is project-level, not site-level. It allows People, components, and versions. It does not make anyone a Jira administrator."
+      }
     },
     {
       "id": "m04-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. El grupo nortech-soporte no tiene permiso en SUP aunque NORTECH Permissions es correcto. ¿Qué suele faltar?",
+      "stem": {
+        "es": "Eres administrador de Jira. El grupo nortech-soporte no tiene permiso en SUP aunque NORTECH Permissions es correcto. ¿Qué suele faltar?",
+        "en": "You are a Jira administrator. The nortech-soporte group has no permission in SUP even though NORTECH Permissions is correct. What is usually missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Reescribir el esquema desde cero" },
-        { "id": "B", "texto": "El grupo en el rol que el esquema menciona, en Personas" },
-        { "id": "C", "texto": "Editar Default" },
-        { "id": "D", "texto": "Convertir SUP a team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Reescribir el esquema desde cero",
+            "en": "Rewriting the scheme from scratch"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El grupo en el rol que el esquema menciona, en Personas",
+            "en": "The group in the role the scheme mentions, in People"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editar Default",
+            "en": "Editing Default"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Convertir SUP a team-managed",
+            "en": "Converting SUP to team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El esquema no ve grupos si el modelo es por roles. Personas cierra el circuito: grupo, rol y esquema."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El esquema no ve grupos si el modelo es por roles. Personas cierra el circuito: grupo, rol y esquema.",
+        "en": "The scheme does not see groups if the model is role-based. People closes the circuit: group, role, and scheme."
+      }
     },
     {
       "id": "m04-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Copias el esquema de notificaciones a NORTECH Notifications. ¿Cuál es el objetivo?",
+      "stem": {
+        "es": "Eres administrador de Jira. Copias el esquema de notificaciones a NORTECH Notifications. ¿Cuál es el objetivo?",
+        "en": "You are a Jira administrator. You copy the notification scheme to NORTECH Notifications. What is the goal?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Avisar a todos los Developers en cada evento" },
-        { "id": "B", "texto": "Desactivar el correo del site" },
-        { "id": "C", "texto": "Dejar asignatario y reportero en eventos clave" },
-        { "id": "D", "texto": "Notificar solo al administrador de la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Avisar a todos los Developers en cada evento",
+            "en": "Notify all Developers on every event"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Desactivar el correo del site",
+            "en": "Disable site email"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Dejar asignatario y reportero en eventos clave",
+            "en": "Leave assignee and reporter on key events"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Notificar solo al administrador de la organización",
+            "en": "Notify only the organization admin"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Default suele ser ruidoso. La plantilla recorta destinatarios: asignatario y reportero en eventos clave, no inundar el correo."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Default suele ser ruidoso. La plantilla recorta destinatarios: asignatario y reportero en eventos clave, no inundar el correo.",
+        "en": "Default is usually noisy. The template trims recipients: assignee and reporter on key events, not flooding email."
+      }
     },
     {
       "id": "m04-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. El esquema Default deja All Watchers y todos los Developers en cada evento. ¿Qué ocurre si lo dejas así?",
+      "stem": {
+        "es": "Eres administrador de Jira. El esquema Default deja All Watchers y todos los Developers en cada evento. ¿Qué ocurre si lo dejas así?",
+        "en": "You are a Jira administrator. The Default scheme leaves All Watchers and all Developers on every event. What happens if you leave it that way?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es la plantilla recomendada de Nortech" },
-        { "id": "B", "texto": "Inunda el correo corporativo" },
-        { "id": "C", "texto": "Obliga a pasar a Premium" },
-        { "id": "D", "texto": "Sustituye a Browse Projects" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es la plantilla recomendada de Nortech",
+            "en": "It is Nortech’s recommended template"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Inunda el correo corporativo",
+            "en": "It floods corporate email"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Obliga a pasar a Premium",
+            "en": "It forces a move to Premium"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sustituye a Browse Projects",
+            "en": "It replaces Browse Projects"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El notification scheme es gobierno de ruido, no de permisos. Por eso se recorta NORTECH Notifications."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El notification scheme es gobierno de ruido, no de permisos. Por eso se recorta NORTECH Notifications.",
+        "en": "The notification scheme is noise governance, not permission governance. That is why NORTECH Notifications is trimmed."
+      }
     },
     {
       "id": "m04-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Quieres que OPS use también NORTECH Permissions. ¿Qué acción tomas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Quieres que OPS use también NORTECH Permissions. ¿Qué acción tomas?",
+        "en": "You are a Jira administrator. You want OPS to use NORTECH Permissions as well. What action do you take?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Vuelves a copiar el esquema" },
-        { "id": "B", "texto": "Creas un team-managed" },
-        { "id": "C", "texto": "En OPS usas un esquema distinto y eliges NORTECH Permissions" },
-        { "id": "D", "texto": "Editas el esquema de tipos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Vuelves a copiar el esquema",
+            "en": "Copy the scheme again"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Creas un team-managed",
+            "en": "Create a team-managed project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "En OPS usas un esquema distinto y eliges NORTECH Permissions",
+            "en": "In OPS, use a different scheme and select NORTECH Permissions"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Editas el esquema de tipos",
+            "en": "Edit the issue type scheme"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Asociar no es copiar. Un esquema, varios proyectos: DEV, SUP y OPS apuntan al mismo objeto."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Asociar no es copiar. Un esquema, varios proyectos: DEV, SUP y OPS apuntan al mismo objeto.",
+        "en": "Associate is not copy. One scheme, several projects: DEV, SUP, and OPS point to the same object."
+      }
     },
     {
       "id": "m04-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. PMO sigue en Default de permisos. Cambias NORTECH Permissions. ¿Qué ocurre?",
+      "stem": {
+        "es": "Eres administrador de Jira. PMO sigue en Default de permisos. Cambias NORTECH Permissions. ¿Qué ocurre?",
+        "en": "You are a Jira administrator. PMO is still on the Default permission scheme. You change NORTECH Permissions. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cambia PMO" },
-        { "id": "B", "texto": "Cambia todos los team-managed" },
-        { "id": "C", "texto": "Se reinicia el site" },
-        { "id": "D", "texto": "No afecta a PMO; solo a quienes apuntan a NORTECH" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cambia PMO",
+            "en": "PMO changes"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Cambia todos los team-managed",
+            "en": "All team-managed projects change"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se reinicia el site",
+            "en": "The site restarts"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No afecta a PMO; solo a quienes apuntan a NORTECH",
+            "en": "It does not affect PMO; only those that point to NORTECH"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "El apuntador decide el impacto. Por eso se deja PMO fuera a propósito como contraste."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "El apuntador decide el impacto. Por eso se deja PMO fuera a propósito como contraste.",
+        "en": "The pointer decides the impact. That is why PMO is left out on purpose as a contrast."
+      }
     },
     {
       "id": "m04-q41",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Cambias la descripción de NORTECH Permissions desde DEV. ¿Qué ves en SUP?",
+      "stem": {
+        "es": "Eres administrador de Jira. Cambias la descripción de NORTECH Permissions desde DEV. ¿Qué ves en SUP?",
+        "en": "You are a Jira administrator. You change the description of NORTECH Permissions from DEV. What do you see in SUP?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El mismo esquema, un solo objeto compartido" },
-        { "id": "B", "texto": "Otro objeto distinto" },
-        { "id": "C", "texto": "Que no cambia nada" },
-        { "id": "D", "texto": "Que SUP vuelve a Default" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El mismo esquema, un solo objeto compartido",
+            "en": "The same scheme, a single shared object"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Otro objeto distinto",
+            "en": "A different object"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que no cambia nada",
+            "en": "That nothing changes"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que SUP vuelve a Default",
+            "en": "That SUP reverts to Default"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Compartido de verdad es un objeto. La prueba es ver el mismo cambio desde cualquier proyecto que lo apunta."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Compartido de verdad es un objeto. La prueba es ver el mismo cambio desde cualquier proyecto que lo apunta.",
+        "en": "Truly shared is one object. The proof is seeing the same change from any project that points to it."
+      }
     },
     {
       "id": "m04-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de proyecto. Intentas asociar NORTECH Permissions a un proyecto y no puedes. ¿Qué es lo más probable?",
+      "stem": {
+        "es": "Eres administrador de proyecto. Intentas asociar NORTECH Permissions a un proyecto y no puedes. ¿Qué es lo más probable?",
+        "en": "You are a project administrator. You try to associate NORTECH Permissions with a project and cannot. What is most likely?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es un error de Cloud" },
-        { "id": "B", "texto": "Falta Confluence" },
-        { "id": "C", "texto": "No eres administrador de Jira o el proyecto es team-managed" },
-        { "id": "D", "texto": "El nombre NORTECH es demasiado largo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es un error de Cloud",
+            "en": "It is a Cloud bug"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Falta Confluence",
+            "en": "Confluence is missing"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No eres administrador de Jira o el proyecto es team-managed",
+            "en": "You are not a Jira administrator, or the project is team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nombre NORTECH es demasiado largo",
+            "en": "The name NORTECH is too long"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Asociar esquemas es de administrador de Jira y solo en company-managed."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Asociar esquemas es de administrador de Jira y solo en company-managed.",
+        "en": "Associating schemes belongs to a Jira administrator and only in company-managed."
+      }
     },
     {
       "id": "m04-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Quitas Story de NORTECH Issue Types, compartido por DEV y SUP. ¿Qué ocurre?",
+      "stem": {
+        "es": "Eres administrador de Jira. Quitas Story de NORTECH Issue Types, compartido por DEV y SUP. ¿Qué ocurre?",
+        "en": "You are a Jira administrator. You remove Story from NORTECH Issue Types, shared by DEV and SUP. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Solo afecta al proyecto donde clicaste" },
-        { "id": "B", "texto": "Ambos dejan de ofrecer Story" },
-        { "id": "C", "texto": "Se borra el flujo de trabajo" },
-        { "id": "D", "texto": "Solo se oculta el tablero" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Solo afecta al proyecto donde clicaste",
+            "en": "It affects only the project you clicked in"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ambos dejan de ofrecer Story",
+            "en": "Both stop offering Story"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se borra el flujo de trabajo",
+            "en": "The workflow is deleted"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo se oculta el tablero",
+            "en": "Only the board is hidden"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Mismo esquema = mismo catálogo. Quitar un tipo en uso es operación delicada y simultánea en todos los apuntadores."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Mismo esquema = mismo catálogo. Quitar un tipo en uso es operación delicada y simultánea en todos los apuntadores.",
+        "en": "Same scheme = same catalog. Removing a type that is in use is a delicate operation and happens simultaneously on all pointers."
+      }
     },
     {
       "id": "m04-q44",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Copias el esquema de flujos a NORTECH Workflows aunque el flujo siga siendo el de Default. ¿Para qué?",
+      "stem": {
+        "es": "Eres administrador de Jira. Copias el esquema de flujos a NORTECH Workflows aunque el flujo siga siendo el de Default. ¿Para qué?",
+        "en": "You are a Jira administrator. You copy the workflow scheme to NORTECH Workflows even though the workflow is still Default’s. Why?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es un paso decorativo" },
-        { "id": "B", "texto": "Activar sprints" },
-        { "id": "C", "texto": "Que más adelante se edite esta copia, no Default" },
-        { "id": "D", "texto": "Crear campos globales" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es un paso decorativo",
+            "en": "It is a decorative step"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Activar sprints",
+            "en": "To enable sprints"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que más adelante se edite esta copia, no Default",
+            "en": "So later you edit this copy, not Default"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear campos globales",
+            "en": "To create global fields"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "Separar el objeto el primer día evita editar Default cuando se diseñe el flujo. Hoy solo se copia y se asocia."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "Separar el objeto el primer día evita editar Default cuando se diseñe el flujo. Hoy solo se copia y se asocia.",
+        "en": "Separating the object on day one avoids editing Default when the workflow is designed. Today you only copy and associate."
+      }
     },
     {
       "id": "m04-q45",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Vas a modificar un esquema que usan DEV y SUP. ¿Qué prácticas aplicas?",
+      "stem": {
+        "es": "Eres administrador de Jira. Vas a modificar un esquema que usan DEV y SUP. ¿Qué prácticas aplicas?",
+        "en": "You are a Jira administrator. You are about to change a scheme that DEV and SUP use. Which practices do you apply?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Confirmas en el resumen qué proyectos lo apuntan" },
-        { "id": "B", "texto": "Si la excepción es de un solo proyecto, copias el esquema y asocias solo ese" },
-        { "id": "C", "texto": "Editas Default para no tocar NORTECH" },
-        { "id": "D", "texto": "Asumes que el cambio es instantáneo en todos los apuntadores" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Confirmas en el resumen qué proyectos lo apuntan",
+            "en": "You confirm in the summary which projects point to it"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Si la excepción es de un solo proyecto, copias el esquema y asocias solo ese",
+            "en": "If the exception is for a single project, you copy the scheme and associate only that one"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editas Default para no tocar NORTECH",
+            "en": "You edit Default so you do not touch NORTECH"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Asumes que el cambio es instantáneo en todos los apuntadores",
+            "en": "You assume the change is instant on all pointers"
+          }
+        }
       ],
-      "correctas": ["A", "B", "D"],
-      "explicacion": "Impacto, copia para excepciones y efecto inmediato. Default no es un sandbox."
+      "correctas": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explicacion": {
+        "es": "Impacto, copia para excepciones y efecto inmediato. Default no es un sandbox.",
+        "en": "Impact, copy for exceptions, and immediate effect. Default is not a sandbox."
+      }
     },
     {
       "id": "m04-q46",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. La lista de esquemas de permisos muestra «usado por 3 proyectos». ¿Qué significa?",
+      "stem": {
+        "es": "Eres administrador de Jira. La lista de esquemas de permisos muestra «usado por 3 proyectos». ¿Qué significa?",
+        "en": "You are a Jira administrator. The permission scheme list shows “used by 3 projects”. What does that mean?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es un texto decorativo" },
-        { "id": "B", "texto": "Son tableros, no proyectos" },
-        { "id": "C", "texto": "Editar ese esquema toca esos tres proyectos" },
-        { "id": "D", "texto": "Son filtros guardados" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es un texto decorativo",
+            "en": "It is decorative text"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Son tableros, no proyectos",
+            "en": "They are boards, not projects"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Editar ese esquema toca esos tres proyectos",
+            "en": "Editing that scheme touches those three projects"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Son filtros guardados",
+            "en": "They are saved filters"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "El contador es la señal de impacto. Es el mismo criterio que el resumen del proyecto."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "El contador es la señal de impacto. Es el mismo criterio que el resumen del proyecto.",
+        "en": "The counter is the impact signal. It is the same criterion as the project summary."
+      }
     },
     {
       "id": "m04-q47",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Desasocias DEV de NORTECH Permissions y lo vuelves a Default. ¿Qué ocurre?",
+      "stem": {
+        "es": "Eres administrador de Jira. Desasocias DEV de NORTECH Permissions y lo vuelves a Default. ¿Qué ocurre?",
+        "en": "You are a Jira administrator. You dissociate DEV from NORTECH Permissions and put it back on Default. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "DEV sigue con las reglas NORTECH" },
-        { "id": "B", "texto": "DEV pasa a las reglas de Default; SUP no cambia" },
-        { "id": "C", "texto": "Se borra el esquema NORTECH" },
-        { "id": "D", "texto": "Se pierden los elementos de trabajo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "DEV sigue con las reglas NORTECH",
+            "en": "DEV still uses the NORTECH rules"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "DEV pasa a las reglas de Default; SUP no cambia",
+            "en": "DEV moves to Default’s rules; SUP does not change"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se borra el esquema NORTECH",
+            "en": "The NORTECH scheme is deleted"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se pierden los elementos de trabajo",
+            "en": "The work items are lost"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Asociar o desasociar cambia el apuntador. No destruye el paquete ni los datos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Asociar o desasociar cambia el apuntador. No destruye el paquete ni los datos.",
+        "en": "Associating or dissociating changes the pointer. It does not destroy the pack or the data."
+      }
     },
     {
       "id": "m04-q48",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Bug y Story deben usar flujos distintos en el mismo proyecto company-managed. A nivel de esquema, ¿qué hace falta?",
+      "stem": {
+        "es": "Eres administrador de Jira. Bug y Story deben usar flujos distintos en el mismo proyecto company-managed. A nivel de esquema, ¿qué hace falta?",
+        "en": "You are a Jira administrator. Bug and Story must use different workflows in the same company-managed project. At scheme level, what is needed?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un proyecto por tipo" },
-        { "id": "B", "texto": "Dos esquemas de permisos" },
-        { "id": "C", "texto": "Un esquema de flujos que asocie un flujo distinto a cada tipo" },
-        { "id": "D", "texto": "Etiquetas distintas" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un proyecto por tipo",
+            "en": "One project per type"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Dos esquemas de permisos",
+            "en": "Two permission schemes"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un esquema de flujos que asocie un flujo distinto a cada tipo",
+            "en": "A workflow scheme that associates a different workflow to each type"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Etiquetas distintas",
+            "en": "Different labels"
+          }
+        }
       ],
-      "correctas": ["C"],
-      "explicacion": "El workflow scheme existe para mapear tipo a flujo. No se pide diseñar condiciones ni validadores."
+      "correctas": [
+        "C"
+      ],
+      "explicacion": {
+        "es": "El workflow scheme existe para mapear tipo a flujo. No se pide diseñar condiciones ni validadores.",
+        "en": "The workflow scheme exists to map type to workflow. You are not asked to design conditions or validators."
+      }
     },
     {
       "id": "m04-q49",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Eres administrador de Jira. Vas a trabajar con los esquemas Default del site. ¿Qué prácticas son seguras?",
+      "stem": {
+        "es": "Eres administrador de Jira. Vas a trabajar con los esquemas Default del site. ¿Qué prácticas son seguras?",
+        "en": "You are a Jira administrator. You are going to work with the site’s Default schemes. Which practices are safe?"
+      },
       "opciones": [
-        { "id": "A", "texto": "No editarlos para arreglar un proyecto" },
-        { "id": "B", "texto": "Copiar, nombrar NORTECH y asociar" },
-        { "id": "C", "texto": "Dejar un proyecto en Default como contraste es válido" },
-        { "id": "D", "texto": "Renombrar Default a NORTECH para ahorrar un paso" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "No editarlos para arreglar un proyecto",
+            "en": "Do not edit them to fix one project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Copiar, nombrar NORTECH y asociar",
+            "en": "Copy, name NORTECH, and associate"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Dejar un proyecto en Default como contraste es válido",
+            "en": "Leaving a project on Default as a contrast is valid"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Renombrar Default a NORTECH para ahorrar un paso",
+            "en": "Rename Default to NORTECH to save a step"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Renombrar Default no lo aísla: sigue siendo el esquema que heredan proyectos nuevos y huérfanos."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Renombrar Default no lo aísla: sigue siendo el esquema que heredan proyectos nuevos y huérfanos.",
+        "en": "Renaming Default does not isolate it: it is still the scheme that new and orphaned projects inherit."
+      }
     },
     {
       "id": "m04-q50",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Eres administrador de Jira. Tras asociar NORTECH a DEV y SUP, en SUP ocurre un comportamiento que en DEV no. ¿Qué miras primero?",
+      "stem": {
+        "es": "Eres administrador de Jira. Tras asociar NORTECH a DEV y SUP, en SUP ocurre un comportamiento que en DEV no. ¿Qué miras primero?",
+        "en": "You are a Jira administrator. After associating NORTECH with DEV and SUP, SUP shows behavior that DEV does not. What do you look at first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "La facturación del site" },
-        { "id": "B", "texto": "El nombre del site" },
-        { "id": "C", "texto": "Confluence" },
-        { "id": "D", "texto": "El mapa de esquemas de cada proyecto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "La facturación del site",
+            "en": "Site billing"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El nombre del site",
+            "en": "The site name"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Confluence",
+            "en": "Confluence"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El mapa de esquemas de cada proyecto",
+            "en": "Each project’s scheme map"
+          }
+        }
       ],
-      "correctas": ["D"],
-      "explicacion": "El diagnóstico de esquemas empieza por comparar apuntadores en el resumen. Si ya no apuntan al mismo paquete, la plantilla se rompió. Personas y datos vienen después."
+      "correctas": [
+        "D"
+      ],
+      "explicacion": {
+        "es": "El diagnóstico de esquemas empieza por comparar apuntadores en el resumen. Si ya no apuntan al mismo paquete, la plantilla se rompió. Personas y datos vienen después.",
+        "en": "Scheme diagnosis starts by comparing pointers in the summary. If they no longer point to the same pack, the template broke. People and data come later."
+      }
     }
   ]
 }

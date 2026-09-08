@@ -6,701 +6,2308 @@
       "id": "m10-q1",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Un equipo de seis personas necesita un tablero Kanban esta semana. No habrá un administrador de Jira hasta dentro de un mes y el project admin debe poder ajustar el flujo sin schemes globales. ¿Qué tipo de proyecto recomiendas?",
+      "stem": {
+        "es": "Un equipo de seis personas necesita un tablero Kanban esta semana. No habrá un administrador de Jira hasta dentro de un mes y el project admin debe poder ajustar el flujo sin schemes globales. ¿Qué tipo de proyecto recomiendas?",
+        "en": "A team of six needs a Kanban board this week. There will be no Jira admin for a month, and the project admin must be able to adjust the flow without global schemes. Which project type do you recommend?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Company-managed" },
-        { "id": "B", "texto": "Team-managed Kanban" },
-        { "id": "C", "texto": "Jira Data Center" },
-        { "id": "D", "texto": "Solo Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Company-managed",
+            "en": "Company-managed"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Team-managed Kanban",
+            "en": "Team-managed Kanban"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira Data Center",
+            "en": "Jira Data Center"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo Confluence",
+            "en": "Confluence only"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Team-managed cuando no hay un Jira admin de schemes y el propio equipo debe configurar el proceso."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Team-managed cuando no hay un Jira admin de schemes y el propio equipo debe configurar el proceso.",
+        "en": "Team-managed when there is no Jira admin for schemes and the team itself must configure the process."
+      }
     },
     {
       "id": "m10-q2",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El Scrum Master de DEV registra horas en las incidencias del sprint, pero el burndown de story points no se mueve. ¿Qué indica eso sobre la estimación del tablero?",
+      "stem": {
+        "es": "El Scrum Master de DEV registra horas en las incidencias del sprint, pero el burndown de story points no se mueve. ¿Qué indica eso sobre la estimación del tablero?",
+        "en": "The DEV Scrum Master logs hours on sprint issues, but the story points burndown does not move. What does that tell you about the board's estimation?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Está en story points" },
-        { "id": "B", "texto": "Está en original time estimate" },
-        { "id": "C", "texto": "Está en issue count" },
-        { "id": "D", "texto": "No se puede saber" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Está en story points",
+            "en": "It is in story points"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Está en original time estimate",
+            "en": "It is in original time estimate"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Está en issue count",
+            "en": "It is in issue count"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "No se puede saber",
+            "en": "You cannot tell"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Si el tablero estima en puntos, las horas no queman ese burndown. El worklog alimentaría un burndown de time tracking."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Si el tablero estima en puntos, las horas no queman ese burndown. El worklog alimentaría un burndown de time tracking.",
+        "en": "If the board estimates in points, hours do not burn that burndown. Worklog would feed a time tracking burndown."
+      }
     },
     {
       "id": "m10-q3",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El filtro del tablero de DEV es project = DEV AND issuetype != Sub-task. ¿Qué ocurre con las subtareas?",
+      "stem": {
+        "es": "El filtro del tablero de DEV es project = DEV AND issuetype != Sub-task. ¿Qué ocurre con las subtareas?",
+        "en": "The DEV board filter is project = DEV AND issuetype != Sub-task. What happens to sub-tasks?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Salen en el tablero igual que las Stories" },
-        { "id": "B", "texto": "No alimentan el tablero; pueden verse en la incidencia padre" },
-        { "id": "C", "texto": "Rompen el sprint" },
-        { "id": "D", "texto": "Exigen el plan Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Salen en el tablero igual que las Stories",
+            "en": "They appear on the board like Stories"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No alimentan el tablero; pueden verse en la incidencia padre",
+            "en": "They do not feed the board; they can be seen on the parent issue"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Rompen el sprint",
+            "en": "They break the sprint"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Exigen el plan Premium",
+            "en": "They require the Premium plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El filtro del tablero es el universo. Las subtareas quedan fuera de ese JQL."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El filtro del tablero es el universo. Las subtareas quedan fuera de ese JQL.",
+        "en": "The board filter is the universe. Sub-tasks are outside that JQL."
+      }
     },
     {
       "id": "m10-q4",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Luis pulsa un filtro rápido «Mis issues» en el Scrum de DEV. ¿Cómo se relaciona con el filtro del tablero?",
+      "stem": {
+        "es": "Luis pulsa un filtro rápido «Mis issues» en el Scrum de DEV. ¿Cómo se relaciona con el filtro del tablero?",
+        "en": "Luis clicks a “My issues” quick filter on the DEV Scrum board. How does it relate to the board filter?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Son lo mismo" },
-        { "id": "B", "texto": "El filtro del tablero define el universo; el filtro rápido lo reduce de forma temporal" },
-        { "id": "C", "texto": "El filtro rápido es global de la organización" },
-        { "id": "D", "texto": "El filtro rápido cambia el workflow" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Son lo mismo",
+            "en": "They are the same"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El filtro del tablero define el universo; el filtro rápido lo reduce de forma temporal",
+            "en": "The board filter defines the universe; the quick filter reduces it temporarily"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El filtro rápido es global de la organización",
+            "en": "The quick filter is organization-global"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro rápido cambia el workflow",
+            "en": "The quick filter changes the workflow"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El board filter es el conjunto. El quick filter es una vista temporal encima, no redefine el tablero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El board filter es el conjunto. El quick filter es una vista temporal encima, no redefine el tablero.",
+        "en": "The board filter is the set. The quick filter is a temporary view on top; it does not redefine the board."
+      }
     },
     {
       "id": "m10-q5",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El componente api tiene Default assignee = Component lead. Marta es lead de api pero no está en Assignable User. Al crear un Bug de api, ¿qué ocurre?",
+      "stem": {
+        "es": "El componente api tiene Default assignee = Component lead. Marta es lead de api pero no está en Assignable User. Al crear un Bug de api, ¿qué ocurre?",
+        "en": "The api component has Default assignee = Component lead. Marta is lead of api but is not in Assignable User. When a Bug for api is created, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Se asigna a Marta igual" },
-        { "id": "B", "texto": "Falla o cae al valor por defecto del proyecto / unassigned" },
-        { "id": "C", "texto": "Se borra el componente" },
-        { "id": "D", "texto": "Se crea un proyecto nuevo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Se asigna a Marta igual",
+            "en": "It is assigned to Marta anyway"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Falla o cae al valor por defecto del proyecto / unassigned",
+            "en": "It fails or falls back to the project default / unassigned"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se borra el componente",
+            "en": "The component is deleted"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se crea un proyecto nuevo",
+            "en": "A new project is created"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Sin Assignable User no puede ser assignee, aunque sea component lead."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Sin Assignable User no puede ser assignee, aunque sea component lead.",
+        "en": "Without Assignable User she cannot be the assignee, even as component lead."
+      }
     },
     {
       "id": "m10-q6",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Un dashboard compartido incluye el gadget Filter Results, pero el filtro es privado. ¿Qué ven los demás?",
+      "stem": {
+        "es": "Un dashboard compartido incluye el gadget Filter Results, pero el filtro es privado. ¿Qué ven los demás?",
+        "en": "A shared dashboard includes the Filter Results gadget, but the filter is private. What do others see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Todos ven los datos" },
-        { "id": "B", "texto": "Otros ven un error de permisos" },
-        { "id": "C", "texto": "Jira comparte el filtro por sí solo" },
-        { "id": "D", "texto": "El gadget se convierte en un informe ágil" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Todos ven los datos",
+            "en": "Everyone sees the data"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Otros ven un error de permisos",
+            "en": "Others see a permission error"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Jira comparte el filtro por sí solo",
+            "en": "Jira shares the filter on its own"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El gadget se convierte en un informe ágil",
+            "en": "The gadget becomes an agile report"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hay que compartir el filtro, no solo el dashboard."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hay que compartir el filtro, no solo el dashboard.",
+        "en": "You must share the filter, not only the dashboard."
+      }
     },
     {
       "id": "m10-q7",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "En la revisión de trimestre, PMO te muestra un gráfico de barras de velocidad por sprint para estimar capacidad. ¿Qué informe es?",
+      "stem": {
+        "es": "En la revisión de trimestre, PMO te muestra un gráfico de barras de velocidad por sprint para estimar capacidad. ¿Qué informe es?",
+        "en": "In the quarterly review, PMO shows you a bar chart of velocity by sprint to estimate capacity. Which report is that?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cumulative Flow Diagram" },
-        { "id": "B", "texto": "Velocity" },
-        { "id": "C", "texto": "Created vs Resolved" },
-        { "id": "D", "texto": "Control chart" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cumulative Flow Diagram",
+            "en": "Cumulative Flow Diagram"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Velocity",
+            "en": "Velocity"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Created vs Resolved",
+            "en": "Created vs Resolved"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Control chart",
+            "en": "Control chart"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Velocity = barras por sprint. El CFD son áreas apiladas."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Velocity = barras por sprint. El CFD son áreas apiladas.",
+        "en": "Velocity = bars per sprint. The CFD is stacked areas."
+      }
     },
     {
       "id": "m10-q8",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Una regla hace: When issue created, Then create issue en el mismo proyecto y del mismo tipo, sin condición. ¿Cuál es el riesgo?",
+      "stem": {
+        "es": "Una regla hace: When issue created, Then create issue en el mismo proyecto y del mismo tipo, sin condición. ¿Cuál es el riesgo?",
+        "en": "A rule does: When issue created, Then create issue in the same project and of the same type, with no condition. What is the risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ninguno" },
-        { "id": "B", "texto": "Bucle o explosión de incidencias" },
-        { "id": "C", "texto": "Solo falla en Kanban" },
-        { "id": "D", "texto": "Obliga al plan Premium" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ninguno",
+            "en": "None"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Bucle o explosión de incidencias",
+            "en": "A loop or explosion of issues"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo falla en Kanban",
+            "en": "It only fails on Kanban"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Obliga al plan Premium",
+            "en": "It requires the Premium plan"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cada incidencia nueva dispara otra. Hay que acotar tipo, añadir condición o excluir las issues created by this rule."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cada incidencia nueva dispara otra. Hay que acotar tipo, añadir condición o excluir las issues created by this rule.",
+        "en": "Each new issue fires another. Narrow the type, add a condition, or exclude issues created by this rule."
+      }
     },
     {
       "id": "m10-q9",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "Ana tiene Create issue en DEV pero le falta el permiso Manage sprints. ¿Qué no puede hacer?",
+      "stem": {
+        "es": "Ana tiene Create issue en DEV pero le falta el permiso Manage sprints. ¿Qué no puede hacer?",
+        "en": "Ana has Create issue in DEV but lacks the Manage sprints permission. What can she not do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Puede iniciar el sprint igual" },
-        { "id": "B", "texto": "No gestiona sprints: completar, iniciar o editar" },
-        { "id": "C", "texto": "No puede crear incidencias" },
-        { "id": "D", "texto": "Pierde el product access" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Puede iniciar el sprint igual",
+            "en": "She can start the sprint anyway"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No gestiona sprints: completar, iniciar o editar",
+            "en": "She cannot manage sprints: complete, start, or edit"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No puede crear incidencias",
+            "en": "She cannot create issues"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pierde el product access",
+            "en": "She loses product access"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Manage sprints es un permiso de proyecto distinto de Create issue."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Manage sprints es un permiso de proyecto distinto de Create issue.",
+        "en": "Manage sprints is a project permission distinct from Create issue."
+      }
     },
     {
       "id": "m10-q10",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El nivel de seguridad Cliente no incluye el rol Reporter. Un cliente abre un ticket con ese nivel. ¿Qué ocurre?",
+      "stem": {
+        "es": "El nivel de seguridad Cliente no incluye el rol Reporter. Un cliente abre un ticket con ese nivel. ¿Qué ocurre?",
+        "en": "The Cliente security level does not include the Reporter role. A customer opens a ticket with that level. What happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Siempre ve el ticket" },
-        { "id": "B", "texto": "Puede no ver ni el que abrió" },
-        { "id": "C", "texto": "Se convierte en administrador" },
-        { "id": "D", "texto": "El nivel se ignora en Cloud" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Siempre ve el ticket",
+            "en": "They always see the ticket"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Puede no ver ni el que abrió",
+            "en": "They may not even see the one they opened"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se convierte en administrador",
+            "en": "They become an administrator"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nivel se ignora en Cloud",
+            "en": "The level is ignored in Cloud"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si el nivel no incluye al Reporter, el ticket «desaparece» para quien lo creó."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si el nivel no incluye al Reporter, el ticket «desaparece» para quien lo creó.",
+        "en": "If the level does not include Reporter, the ticket “disappears” for the person who created it."
+      }
     },
     {
       "id": "m10-q11",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "DEV es company-managed. PMO pide un custom field global para todos los proyectos. ¿Quién lo crea?",
+      "stem": {
+        "es": "DEV es company-managed. PMO pide un custom field global para todos los proyectos. ¿Quién lo crea?",
+        "en": "DEV is company-managed. PMO wants a global custom field for all projects. Who creates it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cualquier project admin" },
-        { "id": "B", "texto": "Un administrador de Jira" },
-        { "id": "C", "texto": "Cualquier Developer" },
-        { "id": "D", "texto": "El gadget Assigned to Me" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cualquier project admin",
+            "en": "Any project admin"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un administrador de Jira",
+            "en": "A Jira administrator"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cualquier Developer",
+            "en": "Any Developer"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El gadget Assigned to Me",
+            "en": "The Assigned to Me gadget"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Los custom fields globales son de Jira admin, no del project admin."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Los custom fields globales son de Jira admin, no del project admin.",
+        "en": "Global custom fields belong to the Jira admin, not the project admin."
+      }
     },
     {
       "id": "m10-q12",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El Kanban de SUP usa el sub-filter status = \"To Do\". Las columnas In Progress y Done parecen vacías. ¿Qué efecto tiene ese sub-filter?",
+      "stem": {
+        "es": "El Kanban de SUP usa el sub-filter status = \"To Do\". Las columnas In Progress y Done parecen vacías. ¿Qué efecto tiene ese sub-filter?",
+        "en": "The SUP Kanban uses the sub-filter status = \"To Do\". The In Progress and Done columns look empty. What effect does that sub-filter have?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El tablero muestra todo el workflow" },
-        { "id": "B", "texto": "Solo To Do; las columnas In Progress y Done quedan vacías si el sub-filter las excluye" },
-        { "id": "C", "texto": "Crea sprints" },
-        { "id": "D", "texto": "Comparte el dashboard" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El tablero muestra todo el workflow",
+            "en": "The board shows the whole workflow"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo To Do; las columnas In Progress y Done quedan vacías si el sub-filter las excluye",
+            "en": "Only To Do; In Progress and Done columns stay empty if the sub-filter excludes them"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Crea sprints",
+            "en": "It creates sprints"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Comparte el dashboard",
+            "en": "It shares the dashboard"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El sub-filter de Kanban recorta el universo del board filter."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El sub-filter de Kanban recorta el universo del board filter.",
+        "en": "The Kanban sub-filter trims the board filter universe."
+      }
     },
     {
       "id": "m10-q13",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "PMO guarda el filtro fixVersion = 1.0.0 AND statusCategory != Done. ¿Para qué sirve?",
+      "stem": {
+        "es": "PMO guarda el filtro fixVersion = 1.0.0 AND statusCategory != Done. ¿Para qué sirve?",
+        "en": "PMO saves the filter fixVersion = 1.0.0 AND statusCategory != Done. What is it for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Configurar SSO" },
-        { "id": "B", "texto": "Listar el trabajo pendiente de una release" },
-        { "id": "C", "texto": "Instalar apps" },
-        { "id": "D", "texto": "Crear la organización" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Configurar SSO",
+            "en": "Configure SSO"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Listar el trabajo pendiente de una release",
+            "en": "List remaining work for a release"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Instalar apps",
+            "en": "Install apps"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear la organización",
+            "en": "Create the organization"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Ese JQL acota la versión aún no Done."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Ese JQL acota la versión aún no Done.",
+        "en": "That JQL scopes the version that is not yet Done."
+      }
     },
     {
       "id": "m10-q14",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Luis intenta un bulk change sobre Bugs de SUP y la opción no aparece. ¿Qué suele faltar?",
+      "stem": {
+        "es": "Luis intenta un bulk change sobre Bugs de SUP y la opción no aparece. ¿Qué suele faltar?",
+        "en": "Luis tries a bulk change on SUP Bugs and the option does not appear. What is usually missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El permiso global Make bulk changes y los permisos de cada incidencia" },
-        { "id": "B", "texto": "Confluence" },
-        { "id": "C", "texto": "Un tablero Scrum" },
-        { "id": "D", "texto": "Un esquema de seguridad de incidencias" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El permiso global Make bulk changes y los permisos de cada incidencia",
+            "en": "The global Make bulk changes permission and the permissions on each issue"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Confluence",
+            "en": "Confluence"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un tablero Scrum",
+            "en": "A Scrum board"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un esquema de seguridad de incidencias",
+            "en": "An issue security scheme"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Bulk change exige el permiso global más los permisos de issue sobre cada elemento."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Bulk change exige el permiso global más los permisos de issue sobre cada elemento.",
+        "en": "Bulk change requires the global permission plus issue permissions on each item."
+      }
     },
     {
       "id": "m10-q15",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "Nortech quiere que varios equipos vean el trabajo compartido sin un proyecto team-managed por persona. ¿Cómo facilita Jira ese escala?",
+      "stem": {
+        "es": "Nortech quiere que varios equipos vean el trabajo compartido sin un proyecto team-managed por persona. ¿Cómo facilita Jira ese escala?",
+        "en": "Nortech wants several teams to see shared work without a team-managed project per person. How does Jira support that scale?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un proyecto team-managed por persona y nada compartido" },
-        { "id": "B", "texto": "Tableros y filtros multi-proyecto, versions y, si el plan lo permite, planes o roadmaps, respetando permisos" },
-        { "id": "C", "texto": "Desactivar JQL" },
-        { "id": "D", "texto": "Un único usuario admin para todos los clics" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un proyecto team-managed por persona y nada compartido",
+            "en": "One team-managed project per person and nothing shared"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Tableros y filtros multi-proyecto, versions y, si el plan lo permite, planes o roadmaps, respetando permisos",
+            "en": "Multi-project boards and filters, versions, and, if the plan allows, plans or roadmaps, respecting permissions"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Desactivar JQL",
+            "en": "Disable JQL"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Un único usuario admin para todos los clics",
+            "en": "A single admin user for every click"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Escala = filtro amplio más permisos, no un TMP por persona."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Escala = filtro amplio más permisos, no un TMP por persona.",
+        "en": "Scale = a wide filter plus permissions, not a TMP per person."
+      }
     },
     {
       "id": "m10-q16",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En SUP, Browse Projects deja entrar al proyecto. Un Bug tiene el nivel de seguridad Cliente. ¿Qué hace ese nivel?",
+      "stem": {
+        "es": "En SUP, Browse Projects deja entrar al proyecto. Un Bug tiene el nivel de seguridad Cliente. ¿Qué hace ese nivel?",
+        "en": "In SUP, Browse Projects lets you enter the project. A Bug has the Cliente security level. What does that level do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Es lo mismo que Browse: si entra, lo ve todo" },
-        { "id": "B", "texto": "Oculta esa incidencia aunque el usuario tenga Browse" },
-        { "id": "C", "texto": "Solo aplica en team-managed" },
-        { "id": "D", "texto": "Sustituye el product access" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Es lo mismo que Browse: si entra, lo ve todo",
+            "en": "It is the same as Browse: if they enter, they see everything"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Oculta esa incidencia aunque el usuario tenga Browse",
+            "en": "It hides that issue even if the user has Browse"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo aplica en team-managed",
+            "en": "It only applies on team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Sustituye el product access",
+            "en": "It replaces product access"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El esquema de permisos controla botones y entrada al proyecto. Issue security decide quién ve esa issue."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El esquema de permisos controla botones y entrada al proyecto. Issue security decide quién ve esa issue.",
+        "en": "The permission scheme controls buttons and entry to the project. Issue security decides who sees that issue."
+      }
     },
     {
       "id": "m10-q17",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un contratista tiene Browse en SUP y está en el grupo de soporte. Un Bug con nivel Cliente no incluye a su grupo. ¿Lo ve?",
+      "stem": {
+        "es": "Un contratista tiene Browse en SUP y está en el grupo de soporte. Un Bug con nivel Cliente no incluye a su grupo. ¿Lo ve?",
+        "en": "A contractor has Browse in SUP and is in the support group. A Bug with the Cliente level does not include their group. Do they see it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí: Browse basta" },
-        { "id": "B", "texto": "No: Browse no alcanza si el nivel lo excluye" },
-        { "id": "C", "texto": "Se convierte en org admin" },
-        { "id": "D", "texto": "El nivel se ignora en Cloud" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí: Browse basta",
+            "en": "Yes: Browse is enough"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: Browse no alcanza si el nivel lo excluye",
+            "en": "No: Browse does not reach if the level excludes them"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se convierte en org admin",
+            "en": "They become an org admin"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nivel se ignora en Cloud",
+            "en": "The level is ignored in Cloud"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Browse Projects no basta para ver incidencias con un nivel de seguridad que no te incluye."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Browse Projects no basta para ver incidencias con un nivel de seguridad que no te incluye.",
+        "en": "Browse Projects is not enough to see issues with a security level that does not include you."
+      }
     },
     {
       "id": "m10-q18",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Al crear el esquema NORTECH Security, el default queda en Cliente y soporte no está en ese nivel. ¿Qué riesgo hay?",
+      "stem": {
+        "es": "Al crear el esquema NORTECH Security, el default queda en Cliente y soporte no está en ese nivel. ¿Qué riesgo hay?",
+        "en": "When creating the NORTECH Security scheme, the default is left as Cliente and support is not in that level. What is the risk?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Ninguno: el default no se aplica" },
-        { "id": "B", "texto": "Las incidencias nuevas pueden quedar invisibles para el contratista o casi nadie" },
-        { "id": "C", "texto": "Se activa el Marketplace" },
-        { "id": "D", "texto": "SUP pasa a team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Ninguno: el default no se aplica",
+            "en": "None: the default is not applied"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Las incidencias nuevas pueden quedar invisibles para el contratista o casi nadie",
+            "en": "New issues can become invisible to the contractor or to almost everyone"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se activa el Marketplace",
+            "en": "The Marketplace is activated"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "SUP pasa a team-managed",
+            "en": "SUP becomes team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Un default demasiado restrictivo oculta el trabajo nuevo. Conviene Interno por defecto e incluir Administrators en todos los niveles."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Un default demasiado restrictivo oculta el trabajo nuevo. Conviene Interno por defecto e incluir Administrators en todos los niveles.",
+        "en": "An overly restrictive default hides new work. Prefer Interno as default and include Administrators in every level."
+      }
     },
     {
       "id": "m10-q19",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Has asociado NORTECH Security a SUP, pero nadie puede poner el nivel Cliente en una incidencia. ¿Qué suele faltar?",
+      "stem": {
+        "es": "Has asociado NORTECH Security a SUP, pero nadie puede poner el nivel Cliente en una incidencia. ¿Qué suele faltar?",
+        "en": "You associated NORTECH Security with SUP, but nobody can set the Cliente level on an issue. What is usually missing?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El permiso Set Issue Security, por ejemplo para Administrators" },
-        { "id": "B", "texto": "Un gadget Velocity" },
-        { "id": "C", "texto": "El plan Data Center" },
-        { "id": "D", "texto": "Desactivar Browse Projects a todos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El permiso Set Issue Security, por ejemplo para Administrators",
+            "en": "The Set Issue Security permission, for example for Administrators"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un gadget Velocity",
+            "en": "A Velocity gadget"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El plan Data Center",
+            "en": "The Data Center plan"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Desactivar Browse Projects a todos",
+            "en": "Disable Browse Projects for everyone"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "Sin Set Issue Security el esquema no se usa. El campo debe estar además en la pantalla."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "Sin Set Issue Security el esquema no se usa. El campo debe estar además en la pantalla.",
+        "en": "Without Set Issue Security the scheme is not used. The field must also be on the screen."
+      }
     },
     {
       "id": "m10-q20",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En un Bug de SUP no aparece el campo Security Level / Nivel de seguridad. ¿Cuál es la causa más probable?",
+      "stem": {
+        "es": "En un Bug de SUP no aparece el campo Security Level / Nivel de seguridad. ¿Cuál es la causa más probable?",
+        "en": "On a SUP Bug the Security Level field does not appear. What is the most likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El tablero es Kanban" },
-        { "id": "B", "texto": "El esquema no está asociado al proyecto o el campo no está en la pantalla Create/Edit" },
-        { "id": "C", "texto": "Falta un sprint activo" },
-        { "id": "D", "texto": "El filtro del tablero usa Rank" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El tablero es Kanban",
+            "en": "The board is Kanban"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El esquema no está asociado al proyecto o el campo no está en la pantalla Create/Edit",
+            "en": "The scheme is not associated with the project, or the field is not on the Create/Edit screen"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta un sprint activo",
+            "en": "There is no active sprint"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El filtro del tablero usa Rank",
+            "en": "The board filter uses Rank"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Hay que asociar el esquema al proyecto y colocar el campo en las pantallas de creación y edición."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Hay que asociar el esquema al proyecto y colocar el campo en las pantallas de creación y edición.",
+        "en": "Associate the scheme with the project and place the field on the create and edit screens."
+      }
     },
     {
       "id": "m10-q21",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Tras asociar NORTECH Security, nadie ve nada en SUP, ni siquiera Administrators. ¿Qué miras primero?",
+      "stem": {
+        "es": "Tras asociar NORTECH Security, nadie ve nada en SUP, ni siquiera Administrators. ¿Qué miras primero?",
+        "en": "After associating NORTECH Security, nobody sees anything in SUP, not even Administrators. What do you check first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Borrar el proyecto" },
-        { "id": "B", "texto": "Un default demasiado restrictivo: incluye Administrators en todos los niveles y deja Interno de default" },
-        { "id": "C", "texto": "Instalar una app de pago" },
-        { "id": "D", "texto": "Cambiar la estimación a story points" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Borrar el proyecto",
+            "en": "Delete the project"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un default demasiado restrictivo: incluye Administrators en todos los niveles y deja Interno de default",
+            "en": "An overly restrictive default: include Administrators in every level and leave Interno as default"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Instalar una app de pago",
+            "en": "Install a paid app"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambiar la estimación a story points",
+            "en": "Change estimation to story points"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Si el default excluye a todos, el proyecto parece vacío. No es un fallo de tablero."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Si el default excluye a todos, el proyecto parece vacío. No es un fallo de tablero.",
+        "en": "If the default excludes everyone, the project looks empty. It is not a board failure."
+      }
     },
     {
       "id": "m10-q22",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El nivel Cliente incluye Administrators y un grupo concreto, pero no el rol Reporter. El cliente que abrió el ticket, ¿lo ve?",
+      "stem": {
+        "es": "El nivel Cliente incluye Administrators y un grupo concreto, pero no el rol Reporter. El cliente que abrió el ticket, ¿lo ve?",
+        "en": "The Cliente level includes Administrators and a specific group, but not the Reporter role. Does the customer who opened the ticket see it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sí, siempre, por ser reporter" },
-        { "id": "B", "texto": "No: el nivel no lo incluye" },
-        { "id": "C", "texto": "Pasa a org admin" },
-        { "id": "D", "texto": "El nivel se ignora si hay Browse" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sí, siempre, por ser reporter",
+            "en": "Yes, always, because they are reporter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No: el nivel no lo incluye",
+            "en": "No: the level does not include them"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pasa a org admin",
+            "en": "They become an org admin"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El nivel se ignora si hay Browse",
+            "en": "The level is ignored if they have Browse"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Ser reporter no abre el nivel por sí solo. Hay que añadir Reporter al nivel si debe ver su propio elemento."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Ser reporter no abre el nivel por sí solo. Hay que añadir Reporter al nivel si debe ver su propio elemento.",
+        "en": "Being reporter does not open the level by itself. Add Reporter to the level if they must see their own item."
+      }
     },
     {
       "id": "m10-q23",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un agente externo crea tickets en SUP que luego «desaparecen» para él. El nivel Cliente no incluye Reporter. ¿Cómo lo corriges?",
+      "stem": {
+        "es": "Un agente externo crea tickets en SUP que luego «desaparecen» para él. El nivel Cliente no incluye Reporter. ¿Cómo lo corriges?",
+        "en": "An external agent creates tickets in SUP that then “disappear” for them. The Cliente level does not include Reporter. How do you fix it?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Quitar Browse a Administrators" },
-        { "id": "B", "texto": "Añadir Reporter al nivel Cliente" },
-        { "id": "C", "texto": "Desinstalar Confluence" },
-        { "id": "D", "texto": "Pasar SUP a team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Quitar Browse a Administrators",
+            "en": "Remove Browse from Administrators"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Añadir Reporter al nivel Cliente",
+            "en": "Add Reporter to the Cliente level"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Desinstalar Confluence",
+            "en": "Uninstall Confluence"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pasar SUP a team-managed",
+            "en": "Move SUP to team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Casi siempre el cliente debe verse a sí mismo. Add Reporter al nivel."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Casi siempre el cliente debe verse a sí mismo. Add Reporter al nivel.",
+        "en": "Almost always the customer must see themselves. Add Reporter to the level."
+      }
     },
     {
       "id": "m10-q24",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un contratista de soporte tiene Browse y está en nortech-soporte, pero no en el nivel Cliente. Con su cuenta, ¿qué debería ver en SUP?",
+      "stem": {
+        "es": "Un contratista de soporte tiene Browse y está en nortech-soporte, pero no en el nivel Cliente. Con su cuenta, ¿qué debería ver en SUP?",
+        "en": "A support contractor has Browse and is in nortech-soporte, but not in the Cliente level. With their account, what should they see in SUP?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El Bug Cliente y los Interno" },
-        { "id": "B", "texto": "No el Bug Cliente; sí otros en Interno" },
-        { "id": "C", "texto": "No puede abrir Jira en absoluto" },
-        { "id": "D", "texto": "Recibe Set Issue Security de forma automática" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El Bug Cliente y los Interno",
+            "en": "The Cliente Bug and Interno ones"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No el Bug Cliente; sí otros en Interno",
+            "en": "Not the Cliente Bug; yes others on Interno"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No puede abrir Jira en absoluto",
+            "en": "They cannot open Jira at all"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Recibe Set Issue Security de forma automática",
+            "en": "They automatically receive Set Issue Security"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Issue security separa clientes y datos sensibles. Browse no revela el nivel Cliente."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Issue security separa clientes y datos sensibles. Browse no revela el nivel Cliente.",
+        "en": "Issue security separates customers and sensitive data. Browse does not reveal the Cliente level."
+      }
     },
     {
       "id": "m10-q25",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Antes de instalar una app del Marketplace en el sitio de Nortech, ¿qué debes revisar?",
+      "stem": {
+        "es": "Antes de instalar una app del Marketplace en el sitio de Nortech, ¿qué debes revisar?",
+        "en": "Before installing a Marketplace app on the Nortech site, what should you review?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los permisos que pide la ficha (issue, admin, datos)" },
-        { "id": "B", "texto": "Si es Free o de pago y el coste al caducar el trial" },
-        { "id": "C", "texto": "Si nativo (Automation, JQL) ya cubre el caso" },
-        { "id": "D", "texto": "Instalar ya la de pago y gobernar después" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los permisos que pide la ficha (issue, admin, datos)",
+            "en": "The permissions the listing requests (issue, admin, data)"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Si es Free o de pago y el coste al caducar el trial",
+            "en": "Whether it is Free or paid and the cost when the trial expires"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Si nativo (Automation, JQL) ya cubre el caso",
+            "en": "Whether native features (Automation, JQL) already cover the case"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Instalar ya la de pago y gobernar después",
+            "en": "Install the paid one now and govern later"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Cada app es identidad, datos y factura. Instalar de pago y gobernar después no es gobierno."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Cada app es identidad, datos y factura. Instalar de pago y gobernar después no es gobierno.",
+        "en": "Each app is identity, data, and a bill. Installing paid and governing later is not governance."
+      }
     },
     {
       "id": "m10-q26",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En un sitio gobernado de Nortech, un project admin de SUP quiere instalar una app. ¿Quién puede instalar apps en Settings → Apps / Manage apps?",
+      "stem": {
+        "es": "En un sitio gobernado de Nortech, un project admin de SUP quiere instalar una app. ¿Quién puede instalar apps en Settings → Apps / Manage apps?",
+        "en": "On a governed Nortech site, a SUP project admin wants to install an app. Who can install apps in Settings → Apps / Manage apps?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Cualquier project admin de SUP" },
-        { "id": "B", "texto": "Solo administradores; un project admin no debería poder instalar a ciegas" },
-        { "id": "C", "texto": "El reporter de un Bug" },
-        { "id": "D", "texto": "Quien tenga Browse Projects" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Cualquier project admin de SUP",
+            "en": "Any SUP project admin"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Solo administradores; un project admin no debería poder instalar a ciegas",
+            "en": "Administrators only; a project admin should not be able to install blindly"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El reporter de un Bug",
+            "en": "The reporter of a Bug"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Quien tenga Browse Projects",
+            "en": "Anyone with Browse Projects"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Install apps es de administración del sitio. El project admin no gobierna el Marketplace."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Install apps es de administración del sitio. El project admin no gobierna el Marketplace.",
+        "en": "Install apps is site administration. The project admin does not govern the Marketplace."
+      }
     },
     {
       "id": "m10-q27",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Finanzas pide evaluar una app Timesheet. Abres la ficha en el Marketplace. ¿Qué haces?",
+      "stem": {
+        "es": "Finanzas pide evaluar una app Timesheet. Abres la ficha en el Marketplace. ¿Qué haces?",
+        "en": "Finance asks you to evaluate a Timesheet app. You open the Marketplace listing. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Instalar la de pago para probarla en producción" },
-        { "id": "B", "texto": "Leer permisos y Free frente a pago; no instalar nada de pago sin gobierno" },
-        { "id": "C", "texto": "Dejar el trial de pago silencioso hasta que caduque" },
-        { "id": "D", "texto": "Instalar tres apps y gobernar después" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Instalar la de pago para probarla en producción",
+            "en": "Install the paid one to try it in production"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Leer permisos y Free frente a pago; no instalar nada de pago sin gobierno",
+            "en": "Read permissions and Free versus paid; do not install anything paid without governance"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Dejar el trial de pago silencioso hasta que caduque",
+            "en": "Leave a silent paid trial until it expires"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Instalar tres apps y gobernar después",
+            "en": "Install three apps and govern later"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La ficha se lee antes de instalar. Un trial de pago silencioso genera factura y datos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La ficha se lee antes de instalar. Un trial de pago silencioso genera factura y datos.",
+        "en": "Read the listing before installing. A silent paid trial generates a bill and data."
+      }
     },
     {
       "id": "m10-q28",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Instalaste una app Free de prueba para evaluar un timesheet. Al terminar la prueba, ¿qué haces?",
+      "stem": {
+        "es": "Instalaste una app Free de prueba para evaluar un timesheet. Al terminar la prueba, ¿qué haces?",
+        "en": "You installed a Free trial app to evaluate a timesheet. When the trial is over, what do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "La dejas: no cuesta" },
-        { "id": "B", "texto": "La desinstalas" },
-        { "id": "C", "texto": "La pasas a de pago" },
-        { "id": "D", "texto": "Se convierte en un esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "La dejas: no cuesta",
+            "en": "Leave it: it costs nothing"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "La desinstalas",
+            "en": "Uninstall it"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "La pasas a de pago",
+            "en": "Switch it to paid"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se convierte en un esquema de permisos",
+            "en": "It becomes a permission scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Cada app es identidad y datos, aunque sea Free. Desinstálala cuando deje de usarse."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Cada app es identidad y datos, aunque sea Free. Desinstálala cuando deje de usarse.",
+        "en": "Each app is identity and data, even if it is Free. Uninstall it when it is no longer used."
+      }
     },
     {
       "id": "m10-q29",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Nortech necesita Confluence en el mismo sitio que Jira. ¿Dónde se añade el producto?",
+      "stem": {
+        "es": "Nortech necesita Confluence en el mismo sitio que Jira. ¿Dónde se añade el producto?",
+        "en": "Nortech needs Confluence on the same site as Jira. Where is the product added?"
+      },
       "opciones": [
-        { "id": "A", "texto": "En el filtro del tablero DEV" },
-        { "id": "B", "texto": "admin.atlassian.com → Aplicaciones → Añadir aplicación → Confluence (trial)" },
-        { "id": "C", "texto": "Creando un proyecto team-managed en Jira" },
-        { "id": "D", "texto": "En el gadget Assigned to Me" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "En el filtro del tablero DEV",
+            "en": "In the DEV board filter"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "admin.atlassian.com → Aplicaciones → Añadir aplicación → Confluence (trial)",
+            "en": "admin.atlassian.com → Products → Add product → Confluence (trial)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Creando un proyecto team-managed en Jira",
+            "en": "By creating a team-managed project in Jira"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "En el gadget Assigned to Me",
+            "en": "In the Assigned to Me gadget"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Mismo *.atlassian.net. No hace falta otro correo. Espera a que el producto aparezca."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Mismo *.atlassian.net. No hace falta otro correo. Espera a que el producto aparezca.",
+        "en": "Same *.atlassian.net. No extra email is needed. Wait for the product to appear."
+      }
     },
     {
       "id": "m10-q30",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En un Bug de SUP, Link apunta a la página de Confluence «Runbook SUP». ¿Para qué sirve?",
+      "stem": {
+        "es": "En un Bug de SUP, Link apunta a la página de Confluence «Runbook SUP». ¿Para qué sirve?",
+        "en": "On a SUP Bug, Link points to the Confluence page “Runbook SUP”. What is that for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sustituir issue security" },
-        { "id": "B", "texto": "Ligar el conocimiento al ticket: la incidencia muestra el enlace y la página, la incidencia" },
-        { "id": "C", "texto": "Conceder Set Issue Security al contratista" },
-        { "id": "D", "texto": "Instalar una app de pago" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sustituir issue security",
+            "en": "Replace issue security"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Ligar el conocimiento al ticket: la incidencia muestra el enlace y la página, la incidencia",
+            "en": "Tie knowledge to the ticket: the issue shows the link and the page shows the issue"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Conceder Set Issue Security al contratista",
+            "en": "Grant Set Issue Security to the contractor"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Instalar una app de pago",
+            "en": "Install a paid app"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La integración Jira-Confluence enlaza runbooks al trabajo. El enlace no bypassea permisos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La integración Jira-Confluence enlaza runbooks al trabajo. El enlace no bypassea permisos.",
+        "en": "The Jira-Confluence integration links runbooks to the work. The link does not bypass permissions."
+      }
     },
     {
       "id": "m10-q31",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El contratista con Browse no ve el Bug (nivel Cliente). En la página Runbook SUP, la macro Jira, ¿qué hace?",
+      "stem": {
+        "es": "El contratista con Browse no ve el Bug (nivel Cliente). En la página Runbook SUP, la macro Jira, ¿qué hace?",
+        "en": "The contractor with Browse cannot see the Bug (Cliente level). On the Runbook SUP page, what does the Jira macro do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Muestra el Bug igual: Confluence bypassea la seguridad" },
-        { "id": "B", "texto": "No resuelve / no muestra lo que el usuario no puede ver en Jira" },
-        { "id": "C", "texto": "Le concede Set Issue Security" },
-        { "id": "D", "texto": "Cambia el esquema de permisos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Muestra el Bug igual: Confluence bypassea la seguridad",
+            "en": "It shows the Bug anyway: Confluence bypasses security"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "No resuelve / no muestra lo que el usuario no puede ver en Jira",
+            "en": "It does not resolve / does not show what the user cannot see in Jira"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Le concede Set Issue Security",
+            "en": "It grants them Set Issue Security"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Cambia el esquema de permisos",
+            "en": "It changes the permission scheme"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "La macro de Jira en Confluence respeta el nivel de seguridad. No es un atajo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "La macro de Jira en Confluence respeta el nivel de seguridad. No es un atajo.",
+        "en": "The Jira macro in Confluence respects the security level. It is not a shortcut."
+      }
     },
     {
       "id": "m10-q32",
       "dominio": "project-creation",
       "tipo": "single",
-      "stem": "Para el runbook, creas el espacio de Confluence Nortech Docs en el mismo *.atlassian.net. ¿Qué implica?",
+      "stem": {
+        "es": "Para el runbook, creas el espacio de Confluence Nortech Docs en el mismo *.atlassian.net. ¿Qué implica?",
+        "en": "For the runbook, you create the Confluence space Nortech Docs on the same *.atlassian.net. What does that imply?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Otro correo y otro sitio obligatorios" },
-        { "id": "B", "texto": "Mismo sitio que Jira; si Confluence no carga, el producto no está añadido" },
-        { "id": "C", "texto": "Que SUP pase a team-managed" },
-        { "id": "D", "texto": "Que issue security se active sola" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Otro correo y otro sitio obligatorios",
+            "en": "Another email and another site are required"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Mismo sitio que Jira; si Confluence no carga, el producto no está añadido",
+            "en": "The same site as Jira; if Confluence does not load, the product has not been added"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Que SUP pase a team-managed",
+            "en": "That SUP becomes team-managed"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Que issue security se active sola",
+            "en": "That issue security turns on by itself"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Confluence y Jira comparten tenant. Si no sale Confluence, añade el producto y espera unos minutos."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Confluence y Jira comparten tenant. Si no sale Confluence, añade el producto y espera unos minutos.",
+        "en": "Confluence and Jira share a tenant. If Confluence does not appear, add the product and wait a few minutes."
+      }
     },
     {
       "id": "m10-q33",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El contratista ejecuta JQL level = Cliente en SUP. Tú ves el Bug restringido. ¿Qué ve él?",
+      "stem": {
+        "es": "El contratista ejecuta JQL level = Cliente en SUP. Tú ves el Bug restringido. ¿Qué ve él?",
+        "en": "The contractor runs JQL level = Cliente in SUP. You see the restricted Bug. What do they see?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El mismo Bug: JQL ignora la seguridad" },
-        { "id": "B", "texto": "Vacío o error: no tiene el nivel" },
-        { "id": "C", "texto": "Todos los elementos de DEV" },
-        { "id": "D", "texto": "El velocity del sprint" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El mismo Bug: JQL ignora la seguridad",
+            "en": "The same Bug: JQL ignores security"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Vacío o error: no tiene el nivel",
+            "en": "Empty or an error: they do not have the level"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Todos los elementos de DEV",
+            "en": "Every DEV item"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El velocity del sprint",
+            "en": "The sprint velocity"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "JQL también respeta issue security. Sin el nivel, el resultado está vacío."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "JQL también respeta issue security. Sin el nivel, el resultado está vacío.",
+        "en": "JQL also respects issue security. Without the level, the result is empty."
+      }
     },
     {
       "id": "m10-q34",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Hay que probar un permiso extra en un proyecto de prueba. No debes editar el scheme Default. ¿Qué haces?",
+      "stem": {
+        "es": "Hay que probar un permiso extra en un proyecto de prueba. No debes editar el scheme Default. ¿Qué haces?",
+        "en": "You need to test an extra permission on a test project. You must not edit the Default scheme. What do you do?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Editar Default: es el banco de pruebas oficial" },
-        { "id": "B", "texto": "Copiar el esquema, editar la copia y asociarla solo al proyecto de prueba" },
-        { "id": "C", "texto": "Pedir a cada equipo que toque Default" },
-        { "id": "D", "texto": "Desactivar JQL" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Editar Default: es el banco de pruebas oficial",
+            "en": "Edit Default: it is the official sandbox"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Copiar el esquema, editar la copia y asociarla solo al proyecto de prueba",
+            "en": "Copy the scheme, edit the copy, and associate it only with the test project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Pedir a cada equipo que toque Default",
+            "en": "Ask every team to touch Default"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Desactivar JQL",
+            "en": "Disable JQL"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Copia el esquema; no pruebes en producción. Default no es laboratorio."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Copia el esquema; no pruebes en producción. Default no es laboratorio.",
+        "en": "Copy the scheme; do not test in production. Default is not a lab."
+      }
     },
     {
       "id": "m10-q35",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "NORTECH Permissions lo comparten varios proyectos. Para un permiso solo en SUP, ¿qué sería un error?",
+      "stem": {
+        "es": "NORTECH Permissions lo comparten varios proyectos. Para un permiso solo en SUP, ¿qué sería un error?",
+        "en": "NORTECH Permissions is shared by several projects. For a permission only in SUP, what would be a mistake?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Copiar el esquema y asociar la copia solo a SUP" },
-        { "id": "B", "texto": "Editar NORTECH Permissions en caliente (pega a todos)" },
-        { "id": "C", "texto": "Dejar Default intacto" },
-        { "id": "D", "texto": "Documentar el cambio en Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Copiar el esquema y asociar la copia solo a SUP",
+            "en": "Copy the scheme and associate the copy only with SUP"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Editar NORTECH Permissions en caliente (pega a todos)",
+            "en": "Edit NORTECH Permissions live (it hits everyone)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Dejar Default intacto",
+            "en": "Leave Default untouched"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Documentar el cambio en Confluence",
+            "en": "Document the change in Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Editar el compartido pega a DEV, OPS y PMO. Copia y asocia es el cambio seguro."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Editar el compartido pega a DEV, OPS y PMO. Copia y asocia es el cambio seguro.",
+        "en": "Editing the shared scheme hits DEV, OPS, and PMO. Copy and associate is the safe change."
+      }
     },
     {
       "id": "m10-q36",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Has creado NORTECH Security con niveles Interno y Cliente. Hasta que no lo asocias a SUP, ¿qué ocurre?",
+      "stem": {
+        "es": "Has creado NORTECH Security con niveles Interno y Cliente. Hasta que no lo asocias a SUP, ¿qué ocurre?",
+        "en": "You created NORTECH Security with Interno and Cliente levels. Until you associate it with SUP, what happens?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Los Bugs nuevos ya salen en Cliente" },
-        { "id": "B", "texto": "El esquema no se usa en ese proyecto" },
-        { "id": "C", "texto": "El esquema de permisos desaparece" },
-        { "id": "D", "texto": "Se instala Timesheet solo" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Los Bugs nuevos ya salen en Cliente",
+            "en": "New Bugs already come out as Cliente"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El esquema no se usa en ese proyecto",
+            "en": "The scheme is not used in that project"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El esquema de permisos desaparece",
+            "en": "The permission scheme disappears"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Se instala Timesheet solo",
+            "en": "Timesheet installs itself"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Crear el esquema no basta. Hay que asociarlo al proyecto para que la seguridad se aplique."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Crear el esquema no basta. Hay que asociarlo al proyecto para que la seguridad se aplique.",
+        "en": "Creating the scheme is not enough. You must associate it with the project for security to apply."
+      }
     },
     {
       "id": "m10-q37",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Nortech quiere ver quién cambió un esquema de permisos o un workflow. ¿Dónde está el registro de auditoría de la plataforma (no el de una regla)?",
+      "stem": {
+        "es": "Nortech quiere ver quién cambió un esquema de permisos o un workflow. ¿Dónde está el registro de auditoría de la plataforma (no el de una regla)?",
+        "en": "Nortech wants to see who changed a permission scheme or a workflow. Where is the platform audit log (not a rule's)?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El gadget Pie chart" },
-        { "id": "B", "texto": "Configuración de Jira → Sistema → Registro de auditoría (o Administración → Seguridad)" },
-        { "id": "C", "texto": "El nombre del sprint" },
-        { "id": "D", "texto": "Solo en Confluence" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El gadget Pie chart",
+            "en": "The Pie Chart gadget"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Configuración de Jira → Sistema → Registro de auditoría (o Administración → Seguridad)",
+            "en": "Jira settings → System → Audit log (or Administration → Security)"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del sprint",
+            "en": "The sprint name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo en Confluence",
+            "en": "Only in Confluence"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El audit log de Jira u organización vive en administración. El de una regla está en Automatización."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El audit log de Jira u organización vive en administración. El de una regla está en Automatización.",
+        "en": "The Jira or organization audit log lives in administration. A rule's log is in Automation."
+      }
     },
     {
       "id": "m10-q38",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Abres el registro de auditoría de Jira y sale vacío. ¿Cuál es la causa más probable?",
+      "stem": {
+        "es": "Abres el registro de auditoría de Jira y sale vacío. ¿Cuál es la causa más probable?",
+        "en": "You open the Jira audit log and it is empty. What is the most likely cause?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El tablero es Scrum" },
-        { "id": "B", "texto": "Plan Free o un filtro de fechas demasiado estrecho; amplía fechas o usa Premium" },
-        { "id": "C", "texto": "Falta un swimlane" },
-        { "id": "D", "texto": "Issue security borra los logs" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El tablero es Scrum",
+            "en": "The board is Scrum"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Plan Free o un filtro de fechas demasiado estrecho; amplía fechas o usa Premium",
+            "en": "Free plan or a date filter that is too narrow; widen the dates or use Premium"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Falta un swimlane",
+            "en": "A swimlane is missing"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Issue security borra los logs",
+            "en": "Issue security deletes the logs"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "En Free la retención es corta. Amplía el rango de fechas o usa un plan con más historial."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "En Free la retención es corta. Amplía el rango de fechas o usa un plan con más historial.",
+        "en": "On Free, retention is short. Widen the date range or use a plan with more history."
+      }
     },
     {
       "id": "m10-q39",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "En la auditoría de plataforma, además de schemes Default y apps instaladas, ¿qué anotas?",
+      "stem": {
+        "es": "En la auditoría de plataforma, además de schemes Default y apps instaladas, ¿qué anotas?",
+        "en": "In the platform audit, besides Default schemes and installed apps, what do you note?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Un único org admin y sin calendario de caducidad del trial" },
-        { "id": "B", "texto": "Un segundo org admin de respaldo y el calendario de caducidad del trial" },
-        { "id": "C", "texto": "Instalar más apps de pago" },
-        { "id": "D", "texto": "Editar Default cada viernes" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Un único org admin y sin calendario de caducidad del trial",
+            "en": "A single org admin and no trial expiry calendar"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un segundo org admin de respaldo y el calendario de caducidad del trial",
+            "en": "A backup second org admin and the trial expiry calendar"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Instalar más apps de pago",
+            "en": "Install more paid apps"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Editar Default cada viernes",
+            "en": "Edit Default every Friday"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Gobierno: respaldo de org admin, caducidad del trial, desinstalar apps de prueba y no dejar Default en uso."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Gobierno: respaldo de org admin, caducidad del trial, desinstalar apps de prueba y no dejar Default en uso.",
+        "en": "Governance: org admin backup, trial expiry, uninstall trial apps, and do not leave Default in use."
+      }
     },
     {
       "id": "m10-q40",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "La auditoría de plataforma incluye la fecha de caducidad del trial. ¿Para qué sirve?",
+      "stem": {
+        "es": "La auditoría de plataforma incluye la fecha de caducidad del trial. ¿Para qué sirve?",
+        "en": "The platform audit includes the trial expiry date. What is it for?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Sustituir issue security" },
-        { "id": "B", "texto": "Gobierno: no llevarse una sorpresa el día que caduca el sitio de prácticas" },
-        { "id": "C", "texto": "Mapear columnas del Kanban" },
-        { "id": "D", "texto": "Crear custom fields globales" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Sustituir issue security",
+            "en": "Replace issue security"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Gobierno: no llevarse una sorpresa el día que caduca el sitio de prácticas",
+            "en": "Governance: no surprise on the day the practice site expires"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Mapear columnas del Kanban",
+            "en": "Map Kanban columns"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear custom fields globales",
+            "en": "Create global custom fields"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "El trial caduca. Sin calendario, el sitio (y las prácticas) desaparecen sin aviso operativo."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "El trial caduca. Sin calendario, el sitio (y las prácticas) desaparecen sin aviso operativo.",
+        "en": "The trial expires. Without a calendar, the site (and the labs) disappear with no operational warning."
+      }
     },
     {
       "id": "m10-q41",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Tras una auditoría de plataforma, Nortech encuentra Default en PMO, apps de prueba y un solo org admin. ¿Qué marcas como mejora típica?",
+      "stem": {
+        "es": "Tras una auditoría de plataforma, Nortech encuentra Default en PMO, apps de prueba y un solo org admin. ¿Qué marcas como mejora típica?",
+        "en": "After a platform audit, Nortech finds Default on PMO, trial apps, and a single org admin. What do you mark as a typical improvement?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Asociar PMO a NORTECH Permissions si aún usa Default" },
-        { "id": "B", "texto": "Desinstalar apps de prueba" },
-        { "id": "C", "texto": "Un segundo org admin de respaldo" },
-        { "id": "D", "texto": "Editar los schemes Default en caliente para todos los proyectos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Asociar PMO a NORTECH Permissions si aún usa Default",
+            "en": "Associate PMO with NORTECH Permissions if it still uses Default"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Desinstalar apps de prueba",
+            "en": "Uninstall trial apps"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un segundo org admin de respaldo",
+            "en": "A backup second org admin"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Editar los schemes Default en caliente para todos los proyectos",
+            "en": "Edit the Default schemes live for every project"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Default en uso, apps sueltas y un solo org admin son hallazgos. No pruebes cambios en Default."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Default en uso, apps sueltas y un solo org admin son hallazgos. No pruebes cambios en Default.",
+        "en": "Default in use, leftover apps, and a single org admin are findings. Do not test changes on Default."
+      }
     },
     {
       "id": "m10-q42",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Un contratista no abre Jira. Las tres puertas de diagnóstico, de fuera hacia dentro, empiezan por:",
+      "stem": {
+        "es": "Un contratista no abre Jira. Las tres puertas de diagnóstico, de fuera hacia dentro, empiezan por:",
+        "en": "A contractor cannot open Jira. The three diagnostic gates, from outside in, start with:"
+      },
       "opciones": [
-        { "id": "A", "texto": "Filtro del tablero → actor de automation → product access" },
-        { "id": "B", "texto": "Organización, product access e invitación / URL del sitio, no el esquema de permisos" },
-        { "id": "C", "texto": "Solo el Marketplace" },
-        { "id": "D", "texto": "Borrar el proyecto SUP" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Filtro del tablero → actor de automation → product access",
+            "en": "Board filter → automation actor → product access"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Organización, product access e invitación / URL del sitio, no el esquema de permisos",
+            "en": "Organization, product access, and invitation / site URL — not the permission scheme"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Solo el Marketplace",
+            "en": "Only the Marketplace"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borrar el proyecto SUP",
+            "en": "Delete the SUP project"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "No empieces por el esquema de permisos. ¿Producto? ¿Invitación aceptada? ¿URL?"
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "No empieces por el esquema de permisos. ¿Producto? ¿Invitación aceptada? ¿URL?",
+        "en": "Do not start with the permission scheme. Product? Invitation accepted? URL?"
+      }
     },
     {
       "id": "m10-q43",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "El síntoma es: el contratista no abre Jira. Recorres product access, invitación y URL. ¿Por qué no el esquema de permisos primero?",
+      "stem": {
+        "es": "El síntoma es: el contratista no abre Jira. Recorres product access, invitación y URL. ¿Por qué no el esquema de permisos primero?",
+        "en": "The symptom is: the contractor cannot open Jira. You walk product access, invitation, and URL. Why not the permission scheme first?"
+      },
       "opciones": [
-        { "id": "A", "texto": "El esquema no existe en Cloud" },
-        { "id": "B", "texto": "Si no entra al producto, el esquema del proyecto ni se evalúa" },
-        { "id": "C", "texto": "Browse Projects concede product access" },
-        { "id": "D", "texto": "Issue security sustituye la invitación" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El esquema no existe en Cloud",
+            "en": "The scheme does not exist in Cloud"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Si no entra al producto, el esquema del proyecto ni se evalúa",
+            "en": "If they cannot enter the product, the project scheme is not even evaluated"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Browse Projects concede product access",
+            "en": "Browse Projects grants product access"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Issue security sustituye la invitación",
+            "en": "Issue security replaces the invitation"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Tres puertas: organización, producto y proyecto. De fuera hacia dentro."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Tres puertas: organización, producto y proyecto. De fuera hacia dentro.",
+        "en": "Three gates: organization, product, and project. From outside in."
+      }
     },
     {
       "id": "m10-q44",
       "dominio": "managing-projects",
       "tipo": "single",
-      "stem": "Quitas al contratista del rol de SUP: abre el proyecto y lo ve vacío, sin Browse. Eso es:",
+      "stem": {
+        "es": "Quitas al contratista del rol de SUP: abre el proyecto y lo ve vacío, sin Browse. Eso es:",
+        "en": "You remove the contractor from the SUP role: they open the project and see it empty, without Browse. That is:"
+      },
       "opciones": [
-        { "id": "A", "texto": "Falta de product access (no puede abrir Jira)" },
-        { "id": "B", "texto": "Un error de permisos de proyecto (Browse), distinto de «no access» al producto" },
-        { "id": "C", "texto": "Un bucle de automation" },
-        { "id": "D", "texto": "El tablero estima en puntos" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Falta de product access (no puede abrir Jira)",
+            "en": "Missing product access (they cannot open Jira)"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Un error de permisos de proyecto (Browse), distinto de «no access» al producto",
+            "en": "A project permission error (Browse), distinct from “no access” to the product"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Un bucle de automation",
+            "en": "An automation loop"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El tablero estima en puntos",
+            "en": "The board estimates in points"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Proyecto vacío o sin Browse no es lo mismo que no poder entrar a Jira. El product access ya se superó."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Proyecto vacío o sin Browse no es lo mismo que no poder entrar a Jira. El product access ya se superó.",
+        "en": "An empty project or missing Browse is not the same as being unable to enter Jira. Product access was already passed."
+      }
     },
     {
       "id": "m10-q45",
       "dominio": "managing-projects",
       "tipo": "multi",
-      "stem": "Hay que probar un permiso extra en SUP sin romper los proyectos que comparten NORTECH Permissions. ¿Qué es correcto?",
+      "stem": {
+        "es": "Hay que probar un permiso extra en SUP sin romper los proyectos que comparten NORTECH Permissions. ¿Qué es correcto?",
+        "en": "You need to test an extra permission in SUP without breaking projects that share NORTECH Permissions. What is correct?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Copiar el esquema, editar la copia y asociarla solo a SUP" },
-        { "id": "B", "texto": "Editar NORTECH Permissions en caliente" },
-        { "id": "C", "texto": "No usar el scheme Default de Jira como banco de pruebas" },
-        { "id": "D", "texto": "Pedir a cada equipo que edite Default a su gusto" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Copiar el esquema, editar la copia y asociarla solo a SUP",
+            "en": "Copy the scheme, edit the copy, and associate it only with SUP"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Editar NORTECH Permissions en caliente",
+            "en": "Edit NORTECH Permissions live"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "No usar el scheme Default de Jira como banco de pruebas",
+            "en": "Do not use Jira's Default scheme as a sandbox"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Pedir a cada equipo que edite Default a su gusto",
+            "en": "Ask each team to edit Default as they like"
+          }
+        }
       ],
-      "correctas": ["A", "C"],
-      "explicacion": "Copia y asocia. Editar el compartido o Default pega a todos."
+      "correctas": [
+        "A",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Copia y asocia. Editar el compartido o Default pega a todos.",
+        "en": "Copy and associate. Editing the shared scheme or Default hits everyone."
+      }
     },
     {
       "id": "m10-q46",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Automatización global muestra el uso al 100 % en el plan de Nortech. Las reglas de demostración, ¿qué les pasa?",
+      "stem": {
+        "es": "Automatización global muestra el uso al 100 % en el plan de Nortech. Las reglas de demostración, ¿qué les pasa?",
+        "en": "Global Automation shows usage at 100% on the Nortech plan. What happens to the demo rules?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Siguen ilimitadas" },
-        { "id": "B", "texto": "Dejan de correr; hay que desactivar demos y acotar el alcance" },
-        { "id": "C", "texto": "Se convierten en workflow" },
-        { "id": "D", "texto": "Borran el registro de auditoría de Jira" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Siguen ilimitadas",
+            "en": "They remain unlimited"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Dejan de correr; hay que desactivar demos y acotar el alcance",
+            "en": "They stop running; disable demos and narrow the scope"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Se convierten en workflow",
+            "en": "They become workflow"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Borran el registro de auditoría de Jira",
+            "en": "They wipe the Jira audit log"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Límites por plan. Las scheduled y las globales son las que más cuentan."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Límites por plan. Las scheduled y las globales son las que más cuentan.",
+        "en": "Limits by plan. Scheduled and global rules count the most."
+      }
     },
     {
       "id": "m10-q47",
       "dominio": "automation",
       "tipo": "single",
-      "stem": "Ayer la transición Submit salía y la regla avisaba; hoy no. ¿Qué checklist de operación aplicas?",
+      "stem": {
+        "es": "Ayer la transición Submit salía y la regla avisaba; hoy no. ¿Qué checklist de operación aplicas?",
+        "en": "Yesterday the Submit transition appeared and the rule notified; today it does not. Which operations checklist do you apply?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Workflow en draft sin publicar, regla desactivada, cuota" },
-        { "id": "B", "texto": "El burndown en story points" },
-        { "id": "C", "texto": "El nombre del sitio" },
-        { "id": "D", "texto": "Falta un pie chart" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Workflow en draft sin publicar, regla desactivada, cuota",
+            "en": "Workflow in unpublished draft, rule disabled, quota"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El burndown en story points",
+            "en": "The burndown in story points"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "El nombre del sitio",
+            "en": "The site name"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Falta un pie chart",
+            "en": "A missing pie chart"
+          }
+        }
       ],
-      "correctas": ["A"],
-      "explicacion": "«Ayer funcionaba» suele ser draft, regla off o cuota. Un informe no esconde transiciones."
+      "correctas": [
+        "A"
+      ],
+      "explicacion": {
+        "es": "«Ayer funcionaba» suele ser draft, regla off o cuota. Un informe no esconde transiciones.",
+        "en": "“It worked yesterday” is usually draft, rule off, or quota. A report does not hide transitions."
+      }
     },
     {
       "id": "m10-q48",
       "dominio": "automation",
       "tipo": "multi",
-      "stem": "Una transición «no sale» o una regla de avisos no dispara. ¿Qué causas debes listar?",
+      "stem": {
+        "es": "Una transición «no sale» o una regla de avisos no dispara. ¿Qué causas debes listar?",
+        "en": "A transition “does not appear” or a notification rule does not fire. Which causes should you list?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Workflow en draft sin publicar" },
-        { "id": "B", "texto": "Regla desactivada" },
-        { "id": "C", "texto": "Cuota de automation al 100 %" },
-        { "id": "D", "texto": "El gadget Velocity está en story points" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Workflow en draft sin publicar",
+            "en": "Workflow in unpublished draft"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Regla desactivada",
+            "en": "Rule disabled"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cuota de automation al 100 %",
+            "en": "Automation quota at 100%"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "El gadget Velocity está en story points",
+            "en": "The Velocity gadget is in story points"
+          }
+        }
       ],
-      "correctas": ["A", "B", "C"],
-      "explicacion": "Draft, regla off y cuota. El statistic del tablero no oculta transiciones."
+      "correctas": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explicacion": {
+        "es": "Draft, regla off y cuota. El statistic del tablero no oculta transiciones.",
+        "en": "Draft, rule off, and quota. The board statistic does not hide transitions."
+      }
     },
     {
       "id": "m10-q49",
       "dominio": "reporting",
       "tipo": "single",
-      "stem": "El Bug Cliente existe: tú lo abres. El contratista busca en Issues y no lo encuentra. Antes de tocar un gadget, ¿qué compruebas?",
+      "stem": {
+        "es": "El Bug Cliente existe: tú lo abres. El contratista busca en Issues y no lo encuentra. Antes de tocar un gadget, ¿qué compruebas?",
+        "en": "The Cliente Bug exists: you can open it. The contractor searches Issues and cannot find it. Before touching a gadget, what do you check?"
+      },
       "opciones": [
-        { "id": "A", "texto": "Instalar un timesheet de pago" },
-        { "id": "B", "texto": "El nivel de seguridad: la búsqueda también respeta issue security" },
-        { "id": "C", "texto": "Cambiar el sub-filter Kanban" },
-        { "id": "D", "texto": "Crear un custom field global" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "Instalar un timesheet de pago",
+            "en": "Install a paid timesheet"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "El nivel de seguridad: la búsqueda también respeta issue security",
+            "en": "The security level: search also respects issue security"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Cambiar el sub-filter Kanban",
+            "en": "Change the Kanban sub-filter"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Crear un custom field global",
+            "en": "Create a global custom field"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Mismo efecto que level = Cliente vacío. No es un fallo de dashboard."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Mismo efecto que level = Cliente vacío. No es un fallo de dashboard.",
+        "en": "Same effect as an empty level = Cliente result. It is not a dashboard failure."
+      }
     },
     {
       "id": "m10-q50",
       "dominio": "board-configuration",
       "tipo": "single",
-      "stem": "El contratista no ve elementos en SUP. En el orden de diagnóstico, el filtro del tablero se mira:",
+      "stem": {
+        "es": "El contratista no ve elementos en SUP. En el orden de diagnóstico, el filtro del tablero se mira:",
+        "en": "The contractor sees no items in SUP. In the diagnostic order, the board filter is checked:"
+      },
       "opciones": [
-        { "id": "A", "texto": "El primero: casi siempre son columnas sin mapear" },
-        { "id": "B", "texto": "Después de product access, Browse o security, pantalla y workflow; no empieces por el tablero" },
-        { "id": "C", "texto": "Nunca: el tablero no entra en el checklist" },
-        { "id": "D", "texto": "Solo si el proyecto es team-managed" }
+        {
+          "id": "A",
+          "texto": {
+            "es": "El primero: casi siempre son columnas sin mapear",
+            "en": "First: it is almost always unmapped columns"
+          }
+        },
+        {
+          "id": "B",
+          "texto": {
+            "es": "Después de product access, Browse o security, pantalla y workflow; no empieces por el tablero",
+            "en": "After product access, Browse or security, screen, and workflow; do not start with the board"
+          }
+        },
+        {
+          "id": "C",
+          "texto": {
+            "es": "Nunca: el tablero no entra en el checklist",
+            "en": "Never: the board is not on the checklist"
+          }
+        },
+        {
+          "id": "D",
+          "texto": {
+            "es": "Solo si el proyecto es team-managed",
+            "en": "Only if the project is team-managed"
+          }
+        }
       ],
-      "correctas": ["B"],
-      "explicacion": "Product access → Browse / security level → pantalla → workflow → filtro del tablero → actor de automation."
+      "correctas": [
+        "B"
+      ],
+      "explicacion": {
+        "es": "Product access → Browse / security level → pantalla → workflow → filtro del tablero → actor de automation.",
+        "en": "Product access → Browse / security level → screen → workflow → board filter → automation actor."
+      }
     }
   ]
 }

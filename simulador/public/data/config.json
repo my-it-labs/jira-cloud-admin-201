@@ -1,17 +1,23 @@
 {
   "codigo": "ACP-620",
-  "titulo": "Managing Jira Projects for Cloud",
-  "subtitulo": "Simulador de preparación (preguntas originales del curso, no es el examen oficial)",
+  "titulo": {
+    "es": "Managing Jira Projects for Cloud",
+    "en": "Managing Jira Projects for Cloud"
+  },
+  "subtitulo": {
+    "es": "Simulador de preparación (preguntas originales del curso, no es el examen oficial)",
+    "en": "Practice simulator (original course items, not the official exam)"
+  },
   "preguntasObjetivo": 70,
   "preguntasPorModulo": 5,
   "preguntasRapido": 15,
   "minutos": 180,
   "corte": 0.64,
   "dominios": {
-    "project-creation": { "peso": 0.13, "etiqueta": "Project creation" },
-    "board-configuration": { "peso": 0.29, "etiqueta": "Board configuration" },
-    "managing-projects": { "peso": 0.25, "etiqueta": "Managing projects" },
-    "automation": { "peso": 0.14, "etiqueta": "Automation" },
-    "reporting": { "peso": 0.19, "etiqueta": "Reporting" }
+    "project-creation": { "peso": 0.13, "etiqueta": { "es": "Creación de proyectos", "en": "Project creation" } },
+    "board-configuration": { "peso": 0.29, "etiqueta": { "es": "Configuración de tableros", "en": "Board configuration" } },
+    "managing-projects": { "peso": 0.25, "etiqueta": { "es": "Gestión de proyectos", "en": "Managing projects" } },
+    "automation": { "peso": 0.14, "etiqueta": { "es": "Automatización", "en": "Automation" } },
+    "reporting": { "peso": 0.19, "etiqueta": { "es": "Informes", "en": "Reporting" } }
   }
 }
