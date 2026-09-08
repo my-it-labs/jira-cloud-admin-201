@@ -35,11 +35,17 @@ Components con lead + Default assignee. Releases con una versión `1.0.0`.
 
 ### 2 — Probar asignación
 
-**Acción:** **Crear** en DEV, tipo Bug, componente `api`, deja Asignatario vacío o por defecto. Crea.
+**Acción:** En **DEV**, pulsa **Create** / **Crear** (barra superior). En la **cabecera** del diálogo, a la derecha de **DEV**, el tipo suele decir *Story* / *Historia* o *Task* / *Tarea*: **pulsa esa palabra**. Elige **Bug** (en español a veces **Error**). No está en el cuerpo del formulario.
 
-**Por qué:** Si el Default assignee del componente está en Component lead, el bug debería asignarte.
+Resumen: p. ej. `Fallo al autenticar en API`. Pulsa la pastilla **Components** / **Componentes** → `api`. **No** te elijas en Asignatario: déjalo automático / vacío. **Create**.
+
+**Por qué:** Si el componente `api` tiene Default assignee = Component lead, Jira te asigna el Bug al crear. Si te asignas a mano, no pruebas nada.
 
 **Resultado esperado:** El Bug queda asignado al lead de `api` (tú).
+
+![El tipo se elige arriba, junto a DEV: pulsa Story y pasa a Bug](../img/M03-02-04-create-type-bug.png)
+
+![Componente: pastilla Components → api](../img/M03-02-05-create-component.png)
 
 ### 3 — Versiones
 
@@ -86,4 +92,5 @@ No. El label no tiene lead ni default assignee. Sirve para filtrar, no para gobi
 |---------|----------------|-----------------|
 | No hay menú **Componentes** | Espacio TMP o función oculta | Espacio CMP; **Configuración del espacio** → **Funciones** si aplica |
 | No asigna el lead | Asignatario por defecto = del espacio; o el lead no es usuario asignable | Cambia el valor por defecto; esquema de permisos |
+| No ves **Bug** en Crear | Estás en otro espacio, o el tipo se llama **Error**; o el desplegable es la palabra *Story* de la cabecera | Cambia el espacio a **DEV**; pulsa *Story*/*Tarea* **arriba**, no busques un campo Tipo |
 | No ves **Versiones** | La barra del espacio oculta lanzamientos | **Configuración del espacio** → **Detalles** / **Funciones** |
