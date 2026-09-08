@@ -34,6 +34,10 @@
 - **Kanban** → SUP.
 - **Negocio** (Seguimiento de tareas / Gestión del trabajo) → OPS y PMO. Si no ves «gestión de proyectos», usa esa misma familia o Kanban CMP; no hace falta una plantilla distinta para PMO.
 
+### Personas en company-managed
+
+No hay un interruptor «este grupo pertenece a este espacio». El grupo (`nortech-dev`) entra en un **rol de espacio** (Developers) **en DEV**. El **esquema de permisos** (M04) dice qué puede hacer ese rol. Los roles se definen en el **site** (System → Space roles); en 2026 el trial a menudo **no trae Developers**: hay que crearlo. **Guest - Collaborator** no es un rol de departamento.
+
 ## Demostración
 
 1. En Jira, **Crear espacio**. Elige plantilla **Scrum**. En el tipo, marca **Gestionado por la empresa**. Nombre `Nortech Development`, clave `DEV`.

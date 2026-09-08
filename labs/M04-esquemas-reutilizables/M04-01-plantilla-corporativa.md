@@ -35,7 +35,7 @@ Copiar schemes por defecto → renombrar NORTECH → asociar a proyectos → com
 
 Asocia DEV y SUP (**Configuración del espacio** → **Permisos** → usar un esquema distinto, o desde la lista de esquemas).
 
-**Por qué:** Un solo reglamento para varios proyectos. M02 ya metió grupos en roles.
+**Por qué:** Un solo reglamento para varios proyectos. M03 metió los grupos en el rol Developers.
 
 **Resultado esperado:** DEV y SUP usan `NORTECH Permissions`.
 
