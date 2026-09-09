@@ -12,7 +12,7 @@ Cuatro formularios distintos (DEV, SUP, OPS, PMO) **sin tocar el Default**. Cada
 
 ### En qué consiste
 
-Campos nuevos → **copiar** 4 pantallas → **crear 4 esquemas de pantallas** → **crear 4 esquemas de pantallas por tipo** → asociar cada uno a su espacio.
+Campos nuevos → **copiar** 4 pantallas → **4 esquemas de pantallas** → **4 esquemas por tipo** → **en cada espacio**, Screens → Actions → *Use a different scheme*.
 
 > [!WARNING]
 > No añadas campos a *Default Screen* ni edites *Default Screen Scheme*. Eso cambia **todos** los espacios que aún apuntan al predeterminado. El Create de DEV y el de SUP se volverían iguales.
@@ -87,24 +87,48 @@ Hoy Create, Edit y View pueden ir todos a esa misma pantalla (el *Default Screen
 
 ![Configure: operaciones → pantalla. Hazlo en NORTECH DEV Screens, no en este Default](../img/M06-01-06-configure-screen-scheme.png)
 
-### 4 — Cuatro esquemas por tipo y asociar
+### 4 — Cuatro esquemas por tipo
 
-Sin este paso, Create sigue usando el Default aunque hayas hecho el 3.
+Sin crearlos, no hay nada que asociar en el paso 5.
 
-**Acción:**
+**Acción:** Engranaje de Jira → **Work type screen schemes** / **Esquemas de pantalla de tipo de actividad** (tercer enlace del bloque Screens). **Add work type screen scheme**. **Name:** `NORTECH DEV Issue Type Screens`. **Default Screen Scheme:** `NORTECH DEV Screens` (paso 3, no el Default). **Add**. Igual SUP, OPS y PMO.
 
-1. Misma barra, el tercer enlace: **Work type screen schemes** / **Esquemas de pantalla de tipo de actividad** (a veces *Issue type screen schemes*).
-2. **Add work type screen scheme**. **Name:** `NORTECH DEV Issue Type Screens`. **Default Screen Scheme:** `NORTECH DEV Screens` (el del paso 3, no el Default). **Add**.
-3. Igual para SUP, OPS y PMO (cada ITSS apunta a **su** screen scheme).
-4. En la fila de `NORTECH DEV Issue Type Screens` → `…` → **Associate** / asociar espacios → **Nortech Development**. Repite: SUP, OPS, PMO cada uno a su ITSS. Comprueba que DEV ya no usa `DEV: Scrum Issue Type Screen Scheme` ni el Default.
+**Por qué:** Este paquete es el único que un espacio puede llevar puesto.
 
-**Por qué:** El espacio solo entiende este último paquete. Por eso meter el campo en Default «funcionaba»: el espacio aún apuntaba ahí.
+**Resultado esperado:** Cuatro ITSS `NORTECH … Issue Type Screens` en la lista. Aún pone *Spaces* vacío o el Scrum/Kanban viejo: eso se cambia en el paso 5.
 
-**Resultado esperado:** En la columna **Spaces** cada `NORTECH … Issue Type Screens` tiene **un** espacio. Create en SUP muestra `Severidad QA`. Create en DEV **no**. Create en PMO muestra `Departamento`.
+![Work type screen schemes](../img/M06-01-07-issue-type-screen-schemes.png)
 
-![Work type screen schemes: aquí se asocia el espacio](../img/M06-01-07-issue-type-screen-schemes.png)
+![Add ITSS: Default Screen Scheme = tu NORTECH … Screens](../img/M06-01-08-add-itss.png)
 
-![Add ITSS: Name + Default Screen Scheme = tu NORTECH … Screens](../img/M06-01-08-add-itss.png)
+### 5 — Asociar el esquema al espacio
+
+**No** busques Associate en los `…` de la lista global (solo sale Configure / Edit / Copy). **No** asocies una pantalla. El espacio se cambia **desde el propio espacio**.
+
+**Acción (DEV, luego los otros tres):**
+
+1. Abre **Nortech Development** → **Space settings** / **Configuración del espacio**.
+2. Despliega **Work items** / **Elementos de trabajo** (si solo ves Versions, sigue bajando).
+3. **Screens** / **Pantallas**. Verás el esquema actual, p. ej. `DEV: Scrum Issue Type Screen Scheme`.
+4. **Actions** (engranaje) → **Use a different scheme** / **Usar un esquema distinto**.
+5. Elige `NORTECH DEV Issue Type Screens` → **Associate**.
+
+| Espacio | Scheme que debe quedar |
+|---------|------------------------|
+| DEV | `NORTECH DEV Issue Type Screens` |
+| SUP | `NORTECH SUP Issue Type Screens` |
+| OPS | `NORTECH OPS Issue Type Screens` |
+| PMO | `NORTECH PMO Issue Type Screens` |
+
+Atajo: **Summary** del espacio → bloque Screens → el enlace azul del *Issue type screen scheme* lleva a la misma página.
+
+**Por qué:** Por eso meter el campo en Default «funcionaba»: el espacio aún llevaba el scheme de la plantilla Scrum/Kanban.
+
+**Resultado esperado:** Create en SUP muestra `Severidad QA`. Create en DEV **no**. Create en PMO muestra `Departamento`.
+
+![El espacio: Work items → Screens](../img/M06-01-09-space-screens.png)
+
+![Actions → Use a different scheme](../img/M06-01-10-space-screens-actions.png)
 
 ![Crear en SUP](../img/M06-01-03-create-issue-hr.png)
 
@@ -134,5 +158,7 @@ Tras crear la issue, en Edit. Útil para datos que no debe pedir al reporter ext
 | Campo no sale | Contexto, pantalla o field config hidden | M06-02 checklist |
 | Campo duplicado | Lo creaste dos veces | Busca por nombre exacto; no clones |
 | DEV y SUP muestran los mismos campos | Editaste **Default** o no asociaste los 4 ITSS | Quita el campo del Default; asocia cada espacio a `NORTECH … Issue Type Screens` |
-| Solo creaste pantallas | El espacio no apunta a una pantalla | Faltan **4 screen schemes** y **4 issue type screen schemes** (pasos 3 y 4) |
+| Solo creaste pantallas | El espacio no apunta a una pantalla | Faltan screen schemes, ITSS **y** el paso 5 en el espacio |
 | Editaste *Default Screen Scheme* | Estabas en Configure del Default | Crea `NORTECH DEV Screens` con **Add screen scheme**; Default Screen = tu copia |
+| No ves Associate en los `…` globales | Esa lista no asocia espacios | **Espacio** → **Work items** → **Screens** → **Actions** → **Use a different scheme** |
+| No aparece **Screens** en el espacio | Estás en Details o People | Despliega **Work items**; no es el menú Pantallas del engranaje global |
