@@ -4,7 +4,7 @@
 
 ### Objetivo
 
-Cuatro campos de negocio visibles en las pantallas correctas (RRHH, Operaciones, Desarrollo, Calidad).
+Cuatro formularios distintos (DEV, SUP, OPS, PMO) **sin tocar el Default**. Cada espacio apunta a su paquete `NORTECH`.
 
 ### Prerrequisitos
 
@@ -12,7 +12,21 @@ Cuatro campos de negocio visibles en las pantallas correctas (RRHH, Operaciones,
 
 ### En qué consiste
 
-Crear campos → pantallas NORTECH → issue type screen scheme.
+Campos nuevos → **copiar** 4 pantallas → **crear 4 esquemas de pantallas** → **crear 4 esquemas de pantallas por tipo** → asociar cada uno a su espacio.
+
+> [!WARNING]
+> No añadas campos a *Default Screen* ni edites *Default Screen Scheme*. Eso cambia **todos** los espacios que aún apuntan al predeterminado. El Create de DEV y el de SUP se volverían iguales.
+
+Inventario (cuatro de cada; nombres exactos):
+
+| Espacio | Pantalla (copia) | Esquema de pantallas | Esquema de pantallas por tipo → asócialo al espacio |
+|---------|------------------|----------------------|-----------------------------------------------------|
+| DEV | `NORTECH DEV Create/Edit` | `NORTECH DEV Screens` | `NORTECH DEV Issue Type Screens` |
+| SUP | `NORTECH SUP Create/Edit` | `NORTECH SUP Screens` | `NORTECH SUP Issue Type Screens` |
+| OPS | `NORTECH OPS Create/Edit` | `NORTECH OPS Screens` | `NORTECH OPS Issue Type Screens` |
+| PMO | `NORTECH PMO Create/Edit` | `NORTECH PMO Screens` | `NORTECH PMO Issue Type Screens` |
+
+El espacio **no** se engancha a una pantalla. Se engancha al **esquema de pantallas por tipo**.
 
 ### 1 — Custom fields
 
@@ -31,30 +45,45 @@ Crear campos → pantallas NORTECH → issue type screen scheme.
 
 ![Campos personalizados](../img/M06-01-01-custom-fields.png)
 
-### 2 — Pantallas
+### 2 — Cuatro pantallas (copia, no Default)
 
-**Acción:** **Elementos de trabajo** → **Pantallas**. Copia la pantalla que usa DEV. Nombres:
+**Acción:** **Elementos de trabajo** → **Pantallas**. En la que usa DEV: **Copiar** (no Editar). Repite hasta tener las cuatro del inventario. En cada copia, añade solo los campos de su departamento:
 
-- `NORTECH DEV Create/Edit`
-- `NORTECH SUP Create/Edit`
-- `NORTECH OPS Create/Edit`
-- `NORTECH PMO Create/Edit`
+| Pantalla | Campos extra |
+|----------|----------------|
+| DEV | `Story points` (si no es nativo) |
+| SUP | `Severidad QA` |
+| OPS | `Cambio estándar` |
+| PMO | `Departamento` |
 
-Añade a cada una los campos de su fila. No pongas `Severidad QA` en DEV Create.
+No pongas `Severidad QA` ni `Departamento` en la de DEV.
 
-**Por qué:** La pantalla es el formulario.
+**Por qué:** La pantalla es el formulario. Cuatro copias = cuatro formularios.
 
-**Resultado esperado:** Screens listadas.
+**Resultado esperado:** En la lista ves las cuatro `NORTECH …`. El Default **sigue igual**.
 
 ![Pantallas](../img/M06-01-02-screens.png)
 
-### 3 — Screen schemes
+### 3 — Cuatro esquemas de pantallas
 
-**Acción:** **Esquemas de pantallas** + **esquemas de pantallas por tipo**. Crea `NORTECH SUP Screens` que use la pantalla SUP para Crear y Editar. Asocia al espacio SUP. Análogo DEV (sin campos de RRHH).
+**Acción:** **Elementos de trabajo** → **Esquemas de pantallas** (*Screen schemes*). **Añadir** (o copiar el predeterminado y renombrar). Crea **cuatro**: `NORTECH DEV Screens`, `NORTECH SUP Screens`, `NORTECH OPS Screens`, `NORTECH PMO Screens`. En cada uno: Create, Edit y View apuntan a **su** pantalla del paso 2 (las tres operaciones pueden usar la misma pantalla hoy).
 
-**Por qué:** El proyecto no apunta a una pantalla suelta: apunta a un scheme.
+**Por qué:** El scheme dice qué pantalla sale al crear / editar / ver. Aún no está ligado al espacio.
 
-**Resultado esperado:** Create issue en SUP muestra `Severidad QA` y/o `Departamento`.
+**Resultado esperado:** Cuatro esquemas `NORTECH * Screens` en la lista. El Default no tiene tus campos nuevos.
+
+### 4 — Cuatro esquemas por tipo y asociar
+
+**Acción:** **Esquemas de pantallas de tipos de elemento** (*Issue type screen schemes*). Crea **cuatro** (`NORTECH DEV Issue Type Screens`, …). En cada uno, el esquema de pantallas por defecto es el del paso 3 de ese espacio. Luego **asocia**:
+
+- desde la lista del esquema → el espacio, o
+- el espacio → **Configuración** → **Pantallas** / **Esquemas** → usar ese *issue type screen scheme*.
+
+DEV → su ITSS, SUP → el suyo, OPS y PMO igual. **No** dejes los cuatro en el Default.
+
+**Por qué:** El espacio solo entiende este último paquete. Sin asociar, Create sigue usando Default y parecería que «hay que meter el campo ahí».
+
+**Resultado esperado:** Create en SUP muestra `Severidad QA`. Create en DEV **no**. Create en PMO muestra `Departamento`.
 
 ![Crear en SUP](../img/M06-01-03-create-issue-hr.png)
 
@@ -62,7 +91,7 @@ Añade a cada una los campos de su fila. No pongas `Severidad QA` en DEV Create.
 
 **Create en DEV vs SUP**
 Abre Create en ambos.
-→ Campos distintos. Si son iguales, el screen scheme no está asociado.
+→ Campos distintos. Si son iguales, o editaste Default, o los cuatro espacios siguen en el mismo issue type screen scheme.
 
 ## Reto
 
@@ -83,3 +112,5 @@ Tras crear la issue, en Edit. Útil para datos que no debe pedir al reporter ext
 |---------|----------------|-----------------|
 | Campo no sale | Contexto, pantalla o field config hidden | M06-02 checklist |
 | Campo duplicado | Lo creaste dos veces | Busca por nombre exacto; no clones |
+| DEV y SUP muestran los mismos campos | Editaste **Default** o no asociaste los 4 ITSS | Quita el campo del Default; asocia cada espacio a `NORTECH … Issue Type Screens` |
+| Solo creaste pantallas | El espacio no apunta a una pantalla | Faltan **4 screen schemes** y **4 issue type screen schemes** (pasos 3 y 4) |

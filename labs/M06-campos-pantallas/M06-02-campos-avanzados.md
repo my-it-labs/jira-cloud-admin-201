@@ -26,7 +26,7 @@ Contexts + field configuration scheme NORTECH.
 
 ### 2 — Field configuration
 
-**Acción:** **Elementos de trabajo** → **Configuraciones de campo**. Copia la predeterminada → `NORTECH Fields`. Marca `Severidad QA` como **Obligatorio**. Marca un campo ruidoso (p. ej. Entorno) como **Oculto**. Esquema `NORTECH Field Config` → asocia SUP.
+**Acción:** **Elementos de trabajo** → **Configuraciones de campo**. **Copia** la predeterminada → `NORTECH Fields`. No edites la Default. Marca `Severidad QA` como **Obligatorio**. Marca un campo ruidoso (p. ej. Entorno) como **Oculto**. Esquema `NORTECH Field Config` → asocia SUP.
 
 **Por qué:** Required en field config ≠ required en el custom field. Hidden quita el campo aunque esté en la pantalla.
 
@@ -65,5 +65,6 @@ Field configuration → Description → Renderers. Wiki permite markup. No lo ca
 
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
-| Required no obliga | No está en la pantalla de Create | Añádelo a la pantalla |
+| Required no obliga | No está en la pantalla de Create | Añádelo a la pantalla NORTECH, no a Default |
 | Contexto «Global» sigue activo | No desactivaste el contexto por defecto | Un solo contexto o global sin proyectos = todos |
+| Required en todos los espacios | Editaste la field config Default | Usa `NORTECH Fields` asociada solo a SUP |

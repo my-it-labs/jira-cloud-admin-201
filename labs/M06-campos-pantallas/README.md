@@ -22,7 +22,7 @@ Tres capas (el «no me aparece el campo» vive aquí):
 > [!NOTE]
 > En **team-managed** todo esto es la issue layout del proyecto. En **company-managed** son objetos globales. ACP-620 pregunta las dos.
 
-Nortech: RRHH y Calidad necesitan datos que Desarrollo no debe ver en el Create de DEV.
+Nortech: RRHH y Calidad necesitan datos que Desarrollo no debe ver en el Create de DEV. Eso exige **copias** `NORTECH` (pantalla + screen scheme + issue type screen scheme) **por espacio**. Meter el campo en Default estropea el modelo.
 
 ## Demostración
 
