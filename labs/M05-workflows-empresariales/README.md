@@ -27,7 +27,7 @@ El workflow **no es** el board. Puedes tener un flujo rico y un Kanban de tres c
 
 ## Demostración
 
-1. **Configuración de Jira** → **Flujos de trabajo**. Abre un diagrama. Al pulsar una transición aparecen Conditions, Validators y Post functions.
+1. **Configuración de Jira** → **Flujos de trabajo**. Abre un diagrama. Al pulsar una **flecha** el panel muestra **Rules**: Restrict transition (antes *conditions*), Validate details (*validators*), Perform actions (*post functions*). La de rol es **Restrict who can move a work item**.
 
 ![Flujos de trabajo](../img/M05-01-01-workflow-editor.png)
 

@@ -42,13 +42,15 @@ Copy del workflow por defecto → editar diagrama → condición → publicar �
 
 ### 3 — Condición al cerrar
 
-**Acción:** Transición `Done` → **Condiciones** → añadir → **El usuario está en el rol del espacio** → Administrators (o Developers, según tu política). Publica el borrador.
+**Acción:** Pulsa la **flecha** `Done` (En revisión / In Review → Listo / Done), no el estado. Panel derecho → **Rules** → **Add**. Izquierda: **Restrict transition**. Baja hasta **Restrict who can move a work item** → **Select**. **Restrict to** → rol **Administrators**. Publica / **Update workflow**.
 
-**Por qué:** Condición = quién puede pulsar. El reporter no cierra si no está en el rol.
+No existe la pestaña **Condiciones** con «el usuario está en el rol del espacio»: esa frase es el editor clásico.
 
-**Resultado esperado:** La condición lista en la transición.
+**Por qué:** Condición = quién **ve** la transición. El reporter no cierra si no está en Administrators.
 
-![Transiciones del flujo](../img/M05-01-02-transition-conditions.png)
+**Resultado esperado:** El panel dice *Only Administrators can see this transition*. Tú la sigues viendo (eres admin).
+
+![Add rule: Restrict who can move a work item](../img/M05-02-03-restrict-who.png)
 
 > [!TIP]
 > Post function por defecto ya pone Resolution en transiciones a Done. Comprueba que Done tiene `statusCategory` Done.
@@ -95,5 +97,6 @@ Transición Rework → Validators → Add. Si no hay validador de comentario nat
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | No ves In Review en el board | No hay columna para ese estado | M07; mientras, busca la issue por JQL |
-| Nadie puede Done | Condición demasiado estricta | Añade Developers o quita la condición |
+| Nadie puede Done | Condición demasiado estricta | Añade Developers o quita la regla |
+| No ves la pestaña Condiciones | Editor de reglas 2026 | **Rules** → **Add** → **Restrict who can move a work item** |
 | Resolution vacía en Done | Post function ausente | Add post function Set Resolution |

@@ -34,11 +34,20 @@ Nuevo workflow `NORTECH Aprobación` + issue type `Solicitud` (o Task) mapeado s
 
 ### 3 — Quién aprueba
 
-**Acción:** Transición `Approve` → condición: el usuario está en el rol **Administrators**. `Reject` igual. Publica.
+No busques la pestaña **Condiciones** del editor clásico: en 2026 son **reglas**.
 
-**Por qué:** El solicitante (Users) no se autoaprueba.
+**Acción:** En el diagrama, pulsa la **flecha** (no el recuadro del estado) de En revisión / In Review → Aprobado / Listo. A veces la transición se llama `Approve` o `Done`. En el panel derecho: **Rules** → **Add**.
 
-**Resultado esperado:** Conditions en ambas transiciones.
+1. Tipo de regla (izquierda): **Restrict transition** (*Restringir transición*). No elijas *Validate details*.
+2. Baja la lista hasta el final. La que sirve es **Restrict who can move a work item** (*Restringir quién puede mover un elemento de trabajo*). **Select**.
+3. **Restrict to** → **Roles** / **Space role** / **Project role** → **Administrators**. No Guest, no un usuario suelto. **Add**.
+4. Repite lo mismo en **Reject**. **Update workflow** / publica.
+
+**Por qué:** Esa regla es la condición de rol. Oculta la transición a quien no está en Administrators de **ese** espacio. El solicitante (Users) no se autoaprueba.
+
+**Resultado esperado:** En el panel de la transición: *Only Administrators can see this transition* (o equivalente). Tú, como admin, **sigues viendo** el botón. El invitado de M02, si no está en Administrators de PMO, no lo ve.
+
+![Add rule: Restrict who can move a work item](../img/M05-02-03-restrict-who.png)
 
 ### 4 — Validador
 
@@ -82,5 +91,9 @@ Cada transición a Closed/Approved puede setear Resolution distinta. Así los re
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | Solicitud usa el workflow de Bug | Scheme no mapeó el tipo | Workflow scheme → Assign |
-| Approve no aparece | Condición de rol | Métete en Administrators de PMO |
+| Approve no aparece | Condición de rol; o no publicaste | Métete en Administrators de PMO; **Update workflow** |
+| No ves **Condiciones** ni «usuario en el rol» | Editor nuevo de Cloud | **Rules** → **Add** → **Restrict transition** → baja a **Restrict who can move a work item** |
+| La regla no está en la lista | Te quedaste en *Validate details* o no bajaste | Categoría **Restrict transition**; la opción va al **final** |
+| Restrict to no tiene Administrators | Elegiste Users / Guest / un correo | **Roles** (space role), no grupo Directory ni Guest |
+| Tú ves Approve y el alumno también | Sois los dos Administrators del espacio | Prueba con el invitado **fuera** de ese rol |
 | Validador no dispara | Draft sin publicar | Publish |
