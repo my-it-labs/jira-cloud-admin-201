@@ -21,9 +21,9 @@ Eso es exactamente lo que hay en clase:
 | `curso-jira-lab.atlassian.net` | Fields + Field configurations + Field configuration schemes | *old experience* |
 | `curso-jira-20260907-nmg.atlassian.net` (Nuria) | Fields + Field schemes | site ya convertido |
 
-![Caso A — old experience](../img/M06-02-03-menu-legacy.png)
+![Caso A — old experience](../img/M06-02-03-caso-a-menu.png)
 
-![Caso B — Field schemes](../img/M06-02-04-field-schemes.png)
+![Caso B — Field schemes](../img/M06-02-10-caso-b-menu.png)
 
 ## 2. Launch notes de producto (27 jul 2026)
 
