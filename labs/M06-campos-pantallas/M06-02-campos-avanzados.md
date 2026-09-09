@@ -25,6 +25,8 @@ Engranaje de Jira → **Work items** → bloque **Fields**. Cuenta los enlaces.
 
 No es un error de permisos ni de plan Premium. Atlassian unifica las dos capas clásicas (*field configuration* + *field configuration scheme*) en **un** Field scheme. El examen ACP-620 aún puede decir *field configuration scheme*: es el mismo concepto.
 
+**Citas y enlaces de Atlassian** (Support, Launch notes, Community Team) para proyectar en clase: [M06-02 fuentes oficiales](M06-02-fuentes-oficiales.md). Support dice literalmente: *If you can’t see Field schemes on your site, that means you’re still on the old experience.*
+
 ![Caso A: tres enlaces bajo Fields](../img/M06-02-03-menu-legacy.png)
 
 ![Caso B: Field schemes (un esquema vincula campos a espacios)](../img/M06-02-04-field-schemes.png)

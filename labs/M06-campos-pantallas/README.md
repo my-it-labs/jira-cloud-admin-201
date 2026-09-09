@@ -45,6 +45,7 @@ Te toca a ti.
 |-----|--------|
 | M06-01 | [Formularios por departamento](M06-01-formularios-departamento.md) |
 | M06-02 | [Gestión avanzada de campos](M06-02-campos-avanzados.md) |
+| — | [Fuentes oficiales Field Schemes (Support / Launch notes)](M06-02-fuentes-oficiales.md) |
 | — | [Preparación para el examen ACP-620](M06-preparacion-examen.md) |
 
 → **[M06-01](M06-01-formularios-departamento.md)**
