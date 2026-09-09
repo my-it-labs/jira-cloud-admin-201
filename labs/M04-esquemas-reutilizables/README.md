@@ -17,7 +17,7 @@ Un scheme es un **paquete nombrado** que un proyecto CMP **apunta**. Cambias el 
 | Issue type scheme | Qué tipos hay (Bug, Story, Task, …) |
 | Workflow scheme | Qué workflow usa cada tipo |
 | Screen scheme / Issue type screen scheme | Qué pantallas al crear/editar/ver |
-| Field configuration scheme | Required, hidden, renderers |
+| Field configuration scheme (o **Field scheme** en sites 2026) | Required, hidden, renderers |
 | Permission scheme | Quién puede hacer qué |
 | Notification scheme | Quién recibe eventos |
 | Issue security scheme | Niveles de visibilidad por issue (M10) |

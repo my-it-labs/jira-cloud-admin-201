@@ -6,7 +6,7 @@
 
 - Crear **custom fields** y **contextos**.
 - Montar **pantallas** de create/edit/view.
-- Hacer campos obligatorios u ocultos con **field configuration**.
+- Hacer campos obligatorios u ocultos con **field configuration** o **field scheme** (según el menú de tu site).
 - Formar formularios distintos por departamento sin duplicar Jira.
 
 ## Explicación
@@ -17,10 +17,13 @@ Tres capas (el «no me aparece el campo» vive aquí):
 |------|----------|
 | **Custom field + contexto** | ¿Existe el campo en este proyecto / tipo? |
 | **Pantalla** | ¿Se muestra al crear / editar / ver? |
-| **Field configuration** | ¿Es required, hidden, wiki renderer? |
+| **Field configuration** / **Field scheme** | ¿Es required, hidden, wiki renderer? |
 
 > [!NOTE]
 > En **team-managed** todo esto es la issue layout del proyecto. En **company-managed** son objetos globales. ACP-620 pregunta las dos.
+
+> [!WARNING]
+> En 2026 Atlassian despliega **Field Schemes**: algunos trials ven **tres** enlaces (*Field configurations* + *Field configuration schemes*) y otros solo **Fields** + **Field schemes**. Es el mismo lab. Detalle y capturas en [M06-02](M06-02-campos-avanzados.md).
 
 Nortech: RRHH y Calidad necesitan datos que Desarrollo no debe ver en el Create de DEV. Eso exige **copias** `NORTECH` (pantalla + screen scheme + issue type screen scheme) **por espacio**. Meter el campo en Default estropea el modelo.
 

@@ -23,7 +23,7 @@ El campo existe, está en la pantalla, el usuario tiene Edit Issues, y aun así 
 <details>
 <summary>Ver respuesta</summary>
 
-**B.** Tercera palanca. También issue type: el contexto puede limitarse a Bug y estás creando Story.
+**B.** Tercera palanca. En sites con Field Schemes (2026) el hidden/required vive en el *field scheme*, no en un menú aparte. También issue type: el contexto puede limitarse a Bug y estás creando Story.
 
 </details>
 
