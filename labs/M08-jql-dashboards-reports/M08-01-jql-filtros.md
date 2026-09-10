@@ -16,7 +16,7 @@ Búsqueda avanzada de trabajo → JQL → Guardar como → detalles (quién pued
 
 ### 1 — Search JQL
 
-**Acción:** **Filtros** → **Búsqueda avanzada** → cambia a **JQL**. Ejecuta:
+**Acción:** Barra izquierda → **Filters** → **All work** (o *Buscar actividades*). Junto a **Basic** pulsa **JQL** (si no, ves chips y no el texto). Pega y busca:
 
 ```jql
 project = DEV AND statusCategory != Done ORDER BY priority DESC, updated DESC
@@ -86,5 +86,6 @@ Issues que pasaron por In Progress y ahora están Done, resueltas en 14 días. �
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | Error de JQL | Campo o nombre con espacio sin comillas | `"In Progress"` |
+| Sigo en chips (Space, Status…) | Estás en **Basic**, no en **JQL** | Pulsa **JQL** junto a Basic |
 | Filtro no sale al invitado | Viewers = only me | Add viewers |
 | `sprint in openSprints()` vacío | No hay sprint activo | M07-01 |

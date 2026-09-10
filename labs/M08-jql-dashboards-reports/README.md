@@ -16,31 +16,44 @@ Este bloque cubre el dominio **Reporting** de ACP-620 (15–20 %) y lo que Atos 
 | Artefacto | Qué es |
 |-----------|--------|
 | **JQL** | Pregunta (`statusCategory != Done AND priority = Highest`) |
-| **Filtro** | JQL guardado; se comparte con roles/grupos |
+| **Filtro** | JQL **guardado**; es lo que informes y gadgets pueden elegir |
 | **Gadget** | Widget de dashboard (Filter Results, Pie Chart, Assigned to Me) |
-| **Agile report** | Burndown, Velocity, CFD, Control chart — viven en el **board** |
-| **Issue analysis** | Created vs Resolved, Average age, Pie chart report — viven en **Informes** del espacio |
+| **Space Insights** | Lo que abre la pestaña **Reports** (donuts). No es el Sprint report |
+| **Agile report** | Burndown, Velocity, CFD, Sprint — **More reports** → Agile. Comen el **board filter** |
+| **Issue analysis** | Pie Chart Report (filtro guardado), Created vs Resolved (tablero), Average age |
 
 > [!WARNING]
-> Un panel **compartido** con un filtro **privado** muestra error a los demás. Comparte el filtro primero.
+> La pestaña **Reports** abre Space Insights. Sprint, CFD y Pie Chart están en **More reports**. El JQL se escribe en la búsqueda, se **guarda como filtro**, y solo entonces *Change Filter or Project…* (popup) o un gadget lo usan. Un panel compartido con un filtro **privado** falla.
 
 JQL que sale en examen: `currentUser()`, `endOfDay()`, `WAS`, `CHANGED`, `sprint in openSprints()`, `fixVersion`, `component`, `statusCategory`.
 
 ## Demostración
 
-1. **Filtros** → búsqueda avanzada → modo **JQL**:
+Hazla en este orden. El detalle de cada clic está en [M08-03](M08-03-reports.md).
+
+1. **Filtros** → All work. Pulsa **JQL** (junto a Basic; no te quedes en chips). Ejecuta:
 
 ```jql
 project = DEV AND statusCategory != Done ORDER BY priority DESC
 ```
 
-![Búsqueda JQL](../img/M08-01-01-search-jql.png)
+**Save filter** → nombre `NORTECH DEV Abiertas` → Viewers: **Add** el espacio DEV. Sin este filtro, ningún informe ni gadget puede «tragar» tu JQL.
 
-2. Guarda como `NORTECH DEV Abiertas` y comparte con el espacio DEV (o el grupo PMO).
+![Búsqueda en modo JQL](../img/M08-03-06-jql-search.png)
 
-![Filtros guardados](../img/M08-01-02-saved-filter.png)
+![Save filter con nombre NORTECH](../img/M08-03-07-save-filter.png)
 
-3. **Paneles** → crea `NORTECH PMO` y añade Filter Results sobre ese filtro.
+2. Tablero DEV → pestaña **Reports**. Esto es Space Insights (donuts). El Sprint report **no** está aquí. **More reports** → Agile (Sprint, CFD…) o baja a **Issue analysis**.
+
+![Reports abre Space Insights](../img/M08-03-01-reports-landing.png)
+
+![More reports: Agile](../img/M08-03-02-more-reports-agile.png)
+
+3. **More reports** → **Pie Chart Report**. **Change Filter or Project…** (popup; no la lupa global) → elige `NORTECH DEV Abiertas`. Statistic Type: Status → **Next**.
+
+![Change Filter or Project](../img/M08-03-09-change-filter.png)
+
+4. **Paneles** → crea `NORTECH PMO` y añade Filter Results sobre el mismo filtro (M08-02). Velocity no vive en el panel: vive en More reports → Agile.
 
 ![Panel NORTECH PMO](../img/M08-02-01-dashboard-empty.png)
 

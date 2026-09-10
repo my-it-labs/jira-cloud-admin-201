@@ -53,7 +53,7 @@ Un dashboard `NORTECH PMO` compartido con gadgets alimentados por filtros NORTEC
 
 **Gadget vs report**
 En el dashboard **no** busques Velocity. 
-→ Velocity está en Reports del board Scrum.
+→ Velocity está en **More reports** → Agile, en un tablero Scrum. La pestaña Reports sola es Space Insights.
 
 ## Reto
 
