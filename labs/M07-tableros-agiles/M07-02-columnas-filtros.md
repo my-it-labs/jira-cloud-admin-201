@@ -106,7 +106,7 @@ Eso **saca del tablero** todo lo que ya tiene una Fix version **released**. Lo c
 
 **Resultado esperado:** El campo *Sub-filter query* con el JQL de `fixVersion`. Si tu site aún muestra el subfiltro **encima de Columnas** (UI anterior), es la **misma caja**, no un cuarto recorte.
 
-![Board filter + Board sub-filter + Completed work items](../img/M07-02-08-subfilter-field.png)
+![General settings completo: Board filter, Filter details, Board sub-filter y Completed work items](../img/M07-02-08-subfilter-field.png)
 
 #### 4.5 — Completed work items (tercer recorte)
 
