@@ -53,9 +53,13 @@ project = DEV AND statusCategory != Done ORDER BY priority DESC
 
 ![Change Filter or Project](../img/M08-03-09-change-filter.png)
 
-4. **Paneles** → crea `NORTECH PMO` y añade Filter Results sobre el mismo filtro (M08-02). Velocity no vive en el panel: vive en More reports → Agile.
+4. **Dashboards** → crea `NORTECH PMO` (Viewers ≠ Private) → **Edit** → **Add gadget** → **Filter Results** → **Advanced Search** → filtro `NORTECH DEV Abiertas` → **Save**. Repite con **Pie Chart** (Status) y **Two Dimensional** (Status × Assignee). Detalle: [M08-02](M08-02-dashboards-gadgets.md).
 
-![Panel NORTECH PMO](../img/M08-02-01-dashboard-empty.png)
+![Create dashboard](../img/M08-02-01b-create-dialog.png)
+
+![Filter Results con DEV abiertas](../img/M08-02-06-filter-results-filled.png)
+
+![Dashboard PMO terminado](../img/M08-02-12-dashboard-final.png)
 
 ## Laboratorio
 

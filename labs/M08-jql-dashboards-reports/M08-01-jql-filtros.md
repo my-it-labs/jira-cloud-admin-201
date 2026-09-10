@@ -50,9 +50,9 @@ project = DEV AND sprint in openSprints()
 
 ### 3 — Guardar y compartir
 
-**Acción:** Guarda la primera como `NORTECH DEV Abiertas`. Detalles → **Añadir visualizadores** → espacio DEV (o grupo `nortech-pmo`). Guarda también `NORTECH Mis actualizadas` (personal, sin compartir) con la de `currentUser()`.
+**Acción:** **Save filter** → nombre `NORTECH DEV Abiertas`. **Viewers:** pulsa **Add** → espacio **Nortech Development** (DEV) o grupo `nortech-pmo`. No dejes *Private / Only you* si M08-02 o un dashboard compartido van a usar este filtro. Guarda también `NORTECH Mis actualizadas` (personal) con la consulta de `currentUser()`.
 
-**Por qué:** El dashboard de M08-02 usará la compartida.
+**Por qué:** Los gadgets no leen JQL suelto. Leen el **filtro guardado**. Filtro privado + dashboard compartido = *no permission* (trampa ACP-620).
 
 **Resultado esperado:** Filtro visible en ver todos los filtros.
 
