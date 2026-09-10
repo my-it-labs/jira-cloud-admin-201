@@ -26,7 +26,7 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 ### 2 — Estimación
 
-**Acción:** Configuración del tablero → **Estimación**. Story points (o estimación original de tiempo). Pon puntos a 2 elementos del sprint.
+**Acción:** **••• junto al nombre** del tablero → **Board settings** → **Estimación**. Story points (o estimación original de tiempo). Pon puntos a 2 elementos del sprint.
 
 **Por qué:** ACP-620 pregunta el efecto de estimation vs time tracking en el burndown.
 
@@ -36,7 +36,7 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 ### 3 — Kanban SUP
 
-**Acción:** SUP → tablero Kanban. Configuración del tablero → **Filtro**: `project = SUP ORDER BY Rank ASC`. Si no hay Rank, deja el filtro por defecto.
+**Acción:** SUP → tablero Kanban. **••• junto al nombre** del tablero → **Board settings** → **General settings** → **Board filter**: `project = SUP ORDER BY Rank ASC`. Si no hay Rank, deja el filtro por defecto. El subfiltro Kanban está **debajo**, en la misma página (detalle en [M07-02](M07-02-columnas-filtros.md) paso 4). No uses el **••• de la barra** (standup / release).
 
 **Por qué:** El filtro *es* el tablero.
 
@@ -46,7 +46,7 @@ Usar el tablero de la plantilla o crear uno en **Tableros** → ver todos → **
 
 ### 4 — Location y nombre
 
-**Acción:** Configuración del tablero → General. Nombre: `NORTECH DEV Scrum`, ubicación DEV. SUP: `NORTECH SUP Kanban`.
+**Acción:** Mismo **Board settings** → **General settings**. Nombre: `NORTECH DEV Scrum`, ubicación DEV. SUP: `NORTECH SUP Kanban`.
 
 **Por qué:** Location decide en qué proyecto aparece el board en la barra.
 

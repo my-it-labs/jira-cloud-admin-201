@@ -20,14 +20,15 @@ Este es el dominio más pesado de **ACP-620** (25–35 %).
 
 | Pieza | Qué es |
 |-------|--------|
-| **Board filter** | JQL que alimenta el tablero (`project = DEV`) |
-| **Sub-filter** (Kanban) | JQL extra (a menudo oculta Done antiguo) |
-| **Quick filter** | Botones temporales (`assignee = currentUser()`) |
+| **Board filter** | JQL que alimenta el tablero (`project = SUP`) |
+| **Sub-filter** (solo Kanban) | Recorte extra. De fábrica: `fixVersion in unreleasedVersions() OR fixVersion is EMPTY`. El ejemplo de examen `status != Done` vacía Done. **No está en Columnas.** |
+| **Completed work items** | Oculta Done cuyo *Updated* es más antiguo que 1/2/4 semanas. Independiente del subfiltro. |
+| **Quick filter** | Botones temporales (`assignee = currentUser()`). No es la definición. |
 | **Columnas** | Una o más **estados** por columna |
 | **Swimlanes** | Filas (assignee, stories, queries) |
 
 > [!WARNING]
-> Un sub-filter `status != Done` mal pensado vacía el tablero. Diagnóstico: configuración del tablero → Filtro + Columnas + permiso Browse.
+> El **••• junto al nombre** del tablero abre **Board settings**. El **••• de la barra** (derecha) es standup / release. El subfiltro vive en **General settings**, no en Columnas. Diagnóstico de tablero vacío: filtro → subfiltro → *Completed work items* → Unmapped → Browse.
 
 Los tableros **multi-proyecto** usan un filtro `project in (DEV, SUP)` y permisos en ambos. Cuidado con fugas de datos si el filtro es demasiado amplio.
 
@@ -39,7 +40,7 @@ Los tableros **multi-proyecto** usan un filtro `project in (DEV, SUP)` y permiso
 
 ![Kanban de SUP](../img/M07-01-02-kanban-board.png)
 
-2. Configuración del tablero DEV → **Columnas**. El estado `In Review` (M05) debe tener columna propia; nada en «sin asignar».
+2. En DEV: **••• junto al nombre** del tablero → **Board settings** → **Columnas**. El estado `In Review` (M05) debe tener columna propia; nada en «sin asignar».
 
 ![Columnas del tablero](../img/M07-02-01-columns.png)
 
