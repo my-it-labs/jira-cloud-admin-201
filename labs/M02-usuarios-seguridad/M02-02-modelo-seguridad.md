@@ -50,7 +50,7 @@ Revisar el acceso a la aplicación, los roles de organización y (si el plan lo 
 
 **Resultado esperado:** Ves (o no, según plan) el alta de grupos o la invitación.
 
-![Registro de auditoría de Jira](../img/M10-03-01-audit-jira.png)
+![Registro de auditoría de Jira](../img/M10-03-02-audit-log-jira.png)
 
 ## Comprueba tu entendimiento
 

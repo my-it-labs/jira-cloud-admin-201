@@ -4,49 +4,100 @@
 
 ### Objetivo
 
-Una página de Confluence enlazada a una issue, y una revisión consciente del Marketplace **sin** dejar apps de pago instaladas.
+Enlazar conocimiento (**Confluence**) a una issue de SUP y revisar el **Marketplace** sin dejar apps de pago instaladas.
 
 ### Prerrequisitos
 
-- Site Jira. Para Confluence: activa el trial del producto si no está (Products en Administration). Puede pedir confirmación / captcha.
+- Site Jira. Para Confluence: trial del producto en [admin.atlassian.com](https://admin.atlassian.com) si no está (puede pedir captcha).
 
 ### En qué consiste
 
-Alta breve de Confluence → espacio → página → enlace desde Jira. Luego Explore apps.
+| Parte | Resultado |
+|-------|-----------|
+| Confluence trial | Producto activo en el mismo `*.atlassian.net` |
+| Página + enlace | Bug SUP ↔ página Runbook |
+| Marketplace | Leer **una** ficha (permisos, precio). No instalar de pago |
 
-### 1 — Confluence trial
+---
 
-**Acción:** `admin.atlassian.com` → **Aplicaciones** → **Añadir aplicación** → Confluence (trial). Espera a que el producto aparezca. Abre Confluence del mismo site.
+### 1 — Activar Confluence (si falta)
 
-**Por qué:** Mismo `*.atlassian.net`. No hace falta otro correo.
+**Acción:** `admin.atlassian.com` → tu organización → **Products** / **Aplicaciones** → **Add product** → **Confluence** (trial).
 
-**Resultado esperado:** Confluence carga (wizard Skip).
+Espera unos minutos. Abre `https://TU-SITE.atlassian.net/wiki` (Confluence del mismo site).
 
-### 2 — Página y vínculo
+**Por qué:** Mismo tenant Atlassian; no hace falta otro correo.
 
-**Acción:** Crea un espacio `Nortech Docs` y una página `Runbook SUP`. En un Bug de SUP, **Link** → Confluence page → esa página. Desde la página, inserta un Jira issue macro si el editor lo ofrece.
+**Resultado esperado:** Confluence carga (wizard → **Skip** si quieres ir rápido).
 
-**Por qué:** Conocimiento ligado al ticket: propuesta formativa.
+---
 
-**Resultado esperado:** La issue muestra el enlace; la página, el issue.
+### 2 — Espacio y página Runbook
 
-![Elemento SUP-1](../img/M10-02-01-confluence-link.png)
+**Acción:** En Confluence, crea espacio **Nortech Docs** (team space) y página **Runbook SUP** con dos líneas de procedimiento de ejemplo.
 
-### 3 — Marketplace (gobernado)
+**Por qué:** Simula base de conocimiento ligada a soporte.
 
-**Acción:** **Aplicaciones** → explorar más. Busca `Timesheet` o automatización extra. Abre **una** ficha: permisos que pide, Free vs de pago. **No instales** nada de pago. Si instalas una app Free de prueba, **desinstálala** al terminar.
+**Resultado esperado:** URL de página tipo `/wiki/spaces/NORTECH/...`.
 
-**Por qué:** Cada app es identidad, datos y factura.
+---
 
-**Resultado esperado:** Has leído permisos de una ficha.
+### 3 — Enlazar desde Jira (issue → Confluence)
 
-![Marketplace](../img/M10-02-02-marketplace.png)
+**Acción:** Abre un Bug en **SUP** (p. ej. SUP-1). En el panel derecho o sección **Confluence content** / **Link**:
+
+1. **Link** → **Confluence page** → elige **Runbook SUP**.
+2. Guarda.
+
+**Por qué:** El agente abre el runbook sin salir del ticket.
+
+**Resultado esperado:** Bloque Confluence visible en la issue.
+
+![Sección Confluence en la issue](../img/M10-02-01-confluence-section.png)
+
+**Opcional (desde Confluence):** En la página, macro **Jira Issue** apuntando al mismo Bug.
+
+---
+
+### 4 — Marketplace: explorar sin instalar de pago
+
+**Acción:** En Jira: **Settings → Apps** o URL `/plugins/servlet/upm/marketplace/featured`.
+
+Si ves *App management has moved to Administration*, pulsa **Take me there** o usa el enlace desde **Connected apps**.
+
+**Acción:** Navega categorías. Busca `timesheet` o `issue template`.
+
+**Por qué:** Cada app = identidad OAuth, datos fuera de Jira, posible coste al caducar trial.
+
+**Resultado esperado:** Listado Marketplace con *Staff-picked* y filtros.
+
+![Marketplace home](../img/M10-02-02-marketplace-home.png)
+
+![Búsqueda timesheet](../img/M10-02-03-marketplace-search.png)
+
+---
+
+### 5 — Leer una ficha (gobernanza)
+
+**Acción:** Abre **una** app (Free o Paid). Anota:
+
+- Permisos que pide (read/write issues, admin…)
+- **Paid via Atlassian** vs Free
+- Vendor y número de instalaciones
+
+**No instales** nada de pago. Si pruebas una Free, **desinstala** al terminar (**Manage apps**).
+
+**Resultado esperado:** Has leído la ficha completa.
+
+![Detalle de app](../img/M10-02-04-marketplace-app-detail.png)
+
+---
 
 ## Comprueba tu entendimiento
 
 **Quién instala**
 Settings → Apps / Manage apps. Solo admins.
-→ Un project admin no debería poder instalar a ciegas en un site gobernado.
+→ Un space admin no debería instalar a ciegas en un site gobernado.
 
 ## Reto
 
@@ -57,7 +108,7 @@ Lista tres preguntas antes de instalar una app en Atos.
 <details>
 <summary>Ver solución</summary>
 
-¿Datos que sale de la UE? ¿Permisos de issue/admin? ¿Coste al caducar el trial? ¿Quién la opera? ¿Hay nativo (automation, JQL) que baste?
+¿Datos fuera de la UE? ¿Permisos admin/issue? ¿Coste al caducar trial? ¿Quién opera? ¿Hay nativo (automation, JQL)?
 
 </details>
 
@@ -66,5 +117,6 @@ Lista tres preguntas antes de instalar una app en Atos.
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
 | No sale Confluence | Producto no añadido | Add product; espera minutos |
-| Macro Jira no resuelve | Permisos de la issue (security level) | M10-01 |
-| App de pago en trial silencioso | Instalar sin leer | Uninstall ahora |
+| Macro Jira no resuelve | Issue security M10-01 | Invitado sin ver issue |
+| App de pago silenciosa | Instalar sin leer | Uninstall inmediato |
+| UPM redirige | UI 2026 | Usar **Connected apps** en Administration |

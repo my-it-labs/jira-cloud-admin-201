@@ -4,56 +4,139 @@
 
 ### Objetivo
 
-Un issue security scheme `NORTECH Security` con niveles Interno y Cliente, asociado a SUP, validado con el usuario invitado.
+Un **work item security scheme** `NORTECH Security` con niveles **Interno** y **Cliente**, asociado a **SUP**, validado con el usuario invitado (M02).
 
 ### Prerrequisitos
 
-- SUP CMP. Segundo usuario (M02). Jira admin.
+- SUP (CMP). Segundo usuario invitado. **Jira administrator**.
 
 ### En qué consiste
 
-Crear scheme → niveles → set default → asociar proyecto → poner nivel en una issue → comprobar visibilidad.
+| Fase | Acción |
+|------|--------|
+| 1 | Crear scheme + niveles |
+| 2 | Asociar scheme a SUP |
+| 3 | Permiso **Set Issue Security** |
+| 4 | Poner nivel en una issue + probar visibilidad |
 
-### 1 — Scheme y niveles
+> [!NOTE]
+> **Browse Projects** permite entrar al espacio. **Issue security** decide si ves *cada* ticket.
 
-**Acción:** **Elementos de trabajo** → **Esquemas de seguridad** → añadir `NORTECH Security`. Añade niveles:
+---
 
-| Nivel | Quién |
-|-------|--------|
-| `Interno` | Role Administrators, Developers, Groups `nortech-soporte` |
-| `Cliente` | Role Administrators + un usuario/grupo concreto (tú). **No** el invitado de soporte |
+### 1 — Abrir Work item security schemes
 
-Default: `Interno`.
+**Acción:** **Settings (⚙️) → Jira settings**. Sidebar **Work items** → **Work item security schemes**.
 
-**Por qué:** Browse Projects no basta para ver issues con nivel Cliente.
+Atajo URL: `https://TU-SITE.atlassian.net/secure/admin/ViewIssueSecuritySchemes.jspa`
 
-**Resultado esperado:** Scheme con dos niveles.
+**Por qué:** En UI 2026 el menú puede decir *Work items* en lugar de *Issues* / *Elementos de trabajo*.
 
-![NORTECH Security](../img/M10-01-01-security-scheme.png)
+**Resultado esperado:** Tabla de esquemas. Si ya existe `NORTECH Security`, edítalo; si no, **Add work item security scheme**.
 
-### 2 — Asociar y permiso Set Issue Security
+![Lista de esquemas](../img/M10-01-01-security-schemes-list.png)
 
-**Acción:** Asocia el scheme a SUP. En `NORTECH Permissions`, concede **Set Issue Security** a Administrators (no a Users).
+---
 
-**Por qué:** Si nadie puede setear el nivel, el scheme no se usa.
+### 2 — Niveles Interno y Cliente
 
-**Resultado esperado:** **Configuración del espacio** → seguridad de trabajo muestra NORTECH.
+**Acción:** En la fila `NORTECH Security`, pulsa **Security levels** / **Niveles de seguridad**.
 
-### 3 — Issue restringida
+Crea dos niveles:
 
-**Acción:** Crea un Bug en SUP, campo **Security Level** / **Nivel de seguridad** = `Cliente`. Abre incógnito con el invitado (Browse en SUP, grupo soporte).
+| Nivel | Miembros (ejemplo curso) |
+|-------|---------------------------|
+| **Interno** | Role **Administrators**, **Developers**, grupo `nortech-soporte` |
+| **Cliente** | Role **Administrators** + tu usuario admin. **No** el invitado de soporte |
 
-**Por qué:** Simula separación de clientes / datos sensibles.
+**Default level:** `Interno` (al crear issues sin elegir nivel).
 
-**Resultado esperado:** El invitado **no** ve esa issue; sí ve otras en Interno.
+**Por qué:** Default demasiado restrictivo = nadie ve tickets nuevos.
 
-![Elemento de SUP](../img/M10-01-02-issue-restricted.png)
+**Resultado esperado:** Dos filas en la tabla de niveles. (En captura del site de curso puede estar vacío hasta que completes este paso.)
+
+![Página de niveles](../img/M10-01-02-security-levels-empty.png)
+
+![Formulario Add Security Level](../img/M10-01-03-add-security-level-form.png)
+
+---
+
+### 3 — Asociar el scheme a SUP
+
+**Acción:** Desde administración de Jira, asocia el scheme al espacio **Nortech Support**. Wizard típico:
+
+**Administration → Associate work item security scheme to Space** (URL patrón):
+
+`/secure/project/SelectProjectIssueSecurityScheme!default.jspa?projectId=ID_SUP`
+
+1. Elige **NORTECH Security**.
+2. Confirma (**Associate** / **Next**).
+
+Alternativa: en algunas versiones, enlace **Spaces** en la fila del scheme.
+
+**Por qué:** Sin asociación, el campo **Security level** no aparece en SUP.
+
+**Resultado esperado:** Columna **Spaces** del scheme muestra *Nortech Support*.
+
+![Asociar scheme a SUP](../img/M10-01-04-associate-scheme-sup.png)
+
+---
+
+### 4 — Permiso Set Issue Security
+
+**Acción:** **Work items → Permission schemes** → abre **NORTECH Permissions** (el que usa SUP tras M04).
+
+Concede **Set Issue Security** / **Set work item security** solo a **Administrators** (no a **Users** genérico).
+
+**Acción (comprobar SUP):** **SUP → Space settings → Permissions** — debe decir que usa **NORTECH Permissions** (o el scheme que editaste).
+
+**Por qué:** Si nadie puede fijar el nivel, el scheme es teórico.
+
+**Resultado esperado:** Permiso visible en el scheme; SUP enlazado.
+
+![Permisos del espacio SUP](../img/M10-01-05-sup-permissions-scheme.png)
+
+![Set Issue Security en NORTECH Permissions](../img/M10-01-06-permission-set-issue-security.png)
+
+---
+
+### 5 — Campo Security level en pantalla
+
+**Acción:** Asegúrate de que **Security level** está en la pantalla Create/Edit de SUP (M06). Crea o edita un **Bug** en SUP.
+
+**Acción:** En **Edit**, campo **Security level** → elige **Cliente**.
+
+**Por qué:** Simula ticket visible solo para cliente/admin, no para soporte interno genérico.
+
+**Resultado esperado:** Issue guardada con nivel Cliente.
+
+![Issue SUP — Key details](../img/M10-01-07-issue-key-details.png)
+
+![Edit con Security level](../img/M10-01-08-issue-security-field.png)
+
+---
+
+### 6 — Validar con usuario invitado
+
+**Acción:** Ventana incógnito con el **invitado** (Browse en SUP, grupo soporte). Busca la issue con JQL:
+
+```jql
+project = SUP AND level = Cliente
+```
+
+**Contigo (admin):** debe aparecer. **Invitado:** vacío o sin acceso.
+
+**Por qué:** Separación multiempresa / datos sensibles — objetivo del lab.
+
+**Resultado esperado:** Invitado **no** ve esa issue; sí ve otras en nivel Interno.
+
+---
 
 ## Comprueba tu entendimiento
 
 **JQL**
 `level = Cliente` con el invitado.
-→ Vacío o error. Contigo: la issue.
+→ Vacío. Contigo: la issue.
 
 ## Reto
 
@@ -64,7 +147,7 @@ Mete al **Reporter** en el nivel Cliente. ¿Debe el cliente ver su propio ticket
 <details>
 <summary>Ver solución</summary>
 
-Casi siempre sí. Add Reporter al nivel. Si no, el portal/agente externo crea tickets que luego «desaparecen» para él.
+Casi siempre sí. Add **Reporter** al nivel Cliente. Si no, el portal externo crea tickets que luego «desaparecen» para él.
 
 </details>
 
@@ -72,5 +155,6 @@ Casi siempre sí. Add Reporter al nivel. Si no, el portal/agente externo crea ti
 
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
-| No sale el campo Security | Scheme no asociado / no está en la pantalla | Asocia + pantalla Edit/Create |
-| Nadie ve nada | Default demasiado restrictivo | Default Interno; incluye Administrators en todos los niveles |
+| No sale campo Security | Scheme no asociado / no en pantalla | Pasos 3 + M06 screens |
+| Nadie ve nada | Default demasiado restrictivo | Default **Interno**; admins en todos los niveles |
+| Invitado ve Cliente | Invitado en grupo del nivel Cliente | Quita al invitado del nivel |

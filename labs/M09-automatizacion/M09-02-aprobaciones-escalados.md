@@ -4,71 +4,146 @@
 
 ### Objetivo
 
-Regla que escala (comentario + prioridad) y otra que notifica al pasar a In Review en PMO.
+Dos flujos:
+
+1. **SUP** — escalado de tickets **Highest** sin actualizar (comentario automático).
+2. **PMO** — comentario al pasar a **In Review** (aviso de aprobación).
 
 ### Prerrequisitos
 
-- M09-01 (sabes publicar reglas). PMO con workflow de aprobación si lo hiciste.
+- M09-01 (sabes crear y publicar flujos). PMO con transición hacia *In Review* si la configuraste en M05.
 
 ### En qué consiste
 
-Scheduled o Field value changed + Comment + Edit priority. Segunda regla: Issue transitioned.
+| Flujo | Trigger | Acción principal |
+|-------|---------|------------------|
+| `NORTECH SUP Escalate stale highest` | **Scheduled** + JQL | **Comment on work item** |
+| PMO aprobación | **Work item transitioned** → In Review | **Comment** + opcional assign |
 
-### 1 — Escalado
+---
 
-**Acción:** Regla en SUP `NORTECH SUP Escalate stale highest`.
+### 1 — Flujo de escalado en SUP (Scheduled)
 
-- Trigger: **Scheduled** (cada día) o, más fácil para el lab, **Issue commented** no. Usa **Field value changed** no. **Mejor para demo:** Trigger **Scheduled** con JQL:
+**Acción:** **SUP → Space settings → Automation → Create flow → Create from scratch**.
+
+**Acción (trigger):** **Add a trigger** → pestaña o categoría **Scheduled** → elige el trigger **Scheduled** (icono JQL / reloj).
+
+**Por qué:** **Scheduled** barre JQL periódicamente. **Work item commented** aquí provocaría bucles si la acción comenta.
+
+**Resultado esperado:** Panel de configuración con campo JQL y frecuencia.
+
+![Categoría Scheduled en el picker](../img/M09-02-01-trigger-scheduled-picker.png)
+
+![Trigger Scheduled configurado](../img/M09-02-01-trigger-scheduled.png)
+
+---
+
+### 2 — JQL del escalado
+
+**Acción:** En el trigger **Scheduled**, pega:
 
 ```jql
 project = SUP AND priority = Highest AND statusCategory != Done AND updated <= -1d
 ```
 
-Si el scheduler está limitado en el trial, usa Trigger **Manual** para la prueba.
+- **Frecuencia:** diaria (o la mínima que permita tu plan).
+- **En el lab:** si el scheduler tarda o está limitado en trial, usa **Run now** / ejecución manual desde el flujo para la foto de **Audit log**.
 
-- Action: **Comment** `Escalado automático: sin actualización reciente.`
-- Action: **Edit issue** Priority → Highest (ya lo es) o Assignee → project lead.
+**Por qué:** «Sin actualización reciente» = `updated <= -1d`. `statusCategory != Done` sobrevive a renombres de estado.
 
-**Por qué:** Escalado + notificación, propuesta formativa.
+**Resultado esperado:** JQL válido sin error rojo en el editor.
 
-**Resultado esperado:** Regla on. Ejecución manual SUCCESS.
+---
 
-![Automatización](../img/M09-02-01-rule-sla-comment.png)
+### 3 — Action: comentario de escalado
 
-### 2 — Aprobación (PMO)
+**Acción:** **Add step** → **Action** → **Comment on work item** (o *Add comment*).
 
-**Acción:** PMO → **Automatización**. Disparador: **Transición** → destino `In Review`. Condición: tipo = Solicitud (o Task). Acción: **Comentar** `Pendiente de aprobación por PMO.` Acción opcional: asignar al responsable del espacio.
+Texto del comentario:
 
-**Por qué:** El workflow pone el estado; automation avisa. No sustituyas el workflow por la regla.
+```text
+Escalado automático: sin actualización reciente.
+```
 
-**Resultado esperado:** Al transitar Submit, aparece el comentario.
+Opcional (segundo **Add step**): **Edit work item** → reafirma Priority **Highest**, o **Assign work item** → project lead.
 
-### 3 — Audit log
+**Por qué:** El escalado visible para el equipo va en el ticket; el workflow no sustituye este aviso.
 
-**Acción:** Abre ambas reglas → **Registro de auditoría** tras la prueba.
+**Resultado esperado:** Acción de comentario en el lienzo.
 
-**Por qué:** Troubleshoot: «no disparó» vs «disparó y falló».
+![Acción Comment](../img/M09-02-02-action-comment.png)
 
-**Resultado esperado:** Entradas recientes.
+---
 
-![Registro de auditoría](../img/M09-02-02-audit-escalado.png)
+### 4 — Publicar flujo SUP
+
+**Acción:** Nombre: `NORTECH SUP Escalate stale highest`. **Save and enable**.
+
+**Resultado esperado:** Flujo enabled en SUP.
+
+---
+
+### 5 — Flujo de aprobación en PMO
+
+**Acción:** **Nortech PMO → Space settings → Automation → Create flow → Create from scratch**.
+
+**Trigger:** **Work item transitioned**.
+
+- Configura el destino **In Review** (o el nombre exacto de tu workflow PMO).
+- **Condition (opcional):** **Work item fields** → Work type = *Task* / *Solicitud*.
+
+**Action:** **Comment on work item** → `Pendiente de aprobación por PMO.`
+
+Opcional: **Assign work item** → space owner.
+
+**Por qué:** El workflow pone el estado; automation **avisa**. No sustituyas el workflow por el flujo.
+
+**Resultado esperado:** Trigger de transición con estado destino visible.
+
+![PMO — Work item transitioned](../img/M09-02-03-pmo-transition-trigger.png)
+
+---
+
+### 6 — Probar PMO
+
+**Acción:** Crea o abre una Task en PMO. Transita al estado que dispara **In Review** (p. ej. *Submit for review*). Recarga la issue.
+
+**Resultado esperado:** Comentario automático visible en **Activity**.
+
+---
+
+### 7 — Audit log y Usage
+
+**Acción:** En **SUP** y **PMO**, abre cada flujo → **Audit log**. Filtra por fecha reciente.
+
+**Acción extra:** Pestaña **Usage** del espacio (o **Global administration** → `/jira/settings/automation` → **Usage**) para ver consumo del plan.
+
+**Por qué:** «No disparó» vs «disparó y falló» se distinguen aquí. Gobierno: no dejes diez flujos **Scheduled** en trial.
+
+**Resultado esperado:** Entradas recientes o mensaje claro de FAIL.
+
+![Audit log](../img/M09-02-04-audit-log.png)
+
+![Usage del espacio](../img/M09-02-05-usage-tab.png)
+
+---
 
 ## Comprueba tu entendimiento
 
 **Scheduled vs event**
-Scheduled barre JQL; transitioned reacciona al momento.
-→ Para «cuando aprueban», usa transitioned. Para «llevan 2 días», scheduled.
+Scheduled barre JQL; **Work item transitioned** reacciona al momento.
+→ Para «cuando aprueban», usa transitioned. Para «llevan 2 días sin tocar», scheduled.
 
 ## Reto
 
 ### 1 — Evitar loop
 
-Si la regla comenta y el trigger fuera Issue commented, ¿qué pasa?
+Si la regla comenta y el trigger fuera **Work item commented**, ¿qué pasa?
 
 <details>
 <summary>Ver solución</summary>
 
-Bucle. Mitigación: condition «comment no contiene Escalado automático», o trigger distinto, o «Only include issues that have not been recently updated by this rule».
+Bucle. Mitigación: condition «comment no contiene Escalado automático», otro trigger, o regla «only once per issue» si la UI lo ofrece.
 
 </details>
 
@@ -76,5 +151,7 @@ Bucle. Mitigación: condition «comment no contiene Escalado automático», o tr
 
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
-| Scheduled no corre | Plan / retraso | Manual trigger para el lab |
-| Doble comentario | Dos reglas | Desactiva duplicados |
+| Scheduled no corre | Plan / retraso horas | Manual run + Audit log para el lab |
+| Doble comentario | Dos flujos iguales | Desactiva duplicados en **Flows** |
+| Transición no dispara | Nombre de estado distinto | Ajusta destino en el trigger |
+| 404 en Automation | URL antigua `/settings/automation` del espacio | Usa `/settings/automate` |

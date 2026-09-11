@@ -4,31 +4,54 @@
 
 ## Qué aprenderás
 
-- Proteger issues con **issue security** (multiempresa / departamentos).
+- Proteger work items con **issue security** (multiempresa / departamentos).
 - Enlazar **Confluence** y mirar el **Marketplace** con criterio.
 - Diagnosticar accesos, permisos, workflows y automation.
 - Hacer un **examen simulado** ACP-620 ([simulador en GitHub Pages](https://my-it-labs.github.io/jira-cloud-admin-201/)).
 
 ## Explicación
 
-**Permission scheme** = quién entra al proyecto y qué botones tiene.  
-**Issue security scheme** = quién ve *esa* issue aunque tenga Browse Projects.
+**Permission scheme** = quién entra al espacio y qué botones tiene (**Browse**, **Create**, **Assign**…).
 
-Niveles típicos: `Interno`, `Cliente A`, `Dirección`. El reporter puede no verse a sí mismo si el nivel no lo incluye: trampa clásica.
+**Issue security scheme** = quién ve *esa* work item aunque tenga **Browse Projects**.
 
-Integraciones: Confluence (conocimiento), Marketplace (superficie de ataque y de coste). Gobierno: quién puede instalar apps, revisión de permisos de la app, desinstalar al terminar el lab.
+Niveles típicos: `Interno`, `Cliente A`, `Dirección`. El **Reporter** puede no verse a sí mismo si el nivel no lo incluye: trampa clásica del examen.
 
-Operación: registro de auditoría, límites de automation, no editar esquemas Default, change management (copia de scheme, no «pruebo en producción»).
+Integraciones: Confluence (conocimiento), Marketplace (superficie de ataque y de coste). Gobierno: quién puede instalar apps, revisión de permisos, desinstalar al terminar el lab.
+
+Operación:
+
+| Log | Dónde |
+|-----|--------|
+| Auditoría del **site** Jira | **Jira settings → System → Audit log** → `/auditing/view` |
+| Auditoría de un **flujo** | Space **Automation → Audit log** |
+| Cuota automation | **Automation → Usage** (espacio o global) |
+
+---
 
 ## Demostración
 
-1. **Elementos de trabajo** → esquemas de seguridad. Un scheme con dos niveles. Una issue en `Cliente` que el usuario de soporte interno no ve.
+### 1 — Issue security schemes
 
-![Esquemas de seguridad](../img/M10-01-01-security-scheme.png)
+**Acción:** Icono **Settings** (⚙️) → **Jira settings** → **Work items** → **Work item security schemes** (URL clásica: `/secure/admin/ViewIssueSecuritySchemes.jspa`).
 
-2. **Aplicaciones** → explorar más. Abre **una** ficha. **No** instales nada de pago.
+**Por qué:** No confundir con **Permission schemes** (M04). Aquí se ocultan issues concretas, no el espacio entero.
 
-![Marketplace](../img/M10-02-02-marketplace.png)
+**Resultado esperado:** Tabla con `NORTECH Security` (o la creas en M10-01).
+
+![Lista de esquemas](../img/M10-01-01-security-schemes-list.png)
+
+---
+
+### 2 — Marketplace (sin instalar de pago)
+
+**Acción:** **Settings → Apps** o `/plugins/servlet/upm/marketplace`. Abre **una** ficha. Lee permisos y precio. **No instales** apps de pago en el trial del curso.
+
+**Resultado esperado:** Has visto categoría, vendor y *Paid via Atlassian* vs Free.
+
+![Marketplace](../img/M10-02-02-marketplace-home.png)
+
+---
 
 ## Laboratorio
 

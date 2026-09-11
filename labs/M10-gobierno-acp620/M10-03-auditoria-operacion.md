@@ -4,68 +4,126 @@
 
 ### Objetivo
 
-Aplicar un checklist de diagnóstico a cuatro incidentes típicos y localizar el audit log.
+Aplicar un **checklist de diagnóstico** a incidentes típicos y localizar los **logs** correctos (site vs flujo vs org).
 
 ### Prerrequisitos
 
-- Instancia con los labs anteriores. Segundo usuario ayuda.
+- Instancia con labs anteriores. Segundo usuario (invitado) ayuda en accesos.
 
 ### En qué consiste
 
-Cuatro mini-escenarios + revisión de logs y de límites de automation.
+Cuatro mini-escenarios + capturas de **Audit log** Jira, **Usage** automation y **Permission helper**.
 
-### 1 — Problema de acceso
+---
 
-**Acción:** Sintoma: el invitado no abre Jira. Recorre: ¿producto access? ¿invitación aceptada? ¿URL del site correcto?
+### 1 — Problema de acceso (producto)
 
-**Por qué:** No empieces por el permission scheme.
+**Síntoma:** El invitado «no puede abrir Jira».
 
-**Resultado esperado:** Sabes decir en una frase cuál de las tres puertas falló (org / producto / proyecto).
+**Checklist (en orden):**
 
-### 2 — Error de permisos
+1. ¿Invitación **aceptada** y URL del site correcta (`*.atlassian.net`)?
+2. ¿**Product access** Jira Software / Jira en [admin.atlassian.com](https://admin.atlassian.com)?
+3. ¿Licencia / asiento disponible en trial?
 
-**Acción:** Quita al invitado del rol de SUP, pídele que abra SUP, **devuélvele** el rol. Mira **Configuración del espacio** → **Permisos** → explorar espacios (*Browse Projects*).
+**Por qué:** No empieces por permission scheme si no entra al producto.
 
-**Por qué:** El síntoma «proyecto vacío» vs «no access».
+**Resultado esperado:** Identificas cuál de las tres puertas falló en una frase.
 
-**Resultado esperado:** Restaurado.
+---
+
+### 2 — Problema de permisos (espacio)
+
+**Acción (lab):** Quita al invitado del rol **Users** / grupo en **SUP → Space settings → People**. Pídele abrir SUP. Restaura el rol.
+
+**Acción (herramienta):** **SUP → Space settings → Permissions** → enlace **Permission helper** / **Asistente de permisos**. Simula usuario + permiso **Browse Projects**.
+
+**Por qué:** «Proyecto vacío» vs «Access denied» vs «No issues» son síntomas distintos.
+
+**Resultado esperado:** Permisos restaurados; sabes usar el helper.
+
+![Permission helper](../img/M10-03-05-permission-helper.png)
+
+---
 
 ### 3 — Workflow / automation defectuosa
 
-**Acción:** Elige una regla de M09, ponla **Disabled**, intenta el flujo manual, vuelve a **Enabled**. En un workflow, comprueba que no queda draft sin publicar.
+**Acción:** Elige un flujo de M09. Ábrelo → **Turn off flow** / desactiva. Repite la acción manual (crear Bug, transitar Story). Vuelve a **enable**.
 
-**Por qué:** «Ayer funcionaba» = draft, regla off, o cuota.
+**Acción:** En **Workflows** del espacio, comprueba que no hay **draft** sin publicar (M05).
 
-**Resultado esperado:** Lista de tres causas posibles si una transición «no sale».
+**Por qué:** «Ayer funcionaba» → flujo off, workflow draft, o cuota automation.
 
-### 4 — Audit log y cuota
+**Resultado esperado:** Lista mental: (1) flujo disabled, (2) draft workflow, (3) transición renombrada.
 
-**Acción:** **Configuración de Jira** → **Sistema** → **Registro de auditoría** (o Administration → **Seguridad**). Filtra por permisos / workflow si hay eventos. Abre **Automatización** global o del espacio y mira el **uso**.
+![Desactivar flujo](../img/M10-03-04-disable-flow-toggle.png)
 
-**Por qué:** Gobierno y escalabilidad: saber dónde se mira antes de abrir un ticket a Atlassian.
+---
 
-**Resultado esperado:** Ves eventos recientes y/o el uso de automation.
+### 4 — Audit log del site Jira
 
-![Registro de auditoría](../img/M10-03-01-audit-jira.png)
+**Acción:** **Settings → Jira settings → System** (sidebar). Pulsa **Audit log**.
 
-![Automatización global](../img/M10-03-02-automation-usage.png)
+URL directa: `/auditing/view`
+
+**Acción:** Filtra por categoría (*permissions*, *workflows*, *screens*…) o amplía fechas.
+
+**Por qué:** Cambios de scheme, pantalla o permiso quedan aquí. Distinto del **Audit log** de un flujo suelto.
+
+**Resultado esperado:** Tabla con eventos (p. ej. *Permission scheme added to project*).
+
+![System settings](../img/M10-03-01-system-settings-sidebar.png)
+
+![Audit log Jira](../img/M10-03-02-audit-log-jira.png)
+
+---
+
+### 5 — Cuota automation (Usage)
+
+**Acción:** **Settings → Jira settings** → busca **Automation** global, o URL `/jira/settings/automation`. Pestaña **Usage**.
+
+**Acción alternativa:** Space **Automation → Usage** (M09).
+
+**Por qué:** Plan Free/trial tiene techo de ejecuciones; muchos **Scheduled** lo agotan.
+
+**Resultado esperado:** Gráfico o tabla de uso del mes.
+
+![Usage global](../img/M10-03-03-automation-usage-global.png)
+
+---
+
+### 6 — Checklist de auditoría de plataforma
+
+Recorre mentalmente (anota en tu cuaderno):
+
+- [ ] Schemes **Default** aún asociados a espacios Nortech
+- [ ] Apps instaladas vs necesarias
+- [ ] Quién es **org admin** (¿hay backup?)
+- [ ] Caducidad trial Premium
+- [ ] Tableros con filtro JQL sin `project =`
+
+**Resultado esperado:** 2–3 mejoras concretas para Nortech (asociar PMO a NORTECH Permissions, desinstalar apps demo, etc.).
+
+---
 
 ## Comprueba tu entendimiento
 
 **Orden de diagnóstico**
-Product access → Browse / security level → screen/context → workflow condition → board filter → automation actor.
+
+Product access → Browse / **issue security level** → screen/context → workflow condition → board filter → **automation actor**.
+
 → De fuera hacia dentro.
 
 ## Reto
 
-### 1 — Auditoría de plataforma (checklist)
+### 1 — Audit log vacío
 
-Recorre y marca mentalmente: schemes Default aún en uso; apps instaladas; quién es org admin; trial caducidad; boards con filtros `order by created` sin proyecto.
+¿Qué haces si no ves eventos?
 
 <details>
 <summary>Ver solución</summary>
 
-Anota mejoras: asociar PMO a NORTECH Permissions; desinstalar apps; segundo org admin de respaldo; calendario de caducidad del trial. Eso es el laboratorio «auditoría» de la propuesta.
+Amplía rango de fechas; confirma plan (Free tiene menos). Prueba org admin **Security** si el requisito es invitación, no cambio Jira.
 
 </details>
 
@@ -73,5 +131,7 @@ Anota mejoras: asociar PMO a NORTECH Permissions; desinstalar apps; segundo org 
 
 | Síntoma | Causa probable | Cómo arreglarlo |
 |---------|----------------|-----------------|
-| Audit log vacío | Plan Free / filtro de fechas | Amplía fechas; Premium |
-| Automation al 100 % | Demasiadas reglas scheduled | Disable demos |
+| Audit log vacío | Filtro fechas / plan | Amplía; Premium trial |
+| Automation al 100 % | Demasiados Scheduled | Usage tab; disable demos |
+| Confundir logs | Site vs flujo | `/auditing/view` vs Automation **Audit log** |
+| 404 Audit log | URL antigua `/jira/settings/system/audit-log` | Usa `/auditing/view` |
